@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  business_category: MyString
+  title: MyString
+  location: MyString
+  budget: 1
+  keywords: MyString
+  sharers: 1
+
+two:
+  business_category: MyString
+  title: MyString
+  location: MyString
+  budget: 1
+  keywords: MyString
+  sharers: 1
