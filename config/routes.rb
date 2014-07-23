@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   get 'leads/index'
 
   get 'leads/show'
@@ -16,8 +16,10 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   # Example of regular route:
-  get 'static_pages/:faq' => 'static_pages#faq'
 
+  get '/contact' => 'static_pages#contact'
+  get '/faq' => 'static_pages#faq'
+  get '/about' => 'static_pages#about'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
