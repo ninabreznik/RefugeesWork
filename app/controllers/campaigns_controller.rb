@@ -1,4 +1,4 @@
-class CampaignsController < ApplicationController
+iclass CampaignsController < ApplicationController
   
   def index
   end 
@@ -7,6 +7,7 @@ class CampaignsController < ApplicationController
   end
 
   def new
+    @campaign = Campaign.new
   end
 
   def edit
