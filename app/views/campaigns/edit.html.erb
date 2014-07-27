@@ -3,12 +3,12 @@
   <title></title>
 </head>
 <body>
-  <%= form_for (@campaign) do |c| %>
+    <%= form_for (@campaign) do |c| %>
     <%= c.label :title %> 
     <%= c.text_field :title%> <br>
     <%= c.label :location%>
     <%= c.text_field :location%> <br>
-    <%= c.submit "Create" %>
+    <%= c.submit "Update" %>
   <% end %>
 </body>
 </html>

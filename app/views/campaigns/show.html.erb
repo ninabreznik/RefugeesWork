@@ -3,6 +3,8 @@
   <title></title>
 </head>
 <body>
-  Show campaign
+  Title: <%= @campaign.title %> <br>
+  Location: <%= @campaign.location %> <br>
+  <%= link_to "Edit", edit_campaign_path(@campaign) %>
 </body>
 </html>

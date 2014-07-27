@@ -3,6 +3,8 @@
   <title></title>
 </head>
 <body>
-  List all campaigns.
+  <% @campaigns.each do |campaign| %>
+    <%= link_to campaign.title, campaign%> <br>
+  <% end %>
 </body>
 </html>
