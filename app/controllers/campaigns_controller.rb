@@ -32,9 +32,9 @@ class CampaignsController < ApplicationController
   end
 
   def update
-    @user = Campaign.find(params[:id])
+    @campaign = Campaign.find(params[:id])
     if @campaign.update_attributes(campaign_params)
-      #flash[:success] = "Campaign updated"
+      flash[:success] = "Campaign updated"
       redirect_to @campaign
     else
       render 'edit'

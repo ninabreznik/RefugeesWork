@@ -3,8 +3,9 @@
   <title></title>
 </head>
 <body>
+  <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
   Title: <%= @campaign.title %> <br>
   Location: <%= @campaign.location %> <br>
-  <%= link_to "Edit", edit_campaign_path(@campaign) %>
+  <%= link_to "Join", root_path %>
 </body>
 </html>
