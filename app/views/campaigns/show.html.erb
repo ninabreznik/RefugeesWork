@@ -6,6 +6,11 @@
   <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
   Title: <%= @campaign.title %> <br>
   Location: <%= @campaign.location %> <br>
-  <%= link_to "Join", root_path %>
+  <section>
+    <%= render 'shared/coown' %>
+  </section>
+  <section>
+    <%= render 'shared/stats_campaign' %>
+  </section>
 </body>
 </html>

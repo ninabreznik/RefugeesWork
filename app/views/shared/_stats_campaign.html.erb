@@ -1,0 +1,9 @@
+<% @campaign ||= current_campaign %>
+<div class="stats">
+  <a href="<%= coowners_campaign_path(@campaign) %>">
+    <strong id="coowners" class="stat">
+      <%= @campaign.coowners.count %>
+    </strong>
+    coowners
+  </a>
+</div>

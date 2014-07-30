@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723150401) do
+ActiveRecord::Schema.define(version: 20140728114243) do
 
   create_table "campaigns", force: true do |t|
     t.string   "business_category"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20140723150401) do
     t.datetime "updated_at"
     t.integer  "campaign_id"
   end
+
+  create_table "relationships", force: true do |t|
+    t.integer  "coowner_id"
+    t.integer  "coowned_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["coowned_id"], name: "index_relationships_on_coowned_id"
+  add_index "relationships", ["coowner_id", "coowned_id"], name: "index_relationships_on_coowner_id_and_coowned_id", unique: true
+  add_index "relationships", ["coowner_id"], name: "index_relationships_on_coowner_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

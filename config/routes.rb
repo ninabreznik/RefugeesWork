@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :users do
+    member do
+      get :coowning
+    end
+  end
+
+  resources :campaigns do
+    member do
+      get :coowners
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy]
+
   get 'leads/index'
 
   get 'leads/show'
