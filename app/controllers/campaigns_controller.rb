@@ -7,6 +7,7 @@ class CampaignsController < ApplicationController
 
   def show
     @campaign = Campaign.find_by_id(params[:id])
+    @current_campaign 
   end
 
   def new
@@ -44,7 +45,11 @@ class CampaignsController < ApplicationController
    private
 
     def campaign_params
-      params.require(:campaign).permit(:title, :location)
+      params.require(:campaign).permit(:title, :location, :coowner_id, :coowned_id )
     end
-  
+
+    def current_campaign
+      current_campaign=(campaign)
+      @current_campaign = campaign
+    end
 end

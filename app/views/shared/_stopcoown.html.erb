@@ -1,5 +1,5 @@
 <%= form_for(current_campaign.relationships.find_by(coowner_id: @user.id)),
               html: { method: :delete }) do |c| %>
   <div><%= c.hidden_field :coowner_id %></div>
-  <%= c.submit "Stop cox-own" %>
+  <%= c.submit "Stop co-own" %>
 <% end %>
