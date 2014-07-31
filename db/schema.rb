@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(version: 20140728114243) do
     t.datetime "updated_at"
   end
 
+  add_index "relationships", ["coowned_id"], name: "index_relationships_on_coowned_id"
+  add_index "relationships", ["coowner_id", "coowned_id"], name: "index_relationships_on_coowner_id_and_coowned_id", unique: true
+  add_index "relationships", ["coowner_id"], name: "index_relationships_on_coowner_id"
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

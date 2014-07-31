@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+#### IGNORE ####
+bower_components/
+npm-debug.log

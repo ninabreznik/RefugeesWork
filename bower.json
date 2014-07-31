@@ -1,0 +1,69 @@
+{
+  "name": "LeadShareApp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ninabreznik/LeadShareApp",
+  "authors": [
+    "Nina Breznik <ninabreznik@gmail.com>",
+    "Alexander Praetorius <dev@serapath.de>"
+  ],
+  "description": "Lead Share App Project",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "Marketing",
+    "Campaign",
+    "Lead",
+    "Share",
+    "App"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "plates": "~0.4.6"
+  },
+  "install": {
+    "path": {
+      "scss": "app/assets/components/",
+      "css": "app/assets/components/",
+      "js": "app/assets/components/",
+      "jpg": "app/assets/components/",
+      "png": "app/assets/components/",
+      "gif": "app/assets/components/",
+      "html": "app/assets/components/"
+    },
+    "sources": {
+      "plates": [
+        "bower_components/plates/lib/plates.js"
+      ]
+    },
+    "ignore": [
+      "EVERY matched source ending needs a 'target directory'",
+      "which is given under 'path', but as an alternative:",
+      "the 'path' property in this file can be a string to a",
+      "wildcard target directory, e.g. 'public/'",
+      "but be careful, any content in 'taret directory' is deleted before installation happens",
+      " ----- ",
+      "list modules which should not be installed",
+      "might be modules listed under 'dependencies' in this file,",
+      "or as 'dependencies' of those listed modules",
+      "(can overwrite stuff listed here under 'sources')",
+      "examples could be:",
+      "ember",
+      "jquery",
+      "jQuery",
+      "handlebars",
+      "ember-model",
+      "contentinjector123"
+    ]
+  }
+}
