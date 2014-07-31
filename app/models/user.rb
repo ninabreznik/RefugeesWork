@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :campaigns
+  has_many :campaigns, dependent: :destroy
   has_many :relationships, foreign_key: "coowner_id"
   has_many :coowned_campaigns, through: :relationships, source: :coowned 
   

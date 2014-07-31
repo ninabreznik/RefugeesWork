@@ -7,6 +7,9 @@ class RelationshipsController < ApplicationController
   end
 
   def destroy
+    Relationship.find(params[:id]).destroy
+    flash[:success] = "User deleted."
+    redirect_to campaigns_url
   end
 
 end
