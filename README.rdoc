@@ -4,3 +4,8 @@
 ==== How to setup the project
 
 1. ...
+
+
+==== Other Things
+
+1. Use SEMVER - http://markup.im/#q4_cRZ1Q

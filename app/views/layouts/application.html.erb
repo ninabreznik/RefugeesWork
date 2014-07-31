@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LeadShareApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div><a href="/users/sign_up">SignUp / SignIn</a> <br>
-  <%=link_to("<< Back", :back)%> <br> 
-  </div>
-  <nav>
-    <ul>
-      <a href="/">Home</a> <br>
-      <a href="/faq">Faq</a> <br>
-      <a href="/campaigns">Browse campaigns</a> <br>
-      <a href="#">My dashboard</a> <br>
-      <a href="/contact">Contact</a> <br>
-    </ul>
-  </nav>
+  <head>
+    <title>LeadShareApp</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="./assets/stylus.css">
+  </head>
+
+  <body>
+
+    <div>
+      <a href="/users/sign_up">SignUp / SignIn</a>
+      <br>
+      <%=link_to("<< Back", :back)%>
+      <br> 
+    </div>
+
+    <nav>
+      <ul>
+        <a href="/">Home</a>
+        <br>
+        <a href="/faq">Faq</a>
+        <br>
+        <a href="/campaigns">Browse campaigns</a>
+        <br>
+        <a href="#">My dashboard</a>
+        <br>
+        <a href="/contact">Contact</a>
+        <br>
+      </ul>
+    </nav>
+
   <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+    <p class="alert alert-success">
+      <%= notice %>
+    </p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger">
+      <%= alert %>
+    </p>
+  <% end %>
 
-<%= yield %>
+  <%= yield %>
 
-</body>
+  </body>
 </html>
+

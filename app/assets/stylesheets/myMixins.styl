@@ -1,0 +1,70 @@
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  MIXINS
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+cf()
+  *zoom                 1
+  &:before, &:after
+    content             ''
+    display             table
+    clear               both
+
+circle(width = 110px)
+  top                   -45px
+  left                  30px
+  width                 width
+  height                width
+  border                0px solid cityilike_smokewhite
+  border-radius         50%
+  transition            box-shadow .2s
+//  box-shadow          : 0 0 10px rgba(0, 0, 4, 0.5);
+//  -webkit-box-shadow  : 0 0 10px rgba(0, 0, 4, 0.5);
+//  -moz-box-shadow     : 0 0 10px rgba(0, 0, 4, 0.5);
+
+circle_left()
+  position              relative
+  display               block
+  float                 left
+  margin-top            2px
+  margin-right          40px
+  padding               5px
+
+
+transition(speed = 300ms, style = ease-in-out)
+  -webkit-transition    all speed style
+  -moz-transition       all speed style
+  -ms-transition        all speed style
+  -o-transition         all speed style
+  transition            all speed style
+
+linkstyle(normal = #FFFFFF, hover = #FFCC00, shadow = #FFCC00)
+  color                 normal
+  transition()
+  &:hover
+    text-decoration     none
+    color               hover
+    text-shadow         0 0 5px shadow
+  &:focus
+    text-decoration     none
+    color               hover
+    text-shadow         0 0 2px shadow
+    outline             none
+
+addIcon(iconpicture)
+  &:before
+    content             ''
+    display             inline-block
+    background-image    iconpicture
+    background-repeat   no-repeat
+    background-position top
+    min-height          35px
+    min-width           25px
+    vertical-align      top
+    position            relative
+    top                 7px
+    margin-right        5px
+
+tagstyling(color = #CCCCCC)
+  background-color      color
+  padding               5px
+  margin-right          5px
+  border-radius         5px
