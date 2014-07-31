@@ -6,18 +6,18 @@ class User < ActiveRecord::Base
 
   has_many :campaigns
   has_many :relationships, foreign_key: "coowner_id"
-  has_many :coowned_campaigns, through: :relationships, source: :coowned  
+  has_many :coowned_campaigns, through: :relationships, source: :coowned 
   
-  def coowning?(one_user)
-    relationships.find_by(coowner_id: one_user.id)
+  def coowning?(one_campaign)
+    relationships.find_by_coowned_id(one_campaign.id)
   end
 
-  def coown!(one_user)
-    relationships.create!(coowned_id: one_user.id)
+  def coown!(one_campaign)
+    relationships.create!(coowned_id: one_campaign.id)
   end
 
-  def unfollow!(one_user)
-    relationships.find_by(coowned_id: one_user.id).destroy
+  def uncoown!(one_campaign)
+    relationships.find_by_coowned_id(one_campaign.id).destroy  
   end
 
 end

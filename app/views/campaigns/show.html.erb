@@ -7,7 +7,11 @@
   Title: <%= @campaign.title %> <br>
   Location: <%= @campaign.location %> <br>
   <section>
-    <%= render 'shared/coown' %> 
+    <% if current_user.coowning?(@campaign) %>
+      <%= render 'uncoown' %>
+    <% else %>
+      <%= render 'coown' %>
+    <% end %>
   </section>
   <section>
     <%= render 'shared/stats_campaign' %>
