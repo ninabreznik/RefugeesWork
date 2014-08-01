@@ -1,45 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<head>
     <title>LeadShareApp</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" type="text/css" href="./assets/stylus.css">
   </head>
-
-  <body>
-
-    <div>
-      <a href="/users/sign_up">SignUp / SignIn</a>
-      <br>
-      <%=link_to("<< Back", :back)%>
-      <br> 
-    </div>
-
-    <nav>
-      <ul>
-        <a href="/">Home</a>
-        <br>
-        <a href="/faq">Faq</a>
-        <br>
-        <a href="/campaigns">Browse campaigns</a>
-        <br>
-        <a href="#">My dashboard</a>
-        <br>
-        <a href="/contact">Contact</a>
-        <br>
-      </ul>
-    </nav>
-
-  <% if notice %>
-    <p class="alert alert-success">
-      <%= notice %>
-    </p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger">
-      <%= alert %>
-    </p>
-  <% end %>
+<body>
+  <nav>
+      <% if user_signed_in? %>
+      Logged in as 
+      <strong>
+      <%= current_user.email %>
+      </strong>.
+      <%= link_to 'Edit profile', 
+      edit_user_registration_path %> |
+      <%= link_to "Logout", 
+      destroy_user_session_path, 
+      method: :delete %>
+    <% else %>
+      <%= link_to "Sign up", 
+      new_user_registration_path %> |
+      <%= link_to "Login", 
+      new_user_session_path %>
+    <% end %>
+    <ul>
+      <a href="/">Home</a> <br>
+      <a href="/faq">Faq</a> <br>
+      <a href="/campaigns">Browse campaigns</a> <br>
+      <a href="#">My dashboard</a> <br>
+      <a href="/contact">Contact</a> <br>
+    </ul>
+  </nav>
 
   <%= yield %>
 

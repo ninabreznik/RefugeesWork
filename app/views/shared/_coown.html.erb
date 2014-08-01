@@ -1,5 +1,0 @@
-<%= form_for(current_campaign.relationships.build(coowner_id: @user.id)) do |c| %>
-  <div><%= c.hidden_field :coowner_id %></div>
-  <%= c.submit "Co-own" %>
-<% end %>
-
