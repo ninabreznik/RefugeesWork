@@ -1,0 +1,10 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    <% @campaigns.each do |campaign| %>
+      <h4><%= link_to campaign.title, campaign%></h4> 
+    <% end %>
+</body>
+</html>

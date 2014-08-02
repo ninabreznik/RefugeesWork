@@ -11,4 +11,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def all_campaigns
+    @campaigns = Campaign.all
+  end
 end
