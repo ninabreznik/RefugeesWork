@@ -9,13 +9,13 @@
   <section>
     <% if current_user.coowning?(@campaign) %>
       <%= render 'uncoown' %>
+      <%= render 'shared/delete_campaign' %>
     <% else %>
       <%= render 'coown' %>
     <% end %>
   </section>
   <section>
     <%= render 'shared/stats_campaign' %>
-  </section> <br>
-  <%= render 'shared/delete_campaign' %>
+  </section> 
 </body>
 </html>

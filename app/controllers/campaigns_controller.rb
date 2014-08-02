@@ -3,6 +3,8 @@ class CampaignsController < ApplicationController
   def index
     @user = current_user
     @campaigns = Campaign.all
+    @campaign = Campaign.find_by_id(params[:id])
+    @current_campaign 
   end 
 
   def show
