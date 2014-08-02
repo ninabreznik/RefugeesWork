@@ -3,8 +3,12 @@
   <title></title>
 </head>
 <body>
+  <p><strong>Campaigns you co-own</strong> <br></p>
   <% @campaigns.each do |campaign| %>
-    <%= link_to campaign.title, campaign%> <br>
+      <% if current_user.coowning?(campaign) %>  
+        <strong><%= link_to campaign.title, campaign%></strong>
+        <%= link_to "Edit campaign", edit_campaign_path(campaign) %> <br>
+      <% end %>
   <% end %>
 </body>
 </html>

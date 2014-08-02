@@ -11,7 +11,12 @@
     <p>OR</p>
   </div>
   <div>
-    <p><a href="/campaigns">BROWSE</a> active campaigns & JOIN to get cheaper leads for your business</p>
+    <p>BROWSE active campaigns & click to get more details on a campaigns</p>
+    <body>
+    <% @campaigns.each do |campaign| %>
+      <%= link_to campaign.title, campaign%> <br>
+    <% end %>
+
   </div>  
 </body>
 </html>
