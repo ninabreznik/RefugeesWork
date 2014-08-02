@@ -32,6 +32,21 @@
   </nav>
 
   <%= yield %>
+  <div style="
+    background-color  : #ffffff;
+    position          : absolute;
+    left              : 0px;
+    width             : 100%;
+    margin            : 0;
+    padding           : 0;
+    border-top-style  : solid;
+    border-top-color  : #000000;
+    border-top-width  : 5px;
+    margin-top        : 100px;
+  ">
+    <%= render 'shared/single_page_app' %>
+  </div>
+
 
   </body>
 </html>
