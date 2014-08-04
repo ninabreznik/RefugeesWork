@@ -1,4 +1,4 @@
 <%= form_for(current_user.relationships.find_by_coowned_id(@campaign),
              html: { method: :delete }) do |c| %>
-  <%= c.submit "Leave co-own campaign" %>
+  <%= c.submit "Leave campaign" %>
 <% end %>

@@ -3,13 +3,15 @@
   <title></title>
 </head>
 <body>
-  <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
   Title: <%= @campaign.title %> <br>
   Location: <%= @campaign.location %> <br>
   <section>
-    <% if current_user.coowning?(@campaign) %>
-      <%= render 'uncoown' %>
+    <% if @campaign.coowners.count < 2 && current_user.coowning?(@campaign)%>
+      <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
       <%= render 'shared/delete_campaign' %>
+    <% end %>
+    <% if current_user.coowning?(@campaign)%>
+      <%= render 'uncoown' %>
     <% else %>
       <%= render 'coown' %>
     <% end %>

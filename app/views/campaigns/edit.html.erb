@@ -5,9 +5,9 @@
 <body>
     <%= form_for (@campaign) do |c| %>
     <%= c.label :title %> 
-    <%= c.text_field :title%> <br>
+    <%= c.select :title, [["Painting", "Painting"], ["Fasades", "Fasades"], ["Renovations", "Renovations"], ["Mechanical Installations", "Mechanical Installations"], ["Electrical Installations", "Electrical Installations"], ["Knauf", "Knauf"], ["Ceramics", "Ceramics"], ["Parquet", "Parquet"], ["Roofing", "Roofing"], ["Masonry", "Masonry"]] %> <br>
     <%= c.label :location%>
-    <%= c.text_field :location%> <br>
+    <%= c.select :location, [["All Slovenia", "Slovenia"], ["LJ", "LJ"], ["MB", "MB"], ["CE", "CE"], ["KR", "KR"], ["KP", "KP"], ["NG", "NG"], ["NM", "NM"], ["MS", "MS"]] %> <br>
     <%= c.submit "Update" %>
   <% end %>
 </body>

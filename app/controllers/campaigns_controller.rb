@@ -4,6 +4,7 @@ class CampaignsController < ApplicationController
     @user = current_user
     @campaigns = Campaign.all
     @campaign = Campaign.find_by_id(params[:id])
+    @campaign = Campaign.new
     @current_campaign 
   end 
 

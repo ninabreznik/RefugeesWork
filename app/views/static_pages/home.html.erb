@@ -14,8 +14,36 @@
     <p><h3>BROWSE active campaigns & click to get more details on a campaigns</h3></p>
     <body>
     <% @campaigns.each do |campaign| %>
-      <h4><%= link_to campaign.title, campaign%></h4> 
+      <% remember = campaign.title %> 
+        <strong><%= campaign.title %></strong> <br>
+
+      <% if campaign.title == "Painting" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Fasades" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Knauf" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Mechanical Installations" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Electrical Installations" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Renovations" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Ceramics" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Parquet" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Masonry" %>
+        <%= link_to campaign.location, campaign %>
+      <% elsif campaign.title == "Roofing" %>
+        <%= link_to campaign.location, campaign %>
+      <% end %>
+              ( 
+          <%= campaign.coowners.count %> 
+          / 5 applied) <br>
     <% end %>
+
+
   </div>  
 </body>
 </html>

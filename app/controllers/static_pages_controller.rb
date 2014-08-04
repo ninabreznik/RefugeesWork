@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @campaigns = Campaign.all
+    @campaign = Campaign.new
   end
 
   def about
@@ -13,6 +14,9 @@ class StaticPagesController < ApplicationController
   end
 
   def all_campaigns
-    @campaigns = Campaign.all
+    @campaigns = Campaign.find_by_title('Painting')
   end
+
+
+
 end
