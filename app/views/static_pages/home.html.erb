@@ -13,10 +13,13 @@
   <div>
     <p><h3>BROWSE active campaigns & click to get more details on a campaigns</h3></p>
     <body>
+    <%= remember = '' %>
     <% @campaigns.each do |campaign| %>
-      <% remember = campaign.title %> 
+      <% if campaign.title != remember %>
         <strong><%= campaign.title %></strong> <br>
+      <% end %>
 
+      <% remember = campaign.title %> 
       <% if campaign.title == "Painting" %>
         <%= link_to campaign.location, campaign %>
       <% elsif campaign.title == "Fasades" %>

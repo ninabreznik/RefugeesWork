@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @campaigns = Campaign.all
+    @campaigns = Campaign.all.sort_by{|e| e[:title]}
     @campaign = Campaign.new
   end
 
