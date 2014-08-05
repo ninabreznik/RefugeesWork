@@ -8,7 +8,12 @@
     <%= c.select :title, [["Painting", "Painting"], ["Fasades", "Fasades"], ["Renovations", "Renovations"], ["Mechanical Installations", "Mechanical Installations"], ["Electrical Installations", "Electrical Installations"], ["Knauf", "Knauf"], ["Ceramics", "Ceramics"], ["Parquet", "Parquet"], ["Roofing", "Roofing"], ["Masonry", "Masonry"]] %> <br>
     <%= c.label :location%>
     <%= c.select :location, [["All Slovenia", "Slovenia"], ["LJ", "LJ"], ["MB", "MB"], ["CE", "CE"], ["KR", "KR"], ["KP", "KP"], ["NG", "NG"], ["NM", "NM"], ["MS", "MS"]] %> <br>
-    <%= c.submit "Create" %>
+    <% if user_signed_in? %>
+      <%= c.submit "Create" %>
+    <% else %>
+      You have to <%= link_to "Sign up", new_user_registration_path %> or
+      <%= link_to "Login", new_user_session_path %> to create a new campaign.
+    <% end %>
   <% end %>
 </body>
 </html>

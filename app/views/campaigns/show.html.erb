@@ -3,21 +3,30 @@
   <title></title>
 </head>
 <body>
-  Title: <%= @campaign.title %> <br>
-  Location: <%= @campaign.location %> <br>
-  <section>
-    <% if @campaign.coowners.count < 2 && current_user.coowning?(@campaign)%>
-      <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
-      <%= render 'shared/delete_campaign' %>
-    <% end %>
-    <% if current_user.coowning?(@campaign)%>
-      <%= render 'uncoown' %>
-    <% else %>
-      <%= render 'coown' %>
-    <% end %>
-  </section>
+  <strong>Title: <%= @campaign.title %> <br>
+  Location: <%= @campaign.location %> <br> </strong>
   <section>
     <%= render 'shared/stats_campaign' %>
-  </section> 
+  </section> <br> 
+  <% if user_signed_in? %>
+    <section>
+      <% if @campaign.coowners.count < 2 && current_user.coowning?(@campaign)%>
+        <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
+        <%= render 'shared/delete_campaign' %>
+      <% end %>
+      <% if current_user.coowning?(@campaign)%>
+        <%= render 'uncoown' %>
+      <% else %>
+        <%= render 'coown' %>
+      <% end %>
+    </section>
+      <a href="/campaigns/new">Create new</a>
+  <% else %>
+    You have to <%= link_to "Sign up", 
+      new_user_registration_path %> or
+      <%= link_to "Login", 
+      new_user_session_path %> to apply for leads.
+  <% end %>
+
 </body>
 </html>

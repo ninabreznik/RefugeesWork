@@ -4,18 +4,45 @@
 </head>
 <body>
   <div>
-    <h2><p><strong>Campaigns you applied for
-    </strong> <br></p></h2>
-    <% @campaigns.each do |campaign| %>
-      <% if current_user.coowning?(campaign) %>  
-        <strong><%= link_to campaign.title, campaign%></strong>
-        <%= link_to "Edit campaign", edit_campaign_path(campaign) %> <br>
-      <% end %>
-    <% end %>
+    <h1>Your dashboard</h1>
+    <% if user_signed_in? %>
+      <h2><p><strong>Campaigns you applied for</strong> <br></p></h2>
+      <%= remember = '' %>
+      <% @campaigns.each do |campaign| %>
+        <% if current_user.coowning?(campaign) %>  
+          <% if campaign.title != remember %>
+            <h3><%= campaign.title %></h3>
+          <% end %>
+          <% remember = campaign.title %> 
+          <% if campaign.title == "Painting" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Fasades" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Knauf" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Mechanical Installations" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Electrical Installations" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Renovations" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Ceramics" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Parquet" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Masonry" %>
+            <%= link_to campaign.location, campaign %>
+          <% elsif campaign.title == "Roofing" %>
+            <%= link_to campaign.location, campaign %>
+          <% end %>
+               (<%= campaign.coowners.count %>/5 applied) <br>
+            <% end %>
+        <% end %> <br>
+      
       <% if @campaigns.count > 0 %>
         <div>
-          <h2><p><strong>Your running campaigns</strong> <br></p></h2>
-          Currently you have no running campaigns.
+          <h2><p><strong>Your active campaigns</strong> <br></p></h2>
+          Currently you have no active campaigns.
         </div>
         <div>
           <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
@@ -35,6 +62,18 @@
           <% end %>
         </div>  
       <% end %>
+      
+    <% else %>
+      <h2><p><strong>Campaigns you applied for</strong> <br></p></h2>
+      You have to <%= link_to "Sign up", new_user_registration_path %> or
+      <%= link_to "Login", new_user_session_path %> to see your campaigns.
+      <h2><p><strong>Your active campaigns</strong> <br></p></h2>
+      You have to <%= link_to "Sign up", new_user_registration_path %> or
+      <%= link_to "Login", new_user_session_path %> to see your active campaigns.
+      <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
+      You have to <%= link_to "Sign up", new_user_registration_path %> or
+      <%= link_to "Login", new_user_session_path %> to see your leads.
+    <% end %>
   </div>
 </body>
 </html>

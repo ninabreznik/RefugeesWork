@@ -4,21 +4,21 @@
 </head>
 <body>
   <div>
-    <h2><p>Welcome to LeadShare.</p></h2>
+    <h2><p>WELCOME TO SOSED BUSINESS APP</p></h2>
+  <ol>
+    <li>CHOOSE BUSINESS TYPE AND LOCATIONS from which you want to receive new leads.</li>
+    <li>GET ALL LEADS ON ONE PLACE.</li>
+    <li>TRACK YOUR COSTS/SUCESS RATE.</li>
+  </ol>
   </div>
   <div>
-    <p><h3><a href ="campaigns/new">POST</a> your campaign and find people who will join and share costs with you.</h3></p>
-    <p>OR</p>
-  </div>
-  <div>
-    <p><h3>BROWSE active campaigns & click to get more details on a campaigns</h3></p>
+    <h2>CHOOSE FROM WHERE YOU WANT LEADS FOR YOUR COMPANY </h2>
     <body>
     <%= remember = '' %>
     <% @campaigns.each do |campaign| %>
       <% if campaign.title != remember %>
-        <strong><%= campaign.title %></strong> <br>
+        <h3><%= campaign.title %></h3>
       <% end %>
-
       <% remember = campaign.title %> 
       <% if campaign.title == "Painting" %>
         <%= link_to campaign.location, campaign %>
@@ -41,11 +41,12 @@
       <% elsif campaign.title == "Roofing" %>
         <%= link_to campaign.location, campaign %>
       <% end %>
-              ( 
-          <%= campaign.coowners.count %> 
-          / 5 applied) <br>
-    <% end %>
+           (<%= campaign.coowners.count %>/5 applied) <br>
+        <% %>
+    <% end %> <br>
 
+<h2>Can't find campaign for your business and your location?</h2> 
+<h3><a href="campaigns/new">CREATE a new one!</a></h3>
 
   </div>  
 </body>

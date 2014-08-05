@@ -2,7 +2,7 @@ class CampaignsController < ApplicationController
   
   def index
     @user = current_user
-    @campaigns = Campaign.all
+    @campaigns = Campaign.all.sort_by{|e| e[:title]}
     @campaign = Campaign.find_by_id(params[:id])
     @campaign = Campaign.new
     @current_campaign 
