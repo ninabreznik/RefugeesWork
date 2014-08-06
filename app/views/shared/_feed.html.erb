@@ -1,7 +1,0 @@
-<li>
-  <% if current_user.coowning?(@campaign) %>  
-    <%= link_to "Edit campaign", edit_campaign_path(@campaign) %> <br>
-    <%= render 'uncoown' %>
-    <%= render 'shared/delete_campaign' %>
-  <% end %>
-</li>

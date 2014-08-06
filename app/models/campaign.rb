@@ -8,4 +8,8 @@ class Campaign < ActiveRecord::Base
                                    dependent: :destroy
   has_many :coowners, through: :reverse_relationships, source: :coowner
 
+  validates :title, presence: true
+  validates :location, presence: true
+  validates :title, uniqueness: { scope: :location }
+
 end

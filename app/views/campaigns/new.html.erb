@@ -3,11 +3,10 @@
   <title></title>
 </head>
 <body>
+  <h3>Create new campaign</h3>
   <%= form_for (@campaign) do |c| %>
-    <%= c.label :title %> 
-    <%= c.select :title, [["Painting", "Painting"], ["Fasades", "Fasades"], ["Renovations", "Renovations"], ["Mechanical Installations", "Mechanical Installations"], ["Electrical Installations", "Electrical Installations"], ["Knauf", "Knauf"], ["Ceramics", "Ceramics"], ["Parquet", "Parquet"], ["Roofing", "Roofing"], ["Masonry", "Masonry"]] %> <br>
-    <%= c.label :location%>
-    <%= c.select :location, [["All Slovenia", "Slovenia"], ["LJ", "LJ"], ["MB", "MB"], ["CE", "CE"], ["KR", "KR"], ["KP", "KP"], ["NG", "NG"], ["NM", "NM"], ["MS", "MS"]] %> <br>
+     <%= c.select :title, @business_types, {:prompt=>'Select business type'} %> <br>
+    <%= c.select :location, @business_locations, {:prompt=>'Select location'} %> <br>
     <% if user_signed_in? %>
       <%= c.submit "Create" %>
     <% else %>
@@ -17,3 +16,6 @@
   <% end %>
 </body>
 </html>
+
+
+
