@@ -18,14 +18,16 @@ class CampaignsController < ApplicationController
   def new
     @campaign = Campaign.new
     @business_types = [["Painting", "Painting"], ["Fasades", "Fasades"], ["Renovations", "Renovations"], ["Mechanical Installations", "Mechanical Installations"], ["Electrical Installations", "Electrical Installations"], ["Knauf", "Knauf"], ["Ceramics", "Ceramics"], ["Parquet", "Parquet"], ["Roofing", "Roofing"], ["Masonry", "Masonry"]]
-    @business_locations = [["LJ", "LJ"], ["MB", "MB"], ["CE", "CE"], ["KR", "KR"], ["KP", "KP"], ["NG", "NG"], ["NM", "NM"], ["MS", "MS"]]
+    @business_locations = [["Ljubljana", "Ljubljana"], ["Maribor", "Maribor"], ["Celje", "Celje"], ["Kranj", "Kranj"], ["Koper", "Koper"], ["Nova Gorica", "Nova Gorica"], ["Novo mesto", "Novo mesto"], ["Murska Sobota", "Murska Sobota"]]
   end
 
   def create
+    @user = current_user
     @campaign = current_user.campaigns.create(:title => params[:campaign][:title],:location => params[:campaign][:location])
     if @campaign.valid?
       current_user.coown!(@campaign)
       redirect_to @campaign
+
    else
       #flash[:success] = "Campaign with these attributes already exists"
       redirect_to (new_campaign_path)

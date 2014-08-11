@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :relationships, foreign_key: "coowner_id"
   has_many :coowned_campaigns, through: :relationships, source: :coowned 
   
+
   def coowning?(one_campaign)
     relationships.find_by_coowned_id(one_campaign.id)
   end
