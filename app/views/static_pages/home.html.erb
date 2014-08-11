@@ -39,8 +39,7 @@
           Need <strong><%= 5-campaign.coowners.count %> more people</strong> to start. <br> <br>
         <% end %> 
       <% end %>    
-      <% if @campaigns.count >= 0 %>
-        No campaigns yet. 
+      <% if @campaigns.count > 0 %>
         <div>
           <h2><p><strong>Your active campaigns</strong> <br></p></h2>
           Currently you have no active campaigns.
@@ -48,17 +47,12 @@
         <div>
           <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
           Currently you have no leads.
-        </div> 
+        </div>
+      <% else %>
+        No campaigns yet.  
       <% end %>
       
     <% else %>
-
-      <h4>Welcome to LeadShareApp. Here you can simply apply for the contacts of customers looking for your services online.</h4>
-
-      1. Browse through campaigns. <br>
-      2. Add campaigns from business type and locations you want contacts from. <br>
-      3. Order invoice & we can start. <br>
-
       <h2><p><strong>Campaigns you applied for</strong> <br></p></h2>
       You have to <%= link_to "Sign up", new_user_registration_path %> or
       <%= link_to "Login", new_user_session_path %> to see your campaigns. <br>

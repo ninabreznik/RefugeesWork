@@ -3,7 +3,9 @@
   <title></title>
 </head>
 <body>
-  <h3>Create new campaign</h3>
+ <h2>Create new campaign</h2>
+  <h3>Can't find campaign for your business and location? You can create new campaign now.<br>
+    It will be automatically added to campaigns you applied for (see Dashboard on home page). </h3>
   <%= form_for (@campaign) do |c| %>
      <%= c.select :title, @business_types, {:prompt=>'Select business type'} %> <br>
     <%= c.select :location, @business_locations, {:prompt=>'Select location'} %> <br>
