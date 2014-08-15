@@ -4,27 +4,17 @@
 </head>
 <body>
   <div>
-    <h1>Your dashboard</h1>
     <% if user_signed_in? %>
-      <h2><p><strong>Your subscription</strong> <br></p></h2>
-      Currently you have no subscriptions.
-      <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
-      Currently you have no leads.
-        No leads yet.  
+    <h1>Hey, you!</h1>
+    <h3>Nice to see you back:) </h3>
+      <h2><p><strong>Inspiration/tip of a day</strong> <br></p></h2>
+      <p><strong>“My advice is to stop trying to "network" in the traditional business sense, and instead just try to build up the <br>number and depth of your friendships, where the friendship itself is its own reward. The more diverse your set of <br>friendships are, the more likely you'll derive both personal and business benefits from your friendship later <br>down the road. You won't know exactly what those benefits will be, but if your friendships are genuine, those <br>benefits will magically appear 2-3 years later down the road.”<br> </strong>
+      ― Tony Hsieh, Delivering Happiness: A Path to Profits, Passion, and Purpose </p>
     <% else %>
-      <h2><p><strong>Campaigns you applied for</strong> <br></p></h2>
-      You have to <%= link_to "Sign up", new_user_registration_path %> or
-      <%= link_to "Login", new_user_session_path %> to see your campaigns. <br>
-  
-
-      <h2><p><strong>Your active campaigns</strong> <br></p></h2>
-      You have to <%= link_to "Sign up", new_user_registration_path %> or
-      <%= link_to "Login", new_user_session_path %> to see your active campaigns.
-      
-      <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
-      You have to <%= link_to "Sign up", new_user_registration_path %> or
-      <%= link_to "Login", new_user_session_path %> to see your leads.
+      <h1>Welcome to LeadShareApp:)</h1>    
+      <h2><p><strong>Do better business!</strong> <br></p></h2>
+      <%= link_to "Sign up", new_user_registration_path %> or
+      <%= link_to "Login", new_user_session_path %> <br>
     <% end %>
-  </div>
 </body>
 </html>
