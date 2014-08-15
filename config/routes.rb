@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   # Example of regular route:
 
   get '/contact' => 'static_pages#contact'
-  get '/faq' => 'static_pages#faq'
+  get '/pricing' => 'static_pages#pricing'
   get '/about' => 'static_pages#about'
   get '/dashboard' => 'static_pages#all_campaigns'
 
