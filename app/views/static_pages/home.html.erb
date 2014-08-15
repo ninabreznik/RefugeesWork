@@ -6,52 +6,11 @@
   <div>
     <h1>Your dashboard</h1>
     <% if user_signed_in? %>
-      <h2><p><strong>Campaigns you applied for</strong> <br></p></h2>
-      <%= remember = '' %>
-      <% @campaigns.each do |campaign| %>
-        <% if current_user.coowning?(campaign) %>  
-          <% if campaign.title != remember %>
-            <h3><%= campaign.title %></h3>
-          <% end %>
-          <% remember = campaign.title %> 
-          <% if campaign.title == "Painting" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Fasades" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Knauf" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Mechanical Installations" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Electrical Installations" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Renovations" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Ceramics" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Parquet" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Masonry" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% elsif campaign.title == "Roofing" %>
-            <button><%= link_to campaign.location, campaign %></button>
-          <% end %> <br>
-          <strong>Applied: <%= campaign.coowners.count %></strong> <br>
-          Need <strong><%= 5-campaign.coowners.count %> more people</strong> to start. <br> <br>
-        <% end %> 
-      <% end %>    
-      <% if @campaigns.count > 0 %>
-        <div>
-          <h2><p><strong>Your active campaigns</strong> <br></p></h2>
-          Currently you have no active campaigns.
-        </div> 
-        <div>
-          <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
-          Currently you have no leads.
-        </div>
-      <% else %>
-        No campaigns yet.  
-      <% end %>
-      
+      <h2><p><strong>Your subscription</strong> <br></p></h2>
+      Currently you have no subscriptions.
+      <h2><p><strong>Your leads to potencial customers</strong> <br></p></h2>
+      Currently you have no leads.
+        No leads yet.  
     <% else %>
       <h2><p><strong>Campaigns you applied for</strong> <br></p></h2>
       You have to <%= link_to "Sign up", new_user_registration_path %> or

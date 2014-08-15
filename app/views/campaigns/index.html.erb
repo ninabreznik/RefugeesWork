@@ -1,48 +1,48 @@
 <h2>CHOOSE CAMPAIGNS</h2> FROM WHICH YOU WANT TO RECEIVE CUSTOMER CONTACTS
-    <body>
-      
-    <%= remember_title = '' %>
-    <% @campaigns.each do |campaign| %>
-      
-      <% if campaign.title != remember_title %>
-        <h3><%= campaign.title %></h3>
+<body>
+<%= remember_title = '' %>    
+<% @campaigns.each do |campaign| %>
+  <% if campaign.title != remember_title %>
+    <h3><%= campaign.title %></h3>
+  <% end %>
+  <% remember_title = campaign.title %>
+  <% if campaign.title == "Painting" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Fasades" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Knauf" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Mechanical Installations" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Electrical Installations" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Renovations" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Ceramics" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Parquet" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Masonry" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% elsif campaign.title == "Roofing" %>
+    <%= link_to campaign.location, campaign %> <br>
+  <% end %> 
+  <% if user_signed_in? %> 
+    <% if current_user.coowning?(campaign) %>
+      <%= form_for(current_user.relationships.find_by_coowned_id(campaign),
+        html: { method: :delete }) do |c| %>
+        <%= c.submit "Leave campaign" %>
       <% end %>
-      <% remember_title = campaign.title %>
-      
-      <% if campaign.title == "Painting" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Fasades" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Knauf" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Mechanical Installations" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Electrical Installations" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Renovations" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Ceramics" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Parquet" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Masonry" %>
-        <%= link_to campaign.location, campaign %>
-
-      <% elsif campaign.title == "Roofing" %>
-        <%= link_to campaign.location, campaign %>
-      <% end %> 
-      <button><%= link_to "Add", campaign %></button>
-      <br>
-           
-    <% end %> 
-
+    <% else %>
+      <%= form_for(current_user.relationships.build(coowned_id: campaign.id)) do |c| %>
+        <%= c.hidden_field :coowned_id %>
+        <%= c.submit "Apply for campaign" %>
+      <% end %>
+    <% end %>
+  <% else %> 
+    <button><%= link_to "Apply for campaign", new_user_registration_path %> </button> <br>    
+   <% end %>
+<% end %>
+</body>
 
 

@@ -1,12 +1,8 @@
 class CampaignsController < ApplicationController
   
   def index
-    #@user = current_user
     @campaigns = Campaign.all.sort_by{|e| e[:title]}
     @campaign = Campaign.find_by_id(params[:id])
-    #@campaign = Campaign.find_by_id(params[:id])
-    #@campaign = Campaign.new
-    #@current_campaign 
   end 
 
   def show
@@ -51,8 +47,9 @@ class CampaignsController < ApplicationController
   end
 
   def destroy
-    Campaign.find(params[:id]).destroy
-    redirect_to campaigns_url
+    Relationship.find(params[:id]).destroy
+    flash[:success] = "User deleted."
+    redirect_to root_url
   end
 
    private
