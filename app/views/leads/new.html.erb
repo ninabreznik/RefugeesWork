@@ -1,2 +1,35 @@
-<h1>Leads#new</h1>
-<p>Find me in app/views/leads/new.html.erb</p>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+ <h2>Book a service</h2>
+  <h3>Send a free inquiry and up to 5 chosen providers will contact you with their special offers. </h3>
+
+  <%= form_for (@lead) do |l| %>
+
+    <%= l.select :business_type, @business_types, {:prompt=>'Who are you looking for?'} %> <br>
+    
+    <%= l.select :time, @time, {:prompt=>'When would you need a service?'} %> <br>
+    
+    <%= l.label :zip %>
+    <%= l.text_field :zip %><br>
+
+    <%= l.label :description %>
+    <%= l.text_field :description %><br>
+
+    <%= l.label :name %>
+    <%= l.text_field :name %><br>
+
+    <%= l.label :email %>
+    <%= l.text_field :email %><br>
+
+    <%= l.label :phone %>
+    <%= l.text_field :phone %><br>
+
+    <%= l.submit "Send" %>
+
+  <% end %>
+
+</body>
+</html>

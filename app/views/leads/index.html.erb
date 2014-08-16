@@ -3,20 +3,11 @@
   <title></title>
 </head>
 <body>
-  <div>
-    <p>This are new leads for your HAIRDRESSER BUSINESS in BERLIN</p>
-  </div>
-
-  <div>
-    <ul>
-      <li>I am looking for a hairdresser to cut my hair. (Linda) <button>buy</button></li>
-      <li>I need hairdresser for my wedding. (Barbara) <button>buy</button></li>
-      <li>Female hairdresser that would come to my home in X-berg. (Koko) <button>buy</button></li>
-    </ul>
-  </div>
-  
-  <div>
-  </div>
-
+<h2>Leads</h2>
+<% @leads.each do |lead| %>
+  <strong><%= link_to lead.business_type, lead %> </strong> 
+  (<%= lead.time %>, 
+  <%= lead.name %>) <br>
+<% end %>
 </body>
 </html>
