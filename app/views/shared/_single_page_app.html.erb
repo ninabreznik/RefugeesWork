@@ -1,352 +1,108 @@
+<%
+###############################################################################
+# SELECT DATA for PRESENTATION
+###############################################################################
+params = {
+  data:             [ # API: "/v0.0.1/api/campaigns"
+    { # API: "/v0.0.1/api/campaigns/:integer"
+      title:        'Dummy1',
+      description:  'This is dummy 1',
+      counter:      1
+    },{
+      title:        'Dummy2',
+      description:  'This is dummy 2',
+      counter:      2
+    }
+  ],
+  collection:       { # API: "/v0.0.1/api/campaigns/collection"
+    title:          ['Dummy1', 'Dummy2'],
+    description:    ['This is dummy 1', 'This is dummy 2'],
+    counter:        [1, 2]
+  },
+  schema:           { # API: "/v0.0.1/api/campaigns/schema"
+    title:          'string',
+    description:    'string',
+    counter:        'integer'
+  },
+  user:             { # API: "/v0.0.1/api/user?email=xxx&password=xxx&secret=xxx"
+    id:             @current_user.try(:id),
+    name:           @current_user.try(:name),
+    email:          @current_user.try(:email),
+    secret:         form_authenticity_token
+  },
+  containerID:      'CONTENT'
+}
+###############################################################################
+# VALIDATE CONTRACT (Between FRONTEND DEV and BACKEND DEV)
+###############################################################################
+V8::Context.new do |v8|
+# @TODO: improve validation to have a "nice" contract between backend/frontend when it comes to sending and receiving DATA
+# v8[:TEMP]           = v8.scope.COMPONENT_RainbowUnicorn
+# v8[:generateData]   = v8.eval('TEMP.generateData')                                                            
+# v8[:SCHEMA]         = v8.eval('TEMP.SCHEMA')
+# v8[:getTypes]       = v8.eval('TEMP.getTypes')
+# v8[:getValidators]  = v8.eval('TEMP.getValidators')
+# v8[:getSamples]     = v8.eval('TEMP.getSamples')
+# v8[:VALIDATE]       = v8.eval('TEMP.VALIDATE')
+if true # v8.scope.VALIDATE(data_set, data_collections, data_schema)
+#############################################################################%>
+<!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    COMPONENT STYLING - (In Stylus)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<link rel='stylesheet' type='text/css' href='./assets/APP.css'>
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     SERVER SIDE - RENDER WEB COMPONENTS - (for SEO & google crawler)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-  <a id="LAYOUT" href="#LAYOUT"> Single Page Layout </a><br>
-
-
-  <%
-    component = "#{Rails.root}/app/assets/components/"
-    V8::Context.new do |v8| %> 
-    <!--:::::::::::::::::::::::::::::::::::::::::
-        COMPONENT STYLING
-    ::::::::::::::::::::::::::::::::::::::::::-->
-    <link rel='stylesheet' type='text/css' href='./component.css'> <!--stylus-->
-    <!--:::::::::::::::::::::::::::::::::::::::::
-        COMPONENT DOM
-    ::::::::::::::::::::::::::::::::::::::::::-->
-    <div id='CONTENT'>
-    <!--:::::::::::::::::::::::::::::::::::::::::
-        COMPONENT INITIALIZATION (Server Side)
-          <%#= form_authenticity_token %>
-    ::::::::::::::::::::::::::::::::::::::::::-->
-      <%#=
-        # COMPONENT - RainbowUnicorn
-        container_query = '#RainbowUnicorn'
-        component       = script + "rainbowunicorn/RainbowUnicorn.js"
-        data            = '<b>Hello !!!</b>'
-        # RENDER
-        v8.load(component)
-        raw v8.scope.render(container_query, component, data)                           # LOAD IN BACKEND
-      %>
-    </div>
-    <br>
-
-
-
-    <!--:::::::::::::::::::::::::::::::::::::::::
-        @TODO: Test Plates
-    ::::::::::::::::::::::::::::::::::::::::::-->
-      <% 
-        v8.load(component + "plates/plates.js")
-
-        #### PLATES API ####
-        # bind(html:HTMLstring|String|Filename, data:JSON|String, map)
-        # => result of <html> merged with <data>
-          # html - string of well-formel HTML
-          # data - JSON
-          # map  - data mapping for the partial (instance of Plates.Map())
-
-        # => inserts value of data[key] into tag with an attribute value of key
-        # where(attribute:String)
-        # => TAG <attribute> to match on (omit: defaults to "id")
-        # has(value:String|RegExp)
-        # => TAG attribute contains <value> to match on
-        # as(attribute:String)
-        # => TAG <attribute> to replace into
-
-        # use(key:String|Function)
-        # => JSON <key> whichs value the TAG innerHTML is set to
-        #    (typeof key ==='function') ? key(data, value, tagbody)
-
-        # insert(key:String)
-        # => JSON <key> whichs value the TAG attribute is set to
-        
-        # remove()
-        # => Matched TAG is removed from template
-        # partial(html:HTMLstring|String|Filename, data:JSON|String, map)
-        # => ???
-          # html - new template to be added | id of DOM node whichs innerHTML is the template
-          #         | in nodejs a relative path to file containing the template
-          # data - JSON | key for JSON of main template
-          # map  - data mapping for the partial (instance of Plates.Map())
-
-        # SYNTACTIC SUGAR
-        # is(attribute:String)
-        # === has(/^attribute$/)
-        # class(classname:String),   
-        # className(classname:String)
-        # === where('class').is(classname)
-        # === where('class').has(/^classname$/)
-        # to(key:String)
-        # === use(key)
-        # append(html:HTMLstring|String|Filename, data:JSON|String, map)
-        # === partial(html, data, map)
-      %>
-
-      <div id='SIMPLE_MAPPING' style="
-        background-color: #FF9999; min-height: 100px; margin: 15px; padding: 15px
-      ">
-        <%=
-          # ARRAY Mapping 1
-          template  = '<div data-bind="user"></div>'
-          data      = { user: 'Mustafa'}
-          mapping   = v8.scope.Plates.Map()
-          # mapping.where('class').is('name').use('user')
-          raw v8.scope.Plates.bind(template, data, mapping)
-        %>
-      </div>
-
-
-      <%
-
-
-
-# // SIMPLE
-# // By default, plates will try to match the key
-# // in the data to an id in the tag, since both should be unique.
-# var Plates  = require('plates');
-# var html  = '<div id="test">Old Value</div>';
-# var data  = { "test": "New Value" };
-# var output  = Plates.bind(html, data); 
-
-
-# // EXPLICIT INSTRUCTIONS
-# // A common use case is to apply the new value
-# // to each tag's body based on the class attribute.
-# var html = '<span class="name">User</span>...<span class="name">User</span>';
-# var data = { "username": "John Smith" };
-# var map = Plates.Map();
-# map.class('name').to('username');
-# console.log(Plates.bind(html, data, map));
-
-
-# // COMPLEX INSTRUCTIONS
-# // Another common case is to replace the value
-# // of an attribute if it is a match.
-# var html = '<a href="/"></a>';
-# var data = { "newurl": "http://www.nodejitsu.com" };
-# var map = Plates.Map();
-# map.where('href').is('/').insert('newurl');
-# console.log(Plates.bind(html, data, map));
-
-# // Partial value replacement
-# var html = '<a href="/foo/bar"></a>';
-# var data = { "newurl": "bazz" };
-# var map = Plates.Map();
-# map.where('href').has(/bar/).insert('newurl');
-# // `has` can take a regular expression.
-# console.log(Plates.bind(html, data, map));
-
-# // In even more complex cases, an arbitrary attribute can be specified.
-# // If a value is matched, a specific value can be used
-# // and then used as another attribute's value.
-# var html = '<img data-foo="bar" src=""></img>';
-# var data = { "imageurl": "http://www.nodejitsu.com" };
-# var map = Plates.Map();
-# map.where('data-foo').is('bar').use('imageurl').as('src');
-# console.log(Plates.bind(html, data, map));
-
-
-# // COLLECTIONS
-# // Plates can also iterate through collections:
-# var html = '<div class="name"></div>';
-# var collection = [
-#   {'name': 'Louis CK'},
-#   {'name': 'Andy Kindler'},
-#   {'name': 'Greg Giraldo'}
-# ];
-# console.log(Plates.bind(html, collection));
-
-
-# // PARTIALS
-# // Plates also supports partials:
-# var partial = '<li class="partial"></li>';
-# var base = '<div><h1 class="foo"></h1><ul class="menu"></ul></div>';
-# var baseData = { foo: 'bar' };
-# var mapping = Plates.Map();
-# mapping.class('menu').append(partial);
-# console.log(Plates.bind(base, baseData, mapping));
-
-
-
-        # SIMPLE
-        template  = "<div id='test'>Old Value</div>"
-        mapping       = v8.scope.Plates.Map()
-        data      = { test: 'New Value' }
-        v8[:result_simple] = v8.scope.Plates.bind(template, data, mapping)
-
-
-        # SIMPLE Mapping
-        template  = '<img data-foo="bar" src=""></img>'
-        data      = { imageurl: "http://www.nodejitsu.com" }
-        mapping   = v8.scope.Plates.Map()
-        mapping.where('data-foo').is('bar').use('imageurl').as('src')
-        v8[:result_simpleMapping] = v8.scope.Plates.bind(template, data, mapping)
-
-
-        # SIMPLE REPLACE Mapping
-        template  = '<input placeholder="/">Schoobidoo</input>'
-        data      = { newurl: "http://www.nodejitsu.com" }
-        mapping   = v8.scope.Plates.Map()
-        mapping.where('placeholder').is('/').insert('newurl')
-        v8[:result3a] = v8.scope.Plates.bind(template, data, mapping)
-
-
-        # PARTIAL REPLACE Mapping
-        template  = '<input placeholder="/foo/bar">Schoobidoo123</input>'
-        data      = { newurl: "bazz" }
-        mapping   = v8.scope.Plates.Map()
-        mapping.where('placeholder').has(/bar/).insert('newurl')
-        v8[:result_partialReplace] = v8.scope.Plates.bind(template, data, mapping)
-
-
-        # ARRAY Mapping 1
-        template  = '<span class="name">User</span>...<span class="name">User</span>'
-        data      = { user: "John Smith" }
-        mapping   = v8.scope.Plates.Map()
-        mapping.where('class').is('name').use('user')
-        v8[:result_arrayMapping1] = v8.scope.Plates.bind(template, data, mapping)
-
-
-        # COLLECTION
-        template_main = '<div>
-                          <ul><li data-bind="name">REPLACE</li></ul>
-                          <div>
-                            <h3>Hello World</h3>
-                            <p>Press the following button.</p>
-                            <span>Go back</span>
-                          </div>
-                        </div>'
-        collection    = [
-          { name: 'Louis CK'},
-          { name: 'Andy Kindler'},
-          { name: 'Greg Giraldo'}
-        ]
-        v8[:result_collections] = v8.scope.Plates.bind(template_main, collection)
-        # ARRAY
-        template_main = '<div>
-                          <ul><li data-bind="name">REPLACE</li></ul>
-                          <div>
-                            <h3>Hello World</h3>
-                            <p>C"lu"ck the following button.</p>
-                            <span> Go back</span>
-                          </div>
-                        </div>'
-        data = { name: ['Louis CK', 'Andy Kindler', 'Greg Giraldo', 'asdf'] }
-        v8[:result_arrayA] = v8.scope.Plates.bind(template_main, data)
-
-
-        # ARRAY B
-        template_main = '<div>
-                          <ul><li class="name">REPLACE</li></ul>
-                          <div>
-                            <h3>Hello World</h3>
-                            <p>C"li"ck the following button.</p>
-                            <span> Go back</span>
-                          </div>
-                        </div>'
-        data = { name: ['Louis CK', 'Andy Kindler', 'Greg Giraldo', 'asdf'] }
-        v8[:result_arrayB] = v8.scope.Plates.bind(template_main, data)
-        # ARRAY C
-        template_main = '<div>
-                          <ul class="list"></ul>
-                          <div>
-                            <h3>Hello World</h3>
-                            <p>C"li"ck the following button.</p>
-                            <span> Go back</span>
-                          </div>
-                        </div>'
-        template_sub  = '<li class="name">REPLACE</li>'
-        data = { name: ['Louis CK', 'Andy Kindler', 'Greg Giraldo', 'asdf'] }
-        temp = { list: v8.scope.Plates.bind(template_sub, data) }
-        v8[:result_arrayC] = v8.scope.Plates.bind(template_main, temp)
-
-
-
-        # SUBTEMPLATING a.k.a PARTIALS
-        template_main = '<h1>This is the main template.</h1><div id="main"></div><h2>The End.</h2>'
-        template_sub  = '<p>This is the partial that should be rendered into the main template. <span id="test">asdf</span></p>'
-        subdata       = {test: 'In addition, it contains content'}
-        data          = {main: v8.scope.Plates.bind(template_sub, subdata)}
-        v8[:result_subtemplating] = v8.scope.Plates.bind(template_main, data)
-
-
-        # PARTIALS
-        # template_main = '<div><h1 class="foo"></h1><ul class="menu"></ul></div>'
-        # template_sub  = '<li class="partial"></li>'
-        # data          = { foo: 'bar' }
-        # mapping       = v8.scope.Plates.Map()
-        # mapping.class('menu').partial(template_sub)
-        # v8[:result_partials1] = v8.scope.Plates.bind(template_main, data, mapping)
-
-        # PARTIALS
-        # template_main = '<div><h1 class="foo"></h1><ul class="menu"></ul></div>'
-        # template_sub  = '<li class="partial"></li>'
-        # data          = { foo: 'bar' }
-        # mapping       = v8.scope.Plates.Map()
-        # mapping.class('menu').append(template_sub)
-        # v8[:result_partials2] = v8.scope.Plates.bind(template_main, data, mapping)
-
-      %>
-      <div style="background-color: #FF9999; min-height: 100px;">
-        <%= raw v8.scope.result_simple %>
-      </div>
-      <br>
-      <div style="background-color: #FFCC66; min-height: 100px;">
-        <%= raw v8.scope.result_simpleMapping %>
-      </div>
-      <br>
-      <div style="background-color: #FFFF99; min-height: 100px;">
-        <%= raw v8.scope.result3a %>
-      </div>
-      <br>
-      <div style="background-color: #FFFFAA; min-height: 100px;">
-        <%= raw v8.scope.result_partialReplace %>
-      </div>
-      <br>
-      <div style="background-color: #99FF99; min-height: 100px;">
-        <%= raw v8.scope.result_arrayMapping1 %>
-      </div>
-      <br>
-      <div style="background-color: #9999FF; min-height: 100px;">
-        <%= raw v8.scope.result_subtemplating %>
-      </div>
-     <br>
-      <div style="background-color: #FF66FF; min-height: 100px;">
-        <%= raw v8.scope.result_collections %>
-      </div>
-     <br>
-      <div style="background-color: #FF99FF; min-height: 100px;">
-        <%= raw v8.scope.result_arrayA %>
-      </div>
-     <br>
-      <div style="background-color: #FFBBFF; min-height: 100px;">
-        <%= raw v8.scope.result_arrayB %>
-      </div>
-     <br>
-      <div style="background-color: #FFDDFF; min-height: 100px;">
-        <%= raw v8.scope.result_arrayC %>
-      </div>
-<!--      <br>
-      <div style="background-color: #FFDDFF; min-height: 100px;">
-        <%#= raw v8.scope.result_partials1 %>
-      </div> -->
-<!--      <br>
-      <div style="background-color: #FFDDFF; min-height: 100px;">
-        <%#= raw v8.scope.result_partials2 %>
-      </div> -->
-
-    <!--:::::::::::::::::::::::::::::::::::::::::
-        COMPONENT SCRIPT
-    ::::::::::::::::::::::::::::::::::::::::::-->
-    <script src="RainbowUnicorn.js"></script> 
-    <!--:::::::::::::::::::::::::::::::::::::::::
-        COMPONENT INITIALIZATION (Client Side)
-          <%#= form_authenticity_token %>
-    ::::::::::::::::::::::::::::::::::::::::::-->
-    <script>
-      <%= raw v8[:doStuff] %>                                                      // LOAD IN FRONTEND
-    </script>
-  <% end %>
+<div id='<%=params[:containerID]%>' data-state='<%#= is_rendered%>'>
+<%#=###########################################################################
+  # SERVER SIDE Initialization
+  # [COMPONENT DOM  - INITIALIZATION & RENDERING (for SEO & google crawler)]
+  #       
+  # Render TEMPLATE on the Server Side
+  # + "data-state" will signal the client, that only updates are needed
+  # + data-* attributes is where client side updates will go
+  # ==> with MutationObserver on data-* attributes
+  #
+  # @TODO: This is currently so slow with "TheRubyRacer",
+  #       that it is not a viable option, for further details, see:
+  #       http://confluence.ikusei.de/display/IKU/Dual+Side+Templating
+  #
+  #############################################################################
+  script      = "#{GoldencobraCrm::Engine.root}/app/assets/javascripts/components/"
+  stylesheet  = "#{GoldencobraCrm::Engine.root}/app/assets/stylesheets/components/"
+  media       = "#{GoldencobraCrm::Engine.root}/app/assets/images/components/"
+  v8.eval('var window = {};')
+  v8.load(script + "rainbowunicorn/RainbowUnicorn.bundle.js")
+#############################################################################%>
+</div>
+<!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  CLIENT SIDE - MAIN COMPONENT SCRIPT
+    For CommonJS-Incompatible Files
+    https://github.com/thlorenz/browserify-shim
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<script type="text/javascript" src='/assets/APP.bundle.js'></script>
+<script>
+  /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    PROVISORISCH - CLIENT SIDE INITIALIZATION ONLY
+    (Will later be rendered by server into data-* attributes)
+  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+  var params = JSON.parse('<%=escape_javascript(params.to_json.html_safe)%>');
+  window.onload = function () { APP.START(params); }
+</script>
 <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<!-- <div id='TEMPLATES' style='display: none; !important'></div> -->
+        <%else%><h1>Received invalid DATA from backend</h1><%end end%>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+
+
+
+
+
+<!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  TEST TEMPLATING
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<a id="LAYOUT" href="#LAYOUT"> Single Page Layout </a><br>
+<hr><%= params %><br><hr><br>
+  <h1> Plates Template SPIKE </h1>
+  <div id="content"></div><hr>
+  <div id="RESULT"></div><hr>
+<div id="DEVELOP_MODE" style="position: absolute; left: 5%; width: 90%"></div>

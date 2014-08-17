@@ -1,0 +1,50 @@
+{
+  "name": "LeadShareApp",
+  "version": "0.0.1",
+  "description": "PaaS for sharing costs for google ad campaigns to get leads",
+  "main": "app/assets/javascripts/APP.bundle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "help": "#describe all npm tasks - http://anders.janmyr.com/2014/03/running-scripts-with-npm.html + http://substack.net/task_automation_with_npm_run",
+    "jobs": "#list jobs + description on how to start working on one + how to stop development",
+    "develop": "#checkout job branch + stylus & watch & testem + how to stop development",
+    "deploy": "#build + run all tests + git push if successful",
+    "release": "#build through browserify, test all + if successful: uglify + semver + push with tags + npm publish, bower publish, ....",
+    "build": "node node_modules/browserify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
+    "watch": "node node_modules/watchify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
+    "style": "stylus --use nib --use jeet --use rupture --compress --watch app/assets/stylesheets/APP.styl",
+    "start": "npm run watch & npm run style #@TODO: Add startup of testem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninabreznik/LeadShareApp.git"
+  },
+  "keywords": [
+    "lead",
+    "leads",
+    "campaign",
+    "campaign",
+    "google",
+    "ads",
+    "adwords"
+  ],
+  "author": [
+    "serapath <dev@serapath.de> (http://www.github.com/serapath)",
+    "nin <ninabreznik@gmail.com> (http://www.github.com/ninabreznik"
+  ],
+  "license": "Copyright 2014 Coding Amigos",
+  "bugs": {
+    "url": "https://github.com/ninabreznik/LeadShareApp/issues"
+  },
+  "homepage": "https://github.com/ninabreznik/LeadShareApp",
+  "private": true,
+  "dependencies": {
+    "LeadShareAppFrontend": "git://github.com/coding-amigos/LeadShareAppFrontend#v0.0.5"
+  },
+  "devDependencies": {
+    "watchify": "^1.0.2",
+    "browserify": "^5.10.0"
+  }
+}
