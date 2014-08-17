@@ -3,20 +3,23 @@
   <title></title>
 </head>
 <body>
-
-
 <% if user_signed_in? %>  
   <% if current_user.relationships == nil %> 
     <% @leads.each do |lead| %>
       <h3>Business Type: <%= lead.business_type %></h3>
+      Location: <%= lead.location %> <br>
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
       Description: <%= lead.description %> <br>
     <% end %>
-      <a href="/campaigns">Apply to the right campaigns to see all the leads for your business and your region(s)!</a>
+      <a href="/campaigns">
+        Apply to the right campaigns to see all the leads
+        for your business and your region(s)!
+      </a>
   <% else %>
     <% @current_user_leads.each do |lead| %>
       <h3>Business Type: <%= lead.business_type %></h3>
+      Location: <%= lead.location %> <br>
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
       Description: <%= lead.description %> <br>
@@ -25,6 +28,7 @@
 <% else %>
     <% @leads.each do |lead| %>
       <h3>Business Type: <%= lead.business_type %></h3>
+      Location: <%= lead.location %> <br>
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
       Description: <%= lead.description %> <br> </p>
