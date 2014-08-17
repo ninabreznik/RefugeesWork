@@ -1,6 +1,30 @@
 class LeadsController < ApplicationController
   def index
     @leads = Lead.all
+    @campaign = Campaign.find_by_id(params[:id])
+    @lead = Lead.find_by_id(params[:id])
+  
+    coowned_ids = []
+    current_user.relationships.each do |r|
+      coowned_ids << r.coowned_id
+    end
+    current_user_campaigns = Campaign.where(id: coowned_ids)
+    
+    current_user_campaigns_locations_and_title = []
+    current_user_campaigns.each do |c|
+      current_user_campaigns_locations_and_title << [c.location, c.title]
+    end
+
+    @current_user_leads = []
+    lead_values = []
+    @leads.each do |l|
+      lead_values << [l.location,l.business_type]
+      current_user_campaigns_locations_and_title.each do |c|
+        if c == lead_values
+          @current_user_leads << l
+        end
+      end
+    end
   end
 
   def show
@@ -16,7 +40,7 @@ class LeadsController < ApplicationController
   def create
     @lead = Lead.create(:name => params[:lead][:name], :email => params[:lead][:email], :description => params[:lead][:description], 
                          :zip => params[:lead][:zip], :phone => params[:lead][:phone], :business_type => params[:lead][:business_type], 
-                         :time => params[:lead][:time])
+                         :time => params[:lead][:time], :location => params[:lead][:location])
     redirect_to @lead
   end 
   
@@ -31,7 +55,11 @@ class LeadsController < ApplicationController
   private
 
   def campaign_params
-    params.require(:lead).permit(:name, :email, :description, :zip, :phone, :business_type, :time)
+    params.require(:lead).permit(:name, :email, :description, :zip, :phone, :business_type, :time, :location)
   end
+
+
+
+
 
 end

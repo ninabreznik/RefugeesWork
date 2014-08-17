@@ -3,11 +3,39 @@
   <title></title>
 </head>
 <body>
-<h2>Leads</h2>
-<% @leads.each do |lead| %>
-  <strong><%= link_to lead.business_type, lead %> </strong> 
-  (<%= lead.time %>, 
-  <%= lead.name %>) <br>
+
+
+<% if user_signed_in? %>  
+  <% if current_user.relationships == nil %> 
+    <% @leads.each do |lead| %>
+      <h3>Business Type: <%= lead.business_type %></h3>
+      ZIP: <%= lead.zip %> <br>
+      Time: <%= lead.time %> <br>
+      Description: <%= lead.description %> <br>
+    <% end %>
+      <a href="/campaigns">Apply to the right campaigns to see all the leads for your business and your region(s)!</a>
+  <% else %>
+    <% @current_user_leads.each do |lead| %>
+      <h3>Business Type: <%= lead.business_type %></h3>
+      ZIP: <%= lead.zip %> <br>
+      Time: <%= lead.time %> <br>
+      Description: <%= lead.description %> <br>
+    <% end %>
+  <% end %>
+<% else %>
+    <% @leads.each do |lead| %>
+      <h3>Business Type: <%= lead.business_type %></h3>
+      ZIP: <%= lead.zip %> <br>
+      Time: <%= lead.time %> <br>
+      Description: <%= lead.description %> <br> </p>
+    <% end %>
+      Want to see all the leads for your business and your region? 
+      <%= link_to "Sign up", new_user_registration_path %> or 
+      <%= link_to "Login", new_user_session_path %> <br>  
 <% end %>
+
+
 </body>
 </html>
+
+

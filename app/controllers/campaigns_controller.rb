@@ -3,13 +3,26 @@ class CampaignsController < ApplicationController
   def index
     @campaigns = Campaign.all.sort_by{|e| e[:title]}
     @campaign = Campaign.find_by_id(params[:id])
+    respond_to do |f|    #For RESTFUL API
+      f.html
+      f.json do 
+        render json: { campaigns: @campaigns }
+      end
+    end
   end 
 
   def show
     @campaign = Campaign.find_by_id(params[:id])
     @current_campaign 
     @campaigns = Campaign.all.sort_by{|e| e[:title]}
+    respond_to do |f|    #For RESTFUL API
+      f.html
+      f.json do 
+        render json: { campaign: @campaign }
+      end
+    end
   end
+
 
   def new
     @campaign = Campaign.new
