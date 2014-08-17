@@ -36,6 +36,12 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 # Use unicorn as the app server
 # gem 'unicorn'
 
+#Dashing related stuff
+gem 'dashing-rails'
+gem 'puma'
+# gem 'nokogiri'
+# gem 'htmlentities'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
