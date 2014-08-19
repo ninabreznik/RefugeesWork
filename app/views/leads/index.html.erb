@@ -10,20 +10,21 @@
       Location: <%= lead.location %> <br>
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
-      Description: <%= lead.description %> <br>
+      Description: <%= lead.description %><br>
+      <button>buy solo 60€</button> <button>buy with others 12€</button>
     <% end %>
-      <a href="/campaigns">
-        Apply to the right campaigns to see all the leads
-        for your business and your region(s)!
-      </a>
+
+
   <% else %>
     <% @current_user_leads.each do |lead| %>
       <h3>Business Type: <%= lead.business_type %></h3>
       Location: <%= lead.location %> <br>
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
-      Description: <%= lead.description %> <br>
+      Description: <%= lead.description %><br>
+      <button>buy now</button> 
     <% end %>
+
   <% end %>
 <% else %>
     <% @leads.each do |lead| %>
@@ -31,14 +32,10 @@
       Location: <%= lead.location %> <br>
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
-      Description: <%= lead.description %> <br> </p>
+      Description: <%= lead.description %><br>
+      <button><%= link_to "buy now", new_user_registration_path %></button>      
     <% end %>
-      Want to see all the leads for your business and your region? 
-      <%= link_to "Sign up", new_user_registration_path %> or 
-      <%= link_to "Login", new_user_session_path %> <br>  
 <% end %>
-
-
 </body>
 </html>
 
