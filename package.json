@@ -4,18 +4,21 @@
   "description": "PaaS for sharing costs for google ad campaigns to get leads",
   "main": "app/assets/javascripts/APP.bundle.js",
   "directories": {
-    "test": "test"
+    "test": "SPECIFICATION"
   },
   "scripts": {
-    "help": "#describe all npm tasks - http://anders.janmyr.com/2014/03/running-scripts-with-npm.html + http://substack.net/task_automation_with_npm_run",
-    "jobs": "#list jobs + description on how to start working on one + how to stop development",
-    "develop": "#checkout job branch + stylus & watch & testem + how to stop development",
-    "deploy": "#build + run all tests + git push if successful",
-    "release": "#build through browserify, test all + if successful: uglify + semver + push with tags + npm publish, bower publish, ....",
-    "build": "node node_modules/browserify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
-    "watch": "node node_modules/watchify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
-    "style": "stylus --use nib --use jeet --use rupture --compress --watch app/assets/stylesheets/APP.styl",
-    "start": "npm run watch & npm run style #@TODO: Add startup of testem"
+    "help"    : "#describe all npm tasks - http://anders.janmyr.com/2014/03/running-scripts-with-npm.html + http://substack.net/task_automation_with_npm_run",
+    "jobs"    : "#list jobs + description on how to start working on one + how to stop development",
+    "develop" : "#checkout job branch + stylus & watch & testem + how to stop development",
+    "deploy"  : "#build + run all tests + git push if successful",
+    "release" : "#build through browserify, test all + if successful: uglify + semver + push with tags + npm publish, bower publish, ....",
+    "spec"    : "#run testem",
+    "assets"  : "mkdir -p app/assets/images/media && cp node_modules/LeadShareAppFrontend/SOURCE/*.png app/assets/images/media/",
+    "build"   : "node node_modules/browserify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
+    "watch"   : "node node_modules/watchify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
+    "serve"   : "rails s",
+    "style"   : "stylus --use nib --use jeet --use rupture --compress --watch app/assets/stylesheets/APP.styl",
+    "start"   : "npm run watch & npm run style #npm run assets, npm run serve, npm run spec"
   },
   "repository": {
     "type": "git",

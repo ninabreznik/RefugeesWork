@@ -117,6 +117,33 @@ __... HAPPY CODING :-)__
 
 
 
+### How to shorten feedback cycles during development
+(Process to use for projects, where dependencies projects have to be developed in parallel to the main project)
+In order to use changes made in a dependency project, they have to be commited and pushed and the version has to be increased and published.
+Afterwards, in the main project, the version for the updated dependency has to be adapted in `package.json` and `npm install` has to be run.
+That is a lot of hassle to be done for each change.
+
+
+### Solution
+__Given:__ "Main Project" and "Dependency Project" are both `git clone`'ed to the local developer machine.
+__Process:__
+0. Open all those Project Folders in sublime editor and then use the terminal to...
+1. Go to the "Dependency Project" repository and increase the "Version Number" in the `package.json` file, but don't `git push`.
+2. Run `npm link` in the root directory of the "Dependency Project" repository.
+3. Go to the "Main Project" repository and increase the "Version Number" of the "Dependency Project" in the `package.json` file.
+4. Run `npm link 'dependency name'` in the root directory of the "Main Project" repository.
+That's it, execute `npm start` in the "Main Project" repository and start hacking...
+
+__Finishing:__ After all changes are done to both projects and you are satisfied with the result...
+1. Go to the "Main Project" repository and run `npm link 'dependency name'` in the root directory.
+2. Go to the "Dependency Project" repository and run `npm unlink` in the root directory.
+3. Then `git commit` and `git push` all the changes to publish the new version.
+4. Go to the "Main Project" repository and run `npm install` to get the new version of the dependency you just updated.
+
+That's it.
+
+
+
 
 repository
 =======

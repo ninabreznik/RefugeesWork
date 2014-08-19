@@ -1,6 +1,6 @@
 <%
 ###############################################################################
-# SELECT DATA for PRESENTATION
+# SELECT DATA for PRESENTATION (=ARGUMENTS provided to this ERB File )
 ###############################################################################
 params = {
   data:             [ # API: "/v0.0.1/api/campaigns"
@@ -36,15 +36,8 @@ params = {
 # VALIDATE CONTRACT (Between FRONTEND DEV and BACKEND DEV)
 ###############################################################################
 V8::Context.new do |v8|
-# @TODO: improve validation to have a "nice" contract between backend/frontend when it comes to sending and receiving DATA
-# v8[:TEMP]           = v8.scope.COMPONENT_RainbowUnicorn
-# v8[:generateData]   = v8.eval('TEMP.generateData')                                                            
-# v8[:SCHEMA]         = v8.eval('TEMP.SCHEMA')
-# v8[:getTypes]       = v8.eval('TEMP.getTypes')
-# v8[:getValidators]  = v8.eval('TEMP.getValidators')
-# v8[:getSamples]     = v8.eval('TEMP.getSamples')
-# v8[:VALIDATE]       = v8.eval('TEMP.VALIDATE')
-if true # v8.scope.VALIDATE(data_set, data_collections, data_schema)
+v8.load("app/assets/javascripts/APP.bundle.js")
+if v8.eval('APP.VALIDATE()') # but pass in 'params'
 #############################################################################%>
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     COMPONENT STYLING - (In Stylus)
@@ -53,45 +46,43 @@ if true # v8.scope.VALIDATE(data_set, data_collections, data_schema)
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     SERVER SIDE - RENDER WEB COMPONENTS - (for SEO & google crawler)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<div id='<%=params[:containerID]%>' data-state='<%#= is_rendered%>'>
-<%#=###########################################################################
-  # SERVER SIDE Initialization
-  # [COMPONENT DOM  - INITIALIZATION & RENDERING (for SEO & google crawler)]
-  #       
+<div id='<%=params[:CONTAINER]%>'>
+<%=###########################################################################
+  # SERVER SIDE - INIT
+  #
+  # [COMPONENT DOM INITIALIZATION & RENDERING (for SEO & google crawler)]
   # Render TEMPLATE on the Server Side
-  # + "data-state" will signal the client, that only updates are needed
   # + data-* attributes is where client side updates will go
   # ==> with MutationObserver on data-* attributes
   #
   # @TODO: This is currently so slow with "TheRubyRacer",
-  #       that it is not a viable option, for further details, see:
+  #       that it is not a viable option, thats why "is_rendered" is set
+  #       to "false", for further details, see:
   #       http://confluence.ikusei.de/display/IKU/Dual+Side+Templating
+  # ==> needs to use "PLATES.JS" or faster method - currently this is broken.
   #
   #############################################################################
-  script      = "#{GoldencobraCrm::Engine.root}/app/assets/javascripts/components/"
-  stylesheet  = "#{GoldencobraCrm::Engine.root}/app/assets/stylesheets/components/"
-  media       = "#{GoldencobraCrm::Engine.root}/app/assets/images/components/"
-  v8.eval('var window = {};')
-  v8.load(script + "rainbowunicorn/RainbowUnicorn.bundle.js")
-#############################################################################%>
-</div>
+  if is_rendered = false      # set to true to render server side
+    v8.scope.APP.INIT(params)
+  end
+###############################################################################
+%></div>
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  CLIENT SIDE - MAIN COMPONENT SCRIPT
-    For CommonJS-Incompatible Files
-    https://github.com/thlorenz/browserify-shim
+  CLIENT SIDE - [INIT] & START
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <script type="text/javascript" src='/assets/APP.bundle.js'></script>
 <script>
-  /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-    PROVISORISCH - CLIENT SIDE INITIALIZATION ONLY
-    (Will later be rendered by server into data-* attributes)
-  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-  var params = JSON.parse('<%=escape_javascript(params.to_json.html_safe)%>');
-  window.onload = function () { APP.START(params); }
+  var params = <%=is_rendered%> ? false
+    : JSON.parse('<%=escape_javascript(params.to_json.html_safe)%>');
+  window.onload = function () { APP.INIT(params).START(); };
 </script>
 <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
         <%else%><h1>Received invalid DATA from backend</h1><%end end%>
 <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+
+
+
+
 
 
 

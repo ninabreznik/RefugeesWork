@@ -1,1 +1,1 @@
-window.APP = require('LeadShareAppFrontend').COMPONENT_LeadShareAppFrontend();
+APP = require('LeadShareAppFrontend');

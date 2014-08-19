@@ -1,22 +1,51 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/home/serapath/workspace/codingamigos/LeadShareApp/app/assets/javascripts/APP.js":[function(require,module,exports){
-window.APP = require('LeadShareAppFrontend').COMPONENT_LeadShareAppFrontend();
+APP = require('LeadShareAppFrontend');
 
 },{"LeadShareAppFrontend":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.js"}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.js":[function(require,module,exports){
-// LEAD SHARE APP SCRIPT
-
-// http://learnjs.io/blog/2014/03/17/using-browserify-with-rails/
 module.exports = { // EXPORT as GLOBAL
-  VERSION                   : 'v0.0.4',
-  NAME                      : 'LeadShareAppFrontend',
-  COMPONENT_LeadShareAppFrontend  : COMPONENT_LeadShareAppFrontend
+  VERSION     : 'v0.0.5',
+  NAME        : 'LeadShareAppFrontend',
+  VALIDATE    : function VALIDATE (params) { return true; },
+  INIT        : INIT
 };
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 IMPORT COMPONENT: Complexform
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-function COMPONENT_LeadShareAppFrontend () {
+function INIT (params) {
+  if (!params) {
+    debugger;
+    // @TODO: The component is already initialized on the server
+    //      INIT should do nothing and START() should be executed
+  }
+//  
+// <script src='/assets/jquery.dynatable.js'></script> <!-- browserify and factor out into DynaWrapper -->
+
   var DEPs = {
-    holon : require('holon') // @TODO: Replace with PLATES.JS
+    holon : require('holon')
   };
+
+
+
+// LeadShareAppFrontend will become multiple WIDGETS
+// @TODO: Import STYLUS File from LeadShareAppFrontend and output it somewhere else,
+// thus: have multiple outfut files with browserify
+// "browserify-shim": {
+//   "jquery": {
+//     "path": "node_modules/jquery/dist/jquery.js",
+//     "exports": "$",
+//     "depends": null
+//   },
+//   "jquery.dynatable": {
+//     "path": "node_modules/Dynatable/jquery.dynatable.js",
+//     "exports": null,
+//     "depends": {
+//       "jquery": "$"
+//     }
+//   }
+// },
+// "browserify": {
+//   "transform": [ "html2js-browserify", "browserify-shim"]
+// },
 
 
 
