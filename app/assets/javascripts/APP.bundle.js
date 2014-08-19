@@ -3,7 +3,7 @@ APP = require('LeadShareAppFrontend');
 
 },{"LeadShareAppFrontend":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.js"}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.js":[function(require,module,exports){
 module.exports = { // EXPORT as GLOBAL
-  VERSION     : 'v0.0.5',
+  VERSION     : require('../package.json').version,
   NAME        : 'LeadShareAppFrontend',
   VALIDATE    : function VALIDATE (params) { return true; },
   INIT        : INIT
@@ -15,7 +15,7 @@ function INIT (params) {
   if (!params) {
     debugger;
     // @TODO: The component is already initialized on the server
-    //      INIT should do nothing and START() should be executed
+    //        INIT should do nothing and START() should be executed
   }
 //  
 // <script src='/assets/jquery.dynatable.js'></script> <!-- browserify and factor out into DynaWrapper -->
@@ -57,7 +57,7 @@ function DEVELOP_MODE () {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+alert("Currently in DEV MODE:\n Change 'line 20 & 21' in RainbowUnicorn.js to switch to PRODUCTION MODE");
 document.querySelector('#DEVELOP_MODE').style.display = 'block';
 var Plates = DEPs.holon().Plates;
 var holonize = DEPs.holon().holonize;
@@ -628,11 +628,11 @@ function PRODUCTION_MODE () {
       htmlCode += '<select class="chzn-select"' + multiple + ' style="width: 278px;" data-placeholder=" ">';
       htmlCode += '<option value=""></option>';
 
-      // user_id sollte array sein für wietere verarbeitung
-      if (typeof(customerData) == 'number') {
+      // user_id sollte array sein fuer weitere Verarbeitung
+      if (typeof(customerData) === 'number') {
         customerData = [customerData];
       }
-        
+
       for(index in collectionData) {
         if (typeof(collectionData[index]) == 'object') {
           if (customerData && customerData.indexOf(collectionData[index].id) > -1) {
@@ -860,7 +860,7 @@ function PRODUCTION_MODE () {
 
 }
 
-},{"./index.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.template.html","./templates/SUB1.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB1.template.html","./templates/SUB2.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB2.template.html","./templates/SUB3.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB3.template.html","./templates/SUB4.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB4.template.html","./templates/SUB5.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB5.template.html","holon":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/node_modules/holon/SOURCE/index.js"}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.template.html":[function(require,module,exports){
+},{"../package.json":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/package.json","./index.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.template.html","./templates/SUB1.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB1.template.html","./templates/SUB2.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB2.template.html","./templates/SUB3.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB3.template.html","./templates/SUB4.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB4.template.html","./templates/SUB5.template.html":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/templates/SUB5.template.html","holon":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/node_modules/holon/SOURCE/index.js"}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/SOURCE/index.template.html":[function(require,module,exports){
 module.exports = '<div id="template_MAIN">\n' +
     '  <div data-bind="name">__NOT_SHOWN_BECAUSE_REPLACED__</div>\n' +
     '  <img data-foo="bar" src=""></img><br>\n' +
@@ -1619,7 +1619,71 @@ function matchClosing(input, tagname, html) {
 }(Plates, this);
 
 }).call(this,require('_process'))
-},{"_process":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/node_modules/process/browser.js","fs":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/lib/_empty.js","path":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/node_modules/path-browserify/index.js"}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/lib/_empty.js":[function(require,module,exports){
+},{"_process":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/node_modules/process/browser.js","fs":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/lib/_empty.js","path":"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/node_modules/path-browserify/index.js"}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/LeadShareAppFrontend/package.json":[function(require,module,exports){
+module.exports=module.exports={
+  "name": "LeadShareAppFrontend",
+  "version": "0.0.6",
+  "description": "[LIBRARY] - Frontend for https://github.com/ninabreznik/LeadShareApp.git",
+  "main": "SOURCE/index.js",
+  "directories": {
+    "test": "SPECIFICATION"
+  },
+  "scripts": {
+    "help": "#describe all npm tasks - http://anders.janmyr.com/2014/03/running-scripts-with-npm.html + http://substack.net/task_automation_with_npm_run",
+    "jobs": "#list jobs + description on how to start working on one + how to stop development",
+    "develop": "#checkout job branch + stylus & watch & testem + how to stop development",
+    "deploy": "#build + run all tests + git push if successful",
+    "release": "#build through browserify, test all + if successful: uglify + semver + push with tags + NOT npm publish, bower register, ....",
+    "spec": "#run testem",
+    "serve": "#....",
+    "browserify": "rm -rf RELEASE && mkdir RELEASE && node node_modules/browserify/bin/cmd.js --debug --verbose --standalone APP --transform html2js-browserify SOURCE/index.js --outfile RELEASE/index.bundle.js",
+    "watchify": "rm -rf RELEASE && mkdir RELEASE && node node_modules/watchify/bin/cmd.js   --debug --verbose --standalone APP --transform html2js-browserify SOURCE/index.js --outfile RELEASE/index.bundle.js",
+    "style": "stylus --use nib --use jeet --use rupture --compress --watch SOURCE/index.styl --out RELEASE/",
+    "assets": "mkdir -p RELEASE/media/ && cp SOURCE/media/*.png RELEASE/media/",
+    "start": "npm run watchify & npm run style && echo v$(cat package.json | grep version | grep -Po '(?<=version\": \").*(?=\")') #npm run assets, npm run serve, npm run spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coding-amigos/LeadShareAppFrontend.git"
+  },
+  "keywords": [
+    "lead",
+    "leads",
+    "campaign",
+    "campaign",
+    "google",
+    "ads",
+    "adwords"
+  ],
+  "author": "",
+  "license": "Copyright 2014 Coding Amigos",
+  "bugs": {
+    "url": "https://github.com/coding-amigos/LeadShareAppFrontend/issues"
+  },
+  "homepage": "https://github.com/coding-amigos/LeadShareAppFrontend",
+  "private": true,
+  "browserify": {
+    "transform": [
+      "html2js-browserify"
+    ]
+  },
+  "devDependencies": {
+    "watchify": "^1.0.2",
+    "browserify": "^5.10.0"
+  },
+  "dependencies": {
+    "holon": "git://github.com/coding-amigos/holon#v0.0.4",
+    "html2js-browserify": "git://github.com/featurist/html2js-browserify"
+  },
+  "readme": "table of content\n=======\n* [introduction](#leadshareappfrontend)\n* [demo](#demo)\n* [usage](#usage)\n* [api](#api)\n* [authors](#authors)\n* [jobs](#jobs)\n* [contribute](#contribute)\n* [repository description](#repository)\n* [license](#license)\n\n\n\n\nLeadShareAppFrontend\n=====\n[[back to top](#table-of-content)]\n\nFrontend for https://github.com/ninabreznik/LeadShareApp.git\n\n\n\n\ndemo\n=======\n[[back to top](#table-of-content)]\n\n__☠☠☠ section is under construction ☠☠☠__\n\n\n\n\nusage\n=======\n[[back to top](#table-of-content)]\n\n__☠☠☠ section is under construction ☠☠☠__\n\n\n\n\napi\n=======\n[[back to top](#table-of-content)]\n\n__☠☠☠ section is under construction ☠☠☠__\n\n\n\n\nauthors\n=======\n[[back to top](#table-of-content)]\n\n* [serapath](https://github.com/serapath \"Alexander Praetorius\")\n\n\n\n\njobs\n=======\n[[back to top](#table-of-content)]\n\nThere is more jobs in the source code marked with `// @TODO: <job description>` and eventually some jobs might be listed under the [LeadShareAppFrontend issues](https://github.com/ninabreznik/LeadShareAppFrontend/issues \"LeadShareAppFrontend - open issues\") page, which can also be accessed through [waffle.io](https://waffle.io/ninabreznik/LeadShareAppFrontend \"LeadShareAppFrontend - open issues\").\n* __@TODO:__ Create a Github Page\n  * https://github.com/jekyll/jekyll\n  * https://help.github.com/categories/20/articles\n* __@TODO:__ Include Testing via \"Specification Driven Development\" using gherkin dsl & TESTEM\n  * https://github.com/cucumber/cucumber/wiki/Gherkin\n  * npm install mocha --save-dev\n  * npm install chai --save-dev\n  * https://github.com/airportyh/testem\n* __@TODO:__ Add CHANGELOG File\n* __@TODO:__ This section should instead list all the TODO-Branches currently available + a link to the \"TODO Description file in that branch\"\n  * The README.markdown in that branch could list the description under the \"jobs section\"\n* __@TODO:__ create NGEN to codify saffolding and devops continuous delivery workflow\n  * http://www.wolfe.id.au/2014/02/01/getting-a-new-node-project-started-with-npm/ \n  * http://quickleft.com/blog/creating-and-publishing-a-node-js-module\n  * http://www.devthought.com/2012/02/17/npm-tricks/\n\n__☠☠☠ section is under construction ☠☠☠__\n\n\n\n\ncontribute\n=======\n[[back to top](#table-of-content)]\n\n### PREPARE SYSTEM\n  * install [git](http://git-scm.com \"git\") if it is not yet installed on your system\n  * install [node](http://nodejs.org \"nodejs\") if it is not yet installed on your system\n  * open a terminal on your system and navigate to your favourite workspace folder\n    * _(you might need to prefix some of the following commands with `sudo` to make them work)_\n\n### START PREPARING LEADSHAREAPPFRONTEND PROJECT\nOpen a terminal and go to a folder which you choose as your development folder, e.g. `cd ~ && mkdir workspace && cd workspace`.\n* `git clone https://github.com/ninabreznik/LeadShareAppFrontend.git`\n* `npm install -g stylus nib jeet rupture`\n* `npm install`\n* `npm update`\n* `npm start`\n* `npm start`\n* `subl .`\n* load main HTML project file by opening and pointing your browser to:\n  * `./DEMO/dev.html` file, for example, by doubleclicking it\n    * __HINT1:__ this might only works with CORS disabled. In order to do so:\n      * mac osx `open -a Google\\ Chrome --args --disable-web-security`\n      * linux `google-chrome --disable-web-security`\n      * windows `chrome.exe --disable-web-security`\n\n__... HAPPY CODING :-)__\n\n\n### How to shorten feedback cycles during development\n(Process to use for projects, where dependencies projects have to be developed in parallel to the main project)\nIn order to use changes made in a dependency project, they have to be commited and pushed and the version has to be increased and published.\nAfterwards, in the main project, the version for the updated dependency has to be adapted in `package.json` and `npm install` has to be run.\nThat is a lot of hassle to be done for each change.\n\n\n### Solution\n__Given:__ \"Main Project\" and \"Dependency Project\" are both `git clone`'ed to the local developer machine.\n__Process:__\n0. Open all those Project Folders in sublime editor and then use the terminal to...\n1. Go to the \"Dependency Project\" repository and increase the \"Version Number\" in the `package.json` file, but don't `git push`.\n2. Run `npm link` in the root directory of the \"Dependency Project\" repository.\n3. Go to the \"Main Project\" repository and increase the \"Version Number\" of the \"Dependency Project\" in the `package.json` file.\n4. Run `npm link 'dependency name'` in the root directory of the \"Main Project\" repository.\nThat's it, execute `npm start` in the \"Main Project\" repository and start hacking...\n\n__Finishing:__ After all changes are done to both projects and you are satisfied with the result...\n1. Go to the \"Main Project\" repository and run `npm link 'dependency name'` in the root directory.\n2. Go to the \"Dependency Project\" repository and run `npm unlink` in the root directory.\n3. Then `git commit` and `git push` all the changes to publish the new version.\n4. Go to the \"Main Project\" repository and run `npm install` to get the new version of the dependency you just updated.\n\nThat's it.\n\n\n\n\nrepository\n=======\n[[back to top](#table-of-content)]\n\n__☠☠☠ section is under construction ☠☠☠__\n\n\n\n\n\nlicense\n=======\n[[back to top](#table-of-content)]\n\n![CC BY-NC-ND 4.0](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png \"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License\")\n\nThis work is licensed under <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode\" alt=\"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License\">`CC BY-NC-ND 4.0`</a>.\n\n__In short - you are free to:__\n\n* __Share__ — copy and redistribute the material in any medium or format\nThe licensor cannot revoke these freedoms as long as you follow the license terms.\nUnder the following terms:\n\n* __Attribution__ — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\n* __NoDerivatives__ — If you remix, transform, or build upon the material, you may not distribute the modified material.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\nNotices:\n\nYou do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.\n\nNo warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.\n\n[...more information](https://raw.github.com/ninabreznik/LeadShareAppFrontend/master/LICENSE \"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License\")\n",
+  "readmeFilename": "README.markdown",
+  "_id": "LeadShareAppFrontend@0.0.6",
+  "_shasum": "69d743d4c5f9f4bc517c1d4747592dd07e55ddf9",
+  "_resolved": "git://github.com/coding-amigos/LeadShareAppFrontend#2bf22fef6bcf9032bf89156caed0fc727e23b409",
+  "_from": "LeadShareAppFrontend@git://github.com/coding-amigos/LeadShareAppFrontend#v0.0.6"
+}
+
+},{}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/lib/_empty.js":[function(require,module,exports){
 
 },{}],"/home/serapath/workspace/codingamigos/LeadShareApp/node_modules/browserify/node_modules/path-browserify/index.js":[function(require,module,exports){
 (function (process){

@@ -1,7 +1,7 @@
 {
   "name": "LeadShareApp",
   "version": "0.0.1",
-  "description": "PaaS for sharing costs for google ad campaigns to get leads",
+  "description": "[APP] - PaaS for sharing costs for google ad campaigns to get leads",
   "main": "app/assets/javascripts/APP.bundle.js",
   "directories": {
     "test": "SPECIFICATION"
@@ -16,7 +16,7 @@
     "assets"  : "mkdir -p app/assets/images/media && cp node_modules/LeadShareAppFrontend/SOURCE/*.png app/assets/images/media/",
     "build"   : "node node_modules/browserify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
     "watch"   : "node node_modules/watchify/bin/cmd.js app/assets/javascripts/APP.js -o app/assets/javascripts/APP.bundle.js",
-    "serve"   : "rails s",
+    "serve"   : "bundle install && rake db:migrate && rails s",
     "style"   : "stylus --use nib --use jeet --use rupture --compress --watch app/assets/stylesheets/APP.styl",
     "start"   : "npm run watch & npm run style #npm run assets, npm run serve, npm run spec"
   },
@@ -44,7 +44,7 @@
   "homepage": "https://github.com/ninabreznik/LeadShareApp",
   "private": true,
   "dependencies": {
-    "LeadShareAppFrontend": "git://github.com/coding-amigos/LeadShareAppFrontend#v0.0.5"
+    "LeadShareAppFrontend": "git://github.com/coding-amigos/LeadShareAppFrontend#v0.0.6"
   },
   "devDependencies": {
     "watchify": "^1.0.2",
