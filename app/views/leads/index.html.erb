@@ -22,7 +22,12 @@
       ZIP: <%= lead.zip %> <br>
       Time: <%= lead.time %> <br>
       Description: <%= lead.description %><br>
-      <button>buy now</button>
+
+        <%= form_for(current_user.orders.build(selected_id:lead.id)) do |o| %>
+        <%= o.hidden_field :selected_id %>
+        <%= o.submit "Buy now" %>
+        <% end %>
+
     <% end %>
 
   <% end %>

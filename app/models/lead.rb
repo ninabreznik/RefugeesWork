@@ -3,6 +3,12 @@ class Lead < ActiveRecord::Base
   belongs_to :campaign
   before_create :assign_location_from_zip
 
+  has_many :reverse_orders, foreign_key: "selected_id", 
+                                   class_name: "Order",
+                                   dependent: :destroy
+  has_many :selectors, through: :reverse_orders, source: :selector
+
+
 def assign_location_from_zip
   if self.zip > 999 && self.zip < 1999
     self.location = "Ljubljana"

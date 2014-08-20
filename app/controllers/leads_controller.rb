@@ -77,7 +77,7 @@ class LeadsController < ApplicationController
 
   private
 
-  def campaign_params
+  def lead_params
     params.require(:lead).permit(
       :name, 
       :email, 
@@ -86,11 +86,16 @@ class LeadsController < ApplicationController
       :phone, 
       :business_type, 
       :time, 
-      :location
+      :location,
+      :selector_id,
+      :selected_id
     )
   end
 
-
+  def current_lead
+    current_lead=(lead)
+    @current_lead = lead
+  end
 
 
 

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only: [:create, :destroy]
+  resources :orders, only: [:create, :destroy]
 
   get 'leads/index'
 

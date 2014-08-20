@@ -68,7 +68,12 @@ class CampaignsController < ApplicationController
    private
 
     def campaign_params
-      params.require(:campaign).permit(:title, :location, :coowner_id, :coowned_id )
+      params.require(:campaign).permit(
+        :title, 
+        :location, 
+        :coowner_id, 
+        :coowned_id 
+      )
     end
 
     def current_campaign
