@@ -25,6 +25,8 @@
 
         <%= form_for(current_user.orders.build(selected_id:lead.id)) do |o| %>
         <%= o.hidden_field :selected_id %>
+        <%= o.select :package, [["solo", "solo"], ["shared","shared"]], {:prompt=>'Want to have a lead for yourself or want to lower costs and share it with 5 more providers?'} %> <br>
+        <%= o.select :payment, [["PayPal","PayPal"], ["Bank","Bank"]], {:prompt=>'Tell us how you want to pay'} %> <br>        
         <%= o.submit "Buy now" %>
         <% end %>
 
