@@ -3,44 +3,19 @@
   <title></title>
 </head>
 <body>
-<% if user_signed_in? %>  
-  <% if current_user.relationships == nil %> 
-    <% @leads.each do |lead| %>
-      <h3>Business Type: <%= lead.business_type %></h3>
-      Location: <%= lead.location %> <br>
-      ZIP: <%= lead.zip %> <br>
-      Time: <%= lead.time %> <br>
-      Description: <%= lead.description %><br>
-      <button>buy now</button>
-    <% end %>
-
-
-  <% else %>
-    <% @current_user_leads.each do |lead| %>
-      <h3>Business Type: <%= lead.business_type %></h3>
-      Location: <%= lead.location %> <br>
-      ZIP: <%= lead.zip %> <br>
-      Time: <%= lead.time %> <br>
-      Description: <%= lead.description %><br>
-
-        <%= form_for(current_user.orders.build(selected_id:lead.id)) do |o| %>
-        <%= o.hidden_field :selected_id %>
-        <%= o.select :package, [["solo", "solo"], ["shared","shared"]], {:prompt=>'Want to have a lead for yourself or want to lower costs and share it with 5 more providers?'} %> <br>
-        <%= o.select :payment, [["PayPal","PayPal"], ["Bank","Bank"]], {:prompt=>'Tell us how you want to pay'} %> <br>        
-        <%= o.submit "Buy now" %>
-        <% end %>
-
-    <% end %>
-
-  <% end %>
-<% else %>
-    <% @leads.each do |lead| %>
-      <h3>Business Type: <%= lead.business_type %></h3>
-      Location: <%= lead.location %> <br>
-      ZIP: <%= lead.zip %> <br>
-      Time: <%= lead.time %> <br>
-      Description: <%= lead.description %><br>
-      <button><%= link_to "buy now", new_user_registration_path %></button>      
+  <% @leads.each do |lead| %>
+    <h3>Business Type: <%= lead.business_type %></h3>
+    Location: <%= lead.location %> <br>
+    ZIP: <%= lead.zip %> <br>
+    Time: <%= lead.time %> <br>
+    Description: <%= lead.description %><br>
+    <% if user_signed_in? %>  
+      <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
+        <%= o.hidden_field :selected_id %>       
+        <%= o.submit "Make mine" %>
+      <% end %>
+    <% else %>
+      <button><%= link_to "Make mine", new_user_registration_path %></button>      
     <% end %>
 <% end %>
 </body>
