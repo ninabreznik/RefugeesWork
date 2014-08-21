@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   get '/pricing' => 'static_pages#pricing'
   get '/about' => 'static_pages#about'
   get '/dashboard' => 'static_pages#all_campaigns'
-
+  get '/bank_transfer' => 'static_pages#bank_transfer'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
