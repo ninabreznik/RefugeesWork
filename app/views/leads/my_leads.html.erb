@@ -15,12 +15,9 @@
         Name: <%= lead.name %> <br>
         Phone: <%= lead.phone %> <br>
         E-mail: <%= lead.email %> <br>
-        <% if lead.notes != nil %>
-          <%= form_for (lead) do |l| %>
-            <%= l.label :notes %>
-            <%= text_area(:lead, :notes, :size => 20, :value => "#{lead.notes}") %>
-            <%= l.submit "Save" %>
-          <% end %>
+        <%= form_for (lead) do |l| %>
+          <%= text_area(:lead, :notes, :size => 20, :value => "#{lead.notes}") %>
+          <%= l.submit "Save" %>
         <% end %>
         <br>
       <% end %> 
