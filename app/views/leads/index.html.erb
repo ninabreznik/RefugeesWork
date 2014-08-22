@@ -53,11 +53,10 @@
       <button><a href="/bank_transfer">Bank transfer</a></button>
       
 
-
-<!--       <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
+      <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
         <%= o.hidden_field :selected_id %>       
         <%= o.submit "Link to create Order (relationship between user & lead" %>
-      <% end %> -->
+      <% end %> 
 
     <% else %>
       <button><%= link_to "Buy now", new_user_registration_path %></button>      

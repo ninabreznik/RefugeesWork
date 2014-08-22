@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <% if current_user.orders.any? %>
+    <h2>MY LEADS:</h2>
+      <% @ordered_leads.each do |lead| %>
+        Business Type: <%= lead.business_type %> <br>
+        Location: <%= lead.location %> <br>
+        Time: <%= lead.time %> <br>
+        Description: <%= lead.description %> <br>
+        ZIP: <%= lead.zip %> <br>
+        <strong>Customer contact information:</strong><br>
+        Name: <%= lead.name %> <br>
+        Phone: <%= lead.phone %> <br>
+        E-mail: <%= lead.email %> <br>
+        <% if lead.notes != nil %>
+          <%= form_for (lead) do |l| %>
+            <%= l.label :notes %>
+            <%= text_area(:lead, :notes, :size => 20, :value => "#{lead.notes}") %>
+            <%= l.submit "Save" %>
+          <% end %>
+        <% end %>
+        <br>
+      <% end %> 
+  <% end %> 
+</body>
+</html>

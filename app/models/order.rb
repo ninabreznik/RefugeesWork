@@ -4,17 +4,23 @@ class Order < ActiveRecord::Base
   validates :selected_id, presence: true
   validates :selector_id, presence: true
 
-  #before_create :assign_package_and_payment
+  before_save :check_wallet
+  after_save :update_wallet_and_payment
 
-  # def assign_package_and_payment
-  #   if params[:order][:package]) == "solo"
-  #     self.package = "solo"
-  #   elsif params[:order][:package]) == "shared"
-  #     self.package = "shared"
-  #   end
-  #   if params[:order][:payment]) == "PayPal"
-  #     self.payment = "PayPal"
-  #   elsif params[:order][:package]) == "bank"
-  #     self.payment = "bank"
-  #   end
+  def check_wallet
+    @price = 10
+    user_id = self.selector_id
+    @user = User.find_by_id(user_id)
+    @user.wallet >= @price
+  end
+
+  def update_wallet_and_payment
+    user_id = self.selector_id
+    @user = User.find_by_id(user_id)
+    new_payment = @user.payment + @price
+    new_wallet_status = @user.wallet - @price
+    @user.update_attributes(:payment => new_payment)
+    @user.update_attributes(:wallet => new_wallet_status)
+  end
+
 end
