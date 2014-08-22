@@ -3,9 +3,13 @@ class LeadsController < ApplicationController
     @leads = Lead.all
     @campaign = Campaign.find_by_id(params[:id])
     @lead = Lead.find_by_id(params[:id])
+# #############################################################################
+#  For showing buttons buy for only leads customer hasn't bought yet
+# #############################################################################
     if user_signed_in?
-      #checking which relationships exist for current user (which campaigns he applied for) 
-      #& finding right leads
+# #############################################################################
+#  Show only filtered Leads (from Campaigns you follow)
+# #############################################################################
       coowned_ids = []
       current_user.relationships.each do |r|
         coowned_ids << r.coowned_id
@@ -24,6 +28,13 @@ class LeadsController < ApplicationController
           end
         end
       end
+      if current_user.orders.any?
+      all_orders_of_current_user = current_user.orders
+      @selected_ids_for_all_orders_of_current_user = []
+      all_orders_of_current_user.each do |o|
+        @selected_ids_for_all_orders_of_current_user << o.selected_id
+      end
+    end
     end
   end
 
@@ -74,11 +85,11 @@ class LeadsController < ApplicationController
     @lead = Lead.find(params[:id])
     if @lead.valid?
       @lead.update_attributes(lead_params)
-      redirect_to 'leads/my_leads'
+      redirect_to 'leads/bought_leads'
     end
   end
 
-  def my_leads
+  def bought_leads
     @lead = Lead.find_by_id(params[:id])
     current_users_orders = Order.where(selector_id: current_user.id)
     current_users_leads_ids = []

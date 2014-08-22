@@ -12,6 +12,9 @@ class Order < ActiveRecord::Base
     user_id = self.selector_id
     @user = User.find_by_id(user_id)
     @user.wallet >= @price
+    return true
+    rescue
+    return false
   end
 
   def update_wallet_and_payment

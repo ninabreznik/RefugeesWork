@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get 'leads/edit'
 
-  get 'leads/my_leads'
+  get 'leads/bought_leads'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
