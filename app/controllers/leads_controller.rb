@@ -3,9 +3,6 @@ class LeadsController < ApplicationController
     @leads = Lead.all
     @campaign = Campaign.find_by_id(params[:id])
     @lead = Lead.find_by_id(params[:id])
-# #############################################################################
-#  For showing buttons buy for only leads customer hasn't bought yet
-# #############################################################################
     if user_signed_in?
 # #############################################################################
 #  Show only filtered Leads (from Campaigns you follow)
@@ -28,13 +25,21 @@ class LeadsController < ApplicationController
           end
         end
       end
-      if current_user.orders.any?
-      all_orders_of_current_user = current_user.orders
-      @selected_ids_for_all_orders_of_current_user = []
-      all_orders_of_current_user.each do |o|
-        @selected_ids_for_all_orders_of_current_user << o.selected_id
-      end
-    end
+# #############################################################################
+#  For showing buttons buy for only leads customer hasn't bought yet
+# #############################################################################
+        if current_user.orders.count > 0
+           @selected_ids_of_current_users_orders = []
+           current_user.orders.each do |o|
+             @selected_ids_of_current_users_orders << o.selected_id
+            end
+        else
+          @selected_ids_of_current_users_orders = [-999] #dirty hack
+        end
+# #############################################################################
+#  For showing number of orders for certain lead
+# #############################################################################      
+      @number_of_orders_for_lead 
     end
   end
 
@@ -85,18 +90,25 @@ class LeadsController < ApplicationController
     @lead = Lead.find(params[:id])
     if @lead.valid?
       @lead.update_attributes(lead_params)
-      redirect_to 'leads/bought_leads'
+      redirect_to 'leads/show'
     end
   end
 
   def bought_leads
-    @lead = Lead.find_by_id(params[:id])
-    current_users_orders = Order.where(selector_id: current_user.id)
-    current_users_leads_ids = []
-    current_users_orders.each do |o|
-      current_users_leads_ids << o.selected_id
+    if user_signed_in? 
+      if @lead_ids_of_current_users_orders > 0 && @lead_ids_of_current_users_orders != nil
+        @lead_ids_of_current_users_orders = @selected_ids_of_current_users_orders.uniq!
+        lead_ids_to_display = []
+        @lead_ids_of_current_users_orders.each do |x|
+          if @selected_ids_of_current_users_orders.count(x) < 5      
+            lead_ids_to_display << x
+          end
+        end
+      @leads_to_display = Lead.where(id:lead_ids_to_display)
+      else
+        bla
+      end
     end
-    @ordered_leads = Lead.where(id: current_users_leads_ids)
   end
 
 

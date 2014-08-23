@@ -9,9 +9,8 @@
     ZIP: <%= lead.zip %> <br>
     Time: <%= lead.time %> <br>
     Description: <%= lead.description %><br>
-
     <% if user_signed_in? %> 
-      <% if @selected_ids_for_all_orders_of_current_user.include?(lead.id) == false %>
+      <% if @selected_ids_of_current_users_orders.include?(lead.id) == false %>
       Select payment type: 
 <!--       
   #############################################################################
@@ -54,8 +53,11 @@
   #############################################################################
 -->
         <button><a href="/bank_transfer">Bank transfer</a></button>
-        
-
+  <!--       
+  #############################################################################
+  Create Order link (for testing)
+  #############################################################################
+-->
         <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>       
           <%= o.submit "Link to create Order (relationship between user & lead" %>
@@ -63,7 +65,6 @@
       <% else %>
         <button>Find me in <a href='/leads/bought_leads'>Bought Leads</a></button>
       <% end %>
-
     <% else%>
       <button><%= link_to "Buy now", new_user_registration_path %></button>      
     <% end %>

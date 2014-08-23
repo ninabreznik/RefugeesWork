@@ -26,4 +26,5 @@ class Order < ActiveRecord::Base
     @user.update_attributes(:wallet => new_wallet_status)
   end
 
+
 end

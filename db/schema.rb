@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822024016) do
+ActiveRecord::Schema.define(version: 20140823043713) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20140822024016) do
     t.string   "time"
     t.string   "location"
     t.text     "notes"
+    t.integer  "order"
   end
 
   create_table "orders", force: true do |t|
@@ -108,6 +109,7 @@ ActiveRecord::Schema.define(version: 20140822024016) do
     t.datetime "updated_at"
     t.integer  "wallet",                 default: 0
     t.integer  "payment",                default: 0
+    t.integer  "order",                  default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
