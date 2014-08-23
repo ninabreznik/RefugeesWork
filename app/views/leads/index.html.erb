@@ -10,49 +10,7 @@
     Time: <%= lead.time %> <br>
     Description: <%= lead.description %><br>
     <% if user_signed_in? %> 
-      <% if @selected_ids_of_current_users_orders.include?(lead.id) == false %>
-      Select payment type: 
-<!--       
-  #############################################################################
-  2Checkout/Type: Intangible product
-  https://www.2checkout.com/documentation/checkout/inline-checkout#int_params
-  #############################################################################
--->
-        <form action='https://www.2checkout.com/checkout/purchase' method='post'>
-          <input type='hidden' name='sid' value='1303908' />
-          <input type='hidden' name='mode' value='2CO' />
-          <input type='hidden' name='li_0_type' value='Blabla' />
-          <input type='hidden' name='li_0_name' value='Kontakt' />
-          <input type='hidden' name='li_0_price' value='12.73' />
-          <input type='hidden' name='card_holder_name' value='Vpišite vaše ime' />
-          <input type='hidden' name='street_address' value='Vaš naslov' />
-          <input type='hidden' name='street_address2' value='/' />
-          <input type='hidden' name='city' value='Kraj' />
-          <input type='hidden' name='state' value='' />
-          <input type='hidden' name='zip' value='Poštna številka' />
-          <input type='hidden' name='country' value='Slovenia' />
-          <input type='hidden' name='email' value='e-naslov@primer.si' />
-          <input type='hidden' name='phone' value='Telefonska številka' />
-          <button><input name='submit' type='submit' value='Credit Card' /></button>
-        </form>
-  <!--       
-  #############################################################################
-  PayPal/Merchant Services/BuyNowButtons
-  #############################################################################
--->
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="DGJPN5XHCNK3Y">
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
-
-  <!--       
-  #############################################################################
-  BankPayment
-  #############################################################################
--->
-        <button><a href="/bank_transfer">Bank transfer</a></button>
+      <% if @selected_ids_of_current_users_orders.include?(lead.id) == false  %>
   <!--       
   #############################################################################
   Create Order link (for testing)
@@ -60,7 +18,7 @@
 -->
         <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>       
-          <%= o.submit "Link to create Order (relationship between user & lead" %>
+          <%= o.submit "Buy" %>
         <% end %> 
       <% else %>
         <button>Find me in <a href='/leads/bought_leads'>Bought Leads</a></button>

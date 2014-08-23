@@ -28,11 +28,14 @@ Rails.application.routes.draw do
 
   get 'leads/show'
 
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  # match '/signup',  to: 'users#new',            via: 'get'
-  # match '/signin',  to: 'sessions#new',         via: 'get'
-  # match '/signout', to: 'sessions#destroy',     via: 'delete'
+  # match '/signup',       to: 'users#new',            via: 'get'
+  # match '/signin',       to: 'sessions#new',         via: 'get'
+  # match '/signout',      to: 'sessions#destroy',     via: 'delete'
+  #match '/orders',       to: 'orders#create',        via: 'post' 
 
  
 
@@ -46,6 +49,7 @@ Rails.application.routes.draw do
   get '/about' => 'static_pages#about'
   get '/dashboard' => 'static_pages#all_campaigns'
   get '/bank_transfer' => 'static_pages#bank_transfer'
+  get '/payment_type' => 'static_pages#payment'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

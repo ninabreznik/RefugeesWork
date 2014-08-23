@@ -17,6 +17,4 @@ class StaticPagesController < ApplicationController
     @campaigns = Campaign.find_by_title('Painting')
   end
 
-
-
 end

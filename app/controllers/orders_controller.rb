@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
     @lead = Lead.find_by_id(params[:order][:selected_id])
     @user = User.find_by_id(params[:order][:selector_id])
     current_user.select!(@lead)
-    redirect_to leads_url
+    redirect_to :controller => 'static_pages', :action => 'payment'
   end
 
   def destroy

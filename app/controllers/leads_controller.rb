@@ -96,17 +96,17 @@ class LeadsController < ApplicationController
 
   def bought_leads
     if user_signed_in? 
-      if @lead_ids_of_current_users_orders > 0 && @lead_ids_of_current_users_orders != nil
+      if @lead_ids_of_current_users_orders > 0 
         @lead_ids_of_current_users_orders = @selected_ids_of_current_users_orders.uniq!
-        lead_ids_to_display = []
+        @lead_ids_to_display = []
         @lead_ids_of_current_users_orders.each do |x|
           if @selected_ids_of_current_users_orders.count(x) < 5      
-            lead_ids_to_display << x
+            @lead_ids_to_display << x
           end
         end
       @leads_to_display = Lead.where(id:lead_ids_to_display)
-      else
-        bla
+    else
+      bla
       end
     end
   end
