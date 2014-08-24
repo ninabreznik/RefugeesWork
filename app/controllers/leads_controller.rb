@@ -3,6 +3,7 @@ class LeadsController < ApplicationController
     @leads = Lead.all
     @campaign = Campaign.find_by_id(params[:id])
     @lead = Lead.find_by_id(params[:id])
+    @user = User.find_by_id(params[:id])
     if user_signed_in?
 # #############################################################################
 #  Show only filtered Leads (from Campaigns you follow)
@@ -119,8 +120,6 @@ class LeadsController < ApplicationController
           end
         end
       @leads_to_display = Lead.where(id:lead_ids_to_display)
-    else
-      bla
       end
     end
   end

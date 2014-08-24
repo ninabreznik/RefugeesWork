@@ -8,7 +8,8 @@
       <% if user_signed_in? %>
       Logged in as 
       <strong>
-      <%= current_user.email %>
+      <%= current_user.email %> |
+      Wallet: <%= current_user.wallet %> eur.     
       </strong>.
       <%= link_to 'Edit profile', 
       edit_user_registration_path %> |
@@ -27,7 +28,9 @@
       <a href="/leads/my_leads">BOUGHT LEADS</a>
     </ul>
   </nav>
-
+<% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
   <%= yield %>
   <div style="
     background-color  : #ffffff;
