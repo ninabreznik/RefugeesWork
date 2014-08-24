@@ -90,7 +90,21 @@ class LeadsController < ApplicationController
     @lead = Lead.find(params[:id])
     if @lead.valid?
       @lead.update_attributes(lead_params)
-      redirect_to 'leads/show'
+      redirect_to 'leads/my_leads'
+    end
+  end
+
+  def my_leads
+    @lead = Lead.find_by_id(params[:id])
+    if user_signed_in?
+      current_users_orders = Order.where(selector_id: current_user.id)
+      current_users_leads_ids = []
+      current_users_orders.each do |o|
+        current_users_leads_ids << o.selected_id
+      end
+      @ordered_leads = Lead.where(id: current_users_leads_ids)
+    else
+      @ordered_leads = []
     end
   end
 

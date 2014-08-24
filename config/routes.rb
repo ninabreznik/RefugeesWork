@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get 'leads/edit'
 
-  get 'leads/show'
+  get 'leads/my_leads'
 
 
 
