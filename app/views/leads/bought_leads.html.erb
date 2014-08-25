@@ -3,9 +3,8 @@
   <title></title>
 </head>
 <body>
-<% if current_user.try(:orders).present? %>
   <% if user_signed_in? %>
-      <h2>LEADS YOU RESERVED:</h2>
+      <h2>LEADS YOU BOUGHT:</h2>
         <% @bought_leads.each do |lead| %>
           Business Type: <%= lead.business_type %> <br>
           Location: <%= lead.location %> <br>
@@ -28,8 +27,6 @@
       <%= link_to "Login", 
       new_user_session_path %> to see your bought leads.
   <% end %>
-<% else %>
-  No bought leads yet.
-<% end %> 
+
 </body>
 </html>

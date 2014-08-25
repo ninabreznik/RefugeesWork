@@ -136,11 +136,19 @@ class LeadsController < ApplicationController
   end
 
   def bought_leads
-      @lead = Lead.find_by_id(params[:id])
     if user_signed_in?
-      @bought_leads = Lead.where(paid:true)
+      current_users_payments = Payment.where(payer_id: current_user.id)
+      current_users_payments_ids = []
+      current_users_payments.each do |p|
+        current_users_payments_ids << p.paid_id
+      end
+      @bought_leads = Lead.where(id: current_users_payments_ids)
+    else
+      @bought_leads = []
     end
+    render 'leads/bought_leads'
   end
+
 
   def sold_out_leads
 
