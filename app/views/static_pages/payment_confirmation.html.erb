@@ -1,0 +1,13 @@
+<strong>Your wallet:</strong> <%= @user.wallet %> eur  <br>
+<strong>Price for the lead:</strong> 10eur  <br>
+<strong>State in your wallet after purchase:</strong> <%= @user.wallet - 10 %> eur. <br>
+<h3>Business Type: <%= @lead.business_type %></h3>
+    Location: <%= @lead.location %> <br>
+    ZIP: <%= @lead.zip %> <br>
+    Time: <%= @lead.time %> <br>
+    Description: <%= @lead.description %><br>
+
+<%= form_for (@lead) do |l| %>
+  <%= l.hidden_field :paid, :value => true %>
+  <%= l.submit "Confirm" %>
+<% end %>

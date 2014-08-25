@@ -17,4 +17,9 @@ class StaticPagesController < ApplicationController
     @campaigns = Campaign.find_by_title('Painting')
   end
 
+  def payment_confirmation
+    @user = current_user
+    @lead = Lead.find_by_id(@user.orders.last.selected_id)
+  end
+
 end

@@ -26,7 +26,9 @@ Rails.application.routes.draw do
 
   get 'leads/edit'
 
-  get 'leads/my_leads'
+  get 'leads/reserved_leads'
+
+  get 'leads/bought_leads'
 
 
 
@@ -50,6 +52,7 @@ Rails.application.routes.draw do
   get '/dashboard' => 'static_pages#all_campaigns'
   get '/bank_transfer' => 'static_pages#bank_transfer'
   get '/payment_type' => 'static_pages#payment'
+  get 'payment_confirmation' => 'static_pages#payment_confirmation'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

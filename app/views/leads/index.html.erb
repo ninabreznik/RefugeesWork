@@ -20,8 +20,10 @@
           <%= o.hidden_field :selected_id %>       
           <%= o.submit "Buy" %>
         <% end %> 
-      <% else %>
+      <% elsif lead.paid == true %>
         <button>Find me in <a href='/leads/bought_leads'>Bought Leads</a></button>
+      <% else %>
+        <button>Reserved <a href='/payment_type'>(waiting for payment)</a></button>
       <% end %>
     <% else%>
       <button><%= link_to "Buy now", new_user_registration_path %></button>      

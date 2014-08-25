@@ -4,9 +4,9 @@
 </head>
 <body>
   <% if user_signed_in? %>
-    <% if current_user.orders.any? %>
-      <h2>MY LEADS:</h2>
-        <% @ordered_leads.each do |lead| %>
+    <% if current_user.orders.present? %>
+      <h2>LEADS YOU RESERVED:</h2>
+        <% @bought_leads.each do |lead| %>
           Business Type: <%= lead.business_type %> <br>
           Location: <%= lead.location %> <br>
           Time: <%= lead.time %> <br>

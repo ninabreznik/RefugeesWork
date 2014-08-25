@@ -7,9 +7,7 @@ class OrdersController < ApplicationController
     @price = 10
     @user = current_user
     if @user.wallet >= @price
-     new_wallet_status = @user.wallet - @price
-     @user.update_attributes(:wallet => new_wallet_status)
-      redirect_to :controller => 'leads', :action => 'my_leads'
+      redirect_to :controller => 'static_pages', :action => 'payment_confirmation'
     else
       redirect_to :controller => 'static_pages', :action => 'payment'
     end
