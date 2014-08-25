@@ -11,8 +11,13 @@ class User < ActiveRecord::Base
 
   has_many :orders, foreign_key: "selector_id"
   has_many :selected_leads, through: :orders, source: :selected 
+
+  has_many :payments, foreign_key: "payer_id"
+  has_many :paid_leads, through: :payments, source: :paid 
   
-  #Relationship between User and Campaign
+  # #############################################################################
+  # Relationship between User and Campaign
+  # #############################################################################
   def coowning?(one_campaign)
     relationships.find_by_coowned_id(one_campaign.id)
   end
@@ -25,7 +30,9 @@ class User < ActiveRecord::Base
     relationships.find_by_coowned_id(one_campaign.id).destroy  
   end
 
-  #Order between User and Lead
+   # #############################################################################
+  # Order between User and Lead
+  # #############################################################################
   def selecting?(one_lead)
     orders.find_by_selected_id(one_lead.id)
   end
@@ -33,5 +40,17 @@ class User < ActiveRecord::Base
   def select!(one_lead)
     orders.create!(selected_id: one_lead.id)
   end
+
+  # #############################################################################
+  # Payment between User and Lead
+  # #############################################################################
+  def paid?(one_lead)
+    payments.find_by_paid_id(one_lead.id)
+  end
+
+  def pay!(one_lead)
+    payments.create!(paid_id: one_lead.id)
+  end
+
 
 end

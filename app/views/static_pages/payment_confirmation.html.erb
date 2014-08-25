@@ -7,7 +7,7 @@
     Time: <%= @lead.time %> <br>
     Description: <%= @lead.description %><br>
 
-<%= form_for (@lead) do |l| %>
-  <%= l.hidden_field :paid, :value => true %>
-  <%= l.submit "Confirm" %>
+<%= form_for(current_user.payments.build(paid_id: @lead.id)) do |p| %>
+  <%= p.hidden_field :paid_id %>       
+  <%= p.submit "Confirm" %>
 <% end %>

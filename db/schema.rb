@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825105916) do
+ActiveRecord::Schema.define(version: 20140825224429) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20140825105916) do
     t.text     "notes"
     t.integer  "order"
     t.boolean  "paid",          default: false
+    t.string   "paid_id"
+    t.string   "payer_id"
   end
 
   create_table "orders", force: true do |t|
@@ -83,6 +85,15 @@ ActiveRecord::Schema.define(version: 20140825105916) do
   end
 
   add_index "orders", ["selector_id", "selected_id"], name: "index_orders_on_selector_id_and_selected_id", unique: true
+
+  create_table "payments", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "paid_id"
+    t.integer  "payer_id"
+  end
+
+  add_index "payments", ["payer_id", "paid_id"], name: "index_payments_on_payer_id_and_paid_id", unique: true
 
   create_table "relationships", force: true do |t|
     t.integer  "coowner_id"

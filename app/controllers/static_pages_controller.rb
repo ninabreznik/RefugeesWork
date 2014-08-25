@@ -19,7 +19,9 @@ class StaticPagesController < ApplicationController
 
   def payment_confirmation
     @user = current_user
+
     @lead = Lead.find_by_id(@user.orders.last.selected_id)
+ #   @lead = Lead.find_by_id(params[:payment][:paid_id])
   end
 
 end

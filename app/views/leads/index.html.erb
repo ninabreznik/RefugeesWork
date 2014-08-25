@@ -24,7 +24,13 @@
         <% elsif lead.paid == true %>
           <button>Find me in <a href='/leads/bought_leads'>Bought Leads</a></button>
         <% else %>
-          <button>Reserved <a href='/payment_type'>(waiting for payment)</a></button>
+          <% if @user.present? %>
+            <% if @user.wallet >= 10 %> 
+              <button>Reserved <a href='/payment_confirmation'>(buy now)</a></button>
+            <% else %>
+              <button>Reserved <a href='/payment_type'>(buy now)</a></button>
+            <% end %>
+          <% end %>
         <% end %>
       <% else%>
         <button><%= link_to "Buy now", new_user_registration_path %></button>      

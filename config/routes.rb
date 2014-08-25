@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
   resources :orders, only: [:create, :destroy]
+  resources :payments, only: [:create, :destroy]
 
   get 'leads/index'
 

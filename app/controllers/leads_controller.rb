@@ -3,7 +3,7 @@ class LeadsController < ApplicationController
     @leads = Lead.all
     @campaign = Campaign.find_by_id(params[:id])
     @lead = Lead.find_by_id(params[:id])
-    @user = User.find_by_id(params[:id])
+    @user = current_user
     if user_signed_in?
 # #############################################################################
 #  Show only filtered Leads (from Campaigns you follow)
@@ -107,16 +107,16 @@ class LeadsController < ApplicationController
     # ###########################################################################
     # Code to show bought leads
     # ###########################################################################
-    if user_signed_in?
-      current_users_orders = Order.where(selector_id: current_user.id)
-      current_users_leads_ids = []
-    current_users_orders.each do |o|
-        current_users_leads_ids << o.selected_id
-    end
-      @ordered_leads = Lead.where(id: current_users_leads_ids)
-    else
-      @ordered_leads = []
-    end
+      if user_signed_in?
+        current_users_orders = Order.where(selector_id: current_user.id)
+        current_users_leads_ids = []
+        current_users_orders.each do |o|
+          current_users_leads_ids << o.selected_id
+        end
+        @ordered_leads = Lead.where(id: current_users_leads_ids)
+      else
+        @ordered_leads = []
+      end
     ###
       render 'leads/bought_leads'
   end
@@ -136,10 +136,14 @@ class LeadsController < ApplicationController
   end
 
   def bought_leads
-    @lead = Lead.find_by_id(params[:id])
+      @lead = Lead.find_by_id(params[:id])
     if user_signed_in?
       @bought_leads = Lead.where(paid:true)
     end
+  end
+
+  def sold_out_leads
+
   end
 
 
@@ -157,6 +161,8 @@ class LeadsController < ApplicationController
       :location,
       :selector_id,
       :selected_id,
+      :payer_id,
+      :paid_id,
       :notes,
       :paid
     )
