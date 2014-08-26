@@ -21,7 +21,7 @@
             <%= o.hidden_field :selected_id %>       
             <%= o.submit "Buy" %>
           <% end %> 
-        <% elsif lead.paid == true %>
+        <% elsif @is_lead_bought == true %>
           <button>Find me in <a href='/leads/bought_leads'>Bought Leads</a></button>
         <% else %>
           <% if @user.present? %>

@@ -38,9 +38,30 @@ class LeadsController < ApplicationController
         #   @selected_ids_of_current_users_orders = [-999] #dirty hack
         # end
 # #############################################################################
+#  For showing Lead was bought, find it in bought_leads
+# ############################################################################# 
+      # if user_signed_in?
+      #   current_users_payments = Payment.where(payer_id: current_user.id)
+      #   current_users_payments_ids = []
+      #   current_users_payments.each do |p|
+      #     current_users_payments_ids << p.paid_id
+      #   end
+      #   @bought_leads = Lead.where(id: current_users_payments_ids)
+      #   @bought_leads_ids = []
+      #   @bought_leads.each do |l|
+      #     @bought_leads_ids << l.id
+      #   end
+      #     @is_lead_bought = @bought_leads_ids.include?(@lead.id)
+      # else
+      # @is_lead_bought = []
+      # end
+
+
+# #############################################################################
 #  For showing number of orders for certain lead
 # #############################################################################      
       @number_of_orders_for_lead 
+
     end
   end
 
@@ -88,37 +109,13 @@ class LeadsController < ApplicationController
   end
 
   def update
-    @lead = Lead.find(params[:id])
-    @user = current_user
-      @old_paid = @lead.paid
+      @lead = Lead.find(params[:id])
+    if @lead.valid?
       @lead.update_attributes(lead_params)
-    # ########################################################################### 
-    # Check if @lead.paid was updated 
-    # and then change @user.wallet and @user.payment
-    # ###########################################################################
-      @new_paid = @lead.paid
-      @price = 10
-      if @old_paid != @new_paid
-        new_payment = @user.payment + @price
-        new_wallet_status = @user.wallet - @price
-        @user.update_attributes(:payment => new_payment)
-        @user.update_attributes(:wallet => new_wallet_status)
-      end
-    # ###########################################################################
-    # Code to show bought leads
-    # ###########################################################################
-      if user_signed_in?
-        current_users_orders = Order.where(selector_id: current_user.id)
-        current_users_leads_ids = []
-        current_users_orders.each do |o|
-          current_users_leads_ids << o.selected_id
-        end
-        @ordered_leads = Lead.where(id: current_users_leads_ids)
-      else
-        @ordered_leads = []
-      end
-    ###
-      render 'leads/bought_leads'
+      redirect_to @lead
+    else
+      render 'edit'
+    end
   end
 
   def reserved_leads
