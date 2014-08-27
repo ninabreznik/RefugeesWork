@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
 
   resources :relationships, only: [:create, :destroy]
-  resources :orders, only: [:create, :destroy]
-  resources :payments, only: [:create, :destroy]
+  resources :orders
+
   
   post 'paypal_confirm'  => 'orders#paypal_confirm'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
 

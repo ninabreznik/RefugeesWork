@@ -22,11 +22,11 @@
             <%= o.submit "Buy" %>
           <% end %> 
         <% elsif @is_lead_bought == true %>
-          <button>Find me in <a href='/leads/bought_leads'>Bought Leads</a></button>
+          <button>Find me in <a href='/orders/index'>Orders</a></button>
         <% else %>
           <% if @user.present? %>
             <% if @user.wallet >= 10 %> 
-              <button>Reserved <a href='/payment_confirmation'>(buy now)</a></button>
+              <button>Reserved <a href='/leads/show'>(buy now)</a></button>
             <% else %>
               <button>Reserved <a href='/payment_type'>(buy now)</a></button>
             <% end %>

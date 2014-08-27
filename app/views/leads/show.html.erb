@@ -1,1 +1,24 @@
-Thank you, you have succesfully created a new lead.
+<% if @lead.present? %>
+  <h3>Business Type: <%= @lead.business_type %></h3>
+  Location: <%= @lead.location %> <br>
+  ZIP: <%= @lead.zip %> <br>
+  Time: <%= @lead.time %> <br>
+  Description: <%= @lead.description %><br>
+
+<% if @user.wallet >= 10 %>
+  <%= form_for(current_user.payments.build(paid_id: @lead.id)) do |p| %>
+    <%= p.hidden_field :paid_id %>       
+    <%= p.submit "Confirm" %>
+  <% end %> 
+<% end %>
+
+<% if @user.wallet < 10 %>
+  <%= render 'leads/payment_buttons' %>
+<% end %>
+
+
+<% else %>
+
+  Lead doesn't exist.
+
+<% end %>

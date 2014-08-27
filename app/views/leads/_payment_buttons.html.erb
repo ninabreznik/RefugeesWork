@@ -1,12 +1,10 @@
-      <h2>Select payment type </h2> 
-      <h3>for your chosen lead: </h3> <br>
+      <h3>Chose type of payment: </h3> 
 <!--       
   #############################################################################
   2Checkout/Type: Intangible product
   https://www.2checkout.com/documentation/checkout/inline-checkout#int_params
   #############################################################################
 --> 
-<h3>Credit card payment</h3>
         <form action='https://www.2checkout.com/checkout/purchase' method='post'>
           <input type='hidden' name='sid' value='202347509' />
           <input type='hidden' name='mode' value='2CO' />
@@ -29,7 +27,6 @@
   PayPal/Merchant Services/BuyNowButtons
   #############################################################################
 -->
-<h3>Paypal payment</h3>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="DGJPN5XHCNK3Y">
@@ -42,5 +39,4 @@
   BankPayment
   #############################################################################
 -->
-<h3>Bank transfer payment</h3>
         <button><a href="/bank_transfer">Bank transfer</a></button>
