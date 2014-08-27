@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825224429) do
+ActiveRecord::Schema.define(version: 20140822024016) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,18 +46,6 @@ ActiveRecord::Schema.define(version: 20140825224429) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
-  create_table "campaigns", force: true do |t|
-    t.string   "business_category"
-    t.string   "title"
-    t.string   "location"
-    t.integer  "budget"
-    t.string   "keywords"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.text     "description"
-  end
-
   create_table "leads", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -71,10 +59,6 @@ ActiveRecord::Schema.define(version: 20140825224429) do
     t.string   "time"
     t.string   "location"
     t.text     "notes"
-    t.integer  "order"
-    t.boolean  "paid",          default: false
-    t.string   "paid_id"
-    t.string   "payer_id"
   end
 
   create_table "orders", force: true do |t|
@@ -85,26 +69,6 @@ ActiveRecord::Schema.define(version: 20140825224429) do
   end
 
   add_index "orders", ["selector_id", "selected_id"], name: "index_orders_on_selector_id_and_selected_id", unique: true
-
-  create_table "payments", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "paid_id"
-    t.integer  "payer_id"
-  end
-
-  add_index "payments", ["payer_id", "paid_id"], name: "index_payments_on_payer_id_and_paid_id", unique: true
-
-  create_table "relationships", force: true do |t|
-    t.integer  "coowner_id"
-    t.integer  "coowned_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "relationships", ["coowned_id"], name: "index_relationships_on_coowned_id"
-  add_index "relationships", ["coowner_id", "coowned_id"], name: "index_relationships_on_coowner_id_and_coowned_id", unique: true
-  add_index "relationships", ["coowner_id"], name: "index_relationships_on_coowner_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -121,7 +85,6 @@ ActiveRecord::Schema.define(version: 20140825224429) do
     t.datetime "updated_at"
     t.integer  "wallet",                 default: 0
     t.integer  "payment",                default: 0
-    t.integer  "order",                  default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

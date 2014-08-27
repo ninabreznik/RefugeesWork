@@ -1,6 +1,0 @@
-You have already applied for this campaign.
-<%= form_for(current_user.relationships.find_by_coowned_id(@campaign),
-             html: { method: :delete }) do |c| %>
-  <%= c.submit "Leave campaign" %>
-<% end %>
-

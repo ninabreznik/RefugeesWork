@@ -18,8 +18,9 @@ class StaticPagesController < ApplicationController
   end
 
   def payment_confirmation
+    Rails.logger.debug 'XXXX'*100 + params.inspect
     @user = current_user
-    @lead = Lead.find_by_id(@user.orders.last.selected_id)
+    @lead = Lead.find_by_id(params[:lead])
   end
 
 end

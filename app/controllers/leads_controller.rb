@@ -1,31 +1,10 @@
 class LeadsController < ApplicationController
   def index
     @leads = Lead.all
-    @campaign = Campaign.find_by_id(params[:id])
     @lead = Lead.find_by_id(params[:id])
     @user = current_user
     if user_signed_in?
-# #############################################################################
-#  Show only filtered Leads (from Campaigns you follow)
-# #############################################################################
-      coowned_ids = []
-      current_user.relationships.each do |r|
-        coowned_ids << r.coowned_id
-      end
-      current_user_campaigns = Campaign.where(id: coowned_ids)
-      current_user_campaigns_locations_and_title = []
-      current_user_campaigns.each do |c|
-        current_user_campaigns_locations_and_title << [c.location, c.title]
-      end
-      @current_user_leads = []
-      @leads.each do |l|
-        current_user_lead_locations_and_business_type = [l.location,l.business_type]
-        current_user_campaigns_locations_and_title.each do |c|
-          if c == current_user_lead_locations_and_business_type
-            @current_user_leads << l
-          end
-        end
-      end
+
 # #############################################################################
 #  For showing buttons buy for only leads customer hasn't bought yet
 # #############################################################################

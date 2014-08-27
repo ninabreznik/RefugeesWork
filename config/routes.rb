@@ -9,15 +9,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :campaigns do
-    member do
-      get :coowners
-    end
-  end
 
   resources :relationships, only: [:create, :destroy]
   resources :orders, only: [:create, :destroy]
   resources :payments, only: [:create, :destroy]
+  
+  post 'paypal_confirm'  => 'orders#paypal_confirm'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
 
   get 'leads/index'
 
@@ -50,7 +47,6 @@ Rails.application.routes.draw do
   get '/contact' => 'static_pages#contact'
   get '/pricing' => 'static_pages#pricing'
   get '/about' => 'static_pages#about'
-  get '/dashboard' => 'static_pages#all_campaigns'
   get '/bank_transfer' => 'static_pages#bank_transfer'
   get '/payment_type' => 'static_pages#payment'
   get 'payment_confirmation' => 'static_pages#payment_confirmation'
@@ -58,7 +54,6 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :campaigns
 
   resources :leads
 

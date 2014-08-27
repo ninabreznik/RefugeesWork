@@ -1,4 +1,0 @@
-<%= form_for(current_user.relationships.build(coowned_id: @campaign.id)) do |c| %>
-  <%= c.hidden_field :coowned_id %>
-  <%= c.submit "Apply for campaign" %>
-<% end %>
