@@ -4,21 +4,28 @@
   ZIP: <%= @lead.zip %> <br>
   Time: <%= @lead.time %> <br>
   Description: <%= @lead.description %><br>
-
-<% if @user.wallet >= 10 %>
-  <%= form_for(current_user.payments.build(paid_id: @lead.id)) do |p| %>
-    <%= p.hidden_field :paid_id %>       
-    <%= p.submit "Confirm" %>
-  <% end %> 
-<% end %>
-
-<% if @user.wallet < 10 %>
-  <%= render 'leads/payment_buttons' %>
-<% end %>
-
-
+    <% if user_signed_in? %> 
+      <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
+        <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
+          <button>Find me in <%= link_to "bought leads", orders_path %></button>
+        <% else %>
+          <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
+            BLA
+          <% else %>
+            <%= render 'payment_buttons' %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
+          <%= o.hidden_field :selected_id %>       
+          <%= o.submit "Buy" %>
+        <% end %>
+      <% end %> 
+    <% else%>
+      <button><%= link_to "Buy now", new_user_registration_path %></button>      
+    <% end %>
 <% else %>
-
-  Lead doesn't exist.
-
+  This lead doesn't exist.
 <% end %>
+
+

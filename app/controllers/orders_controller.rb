@@ -1,28 +1,5 @@
 class OrdersController < ApplicationController
 
-  def create
-    @lead = Lead.find_by_id(params[:order][:selected_id])
-    #@user = User.find_by_id(params[:order][:selector_id])
-    current_user.select!(@lead)
-    @price = 10
-    @user = current_user
-    if @user.wallet >= @price
-      redirect_to :controller => 'static_pages', :action => 'payment_confirmation', lead: @lead.id
-    else
-      redirect_to :controller => 'static_pages', :action => 'payment'
-    end
-  end
-
-  def update
-      @order = Order.find(params[:id])
-    if @order.valid?
-      @order.update_attributes(order_params)
-      redirect_to orders_url
-    else
-      render 'edit'
-    end
-  end
-
   def index
     # if user_signed_in?
     #   current_users_payments = Payment.where(payer_id: current_user.id)
@@ -35,7 +12,6 @@ class OrdersController < ApplicationController
     #   @bought_leads = []
     # end
     # render 'leads/bought_leads'
-
     @lead = Lead.find_by_id(params[:id])
     if user_signed_in?
       current_users_orders = Order.where(selector_id: current_user.id)
@@ -46,6 +22,27 @@ class OrdersController < ApplicationController
       @ordered_leads = Lead.where(id: current_users_leads_ids)
     else
       @ordered_leads = []
+    end
+  end
+
+  def create
+    @lead = Lead.find_by_id(params[:order][:selected_id])
+    current_user.select!(@lead)
+    @price = 10
+    @user = current_user
+    redirect_to lead_path(id: @lead.id)
+  end
+
+  def show
+  end
+
+  def update
+      @order = Order.find(params[:id])
+    if @order.valid?
+      @order.update_attributes(order_params)
+      redirect_to orders_url
+    else
+      render 'edit'
     end
   end
 
@@ -61,7 +58,9 @@ class OrdersController < ApplicationController
     # find the user/order somehow
     # if its already confirmed return some 503 or something
     # otherwise set a flag on an order .. or whatever all is good (200)
+  end
 
+  def more_than_5_orders_for_lead
   end
 
 end

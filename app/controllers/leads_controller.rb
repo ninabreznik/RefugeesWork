@@ -1,52 +1,14 @@
 class LeadsController < ApplicationController
+  
   def index
     @leads = Lead.all
     @lead = Lead.find_by_id(params[:id])
     @user = current_user
-    if user_signed_in?
-
-# #############################################################################
-#  For showing buttons buy for only leads customer hasn't bought yet
-# #############################################################################
-        current_user.orders.count > 0
-           @selected_ids_of_current_users_orders = []
-           current_user.orders.each do |o|
-             @selected_ids_of_current_users_orders << o.selected_id
-            end
-        # else
-        #   @selected_ids_of_current_users_orders = [-999] #dirty hack
-        # end
-# #############################################################################
-#  For showing Lead was bought, find it in bought_leads
-# ############################################################################# 
-      # if user_signed_in?
-      #   current_users_payments = Payment.where(payer_id: current_user.id)
-      #   current_users_payments_ids = []
-      #   current_users_payments.each do |p|
-      #     current_users_payments_ids << p.paid_id
-      #   end
-      #   @bought_leads = Lead.where(id: current_users_payments_ids)
-      #   @bought_leads_ids = []
-      #   @bought_leads.each do |l|
-      #     @bought_leads_ids << l.id
-      #   end
-      #     @is_lead_bought = @bought_leads_ids.include?(@lead.id)
-      # else
-      # @is_lead_bought = []
-      # end
-
-
-# #############################################################################
-#  For showing number of orders for certain lead
-# #############################################################################      
-      @number_of_orders_for_lead 
-
-    end
   end
 
   def show
     @lead = Lead.find_by_id(params[:id])
-    @user = current_user
+   # @order_for_this_lead_from_current_user = @lead.reverse_orders.where(selector_id: current_user.id)
   end
 
   def new
@@ -84,9 +46,7 @@ class LeadsController < ApplicationController
     )
     redirect_to @lead
   end 
-  
-  def edit
-  end
+
 
   def update
       @lead = Lead.find(params[:id])
@@ -97,16 +57,6 @@ class LeadsController < ApplicationController
       render 'edit'
     end
   end
-
-
-
-
-
-
-  def sold_out_leads
-
-  end
-
 
   private
 
@@ -133,7 +83,5 @@ class LeadsController < ApplicationController
     current_lead=(lead)
     @current_lead = lead
   end
-
-
 
 end

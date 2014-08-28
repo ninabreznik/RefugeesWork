@@ -1,6 +1,5 @@
 class Lead < ActiveRecord::Base
 
-  belongs_to :campaign
   before_create :assign_location_from_zip
 # ###############################################################################
 # Relationship betweer User & Lead, through Order
@@ -9,13 +8,6 @@ class Lead < ActiveRecord::Base
                                    class_name: "Order",
                                    dependent: :destroy
   has_many :selectors, through: :reverse_orders, source: :selector
-# ###############################################################################
-# Relationship betweer User & Lead, through Payment
-# ###############################################################################
-  has_many :reverse_payments, foreign_key: "paid_id", 
-                                   class_name: "Payment",
-                                   dependent: :destroy
-  has_many :payers, through: :reverse_payments, source: :payer
 
 
 def assign_location_from_zip
