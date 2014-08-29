@@ -36,14 +36,13 @@ class OrdersController < ApplicationController
   def show
   end
 
-  def update
-      @order = Order.find(params[:id])
-    if @order.valid?
-      @order.update_attributes(order_params)
-      redirect_to orders_url
-    else
-      render 'edit'
-    end
+  def edit
+    @order = Order.find(params[:id])
+    @order.update_attributes(:paid => true)
+    @price = 10
+    new_wallet_status = current_user.wallet - @price
+    current_user.update_attributes(:wallet => new_wallet_status)
+        redirect_to leads_url
   end
 
   def destroy
@@ -61,6 +60,14 @@ class OrdersController < ApplicationController
   end
 
   def more_than_5_orders_for_lead
+  end
+
+  private
+
+  def lead_params
+    params.require(:lead).permit(
+      :paid
+    )
   end
 
 end

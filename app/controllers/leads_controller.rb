@@ -8,7 +8,6 @@ class LeadsController < ApplicationController
 
   def show
     @lead = Lead.find_by_id(params[:id])
-   # @order_for_this_lead_from_current_user = @lead.reverse_orders.where(selector_id: current_user.id)
   end
 
   def new
@@ -50,12 +49,6 @@ class LeadsController < ApplicationController
 
   def update
       @lead = Lead.find(params[:id])
-    if @lead.valid?
-      @lead.update_attributes(lead_params)
-      redirect_to @lead
-    else
-      render 'edit'
-    end
   end
 
   private

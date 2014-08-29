@@ -10,13 +10,25 @@
           <button>Find me in <%= link_to "bought leads", orders_path %></button>
         <% else %>
           <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
-            BLA
+            <%= link_to(
+                'Heart the order',
+                {
+                  :controller => 'orders', 
+                  :action => 'edit', 
+                  :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
+                  },
+                :html =>
+                {
+                  :method => :patch, 
+                  :remote => true
+                }
+            ) %>
           <% else %>
             <%= render 'payment_buttons' %>
           <% end %>
         <% end %>
       <% else %>
-        <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>
+        <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>       
           <%= o.submit "Buy" %>
         <% end %>
