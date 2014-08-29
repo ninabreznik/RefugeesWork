@@ -1,4 +1,4 @@
-<% if @lead.present? %>
+<% if @lead.present? && @lead.reverse_orders.count < 5 %> 
   <h3>Business Type: <%= @lead.business_type %></h3>
   Location: <%= @lead.location %> <br>
   ZIP: <%= @lead.zip %> <br>
@@ -37,7 +37,7 @@
       <button><%= link_to "Buy now", user_registration_pathuser_registration_path %></button>      
     <% end %>
 <% else %>
-  This lead doesn't exist.
+  This lead isn't available.
 <% end %>
 
 
