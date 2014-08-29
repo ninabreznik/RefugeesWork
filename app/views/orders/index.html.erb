@@ -11,7 +11,7 @@
 <% if user_signed_in? && @orders.present? %>
     <h2>MY CUSTOMERS:</h2>
       <% @orders.where(selector_id: current_user.id, paid: true).each do |order| %>
-        Business Type: <%= order.selected.business_type %> <br>
+        <h3><%= link_to "##{order.selected.id}:#{order.selected.business_type}", lead_path(order.selected) %></h3>
         Location: <%= order.selected.location %> <br>
         Time: <%= order.selected.time %> <br>
         Description: <%= order.selected.description %> <br>
@@ -31,7 +31,7 @@
 <% if user_signed_in? && @orders.present? %>
     <h2>MY WISH LIST:</h2>
       <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
-        Business Type: <%= order.selected.business_type %> <br>
+        <h3><%= link_to "##{order.selected.id}:#{order.selected.business_type}", lead_path(order.selected) %></h3>
         Location: <%= order.selected.location %> <br>
         Time: <%= order.selected.time %> <br>
         Description: <%= order.selected.description %> <br>
@@ -40,7 +40,10 @@
         Name: <%= order.selected.name %> <br>
         Phone: <%= order.selected.phone %> <br>
         E-mail: <%= order.selected.email %> <br>  
-        <br>
+        <%= form_for(current_user.orders.find_by_selected_id(order.selected),
+             html: { method: :delete }) do |c| %>
+        <%= c.submit "Remove from wishlist" %> <br>
+<% end %>
       <% end %> 
 <% else %>
   <h2>MY WISHLIST:</h2>
