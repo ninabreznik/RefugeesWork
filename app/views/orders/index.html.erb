@@ -8,64 +8,46 @@
 # BOUGHT LEADS 
 #############################################################################
 -->
-<% if user_signed_in? %>
-    <h2>LEADS YOU BOUGHT:</h2>
-      <% @bought_leads.each do |lead| %>
-        Business Type: <%= lead.business_type %> <br>
-        Location: <%= lead.location %> <br>
-        Time: <%= lead.time %> <br>
-        Description: <%= lead.description %> <br>
-        ZIP: <%= lead.zip %> <br>
+<% if user_signed_in? && @orders.present? %>
+    <h2>MY CUSTOMERS:</h2>
+      <% @orders.where(selector_id: current_user.id, paid: true).each do |order| %>
+        Business Type: <%= order.selected.business_type %> <br>
+        Location: <%= order.selected.location %> <br>
+        Time: <%= order.selected.time %> <br>
+        Description: <%= order.selected.description %> <br>
+        ZIP: <%= order.selected.zip %> <br>
         <strong>Customer contact information:</strong><br>
-        Name: <%= lead.name %> <br>
-        Phone: <%= lead.phone %> <br>
-        E-mail: <%= lead.email %> <br>
-        <%= form_for (lead) do |l| %>
-          <%= text_area(:lead, :notes, :size => 20, :value => "#{lead.notes}") %>
-          <%= l.submit "Save" %>
-        <% end %>
+        Name: <%= order.selected.name %> <br>
+        Phone: <%= order.selected.phone %> <br>
+        E-mail: <%= order.selected.email %> <br>      
         <br>
       <% end %> 
 <% else %>
-  <h2>LEADS YOU BOUGHT:</h2>
+  <h2>MY CUSTOMERS:</h2>
+<% end %>
+
+
+<% if user_signed_in? && @orders.present? %>
+    <h2>MY WISH LIST:</h2>
+      <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
+        Business Type: <%= order.selected.business_type %> <br>
+        Location: <%= order.selected.location %> <br>
+        Time: <%= order.selected.time %> <br>
+        Description: <%= order.selected.description %> <br>
+        ZIP: <%= order.selected.zip %> <br>
+        <strong>Customer contact information:</strong><br>
+        Name: <%= order.selected.name %> <br>
+        Phone: <%= order.selected.phone %> <br>
+        E-mail: <%= order.selected.email %> <br>  
+        <br>
+      <% end %> 
+<% else %>
+  <h2>MY WISHLIST:</h2>
  You have to <%= link_to "Sign up", 
     new_user_registration_path %> or
     <%= link_to "Login", 
-    new_user_session_path %> to see your bought leads. <br>
+    new_user_session_path %> to see your customers. <br>
 <% end %>
 
-<!-- 
-#############################################################################
-# RESERVED LEADS 
-#############################################################################
--->
-
-<% if current_user.try(:orders).present? %>
-  <% if user_signed_in? %>
-      <h2>LEADS YOU RESERVED:</h2>
-        <% @ordered_leads.each do |lead| %>
-          Business Type: <%= lead.business_type %> <br>
-          Location: <%= lead.location %> <br>
-          Time: <%= lead.time %> <br>
-          Description: <%= lead.description %> <br>
-          ZIP: <%= lead.zip %> <br>
-          <strong>Customer contact information:</strong><br>
-            <% if current_user.wallet >= 10 %>
-              <button><a href='/payment_confirmation'>Confirm payment</a></button> <br>
-            <% else %>
-              <button><a href='/payment_type'>Buy now</a></button> <br>
-            <% end %>
-          <br>
-        <% end %> 
-  <% else %>
-   You have to <%= link_to "Sign up", 
-      new_user_registration_path %> or
-      <%= link_to "Login", 
-      new_user_session_path %> to see your bought leads.
-  <% end %>
-<% else %>
-<h2>LEADS YOU RESERVED:</h2>
-  No reservations yet.
-<% end %> 
 </body>
 </html>

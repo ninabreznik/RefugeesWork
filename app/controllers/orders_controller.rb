@@ -1,28 +1,11 @@
 class OrdersController < ApplicationController
 
   def index
-    # if user_signed_in?
-    #   current_users_payments = Payment.where(payer_id: current_user.id)
-    #   current_users_payments_ids = []
-    #   current_users_payments.each do |p|
-    #     current_users_payments_ids << p.paid_id
-    #   end
-    # @bought_leads = Lead.where(id: current_users_payments_ids)
-    # else
-    #   @bought_leads = []
-    # end
-    # render 'leads/bought_leads'
     @lead = Lead.find_by_id(params[:id])
-    if user_signed_in?
-      current_users_orders = Order.where(selector_id: current_user.id)
-      current_users_leads_ids = []
-      current_users_orders.each do |o|
-        current_users_leads_ids << o.selected_id
-      end
-      @ordered_leads = Lead.where(id: current_users_leads_ids)
-    else
-      @ordered_leads = []
-    end
+    @leads = Lead.all
+    @orders = Order.all
+    #@bought_leads = Order.all.where(selector_id: current_user.id, paid: true)
+
   end
 
   def create

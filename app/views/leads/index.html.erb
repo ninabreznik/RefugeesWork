@@ -5,8 +5,7 @@
 <body>
 <% if @leads.present? %>
       <% @leads.each do |lead| %>
-        <% if lead.reverse_orders.count < 5 %>
-          <h3>Business Type: <%= lead.business_type %></h3>
+          <h3><%= link_to "##{lead.id}:#{lead.business_type}", lead_path(lead) %></h3>
           Location: <%= lead.location %> <br>
           ZIP: <%= lead.zip %> <br>
           Time: <%= lead.time %> <br>
@@ -14,7 +13,7 @@
           <% if user_signed_in? %> 
             <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
               <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-                <button>Find me in <%= link_to "bought leads", orders_path %></button>
+                <button>Find me in <%= link_to "My customers", orders_path %></button>
               <% else %>  
                 <button><%= link_to "Confirm payment", lead_path(lead) %></button>
               <% end %>
@@ -27,7 +26,6 @@
           <% else%>
             <button><%= link_to "Buy now", user_registration_path %></button>      
           <% end %>
-        <% end %>
       <% end %>
 <% else %>
   Currently there is no available leads.
