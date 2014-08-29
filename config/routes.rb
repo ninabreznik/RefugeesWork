@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
   resources :orders
+  resources :leads
    # match '/orders/:id',       to: 'orders#update',        via: 'put'
     match '/orders',           to: 'orders#index',         via: 'get'
     match '/orders/:id',       to: 'orders#show',          via: 'get'

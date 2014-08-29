@@ -1,11 +1,15 @@
 class OrdersController < ApplicationController
 
   def index
-    @lead = Lead.find_by_id(params[:id])
-    @leads = Lead.all
     @orders = Order.all
+    @order = Order.find_by_id(params[:id])
+    #@order = Order.where(selected_id: @lead.id, selector_id: current_user.id)
+    @leads = Lead.all
+    #@lead = @order.selected
     #@bought_leads = Order.all.where(selector_id: current_user.id, paid: true)
-
+    if @order.present?
+      @lead = @order.selected 
+    end
   end
 
   def create
