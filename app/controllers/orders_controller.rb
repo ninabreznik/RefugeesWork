@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
     @price = 10
     new_wallet_status = current_user.wallet - @price
     current_user.update_attributes(:wallet => new_wallet_status)
-      render '/orders'
+    redirect_to orders_url
   end
 
   def destroy
@@ -37,8 +37,7 @@ class OrdersController < ApplicationController
     redirect_to orders_url
   end
 
-  def edit
-  end
+
 
   def update
     @order = Order.find(params[:id])

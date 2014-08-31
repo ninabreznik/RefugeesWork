@@ -30,6 +30,7 @@ gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'formtastic'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

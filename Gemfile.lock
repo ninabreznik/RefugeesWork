@@ -197,6 +197,7 @@ DEPENDENCIES
   activeadmin!
   dashing-rails
   devise
+  formtastic
   jbuilder (~> 2.0)
   puma
   rails (= 4.1.0)
