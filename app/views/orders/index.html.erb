@@ -21,7 +21,10 @@
         Phone: <%= order.selected.phone %> <br>
         E-mail: <%= order.selected.email %> <br>      
         <br>
-
+        <%= form_for (order) do |l| %>
+          <%= text_area(:order, :notes, :size => 20, :value => "#{order.notes}") %>
+          <%= l.submit "Save" %>
+        <% end %>
       <% end %> 
 <% else %>
   <h2>MY CUSTOMERS:</h2>
@@ -43,7 +46,7 @@
         <%= form_for(current_user.orders.find_by_selected_id(order.selected),
              html: { method: :delete }) do |c| %>
         <%= c.submit "Remove from wishlist" %> <br>
-<% end %>
+        <% end %>
       <% end %> 
 <% else %>
   <h2>MY WISHLIST:</h2>

@@ -29,11 +29,20 @@ class OrdersController < ApplicationController
     @price = 10
     new_wallet_status = current_user.wallet - @price
     current_user.update_attributes(:wallet => new_wallet_status)
-        redirect_to leads_url
+      render '/orders'
   end
 
   def destroy
     Order.find(params[:id]).destroy
+    redirect_to orders_url
+  end
+
+  def edit
+  end
+
+  def update
+    @order = Order.find(params[:id])
+    @order.update_attributes(order_params)
     redirect_to orders_url
   end
 
@@ -51,9 +60,10 @@ class OrdersController < ApplicationController
 
   private
 
-  def lead_params
-    params.require(:lead).permit(
-      :paid
+  def order_params
+    params.require(:order).permit(
+      :paid,
+      :notes
     )
   end
 

@@ -67,7 +67,6 @@ class LeadsController < ApplicationController
       :selected_id,
       :payer_id,
       :paid_id,
-      :notes,
       :paid
     )
   end
