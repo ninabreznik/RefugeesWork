@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-
+  protect_from_forgery :except => [:edit]
+  
   def index
     @orders = Order.all
     @order = Order.find_by_id(params[:id])
@@ -21,14 +22,20 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
+    @lead = @order.selected
   end
 
   def edit
     @order = Order.find(params[:id])
-    @order.update_attributes(:paid => true)
-    @price = 10
-    new_wallet_status = current_user.wallet - @price
-    current_user.update_attributes(:wallet => new_wallet_status)
+    if current_user.wallet >= 10
+      @order.update_attributes(:paid => true)
+      @price = 10
+      new_wallet_status = current_user.wallet - @price
+      current_user.update_attributes(:wallet => new_wallet_status)
+    else
+     # @order.paypal_payment_notification
+    end
     redirect_to orders_url
   end
 
@@ -37,25 +44,19 @@ class OrdersController < ApplicationController
     redirect_to orders_url
   end
 
-
-
   def update
     @order = Order.find(params[:id])
     @order.update_attributes(order_params)
     redirect_to orders_url
   end
 
-
-  def paypal_confirm
+  #def paypal_payment_notification   #IPN - instant payment notification (by PayPal)
     # ...
     # process params from paypal!
     # find the user/order somehow
     # if its already confirmed return some 503 or something
     # otherwise set a flag on an order .. or whatever all is good (200)
-  end
-
-  def more_than_5_orders_for_lead
-  end
+  #end
 
   private
 

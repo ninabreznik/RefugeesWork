@@ -8,6 +8,7 @@ class LeadsController < ApplicationController
 
   def show
     @lead = Lead.find_by_id(params[:id])
+    @order = @lead.reverse_orders.where(selector_id: current_user.id)
   end
 
   def new
@@ -50,6 +51,7 @@ class LeadsController < ApplicationController
   def update
       @lead = Lead.find(params[:id])
   end
+
 
   private
 

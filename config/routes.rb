@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
 
   
-  post 'paypal_confirm'  => 'orders#paypal_confirm'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
+  post 'paypal_confirm'  => 'orders#paypal_payment_notification'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
 
   get 'leads/index'
 

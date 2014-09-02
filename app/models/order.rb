@@ -6,27 +6,29 @@ class Order < ActiveRecord::Base
   validates :selected_id, presence: true
   validates :selector_id, presence: true
   
-  #before_save :check_wallet
-  #after_save :update_wallet
+  def paypal_url(return_url, notify_url)
+    values = {
+      :business => 'nina.breznik-facilitator@sosed.si',
+      :cmd => '_xclick',
+      :upload => 1,
+      :return => return_url,
+      :invoice => id,
+      :notify_url => notify_url
+    }
+      values.merge!({
+        "amount" => 10,
+        "item_name" => 'bla',
+        "item_number" => 2,
+        "quantity" => 1
+      })
+    "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+  end
 
-  # def check_wallet
-  #   @price = 10
-  #   user_id = self.selector_id
-  #   @user = User.find_by_id(user_id)
-  #   @user.wallet >= @price
-  #   return true
-  # rescue
-  #   return false
-  # end
-
-  # def update_wallet
-  #   if @user.wallet >= 10
-  #     new_payment = @user.payment + 1
-  #     new_wallet_status = @user.wallet - @price
-  #     @user.update_attributes(:wallet => new_wallet_status)
-  #     @user.update_attributes(:payment => new_payment)
-  #   redirect_to :action => 'index'
+  # def paypal_payment_notification   #IPN - instant payment notification (by PayPal)
+  #   if status == "Completed"
+  #     self.update_attributes(:paid => true)
   #   end
   # end
 
 end
+

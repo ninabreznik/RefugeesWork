@@ -1,3 +1,44 @@
-You have succesfully purchased the lead. 
+<% if @order.present? %>
+    <h3>Business Type: <%= @lead.business_type %></h3>
+    Location: <%= @lead.location %> <br>
+    ZIP: <%= @lead.zip %> <br>
+    Time: <%= @lead.time %> <br>
+    Description: <%= @lead.description %><br>
+      <% if user_signed_in? %> 
+        <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
+          <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
+            <button>Find me in <%= link_to "My customers", orders_path %></button>
+          <% else %>
+            <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
+              <%= link_to(
+                  'Confirm the order',
+                  {
+                    :controller => 'orders', 
+                    :action => 'edit', 
+                    :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
+                    },
+                  :html =>
+                  {
+                    :method => :patch, 
+                    :remote => true
+                  }
+              ) %>
+            <% else %>
+              <%= render 'leads/payment_buttons' %>
+            <% end %>
+          <% end %>
+        <% else %>
+          <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
+            <%= o.hidden_field :selected_id %>       
+            <%= o.submit "Buy" %>
+          <% end %>
+        <% end %> 
+      <% else%>
+        <button><%= link_to "Buy now", user_registration_path %></button>      
+      <% end %>
 
-Click here to see customer contact information:
+<% else %>
+  This lead isn't available.
+<% end %>
+
+
