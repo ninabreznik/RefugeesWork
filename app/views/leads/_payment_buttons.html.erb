@@ -27,7 +27,7 @@
   PayPal/Merchant Services/BuyNowButtons
   #############################################################################
 -->
-        <button> <%= link_to "Checkout", @order.paypal_url(leads_url, paypal_confirm_url) %> </button> <br>
+        <button> <%= link_to "Checkout", @order.paypal_url(paypal_notifications_url,orders_url) %> </button> <br>
   <!--       
   #############################################################################
   BankPayment

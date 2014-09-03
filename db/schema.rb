@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831083851) do
+ActiveRecord::Schema.define(version: 20140903180402) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -70,6 +70,16 @@ ActiveRecord::Schema.define(version: 20140831083851) do
   end
 
   add_index "orders", ["selector_id", "selected_id"], name: "index_orders_on_selector_id_and_selected_id", unique: true
+
+  create_table "paypal_notifications", force: true do |t|
+    t.text     "params"
+    t.string   "status"
+    t.string   "transaction_id"
+    t.integer  "cart_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "order_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

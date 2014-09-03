@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  
+  has_many :paypal_notifications
   belongs_to :selected, class_name: "Lead"
   belongs_to :selector, class_name: "User"
   
@@ -23,6 +23,8 @@ class Order < ActiveRecord::Base
       })
     "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
   end
+
+  
 
   # def paypal_payment_notification   #IPN - instant payment notification (by PayPal)
   #   if status == "Completed"

@@ -1,0 +1,2 @@
+module PaypalNotificationsHelper
+end
