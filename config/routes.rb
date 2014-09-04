@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :leads
   resources :paypal_notifications, only: [:create]
 
- # match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
+ match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
     # match '/orders',           to: 'orders#index',         via: 'get'
     # match '/orders/:id',       to: 'orders#show',          via: 'get'
     # match '/orders/:id',       to: 'orders#delete',        via: 'delete'
