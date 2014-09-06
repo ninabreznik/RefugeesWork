@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  #resources :users 
+  resources :users 
   resources :orders
   resources :leads
   resources :paypal_notifications, only: [:create]
