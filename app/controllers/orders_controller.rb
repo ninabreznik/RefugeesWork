@@ -36,7 +36,7 @@ class OrdersController < ApplicationController
     else
      # @order.paypal_payment_notification
     end
-    redirect_to lead_path(id: @order.selected.id)
+    redirect_to order_path(@order)
   end
 
   def destroy
@@ -46,8 +46,13 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
+    notes_before_update = @order.notes
     @order.update_attributes(order_params)
-    redirect_to orders_url
+    if @order.notes != notes_before_update
+      redirect_to order_url(@order)
+    else
+      redirect_to orders_url
+    end
   end
 
   #def paypal_payment_notification   #IPN - instant payment notification (by PayPal)

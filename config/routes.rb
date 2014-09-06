@@ -26,9 +26,6 @@ Rails.application.routes.draw do
 
   get 'leads/edit'
 
-  get 'leads/reserved_leads'
-
-  get 'leads/bought_leads'
 
 
 

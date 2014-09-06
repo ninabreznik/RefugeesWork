@@ -7,11 +7,6 @@
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-          :::::::::::::::::::::::::::::::::::::::::: <br>
-          <strong>Customer contact information:</strong><br>
-                  Name: <%= @lead.name %>               <br>
-                  Phone: <%= @lead.phone %>             <br>
-                  E-mail: <%= @lead.email %>            <br>  
           <button>Find me in <%= link_to "My customers", orders_path %></button>
         <% else %>
           <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
