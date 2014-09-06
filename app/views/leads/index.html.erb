@@ -15,7 +15,7 @@
               <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
                 <button>Find me in <%= link_to "My customers", orders_path %></button>
               <% else %>  
-                <button>Find me in <%= link_to "Wishlist", orders_path %></button>
+                <button>Find me in <%= link_to "Liked <3", orders_path %></button>
               <% end %>
             <% else %>
               <%= form_for(current_user.orders.build(selected_id: lead.id)) do |o| %>

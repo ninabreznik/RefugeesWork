@@ -32,7 +32,7 @@
 
 
 <% if user_signed_in? && @orders.present? %>
-    <h2>MY WISH LIST:</h2>
+    <h2>LIKED <3:</h2>
       <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
         <h3><%= link_to "##{order.selected.id}:#{order.selected.business_type}", lead_path(order.selected) %></h3>
         Location: <%= order.selected.location %> <br>
@@ -40,12 +40,14 @@
         Description: <%= order.selected.description %> <br>
         ZIP: <%= order.selected.zip %> <br>
         <strong>Customer contact information:</strong><br>
-        Name: <%= order.selected.name %> <br>
-        Phone: <%= order.selected.phone %> <br>
-        E-mail: <%= order.selected.email %> <br>  
+        (available only if you buy this lead) <br>
+        Name:  <br>
+        Phone:  <br>
+        E-mail:  <br>  
+        <button> <%= link_to "Buy now", lead_path(order.selected) %> </button> 
         <%= form_for(current_user.orders.find_by_selected_id(order.selected),
              html: { method: :delete }) do |c| %>
-        <%= c.submit "Remove from wishlist" %> <br>
+        <%= c.submit "Unlike" %> <br>
         <% end %>
       <% end %> 
 <% else %>

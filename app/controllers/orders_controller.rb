@@ -36,7 +36,7 @@ class OrdersController < ApplicationController
     else
      # @order.paypal_payment_notification
     end
-    redirect_to orders_url
+    redirect_to lead_path(id: @order.selected.id)
   end
 
   def destroy
