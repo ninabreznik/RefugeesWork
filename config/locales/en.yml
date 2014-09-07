@@ -20,4 +20,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+# #############################
+# Page 1 - Leads/Index
+# #############################
+  lead:
+    location: "Region"
+    zip: "Zip"
+    time: "When?"
+    description: "Description"
+    name: "Name"
+  link:
+    address-book: "Address book"
+  notification:
+    no-leads-available: "Currently there is no available leads."
+# #############################
+# Page 2 - Leads/Show
+# #############################
+
+# #############################
+# Page 3 - 
+# #############################
+
+# #############################
+# Page 4 - 
+# #############################

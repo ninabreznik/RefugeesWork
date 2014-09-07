@@ -9,33 +9,41 @@
       <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
         <% else %> 
-          <h3><%= link_to "#{lead.business_type}", lead_path(lead) %></h3>
-          Location: <%= lead.location %> <br>
-          ZIP: <%= lead.zip %> <br>
-          Time: <%= lead.time %> <br>
-          Description: <%= lead.description %><br>
-          Name: <%= lead.name %> <br>
-          <button><%= link_to "Liked <3", orders_path %></button>
+          <h3>
+            <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+          </h3>
+          <%= I18n.t'lead.location' %>    :<%= lead.location %>       <br>
+          <%= I18n.t'lead.zip' %>         :<%= lead.zip %>            <br>
+          <%= I18n.t'lead.time' %>        : <%= lead.time %>          <br>
+          <%= I18n.t'lead.description' %> : <%= lead.description %>   <br>
+          <%= I18n.t'lead.name' %>        : <%= lead.name %>          <br>
+          <button>
+            <%= link_to "#{I18n.t'link.address-book'}", orders_path %>              
+          </button>
         <% end %>
       <% else %>
-        <h3><%= link_to "#{lead.business_type}", lead_path(lead) %></h3>
-        Location: <%= lead.location %> <br>
-        ZIP: <%= lead.zip %> <br>
-        Time: <%= lead.time %> <br>
-        Description: <%= lead.description %><br>
-        Name: <%= lead.name %> <br>
+        <h3>
+          <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+        </h3>
+          <%= I18n.t'lead.location' %>    :<%= lead.location %>       <br>
+          <%= I18n.t'lead.zip' %>         :<%= lead.zip %>            <br>
+          <%= I18n.t'lead.time' %>        : <%= lead.time %>          <br>
+          <%= I18n.t'lead.description' %> : <%= lead.description %>   <br>
+          <%= I18n.t'lead.name' %>        : <%= lead.name %>          <br>
       <% end %> 
     <% else%>
-      <h3><%= link_to "#{lead.business_type}", lead_path(lead) %></h3>
-      Location: <%= lead.location %> <br>
-      ZIP: <%= lead.zip %> <br>
-      Time: <%= lead.time %> <br>
-      Description: <%= lead.description %><br>
-      Name: <%= lead.name %> <br>   
+      <h3>
+        <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+      </h3>
+        <%= I18n.t'lead.location' %>    :<%= lead.location %>       <br>
+        <%= I18n.t'lead.zip' %>         :<%= lead.zip %>            <br>
+        <%= I18n.t'lead.time' %>        : <%= lead.time %>          <br>
+        <%= I18n.t'lead.description' %> : <%= lead.description %>   <br>
+        <%= I18n.t'lead.name' %>        : <%= lead.name %>          <br>
     <% end %>
   <% end %>
 <% else %>
-  Currently there is no available leads.
+  <%= I18n.t'notification.no-leads-available' %>
 <% end %>
 </body>
 </html>

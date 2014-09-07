@@ -1,0 +1,17 @@
+si:
+# #############################
+# Page 1 - Leads/Index
+# #############################
+  lead:
+    location: "Regija"
+    zip: "Pošta"
+    time: "Kdaj?"
+    description: "Opis"
+    name: "Ime"
+  link:
+    address-book: "Imenik strank"
+  notification:
+    no-leads-available: "Trenutno ni na voljo nobenega kontakta."
+# #############################
+# Page 2 - Leads/Show
+# #############################
