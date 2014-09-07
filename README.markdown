@@ -1,7 +1,6 @@
 table of content
 =======
 * [introduction](#leadshareapp)
-* [demo](#demo)
 * [usage](#usage)
 * [api](#api)
 * [authors](#authors)
@@ -18,15 +17,6 @@ LeadShareApp
 [[back to top](#table-of-content)]
 
 PaaS for sharing costs for google ad campaigns to get leads
-
-
-
-
-demo
-=======
-[[back to top](#table-of-content)]
-
-__☠☠☠ section is under construction ☠☠☠__
 
 
 
@@ -79,7 +69,7 @@ There is more jobs in the source code marked with `// @TODO: <job description>` 
   * http://www.wolfe.id.au/2014/02/01/getting-a-new-node-project-started-with-npm/ 
   * http://quickleft.com/blog/creating-and-publishing-a-node-js-module
   * http://www.devthought.com/2012/02/17/npm-tricks/
-* __@TODO:__ jobs like on: https://github.com/topcoat/resin
+
 
 
 
@@ -89,6 +79,7 @@ contribute
 [[back to top](#table-of-content)]
 
 ### PREPARE SYSTEM
+  * install ruby on rails environment
   * install [git](http://git-scm.com "git") if it is not yet installed on your system
   * install [node](http://nodejs.org "nodejs") if it is not yet installed on your system
   * open a terminal on your system and navigate to your favourite workspace folder
@@ -96,35 +87,30 @@ contribute
 
 ### START PREPARING LEADSHAREAPP PROJECT
 * `git clone https://github.com/ninabreznik/LeadShareApp.git`
-* `npm install -g stylus nib jeet rupture`
 * `npm install`
 * `npm update`
-* `stylus -u jeet -u nib -rupture -w stylus.styl`
 * `bundle install`
 * `rake db:migrate`
 * `npm start & rails s`
-* load main HTML project file by opening and pointing your browser to:
-  * a server that serves the `./DEMO/dev.html` file _(e.g. localhost:3000/)_
-    * __HINT1:__ this might only works with CORS disabled. In order to do so:
-      * mac osx `open -a Google\ Chrome --args --disable-web-security`
-      * linux `google-chrome --disable-web-security`
-      * windows `chrome.exe --disable-web-security`
-    * __HINT2:__ the server can be administrated through _(e.g. localhost:3000/admin)_
-      * __user:__ admin@example.com
-      * __pass:__ password
+* load the APP by opening and pointing your browser to: `http://localhost:3000/`
+  * __HINT1:__ this might only works with CORS disabled. In order to do so:
+    * mac osx `open -a Google\ Chrome --args --disable-web-security`
+    * linux `google-chrome --disable-web-security`
+    * windows `chrome.exe --disable-web-security`
+  * __HINT2:__ the server can be administrated through _(e.g. localhost:3000/admin)_
+    * __user:__ admin@example.com
+    * __pass:__ password
 
 __... HAPPY CODING :-)__
 
 
-
-### How to shorten feedback cycles during development
+* How to shorten feedback cycles during development
 (Process to use for projects, where dependencies projects have to be developed in parallel to the main project)
 In order to use changes made in a dependency project, they have to be commited and pushed and the version has to be increased and published.
 Afterwards, in the main project, the version for the updated dependency has to be adapted in `package.json` and `npm install` has to be run.
 That is a lot of hassle to be done for each change.
 
-
-### Solution
+* Solution
 __Given:__ "Main Project" and "Dependency Project" are both `git clone`'ed to the local developer machine.
 __Process:__
 0. Open all those Project Folders in sublime editor and then use the terminal to...
