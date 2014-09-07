@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
     current_user.select!(@lead)
     @price = 10
     @user = current_user
-    redirect_to lead_path(id: @lead.id)
+    redirect_to order_path(id: @lead.reverse_orders.where(selector_id: current_user.id).first.id)
   end
 
   def show

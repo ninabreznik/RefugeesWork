@@ -21,7 +21,7 @@
           <% else %>
             <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
               <%= link_to(
-                  'Confirm the order',
+                  'Wallet',
                   {
                     :controller => 'orders', 
                     :action => 'edit', 
