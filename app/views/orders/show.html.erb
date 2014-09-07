@@ -1,9 +1,10 @@
 <% if @order.present? %>
-  <h3>Business Type: <%= @lead.business_type %></h3>
+  <h3><%= @lead.business_type %></h3>
   Location: <%= @lead.location %> <br>
   ZIP: <%= @lead.zip %> <br>
   Time: <%= @lead.time %> <br>
   Description: <%= @lead.description %><br>
+  Name: <%= @lead.name %><br>
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
