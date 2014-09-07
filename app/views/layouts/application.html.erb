@@ -13,12 +13,12 @@
     <%= link_to "Login", 
     new_user_session_path %>
   <% end %>
-  <strong>$INFO</strong>
+  <strong><%= link_to "$INFO", about_path %></strong>
     <ul>
-      <a href="/">$HOME</a>
+      <%= link_to "$HOME", root_path %>
       <%= link_to "$LIKED", liked_path %>
       <%= link_to "$ADDRESS BOOK", address_book_path %>
-      <a href="/profile">$PROFILE</a>
+      <%= link_to "$PROFILE", profile_path %>
     </ul>
   </nav>
 <% flash.each do |key, value| %>
