@@ -4,12 +4,15 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users 
-  resources :orders
   resources :leads
   resources :paypal_notifications, only: [:create]
 
  match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
-    # match '/orders',           to: 'orders#index',         via: 'get'
+
+resources :orders
+  get '/address_book' => 'orders#index'
+  get '/liked' => 'orders#index'
+
     # match '/orders/:id',       to: 'orders#show',          via: 'get'
     # match '/orders/:id',       to: 'orders#delete',        via: 'delete'
 
@@ -48,7 +51,7 @@ Rails.application.routes.draw do
   get '/about' => 'static_pages#about'
   get '/bank_transfer' => 'static_pages#bank_transfer'
   get '/payment_type' => 'static_pages#payment'
-  get 'payment_confirmation' => 'static_pages#payment_confirmation'
+  get '/profile' => 'static_pages#profile'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
