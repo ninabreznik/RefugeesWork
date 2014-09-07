@@ -20,27 +20,50 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-# #############################
+# ############################################################################################
 # Page 1 - Leads/Index
-# #############################
-  lead:
+# ############################################################################################
+# LEAD BODY
+  lead-index:
+    location: "Region" #<%= I18n.t'lead-index.location'
+    zip: "Zip"
+    time: "When?"
+    description: "Description"
+    name: "Name"
+# OTHER
+  link-index:
+    address-book: "Address book"
+  notification-index:
+    no-leads-available: "Currently there is no available leads."
+# ############################################################################################
+# Page 2 - Leads/Show
+# ############################################################################################
+# LEAD BODY
+  lead-show:
     location: "Region"
     zip: "Zip"
     time: "When?"
     description: "Description"
     name: "Name"
-  link:
+# LINKS
+  links-show: 
     address-book: "Address book"
-  notification:
-    no-leads-available: "Currently there is no available leads."
-# #############################
-# Page 2 - Leads/Show
-# #############################
+    buy: "Buy"
+  # SHARED/PAYMENT_BUTTONS
+    payment-buttons:
+      paypal-checkout: "Checkout"
+      wallet: "Wallet"
+      bank-transfer: "Bank transfer"
 
-# #############################
+
+
+
+
+
+# ############################################################################################
 # Page 3 - 
-# #############################
+# ############################################################################################
 
-# #############################
+# ############################################################################################
 # Page 4 - 
-# #############################
+# ############################################################################################

@@ -18,6 +18,9 @@ params = {
       counter:      2
     }
   ],
+  translations: {
+    en: YAML.load_file('config/locales/en.yml')['en']
+  },
   collection:       { # API: "/v0.0.1/api/campaigns/collection"
     title:          ['Dummy1', 'Dummy2'],
     description:    ['This is dummy 1', 'This is dummy 2'],

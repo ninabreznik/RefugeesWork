@@ -12,38 +12,39 @@
           <h3>
             <%= link_to "#{lead.business_type}", lead_path(lead) %> 
           </h3>
-          <%= I18n.t'lead.location' %>    :<%= lead.location %>       <br>
-          <%= I18n.t'lead.zip' %>         :<%= lead.zip %>            <br>
-          <%= I18n.t'lead.time' %>        : <%= lead.time %>          <br>
-          <%= I18n.t'lead.description' %> : <%= lead.description %>   <br>
-          <%= I18n.t'lead.name' %>        : <%= lead.name %>          <br>
+          <%= I18n.t'lead-index.location' %>    :<%= lead.location %>       <br>
+          <%= I18n.t'lead-index.zip' %>         :<%= lead.zip %>            <br>
+          <%= I18n.t'lead-index.time' %>        : <%= lead.time %>          <br>
+          <%= I18n.t'lead-index.description' %> : <%= lead.description %>   <br>
+          <%= I18n.t'lead-index.name' %>        : <%= lead.name %>          <br>
           <button>
-            <%= link_to "#{I18n.t'link.address-book'}", orders_path %>              
+            <%= link_to "#{I18n.t'link-index.address-book'}", orders_path %>              
           </button>
         <% end %>
       <% else %>
         <h3>
-          <%= link_to "#{lead.business_type}", lead_path(lead) %> 
-        </h3>
-          <%= I18n.t'lead.location' %>    :<%= lead.location %>       <br>
-          <%= I18n.t'lead.zip' %>         :<%= lead.zip %>            <br>
-          <%= I18n.t'lead.time' %>        : <%= lead.time %>          <br>
-          <%= I18n.t'lead.description' %> : <%= lead.description %>   <br>
-          <%= I18n.t'lead.name' %>        : <%= lead.name %>          <br>
+          <h3>
+            <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+          </h3>
+          <%= I18n.t'lead-index.location' %>    :<%= lead.location %>       <br>
+          <%= I18n.t'lead-index.zip' %>         :<%= lead.zip %>            <br>
+          <%= I18n.t'lead-index.time' %>        : <%= lead.time %>          <br>
+          <%= I18n.t'lead-index.description' %> : <%= lead.description %>   <br>
+          <%= I18n.t'lead-index.name' %>        : <%= lead.name %>          <br>
       <% end %> 
     <% else%>
-      <h3>
-        <%= link_to "#{lead.business_type}", lead_path(lead) %> 
-      </h3>
-        <%= I18n.t'lead.location' %>    :<%= lead.location %>       <br>
-        <%= I18n.t'lead.zip' %>         :<%= lead.zip %>            <br>
-        <%= I18n.t'lead.time' %>        : <%= lead.time %>          <br>
-        <%= I18n.t'lead.description' %> : <%= lead.description %>   <br>
-        <%= I18n.t'lead.name' %>        : <%= lead.name %>          <br>
+          <h3>
+            <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+          </h3>
+          <%= I18n.t'lead-index.location' %>    :<%= lead.location %>       <br>
+          <%= I18n.t'lead-index.zip' %>         :<%= lead.zip %>            <br>
+          <%= I18n.t'lead-index.time' %>        : <%= lead.time %>          <br>
+          <%= I18n.t'lead-index.description' %> : <%= lead.description %>   <br>
+          <%= I18n.t'lead-index.name' %>        : <%= lead.name %>          <br>
     <% end %>
   <% end %>
 <% else %>
-  <%= I18n.t'notification.no-leads-available' %>
+  <%= I18n.t'notification-index.no-leads-available' %>
 <% end %>
 </body>
 </html>

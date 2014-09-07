@@ -3,13 +3,12 @@
   #############################################################################
   PayPal/Merchant Services/BuyNowButtons
   #############################################################################
---> <button> <%= link_to "Checkout", @order.paypal_url(order_path(@order), paypal_notifications_url) %> </button> 
+--> <button> <%= link_to "#{I18n.t'links-show.payment-buttons.paypal-checkout'}", @order.paypal_url(order_path(@order), paypal_notifications_url) %> </button> 
   <!--       
   #############################################################################
   BankPayment
   #############################################################################
--->
-       <button><a href="/bank_transfer">Bank transfer</a></button> 
+--> <button> <%= link_to "#{I18n.t'links-show.payment-buttons.bank-transfer'}", bank_transfer_path </button> 
    <!--       
   #############################################################################
   Wallet
@@ -17,7 +16,7 @@
 -->    
   <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
     <button><%= link_to(
-        'Wallet',
+        "#{I18n.t'links-show.payment-buttons.wallet'}",
         {
           :controller => 'orders', 
           :action => 'edit', 
