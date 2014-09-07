@@ -1,6 +1,6 @@
 <% if @lead.present? %> 
   <h3><%= @lead.business_type %></h3>
-  Location: <%= @lead.location %> <br>
+  <h4><%= @lead.location %> </h4>
   ZIP: <%= @lead.zip %> <br>
   Time: <%= @lead.time %> <br>
   Description: <%= @lead.description %><br>
@@ -10,23 +10,7 @@
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
           <button>Find me in <%= link_to "My customers", orders_path %></button>
         <% else %>
-          <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
-            <%= link_to(
-                'Buy now',
-                {
-                  :controller => 'orders', 
-                  :action => 'edit', 
-                  :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
-                  },
-                :html =>
-                {
-                  :method => :patch, 
-                  :remote => true
-                }
-            ) %> 
-          <% else %>
             <%= render 'shared/payment_confirmation_link' %>
-          <% end %>
         <% end %>
       <% else %>
         <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>

@@ -3,16 +3,49 @@
   <title></title>
 </head>
 <body>
+<% if user_signed_in? && @orders.present? %>
+    <h2>RESERVED <3:</h2>
+      <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
+        <h3><%= order.selected.business_type %></h3>
+        <h4><%= order.selected.location %> </h4><br>
+        ZIP: <%= order.selected.zip %> <br>
+        Description: <%= order.selected.description %> <br>
+        Time: <%= order.selected.time %> <br>
+        Name: <%= order.selected.name %><br>
+        <strong>Customer contact information:</strong><br>
+        (available only if you buy this lead) <br>
+        <button><%= link_to(
+            'Buy now',
+            {
+              :controller => 'orders', 
+              :action => 'show', 
+              :id => order.id
+              },
+            :html =>
+            {
+              :method => :get, 
+              :remote => true
+            }
+           ) %> </button>
+        <%= form_for(current_user.orders.find_by_selected_id(order.selected),
+             html: { method: :delete }) do |c| %>
+        <%= c.submit "Remove from reserved" %> <br>
+        <% end %> <br>
+      <% end %> 
+<% else %>
+  <h2>MY WISHLIST:</h2>
+<% end %>
   <!-- 
 #############################################################################
 # BOUGHT LEADS 
 #############################################################################
 -->
+::::::::::::::::::::::::::::::::::::::::::::::: <br>
 <% if user_signed_in? && @orders.present? %>
-    <h2>MY CUSTOMERS:</h2>
+    <h2>ADDRESS BOOK:</h2>
       <% @orders.where(selector_id: current_user.id, paid: true).each do |order| %>
-        <h3><%= link_to "##{order.selected.id}:#{order.selected.business_type}", lead_path(order.selected) %></h3>
-        Location: <%= order.selected.location %> <br>
+        <h3><%= order.selected.business_type %></h3>
+        <h4><%= order.selected.location %> </h4><br>
         Time: <%= order.selected.time %> <br>
         Description: <%= order.selected.description %> <br>
         ZIP: <%= order.selected.zip %> <br>
@@ -24,39 +57,17 @@
         <%= form_for (order) do |l| %>
           <%= text_area(:order, :notes, :size => 20, :value => "#{order.notes}") %>
           <%= l.submit "Save" %>
-        <% end %>
+        <% end %> <br>
       <% end %> 
 <% else %>
   <h2>MY CUSTOMERS:</h2>
-<% end %>
-
-
-<% if user_signed_in? && @orders.present? %>
-    <h2>LIKED <3:</h2>
-      <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
-        <h3><%= link_to "##{order.selected.id}:#{order.selected.business_type}", lead_path(order.selected) %></h3>
-        Location: <%= order.selected.location %> <br>
-        Time: <%= order.selected.time %> <br>
-        Description: <%= order.selected.description %> <br>
-        ZIP: <%= order.selected.zip %> <br>
-        <strong>Customer contact information:</strong><br>
-        (available only if you buy this lead) <br>
-        Name:  <br>
-        Phone:  <br>
-        E-mail:  <br>  
-        <button> <%= link_to "Buy now", lead_path(order.selected) %> </button> 
-        <%= form_for(current_user.orders.find_by_selected_id(order.selected),
-             html: { method: :delete }) do |c| %>
-        <%= c.submit "Unlike" %> <br>
-        <% end %>
-      <% end %> 
-<% else %>
-  <h2>MY WISHLIST:</h2>
- You have to <%= link_to "Sign up", 
+    You have to <%= link_to "Sign up", 
     new_user_registration_path %> or
     <%= link_to "Login", 
     new_user_session_path %> to see your customers. <br>
 <% end %>
+
+
 
 </body>
 </html>
