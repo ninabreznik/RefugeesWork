@@ -3,6 +3,10 @@
 # SELECT DATA for PRESENTATION (=ARGUMENTS provided to this ERB File )
 ###############################################################################
 params = {
+  # campaigns:        Campaign.all,
+  # leads:            Lead.all,
+  # users:            User.all,
+  # relationships:    Relationship.all,
   data:             [ # API: "/v0.0.1/api/campaigns"
     { # API: "/v0.0.1/api/campaigns/:integer"
       title:        'Dummy1',
@@ -37,12 +41,12 @@ params = {
 ###############################################################################
 V8::Context.new do |v8|
 v8.load("app/assets/javascripts/APP.bundle.js")
-if v8.eval('APP.VALIDATE()') # but pass in 'params'
+if true #v8.eval('APP.VALIDATE()') # but pass in 'params' and VALIDATE
 #############################################################################%>
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     COMPONENT STYLING - (In Stylus)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<link rel='stylesheet' type='text/css' href='./assets/APP.css'>
+<link rel='stylesheet' type='text/css' href='./assets/APP.bundle.css'>
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     SERVER SIDE - RENDER WEB COMPONENTS - (for SEO & google crawler)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
@@ -72,14 +76,15 @@ if v8.eval('APP.VALIDATE()') # but pass in 'params'
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <script type="text/javascript" src='/assets/APP.bundle.js'></script>
 <script>
-  var params = <%=is_rendered%> ? false
+  var params = <%=is_rendered%> ? false // switch to not re-init client-side
     : JSON.parse('<%=escape_javascript(params.to_json.html_safe)%>');
-  window.onload = function () { APP.INIT(params).START(); };
+  /////////////////////////////////////////////////////////////////////////////
+  try { APP.VALIDATE(params);
+    window.onload = function INITIALIZE () { APP.INIT(params).START(); };
+  } catch (error) { console.error(error); } finally {
+    console.log(' === '+APP.NAME+' (Version '+APP.VERSION+') === ');
+  }
 </script>
-<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-        <%else%><h1>Received invalid DATA from backend</h1><%end end%>
-<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-
 
 
 
@@ -87,9 +92,18 @@ if v8.eval('APP.VALIDATE()') # but pass in 'params'
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   TEST TEMPLATING
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<a id="LAYOUT" href="#LAYOUT"> Single Page Layout </a><br>
-<hr><%= params %><br><hr><br>
-  <h1> Plates Template SPIKE </h1>
-  <div id="content"></div><hr>
-  <div id="RESULT"></div><hr>
-<div id="DEVELOP_MODE" style="position: absolute; left: 5%; width: 90%"></div>
+<%= params %><br>
+<a id="LAYOUT" href="#LAYOUT"> Single Page Layout </a><hr>
+<div id="DEVELOP_MODE"></div>
+<hr>
+<h1> Plates Template SPIKE </h1>
+<div id="content"></div><hr>
+<div id="RESULT"></div><hr>
+
+
+<script type='text/javascript'>//<![CDATA[
+;document.write("<script defer src='//HOST:31337/socket.io/socket.io.js'><\/script><script defer src='//HOST:31338/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
+//]]></script>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+        <%else%><h1>Received invalid DATA from backend</h1><%end end%>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->

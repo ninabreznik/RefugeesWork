@@ -79,8 +79,8 @@ There is more jobs in the source code marked with `// @TODO: <job description>` 
   * http://www.wolfe.id.au/2014/02/01/getting-a-new-node-project-started-with-npm/ 
   * http://quickleft.com/blog/creating-and-publishing-a-node-js-module
   * http://www.devthought.com/2012/02/17/npm-tricks/
+* __@TODO:__ jobs like on: https://github.com/topcoat/resin
 
-__☠☠☠ section is under construction ☠☠☠__
 
 
 
