@@ -1,11 +1,42 @@
       <h3>Chose type of payment: </h3> 
-<!--       
+  <!--       
   #############################################################################
+  PayPal/Merchant Services/BuyNowButtons
+  #############################################################################
+--> <button> <%= link_to "Checkout", @order.paypal_url(order_path(@order), paypal_notifications_url) %> </button> 
+  <!--       
+  #############################################################################
+  BankPayment
+  #############################################################################
+-->
+       <button><a href="/bank_transfer">Bank transfer</a></button> 
+   <!--       
+  #############################################################################
+  Wallet
+  #############################################################################
+-->    
+  <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
+    <button><%= link_to(
+        'Wallet',
+        {
+          :controller => 'orders', 
+          :action => 'edit', 
+          :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
+          },
+        :html =>
+        {
+          :method => :patch, 
+          :remote => true
+        }
+    ) %> </button>
+  <% end %> <br>
+
+<!--################################################################################
   2Checkout/Type: Intangible product
   https://www.2checkout.com/documentation/checkout/inline-checkout#int_params
-  #############################################################################
---> 
-        <form action='https://www.2checkout.com/checkout/purchase' method='post'>
+  ############################################################################# -->
+
+        <br> <form action='https://www.2checkout.com/checkout/purchase' method='post'>
           <input type='hidden' name='sid' value='202347509' />
           <input type='hidden' name='mode' value='2CO' />
           <input type='hidden' name='li_0_type' value='Blabla' />
@@ -22,20 +53,3 @@
           <input type='hidden' name='phone' value='Telefonska številka' />
           <button><input name='submit' type='submit' value='Credit Card' /></button>
         </form> <br>
-  <!--       
-  #############################################################################
-  PayPal/Merchant Services/BuyNowButtons
-  #############################################################################
---> <button> <%= link_to "Checkout", @order.paypal_url(order_path(@order), paypal_notifications_url) %> </button> <br>
-  <!--       
-  #############################################################################
-  BankPayment
-  #############################################################################
--->
-       <br> <button><a href="/bank_transfer">Bank transfer</a></button>
-   <!--       
-  #############################################################################
-  Wallet
-  #############################################################################
--->    
-  
