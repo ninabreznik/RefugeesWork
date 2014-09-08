@@ -3,41 +3,29 @@
 # SELECT DATA for PRESENTATION (=ARGUMENTS provided to this ERB File )
 ###############################################################################
 params = {
-  # campaigns:        Campaign.all,
-  # leads:            Lead.all,
-  # users:            User.all,
-  # relationships:    Relationship.all,
-  data:             [ # API: "/v0.0.1/api/campaigns"
-    { # API: "/v0.0.1/api/campaigns/:integer"
-      title:        'Dummy1',
-      description:  'This is dummy 1',
-      counter:      1
-    },{
-      title:        'Dummy2',
-      description:  'This is dummy 2',
-      counter:      2
-    }
-  ],
-  translations: {
-    en: YAML.load_file('config/locales/en.yml')['en']
+  data:             {                           # API: "/v0.0.1/api/data"
+    leads:            Lead.all,                 # API: "/v0.0.1/api/data/lead"
+    users:            User.all,                 # API: "/v0.0.1/api/data/user"
+    orders:           Order.all                 # API: "/v0.0.1/api/data/order"
   },
-  collection:       { # API: "/v0.0.1/api/campaigns/collection"
-    title:          ['Dummy1', 'Dummy2'],
-    description:    ['This is dummy 1', 'This is dummy 2'],
-    counter:        [1, 2]
+  translations:     {
+    en:               YAML.load_file('config/locales/en.yml')['en']
+  },
+  collection:       { # API: "/v0.0.1/api/collection"
+    # title:          ['Dummy1', 'Dummy2'],
+    # description:    ['This is dummy 1', 'This is dummy 2'],
+    # counter:        [1, 2]
   },
   schema:           { # API: "/v0.0.1/api/campaigns/schema"
-    title:          'string',
-    description:    'string',
-    counter:        'integer'
+    # title:          'string',
+    # description:    'string',
+    # counter:        'integer'
   },
   user:             { # API: "/v0.0.1/api/user?email=xxx&password=xxx&secret=xxx"
-    id:             @current_user.try(:id),
-    name:           @current_user.try(:name),
-    email:          @current_user.try(:email),
+    identity:       current_user,
     secret:         form_authenticity_token
   },
-  containerID:      'CONTENT'
+  containerID:      'APP'
 }
 ###############################################################################
 # VALIDATE CONTRACT (Between FRONTEND DEV and BACKEND DEV)
@@ -53,9 +41,21 @@ if true #v8.eval('APP.VALIDATE()') # but pass in 'params' and VALIDATE
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     SERVER SIDE - RENDER WEB COMPONENTS - (for SEO & google crawler)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<div id='<%=params[:CONTAINER]%>'>
+
+<b>params.data.leads:</b><br><%=params[:data][:leads].to_json%><hr>
+<b>params.data.users:</b><br><%=params[:data][:users].to_json%><hr>
+<b>params.data.orders:</b><br><%=params[:data][:orders].to_json%><hr>
+<b>params.data.translations.en:</b><br><%=params[:translations][:en].to_json%><hr>
+<b>params.collection:</b><br><%=params[:collection].to_json%><hr>
+<b>params.schema:</b><br><%=params[:schema].to_json%><hr>
+<b>params.user:</b><br><%=params[:user].to_json%><hr>
+<b>params.containerID:</b><br><%=params[:containerID].to_json%><hr>
+<hr><a id="LAYOUT" href="#LAYOUT"> Single Page Layout </a>
+<div id='<%=params[:containerID]%>' class="COMPONENT">
+
+
 <%=###########################################################################
-  # SERVER SIDE - INIT
+  # CLIENT SIDE - INITIALIZE [CONFIGURE & START]
   #
   # [COMPONENT DOM INITIALIZATION & RENDERING (for SEO & google crawler)]
   # Render TEMPLATE on the Server Side
@@ -70,39 +70,27 @@ if true #v8.eval('APP.VALIDATE()') # but pass in 'params' and VALIDATE
   #
   #############################################################################
   if is_rendered = false      # set to true to render server side
-    v8.scope.APP.INIT(params)
+    v8.scope.APP.CONFIGURE(params)
   end
 ###############################################################################
 %></div>
 <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  CLIENT SIDE - [INIT] & START
+  CLIENT SIDE - INITIALIZE [CONFIGURE & START]
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <script type="text/javascript" src='/assets/APP.bundle.js'></script>
 <script>
   var params = <%=is_rendered%> ? false // switch to not re-init client-side
     : JSON.parse('<%=escape_javascript(params.to_json.html_safe)%>');
   /////////////////////////////////////////////////////////////////////////////
-  try { APP.VALIDATE(params);
-    window.onload = function INITIALIZE () { APP.INIT(params).START(); };
-  } catch (error) { console.error(error); } finally {
-    console.log(' === '+APP.NAME+' (Version '+APP.VERSION+') === ');
+  // APP = FACTORY();
+  try { APP.CONTRACT.VALIDATE(params);
+    window.onload = function INITIALIZE () {
+      APP(params.containerID).CONFIGURE(params).START();
+    };
+  } catch (error) { alert(error); console.error(error); } finally {
+    console.log(' === '+APP.CONTRACT.NAME+' (Version '+APP.CONTRACT.VERSION+') === ');
   }
 </script>
-
-
-
-
-<!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  TEST TEMPLATING
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<%= params %><br>
-<a id="LAYOUT" href="#LAYOUT"> Single Page Layout </a><hr>
-<div id="DEVELOP_MODE"></div>
-<hr>
-<h1> Plates Template SPIKE </h1>
-<div id="content"></div><hr>
-<div id="RESULT"></div><hr>
-
 
 <script type='text/javascript'>//<![CDATA[
 ;document.write("<script defer src='//HOST:31337/socket.io/socket.io.js'><\/script><script defer src='//HOST:31338/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));

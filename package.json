@@ -36,7 +36,6 @@
   "atomify": {
     "server": {
       "port": 1337,
-      "open": true,
       "url": "http://localhost:3000/",
       "lr": {
         "verbose": true,
@@ -65,7 +64,7 @@
     },
     "assets": {
       "dest": "app/assets/images",
-      "prefix": "assets/",
+      "prefix": "../assets/",
       "retainName": false
     }
   },
