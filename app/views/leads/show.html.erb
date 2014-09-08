@@ -2,28 +2,28 @@
     <h3>
       <%= @lead.business_type %> <br>
     </h3>
-    <%= I18n.t'lead-show.location' %>    :<%= @lead.location %>       <br>
-    <%= I18n.t'lead-show.zip' %>         :<%= @lead.zip %>            <br>
-    <%= I18n.t'lead-show.time' %>        : <%= @lead.time %>          <br>
-    <%= I18n.t'lead-show.description' %> : <%= @lead.description %>   <br>
-    <%= I18n.t'lead-show.name' %>        : <%= @lead.name %>          <br>
+    <%= I18n.t'leadsshow-lead.location' %>    :<%= @lead.location %>       <br>
+    <%= I18n.t'leadsshow-lead.zip' %>         :<%= @lead.zip %>            <br>
+    <%= I18n.t'leadsshow-lead.time' %>        : <%= @lead.time %>          <br>
+    <%= I18n.t'leadsshow-lead.description' %> : <%= @lead.description %>   <br>
+    <%= I18n.t'leadsshow-lead.name' %>        : <%= @lead.name %>          <br>
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
           <button> 
-            <%= link_to "#{I18n.t'links-show.address-book'}", orders_path %>
+            <%= link_to "#{I18n.t'leadsshow-links.address-book'}", orders_path %>
           </button>
         <% else %>
-            <%= render 'shared/payment_confirmation_link' %>
+            <%= render 'payment_confirmation_link' %>
         <% end %>
       <% else %>
         <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>       
-          <%= o.submit "#{I18n.t'links-show.buy'}" %>
+          <%= o.submit "#{I18n.t'leadsshow-links.buy'}" %>
         <% end %>
       <% end %> 
     <% else%>
-      <button><%= link_to "#{I18n.t'links-show.buy'}", user_registration_path %></button>      
+      <button><%= link_to "#{I18n.t'leadsshow-links.buy'}", user_registration_path %></button>      
     <% end %>
 <% else %>
   This lead isn't available.

@@ -21,49 +21,74 @@
 
 en:
 # ############################################################################################
-# Page 1 - Leads/Index
+# Page 1 - LEADS/INDEX
 # ############################################################################################
-# LEAD BODY
-  lead-index:
+
+# Lead body
+  leadsindex-lead:
     location: "Region" #<%= I18n.t'lead-index.location'
     zip: "Zip"
     time: "When?"
     description: "Description"
     name: "Name"
-# OTHER
-  link-index:
+
+# Links
+  leadsindex-links:
     address-book: "Address book"
-  notification-index:
+
+# Notification
+  leadsindex-notification:
     no-leads-available: "Currently there is no available leads."
+
+
 # ############################################################################################
-# Page 2 - Leads/Show
+# Page 2 - LEADS/SHOW
 # ############################################################################################
-# LEAD BODY
-  lead-show:
+
+# Lead body
+  leadsshow-lead:
     location: "Region"
     zip: "Zip"
     time: "When?"
     description: "Description"
     name: "Name"
-# LINKS
-  links-show: 
+
+# Links
+  leadsshow-links: 
     address-book: "Address book"
     buy: "Buy"
-  # SHARED/PAYMENT_BUTTONS
-    payment-buttons:
-      paypal-checkout: "Checkout"
-      wallet: "Wallet"
-      bank-transfer: "Bank transfer"
-
-
-
-
 
 
 # ############################################################################################
-# Page 3 - 
+# Page 3 - ORDERS/SHOW
 # ############################################################################################
 
+# Lead body
+  ordersshow-lead:
+    location: "Region" #<%= I18n.t'lead-index.location'
+    zip: "Zip"
+    time: "When?"
+    description: "Description"
+    name: "Name"
+    phone: "Phone"
+    email: "E-mail"
+    notes: "Notes"
+
+# Links
+  ordersshow-links:
+    address-book: "Address book"
+    notes-save: "Save"
+    buy: "Buy"
+
+# Payment buttons
+  ordersshow-payment-buttons:
+    paypal-checkout: "Checkout" 
+    wallet: "Wallet" 
+    bank-transfer: "Bank transfer" 
+
+# Notification
+  ordersshow-notification:
+    lead-not-available: "Currently there is no available leads."
 # ############################################################################################
 # Page 4 - 
 # ############################################################################################
