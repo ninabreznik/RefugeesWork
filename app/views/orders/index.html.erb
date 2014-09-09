@@ -4,18 +4,26 @@
 </head>
 <body>
 <% if user_signed_in? && @orders.present? %>
-    <h2>RESERVED <3:</h2>
+    <h2><%= I18n.t'ordersindex-titles.reserved' %>:</h2>
       <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
         <h3><%= order.selected.business_type %></h3>
         <h4><%= order.selected.location %> </h4><br>
-        ZIP: <%= order.selected.zip %> <br>
-        Description: <%= order.selected.description %> <br>
-        Time: <%= order.selected.time %> <br>
-        Name: <%= order.selected.name %><br>
-        <strong>Customer contact information:</strong><br>
-        (available only if you buy this lead) <br>
+        <%= I18n.t'ordersindex-lead.zip' %>           : <%= order.selected.zip %> 
+        <br>
+        <%= I18n.t'ordersindex-lead.description' %>   : <%= order.selected.description %> 
+        <br>
+        <%= I18n.t'ordersindex-lead.time' %>          : <%= order.selected.time %> 
+        <br>
+        <%= I18n.t'ordersindex-lead.name' %>          : <%= order.selected.name %>
+        <br>
+        <strong>
+        <%= I18n.t'ordersindex-notifications.customer-info' %> :
+        </strong>
+        <br>
+        (<%= I18n.t'ordersindex-notifications.customer-info-explanation' %>) 
+        <br>
         <button><%= link_to(
-            'Buy now',
+            "#{I18n.t'ordersindex-buttons.buy'}",
             {
               :controller => 'orders', 
               :action => 'show', 
@@ -29,45 +37,43 @@
            ) %> </button>
         <%= form_for(current_user.orders.find_by_selected_id(order.selected),
              html: { method: :delete }) do |c| %>
-        <%= c.submit "Remove from reserved" %> <br>
+        <%= c.submit "#{I18n.t'ordersindex-buttons.remove-from-reserved'}" %> <br>
         <% end %> <br>
       <% end %> 
 <% else %>
   <h2>MY WISHLIST:</h2>
 <% end %>
-  <!-- 
-#############################################################################
-# BOUGHT LEADS 
-#############################################################################
--->
 ::::::::::::::::::::::::::::::::::::::::::::::: <br>
 <% if user_signed_in? && @orders.present? %>
-    <h2>ADDRESS BOOK:</h2>
+    <h2><%= I18n.t'ordersindex-titles.address-book' %>:</h2>
       <% @orders.where(selector_id: current_user.id, paid: true).each do |order| %>
         <h3><%= order.selected.business_type %></h3>
         <h4><%= order.selected.location %> </h4><br>
-        Time: <%= order.selected.time %> <br>
-        Description: <%= order.selected.description %> <br>
-        ZIP: <%= order.selected.zip %> <br>
-        <strong>Customer contact information:</strong><br>
-        Name: <%= order.selected.name %> <br>
-        Phone: <%= order.selected.phone %> <br>
-        E-mail: <%= order.selected.email %> <br>      
+        <%= I18n.t'ordersindex-lead.zip' %>           : <%= order.selected.zip %> 
+        <br>
+        <%= I18n.t'ordersindex-lead.description' %>   : <%= order.selected.description %> 
+        <br>
+        <%= I18n.t'ordersindex-lead.time' %>          : <%= order.selected.time %> 
+        <br>
+        <%= I18n.t'ordersindex-lead.name' %>          : <%= order.selected.name %>
+        <br>
+        <strong>
+        <%= I18n.t'ordersindex-notifications.customer-info' %>:
+        </strong><br>
+        <%= I18n.t'ordersindex-lead.phone' %>         : <%= order.selected.phone %> <br>
+        <%= I18n.t'ordersindex-lead.email' %>         : <%= order.selected.email %> <br>      
         <br>
         <%= form_for (order) do |l| %>
           <%= text_area(:order, :notes, :size => 20, :value => "#{order.notes}") %>
-          <%= l.submit "Save" %>
+          <%= l.submit "#{I18n.t'ordersindex-buttons.save'}" %>
         <% end %> <br>
       <% end %> 
 <% else %>
   <h2>MY CUSTOMERS:</h2>
-    You have to <%= link_to "Sign up", 
+    You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}", 
     new_user_registration_path %> or
-    <%= link_to "Login", 
-    new_user_session_path %> to see your customers. <br>
+    <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
+    new_user_session_path %> <%= I18n.t'ordersindex-notifications.to-see-address-book' %> . <br>
 <% end %>
-
-
-
 </body>
 </html>

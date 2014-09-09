@@ -1,25 +1,31 @@
 <h3>Chose payment type: </h3> 
 
 <!--       
-#############################################################################
+########################################
 PayPal/Merchant Services/BuyNowButtons
-#############################################################################
+########################################
 --> 
-<button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", @order.paypal_url(order_path(@order), paypal_notifications_url) %> </button> 
+<button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", 
+              @order.paypal_url
+              (order_path(@order), paypal_notifications_url) 
+          %> 
+</button> 
 
 
 <!--       
-#############################################################################
+########################################
 BankPayment
-#############################################################################
+########################################
 --> 
-<button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.bank-transfer'}", bank_transfer_path %> </button> 
+<button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.bank-transfer'}", 
+              about_path %> 
+</button> 
 
 
 <!--       
-#############################################################################
+########################################
 Wallet
-#############################################################################
+########################################
 -->
 <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
   <button><%= link_to(
@@ -38,10 +44,11 @@ Wallet
 <% end %>
 
 
-<!--################################################################################
+<!--
+########################################
 2Checkout/Type: Intangible product
 https://www.2checkout.com/documentation/checkout/inline-checkout#int_params
-############################################################################# 
+######################################## 
 -->
 
   <br> <form action='https://www.2checkout.com/checkout/purchase' method='post'>

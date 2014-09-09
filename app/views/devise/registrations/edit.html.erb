@@ -1,0 +1,29 @@
+<h2><%= I18n.t'users-edit.edit-title' %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.email'}" %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.password'}" %> <i>(<%= I18n.t'users-edit.password-tip' %>)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.password-confirmation'}" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.current-password'}" %> <i>(<%= I18n.t'users-edit.current-password-tip' %>)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %></div>
+
+  <div><%= f.submit "#{I18n.t'users-edit.update-button'}" %></div>
+<% end %>
+
+<h3><%= I18n.t'users-edit.cancel-account' %></h3>
+
+<p><%= I18n.t'users-edit.unhappy' %> <%= button_to "#{I18n.t'users-edit.cancel-account-button'}", registration_path(resource_name), data: { confirm: "#{I18n.t'users-edit.sure'}" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>

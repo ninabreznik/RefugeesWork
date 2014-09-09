@@ -1,32 +1,61 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
+
 # ############################################################################################
-# Page 1 - LEADS/INDEX
+# Page 0 - USERS (devise)
+# ############################################################################################
+
+#Signup
+  users-signup: 
+    signup: "Sign up"
+
+#Login
+  users-login:
+    login: "Login"
+    remember-me: "Remember me"
+
+#Edit
+  users-edit: #   "#{I18n.t'users-login.remember-me'}"
+    
+    edit-fields:
+      email: "Email"
+      password: "Password"
+      password-confirmation: "Password confirmation"
+      current.password: "Current password"
+  
+    edit-title: "Edit profile"
+    update-button: "Update"
+    password-tip: "leave blank if you don't want to change it"
+    current-password-tip: "we need your current password to confirm your changes"
+    waiting-confirmation: "Currently waiting confirmation"
+    cancel-account: "Cancel my account"
+    cancel-account-button: "Cancel my account"
+    unhappy: "Unhappy?"
+    sure: "Are you sure?"
+    back: "Back"
+
+#<%= I18n.t'users-links.login' %> 
+#"#{I18n.t'users-links.login'}"
+#Links
+  users-links:
+    login: "Log in"
+    signup: "Sign up"
+    forgot-password: "Forgot your password?"
+    confirmation-instructions: "Didn't receive confirmation instructions?"
+    unlock-instructions: "Didn't receive unlock instructions?"
+    sign-in-with: "Sign in with"
+
+
+
+
+
+
+# ############################################################################################
+# Page 1 - LEADS/INDEX (root page)
 # ############################################################################################
 
 # Lead body
   leadsindex-lead:
-    location: "Region" #<%= I18n.t'lead-index.location'
+    location: "Region" 
     zip: "Zip"
     time: "When?"
     description: "Description"
@@ -42,7 +71,7 @@ en:
 
 
 # ############################################################################################
-# Page 2 - LEADS/SHOW
+# Page 2 - LEADS/SHOW 
 # ############################################################################################
 
 # Lead body
@@ -65,7 +94,7 @@ en:
 
 # Lead body
   ordersshow-lead:
-    location: "Region" #<%= I18n.t'lead-index.location'
+    location: "Region" 
     zip: "Zip"
     time: "When?"
     description: "Description"
@@ -89,6 +118,62 @@ en:
 # Notification
   ordersshow-notification:
     lead-not-available: "Currently there is no available leads."
+    successfully-paid-order: "Your payment was succesfully processed."
+
+
 # ############################################################################################
-# Page 4 - 
+# Page 4 - STATIC_PAGES/PROFILE
 # ############################################################################################
+
+# Links
+  staticpagesprofile-links:
+    edit-profile: "Edit profile"
+    logout: "Logout"
+
+# Notification
+  staticpagesprofile-notification:
+    wallet: "My wallet status"
+
+# ############################################################################################
+# Page 5 - ORDERS/INDEX (Address book)
+# ############################################################################################
+
+# Titles
+  ordersindex-titles:
+    reserved: "Reserved"
+    address-book: "Address book"
+
+# Lead body
+  ordersindex-lead:
+    location: "Region"
+    zip: "Zip"
+    time: "When?"
+    description: "Description"
+    name: "Name"
+    phone: "Phone"
+    email: "E-mail"
+    notes: "Notes"
+
+# Notifications
+  ordersindex-notifications:
+    customer-info: "Customer contact information"
+    customer-info-explanation: "available only if you buy this lead"
+    to-see-address-book: "to see customers in your Address book"
+
+# Buttons
+  ordersindex-buttons: 
+    buy: "Buy"
+    remove-from-reserved: "Remove from reserved"
+    save: "Save"
+    signup: "Sign up"
+    login: "Login"
+
+
+# ############################################################################################
+# Page 6 - STATIC_PAGES/ABOUT (info)
+# ############################################################################################
+
+#
+
+
+

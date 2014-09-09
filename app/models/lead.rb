@@ -26,7 +26,7 @@ class Lead < ActiveRecord::Base
     elsif self.zip > 7999 && self.zip < 8999
       self.location = "Novo mesto"
     elsif self.zip > 8999 && self.zip < 10000
-      self.location = "Murska Sobota"                   
+      self.location = "Murska Sobota"                 
     end 
   end
 

@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
     <% if current_user.wallet > 0 %>
-        <strong>My wallet: <%= current_user.wallet %> € </strong> <br>
+        <strong><%= I18n.t'staticpagesprofile-notification.wallet' %>: <%= current_user.wallet %> € </strong> <br>
     <% end %>
     </strong>
-    <br><%= link_to 'Edit profile', 
-    edit_user_registration_path %> |
-    <%= link_to "Logout", 
-    destroy_user_session_path, 
-    method: :delete %>
-  <% else %>
+    <br>
+    <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %> |
+    <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :delete %>
+<% else %>
 <% end %>
+
+

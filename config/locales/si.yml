@@ -1,17 +1,179 @@
 si:
+
 # ############################################################################################
-# Page 1 - Leads/Index
+# Page 0 - USERS (devise)
 # ############################################################################################
-  lead:
-    location: "Regija"
+
+#Signup
+  users-signup: 
+    signup: "Registriraj se"
+
+#Login
+  users-login:
+    login: "Prijava"
+    remember-me: "Ostanite prijavljeni"
+
+#Edit
+  users-edit: #   "#{I18n.t'users-login.remember-me'}"
+    
+    edit-fields:
+      email: "-naslov"
+      password: "Geslo"
+      password-confirmation: "Potrditev gesla"
+      current.password: "Trenutno geslo"
+  
+    edit-title: "Posodobi profil"
+    update-button: "Posodobi"
+    password-tip: "pustite prazno, če ne želite spreminjati"
+    current-password-tip: "potrebujemo vaše trenutno geslo, da potrdili spremembe"
+    waiting-confirmation: "Currently waiting confirmation"
+    cancel-account: "Izbriši moj račun"
+    cancel-account-button: "Izbriši moj račun"
+    unhappy: "Niste zadovoljni?"
+    sure: "Ste prepričani?"
+    back: "Nazaj"
+
+#<%= I18n.t'users-links.login' %> 
+#"#{I18n.t'users-links.login'}"
+#Links
+  users-links:
+    login: "Prijava"
+    signup: "Registriraj se"
+    forgot-password: "Ste pozabili geslo?"
+    confirmation-instructions: "Niste prejeli potrditvenih navodil?"
+    unlock-instructions: "Niste prejeli navodil za odklep"
+    sign-in-with: "Prijava z"
+
+
+
+
+
+
+# ############################################################################################
+# Page 1 - LEADS/INDEX (root page)
+# ############################################################################################
+
+# Lead body
+  leadsindex-lead:
+    location: "Regija" 
     zip: "Pošta"
     time: "Kdaj?"
     description: "Opis"
     name: "Ime"
-  link:
+
+# Links
+  leadsindex-links:
     address-book: "Imenik strank"
-  notification:
+
+# Notification
+  leadsindex-notification:
     no-leads-available: "Trenutno ni na voljo nobenega kontakta."
+
+
 # ############################################################################################
-# Page 2 - Leads/Show
+# Page 2 - LEADS/SHOW 
 # ############################################################################################
+
+# Lead body
+  leadsshow-lead:
+    location: "Regija" 
+    zip: "Pošta"
+    time: "Kdaj?"
+    description: "Opis"
+    name: "Ime"
+
+# Links
+  leadsshow-links: 
+    address-book: "Imenik strank"
+    buy: "Nakup"
+
+
+# ############################################################################################
+# Page 3 - ORDERS/SHOW
+# ############################################################################################
+
+# Lead body
+  ordersshow-lead:
+    location: "Regija" 
+    zip: "Pošta"
+    time: "Kdaj?"
+    description: "Opis"
+    name: "Ime"
+    phone: "Telefon"
+    email: "E-naslov"
+    notes: "Beležka"
+
+# Links
+  ordersshow-links:
+    address-book: "Imenik strank"
+    notes-save: "Shrani"
+    buy: "Nakup"
+
+# Payment buttons
+  ordersshow-payment-buttons:
+    paypal-checkout: "Paypal" 
+    wallet: "Denarnica" 
+    bank-transfer: "Predračun" 
+
+# Notification
+  ordersshow-notification:
+    lead-not-available: "Trenutno ni na voljo nobenega kontakta."
+    successfully-paid-order: "Vaše plačilo je bilo uspešno izvedeno."
+
+
+# ############################################################################################
+# Page 4 - STATIC_PAGES/PROFILE
+# ############################################################################################
+
+# Links
+  staticpagesprofile-links:
+    edit-profile: "Urejanje profila"
+    logout: "Odjava"
+
+# Notification
+  staticpagesprofile-notification:
+    wallet: "Stanje v moji denarnici"
+
+# ############################################################################################
+# Page 5 - ORDERS/INDEX (Address book)
+# ############################################################################################
+
+# Titles
+  ordersindex-titles:
+    reserved: "Rezervirani kontakti"
+    address-book: "Imenik strank"
+
+# Lead body
+  ordersindex-lead:
+    location: "Regija" 
+    zip: "Pošta"
+    time: "Kdaj?"
+    description: "Opis"
+    name: "Ime"
+    phone: "Telefon"
+    email: "E-naslov"
+    notes: "Beležka"
+
+# Notifications
+  ordersindex-notifications:
+    customer-info: "Kontaktne informacije stranke"
+    customer-info-explanation: "na voljo le ob nakupu tega kontakta."
+    to-see-address-book: "za dostop do imenika strank"
+
+# Buttons
+  ordersindex-buttons: 
+    buy: "Nakup"
+    remove-from-reserved: "Odstrani iz rezerviranih"
+    save: "Shrani"
+    signup: "Registriraj se"
+    login: "Prijava"
+
+
+# ############################################################################################
+# Page 6 - STATIC_PAGES/ABOUT (info)
+# ############################################################################################
+
+#
+
+
+
