@@ -23,6 +23,7 @@
         <% end %>
           <button><%= link_to "#{I18n.t'ordersshow-links.address-book'}", orders_path %></button>
         <% else %>
+           <p><%= I18n.t'ordersshow-lead.price' %> </p>
           <%= render 'leads/payment_buttons' %>
         <% end %>
       <% else %>

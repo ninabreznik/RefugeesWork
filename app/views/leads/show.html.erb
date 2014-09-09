@@ -14,15 +14,18 @@
             <%= link_to "#{I18n.t'leadsshow-links.address-book'}", orders_path %>
           </button>
         <% else %>
+            <p><%= I18n.t'leadsshow-lead.price' %> </p>
             <%= render 'payment_confirmation_link' %>
         <% end %>
       <% else %>
+        <p><%= I18n.t'leadsshow-lead.price' %> </p>
         <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>       
           <%= o.submit "#{I18n.t'leadsshow-links.buy'}" %>
         <% end %>
       <% end %> 
     <% else%>
+      <p><%= I18n.t'leadsshow-lead.price' %> </p>
       <button><%= link_to "#{I18n.t'leadsshow-links.buy'}", user_registration_path %></button>      
     <% end %>
 <% else %>

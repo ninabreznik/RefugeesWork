@@ -16,10 +16,19 @@ PayPal/Merchant Services/BuyNowButtons
 BankPayment
 ########################################
 --> 
-<button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.bank-transfer'}", 
-              about_path %> 
-</button> 
-
+<button><%= link_to(
+            "#{I18n.t'ordersshow-payment-buttons.bank-transfer'}",
+            {
+              :controller => 'orders', 
+              :action => 'bank_transaction', 
+              :id => @order.id
+              },
+            :html =>
+            {
+              :method => :get, 
+              :remote => true
+            }
+           ) %> </button>
 
 <!--       
 ########################################

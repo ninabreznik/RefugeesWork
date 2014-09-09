@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 resources :orders
   get '/address_book' => 'orders#index'
   get '/liked' => 'orders#index'
+  get '/bank_transaction' => 'orders#bank_transaction'
 
     # match '/orders/:id',       to: 'orders#show',          via: 'get'
     # match '/orders/:id',       to: 'orders#delete',        via: 'delete'
@@ -49,7 +50,6 @@ resources :orders
   get '/contact' => 'static_pages#contact'
   get '/pricing' => 'static_pages#pricing'
   get '/about' => 'static_pages#about'
-  get '/bank_transfer' => 'static_pages#bank_transfer'
   get '/payment_type' => 'static_pages#payment'
   get '/profile' => 'static_pages#profile'
   # Example of named route that can be invoked with purchase_url(id: product.id)

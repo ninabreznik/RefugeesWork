@@ -55,6 +55,11 @@ class OrdersController < ApplicationController
     end
   end
 
+  def bank_transaction
+    @order = Order.find(params[:id])
+    @lead = @order.selected
+  end
+
   #def paypal_payment_notification   #IPN - instant payment notification (by PayPal)
     # ...
     # process params from paypal!
