@@ -6,8 +6,7 @@ PayPal/Merchant Services/BuyNowButtons
 ########################################
 --> 
 <button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", 
-              @order.paypal_url
-              (order_path(@order), paypal_notifications_url) 
+              @order.paypal_url(order_path(@order), paypal_notifications_url) 
           %> 
 </button> 
 
