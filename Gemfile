@@ -1,11 +1,26 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
+gem 'pg', '0.17.1'
+gem 'turbolinks'
+gem 'rails_12factor', '0.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Uglifier as compressor for JavaScript assets
+
+
+group :assets do
+  gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
+end
+
+group :assets do
+gem 'sass-rails', '~> 4.0.3'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-script-source', '~> 1.8.0' # ADD THIS LINE, 1.5.0 doesn't compile ActiveAdmin JavaScript files
 gem 'uglifier', '>= 1.3.0'
+end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
@@ -28,7 +43,7 @@ gem 'devise'
 
 #ACTIVE ADMIN
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'sass-rails', github: 'rails/sass-rails'
+
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'formtastic'
 # Use ActiveModel has_secure_password
@@ -40,6 +55,10 @@ gem 'formtastic'
 #Dashing related stuff
 gem 'dashing-rails'
 gem 'puma'
+
+
+
+
 # gem 'nokogiri'
 # gem 'htmlentities'
 
