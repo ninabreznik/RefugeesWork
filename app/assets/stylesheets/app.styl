@@ -1,64 +1,80 @@
 @import 'jeet/index'
 
+body
+  background-color #f7f7f7
+  font-size 10px
+  color #606060
+  font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+  a  
+    text-decoration none
+    color #606060
+    font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+
+
 .columns  
-  width: 90%;
-  max-width: 1100px;
-  min-width: 800px;
-  margin: 50px auto;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 10px;
-  -webkit-column-fill: auto;
-  -moz-column-count: 4;
-  -moz-column-gap: 10px;
-  -moz-column-fill: auto;
-  column-count: 4;
-  column-gap: 15px;
-  column-fill: auto;
+  shift (-1/15)
+  width 60%
+  max-width 1100px
+  min-width 800px
+  margin 50px auto
+  -webkit-column-count 4
+  -webkit-column-gap 10px
+  -webkit-column-fill auto
+  -moz-column-count 4
+  -moz-column-gap 10px
+  -moz-column-fill: auto
+  column-count: 4
+  column-gap: 15px
+  column-fill: auto
 
 
 .lead_box
-  // column(1/5, uncycle: 4)
-  // width 20%
-  // display inline-block
   vertical-align bottom
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
+  -webkit-column-break-inside: avoid
+  -moz-column-break-inside: avoid
+  column-break-inside: avoid
   background-color white
   background-clip padding-box
   border-radius 4px
   box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
   padding 7px  
-  background-color #f7f7f7
-  background -webkit-linear-gradient(#fff, #f0f0f0)
-  background linear-gradient(#fff, #f0f0f0)
   border 1px solid #ccc
   margin-bottom 7px
+  line-break 1px
 
-    
 
 .lead_body
-  margin-bottom 10px
-  margin-top 7px
-  font-size 11px
+  font-size 10px
   padding 10px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color #606060
+  line-height 150%
 
+.lead_subtitle
+  font-weight bold
+  -webkit-font-smoothing: antialiased
+  padding-top 7px
+  
 
 .lead_title
   padding 10px
   font-weight bold
-  font-size 11px
+  -webkit-font-smoothing: antialiased
+  font-size 12px
   padding-bottom 7px
   border-bottom 1px solid #e7e7e7
   margin-bottom 7px
-  margin-top 0px
   &:hover
     background-color #e9eaed
-    padding-bottom 7px
+    padding 10px
+    font-weight bold
     -webkit-font-smoothing: antialiased
+    font-size 12px
+    padding-bottom 7px
     border-bottom 1px solid #e7e7e7
     margin-bottom 7px
-    margin-top 0px
+
 
 
 .button
@@ -71,15 +87,16 @@
   background -webkit-linear-gradient(#fff, #f0f0f0)
   background linear-gradient(#fff, #f0f0f0)
   border 1px solid #ccc
-  color #5f5f5f
   cursor pointer
   text-shadow 0 1px #fff
   white-space nowrap
-  font-size 11px
+  font-size 10px
   position relative
   padding 4px
   margin-top 14px
-  margin-bottom 10px
+  margin-bottom 4px  
+  color #888888 
+
 
 
 
