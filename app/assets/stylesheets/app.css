@@ -1,5 +1,5 @@
 body {
-  background-color: #f7f7f7;
+  background-color: #e8e8e8;
   font-size: 10px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
@@ -12,7 +12,7 @@ body a {
 .columns {
   position: relative;
   left: -6.866666666666701%;
-  width: 60%;
+  width: 70%;
   max-width: 1100px;
   min-width: 800px;
   margin: 50px auto;
@@ -35,12 +35,30 @@ body a {
   background-clip: padding-box;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  padding: 7px;
   border: 1px solid #ccc;
   margin-bottom: 7px;
   line-break: 1px;
 }
-.lead_body {
+.lead_box .lead_title {
+  background-color: #f7f7f7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.lead_box .lead_title:hover {
+  background-color: #f93;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+}
+.lead_box .lead_body {
   font-size: 10px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
@@ -48,29 +66,10 @@ body a {
   color: #606060;
   line-height: 150%;
 }
-.lead_subtitle {
+.lead_box .lead_body .lead_subtitle {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   padding-top: 7px;
-}
-.lead_title {
-  padding: 10px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
-  padding-bottom: 7px;
-  border-bottom: 1px solid #e7e7e7;
-  margin-bottom: 7px;
-}
-.lead_title:hover {
-  background-color: #e9eaed;
-  padding: 10px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
-  padding-bottom: 7px;
-  border-bottom: 1px solid #e7e7e7;
-  margin-bottom: 7px;
 }
 .button {
   background-clip: padding-box;
