@@ -1,35 +1,55 @@
 <% if @lead.present? %> 
-    <h3>
-      <%= @lead.business_type %> <br>
-    </h3>
-    <%= I18n.t'leadsshow-lead.location' %>    :<%= @lead.location %>       <br>
-    <%= I18n.t'leadsshow-lead.zip' %>         :<%= @lead.zip %>            <br>
-    <%= I18n.t'leadsshow-lead.time' %>        : <%= @lead.time %>          <br>
-    <%= I18n.t'leadsshow-lead.description' %> : <%= @lead.description %>   <br>
-    <%= I18n.t'leadsshow-lead.name' %>        : <%= @lead.name %>          <br>
+    <div class="lead_show">
+      <div class="lead_show_title">
+        <%= @lead.business_type %> 
+      </div>
+      <div class="lead_show_body">
+        <div class="lead_show_subtitle">
+          <%= I18n.t'leadsshow-lead.location' %>:</div><%= @lead.location %>              
+        <div class="lead_show_subtitle">
+          <%= I18n.t'leadsshow-lead.zip' %>:</div><%= @lead.zip %>               
+        <div class="lead_show_subtitle">
+          <%= I18n.t'leadsshow-lead.time' %>:</div> <%= @lead.time %>          
+        <div class="lead_show_subtitle">
+          <%= I18n.t'leadsshow-lead.description' %>:</div><%= @lead.description %>   
+        <div class="lead_show_subtitle">
+          <%= I18n.t'leadsshow-lead.name' %>:</div><%= @lead.name %>          
+      </div>
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-          <button> 
+          <div class="lead_show_address_book"> 
             <%= link_to "#{I18n.t'leadsshow-links.address-book'}", orders_path %>
-          </button>
+          </div>
         <% else %>
-            <p><%= I18n.t'leadsshow-lead.price' %> </p>
-            <%= render 'payment_confirmation_link' %>
+            <div class="lead_show_price">
+              <%= I18n.t'leadsshow-lead.price' %>
+            </div>
+              <%= render 'payment_confirmation_link' %>
         <% end %>
       <% else %>
-        <p><%= I18n.t'leadsshow-lead.price' %> </p>
-        <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
-          <%= o.hidden_field :selected_id %>       
-          <%= o.submit "#{I18n.t'leadsshow-links.buy'}" %>
-        <% end %>
+        <div class="lead_show_price">
+          <%= I18n.t'leadsshow-lead.price' %>
+        </div>
+        <div class="lead_show_buy">
+          <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
+            <%= o.hidden_field :selected_id %>       
+            <%= o.submit "#{I18n.t'leadsshow-links.buy'}" %>
+          <% end %>
+        </div>
       <% end %> 
     <% else%>
-      <p><%= I18n.t'leadsshow-lead.price' %> </p>
-      <button><%= link_to "#{I18n.t'leadsshow-links.buy'}", user_registration_path %></button>      
+      <div class="lead_show_price">
+        <%= I18n.t'leadsshow-lead.price' %> 
+      </div>
+      <div class="lead_show_buy">
+        <%= link_to "#{I18n.t'leadsshow-links.buy'}", user_registration_path %>
+      </div>      
     <% end %>
+    </div>
 <% else %>
   This lead isn't available.
 <% end %>
+
 
 

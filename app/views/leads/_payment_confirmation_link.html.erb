@@ -1,13 +1,15 @@
-<%= link_to(
-"#{I18n.t'leadsshow-links.buy'}",
-{
-  :controller => 'orders', 
-  :action => 'show', 
-  :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
-  },
-:html =>
-{
-  :method => :get, 
-  :remote => true
-}
-) %>
+<div class="lead_show_buy">
+  <%= link_to(
+  "#{I18n.t'leadsshow-links.buy'}",
+  {
+    :controller => 'orders', 
+    :action => 'show', 
+    :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
+    },
+  :html =>
+  {
+    :method => :get, 
+    :remote => true
+  }
+  ) %>
+</div>

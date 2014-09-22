@@ -1,14 +1,14 @@
-<h3>Chose payment type: </h3> 
 
 <!--       
 ########################################
 PayPal/Merchant Services/BuyNowButtons
 ########################################
 --> 
-<button> <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", 
+<div class="order_show_buy">  
+  <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", 
               @order.paypal_url(order_path(@order), paypal_notifications_url) 
-          %> 
-</button> 
+  %> 
+</div> 
 
 
 <!--       
@@ -16,7 +16,8 @@ PayPal/Merchant Services/BuyNowButtons
 BankPayment
 ########################################
 --> 
-<button><%= link_to(
+<div class="order_show_buy"> 
+  <%= link_to(
             "#{I18n.t'ordersshow-payment-buttons.bank-transfer'}",
             {
               :controller => 'orders', 
@@ -28,7 +29,8 @@ BankPayment
               :method => :get, 
               :remote => true
             }
-           ) %> </button>
+           ) %> 
+</div>
 
 <!--       
 ########################################
@@ -36,7 +38,8 @@ Wallet
 ########################################
 -->
 <% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
-  <button><%= link_to(
+  <div class="order_show_buy"> 
+    <%= link_to(
   "#{I18n.t'ordersshow-payment-buttons.wallet'}",
   {
     :controller => 'orders', 
@@ -48,7 +51,8 @@ Wallet
     :method => :patch, 
     :remote => true
   }
-  ) %> </button>
+  ) %> 
+</div>
 <% end %>
 
 
@@ -59,7 +63,7 @@ https://www.2checkout.com/documentation/checkout/inline-checkout#int_params
 ######################################## 
 -->
 
-  <br> <form action='https://www.2checkout.com/checkout/purchase' method='post'>
+<!--   <br> <form action='https://www.2checkout.com/checkout/purchase' method='post'>
     <input type='hidden' name='sid' value='202347509' />
     <input type='hidden' name='mode' value='2CO' />
     <input type='hidden' name='li_0_type' value='Blabla' />
@@ -74,5 +78,7 @@ https://www.2checkout.com/documentation/checkout/inline-checkout#int_params
     <input type='hidden' name='country' value='Slovenia' />
     <input type='hidden' name='email' value='e-naslov@primer.si' />
     <input type='hidden' name='phone' value='Telefonska številka' />
-    <button><input name='submit' type='submit' value='Credit Card' /></button>
-  </form> <br>
+    <div class="order_show_buy"> 
+      <input name='submit' type='submit' value='Credit Card' />
+    </div>
+  </form> <br> -->

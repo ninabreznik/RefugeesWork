@@ -1,7 +1,102 @@
 @import 'jeet/index'
 
+// edit()
+
+// :::::::::::: COLORS :::::::::::::: //
+
+// ::: LEAD ::: //
+Lead-Orange = #FFB459
+Lead-Orange-light = #FFAE4D
+Lead-Subtitle = #FFEED9
+
+
+// ::: MENU ::: //
+Menu-Bottom-Color = #ABABAB
+
+// ::: BODY ::: //
+Background-Color = #EEEEEE
+
+// :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
+
+.top_menu_bar
+  shift (-1/1000)
+  background-color white
+  position fixed
+  top 0
+  z-index 999
+  width 100%
+  .logged_user
+    margin-top 4px
+    margin-bottom 4px  
+    span(1/6)
+    shift(0.086)
+    // border-radius 4px
+    // text-align center
+    // background-color #F0F0F0
+    padding 7px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 11px
+  .logo
+    shift(0.14)
+    margin-bottom 2px  
+    margin-top 2px 
+    position 235
+    width 6%
+    height 6%
+  .info
+    span(1/16)
+    shift(0.51)
+    margin-bottom 4px  
+    margin-top 4px 
+    border-radius 4px
+    text-align center
+    background-color #F0F0F0
+    padding 7px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 11px
+    border-bottom 1px solid #ccc
+    &:hover
+      margin-top 4px
+      margin-bottom 4px  
+      text-align center
+      background-color #B8B8B8
+      padding 7px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 11px
+  
+
+.bottom_menu_bar
+  shift (-1/400)
+  background-color white
+  position fixed
+  bottom 0
+  z-index 999
+  width 101%
+  .bottom_menu_button
+    span(1/6.44)
+    shift(0.086)
+    text-align center
+    background-color Menu-Bottom-Color
+    padding 10px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 12px
+    border-bottom 1px solid #e7e7e7
+    &:hover
+      text-align center
+      background-color #B8B8B8
+      padding 10px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 12px
+
+// :::::::::::: LEADS/INDEX => homepage :::::::::::: //
+
 body
-  background-color #E8E8E8  
+  background-color Background-Color  
   font-size 10px
   color #606060
   font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
@@ -10,13 +105,12 @@ body
     color #606060
     font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
 
-
 .columns  
   shift (-1/15)
   width 70%
   max-width 1100px
   min-width 800px
-  margin 50px auto
+  margin 45px auto
   -webkit-column-count 4
   -webkit-column-gap 10px
   -webkit-column-fill auto
@@ -26,7 +120,6 @@ body
   column-count: 4
   column-gap: 15px
   column-fill: auto
-
 
 .lead_box
   vertical-align bottom
@@ -40,9 +133,8 @@ body
   border 1px solid #ccc
   margin-bottom 7px
   line-break 1px
-
   .lead_title
-    background-color #f7f7f7
+    background-color Lead-Orange
     border-top-left-radius 4px
     border-top-right-radius 4px
     padding 10px
@@ -51,14 +143,14 @@ body
     font-size 12px
     border-bottom 1px solid #e7e7e7
     &:hover
-      background-color #FF9933
+      background-color Lead-Orange-light
       border-top-left-radius 4px
       border-top-right-radius 4px
       padding 10px
       font-weight bold
       -webkit-font-smoothing: antialiased
       font-size 12px
-
+      border-bottom 1px solid #e7e7e7
   .lead_body
     font-size 10px
     padding 10px
@@ -66,34 +158,202 @@ body
     -moz-osx-font-smoothing: grayscale
     color #606060
     line-height 150%
-
     .lead_subtitle
       font-weight bold
       -webkit-font-smoothing: antialiased
       padding-top 7px
-  
+  .button
+    shift(0.001)
+    border 1px solid #E8E8E8  
+    cursor pointer
+    text-shadow 0 1px #fff
+    white-space nowrap
+    font-size 10px
+    position relative
+    padding 4px
+    margin-top 14px
+    margin-bottom 4px  
+    text-align center
+    background-color #F0F0F0
+    &:hover
+      -webkit-font-smoothing: antialiased
 
+// :::::::::::: LEADS/show => individual lead :::::::::::: //
 
-.button
-
+.lead_show
+  position relative 
+  top 80px
+  left 50px
+  height 900px
+  width 872px
+  shift(0.079)
+  vertical-align bottom
+  -webkit-column-break-inside: avoid
+  -moz-column-break-inside: avoid
+  column-break-inside: avoid
+  background-color white
   background-clip padding-box
   border-radius 4px
-  border 1px solid rgba(0, 0, 0, 0.3)
   box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-  background-color #f7f7f7
-  background -webkit-linear-gradient(#fff, #f0f0f0)
-  background linear-gradient(#fff, #f0f0f0)
   border 1px solid #ccc
-  cursor pointer
-  text-shadow 0 1px #fff
-  white-space nowrap
-  font-size 10px
-  position relative
-  padding 4px
-  margin-top 14px
-  margin-bottom 4px  
-  color #888888 
+  margin-bottom 7px
+  margin-top 7px
+  line-break 1px  
+  .lead_show_title
+    background-color Lead-Orange
+    border-top-left-radius 4px
+    border-top-right-radius 4px
+    padding 20px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 16px
+    border-bottom 1px solid #e7e7e7
+  .lead_show_body
+    font-size 14px
+    padding-top 10px
+    padding-left 20px
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color #606060
+    line-height 150%
+    .lead_show_subtitle
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      padding-top 4px
+      padding-bottom 4px
+      margin-top 10px
+      background-color Lead-Subtitle
+      margin-right 20px
+  .lead_show_price
+    margin-left 392px
+    font-size 14px
+    padding 10px
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color #606060
+    line-height 150%
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    padding-top 7px
+    margin-top 50px
+  .lead_show_buy input,   
+  .lead_show_buy a 
+    margin-top 10px
+    color #606060
+    span(1/7)
+    shift(0.43)
+    position relative
+    width 100px
+    text-align center
+    background-color #FF9933
+    padding 5px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 12px
+    border 1px solid #E8E8E8  
+    border-radius 4px
+    &:hover
+      background-color #B8B8B8
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 12px
+      border-bottom 1px solid #e7e7e7
+      border-radius 4px
+    .order_show_address_book
+      background-color Background-Color
 
+
+// :::::::::::: ORDERS/show => buy lead :::::::::::: //
+
+.order_show
+  position relative 
+  top 80px
+  left 50px
+  height 900px
+  width 872px
+  shift(0.079)
+  vertical-align bottom
+  -webkit-column-break-inside: avoid
+  -moz-column-break-inside: avoid
+  column-break-inside: avoid
+  background-color white
+  background-clip padding-box
+  border-radius 4px
+  box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+  border 1px solid #ccc
+  margin-bottom 7px
+  margin-top 7px
+  line-break 1px  
+  .order_show_title
+    background-color Lead-Orange
+    border-top-left-radius 4px
+    border-top-right-radius 4px
+    padding 20px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 16px
+    border-bottom 1px solid #e7e7e7
+  .order_show_body
+    font-size 14px
+    padding-top 10px
+    padding-left 20px
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color #606060
+    line-height 150%
+    .order_show_subtitle
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      padding-top 4px
+      padding-bottom 4px
+      margin-top 10px
+      background-color Lead-Subtitle
+      margin-right 20px
+  .order_show_price
+    margin-left 392px
+    font-size 14px
+    padding 10px
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color #606060
+    line-height 150%
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    padding-top 7px
+    margin-top 50px
+  .order_show_buy input,   
+  .order_show_buy a 
+    margin-top 10px
+    color #606060
+    span(1/7)
+    shift(0.308)
+    position relative
+    width 100px
+    text-align center
+    background-color #FF9933
+    padding 5px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 12px
+    border 1px solid #E8E8E8  
+    border-radius 4px
+    &:hover
+      background-color #B8B8B8
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 12px
+      border-bottom 1px solid #e7e7e7
+      border-radius 4px
+    .order_show_address_book
+      background-color Background-Color
+
+  
+    
+
+
+  
 
 
 

@@ -2,26 +2,36 @@
 <head>
     <title>LeadShareApp</title>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" type="text/css" href="assets/app.css">
+    <link rel="stylesheet" type="text/css" href="/assets/app.css">
   </head>
 <body>
-  <% if user_signed_in? %>
-    Logged in as 
-    <strong> <%= current_user.email %> </strong>
-  <% else %>
-    <%= link_to "Sign up", 
-    new_user_registration_path %> |
-    <%= link_to "Login", 
-    new_user_session_path %>
-  <% end %>
-  <strong><%= link_to "$INFO", about_path %></strong>
-    <ul>
+  <div class="top_menu_bar">
+    <img class="logo" src="/assets/sosed.biz.png"/>
+    <% if user_signed_in? %>
+      <div class="logged_user"> 
+        <%= current_user.email %> 
+      </div>
+    <% end %>
+
+    <div class="info">
+      <%= link_to "$INFO", about_path %>
+    </div>
+  </div>
+
+  <div class="bottom_menu_bar">
+    <div class="bottom_menu_button">
       <%= link_to "$HOME", root_path %>
+    </div>
+    <div class="bottom_menu_button">
       <%= link_to "$LIKED", liked_path %>
+    </div>
+    <div class="bottom_menu_button">
       <%= link_to "$ADDRESS BOOK", address_book_path %>
+    </div>
+    <div class="bottom_menu_button">
       <%= link_to "$PROFILE", profile_path %>
-    </ul>
-  </nav>
+    </div>
+  </div>
 <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>

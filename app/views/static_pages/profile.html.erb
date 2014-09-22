@@ -1,12 +1,21 @@
 <% if user_signed_in? %>
-    <% if current_user.wallet > 0 %>
+    <div class="logged_in">
+      Logged in as 
+        <div class="logged_user"> 
+          <%= current_user.email %> 
+        </div>
         <strong><%= I18n.t'staticpagesprofile-notification.wallet' %>: <%= current_user.wallet %> € </strong> <br>
-    <% end %>
-    </strong>
-    <br>
-    <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %> |
+
     <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :delete %>
-<% else %>
-<% end %>
-
-
+    </div>
+  <% else %>
+    Signup or Login
+    <div class="sign_up">
+      <%= link_to "Sign up", 
+      new_user_registration_path %>
+    </div> |
+    <div class="login">
+      <%= link_to "Login", 
+      new_user_session_path %>
+    </div>
+  <% end %>
