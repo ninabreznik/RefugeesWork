@@ -93,7 +93,8 @@
   position: fixed;
   bottom: 0;
   z-index: 999;
-  width: 101%;
+  width: 100%;
+  border-top: 1px solid #e7e7e7;
 }
 .bottom_menu_bar .bottom_menu_button {
   *zoom: 1;
@@ -109,11 +110,11 @@
   position: relative;
   left: 8.858%;
   text-align: center;
-  background-color: #ababab;
+  background-color: #fff;
   padding: 10px;
-  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
   border-bottom: 1px solid #e7e7e7;
 }
 .bottom_menu_bar .bottom_menu_button:before,
@@ -126,14 +127,12 @@
 }
 .bottom_menu_bar .bottom_menu_button:hover {
   text-align: center;
-  background-color: #b8b8b8;
   padding: 10px;
   font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 16px;
 }
 body {
-  background-color: #eee;
+  background-image: url("./subtle_zebra_3d.png");
   font-size: 10px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
@@ -150,13 +149,13 @@ body a {
   max-width: 1100px;
   min-width: 800px;
   margin: 45px auto;
-  -webkit-column-count: 4;
+  -webkit-column-count: 3;
   -webkit-column-gap: 10px;
   -webkit-column-fill: auto;
-  -moz-column-count: 4;
+  -moz-column-count: 3;
   -moz-column-gap: 10px;
   -moz-column-fill: auto;
-  column-count: 4;
+  column-count: 3;
   column-gap: 15px;
   column-fill: auto;
 }
@@ -174,7 +173,7 @@ body a {
   line-break: 1px;
 }
 .lead_box .lead_title {
-  background-color: #ffb459;
+  background-color: #ffae4d;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 10px;
@@ -208,16 +207,16 @@ body a {
 }
 .lead_box .button {
   position: relative;
-  left: 0.103%;
+  left: 61.285%;
   border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: pointer;
-  text-shadow: 0 1px #fff;
-  white-space: nowrap;
+  width: 100px;
   font-size: 10px;
   position: relative;
   padding: 4px;
   margin-top: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 7px;
   text-align: center;
   background-color: #f0f0f0;
 }
@@ -246,7 +245,7 @@ body a {
   line-break: 1px;
 }
 .lead_show .lead_show_title {
-  background-color: #ffb459;
+  background-color: #ffae4d;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 20px;
@@ -269,8 +268,8 @@ body a {
   -webkit-font-smoothing: antialiased;
   padding-top: 4px;
   padding-bottom: 4px;
-  margin-top: 10px;
-  background-color: #ffeed9;
+  margin-top: 0px;
+  background-color: #f0f0f0;
   margin-right: 20px;
 }
 .lead_show .lead_show_price {
@@ -305,7 +304,7 @@ body a {
   position: relative;
   width: 100px;
   text-align: center;
-  background-color: #f93;
+  background-color: #ffae4d;
   padding: 5px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -360,7 +359,7 @@ body a {
   line-break: 1px;
 }
 .order_show .order_show_title {
-  background-color: #ffb459;
+  background-color: #ffae4d;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 20px;
@@ -384,7 +383,7 @@ body a {
   padding-top: 4px;
   padding-bottom: 4px;
   margin-top: 10px;
-  background-color: #ffeed9;
+  background-color: #f0f0f0;
   margin-right: 20px;
 }
 .order_show .order_show_price {
@@ -419,7 +418,7 @@ body a {
   position: relative;
   width: 100px;
   text-align: center;
-  background-color: #f93;
+  background-color: #ffae4d;
   padding: 5px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;

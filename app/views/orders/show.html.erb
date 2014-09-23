@@ -38,9 +38,6 @@
             <%= link_to "#{I18n.t'ordersshow-links.address-book'}", orders_path %>
           </div>
         <% else %>
-           <div class="order_show_price">
-            <%= I18n.t'ordersshow-lead.price' %> 
-          </div>
           <%= render 'leads/payment_buttons' %>
         <% end %>
       <% else %>

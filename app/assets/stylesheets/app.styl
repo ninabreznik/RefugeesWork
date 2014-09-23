@@ -5,16 +5,23 @@
 // :::::::::::: COLORS :::::::::::::: //
 
 // ::: LEAD ::: //
-Lead-Orange = #FFB459
+Lead-Orange = #FFAE4D
 Lead-Orange-light = #FFAE4D
-Lead-Subtitle = #FFEED9
+Lead-Subtitle = #F0F0F0
+
+// ::: ORDER ::: //
+Order-Orange = #FFAE4D  
+Order-Orange-light = #FFAE4D
+Order-Subtitle = #FFEED9
 
 
 // ::: MENU ::: //
-Menu-Bottom-Color = #ABABAB
+Menu-Bottom-Color = white  
 
 // ::: BODY ::: //
 Background-Color = #EEEEEE
+
+Buy-Button-Color = #FFAE4D 
 
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
 
@@ -69,34 +76,33 @@ Background-Color = #EEEEEE
   
 
 .bottom_menu_bar
-  shift (-1/400)
+  shift (-0.0025)
   background-color white
   position fixed
   bottom 0
   z-index 999
-  width 101%
+  width 100%
+  border-top 1px solid #e7e7e7
   .bottom_menu_button
     span(1/6.44)
     shift(0.086)
     text-align center
     background-color Menu-Bottom-Color
     padding 10px
-    font-weight bold
+    letter-spacing 1px
+    font-size 16px
     -webkit-font-smoothing: antialiased
-    font-size 12px
     border-bottom 1px solid #e7e7e7
     &:hover
       text-align center
-      background-color #B8B8B8
       padding 10px
       font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 12px
+      font-size 16px
 
 // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
 
 body
-  background-color Background-Color  
+  background-image url("./subtle_zebra_3d.png") 
   font-size 10px
   color #606060
   font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
@@ -111,13 +117,13 @@ body
   max-width 1100px
   min-width 800px
   margin 45px auto
-  -webkit-column-count 4
+  -webkit-column-count 3
   -webkit-column-gap 10px
   -webkit-column-fill auto
-  -moz-column-count 4
+  -moz-column-count 3
   -moz-column-gap 10px
   -moz-column-fill: auto
-  column-count: 4
+  column-count: 3
   column-gap: 15px
   column-fill: auto
 
@@ -163,16 +169,16 @@ body
       -webkit-font-smoothing: antialiased
       padding-top 7px
   .button
-    shift(0.001)
+    shift(0.595)
     border 1px solid #E8E8E8  
+    box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
     cursor pointer
-    text-shadow 0 1px #fff
-    white-space nowrap
+    width 100px
     font-size 10px
     position relative
     padding 4px
     margin-top 14px
-    margin-bottom 4px  
+    margin-bottom 7px  
     text-align center
     background-color #F0F0F0
     &:hover
@@ -221,7 +227,7 @@ body
       -webkit-font-smoothing: antialiased
       padding-top 4px
       padding-bottom 4px
-      margin-top 10px
+      margin-top 0px
       background-color Lead-Subtitle
       margin-right 20px
   .lead_show_price
@@ -245,7 +251,7 @@ body
     position relative
     width 100px
     text-align center
-    background-color #FF9933
+    background-color Buy-Button-Color
     padding 5px
     font-weight bold
     -webkit-font-smoothing: antialiased
@@ -286,7 +292,7 @@ body
   margin-top 7px
   line-break 1px  
   .order_show_title
-    background-color Lead-Orange
+    background-color Order-Orange
     border-top-left-radius 4px
     border-top-right-radius 4px
     padding 20px
@@ -331,7 +337,7 @@ body
     position relative
     width 100px
     text-align center
-    background-color #FF9933
+    background-color Buy-Button-Color
     padding 5px
     font-weight bold
     -webkit-font-smoothing: antialiased
