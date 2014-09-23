@@ -251,30 +251,27 @@ body a {
   padding: 20px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 40px;
   border-bottom: 1px solid #e7e7e7;
 }
 .lead_show .lead_show_body {
-  font-size: 14px;
-  padding-top: 10px;
-  padding-left: 20px;
+  font-size: 20px;
+  padding-top: 7px;
+  padding-left: 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #606060;
-  line-height: 150%;
+  line-height: 200%;
 }
 .lead_show .lead_show_body .lead_show_subtitle {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-top: 0px;
-  background-color: #f0f0f0;
-  margin-right: 20px;
+  margin-top: 20px;
+  margin-right: 15px;
 }
 .lead_show .lead_show_price {
-  margin-left: 392px;
-  font-size: 14px;
+  margin-left: 378px;
+  font-size: 20px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -308,7 +305,7 @@ body a {
   padding: 5px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 20px;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
 }
@@ -325,11 +322,10 @@ body a {
 }
 .lead_show .lead_show_buy input:hover,
 .lead_show .lead_show_buy a:hover {
-  background-color: #b8b8b8;
   padding: 5px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 20px;
   border-bottom: 1px solid #e7e7e7;
   border-radius: 4px;
 }
@@ -365,30 +361,27 @@ body a {
   padding: 20px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 40px;
   border-bottom: 1px solid #e7e7e7;
 }
 .order_show .order_show_body {
-  font-size: 14px;
-  padding-top: 10px;
-  padding-left: 20px;
+  font-size: 20px;
+  padding-top: 7px;
+  padding-left: 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #606060;
-  line-height: 150%;
+  line-height: 200%;
 }
 .order_show .order_show_body .order_show_subtitle {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-top: 10px;
-  background-color: #f0f0f0;
-  margin-right: 20px;
+  margin-top: 20px;
+  margin-right: 15px;
 }
 .order_show .order_show_price {
-  margin-left: 392px;
-  font-size: 14px;
+  margin-left: 378px;
+  font-size: 20px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
