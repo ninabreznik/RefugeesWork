@@ -133,6 +133,7 @@
 }
 body {
   background-image: url("./subtle_zebra_3d.png");
+  margin: 0px;
   font-size: 10px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
@@ -446,10 +447,10 @@ body a {
   background-color: #eee;
 }
 .offer {
-  margin-top: 60px;
+  margin-top: 50px;
   padding: 30px;
   background-color: #fff;
-  height: 900px;
+  height: 1100px;
 }
 .offer .offer_title {
   *zoom: 1;
@@ -575,4 +576,11 @@ body a {
   padding-top: 4px;
   margin-top: 10px;
   margin-right: 7px;
+}
+.offer .offer_instructions {
+  margin-top: 50px;
+  font-size: 14px;
+  position: relative;
+  left: 7.725%;
+  width: 850px;
 }

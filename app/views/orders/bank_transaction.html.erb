@@ -2,11 +2,11 @@
 
 <div class="offer">
   <div class="offer_title">
-    Offer for lead: 14<%= @lead.id %>
+    <%= I18n.t'orders-banktransaction.offer_title' %><%= @lead.id %>
   </div>
   <table class="offer_company_info">
     <tr class="offer_company_info_item" >
-      <td>User name:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_item_username' %>:</td>
       <td><%= current_user.email %></td>
     </tr>
 <!--     <tr class="offer_company_info_item">  
@@ -28,37 +28,37 @@
   </table>
 
   <div class="offer_date">
-    Date: <%= Date.today.strftime("%d/%m/%Y") %></strong><br>
+    <%= I18n.t'orders-banktransaction.offer_date' %>: <%= Date.today.strftime("%d/%m/%Y") %></strong><br>
   </div>
 
   <table class="offer_sosed_info">
     <tr class="offer_sosed_info_price">
-      <td>Price:</td>
-      <td>10 €</td>
+      <td><%= I18n.t'orders-banktransaction.offer_price' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_price_amount' %></td>
     </tr>  
     <tr class="offer_sosed_info_item"> 
-      <td>Purpose:</td>
-      <td>Lead payment</td>
+      <td><%= I18n.t'orders-banktransaction.offer_purpose' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_purpose_text' %></td>
     </tr>
     <tr class="offer_sosed_info_item">
-      <td>Account:</td>
-      <td>IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)</td>
+      <td><%= I18n.t'orders-banktransaction.offer_account' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_mojsosed_account' %></td>
     </tr> 
     <tr class="offer_sosed_info_item">
-      <td>Company:</td>
-      <td>Moj sosed d.o.o.</td>
+      <td><%= I18n.t'orders-banktransaction.offer_company' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_company_mojsosed' %></td>
     </tr> 
     <tr class="offer_sosed_info_item">
-      <td>TAX ID:</td>
-      <td>49595105</td>
+      <td><%= I18n.t'orders-banktransaction.offer_tax_id' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_tax_id_mojsosed' %></td>
     </tr> 
     <tr class="offer_sosed_info_item">
-      <td>Address:</td>
-      <td>Radehova 39</td>
+      <td><%= I18n.t'orders-banktransaction.offer_address' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_mojsosed_address' %></td>
     </tr> 
     <tr class="offer_sosed_info_item">
-      <td>City:</td>
-      <td>2230 Lenart</td>
+      <td><%= I18n.t'orders-banktransaction.offer_city' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_mojsosed_city' %></td>
     </tr> 
   </table>
 
@@ -68,17 +68,21 @@
     </div>
     <div class="offer_show_lead_body">
       <div class="offer_show_lead_subtitle">
-        <%= I18n.t'ordersshow-lead.location' %>: </div><%= @lead.location %>       
+        <%= I18n.t'orders-banktransaction.lead.location' %>: </div><%= @lead.location %>       
       <div class="offer_show_lead_subtitle">
-        <%= I18n.t'ordersshow-lead.zip' %>:</div><%= @lead.zip %>            
+        <%= I18n.t'orders-banktransaction.lead.zip' %>:</div><%= @lead.zip %>            
       <div class="offer_show_lead_subtitle">
-        <%= I18n.t'ordersshow-lead.time' %>:</div> <%= @lead.time %>
+        <%= I18n.t'orders-banktransaction.lead.time' %>:</div> <%= @lead.time %>
       <div class="offer_show_lead_subtitle">          
-        <%= I18n.t'ordersshow-lead.description' %>:</div> <%= @lead.description %>
+        <%= I18n.t'orders-banktransaction.lead.description' %>:</div> <%= @lead.description %>
       <div class="offer_show_lead_subtitle">   
-        <%= I18n.t'ordersshow-lead.name' %>:</div> <%= @lead.name %>          
+        <%= I18n.t'orders-banktransaction.lead.name' %>:</div> <%= @lead.name %>          
     </div>
   </div>
+
+  <div class="offer_instructions">
+    <%= I18n.t'orders-banktransaction.offer_instructions' %>
+  </div> 
 
 
 

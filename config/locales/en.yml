@@ -63,7 +63,7 @@ en:
 
 # Links
   leadsindex-links:
-    address-book: "Address book"
+    address-book: "Recently visited"
 
 # Notification
   leadsindex-notification:
@@ -170,7 +170,7 @@ en:
 # Buttons
   ordersindex-buttons: 
     buy: "Buy"
-    remove-from-reserved: "Remove from reserved"
+    remove-from-reserved: "Remove from last visited"
     save: "Save"
     signup: "Sign up"
     login: "Login"
@@ -224,6 +224,37 @@ en:
 
     faq-q7: "Zakaj je boljše sodelovanje z vami kot pa oglaševanje na Googla? "
     faq-a7: "Pri nas smo osredotočeni predvsem na pridobivanje povpraševanj preko Google Adwords. To pomeni, da pridobivamo stranke, ki iščejo ponudnike storitev in vam njihova povpraševanja preprosto objavljamo na naši aplikaciji, kjer lahko izberete 1, 2 ali 10 kontaktov kadarkoli želite. Če se odločite za oglaševanje preko Googla v lastni režiji, morate imeti osebo, ki bo vzpostavila sistem za oglaševanje, nato pa redno skrbela za optimizacijo oglasov, ključnih besed in vstopnih strani. Tudi če na vaš oglas klikne nekdo, ki ni potencialna stranka, morate ta klik Googlu vseeno plačati. Pri nas pa lahko kontakte zakupite takrat, ko jih potrebujete."
+
+# ############################################################################################
+# Page 7 - ORDERS/BANK_TRANSACTION (info)
+# ############################################################################################
+
+  orders-banktransaction:
+    offer_title: "Offer for lead: 14"
+    offer_item_username: "User name"
+    offer_date: "Date"
+    offer_price: "Price"
+    offer_price_amount: "10 €"
+    offer_purpose: "Payment purpose"
+    offer_purpose_text: "Lead payment"
+    offer_account: "Account number"
+    offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
+    offer_company: "Company"
+    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_tax_id: "TAX ID"
+    offer_tax_id_mojsosed: "49595105"
+    offer_address: "Address"
+    offer_mojsosed_address: "Radehova 39"
+    offer_city: "City"
+    offer_mojsosed_city: "2230 Lenart"
+    offer_instructions: "After your payment is processed, money will be added to Sosed Wallet and you will be able to buy your lead. To top up Wallet for future purchases, transfer wished amount (i.e. 100 € for 10 leads) and you will be able to buy leads simply with a click on the Wallet. Contact us if you need more information."
+    lead:
+      location: "Region" 
+      zip: "Zip"
+      time: "When?"
+      description: "Description"
+      name: "Name"
+
 
 
 

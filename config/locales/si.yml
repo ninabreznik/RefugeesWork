@@ -63,7 +63,7 @@ si:
 
 # Links
   leadsindex-links:
-    address-book: "Imenik strank"
+    address-book: "Zadnji obiskani"
 
 # Notification
   leadsindex-notification:
@@ -169,7 +169,7 @@ si:
 # Buttons
   ordersindex-buttons: 
     buy: "Nakup"
-    remove-from-reserved: "Odstrani iz rezerviranih"
+    remove-from-reserved: "Odstrani iz zadnjih obiskanih"
     save: "Shrani"
     signup: "Registriraj se"
     login: "Prijava"
@@ -222,7 +222,35 @@ si:
     faq-q7: "Zakaj je boljše sodelovanje z vami kot pa oglaševanje na Googla? "
     faq-a7: "Pri nas smo osredotočeni predvsem na pridobivanje povpraševanj preko Google Adwords. To pomeni, da pridobivamo stranke, ki iščejo ponudnike storitev in vam njihova povpraševanja preprosto objavljamo na naši aplikaciji, kjer lahko izberete 1, 2 ali 10 kontaktov kadarkoli želite. Če se odločite za oglaševanje preko Googla v lastni režiji, morate imeti osebo, ki bo vzpostavila sistem za oglaševanje, nato pa redno skrbela za optimizacijo oglasov, ključnih besed in vstopnih strani. Tudi če na vaš oglas klikne nekdo, ki ni potencialna stranka, morate ta klik Googlu vseeno plačati. Pri nas pa lahko kontakte zakupite takrat, ko jih potrebujete."
 
+# ############################################################################################
+# Page 7 - ORDERS/BANK_TRANSACTION (info)
+# ############################################################################################
 
+  orders-banktransaction:
+    offer_title: "Ponudba za kontakt: 14"
+    offer_item_username: "Uporabniško ime"
+    offer_date: "Datum"
+    offer_price: "Cena"
+    offer_price_amount: "10 €"
+    offer_purpose: "Namen plačila"
+    offer_purpose_text: "Plačilo kontakta"
+    offer_account: "Številka TRR"
+    offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
+    offer_company: "Podjetje"
+    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_tax_id: "Davčna številka"
+    offer_tax_id_mojsosed: "49595105"
+    offer_address: "Naslov"
+    offer_mojsosed_address: "Radehova 39"
+    offer_city: "Kraj"
+    offer_mojsosed_city: "2230 Lenart"
+    offer_instructions: "Po prejemu plačila bomo znesek dodali v vašo Denarnico in lahko boste kupili željen kontakt. Če želite napolniti denarnico za prihodnje nakupe, vplačajte željen znesek (npr. 100 evrov za 10 kontaktov) in kupujte kontakte preprosto s klikom na Denarnico. Za več informacij smo vam vedno na voljo."
+    lead:
+      location: "Regija" 
+      zip: "Pošta"
+      time: "Kdaj?"
+      description: "Opis"
+      name: "Ime"
 
 
 
