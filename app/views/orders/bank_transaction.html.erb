@@ -1,89 +1,86 @@
 <% if @order.present? %>
-::::::::::::::::::::::::::::::::::::::::::::::
-<div>
-  <p>
-    <h2><strong>Offer for lead: 14<%= @lead.id %> <br> </h2>
+
+<div class="offer">
+  <div class="offer_title">
+    Offer for lead: 14<%= @lead.id %>
+  </div>
+  <table class="offer_company_info">
+    <tr class="offer_company_info_item" >
+      <td>User name:</td>
+      <td><%= current_user.email %></td>
+    </tr>
+<!--     <tr class="offer_company_info_item">  
+      <td>Company name:</td>
+      <td> </td>
+    </tr>
+    <tr class="offer_company_info_item">
+      <td>Address:</td>
+      <td></td>
+    </tr>   
+    <tr class="offer_company_info_item"> 
+      <td>City:</td>
+      <td></td>
+    </tr>
+    <tr class="offer_company_info_item">
+      <td>TAX ID:</td>
+      <td></td>
+    </tr> -->
+  </table>
+
+  <div class="offer_date">
     Date: <%= Date.today.strftime("%d/%m/%Y") %></strong><br>
-  </p>
-<div>
+  </div>
+
+  <table class="offer_sosed_info">
+    <tr class="offer_sosed_info_price">
+      <td>Price:</td>
+      <td>10 €</td>
+    </tr>  
+    <tr class="offer_sosed_info_item"> 
+      <td>Purpose:</td>
+      <td>Lead payment</td>
+    </tr>
+    <tr class="offer_sosed_info_item">
+      <td>Account:</td>
+      <td>IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)</td>
+    </tr> 
+    <tr class="offer_sosed_info_item">
+      <td>Company:</td>
+      <td>Moj sosed d.o.o.</td>
+    </tr> 
+    <tr class="offer_sosed_info_item">
+      <td>TAX ID:</td>
+      <td>49595105</td>
+    </tr> 
+    <tr class="offer_sosed_info_item">
+      <td>Address:</td>
+      <td>Radehova 39</td>
+    </tr> 
+    <tr class="offer_sosed_info_item">
+      <td>City:</td>
+      <td>2230 Lenart</td>
+    </tr> 
+  </table>
+
+  <div class="offer_show_lead">
+    <div class="offer_show_lead_title">
+      <%= @lead.business_type %> 
+    </div>
+    <div class="offer_show_lead_body">
+      <div class="offer_show_lead_subtitle">
+        <%= I18n.t'ordersshow-lead.location' %>: </div><%= @lead.location %>       
+      <div class="offer_show_lead_subtitle">
+        <%= I18n.t'ordersshow-lead.zip' %>:</div><%= @lead.zip %>            
+      <div class="offer_show_lead_subtitle">
+        <%= I18n.t'ordersshow-lead.time' %>:</div> <%= @lead.time %>
+      <div class="offer_show_lead_subtitle">          
+        <%= I18n.t'ordersshow-lead.description' %>:</div> <%= @lead.description %>
+      <div class="offer_show_lead_subtitle">   
+        <%= I18n.t'ordersshow-lead.name' %>:</div> <%= @lead.name %>          
+    </div>
+  </div>
 
 
-::::::::::::::::::::::::::::::::::::::::::::::
-<div>
-<table>
-  <tr align="left">
-    <th>User name:</th>
-    <th><%= current_user.email %></th>
-  </tr>
-  <tr align="left">  
-    <th>Company name:</th>
-    <th> </th>
-  </tr>
-  <tr align="left">
-    <th>Address:</th>
-    <th></th>
-  </tr>   
-  <tr align="left"> 
-    <th>City:</th>
-    <th></th>
-  </tr>
-  <tr align="left">
-    <th>TAX ID:</th>
-    <th></th>
-  </tr>
-</table>
+
 </div>
-
-::::::::::::::::::::::::::::::::::::::::::::::
- <div>
-  <p> 
-    <h3>
-      <%= @lead.business_type %> <br>
-    </h3>
-    <%= I18n.t'ordersshow-lead.location' %>       :<%= @lead.location %>       <br>
-    <%= I18n.t'ordersshow-lead.zip' %>            :<%= @lead.zip %>            <br>
-    <%= I18n.t'ordersshow-lead.time' %>           : <%= @lead.time %>          <br>
-    <%= I18n.t'ordersshow-lead.description' %>    : <%= @lead.description %>   <br>
-    <%= I18n.t'ordersshow-lead.name' %>           : <%= @lead.name %>          <br>
-  </p>
-<div>
-  :::::::::::::::::::::::::::::::::::::::::::::: <br>
-
- <strong> Payment information:</strong>
-<div>
-  <p>
-    Quantity: 1 <br>
-    Price: 10 € <br>
-</p>
-</div>
-::::::::::::::::::::::::::::::::::::::::::::::
-
-<div>
-<table>
-  <tr align="left">
-    <th>Company:</th>
-    <th>Moj sosed d.o.o.</th>
-  </tr> 
-  <tr align="left">
-    <th>TAX ID:</th>
-    <th>49595105</th>
-  </tr> 
-  <tr align="left">
-    <th>Address:</th>
-    <th>Radehova 39</th>
-  </tr> 
-  <tr align="left">
-    <th>City:</th>
-    <th>2230 Lenart</th>
-  </tr> 
-  <tr align="left"> 
-    <th>Purpose:</th>
-    <th>Lead payment</th>
-  </tr>
-  <tr align="left">
-    <th>Account:</th>
-    <th>IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)</th>
-  </tr>
-</div>
-::::::::::::::::::::::::::::::::::::::::::::::
 <% end %>
