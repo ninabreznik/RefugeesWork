@@ -147,7 +147,7 @@ en:
 
 # Titles
   ordersindex-titles:
-    reserved: "Reserved"
+    reserved: "Last visited"
     address-book: "Address book"
 
 # Lead body
@@ -255,6 +255,12 @@ en:
       description: "Description"
       name: "Name"
 
+# ############################################################################################
+# Page 8 - STATICPAGES/NEW_LEAD_CONFIRMATION (for new leads)
+# ############################################################################################
+  new_lead_confirmation:
+    thank_you: "Thank you! Your inquiry was successfully sent."
+    text: "Providers will soon contact you with their offers."
 
 
 

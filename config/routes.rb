@@ -52,6 +52,7 @@ resources :orders
   get '/about' => 'static_pages#about'
   get '/payment_type' => 'static_pages#payment'
   get '/profile' => 'static_pages#profile'
+  get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

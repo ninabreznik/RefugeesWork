@@ -146,7 +146,7 @@ si:
 
 # Titles
   ordersindex-titles:
-    reserved: "Rezervirani kontakti"
+    reserved: "Zadnji obiskani kontakti"
     address-book: "Imenik strank"
 
 # Lead body
@@ -251,6 +251,14 @@ si:
       time: "Kdaj?"
       description: "Opis"
       name: "Ime"
+
+# ############################################################################################
+# Page 8 - STATICPAGES/NEW_LEAD_CONFIRMATION (for new leads)
+# ############################################################################################
+  new_lead_confirmation:
+    thank_you: "Thank you! Your inquiry was successfully sent."
+    text: "Providers will soon contact you with their offers."
+
 
 
 

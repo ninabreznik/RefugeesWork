@@ -17,25 +17,24 @@
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-          <div class="order_show_subtitle">
-          <%= I18n.t'ordersshow-lead.phone' %>:</div><%= @lead.phone %>  
-          <div class="order_show_subtitle">
-          <%= I18n.t'ordersshow-lead.email' %>:</div><%= @lead.email %>          
-          </div>                                                          
-    </div>
-        <div class="order_show_notes">
-          <%= I18n.t'ordersshow-lead.notes' %>                               
-          <%= form_for (@order) do |l| %>
-          <div class="order_show_notes_text_area">
-            <%= text_area(:order, :notes, :size => 20, :value => "#{@order.notes}") %>
+            <div class="order_show_subtitle">
+            <%= I18n.t'ordersshow-lead.phone' %>:</div><%= @lead.phone %>  
+            <div class="order_show_subtitle">
+            <%= I18n.t'ordersshow-lead.email' %>:</div><%= @lead.email %>          
+            </div>
           </div>
-          <div class="order_show_notes_submit">
-            <%= l.submit "#{I18n.t'ordersshow-links.notes-save'}" %>
-          </div>
-        </div>
-        <% end %>
-          <div class="order_show_address_book">
-            <%= link_to "#{I18n.t'ordersshow-links.address-book'}", orders_path %>
+          <div class="order_show_notes">
+            <div class="order_show_notes_title">
+              <%= I18n.t'ordersshow-lead.notes' %>  
+            </div>                             
+            <%= form_for (@order) do |l| %>
+              <div class="order_show_notes_text_area">
+                <%= text_area(:order, :notes, :size => 20, :value => "#{@order.notes}") %>
+              </div>
+              <div class="order_show_notes_submit">
+                <%= l.submit "#{I18n.t'ordersshow-links.notes-save'}" %>
+              </div>
+            <% end %>
           </div>
         <% else %>
           <%= render 'leads/payment_buttons' %>

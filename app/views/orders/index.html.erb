@@ -3,27 +3,36 @@
   <title></title>
 </head>
 <body>
+<div class="address_book_columns">
 <% if user_signed_in? && @orders.present? %>
-    <h2><%= I18n.t'ordersindex-titles.reserved' %>:</h2>
+    <div class="address_book_reserved_leads">
+      <%= I18n.t'ordersindex-titles.reserved' %>:
+    </div>
+      <div class="address_book_lead_box">
       <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
-        <h3><%= order.selected.business_type %></h3>
-        <h4><%= order.selected.location %> </h4><br>
-        <%= I18n.t'ordersindex-lead.zip' %>           : <%= order.selected.zip %> 
-        <br>
-        <%= I18n.t'ordersindex-lead.description' %>   : <%= order.selected.description %> 
-        <br>
-        <%= I18n.t'ordersindex-lead.time' %>          : <%= order.selected.time %> 
-        <br>
-        <%= I18n.t'ordersindex-lead.name' %>          : <%= order.selected.name %>
-        <br>
-        <strong>
-        <%= I18n.t'ordersindex-notifications.customer-info' %> :
-        </strong>
-        <br>
-        (<%= I18n.t'ordersindex-notifications.customer-info-explanation' %>) 
-        <br>
-        <button><%= link_to(
-            "#{I18n.t'ordersindex-buttons.buy'}",
+        <div class ="address_book_lead_title">
+          <%= order.selected.business_type %>
+        </div>
+        <div class="address_book_lead_body">
+          <div class="address_book_lead_subtitle">
+            <%= order.selected.location %> </div>
+          <div class="address_book_lead_subtitle">
+            <%= I18n.t'ordersindex-lead.zip' %></div>: <%= order.selected.zip %> 
+          <div class="address_book_lead_subtitle">
+            <%= I18n.t'ordersindex-lead.description' %></div>: <%= order.selected.description %>
+          <div class="address_book_lead_subtitle">
+            <%= I18n.t'ordersindex-lead.time' %></div>: <%= order.selected.time %> 
+          <div class="address_book_lead_subtitle">
+            <%= I18n.t'ordersindex-lead.name' %></div>: <%= order.selected.name %>
+        </div>
+        <div class="address_book_lead_notification">
+          <%= I18n.t'ordersindex-notifications.customer-info' %> :
+        </div>
+        <div class="address_book_lead_notification_explanation">
+          (<%= I18n.t'ordersindex-notifications.customer-info-explanation' %>) 
+        </div>
+        <div class="address_book_buy_button">
+          <%= link_to("#{I18n.t'ordersindex-buttons.buy'}",
             {
               :controller => 'orders', 
               :action => 'show', 
@@ -34,12 +43,16 @@
               :method => :get, 
               :remote => true
             }
-           ) %> </button>
-        <%= form_for(current_user.orders.find_by_selected_id(order.selected),
-             html: { method: :delete }) do |c| %>
-        <%= c.submit "#{I18n.t'ordersindex-buttons.remove-from-reserved'}" %> <br>
-        <% end %> <br>
+           ) %> </div>
+        <div class="address_book_remove_from_reserved">
+          <%= form_for(current_user.orders.find_by_selected_id(order.selected),
+               html: { method: :delete }) do |c| %>
+          <%= c.submit "#{I18n.t'ordersindex-buttons.remove-from-reserved'}" %> 
+          <% end %> 
+        </div>
       <% end %> 
+    </div>
+  </div>
 <% else %>
   <h2>MY WISHLIST:</h2>
 <% end %>
@@ -75,5 +88,6 @@
     <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
     new_user_session_path %> <%= I18n.t'ordersindex-notifications.to-see-address-book' %> . <br>
 <% end %>
+
 </body>
 </html>

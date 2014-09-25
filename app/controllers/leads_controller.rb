@@ -45,7 +45,7 @@ class LeadsController < ApplicationController
       :time           => params[:lead][:time], 
       :location       => params[:lead][:location]
     )
-    redirect_to @lead
+    redirect_to new_lead_confirmation_url
   end 
 
 

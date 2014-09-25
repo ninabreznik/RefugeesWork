@@ -101,11 +101,10 @@ Offer-Font-Color = #606060
       font-weight bold
       font-size 16px
 
-// :::::::::::: LEADS/INDEX => homepage :::::::::::: //
-
 body
   background-image url("./subtle_zebra_3d.png") 
   margin 0px
+  height 2000px
   font-size 10px
   color #606060
   font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
@@ -113,6 +112,9 @@ body
     text-decoration none
     color #606060
     font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+
+// :::::::::::: LEADS/INDEX => homepage :::::::::::: //
+
 
 .columns  
   shift (-1/15)
@@ -190,10 +192,11 @@ body
 // :::::::::::: LEADS/show => individual lead :::::::::::: //
 
 .lead_show
-  position relative 
+  position relative
+  padding-bottom 80px
   top 80px
   left 50px
-  height 900px
+  // height 900px
   width 872px
   shift(0.079)
   vertical-align bottom
@@ -225,7 +228,7 @@ body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     color #606060
-    line-height 200%
+    line-height 150%
     .lead_show_subtitle
       font-weight bold
       -webkit-font-smoothing: antialiased
@@ -249,9 +252,9 @@ body
     margin-top 50px
   .lead_show_buy input,   
   .lead_show_buy a 
-    margin-top 10px
-    color #606060
     span(1/7)
+    margin-top 0px
+    color #606060
     shift(0.43)
     position relative
     width 100px
@@ -278,10 +281,11 @@ body
 // :::::::::::: ORDERS/show => buy lead :::::::::::: //
 
 .order_show
-  position relative 
+  position relative
+  padding-bottom 80px 
   top 80px
   left 50px
-  height 900px
+  // height 1300px
   width 872px
   shift(0.079)
   vertical-align bottom
@@ -312,7 +316,7 @@ body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     color #606060
-    line-height 200%
+    line-height 150%
     .order_show_subtitle
       font-weight bold
       -webkit-font-smoothing: antialiased
@@ -336,10 +340,9 @@ body
     margin-top 50px
   .order_show_buy input,   
   .order_show_buy a 
-    margin-top 10px
     color #606060
     span(1/7)
-    shift(0.308)
+    shift(0.28)
     position relative
     width 100px
     text-align center
@@ -358,16 +361,70 @@ body
       font-size 12px
       border-bottom 1px solid #e7e7e7
       border-radius 4px
-    .order_show_address_book
-      background-color Background-Color
+.order_show_notes
+  margin-top 100px
+  font-size 20px
+  font-weight bold
+  shift(0.08)
+  .order_show_notes_title
+    shift(0.008)
+    margin-bottom 4px
+    width 100px
+  #order_notes
+    // font-size: 20px; padding: 20px; height: 90px; width: 835px; border-radius: 4px"
+    position relative
+    text-decoration none
+    color #606060
+    font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+    padding 20px
+    font-size 20px 
+    height 100px
+    width 835px
+    vertical-align bottom
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid
+    background-color white
+    background-clip padding-box
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #ccc
+    margin-bottom 7px
+    margin-top 7px
+    line-break 1px 
+  .order_show_notes_submit input
+  .order_show_notes_submit a
+    shift(0.59)
+    margin-top 10px
+    color #606060
+    width 100px
+    text-align center
+    background-color #B8B8B8
+    padding 5px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    font-size 16px
+    border 1px solid #E8E8E8  
+    border-radius 4px
+    &:hover
+      background-color Buy-Button-Color
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 16px
+      border-bottom 1px solid #e7e7e7
+      border-radius 4px
+
+
+      
 
 // :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
 
 .offer
-  margin-top 50px
-  padding 30px
+  margin-top 38px
+  padding 100px
   background-color white
-  height 1100px
+  height 2000px
   .offer_title
     center(420px)
     color Offer-Font-Color
@@ -385,7 +442,7 @@ body
   .offer_date
     color #606060
     font-size 16px
-    margin-bottom 7px
+    margin-bottom 20px
     shift(-0.2)
     text-align right
   .offer_sosed_info
@@ -411,7 +468,7 @@ body
     top 30px
     center(70%)
     shift(-0.07)
-    height 50%
+    height 30%
     width 70%
     vertical-align bottom
     -webkit-column-break-inside: avoid
@@ -452,10 +509,85 @@ body
         // background-color Lead-Subtitle
         margin-right 7px
   .offer_instructions
-    margin-top 50px
+    margin-top 70px
     font-size 14px
     shift(0.075)
     width 850px
+
+// :::::::::::: ORDERS/INDEX => Address Book :::::::::::: //
+
+
+.address_book_columns 
+  shift (-1/15)
+  width 70%
+  max-width 1100px
+  min-width 800px
+  margin 45px auto
+  -webkit-column-count 3
+  -webkit-column-gap 10px
+  -webkit-column-fill auto
+  -moz-column-count 3
+  -moz-column-gap 10px
+  -moz-column-fill: auto
+  column-count: 3
+  column-gap: 15px
+  column-fill: auto
+.address_book_lead_box
+  
+  // vertical-align bottom
+  // -webkit-column-break-inside: avoid
+  // -moz-column-break-inside: avoid
+  // column-break-inside: avoid
+  background-color white
+  background-clip padding-box
+  border-radius 4px
+  box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+  border 1px solid #ccc
+  margin-bottom 7px
+  line-break 1px
+  .address_book_lead_body
+    font-size 10px
+    padding 10px
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color #606060
+    line-height 150%
+    .address_book_lead_subtitle
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      padding-top 7px
+  .address_book_buy_button
+    shift(0.595)
+    border 1px solid #E8E8E8  
+    box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
+    cursor pointer
+    width 100px
+    font-size 10px
+    position relative
+    padding 4px
+    margin-top 14px
+    margin-bottom 7px  
+    text-align center
+    background-color #F0F0F0
+    &:hover
+      -webkit-font-smoothing: antialiased
+
+// :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: //
+
+.new_lead_confirmation
+  margin-top 200px
+  padding 20px
+  center(420px)
+  .new_lead_confirmation_thank_you
+    font-weight bold
+    font-size 20px
+    padding-top 20px
+  .new_lead_confirmation_text
+    font-size 16px
+    padding-top 40px
+  .new_lead_confirmation_signature
+    font-size 14px
+    padding-top 20px
 
 
     
