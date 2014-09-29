@@ -63,7 +63,7 @@ en:
 
 # Links
   leadsindex-links:
-    address-book: "Recently visited"
+    address-book: "Reserved"
 
 # Notification
   leadsindex-notification:
@@ -118,9 +118,11 @@ en:
 
 # Payment buttons
   ordersshow-payment-buttons:
+    choose-payment-text: "Choose type of payment"
     paypal-checkout: "Checkout" 
     wallet: "Wallet" 
-    bank-transfer: "Bank transfer" 
+    bank-transfer: "Bank transfer"
+
 
 # Notification
   ordersshow-notification:
@@ -147,7 +149,7 @@ en:
 
 # Titles
   ordersindex-titles:
-    reserved: "Last visited"
+    reserved: "Reserved"
     address-book: "Address book"
 
 # Lead body
@@ -170,7 +172,7 @@ en:
 # Buttons
   ordersindex-buttons: 
     buy: "Buy"
-    remove-from-reserved: "Remove from last visited"
+    remove-from-reserved: "Remove from reserved"
     save: "Save"
     signup: "Sign up"
     login: "Login"

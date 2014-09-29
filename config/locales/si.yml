@@ -117,6 +117,7 @@ si:
 
 # Payment buttons
   ordersshow-payment-buttons:
+    choose-payment-text: "Izberite način plačila"
     paypal-checkout: "Paypal" 
     wallet: "Denarnica" 
     bank-transfer: "Predračun" 
@@ -146,7 +147,7 @@ si:
 
 # Titles
   ordersindex-titles:
-    reserved: "Zadnji obiskani kontakti"
+    reserved: "Rezervirani"
     address-book: "Imenik strank"
 
 # Lead body
@@ -169,7 +170,7 @@ si:
 # Buttons
   ordersindex-buttons: 
     buy: "Nakup"
-    remove-from-reserved: "Odstrani iz zadnjih obiskanih"
+    remove-from-reserved: "Odstrani iz rezerviranih"
     save: "Shrani"
     signup: "Registriraj se"
     login: "Prijava"

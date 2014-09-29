@@ -3,6 +3,7 @@
     <title>LeadShareApp</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" type="text/css" href="/assets/app.css">
+    <link rel="stylesheet" href="/assets/font-awesome-4.2.0/css/font-awesome.min.css">
   </head>
 <body>
   <div class="top_menu_bar">
@@ -14,23 +15,15 @@
     <% end %>
 
     <div class="info">
-      <%= link_to "$INFO", about_path %>
+      <%= link_to '<i class="fa fa-info-circle"></i>'.html_safe, about_path %>
     </div>
   </div>
 
   <div class="bottom_menu_bar">
-    <div class="bottom_menu_button">
-      <%= link_to "::HOME::", root_path %>
-    </div>
-    <div class="bottom_menu_button">
-      <%= link_to "::LIKED::", liked_path %>
-    </div>
-    <div class="bottom_menu_button">
-      <%= link_to "::ADDRESS BOOK::", address_book_path %>
-    </div>
-    <div class="bottom_menu_button">
-      <%= link_to "::PROFILE::", profile_path %>
-    </div>
+    <%= link_to '<i class="fa fa-home"></i>'.html_safe, root_path %>
+    <%= link_to '<i class="fa fa-star"></i>'.html_safe, reserved_path %>
+    <%= link_to '<i class="fa fa-users"></i>'.html_safe, address_book_path %>
+    <%= link_to '<i class="fa fa-cog"></i>'.html_safe, profile_path %>
   </div>
 <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>

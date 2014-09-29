@@ -10,8 +10,8 @@ Rails.application.routes.draw do
  match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
 
 resources :orders
-  get '/address_book' => 'orders#index'
-  get '/liked' => 'orders#index'
+  get '/address_book' => 'orders#address_book'
+  get '/reserved' => 'orders#reserved'
   get '/bank_transaction' => 'orders#bank_transaction'
 
     # match '/orders/:id',       to: 'orders#show',          via: 'get'

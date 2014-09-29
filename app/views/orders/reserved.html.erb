@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <% if user_signed_in? && @orders.present? %>
+  <div class="address_book_reserved_leads">
+    <%= I18n.t'ordersindex-titles.reserved' %>
+  </div>
+  <div class="address_book_columns">
+    <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        <%= order.selected.business_type %>
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          <%= order.selected.location %> </div>
+        <div class="address_book_lead_subtitle">
+          <%= I18n.t'ordersindex-lead.zip' %>:</div> <%= order.selected.zip %> 
+        <div class="address_book_lead_subtitle">
+          <%= I18n.t'ordersindex-lead.description' %>:</div><%= order.selected.description %>
+        <div class="address_book_lead_subtitle">
+          <%= I18n.t'ordersindex-lead.time' %>:</div><%= order.selected.time %> 
+        <div class="address_book_lead_subtitle">
+          <%= I18n.t'ordersindex-lead.name' %>:</div><%= order.selected.name %>
+      </div>
+      <div class="address_book_lead_notification">
+        <%= I18n.t'ordersindex-notifications.customer-info' %>:
+        <div class="address_book_lead_notification_explanation">
+          (<%= I18n.t'ordersindex-notifications.customer-info-explanation' %>) 
+        </div>
+      </div>
+      <div class="address_book_buy_button">
+        <%= link_to("#{I18n.t'ordersindex-buttons.buy'}",
+          {
+            :controller => 'orders', 
+            :action => 'show', 
+            :id => order.id
+            },
+          :html =>
+          {
+            :method => :get, 
+            :remote => true
+          }
+         ) %> </div>
+      <div class="address_book_remove_from_reserved">
+        <%= form_for(current_user.orders.find_by_selected_id(order.selected),
+             html: { method: :delete }) do |c| %>
+        <%= c.submit "#{I18n.t'ordersindex-buttons.remove-from-reserved'}" %> 
+        <% end %> 
+      </div>
+    </div>
+      <% end %> 
+<% else %>
+  <div class="address_book_reserved_leads">
+    <%= I18n.t'ordersindex-titles.reserved' %>:
+  </div>
+<% end %>
+  </div>
+
+</body>
+</html>

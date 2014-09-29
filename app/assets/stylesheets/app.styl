@@ -17,6 +17,7 @@ Order-Subtitle = #FFEED9
 
 // ::: MENU ::: //
 Menu-Bottom-Color = white  
+Menu-Top-Color = white
 
 // ::: BODY ::: //
 Background-Color = #EEEEEE
@@ -29,77 +30,118 @@ Offer-Font-Color = #606060
 
 .top_menu_bar
   shift (-1/1000)
-  background-color white
+  background-color Menu-Top-Color
+  border-bottom 1px solid #ccc
   position fixed
   top 0
   z-index 999
   width 100%
+  height 33px
+  padding-bottom 7px
   .logged_user
-    margin-top 4px
-    margin-bottom 4px  
-    span(1/6)
-    shift(0.086)
-    // border-radius 4px
-    // text-align center
-    // background-color #F0F0F0
-    padding 7px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    font-size 11px
+    shift(0.019)
+    font-size 12px
+    display inline-block
   .logo
-    shift(0.14)
-    margin-bottom 2px  
-    margin-top 2px 
-    position 235
-    width 6%
-    height 6%
+    shift(0.38)
+    height 35px
+    display inline-block
   .info
-    span(1/16)
-    shift(0.51)
-    margin-bottom 4px  
-    margin-top 4px 
-    border-radius 4px
-    text-align center
-    background-color #F0F0F0
-    padding 7px
-    font-weight bold
+    shift(0.574)
+    font-size 19px
+    display inline-block
     -webkit-font-smoothing: antialiased
-    font-size 11px
-    border-bottom 1px solid #ccc
-    &:hover
-      margin-top 4px
-      margin-bottom 4px  
-      text-align center
-      background-color #B8B8B8
-      padding 7px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 11px
+    .fa.fa-info-circle
+      color #606060
+      &:hover
+        color Lead-Orange
+        -webkit-font-smoothing: antialiased
   
-
 .bottom_menu_bar
-  shift (-0.0025)
+  shift (-0.02)
   background-color white
   position fixed
   bottom 0
   z-index 999
-  width 100%
-  border-top 1px solid #e7e7e7
-  .bottom_menu_button
-    span(1/6.44)
-    shift(0.086)
+  width 102%
+  height 40px
+  padding-left 131px
+  border-top 1px solid #ccc
+  font-size 20px
+  a[href="/"]
+    background-color white
+    span(1/4)
     text-align center
-    background-color Menu-Bottom-Color
-    padding 10px
-    letter-spacing 1px
-    font-size 16px
-    -webkit-font-smoothing: antialiased
-    border-bottom 1px solid #e7e7e7
+    width 207.8px
+    border-right 1px solid #e7e7e7
+    padding 7px
+    font-size 22px
+  .fa.fa-home
+    color #606060
     &:hover
-      text-align center
-      padding 10px
-      font-weight bold
-      font-size 16px
+      color Lead-Orange
+  .fa.fa-home::after
+    content: " Home"
+    font-size 14px
+    padding-bottom 4px
+    &:hover
+      color Lead-Orange
+  a[href="/reserved"]
+    span(1/4)
+    text-align center
+    width 207.8px
+    border-right 1px solid #e7e7e7
+    padding 7px
+    font-size 22px
+  .fa.fa-star
+    color #606060
+    &:hover
+      color Lead-Orange
+  .fa.fa-star::after
+    content: " Reserved"
+    font-size 14px
+    padding-bottom 4px
+    &:hover
+      color Lead-Orange
+      -webkit-font-smoothing: antialiased
+  a[href="/address_book"]
+    span(1/4)
+    text-align center
+    width 207.8px
+    border-right 1px solid #e7e7e7
+    padding 7px
+    font-size 20px
+  .fa.fa-users
+    color #606060
+    &:hover
+      color Lead-Orange
+      -webkit-font-smoothing: antialiased
+  .fa.fa-users::after
+    content: " Address book"
+    font-size 14px
+    padding-bottom 4px
+    &:hover
+      color Lead-Orange
+      -webkit-font-smoothing: antialiased
+  a[href="/profile"]
+    span(1/4)
+    text-align center
+    width 207.8px
+    border-right 1px solid #e7e7e7
+    padding 7px
+    font-size 22px
+  .fa.fa-cog
+    color #606060
+    &:hover
+      color Lead-Orange
+      -webkit-font-smoothing: antialiased
+  .fa.fa-cog::after
+    content: " Profile"
+    font-size 14px
+    padding-bottom 4px
+    &:hover
+      color Lead-Orange
+      -webkit-font-smoothing: antialiased
 
 body
   background-image url("./subtle_zebra_3d.png") 
@@ -121,7 +163,7 @@ body
   width 70%
   max-width 1100px
   min-width 800px
-  margin 45px auto
+  margin 50px auto
   -webkit-column-count 3
   -webkit-column-gap 10px
   -webkit-column-fill auto
@@ -131,7 +173,6 @@ body
   column-count: 3
   column-gap: 15px
   column-fill: auto
-
 .lead_box
   vertical-align bottom
   -webkit-column-break-inside: avoid
@@ -162,6 +203,11 @@ body
       -webkit-font-smoothing: antialiased
       font-size 12px
       border-bottom 1px solid #e7e7e7
+    .fa.fa-star
+      color #fcd229
+      font-size 16px
+      &:hover
+        color #606060
   .lead_body
     font-size 10px
     padding 10px
@@ -173,21 +219,6 @@ body
       font-weight bold
       -webkit-font-smoothing: antialiased
       padding-top 7px
-  .button
-    shift(0.595)
-    border 1px solid #E8E8E8  
-    box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
-    cursor pointer
-    width 100px
-    font-size 10px
-    position relative
-    padding 4px
-    margin-top 14px
-    margin-bottom 7px  
-    text-align center
-    background-color #F0F0F0
-    &:hover
-      -webkit-font-smoothing: antialiased
 
 // :::::::::::: LEADS/show => individual lead :::::::::::: //
 
@@ -197,7 +228,9 @@ body
   top 80px
   left 50px
   // height 900px
-  width 872px
+  width 70%
+  max-width 1100px
+  min-width 800px
   shift(0.079)
   vertical-align bottom
   -webkit-column-break-inside: avoid
@@ -219,10 +252,10 @@ body
     font-weight bold
     text-align center
     -webkit-font-smoothing: antialiased
-    font-size 40px
+    font-size 30px
     border-bottom 1px solid #e7e7e7
   .lead_show_body
-    font-size 20px
+    font-size 16px
     padding-top 7px
     padding-left 25px
     -webkit-font-smoothing: antialiased
@@ -232,15 +265,12 @@ body
     .lead_show_subtitle
       font-weight bold
       -webkit-font-smoothing: antialiased
-      // padding-top 4px
-      // padding-bottom 4px
-      // padding-left 4px
       margin-top 20px
-      // background-color Lead-Subtitle
       margin-right 15px
   .lead_show_price
-    margin-left 378px
-    font-size 20px
+    // shift(0.423)
+    text-align center
+    font-size 16px
     padding 10px
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -255,25 +285,21 @@ body
     span(1/7)
     margin-top 0px
     color #606060
-    shift(0.43)
+    shift(0.425)
     position relative
     width 100px
+    height 24px
     text-align center
+    line-height 24px
     background-color Buy-Button-Color
     padding 5px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    font-size 20px
+    font-size 14px
     border 1px solid #E8E8E8  
     border-radius 4px
     &:hover
-      // background-color #B8B8B8
-      padding 5px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 20px
-      border-bottom 1px solid #e7e7e7
-      border-radius 4px
+      background-color #B8B8B8 
     .order_show_address_book
       background-color Background-Color
 
@@ -285,8 +311,9 @@ body
   padding-bottom 80px 
   top 80px
   left 50px
-  // height 1300px
-  width 872px
+  width 70%
+  max-width 1100px
+  min-width 800px
   shift(0.079)
   vertical-align bottom
   -webkit-column-break-inside: avoid
@@ -306,11 +333,12 @@ body
     border-top-right-radius 4px
     padding 20px
     font-weight bold
+    text-align center
     -webkit-font-smoothing: antialiased
-    font-size 40px
+    font-size 30px
     border-bottom 1px solid #e7e7e7
   .order_show_body
-    font-size 20px
+    font-size 16px
     padding-top 7px
     padding-left 25px
     -webkit-font-smoothing: antialiased
@@ -320,15 +348,11 @@ body
     .order_show_subtitle
       font-weight bold
       -webkit-font-smoothing: antialiased
-      // padding-top 4px
-      // padding-bottom 4px
-      // padding-left 4px
       margin-top 20px
-      // background-color Lead-Subtitle
       margin-right 15px
   .order_show_price
-    margin-left 378px
-    font-size 20px
+    text-align center
+    font-size 16px
     padding 10px
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -338,11 +362,14 @@ body
     -webkit-font-smoothing: antialiased
     padding-top 7px
     margin-top 50px
+  .payment_buttons_choose_payment_text
+    text-align center
+    padding 7px
   .order_show_buy input,   
   .order_show_buy a 
     color #606060
     span(1/7)
-    shift(0.28)
+    shift(0.3)
     position relative
     width 100px
     text-align center
@@ -350,36 +377,31 @@ body
     padding 5px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    font-size 12px
+    font-size 14px
     border 1px solid #E8E8E8  
     border-radius 4px
     &:hover
       background-color #B8B8B8
-      padding 5px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 12px
-      border-bottom 1px solid #e7e7e7
-      border-radius 4px
 .order_show_notes
   margin-top 100px
   font-size 20px
-  font-weight bold
+  // font-weight bold
   shift(0.08)
   .order_show_notes_title
     shift(0.008)
     margin-bottom 4px
     width 100px
   #order_notes
-    // font-size: 20px; padding: 20px; height: 90px; width: 835px; border-radius: 4px"
     position relative
     text-decoration none
     color #606060
     font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
     padding 20px
     font-size 20px 
-    height 100px
-    width 835px
+    height 400px
+    width 67%
+    max-width 1100px
+    min-width 800px
     vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
@@ -398,22 +420,18 @@ body
     margin-top 10px
     color #606060
     width 100px
+    line-height 24px
     text-align center
     background-color #B8B8B8
     padding 5px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    font-size 16px
+    font-size 12px
     border 1px solid #E8E8E8  
     border-radius 4px
     &:hover
       background-color Buy-Button-Color
-      padding 5px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 16px
-      border-bottom 1px solid #e7e7e7
-      border-radius 4px
+  
 
 
       
@@ -502,22 +520,28 @@ body
       .offer_show_lead_subtitle
         font-weight bold
         -webkit-font-smoothing: antialiased
-        padding-top 4px
+        // padding-top 4px
         // padding-bottom 4px
         // padding-left 4px
-        margin-top 10px
+        margin-top 20px
         // background-color Lead-Subtitle
-        margin-right 7px
+        margin-right 15px
+      .ordersindex-notifications.customer-info
+        color red
   .offer_instructions
     margin-top 70px
     font-size 14px
     shift(0.075)
     width 850px
 
-// :::::::::::: ORDERS/INDEX => Address Book :::::::::::: //
+// :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
 
-
-.address_book_columns 
+.address_book_reserved_leads,
+  shift(0.37)
+  margin-top 60px
+  font-size 20px
+  font-weight bold
+.address_book_columns
   shift (-1/15)
   width 70%
   max-width 1100px
@@ -532,45 +556,203 @@ body
   column-count: 3
   column-gap: 15px
   column-fill: auto
-.address_book_lead_box
-  
-  // vertical-align bottom
-  // -webkit-column-break-inside: avoid
-  // -moz-column-break-inside: avoid
-  // column-break-inside: avoid
-  background-color white
-  background-clip padding-box
-  border-radius 4px
-  box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-  border 1px solid #ccc
-  margin-bottom 7px
-  line-break 1px
-  .address_book_lead_body
-    font-size 10px
-    padding 10px
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color #606060
-    line-height 150%
-    .address_book_lead_subtitle
+  .address_book_lead_box
+    vertical-align bottom
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid
+    background-color white
+    background-clip padding-box
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #ccc
+    margin-bottom 7px
+    line-break 1px
+    .address_book_lead_title
+      background-color Lead-Orange
+      border-top-left-radius 4px
+      border-top-right-radius 4px
+      padding 10px
       font-weight bold
       -webkit-font-smoothing: antialiased
-      padding-top 7px
-  .address_book_buy_button
-    shift(0.595)
-    border 1px solid #E8E8E8  
-    box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
-    cursor pointer
-    width 100px
-    font-size 10px
-    position relative
-    padding 4px
-    margin-top 14px
-    margin-bottom 7px  
-    text-align center
-    background-color #F0F0F0
-    &:hover
+      font-size 12px
+      border-bottom 1px solid #e7e7e7
+      &:hover
+        background-color Lead-Orange-light
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+        padding 10px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 12px
+        border-bottom 1px solid #e7e7e7
+    .address_book_lead_body
+      font-size 10px
+      padding 10px
       -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
+      .address_book_lead_subtitle
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        padding-top 7px
+    .address_book_lead_notification
+      font-size 10px
+      padding 10px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
+      font-weight bold
+      padding-top 7px
+      .address_book_lead_notification_explanation
+        font-weight normal
+
+    .address_book_buy_button
+      center()
+      border 1px solid Lead-Orange-light  
+      box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
+      cursor pointer
+      width 50px
+      font-size 10px
+      position relative
+      border-radius 4px
+      padding 4px
+      margin-top 14px
+      // margin-bottom 4px  
+      text-align center
+      background-color Lead-Orange-light
+      &:hover
+        -webkit-font-smoothing: antialiased
+    .address_book_remove_from_reserved input
+    .address_book_remove_from_reserved a
+      // shift(0.49)
+      color #606060
+      border 1px solid #E8E8E8  
+      box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
+      cursor pointer
+      width 130px
+      font-size 10px
+      position relative
+      padding 4px
+      margin-top 7px
+      margin-bottom 2px  
+      text-align center
+      background-color #F0F0F0
+      &:hover
+        -webkit-font-smoothing: antialiased
+  .address_book_reserved_leads
+    color red
+
+
+  // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
+
+.address_book_bought_leads
+  shift(0.37)
+  margin-top 100px
+  font-size 20px
+  font-weight bold
+.address_book_columns
+  shift (-1/15)
+  width 70%
+  max-width 1100px
+  min-width 800px
+  margin 45px auto
+  -webkit-column-count 3
+  -webkit-column-gap 10px
+  -webkit-column-fill auto
+  -moz-column-count 3
+  -moz-column-gap 10px
+  -moz-column-fill: auto
+  column-count: 3
+  column-gap: 15px
+  column-fill: auto
+  .address_book_lead_box
+    vertical-align bottom
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid
+    background-color white
+    background-clip padding-box
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #ccc
+    margin-bottom 7px
+    line-break 1px
+    .address_book_lead_title
+      background-color Lead-Orange
+      border-top-left-radius 4px
+      border-top-right-radius 4px
+      padding 10px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 12px
+      border-bottom 1px solid #e7e7e7
+      &:hover
+        background-color Lead-Orange-light
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+        padding 10px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 12px
+        border-bottom 1px solid #e7e7e7
+    .address_book_lead_body
+      font-size 10px
+      padding 10px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
+      .address_book_lead_subtitle
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        padding-top 7px
+    .address_book_lead_notes
+      margin-left 6px
+      #order_notes
+        position relative
+        text-decoration none
+        color #606060
+        font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+        padding 7px
+        font-size 10px 
+        height 150px
+        width 260px
+        vertical-align bottom
+        -webkit-column-break-inside: avoid
+        -moz-column-break-inside: avoid
+        column-break-inside: avoid
+        background-color white
+        background-clip padding-box
+        border-radius 4px
+        box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+        border 1px solid #ccc
+        margin-bottom 7px
+        margin-top 7px
+        line-break 1px 
+      .address_book_lead_notes_button input
+      .address_book_lead_notes_button a
+        shift(0.673)
+        margin-bottom 7px
+        color #606060
+        width 100px
+        text-align center
+        background-color #B8B8B8
+        padding 4px
+        width 80px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 10px
+        border 1px solid #E8E8E8  
+        border-radius 4px
+        &:hover
+          background-color Buy-Button-Color
+    .address_book_link_to-signup"
+      font-size 12px
+
+
 
 // :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: //
 

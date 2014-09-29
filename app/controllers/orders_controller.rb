@@ -51,13 +51,21 @@ class OrdersController < ApplicationController
     if @order.notes != notes_before_update
       redirect_to order_url(@order)
     else
-      redirect_to orders_url
+      redirect_to address_book_url
     end
   end
 
   def bank_transaction
     @order = Order.find(params[:id])
     @lead = @order.selected
+  end
+
+  def address_book
+    @orders = Order.all
+  end
+
+  def reserved
+    @orders = Order.all
   end
 
   #def paypal_payment_notification   #IPN - instant payment notification (by PayPal)
