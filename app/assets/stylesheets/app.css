@@ -214,7 +214,6 @@
 body {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  height: 2000px;
   font-size: 10px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
@@ -225,6 +224,7 @@ body a {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .columns {
+  opacity: 0.9;
   position: relative;
   left: -6.866666666666701%;
   width: 70%;
@@ -295,10 +295,10 @@ body a {
   padding-top: 7px;
 }
 .lead_show {
+  opacity: 0.9;
   position: relative;
-  padding-bottom: 80px;
-  top: 80px;
-  left: 50px;
+  margin: 60px auto 80px 0px;
+  padding-bottom: 40px;
   width: 70%;
   max-width: 1100px;
   min-width: 800px;
@@ -313,8 +313,6 @@ body a {
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   border: 1px solid #ccc;
-  margin-bottom: 7px;
-  margin-top: 7px;
   line-break: 1px;
 }
 .lead_show .lead_show_title {
@@ -370,11 +368,17 @@ body a {
   margin-right: 0%;
   margin-top: 0px;
   color: #606060;
-  position: relative;
-  left: 43.775%;
+  *zoom: 1;
+  width: auto;
+  max-width: 1410px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
   width: 100px;
-  height: 24px;
   text-align: center;
   line-height: 24px;
   background-color: #ffae4d;
@@ -396,19 +400,26 @@ body a {
 .lead_show .lead_show_buy a:after {
   clear: both;
 }
+.lead_show .lead_show_buy input:before,
+.lead_show .lead_show_buy a:before,
+.lead_show .lead_show_buy input:after,
+.lead_show .lead_show_buy a:after {
+  content: '';
+  display: table;
+}
+.lead_show .lead_show_buy input:after,
+.lead_show .lead_show_buy a:after {
+  clear: both;
+}
 .lead_show .lead_show_buy input:hover,
 .lead_show .lead_show_buy a:hover {
   background-color: #b8b8b8;
 }
-.lead_show .lead_show_buy input .order_show_address_book,
-.lead_show .lead_show_buy a .order_show_address_book {
-  background-color: #eee;
-}
 .order_show {
+  opacity: 0.9;
   position: relative;
   padding-bottom: 80px;
-  top: 80px;
-  left: 50px;
+  margin: 60px auto 60px 0px;
   width: 70%;
   max-width: 1100px;
   min-width: 800px;
@@ -423,8 +434,6 @@ body a {
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   border: 1px solid #ccc;
-  margin-bottom: 7px;
-  margin-top: 7px;
   line-break: 1px;
 }
 .order_show .order_show_title {
@@ -512,7 +521,8 @@ body a {
   background-color: #b8b8b8;
 }
 .order_show_notes {
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 20px;
   position: relative;
   left: 8.24%;
@@ -549,8 +559,7 @@ body a {
 }
 .order_show_notes .order_show_notes_submit input,
 .order_show_notes .order_show_notes_submit a {
-  position: relative;
-  left: 60.77%;
+  margin-left: 799px;
   margin-top: 10px;
   color: #606060;
   width: 100px;
@@ -569,10 +578,10 @@ body a {
   background-color: #ffae4d;
 }
 .offer {
-  margin-top: 38px;
+  opacity: 0.9;
+  margin: 38px auto;
   padding: 100px;
   background-color: #fff;
-  height: 2000px;
 }
 .offer .offer_title {
   *zoom: 1;
@@ -709,6 +718,7 @@ body a {
   width: 850px;
 }
 .address_book_reserved_leads {
+  opacity: 0.9;
   position: relative;
   left: 38.11%;
   margin-top: 60px;
@@ -721,7 +731,7 @@ body a {
   width: 70%;
   max-width: 1100px;
   min-width: 800px;
-  margin: 45px auto;
+  margin: 50px auto;
   -webkit-column-count: 3;
   -webkit-column-gap: 10px;
   -webkit-column-fill: auto;
@@ -846,20 +856,13 @@ body a {
 .address_book_columns .address_book_reserved_leads {
   color: #f00;
 }
-.address_book_bought_leads {
-  position: relative;
-  left: 38.11%;
-  margin-top: 100px;
-  font-size: 20px;
-  font-weight: bold;
-}
 .address_book_columns {
   position: relative;
   left: -6.866666666666701%;
   width: 70%;
   max-width: 1100px;
   min-width: 800px;
-  margin: 45px auto;
+  margin: 50px auto;
   -webkit-column-count: 3;
   -webkit-column-gap: 10px;
   -webkit-column-fill: auto;
@@ -998,4 +1001,43 @@ body a {
 .new_lead_confirmation .new_lead_confirmation_signature {
   font-size: 14px;
   padding-top: 20px;
+}
+.logged_in {
+  margin: 50px 50px 50px 50px;
+  font-size: 16px;
+}
+.logged_in .logged_user {
+  font-size: 12px;
+}
+.logged_in .wallet {
+  width: 30%;
+  text-align: center;
+  padding: 14px;
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border: 1px solid #ccc;
+  margin-bottom: 7px;
+  line-break: 1px;
+}
+.logged_in .wallet .wallet_text {
+  font-size: 16px;
+}
+.logged_in .wallet .wallet_amount {
+  font-size: 12px;
+}
+.login_or_signup {
+  margin: 50px 50px 50px 50px;
+  font-size: 16px;
+}
+.login_or_signup .signup {
+  font-size: 12px;
+}
+.login_or_signup .login {
+  font-size: 12px;
 }

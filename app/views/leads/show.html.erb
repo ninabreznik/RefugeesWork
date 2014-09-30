@@ -18,9 +18,6 @@
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-          <div class="lead_show_address_book"> 
-            <%= link_to "#{I18n.t'leadsshow-links.address-book'}", orders_path %>
-          </div>
         <% else %>
             <div class="lead_show_price">
               <%= I18n.t'leadsshow-lead.price' %>

@@ -4,9 +4,6 @@
 </head>
 <body>
   <% if user_signed_in? && @orders.present? %>
-  <div class="address_book_reserved_leads">
-    <%= I18n.t'ordersindex-titles.reserved' %>
-  </div>
   <div class="address_book_columns">
     <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
     <div class="address_book_lead_box">

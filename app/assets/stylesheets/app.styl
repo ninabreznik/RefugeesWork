@@ -146,10 +146,10 @@ Offer-Font-Color = #606060
 body
   background-image url("./subtle_zebra_3d.png") 
   margin 0px
-  height 2000px
   font-size 10px
   color #606060
   font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+  
   a  
     text-decoration none
     color #606060
@@ -158,7 +158,8 @@ body
 // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
 
 
-.columns  
+.columns
+  opacity 0.9
   shift (-1/15)
   width 70%
   max-width 1100px
@@ -223,11 +224,10 @@ body
 // :::::::::::: LEADS/show => individual lead :::::::::::: //
 
 .lead_show
+  opacity 0.9
   position relative
-  padding-bottom 80px
-  top 80px
-  left 50px
-  // height 900px
+  margin 60px auto  80px 0px
+  padding-bottom 40px
   width 70%
   max-width 1100px
   min-width 800px
@@ -241,8 +241,6 @@ body
   border-radius 4px
   box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
   border 1px solid #ccc
-  margin-bottom 7px
-  margin-top 7px
   line-break 1px  
   .lead_show_title
     background-color Lead-Orange
@@ -285,10 +283,9 @@ body
     span(1/7)
     margin-top 0px
     color #606060
-    shift(0.425)
+    center()
     position relative
     width 100px
-    height 24px
     text-align center
     line-height 24px
     background-color Buy-Button-Color
@@ -300,17 +297,15 @@ body
     border-radius 4px
     &:hover
       background-color #B8B8B8 
-    .order_show_address_book
-      background-color Background-Color
 
 
 // :::::::::::: ORDERS/show => buy lead :::::::::::: //
 
 .order_show
+  opacity 0.9
   position relative
   padding-bottom 80px 
-  top 80px
-  left 50px
+  margin 60px auto 60px 0px
   width 70%
   max-width 1100px
   min-width 800px
@@ -324,8 +319,6 @@ body
   border-radius 4px
   box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
   border 1px solid #ccc
-  margin-bottom 7px
-  margin-top 7px
   line-break 1px  
   .order_show_title
     background-color Lead-Orange
@@ -383,7 +376,8 @@ body
     &:hover
       background-color #B8B8B8
 .order_show_notes
-  margin-top 100px
+  margin-top 50px
+  margin-bottom 50px
   font-size 20px
   // font-weight bold
   shift(0.08)
@@ -416,7 +410,7 @@ body
     line-break 1px 
   .order_show_notes_submit input
   .order_show_notes_submit a
-    shift(0.59)
+    margin-left 799px
     margin-top 10px
     color #606060
     width 100px
@@ -439,10 +433,10 @@ body
 // :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
 
 .offer
-  margin-top 38px
+  opacity 0.9
+  margin 38px auto
   padding 100px
   background-color white
-  height 2000px
   .offer_title
     center(420px)
     color Offer-Font-Color
@@ -536,7 +530,8 @@ body
 
 // :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
 
-.address_book_reserved_leads,
+.address_book_reserved_leads
+  opacity 0.9
   shift(0.37)
   margin-top 60px
   font-size 20px
@@ -546,7 +541,7 @@ body
   width 70%
   max-width 1100px
   min-width 800px
-  margin 45px auto
+  margin 50px auto
   -webkit-column-count 3
   -webkit-column-gap 10px
   -webkit-column-fill auto
@@ -648,17 +643,12 @@ body
 
   // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
 
-.address_book_bought_leads
-  shift(0.37)
-  margin-top 100px
-  font-size 20px
-  font-weight bold
 .address_book_columns
   shift (-1/15)
   width 70%
   max-width 1100px
   min-width 800px
-  margin 45px auto
+  margin 50px auto
   -webkit-column-count 3
   -webkit-column-gap 10px
   -webkit-column-fill auto
@@ -771,8 +761,40 @@ body
     font-size 14px
     padding-top 20px
 
+// :::::::::::: PROFILE :::::::::::: //
 
-    
+.logged_in
+  margin 50px 50px 50px 50px
+  font-size 16px
+  .logged_user
+    font-size 12px
+  .wallet
+    width 30%
+    text-align center
+    padding 14px
+    vertical-align bottom
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid
+    background-color white
+    background-clip padding-box
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #ccc
+    margin-bottom 7px
+    line-break 1px
+    .wallet_text
+      font-size 16px
+    .wallet_amount
+      font-size 12px
+.login_or_signup
+  margin 50px 50px 50px 50px
+  font-size 16px
+  .signup
+    font-size 12px  
+  .login
+    font-size 12px
+
     
 
 
