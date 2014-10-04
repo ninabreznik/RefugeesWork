@@ -820,6 +820,7 @@ body a {
   border-radius: 4px;
   padding: 4px;
   margin-top: 14px;
+  margin-bottom: 10px;
   text-align: center;
   background-color: #ffae4d;
 }
@@ -832,25 +833,6 @@ body a {
   clear: both;
 }
 .address_book_columns .address_book_lead_box .address_book_buy_button:hover {
-  -webkit-font-smoothing: antialiased;
-}
-.address_book_columns .address_book_lead_box .address_book_remove_from_reserved input,
-.address_book_columns .address_book_lead_box .address_book_remove_from_reserved a {
-  color: #606060;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  cursor: pointer;
-  width: 130px;
-  font-size: 10px;
-  position: relative;
-  padding: 4px;
-  margin-top: 7px;
-  margin-bottom: 2px;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-.address_book_columns .address_book_lead_box .address_book_remove_from_reserved input:hover,
-.address_book_columns .address_book_lead_box .address_book_remove_from_reserved a:hover {
   -webkit-font-smoothing: antialiased;
 }
 .address_book_columns .address_book_reserved_leads {
@@ -1002,17 +984,24 @@ body a {
   font-size: 14px;
   padding-top: 20px;
 }
-.logged_in {
-  margin: 50px 50px 50px 50px;
-  font-size: 16px;
+.profile_dashboard_columns {
+  position: relative;
+  left: -6.866666666666701%;
+  width: 70%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 50px auto;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 3;
+  column-gap: 15px;
+  column-fill: auto;
 }
-.logged_in .logged_user {
-  font-size: 12px;
-}
-.logged_in .wallet {
-  width: 30%;
-  text-align: center;
-  padding: 14px;
+.profile_dashboard_columns .profile_dashboard_box {
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
@@ -1025,19 +1014,48 @@ body a {
   margin-bottom: 7px;
   line-break: 1px;
 }
-.logged_in .wallet .wallet_text {
-  font-size: 16px;
-}
-.logged_in .wallet .wallet_amount {
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_title {
+  text-align: center;
+  background-color: #ffae4d;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   font-size: 12px;
+  border-bottom: 1px solid #e7e7e7;
 }
-.login_or_signup {
-  margin: 50px 50px 50px 50px;
-  font-size: 16px;
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body {
+  padding: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  text-align: center;
 }
-.login_or_signup .signup {
-  font-size: 12px;
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_username {
+  font-size: 20px;
+  font-weight: bold;
 }
-.login_or_signup .login {
-  font-size: 12px;
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_logout,
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_edit {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 7px;
+  font-size: 10px;
+}
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_amount {
+  font-size: 60px;
+  padding: 24px;
+}
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_bought_leads_amount {
+  font-size: 60px;
+  padding: 24px;
+}
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup {
+  -webkit-font-smoothing: antialiased;
+}
+.profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_bought_leads_last {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 24px;
 }

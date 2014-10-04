@@ -1,31 +1,87 @@
-<% if user_signed_in? %>
-    <div class="logged_in">
-      Logged in as 
-        <div class="logged_user"> 
+<div class="profile_dashboard_columns">
+  <div class="profile_dashboard_box">
+      <% if user_signed_in? %>
+    <div class ="profile_dashboard_title">
+        Logged in as: 
+    </div>
+      <div class="profile_dashboard_body"> 
+        <div class="profile_dashboard_body_username">  
           <%= current_user.email %> 
         </div>
-        <div class="logout">
+        <div class="profile_dashboard_body_logout">
               <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :delete %>
         </div>
-        <div class="wallet">
-          <div class="wallet_text">
-            <%= I18n.t'staticpagesprofile-notification.wallet' %>:
-          </div> 
-          <div class="wallet_amount">
-            <%= current_user.wallet %> € 
-          </div>
+        <div class="profile_dashboard_body_edit">
+         <%= link_to "Edit profile", edit_user_registration_path %>
         </div>
+
+      </div>
+  </div>
+  <div class="profile_dashboard_box">
+    <div class ="profile_dashboard_title">
+        <%= I18n.t'staticpagesprofile-notification.wallet' %>: 
     </div>
-  <% else %>
-    Signup or Login
-    <div class="login_or_signup">
-      <div class="signup">
-        <%= link_to "Sign up", 
-        new_user_registration_path %>
-      </div> |
-      <div class="login">
-        <%= link_to "Login", 
-        new_user_session_path %>
+
+    <div class="profile_dashboard_body">
+      <div class="profile_dashboard_body_wallet_amount">
+        <%= current_user.wallet %> € 
       </div>
     </div>
+  </div>
+  <div class="profile_dashboard_box">
+    <div class ="profile_dashboard_title">
+        Bought leads:
+    </div>
+    <div class="profile_dashboard_body"> 
+      <div class="profile_dashboard_body_bought_leads_amount">  
+        <%= Order.all.where(selector_id: current_user.id).count %>
+      </div> 
+    </div>
+  </div>
+<div class="profile_dashboard_box">
+  <div class ="profile_dashboard_title">
+    Last bought lead:
+  </div>
+  <div class="profile_dashboard_body"> 
+    <div class="profile_dashboard_body_bought_leads_lastw">  
+      <%= Order.all.where(selector_id: current_user.id).last.selected.business_type %>(<%= Order.all.where(selector_id: current_user.id).last.selected.location %>) 
+    </div> 
+  </div>
+</div>
+</div>
+    <% else %>
+      <div class="profile_dashboard_columns">
+        <div class="profile_dashboard_box">
+          <div class ="profile_dashboard_title">
+            Logged in as 
+          </div>
+          <div class="profile_dashboard_body"> 
+            <div class="profile_dashboard_title_login_or_signup">
+              <div class="profile_dashboard_body_signup">
+                <%= link_to "Sign up", new_user_registration_path %>
+              </div> |
+              <div class="profile_dashboard_body_login">
+                <%= link_to "Login", new_user_session_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile_dashboard_box">
+          <div class ="profile_dashboard_title">
+            <div class="profile_dashboard_title_wallet">
+              <%= I18n.t'staticpagesprofile-notification.wallet' %>:
+            </div> 
+          </div>
+          <div class="profile_dashboard_body">
+            <div class="profile_dashboard_title_login_or_signup">
+              <div class="profile_dashboard_body_signup">
+                <%= link_to "Sign up", new_user_registration_path %>
+              </div> |
+              <div class="profile_dashboard_body_login">
+                <%= link_to "Login", new_user_session_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <% end %>

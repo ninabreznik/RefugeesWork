@@ -581,6 +581,11 @@ body
         -webkit-font-smoothing: antialiased
         font-size 12px
         border-bottom 1px solid #e7e7e7
+      // .fa.fa-star
+      // color #fcd229
+      // font-size 16px
+      // &:hover
+      //   color #606060
     .address_book_lead_body
       font-size 10px
       padding 10px
@@ -615,28 +620,28 @@ body
       border-radius 4px
       padding 4px
       margin-top 14px
-      // margin-bottom 4px  
+      margin-bottom 10px  
       text-align center
       background-color Lead-Orange-light
       &:hover
         -webkit-font-smoothing: antialiased
-    .address_book_remove_from_reserved input
-    .address_book_remove_from_reserved a
-      // shift(0.49)
-      color #606060
-      border 1px solid #E8E8E8  
-      box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
-      cursor pointer
-      width 130px
-      font-size 10px
-      position relative
-      padding 4px
-      margin-top 7px
-      margin-bottom 2px  
-      text-align center
-      background-color #F0F0F0
-      &:hover
-        -webkit-font-smoothing: antialiased
+    // .address_book_remove_from_reserved input
+    // .address_book_remove_from_reserved a
+    //   // shift(0.49)
+    //   color #606060
+    //   border 1px solid #E8E8E8  
+    //   box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
+    //   cursor pointer
+    //   width 130px
+    //   font-size 10px
+    //   position relative
+    //   padding 4px
+    //   margin-top 7px
+    //   margin-bottom 2px  
+    //   text-align center
+    //   background-color #F0F0F0
+    //   &:hover
+    //     -webkit-font-smoothing: antialiased
   .address_book_reserved_leads
     color red
 
@@ -763,15 +768,22 @@ body
 
 // :::::::::::: PROFILE :::::::::::: //
 
-.logged_in
-  margin 50px 50px 50px 50px
-  font-size 16px
-  .logged_user
-    font-size 12px
-  .wallet
-    width 30%
-    text-align center
-    padding 14px
+.profile_dashboard_columns
+  shift (-1/15)
+  width 70%
+  max-width 1100px
+  min-width 800px
+  margin 50px auto
+  -webkit-column-count 3
+  -webkit-column-gap 10px
+  -webkit-column-fill auto
+  -moz-column-count 3
+  -moz-column-gap 10px
+  -moz-column-fill: auto
+  column-count: 3
+  column-gap: 15px
+  column-fill: auto
+  .profile_dashboard_box
     vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
@@ -783,17 +795,48 @@ body
     border 1px solid #ccc
     margin-bottom 7px
     line-break 1px
-    .wallet_text
-      font-size 16px
-    .wallet_amount
+    .profile_dashboard_title
+      text-align center
+      background-color Lead-Orange
+      border-top-left-radius 4px
+      border-top-right-radius 4px
+      padding 10px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
       font-size 12px
-.login_or_signup
-  margin 50px 50px 50px 50px
-  font-size 16px
-  .signup
-    font-size 12px  
-  .login
-    font-size 12px
+      border-bottom 1px solid #e7e7e7
+    .profile_dashboard_body
+      padding 10px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      // line-height 150%
+      text-align center
+      .profile_dashboard_body_username
+        font-size 20px
+        font-weight bold
+      .profile_dashboard_body_logout,
+      .profile_dashboard_body_edit
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        padding-top 7px
+        font-size 10px
+      .profile_dashboard_body_wallet_amount
+        font-size 60px
+        padding 24px
+      .profile_dashboard_body_bought_leads_amount
+        font-size 60px
+        padding 24px
+      .profile_dashboard_title_login_or_signup
+        -webkit-font-smoothing: antialiased
+        // .profile_dashboard_body_signup,
+        // .profile_dashboard_body_login,
+      .profile_dashboard_body_bought_leads_last
+        font-size 20px
+        font-weight bold
+        padding 24px
+  
+        
 
     
 
