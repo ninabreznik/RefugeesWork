@@ -1,29 +1,36 @@
-<h2><%= I18n.t'users-edit.edit-title' %></h2>
+<div class="user_edit">
+<div class="user_edit_title">
+  <%= I18n.t'users-edit.edit-title' %>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.email'}" %><br />
+  <div class="user_edit_form_email"><%= f.label :"#{I18n.t'users-edit.edit-fields.email'}" %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.password'}" %> <i>(<%= I18n.t'users-edit.password-tip' %>)</i><br />
+  <div class="user_edit_form_password"><%= f.label :"#{I18n.t'users-edit.edit-fields.password'}" %> <i>(<%= I18n.t'users-edit.password-tip' %>)</i><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.password-confirmation'}" %><br />
+  <div class="user_edit_form_password_confirmation"><%= f.label :"#{I18n.t'users-edit.edit-fields.password-confirmation'}" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.label :"#{I18n.t'users-edit.edit-fields.current-password'}" %> <i>(<%= I18n.t'users-edit.current-password-tip' %>)</i><br />
+  <div class="user_edit_form_current_password"><%= f.label :"#{I18n.t'users-edit.edit-fields.current-password'}" %> <i>(<%= I18n.t'users-edit.current-password-tip' %>)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "#{I18n.t'users-edit.update-button'}" %></div>
+  <div class="user_edit_form_submit"><%= f.submit "#{I18n.t'users-edit.update-button'}" %></div>
 <% end %>
 
-<h3><%= I18n.t'users-edit.cancel-account' %></h3>
+<div class="user_edit_cancel_acount"><%= I18n.t'users-edit.cancel-account' %></div>
 
-<p><%= I18n.t'users-edit.unhappy' %> <%= button_to "#{I18n.t'users-edit.cancel-account-button'}", registration_path(resource_name), data: { confirm: "#{I18n.t'users-edit.sure'}" }, method: :delete %></p>
+<div class="user_edit_unhappy"><%= I18n.t'users-edit.unhappy' %> </div>
+  <div class="user_edit_button_cancel_account">
+    <%= button_to "#{I18n.t'users-edit.cancel-account-button'}", registration_path(resource_name), data: { confirm: "#{I18n.t'users-edit.sure'}"}, method: :delete %>
+  </div>
 
-<%= link_to "Back", :back %>
+<div class="user_edit_back"><%= link_to "Back", :back %> </div>
+</div>

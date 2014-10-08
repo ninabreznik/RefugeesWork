@@ -16,6 +16,13 @@
   font-size: 12px;
   display: inline-block;
 }
+.top_menu_bar .logged_user .fa.fa-info-circle {
+  color: #606060;
+}
+.top_menu_bar .logged_user .fa.fa-info-circle:hover {
+  color: #ffae4d;
+  -webkit-font-smoothing: antialiased;
+}
 .top_menu_bar .logo {
   position: relative;
   left: 39.14%;
@@ -27,13 +34,6 @@
   left: 59.122%;
   font-size: 19px;
   display: inline-block;
-  -webkit-font-smoothing: antialiased;
-}
-.top_menu_bar .info .fa.fa-info-circle {
-  color: #606060;
-}
-.top_menu_bar .info .fa.fa-info-circle:hover {
-  color: #ffae4d;
   -webkit-font-smoothing: antialiased;
 }
 .bottom_menu_bar {
@@ -824,7 +824,7 @@ body a {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
-  background-color: #ffae4d;
+  background-color: #b8b8b8;
   -webkit-font-smoothing: antialiased;
 }
 .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:before,
@@ -836,7 +836,7 @@ body a {
   clear: both;
 }
 .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:hover {
-  background-color: #b8b8b8;
+  background-color: #ffae4d;
 }
 .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input,
 .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a {
@@ -1241,6 +1241,7 @@ body a {
 .login .login_form_password #user_email,
 .login .login_form_email #user_password,
 .login .login_form_password #user_password {
+  padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
   height: 26px;
@@ -1273,8 +1274,209 @@ body a {
   background-color: #b8b8b8;
 }
 .login .login_shared_links {
-  font-size: 10px;
+  font-size: 12px;
 }
 .login .login_shared_links:hover {
   text-decoration: underline;
+}
+.signup {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+.signup .signup_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.signup .signup_form_email,
+.signup .signup_form_password,
+.signup .signup_form_password_confirmation {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.signup .signup_form_email #user_email,
+.signup .signup_form_password #user_email,
+.signup .signup_form_password_confirmation #user_email,
+.signup .signup_form_email #user_password,
+.signup .signup_form_password #user_password,
+.signup .signup_form_password_confirmation #user_password,
+.signup .signup_form_email #user_password_confirmation,
+.signup .signup_form_password #user_password_confirmation,
+.signup .signup_form_password_confirmation #user_password_confirmation {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 26px;
+  width: 200px;
+  border: 1px solid #e8e8e8;
+}
+.signup .signup_form_submit input,
+.signup .signup_form_submit a {
+  color: #606060;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  width: 57px;
+  line-height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 4px;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #ffae4d;
+  -webkit-font-smoothing: antialiased;
+}
+.signup .signup_form_submit input:hover,
+.signup .signup_form_submit a:hover {
+  background-color: #b8b8b8;
+}
+.signup .signup_shared_links {
+  font-size: 12px;
+}
+.signup .signup_shared_links:hover {
+  text-decoration: underline;
+}
+.password_new {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+.password_new .password_new_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.password_new .password_new_form_email {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.password_new .password_new_form_email #user_email {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 26px;
+  width: 300px;
+  border: 1px solid #e8e8e8;
+}
+.password_new .password_new_form_submit input,
+.password_new .password_new_form_submit a {
+  color: #606060;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  width: 220px;
+  line-height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 4px;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #ffae4d;
+  -webkit-font-smoothing: antialiased;
+}
+.password_new .password_new_form_submit input:hover,
+.password_new .password_new_form_submit a:hover {
+  background-color: #b8b8b8;
+}
+.password_new .password_new_shared_links {
+  font-size: 12px;
+}
+.password_new .password_new_shared_links:hover {
+  text-decoration: underline;
+}
+.user_edit {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+.user_edit .user_edit_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.user_edit .user_edit_form_email,
+.user_edit .user_edit_form_password,
+.user_edit .user_edit_form_password_confirmation,
+.user_edit .user_edit_form_current_password {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.user_edit .user_edit_form_email #user_email,
+.user_edit .user_edit_form_password #user_email,
+.user_edit .user_edit_form_password_confirmation #user_email,
+.user_edit .user_edit_form_current_password #user_email,
+.user_edit .user_edit_form_email #user_password,
+.user_edit .user_edit_form_password #user_password,
+.user_edit .user_edit_form_password_confirmation #user_password,
+.user_edit .user_edit_form_current_password #user_password,
+.user_edit .user_edit_form_email #user_password_confirmation,
+.user_edit .user_edit_form_password #user_password_confirmation,
+.user_edit .user_edit_form_password_confirmation #user_password_confirmation,
+.user_edit .user_edit_form_current_password #user_password_confirmation,
+.user_edit .user_edit_form_email #user_current_password,
+.user_edit .user_edit_form_password #user_current_password,
+.user_edit .user_edit_form_password_confirmation #user_current_password,
+.user_edit .user_edit_form_current_password #user_current_password {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 26px;
+  width: 200px;
+  border: 1px solid #e8e8e8;
+}
+.user_edit .user_edit_form_submit input,
+.user_edit .user_edit_form_submit a {
+  color: #606060;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  width: 67px;
+  line-height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 4px;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #ffae4d;
+  -webkit-font-smoothing: antialiased;
+}
+.user_edit .user_edit_form_submit input:hover,
+.user_edit .user_edit_form_submit a:hover {
+  background-color: #b8b8b8;
+}
+.user_edit .user_edit_cancel_acount,
+.user_edit .user_edit_unhappy,
+.user_edit .user_edit_back {
+  font-size: 12px;
+}
+.user_edit .user_edit_cancel_acount:hover,
+.user_edit .user_edit_unhappy:hover,
+.user_edit .user_edit_back:hover {
+  text-decoration: underline;
+}
+.user_edit .user_edit_button_cancel_account input,
+.user_edit .user_edit_button_cancel_account a {
+  -webkit-font-smoothing: antialiased;
+  color: #606060;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  width: 125px;
+  line-height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 4px;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #ffae4d;
+}
+.user_edit .user_edit_button_cancel_account input:hover,
+.user_edit .user_edit_button_cancel_account a:hover {
+  background-color: #b8b8b8;
 }

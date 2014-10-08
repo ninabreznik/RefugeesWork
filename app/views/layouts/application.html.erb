@@ -7,10 +7,10 @@
   </head>
 <body>
   <div class="top_menu_bar">
-    <img class="logo" src="/assets/sosed.biz.png"/>
+    <%= link_to '<img class="logo" src="/assets/sosed.biz.png"/>'.html_safe, root_path %>
     <% if user_signed_in? %>
       <div class="logged_user"> 
-        <%= current_user.email %> 
+        <%= link_to current_user.email, profile_path %> 
       </div>
     <% end %>
 

@@ -1,18 +1,23 @@
-<h2><%= I18n.t'users-signup.signup' %> </h2>
+<div class="signup">
+<div class="signup_title">
+  <%= I18n.t'users-signup.signup' %> 
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div class="signup_form_email"><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
-  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+  <div class="signup_form_password"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div class="signup_form_password_confirmation"><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.submit "#{I18n.t'users-signup.signup'}" %></div>
+  <div class="signup_form_submit"><%= f.submit "#{I18n.t'users-signup.signup'}" %></div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<div class="signup_shared_links">
+  <%= render "devise/shared/links" %>
+</div>
+</div>

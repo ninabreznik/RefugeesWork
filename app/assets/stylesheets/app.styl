@@ -42,6 +42,11 @@ Offer-Font-Color = #606060
     shift(0.019)
     font-size 12px
     display inline-block
+    .fa.fa-info-circle
+      color #606060
+      &:hover
+        color Lead-Orange
+        -webkit-font-smoothing: antialiased
   .logo
     shift(0.38)
     height 35px
@@ -51,11 +56,6 @@ Offer-Font-Color = #606060
     font-size 19px
     display inline-block
     -webkit-font-smoothing: antialiased
-    .fa.fa-info-circle
-      color #606060
-      &:hover
-        color Lead-Orange
-        -webkit-font-smoothing: antialiased
   
 .bottom_menu_bar
   shift (-0.02)
@@ -620,10 +620,10 @@ body
         margin-top 10px
         margin-bottom 10px  
         text-align center
-        background-color Buy-Button-Color
+        background-color #B8B8B8
         -webkit-font-smoothing: antialiased
         &:hover
-          background-color #B8B8B8
+          background-color Buy-Button-Color
       .address_book_remove_button input
       .address_book_remove_button a  
         center()
@@ -930,7 +930,7 @@ body
     margin-bottom 30px
     font-size 14px
 
-// :::::::::::: DEVISE/LOGIN (sessions/new) :::::::::::: //
+// :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
 
 .login
   margin-top 60px
@@ -945,6 +945,7 @@ body
     margin-bottom 14px
     #user_email,
     #user_password
+      padding 4px
       border-radius 4px
       margin-top 4px
       height 26px
@@ -972,14 +973,173 @@ body
     &:hover
       background-color #B8B8B8
   .login_shared_links
-    font-size 10px
+    font-size 12px
     &:hover
       text-decoration underline
 
-// :::::::::::: DEVISE/LOGIN (sessions/new) :::::::::::: //
+// :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
   
 
+.signup
+  margin-top 60px
+  margin-left 100px  
+  .signup_title
+    font-size 28px
+    font-weight bold
+    margin-bottom 20px
+  .signup_form_email,
+  .signup_form_password,
+  .signup_form_password_confirmation
+    font-size 12px
+    margin-bottom 14px
+    #user_email,
+    #user_password,
+    #user_password_confirmation
+      padding 4px
+      border-radius 4px
+      margin-top 4px
+      height 26px
+      width 200px
+      border 1px solid #E8E8E8  
+  .signup_form_submit input
+  .signup_form_submit a 
+    color #606060
+    border 1px solid #E8E8E8  
+    cursor pointer
+    width 57px
+    line-height 16px
+    font-size 10px
+    font-weight bold
+    position relative
+    border-radius 4px
+    padding 4px
+    margin-top 10px
+    margin-bottom 10px  
+    text-align center
+    background-color Buy-Button-Color
+    -webkit-font-smoothing: antialiased
+    &:hover
+      background-color #B8B8B8
+  .signup_shared_links
+    font-size 12px
+    &:hover
+      text-decoration underline
     
+
+// :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: //
+
+.password_new
+  margin-top 60px
+  margin-left 100px  
+  .password_new_title
+    font-size 28px
+    font-weight bold
+    margin-bottom 20px
+  .password_new_form_email
+    font-size 12px
+    margin-bottom 14px
+    #user_email
+      padding 4px
+      border-radius 4px
+      margin-top 4px
+      height 26px
+      width 300px
+      border 1px solid #E8E8E8  
+  .password_new_form_submit input
+  .password_new_form_submit a 
+    color #606060
+    border 1px solid #E8E8E8  
+    cursor pointer
+    width 220px
+    line-height 16px
+    font-size 10px
+    font-weight bold
+    position relative
+    border-radius 4px
+    padding 4px
+    margin-top 10px
+    margin-bottom 10px  
+    text-align center
+    background-color Buy-Button-Color
+    -webkit-font-smoothing: antialiased
+    &:hover
+      background-color #B8B8B8
+  .password_new_shared_links
+    font-size 12px
+    &:hover
+      text-decoration underline
+          
+// :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
+
+.user_edit
+  margin-top 60px
+  margin-left 100px  
+  .user_edit_title
+    font-size 28px
+    font-weight bold
+    margin-bottom 20px
+  .user_edit_form_email,
+  .user_edit_form_password,
+  .user_edit_form_password_confirmation,
+  .user_edit_form_current_password
+    font-size 12px
+    margin-bottom 14px
+    #user_email,
+    #user_password,
+    #user_password_confirmation,
+    #user_current_password
+      padding 4px
+      border-radius 4px
+      margin-top 4px
+      height 26px
+      width 200px
+      border 1px solid #E8E8E8  
+  .user_edit_form_submit input
+  .user_edit_form_submit a 
+    color #606060
+    border 1px solid #E8E8E8  
+    cursor pointer
+    width 67px
+    line-height 16px
+    font-size 10px
+    font-weight bold
+    position relative
+    border-radius 4px
+    padding 4px
+    margin-top 10px
+    margin-bottom 10px  
+    text-align center
+    background-color Buy-Button-Color
+    -webkit-font-smoothing: antialiased
+    &:hover
+      background-color #B8B8B8
+  .user_edit_cancel_acount,
+  .user_edit_unhappy,
+  .user_edit_back
+    font-size 12px
+    &:hover
+      text-decoration underline
+  .user_edit_button_cancel_account input
+  .user_edit_button_cancel_account a
+    -webkit-font-smoothing: antialiased
+    color #606060
+    border 1px solid #E8E8E8  
+    cursor pointer
+    width 125px
+    line-height 16px
+    font-size 10px
+    font-weight bold
+    position relative
+    border-radius 4px
+    padding 4px
+    margin-top 10px
+    margin-bottom 10px  
+    text-align center
+    background-color Buy-Button-Color
+    &:hover
+      background-color #B8B8B8
+    
+
           
 
       
