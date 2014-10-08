@@ -9,12 +9,6 @@
     <div class="address_book_lead_box">
       <div class ="address_book_lead_title">
         <%= order.selected.business_type %>
-            <div class="address_book_remove_from_reserved">
-        <%= form_for(current_user.orders.find_by_selected_id(order.selected),
-             html: { method: :delete }) do |c| %>
-        <%= c.submit "#{I18n.t'ordersindex-buttons.remove-from-reserved'}" %> 
-        <% end %> 
-      </div>
       </div>
       <div class="address_book_lead_body">
         <div class="address_book_lead_subtitle">
@@ -34,27 +28,39 @@
           (<%= I18n.t'ordersindex-notifications.customer-info-explanation' %>) 
         </div>
       </div>
-      <div class="address_book_buy_button">
-        <%= link_to("#{I18n.t'ordersindex-buttons.buy'}",
-          {
-            :controller => 'orders', 
-            :action => 'show', 
-            :id => order.id
-            },
-          :html =>
-          {
-            :method => :get, 
-            :remote => true
-          }
-         ) %> </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <%= link_to("#{I18n.t'ordersindex-buttons.buy'}",
+            {
+              :controller => 'orders', 
+              :action => 'show', 
+              :id => order.id
+              },
+            :html =>
+            {
+              :method => :get, 
+              :remote => true
+            }
+           ) %> 
+        </div>
+        <div class="address_book_remove_button">
+          <%= form_for(current_user.orders.find_by_selected_id(order.selected),
+            html: { method: :delete }) do |c| %>
+          <%= c.submit 'OR remove this lead from reserved' %>
+            <% end %> 
+        </div>
+      </div>
     </div>
       <% end %> 
+  </div>
 <% else %>
-  <div class="address_book_reserved_leads">
-    <%= I18n.t'ordersindex-titles.reserved' %>:
-  </div>
+      <div class="address_book_link_to_signup">
+      You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}", 
+      new_user_registration_path %> or
+      <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
+      new_user_session_path %> <%= I18n.t'ordersindex-notifications.to-see-address-book' %> . 
+    </div>
 <% end %>
-  </div>
 
 </body>
 </html>

@@ -146,8 +146,8 @@ si:
 
 # Titles
   ordersindex-titles:
-    reserved: "Rezervirani"
-    address-book: "Imenik strank"
+    reserved: "Trenutno nimate rezerviranih kontaktov."
+    address-book: "Trenutno nimate nobenega zakupljenega kontakta."
 
 # Lead body
   ordersindex-lead:

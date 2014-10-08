@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
 
   def destroy
     Order.find(params[:id]).destroy
-    redirect_to orders_url
+    redirect_to reserved_url
   end
 
   def update

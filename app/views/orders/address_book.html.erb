@@ -38,10 +38,7 @@
     </div>
       <% end %> 
 <% else %>
-    <div class="address_book_bought_leads">
-      <%= I18n.t'ordersindex-titles.address-book' %>:
-    </div>
-    <div class="address_book_link_to-signup">
+      <div class="address_book_link_to_signup">
       You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}", 
       new_user_registration_path %> or
       <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 

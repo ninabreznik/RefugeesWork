@@ -143,13 +143,13 @@ en:
     wallet: "My wallet status"
 
 # ############################################################################################
-# Page 5 - ORDERS/INDEX (Address book)
+# Page 5 - ORDERS/INDEX (Address book) (Reserved)
 # ############################################################################################
 
 # Titles
   ordersindex-titles:
-    reserved: "Reserved"
-    address-book: "Address book"
+    reserved: "No reserved leads yet."
+    address-book: "No bought leads yet."
 
 # Lead body
   ordersindex-lead:
