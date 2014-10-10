@@ -12,6 +12,10 @@
       <div class="logged_user"> 
         <%= link_to current_user.email, profile_path %> 
       </div>
+    <% else %>
+    <div class="not_logged_user">
+      <%= link_to "Login", new_user_session_path %> | <%= link_to "Sign up", new_user_registration_path %>
+    </div>
     <% end %>
 
     <div class="info">

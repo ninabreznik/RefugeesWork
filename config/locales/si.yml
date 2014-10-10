@@ -110,7 +110,7 @@ si:
 
 # Links
   ordersshow-links:
-    address-book: "Imenik strank"
+    address-book: "Imenik kontaktov"
     notes-save: "Shrani"
     buy: "Nakup"
 
@@ -164,7 +164,8 @@ si:
   ordersindex-notifications:
     customer-info: "Kontaktne informacije stranke"
     customer-info-explanation: "na voljo le ob nakupu tega kontakta."
-    to-see-address-book: "za dostop do imenika strank"
+    to-see-address-book: "za dostop do imenika kontaktov"
+    to-see-reserved: "za dostop do rezerviranih kontaktov"
 
 # Buttons
   ordersindex-buttons: 

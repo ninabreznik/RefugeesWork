@@ -1,4 +1,9 @@
-<% if @lead.present? %> 
+<html>
+<head>
+  <title></title>
+</head>
+<body class="body_leads_show">
+  <% if @lead.present? %> 
     <div class="lead_show">
       <div class="lead_show_title">
         <%= @lead.business_type %> 
@@ -47,6 +52,5 @@
 <% else %>
   This lead isn't available.
 <% end %>
-
-
-
+</body>
+</html>

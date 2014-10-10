@@ -14,23 +14,44 @@ class LeadsController < ApplicationController
 
   def new
     @lead = Lead.new
+    # @business_types = [
+    #   ["Painting", "Painting"], 
+    #   ["Fasades", "Fasades"], 
+    #   ["Renovations", "Renovations"],
+    #   ["Mechanical Installations", "Mechanical Installations"],
+    #   ["Electrical Installations", "Electrical Installations"], 
+    #   ["Knauf", "Knauf"],
+    #   ["Ceramics", "Ceramics"], 
+    #   ["Parquet", "Parquet"], 
+    #   ["Roofing", "Roofing"], 
+    #   ["Masonry", "Masonry"]
+    # ]
+
+    # @time = [
+    #   ["As soon as possible"], 
+    #   ["In the next 14 days"], 
+    #   ["In 1-3 months"], 
+    #   ["Flexible"]
+    # ]
+ 
     @business_types = [
-      ["Painting", "Painting"], 
-      ["Fasades", "Fasades"], 
-      ["Renovations", "Renovations"],
-      ["Mechanical Installations", "Mechanical Installations"],
-      ["Electrical Installations", "Electrical Installations"], 
-      ["Knauf", "Knauf"],
-      ["Ceramics", "Ceramics"], 
-      ["Parquet", "Parquet"], 
-      ["Roofing", "Roofing"], 
-      ["Masonry", "Masonry"]
+      ["Slikopleskarstvo", "Slikopleskarstvo"], 
+      ["Fasaderstvo", "Fasaderstvo"], 
+      ["Renovacije", "Renovacije"],
+      ["Strojne instalacije", "Strojne instalacije"],
+      ["Električne instalacije", "Električne instalacije"], 
+      ["Suhomontaža", "Suhomontaža"],
+      ["Keramičastvo", "Keramičastvo"], 
+      ["Parketarstvo", "Parketarstvo"], 
+      ["Krovstvo", "Krovstvo"], 
+      ["Mizarstvo", "Mizarstvo"]
     ]
+
     @time = [
-      ["As soon as possible"], 
-      ["In the next 14 days"], 
-      ["In 1-3 months"], 
-      ["Flexible"]
+      ["Takoj"], 
+      ["V naslednjih 14 dneh"], 
+      ["V 1-3 mesecev"], 
+      ["Po dogovoru"]
     ]
   end
 

@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   protect_from_forgery :except => [:create]
+  # before_action :authenticate_user!
   
   def index
     @orders = Order.all

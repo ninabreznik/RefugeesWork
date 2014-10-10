@@ -26,6 +26,20 @@ Buy-Button-Color = #FFAE4D
 // ::: BODY ::: //
 Offer-Font-Color = #606060
 
+// :::::::::::: MIXINS :::::::::::::: //
+
+body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
+  background-image  backgroundImage
+  margin 0px
+  font-size 10px
+  color #606060
+  font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+  a  
+    text-decoration none
+    color #606060
+    font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+
+
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
 
 .top_menu_bar
@@ -38,7 +52,8 @@ Offer-Font-Color = #606060
   width 100%
   height 33px
   padding-bottom 7px
-  .logged_user
+  .logged_user, 
+  .not_logged_user
     shift(0.019)
     font-size 12px
     display inline-block
@@ -143,416 +158,27 @@ Offer-Font-Color = #606060
       color Lead-Orange
       -webkit-font-smoothing: antialiased
 
-body
-  background-image url("./subtle_zebra_3d.png") 
-  margin 0px
-  font-size 10px
-  color #606060
-  font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
-  
-  a  
-    text-decoration none
-    color #606060
-    font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
-
 // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
 
-
-.columns
-  opacity 0.9
-  shift (-1/15)
-  width 70%
-  max-width 1100px
-  min-width 800px
-  margin 50px auto
-  -webkit-column-count 3
-  -webkit-column-gap 10px
-  -webkit-column-fill auto
-  -moz-column-count 3
-  -moz-column-gap 10px
-  -moz-column-fill: auto
-  column-count: 3
-  column-gap: 15px
-  column-fill: auto
-.lead_box
-  vertical-align bottom
-  -webkit-column-break-inside: avoid
-  -moz-column-break-inside: avoid
-  column-break-inside: avoid
-  background-color white
-  background-clip padding-box
-  border-radius 4px
-  box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-  border 1px solid #ccc
-  margin-bottom 15px
-  line-break 1px
-  .lead_title
-    background-color Lead-Orange
-    border-top-left-radius 4px
-    border-top-right-radius 4px
-    padding 10px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    font-size 12px
-    border-bottom 1px solid #e7e7e7
-    &:hover
-      background-color Lead-Orange-light
-      border-top-left-radius 4px
-      border-top-right-radius 4px
-      padding 10px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 12px
-      border-bottom 1px solid #e7e7e7
-    .fa.fa-star
-      color #fcd229
-      font-size 16px
-      &:hover
-        color #606060
-  .lead_body
-    font-size 10px
-    padding 10px
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color #606060
-    line-height 150%
-    .lead_subtitle
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      padding-top 7px
-
-// :::::::::::: LEADS/show => individual lead :::::::::::: //
-
-.lead_show
-  opacity 0.9
-  position relative
-  margin 60px auto  80px 0px
-  padding-bottom 40px
-  width 70%
-  max-width 1100px
-  min-width 800px
-  shift(0.079)
-  vertical-align bottom
-  -webkit-column-break-inside: avoid
-  -moz-column-break-inside: avoid
-  column-break-inside: avoid
-  background-color white
-  background-clip padding-box
-  border-radius 4px
-  box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-  border 1px solid #ccc
-  line-break 1px  
-  .lead_show_title
-    background-color Lead-Orange
-    border-top-left-radius 4px
-    border-top-right-radius 4px
-    padding 20px
-    font-weight bold
-    text-align center
-    -webkit-font-smoothing: antialiased
-    font-size 30px
-    border-bottom 1px solid #e7e7e7
-  .lead_show_body
-    font-size 16px
-    padding-top 7px
-    padding-left 25px
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color #606060
-    line-height 150%
-    .lead_show_subtitle
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      margin-top 20px
-      margin-right 15px
-  .lead_show_price
-    // shift(0.423)
-    text-align center
-    font-size 16px
-    padding 10px
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color #606060
-    line-height 150%
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    padding-top 7px
-    margin-top 50px
-  .lead_show_buy input,   
-  .lead_show_buy a 
-    span(1/7)
-    margin-top 0px
-    color #606060
-    center()
-    position relative
-    width 100px
-    text-align center
-    line-height 24px
-    background-color Buy-Button-Color
-    padding 5px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    font-size 14px
-    border 1px solid #E8E8E8  
-    border-radius 4px
-    &:hover
-      background-color #B8B8B8 
-
-
-// :::::::::::: ORDERS/show => buy lead :::::::::::: //
-
-.order_show
-  opacity 0.9
-  position relative
-  padding-bottom 80px 
-  margin 60px auto 60px 0px
-  width 70%
-  max-width 1100px
-  min-width 800px
-  shift(0.079)
-  vertical-align bottom
-  -webkit-column-break-inside: avoid
-  -moz-column-break-inside: avoid
-  column-break-inside: avoid
-  background-color white
-  background-clip padding-box
-  border-radius 4px
-  box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-  border 1px solid #ccc
-  line-break 1px  
-  .order_show_title
-    background-color Lead-Orange
-    border-top-left-radius 4px
-    border-top-right-radius 4px
-    padding 20px
-    font-weight bold
-    text-align center
-    -webkit-font-smoothing: antialiased
-    font-size 30px
-    border-bottom 1px solid #e7e7e7
-  .order_show_body
-    font-size 16px
-    padding-top 7px
-    padding-left 25px
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color #606060
-    line-height 150%
-    .order_show_subtitle
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      margin-top 20px
-      margin-right 15px
-  .order_show_price
-    text-align center
-    font-size 16px
-    padding 10px
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color #606060
-    line-height 150%
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    padding-top 7px
-    margin-top 50px
-  .payment_buttons_choose_payment_text
-    text-align center
-    padding 7px
-  .order_show_buy input,   
-  .order_show_buy a 
-    color #606060
-    span(1/7)
-    shift(0.3)
-    position relative
-    width 100px
-    text-align center
-    background-color Buy-Button-Color
-    padding 5px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    font-size 14px
-    border 1px solid #E8E8E8  
-    border-radius 4px
-    &:hover
-      background-color #B8B8B8
-.order_show_notes
-  margin-top 50px
-  margin-bottom 50px
-  font-size 20px
-  // font-weight bold
-  shift(0.08)
-  .order_show_notes_title
-    shift(0.008)
-    margin-bottom 4px
-    width 100px
-  #order_notes
-    position relative
-    text-decoration none
-    color #606060
-    font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
-    padding 20px
-    font-size 20px 
-    height 400px
-    width 67%
+.body_leads_index
+  body-mixin()
+  .columns
+    opacity 0.9
+    shift (-1/15)
+    width 70%
     max-width 1100px
     min-width 800px
-    vertical-align bottom
-    -webkit-column-break-inside: avoid
-    -moz-column-break-inside: avoid
-    column-break-inside: avoid
-    background-color white
-    background-clip padding-box
-    border-radius 4px
-    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-    border 1px solid #ccc
-    margin-bottom 7px
-    margin-top 7px
-    line-break 1px 
-  .order_show_notes_submit input
-  .order_show_notes_submit a
-    margin-left 799px
-    margin-top 10px
-    color #606060
-    width 100px
-    line-height 24px
-    text-align center
-    background-color #B8B8B8
-    padding 5px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    font-size 12px
-    border 1px solid #E8E8E8  
-    border-radius 4px
-    &:hover
-      background-color Buy-Button-Color
-  
-
-
-      
-
-// :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
-
-.offer
-  opacity 0.9
-  margin 38px auto
-  padding 100px
-  background-color white
-  .offer_title
-    center(420px)
-    color Offer-Font-Color
-    font-weight bold
-    font-size 28px
-    margin-bottom 30px
-  .offer_company_info 
-    shift(0.61)
-    color #606060
-    padding 10px
-    border 4px solid #e7e7e7
-    box-shadow inset 0 0 0 0 #CCC
-    border-radius 4px
-    margin-bottom 7px
-  .offer_date
-    color #606060
-    font-size 16px
-    margin-bottom 20px
-    shift(-0.2)
-    text-align right
-  .offer_sosed_info
-    shift(0.075)
-    margin-top 20px
-    color #606060
-    text-align left
-    padding 10px
-    border 4px solid #e7e7e7
-    box-shadow inset 0 0 0 0 #CCC
-    border-radius 4px
-    .offer_sosed_info_price td,
-      font-weight bold
-      padding 4px
-      font-size 12px
-      background-color Lead-Subtitle     
-    .offer_sosed_info_item td
-      font-weight bold
-      padding 4px
-      font-size 12px
-  .offer_show_lead
-    // position relative 
-    top 30px
-    center(70%)
-    shift(-0.07)
-    height 30%
-    width 70%
-    vertical-align bottom
-    -webkit-column-break-inside: avoid
-    -moz-column-break-inside: avoid
-    column-break-inside: avoid
-    background-color white
-    background-clip padding-box
-    border-radius 4px
-    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-    border 1px solid #ccc
-    margin-bottom 10px
-    margin-top 7px
-    line-break 1px  
-    .offer_show_lead_title
-      background-color Lead-Orange
-      border-top-left-radius 4px
-      border-top-right-radius 4px
-      padding 10px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 20px
-      border-bottom 1px solid #e7e7e7
-    .offer_show_lead_body
-      font-size 16px
-      padding-top 3px
-      padding-left 25px
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-      color #606060
-      line-height 150%
-      .offer_show_lead_subtitle
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        // padding-top 4px
-        // padding-bottom 4px
-        // padding-left 4px
-        margin-top 20px
-        // background-color Lead-Subtitle
-        margin-right 15px
-      .ordersindex-notifications.customer-info
-        color red
-  .offer_instructions
-    width 70%
-    margin-top 70px
-    font-size 14px
-    shift(0.075)
-    // width 850px
-
-// :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
-
-.address_book_reserved_leads
-  opacity 0.9
-  shift(0.37)
-  margin-top 60px
-  font-size 20px
-  font-weight bold
-.address_book_columns
-  shift (-1/15)
-  width 70%
-  max-width 1100px
-  min-width 800px
-  margin 50px auto
-  -webkit-column-count 3
-  -webkit-column-gap 10px
-  -webkit-column-fill auto
-  -moz-column-count 3
-  -moz-column-gap 10px
-  -moz-column-fill: auto
-  column-count: 3
-  column-gap: 15px
-  column-fill: auto
-  .address_book_lead_box
+    margin 50px auto
+    -webkit-column-count 3
+    -webkit-column-gap 10px
+    -webkit-column-fill auto
+    -moz-column-count 3
+    -moz-column-gap 10px
+    -moz-column-fill: auto
+    column-count: 3
+    column-gap: 15px
+    column-fill: auto
+  .lead_box
     vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
@@ -564,127 +190,7 @@ body
     border 1px solid #ccc
     margin-bottom 15px
     line-break 1px
-    .address_book_lead_title
-      background-color Lead-Orange
-      border-top-left-radius 4px
-      border-top-right-radius 4px
-      padding 10px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 12px
-      border-bottom 1px solid #e7e7e7
-      &:hover
-        background-color Lead-Orange-light
-        border-top-left-radius 4px
-        border-top-right-radius 4px
-        padding 10px
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        font-size 12px
-        border-bottom 1px solid #e7e7e7      
-    .address_book_lead_body
-      font-size 10px
-      padding 10px
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-      color #606060
-      line-height 150%
-      .address_book_lead_subtitle
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        padding-top 7px
-    .address_book_lead_notification
-      font-size 10px
-      padding 10px
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-      color #606060
-      line-height 150%
-      font-weight bold
-      padding-top 7px
-      .address_book_lead_notification_explanation
-        font-weight normal
-    .address_book_buttons
-      .address_book_buy_button
-        center()
-        color #606060
-        border 1px solid #E8E8E8  
-        cursor pointer
-        width 57px
-        line-height 16px
-        font-size 10px
-        font-weight bold
-        position relative
-        border-radius 4px
-        padding 4px
-        margin-top 10px
-        margin-bottom 10px  
-        text-align center
-        background-color #B8B8B8
-        -webkit-font-smoothing: antialiased
-        &:hover
-          background-color Buy-Button-Color
-      .address_book_remove_button input
-      .address_book_remove_button a  
-        center()
-        color #606060
-        border 1px solid white  
-        cursor pointer
-        // text-decoration underline
-        line-height 16px
-        font-size 10px
-        font-weight normal
-        position relative
-        border-radius 4px
-        // padding 4px
-        margin-bottom 7px  
-        text-align center
-        background-color white
-        -webkit-font-smoothing: antialiased
-        // font-weight bold 
-.address_book_link_to_signup
-  width 70%
-  font-size 16px
-  font-weight bold
-  max-width 1100px
-  min-width 800px
-  margin-top 100px
-  margin-left 270px
-  a[href="/users/sign_up"],
-  a[href="/users/sign_in"]  
-    text-decoration underline
-
-
-  // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
-
-.address_book_columns
-  shift (-1/15)
-  width 70%
-  max-width 1100px
-  min-width 800px
-  margin 50px auto
-  -webkit-column-count 3
-  -webkit-column-gap 10px
-  -webkit-column-fill auto
-  -moz-column-count 3
-  -moz-column-gap 10px
-  -moz-column-fill: auto
-  column-count: 3
-  column-gap: 15px
-  column-fill: auto
-  .address_book_lead_box
-    vertical-align bottom
-    -webkit-column-break-inside: avoid
-    -moz-column-break-inside: avoid
-    column-break-inside: avoid
-    background-color white
-    background-clip padding-box
-    border-radius 4px
-    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-    border 1px solid #ccc
-    margin-bottom 15px
-    line-break 1px
-    .address_book_lead_title
+    .lead_title
       background-color Lead-Orange
       border-top-left-radius 4px
       border-top-right-radius 4px
@@ -702,113 +208,36 @@ body
         -webkit-font-smoothing: antialiased
         font-size 12px
         border-bottom 1px solid #e7e7e7
-    .address_book_lead_body
+      .fa.fa-star
+        color #fcd229
+        font-size 16px
+        &:hover
+          color #606060
+    .lead_body
       font-size 10px
       padding 10px
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
       color #606060
       line-height 150%
-      .address_book_lead_subtitle
+      .lead_subtitle
         font-weight bold
         -webkit-font-smoothing: antialiased
         padding-top 7px
-    .address_book_lead_notes
-      margin-left 6px
-      #order_notes
-        position relative
-        text-decoration none
-        color #606060
-        font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
-        padding 7px
-        font-size 10px 
-        height 150px
-        width 260px
-        vertical-align bottom
-        -webkit-column-break-inside: avoid
-        -moz-column-break-inside: avoid
-        column-break-inside: avoid
-        background-color white
-        background-clip padding-box
-        border-radius 4px
-        box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-        border 1px solid #ccc
-        margin-bottom 7px
-        margin-top 7px
-        line-break 1px 
-      .address_book_lead_notes_button input
-      .address_book_lead_notes_button a
-        shift(0.673)
-        margin-bottom 7px
-        color #606060
-        width 67px
-        line-height 16px
-        text-align center
-        background-color #B8B8B8
-        padding 4px
-        width 80px
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        font-size 10px
-        border 1px solid #E8E8E8  
-        border-radius 4px
-        &:hover
-          background-color Buy-Button-Color
-    .address_book_link_to-signup"
-      font-size 12px
-.address_book_bought_leads
-  font-size 20px
-  font-weight bold
-  width 70%
-  max-width 1100px
-  min-width 800px
-  margin-top 100px
-  margin-left 450px
-.address_book_link_to_signup
-  width 70%
-  font-size 16px
-  font-weight bold
-  max-width 1100px
-  min-width 800px
-  margin-top 100px
-  margin-left 270px
 
+// :::::::::::: LEADS/show => individual lead :::::::::::: //
 
-// :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: //
-
-.new_lead_confirmation
-  margin-top 200px
-  padding 20px
-  center(420px)
-  .new_lead_confirmation_thank_you
-    font-weight bold
-    font-size 20px
-    padding-top 20px
-  .new_lead_confirmation_text
-    font-size 16px
-    padding-top 40px
-  .new_lead_confirmation_signature
-    font-size 14px
-    padding-top 20px
-
-// :::::::::::: PROFILE :::::::::::: //
-
-.profile_dashboard_columns
-  shift (-1/15)
-  width 70%
-  max-width 1100px
-  min-width 800px
-  margin 50px auto
-  -webkit-column-count 3
-  -webkit-column-gap 10px
-  -webkit-column-fill auto
-  -moz-column-count 3
-  -moz-column-gap 10px
-  -moz-column-fill: auto
-  column-count: 3
-  column-gap: 15px
-  column-fill: auto
-  .profile_dashboard_box
+.body_leads_show
+  body-mixin()
+  .lead_show
+    opacity 0.9
+    position relative
+    margin 60px auto  80px 0px
+    padding-bottom 40px
+    width 70%
+    max-width 1100px
+    min-width 800px
+    shift(0.079)
     vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
@@ -818,326 +247,1051 @@ body
     border-radius 4px
     box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
     border 1px solid #ccc
-    margin-bottom 15px
-    line-break 1px
-    .profile_dashboard_title
-      text-align center
-      background-color #82c0c7
+    line-break 1px  
+    .lead_show_title
+      background-color Lead-Orange
       border-top-left-radius 4px
       border-top-right-radius 4px
-      padding 10px
+      padding 20px
       font-weight bold
+      text-align center
       -webkit-font-smoothing: antialiased
-      font-size 12px
+      font-size 30px
       border-bottom 1px solid #e7e7e7
-    .profile_dashboard_body
-      padding 30px
+    .lead_show_body
+      font-size 16px
+      padding-top 7px
+      padding-left 25px
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
       color #606060
-      text-align center
-      .profile_dashboard_body_username
-        font-size 20px
-        padding-bottom 20px
-        font-weight bold
-      .profile_dashboard_body_logout,
-      .profile_dashboard_body_edit
+      line-height 150%
+      .lead_show_subtitle
         font-weight bold
         -webkit-font-smoothing: antialiased
-        padding-top 7px
-        font-size 12px
-        display inline-block
-        text-align right
-        text-decoration underline
-      .profile_dashboard_body_wallet_amount
-        font-size 80px
-        padding 24px
-      .profile_dashboard_body_wallet_transfer
-        font-size 10px
-        font-weight bold
-        // text-decoration underline
-      .profile_dashboard_body_bought_leads_amount
-        font-size 100px
-        padding 24px
-      .profile_dashboard_title_login_or_signup
-        font-size 14px
-        font-weight bold
-        .profile_dashboard_body_signup
-          padding-bottom 7px
-          font-size 14px
-          &:hover
-            text-decoration underline
-        .profile_dashboard_body_login
-          font-size 14px
-          &:hover
-            text-decoration underline          
-      .profile_dashboard_body_bought_leads_last
-        font-size 24px
-        font-weight bold
-        padding 24px
-
-// :::::::::::: ABOUT :::::::::::: //
-
-.info_body
-  margin-left 96px
-  padding 50px
-  width 69%
-  max-width 1100px
-  min-width 800px
-  margin-top 40px
-  background-color white
-  font-size 12px
-  color Offer-Font-Color
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  line-height 150% 
-  .info_thanks
-    text-align center
-    color Offer-Font-Color
-    font-weight bold
-    font-size 28px
-    margin-bottom 30px  
-  .info_table
-    center(420px)
-    margin-top 20px
-    color #606060
-    text-align left
-    padding 10px
-    border 4px solid #e7e7e7
-    box-shadow inset 0 0 0 0 #CCC
-    border-radius 4px
-    .info_table_item
+        margin-top 20px
+        margin-right 15px
+    .lead_show_price
+      // shift(0.423)
+      text-align center
+      font-size 16px
+      padding 10px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
       font-weight bold
-      padding 4px
-      font-size 12px
-      background-color Lead-Subtitle 
-      td
+      -webkit-font-smoothing: antialiased
+      padding-top 7px
+      margin-top 50px
+    .lead_show_buy input,   
+    .lead_show_buy a 
+      span(1/7)
+      margin-top 0px
+      color #606060
+      center()
+      position relative
+      width 100px
+      text-align center
+      line-height 24px
+      background-color Buy-Button-Color
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 14px
+      border 1px solid #E8E8E8  
+      border-radius 4px
+      &:hover
+        background-color #B8B8B8 
+
+
+// :::::::::::: ORDERS/show => buy lead :::::::::::: //
+.body_orders_show
+  body-mixin()
+  .order_show
+    opacity 0.9
+    position relative
+    padding-bottom 80px 
+    margin 60px auto 60px 0px
+    width 70%
+    max-width 1100px
+    min-width 800px
+    shift(0.079)
+    vertical-align bottom
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid
+    background-color white
+    background-clip padding-box
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #ccc
+    line-break 1px  
+    .order_show_title
+      background-color Lead-Orange
+      border-top-left-radius 4px
+      border-top-right-radius 4px
+      padding 20px
+      font-weight bold
+      text-align center
+      -webkit-font-smoothing: antialiased
+      font-size 30px
+      border-bottom 1px solid #e7e7e7
+    .order_show_body
+      font-size 16px
+      padding-top 7px
+      padding-left 25px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
+      .order_show_subtitle
         font-weight bold
-        padding 4px
-        font-size 12px 
-  .info_faq_title
-    text-align left
-    color Offer-Font-Color
-    font-weight bold
-    font-size 28px
-    margin-top 50px 
-    margin-bottom 30px  
-  .info_faq_question
-    font-weight bold
-    font-size 14px
-    margin-bottom 4px
-  .info_faq_answer
-    margin-bottom 30px
-    font-size 14px
-
-// :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
-
-.login
-  margin-top 60px
-  margin-left 100px  
-  .login_title
-    font-size 28px
-    font-weight bold
-    margin-bottom 20px
-  .login_form_email,
-  .login_form_password
-    font-size 12px
-    margin-bottom 14px
-    #user_email,
-    #user_password
-      padding 4px
-      border-radius 4px
-      margin-top 4px
-      height 26px
-      width 200px
+        -webkit-font-smoothing: antialiased
+        margin-top 20px
+        margin-right 15px
+    .order_show_price
+      text-align center
+      font-size 16px
+      padding 10px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      padding-top 7px
+      margin-top 50px
+    .payment_buttons_choose_payment_text
+      text-align center
+      padding 7px
+    .order_show_buy input,   
+    .order_show_buy a 
+      color #606060
+      span(1/7)
+      shift(0.3)
+      position relative
+      width 100px
+      text-align center
+      background-color Buy-Button-Color
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 14px
       border 1px solid #E8E8E8  
-  .login_form_remember_me
-    font-size 10px  
-  .login_form_submit input
-  .login_form_submit a 
-    color #606060
-    border 1px solid #E8E8E8  
-    cursor pointer
-    width 57px
-    line-height 16px
-    font-size 10px
-    font-weight bold
-    position relative
-    border-radius 4px
-    padding 4px
-    margin-top 10px
-    margin-bottom 10px  
-    text-align center
-    background-color Buy-Button-Color
-    -webkit-font-smoothing: antialiased
-    &:hover
-      background-color #B8B8B8
-  .login_shared_links
-    font-size 12px
-    &:hover
-      text-decoration underline
-
-// :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
-  
-
-.signup
-  margin-top 60px
-  margin-left 100px  
-  .signup_title
-    font-size 28px
-    font-weight bold
-    margin-bottom 20px
-  .signup_form_email,
-  .signup_form_password,
-  .signup_form_password_confirmation
-    font-size 12px
-    margin-bottom 14px
-    #user_email,
-    #user_password,
-    #user_password_confirmation
-      padding 4px
       border-radius 4px
-      margin-top 4px
-      height 26px
-      width 200px
-      border 1px solid #E8E8E8  
-  .signup_form_submit input
-  .signup_form_submit a 
-    color #606060
-    border 1px solid #E8E8E8  
-    cursor pointer
-    width 57px
-    line-height 16px
-    font-size 10px
-    font-weight bold
-    position relative
-    border-radius 4px
-    padding 4px
-    margin-top 10px
-    margin-bottom 10px  
-    text-align center
-    background-color Buy-Button-Color
-    -webkit-font-smoothing: antialiased
-    &:hover
+      &:hover
+        background-color #B8B8B8
+  .order_show_notes
+    margin-top 50px
+    margin-bottom 50px
+    font-size 20px
+    // font-weight bold
+    shift(0.08)
+    .order_show_notes_title
+      shift(0.008)
+      margin-bottom 4px
+      width 100px
+    #order_notes
+      position relative
+      text-decoration none
+      color #606060
+      font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+      padding 20px
+      font-size 20px 
+      height 400px
+      width 67%
+      max-width 1100px
+      min-width 800px
+      vertical-align bottom
+      -webkit-column-break-inside: avoid
+      -moz-column-break-inside: avoid
+      column-break-inside: avoid
+      background-color white
+      background-clip padding-box
+      border-radius 4px
+      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+      border 1px solid #ccc
+      margin-bottom 7px
+      margin-top 7px
+      line-break 1px 
+    .order_show_notes_submit input
+    .order_show_notes_submit a
+      margin-left 799px
+      margin-top 10px
+      color #606060
+      width 100px
+      line-height 24px
+      text-align center
       background-color #B8B8B8
-  .signup_shared_links
-    font-size 12px
-    &:hover
-      text-decoration underline
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 12px
+      border 1px solid #E8E8E8  
+      border-radius 4px
+      &:hover
+        background-color Buy-Button-Color
     
 
-// :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: //
 
-.password_new
-  margin-top 60px
-  margin-left 100px  
-  .password_new_title
-    font-size 28px
-    font-weight bold
-    margin-bottom 20px
-  .password_new_form_email
-    font-size 12px
-    margin-bottom 14px
-    #user_email
-      padding 4px
+        
+
+  // :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
+
+.body_bank_transaction
+  body-mixin()
+  .offer
+    opacity 0.9
+    margin 38px auto
+    padding 100px
+    background-color white
+    .offer_title
+      center(420px)
+      color Offer-Font-Color
+      font-weight bold
+      font-size 28px
+      margin-bottom 30px
+    .offer_company_info 
+      shift(0.61)
+      color #606060
+      padding 10px
+      border 4px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
       border-radius 4px
-      margin-top 4px
-      height 26px
-      width 300px
-      border 1px solid #E8E8E8  
-  .password_new_form_submit input
-  .password_new_form_submit a 
-    color #606060
-    border 1px solid #E8E8E8  
-    cursor pointer
-    width 220px
-    line-height 16px
-    font-size 10px
+      margin-bottom 7px
+    .offer_date
+      color #606060
+      font-size 16px
+      margin-bottom 20px
+      shift(-0.2)
+      text-align right
+    .offer_sosed_info
+      shift(0.075)
+      margin-top 20px
+      color #606060
+      text-align left
+      padding 10px
+      border 4px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
+      border-radius 4px
+      .offer_sosed_info_price td,
+        font-weight bold
+        padding 4px
+        font-size 12px
+        background-color Lead-Subtitle     
+      .offer_sosed_info_item td
+        font-weight bold
+        padding 4px
+        font-size 12px
+    .offer_show_lead
+      // position relative 
+      top 30px
+      center(70%)
+      shift(-0.07)
+      height 30%
+      width 70%
+      vertical-align bottom
+      -webkit-column-break-inside: avoid
+      -moz-column-break-inside: avoid
+      column-break-inside: avoid
+      background-color white
+      background-clip padding-box
+      border-radius 4px
+      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+      border 1px solid #ccc
+      margin-bottom 10px
+      margin-top 7px
+      line-break 1px  
+      .offer_show_lead_title
+        background-color Lead-Orange
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+        padding 10px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 20px
+        border-bottom 1px solid #e7e7e7
+      .offer_show_lead_body
+        font-size 16px
+        padding-top 3px
+        padding-left 25px
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        color #606060
+        line-height 150%
+        .offer_show_lead_subtitle
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          // padding-top 4px
+          // padding-bottom 4px
+          // padding-left 4px
+          margin-top 20px
+          // background-color Lead-Subtitle
+          margin-right 15px
+        .ordersindex-notifications.customer-info
+          color red
+    .offer_instructions
+      width 70%
+      margin-top 70px
+      font-size 14px
+      shift(0.075)
+      // width 850px
+
+  // :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
+.body_orders_reserved
+  body-mixin()
+  .address_book_reserved_leads
+    opacity 0.9
+    shift(0.37)
+    margin-top 60px
+    font-size 20px
     font-weight bold
-    position relative
-    border-radius 4px
-    padding 4px
-    margin-top 10px
-    margin-bottom 10px  
-    text-align center
-    background-color Buy-Button-Color
-    -webkit-font-smoothing: antialiased
-    &:hover
-      background-color #B8B8B8
-  .password_new_shared_links
-    font-size 12px
-    &:hover
+  .address_book_columns
+    shift (-1/15)
+    width 70%
+    max-width 1100px
+    min-width 800px
+    margin 50px auto
+    -webkit-column-count 3
+    -webkit-column-gap 10px
+    -webkit-column-fill auto
+    -moz-column-count 3
+    -moz-column-gap 10px
+    -moz-column-fill: auto
+    column-count: 3
+    column-gap: 15px
+    column-fill: auto
+    .address_book_lead_box
+      vertical-align bottom
+      -webkit-column-break-inside: avoid
+      -moz-column-break-inside: avoid
+      column-break-inside: avoid
+      background-color white
+      background-clip padding-box
+      border-radius 4px
+      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+      border 1px solid #ccc
+      margin-bottom 15px
+      line-break 1px
+      .address_book_lead_title
+        background-color Lead-Orange
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+        padding 10px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 12px
+        border-bottom 1px solid #e7e7e7
+        &:hover
+          background-color Lead-Orange-light
+          border-top-left-radius 4px
+          border-top-right-radius 4px
+          padding 10px
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          font-size 12px
+          border-bottom 1px solid #e7e7e7      
+      .address_book_lead_body
+        font-size 10px
+        padding 10px
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        color #606060
+        line-height 150%
+        .address_book_lead_subtitle
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          padding-top 7px
+      .address_book_lead_notification
+        font-size 10px
+        padding 10px
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        color #606060
+        line-height 150%
+        font-weight bold
+        padding-top 7px
+        .address_book_lead_notification_explanation
+          font-weight normal
+      .address_book_buttons
+        .address_book_buy_button
+          center()
+          color #606060
+          border 1px solid #E8E8E8  
+          cursor pointer
+          width 57px
+          line-height 16px
+          font-size 10px
+          font-weight bold
+          position relative
+          border-radius 4px
+          padding 4px
+          margin-top 10px
+          margin-bottom 10px  
+          text-align center
+          background-color #B8B8B8
+          -webkit-font-smoothing: antialiased
+          &:hover
+            background-color Buy-Button-Color
+        .address_book_remove_button input
+        .address_book_remove_button a  
+          center()
+          color #606060
+          border 1px solid white  
+          cursor pointer
+          // text-decoration underline
+          line-height 16px
+          font-size 10px
+          font-weight normal
+          position relative
+          border-radius 4px
+          // padding 4px
+          margin-bottom 7px  
+          text-align center
+          background-color white
+          -webkit-font-smoothing: antialiased
+          // font-weight bold 
+.body_dummy_orders_reserved,
+  opacity 0.9
+  -webkit-filter: blur(1px); 
+  -moz-filter: blur(5px); 
+  -o-filter: blur(5px); 
+  -ms-filter: blur(5px); 
+  filter: blur(5px);
+  .reserved_link_to_signup
+    width 70%
+    font-size 16px
+    font-weight bold
+    max-width 1100px
+    min-width 800px
+    margin-top 100px
+    margin-left 270px
+    .address_book_signup,
+    .address_book_signin
       text-decoration underline
+
+
+    // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
+.body_orders_address_book
+  body-mixin()
+  .address_book_columns
+    shift (-1/15)
+    width 70%
+    max-width 1100px
+    min-width 800px
+    margin 50px auto
+    -webkit-column-count 3
+    -webkit-column-gap 10px
+    -webkit-column-fill auto
+    -moz-column-count 3
+    -moz-column-gap 10px
+    -moz-column-fill: auto
+    column-count: 3
+    column-gap: 15px
+    column-fill: auto
+    .address_book_lead_box
+      vertical-align bottom
+      -webkit-column-break-inside: avoid
+      -moz-column-break-inside: avoid
+      column-break-inside: avoid
+      background-color white
+      background-clip padding-box
+      border-radius 4px
+      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+      border 1px solid #ccc
+      margin-bottom 15px
+      line-break 1px
+      .address_book_lead_title
+        background-color Lead-Orange
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+        padding 10px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 12px
+        border-bottom 1px solid #e7e7e7
+        &:hover
+          background-color Lead-Orange-light
+          border-top-left-radius 4px
+          border-top-right-radius 4px
+          padding 10px
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          font-size 12px
+          border-bottom 1px solid #e7e7e7
+      .address_book_lead_body
+        font-size 10px
+        padding 10px
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        color #606060
+        line-height 150%
+        .address_book_lead_subtitle
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          padding-top 7px
+      .address_book_lead_notes
+        margin-left 6px
+        #order_notes
+          position relative
+          text-decoration none
+          color #606060
+          font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+          padding 7px
+          font-size 10px 
+          height 150px
+          width 260px
+          vertical-align bottom
+          -webkit-column-break-inside: avoid
+          -moz-column-break-inside: avoid
+          column-break-inside: avoid
+          background-color white
+          background-clip padding-box
+          border-radius 4px
+          box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+          border 1px solid #ccc
+          margin-bottom 7px
+          margin-top 7px
+          line-break 1px 
+        .address_book_lead_notes_button input
+        .address_book_lead_notes_button a
+          shift(0.673)
+          margin-bottom 7px
+          color #606060
+          width 67px
+          line-height 16px
+          text-align center
+          background-color #B8B8B8
+          padding 4px
+          width 80px
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          font-size 10px
+          border 1px solid #E8E8E8  
+          border-radius 4px
+          &:hover
+            background-color Buy-Button-Color
+      .address_book_link_to-signup"
+        font-size 12px
+  .address_book_bought_leads
+    font-size 20px
+    font-weight bold
+    width 70%
+    max-width 1100px
+    min-width 800px
+    margin-top 100px
+    margin-left 450px
+.body_dummy_orders_address_book
+  opacity 0.9
+  -webkit-filter: blur(1px); 
+  -moz-filter: blur(5px); 
+  -o-filter: blur(5px); 
+  -ms-filter: blur(5px); 
+  filter: blur(5px);
+
+  .address_book_link_to_signup
+    width 70%
+    font-size 16px
+    font-weight bold
+    max-width 1100px
+    min-width 800px
+    margin-top 100px
+    margin-left 270px
+    .address_book_signup,
+    .address_book_signin
+      text-decoration underline
+
+  // :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: //
+.body_new_lead_confirmation
+  body-mixin()
+  .new_lead_confirmation
+    margin-top 200px
+    padding 20px
+    center(420px)
+    .new_lead_confirmation_thank_you
+      font-weight bold
+      font-size 20px
+      padding-top 20px
+    .new_lead_confirmation_text
+      font-size 16px
+      padding-top 40px
+    .new_lead_confirmation_signature
+      font-size 14px
+      padding-top 20px
+
+  // :::::::::::: PROFILE :::::::::::: //
+.body_profile
+  body-mixin()
+  .profile_dashboard_columns
+    shift (-1/15)
+    width 70%
+    max-width 1100px
+    min-width 800px
+    margin 50px auto
+    -webkit-column-count 3
+    -webkit-column-gap 10px
+    -webkit-column-fill auto
+    -moz-column-count 3
+    -moz-column-gap 10px
+    -moz-column-fill: auto
+    column-count: 3
+    column-gap: 15px
+    column-fill: auto
+    .profile_dashboard_box
+      vertical-align bottom
+      -webkit-column-break-inside: avoid
+      -moz-column-break-inside: avoid
+      column-break-inside: avoid
+      background-color white
+      background-clip padding-box
+      border-radius 4px
+      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+      border 1px solid #ccc
+      margin-bottom 15px
+      line-break 1px
+      .profile_dashboard_title
+        text-align center
+        background-color #82c0c7
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+        padding 10px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        font-size 12px
+        border-bottom 1px solid #e7e7e7
+      .profile_dashboard_body
+        padding 30px
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        color #606060
+        text-align center
+        .profile_dashboard_body_username
+          font-size 20px
+          padding-bottom 20px
+          font-weight bold
+        .profile_dashboard_body_logout,
+        .profile_dashboard_body_edit
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          padding-top 7px
+          font-size 12px
+          display inline-block
+          text-align right
+          text-decoration underline
+        .profile_dashboard_body_wallet_amount
+          font-size 80px
+          padding 24px
+        .profile_dashboard_body_wallet_transfer
+          font-size 10px
+          font-weight bold
+          // text-decoration underline
+        .profile_dashboard_body_bought_leads_amount
+          font-size 100px
+          padding 24px
+        .profile_dashboard_title_login_or_signup
+          font-size 14px
+          font-weight bold
+          .profile_dashboard_body_signup
+            padding-bottom 7px
+            font-size 14px
+            &:hover
+              text-decoration underline
+          .profile_dashboard_body_login
+            font-size 14px
+            &:hover
+              text-decoration underline          
+        .profile_dashboard_body_bought_leads_last
+          font-size 24px
+          font-weight bold
+          padding 24px
+
+  // :::::::::::: ABOUT :::::::::::: //
+.body_about
+  body-mixin()
+  .info_body
+    margin-left 96px
+    padding 50px
+    width 69%
+    max-width 1100px
+    min-width 800px
+    margin-top 40px
+    background-color white
+    font-size 12px
+    color Offer-Font-Color
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    line-height 150% 
+    .info_thanks
+      text-align center
+      color Offer-Font-Color
+      font-weight bold
+      font-size 28px
+      margin-bottom 30px  
+    .info_table
+      center(420px)
+      margin-top 20px
+      color #606060
+      text-align left
+      padding 10px
+      border 4px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
+      border-radius 4px
+      .info_table_item
+        font-weight bold
+        padding 4px
+        font-size 12px
+        background-color Lead-Subtitle 
+        td
+          font-weight bold
+          padding 4px
+          font-size 12px 
+    .info_faq_title
+      text-align left
+      color Offer-Font-Color
+      font-weight bold
+      font-size 28px
+      margin-top 50px 
+      margin-bottom 30px  
+    .info_faq_question
+      font-weight bold
+      font-size 14px
+      margin-bottom 4px
+    .info_faq_answer
+      margin-bottom 30px
+      font-size 14px
+
+  // :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
+.body_devise_login
+  body-mixin(backgroundImage: url(./interior2.png))
+  background-repeat no-repeat
+  background-position center top
+  background-size cover
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover  
+  .login
+    margin-top 60px
+    margin-left 20px  
+    .login_title
+      font-size 28px
+      font-weight bold
+      margin-bottom 20px
+    .login_form_email,
+    .login_form_password
+      font-size 12px
+      margin-bottom 14px
+      #user_email,
+      #user_password
+        padding 4px
+        border-radius 4px
+        margin-top 4px
+        height 20px
+        width 200px
+        border 1px solid #E8E8E8  
+    .login_form_remember_me
+      font-size 10px  
+    .login_form_submit input
+    .login_form_submit a 
+      color #606060
+      border 1px solid #E8E8E8  
+      cursor pointer
+      width 57px
+      line-height 16px
+      font-size 10px
+      font-weight bold
+      position relative
+      border-radius 4px
+      padding 4px
+      margin-top 10px
+      margin-bottom 10px  
+      text-align center
+      background-color Buy-Button-Color
+      -webkit-font-smoothing: antialiased
+      &:hover
+        background-color #B8B8B8
+    .login_shared_links
+      font-size 12px
+      &:hover
+        text-decoration underline
+
+  // :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
+.body_devise_signup
+  body-mixin(backgroundImage: url(./interior6.png))
+  background-repeat no-repeat
+  background-position center top
+  background-size cover
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover  
+  .signup
+    margin-top 60px
+    margin-left 100px
+
+    .signup_title
+      font-size 28px
+      font-weight bold
+      margin-bottom 20px
+    .signup_form_email,
+    .signup_form_password,
+    .signup_form_password_confirmation
+      font-size 12px
+      margin-bottom 14px
+      #user_email,
+      #user_password,
+      #user_password_confirmation
+        padding 4px
+        border-radius 4px
+        margin-top 4px
+        height 20px
+        width 200px
+        border 1px solid #E8E8E8  
+    .signup_form_submit input
+    .signup_form_submit a 
+      color #606060
+      border 1px solid #E8E8E8  
+      cursor pointer
+      width 57px
+      line-height 16px
+      font-size 10px
+      font-weight bold
+      position relative
+      border-radius 4px
+      padding 4px
+      margin-top 10px
+      margin-bottom 10px  
+      text-align center
+      background-color Buy-Button-Color
+      -webkit-font-smoothing: antialiased
+      &:hover
+        background-color #B8B8B8
+    .signup_shared_links
+      font-size 12px
+      &:hover
+        text-decoration underline
+      
+
+  // :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: //
+.body_devise_password_new
+  body-mixin()
+  .password_new
+    margin-top 60px
+    margin-left 100px  
+    .password_new_title
+      font-size 28px
+      font-weight bold
+      margin-bottom 20px
+    .password_new_form_email
+      font-size 12px
+      margin-bottom 14px
+      #user_email
+        padding 4px
+        border-radius 4px
+        margin-top 4px
+        height 20px
+        width 300px
+        border 1px solid #E8E8E8  
+    .password_new_form_submit input
+    .password_new_form_submit a 
+      color #606060
+      border 1px solid #E8E8E8  
+      cursor pointer
+      width 220px
+      line-height 16px
+      font-size 10px
+      font-weight bold
+      position relative
+      border-radius 4px
+      padding 4px
+      margin-top 10px
+      margin-bottom 10px  
+      text-align center
+      background-color Buy-Button-Color
+      -webkit-font-smoothing: antialiased
+      &:hover
+        background-color #B8B8B8
+    .password_new_shared_links
+      font-size 12px
+      &:hover
+        text-decoration underline
+            
+  // :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
+.body_devise_users_edit
+  body-mixin()
+  .user_edit
+    margin-top 60px
+    margin-left 100px  
+    .user_edit_title
+      font-size 28px
+      font-weight bold
+      margin-bottom 20px
+    .user_edit_form_email,
+    .user_edit_form_password,
+    .user_edit_form_password_confirmation,
+    .user_edit_form_current_password
+      font-size 12px
+      margin-bottom 14px
+      #user_email,
+      #user_password,
+      #user_password_confirmation,
+      #user_current_password
+        padding 4px
+        border-radius 4px
+        margin-top 4px
+        height 20px
+        width 200px
+        border 1px solid #E8E8E8  
+    .user_edit_form_submit input
+    .user_edit_form_submit a 
+      color #606060
+      border 1px solid #E8E8E8  
+      cursor pointer
+      width 67px
+      line-height 16px
+      font-size 10px
+      font-weight bold
+      position relative
+      border-radius 4px
+      padding 4px
+      margin-top 10px
+      margin-bottom 10px  
+      text-align center
+      background-color Buy-Button-Color
+      -webkit-font-smoothing: antialiased
+      &:hover
+        background-color #B8B8B8
+    .user_edit_cancel_acount,
+    .user_edit_unhappy,
+    .user_edit_back
+      font-size 12px
+      &:hover
+        text-decoration underline
+    .user_edit_button_cancel_account input
+    .user_edit_button_cancel_account a
+      -webkit-font-smoothing: antialiased
+      color #606060
+      border 1px solid #E8E8E8  
+      cursor pointer
+      width 125px
+      line-height 16px
+      font-size 10px
+      font-weight bold
+      position relative
+      border-radius 4px
+      padding 4px
+      margin-top 10px
+      margin-bottom 10px  
+      text-align center
+      background-color Buy-Button-Color
+      &:hover
+        background-color #B8B8B8
+
+ // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
+.body_leads_new
+  body-mixin(backgroundImage: url(./interior1.png))
+  background-repeat no-repeat
+  background-position center top
+  background-size cover
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  .lead_new
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #9c9b9b
+    background-color Lead-Orange
+    span(1.3/4)
+    shift(0.45)
+    padding-bottom 14px
+    margin-top 50px
+    margin-bottom 100px
+    margin-left 100px  
+    .lead_new_title
+      -webkit-font-smoothing: antialiased
+      color white
+      padding-top 20px
+      padding-left 20px
+      padding-right 20px
+      font-size 28px
+      font-weight bold
+      margin-bottom 20px
+    .lead_new_instructions
+      -webkit-font-smoothing: antialiased
+      padding-left 20px
+      padding-right 20px
+      color white
+      font-size 20px
+      font-weight bold
+      margin-bottom 40px
+    .lead_new_form_business_type,
+    .lead_new_form_time,
+    .lead_new_form_zip,
+    .lead_new_form_description,
+    .lead_new_form_name,
+    .lead_new_form_email,
+    .lead_new_form_phone
+      padding-left 20px
+      padding-right 20px
+      font-size 12px
+      margin-bottom 14px
+      #lead_business_type,
+      #lead_time
+        color #606060
+        padding 4px
+        border-radius 4px
+        margin-top 4px
+        height 30px
+        width 310 px
+        border 1px solid #E8E8E8 
+        margin-top 
+      #lead_zip,
+      #lead_description,
+      #lead_name,
+      #lead_email,
+      #lead_phone
+        center()
+        padding 4px
+        border-radius 4px
+        margin-top 2px
+        margin-left 0px
+        height 20px
+        width 300px
+        border 1px solid #E8E8E8  
+    .lead_new_form_remember_me
+      font-size 10px  
+    .lead_new_form_submit input
+    .lead_new_form_submit a 
+      margin-left 240px
+      margin-top 10px 
+      padding 4px
+      color white
+      border 1px solid #fb651e  
+      cursor pointer
+      width 90px
+      line-height 20px
+      font-size 12px
+      font-weight bold
+      position relative
+      border-radius 4px
+      text-align center
+      background-color #fb651e
+      &:hover
+        background-color #B8B8B8
+        border 1px solid #B8B8B8
+    .lead_new_shared_links
+      font-size 12px
+      &:hover
+        text-decoration underline
+
+
+    
+
           
-// :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
 
-.user_edit
-  margin-top 60px
-  margin-left 100px  
-  .user_edit_title
-    font-size 28px
-    font-weight bold
-    margin-bottom 20px
-  .user_edit_form_email,
-  .user_edit_form_password,
-  .user_edit_form_password_confirmation,
-  .user_edit_form_current_password
-    font-size 12px
-    margin-bottom 14px
-    #user_email,
-    #user_password,
-    #user_password_confirmation,
-    #user_current_password
-      padding 4px
-      border-radius 4px
-      margin-top 4px
-      height 26px
-      width 200px
-      border 1px solid #E8E8E8  
-  .user_edit_form_submit input
-  .user_edit_form_submit a 
-    color #606060
-    border 1px solid #E8E8E8  
-    cursor pointer
-    width 67px
-    line-height 16px
-    font-size 10px
-    font-weight bold
-    position relative
-    border-radius 4px
-    padding 4px
-    margin-top 10px
-    margin-bottom 10px  
-    text-align center
-    background-color Buy-Button-Color
-    -webkit-font-smoothing: antialiased
-    &:hover
-      background-color #B8B8B8
-  .user_edit_cancel_acount,
-  .user_edit_unhappy,
-  .user_edit_back
-    font-size 12px
-    &:hover
-      text-decoration underline
-  .user_edit_button_cancel_account input
-  .user_edit_button_cancel_account a
-    -webkit-font-smoothing: antialiased
-    color #606060
-    border 1px solid #E8E8E8  
-    cursor pointer
-    width 125px
-    line-height 16px
-    font-size 10px
-    font-weight bold
-    position relative
-    border-radius 4px
-    padding 4px
-    margin-top 10px
-    margin-bottom 10px  
-    text-align center
-    background-color Buy-Button-Color
-    &:hover
-      background-color #B8B8B8
+      
+
+
+
     
 
           

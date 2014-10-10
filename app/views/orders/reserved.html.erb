@@ -2,7 +2,7 @@
 <head>
   <title></title>
 </head>
-<body>
+<body class="body_orders_reserved">
   <% if user_signed_in? && @orders.present? %>
   <div class="address_book_columns">
     <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
@@ -12,7 +12,7 @@
       </div>
       <div class="address_book_lead_body">
         <div class="address_book_lead_subtitle">
-          <%= order.selected.location %> </div>
+          <%= I18n.t'ordersindex-lead.location' %> </div> <%= order.selected.location %> 
         <div class="address_book_lead_subtitle">
           <%= I18n.t'ordersindex-lead.zip' %>:</div> <%= order.selected.zip %> 
         <div class="address_book_lead_subtitle">
@@ -46,7 +46,7 @@
         <div class="address_book_remove_button">
           <%= form_for(current_user.orders.find_by_selected_id(order.selected),
             html: { method: :delete }) do |c| %>
-          <%= c.submit 'OR remove this lead from reserved' %>
+          <%= c.submit 'ALI umakni kontakt iz rezerviranih' %>
             <% end %> 
         </div>
       </div>
@@ -54,11 +54,241 @@
       <% end %> 
   </div>
 <% else %>
-      <div class="address_book_link_to_signup">
-      You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}", 
-      new_user_registration_path %> or
+<div class="body_dummy_orders_reserved">
+  <div class="address_book_columns">
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Krovstvo
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija: </div> Kranj
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 4240 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>Prenova obstoječe strehe na stanovanjski hiši: dvokapnica 225 m2   - ostranitev obstoječe kritine   - letvanje + letve   - polaganje folije + folija   - prekrivanje z kritino Bramac / 2. opcija hosecra  - žlebovi + odtoki - aluminij 32 m + 14 m   - obrobe dimnika 2 kom   - montaža strešnih oken 5 kom
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>Po dogovoru 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Franci
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a> 
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/214" class="edit_order" id="edit_order_214" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Slikopleskarstvo
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija: </div> Maribor
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 2230 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>Pred oddajo želimo v celoti prebeliti 2,5 sobno stanovanje – 75m2 stanovanjske površine
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>V naslednjih 14 dneh 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Jožica
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a>  
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/217" class="edit_order" id="edit_order_217" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Fasaderstvo
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija: </div> Celje
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 3458 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>Barvanje Demit fasade stare 10 let na enonadstropni stanovanjski hiši
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>V 1-3 mesecev 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Mateja
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a>  
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/215" class="edit_order" id="edit_order_215" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Keramičastvo
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija:  </div> Ljubljana
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 1210 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>V kleti hiše želim položiti keramiko v treh prostorih. Do sedaj nismo še ničesar položenega.  Površina okoli 80m2
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>V 1-3 mesecev 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Marjan
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a>  
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/218" class="edit_order" id="edit_order_218" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Parketarstvo
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija:  </div> Ljubljana
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 1000 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>Brušenje in lakiranje klasičnega parketa v 70m2 veliki mansardi
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>V naslednjih 14 dneh 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Josip
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a>  
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/220" class="edit_order" id="edit_order_220" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Suhomontaža
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija:  </div> Koper
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 6221 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>V starejšem stanovanju želim znižati stropove na standardno višino
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>Po dogovoru 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Maša
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a> 
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/216" class="edit_order" id="edit_order_216" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+    <div class="address_book_lead_box">
+      <div class ="address_book_lead_title">
+        Renovacije
+      </div>
+      <div class="address_book_lead_body">
+        <div class="address_book_lead_subtitle">
+          Regija:  </div> Ljubljana
+        <div class="address_book_lead_subtitle">
+          Pošta:</div> 1000 
+        <div class="address_book_lead_subtitle">
+          Opis:</div>Obnova trosobnega stanovanja tudi z okni, kopalnico, skratka v celoti
+        <div class="address_book_lead_subtitle">
+          Kdaj?:</div>Po dogovoru 
+        <div class="address_book_lead_subtitle">
+          Ime:</div>Gorazd
+      </div>
+      <div class="address_book_lead_notification">
+        Kontaktne informacije stranke:
+        <div class="address_book_lead_notification_explanation">
+          (na voljo le ob nakupu tega kontakta.) 
+        </div>
+      </div>
+      <div class="address_book_buttons">
+        <div class="address_book_buy_button">
+          <a href="">Nakup</a> 
+        </div>
+        <div class="address_book_remove_button">
+          <form accept-charset="UTF-8" action="/orders/219" class="edit_order" id="edit_order_219" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="zvEGWnr5kPN0EIEJ05A7Y2nG3WwNstewjEbFxhWSIlM=" /></div>
+          <input name="commit" type="submit" value="ALI umakni kontakt iz rezerviranih" />
+</form>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="reserved_link_to_signup">
+      You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
+      new_user_registration_path, :class=>"address_book_signup" %> or
       <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
-      new_user_session_path %> <%= I18n.t'ordersindex-notifications.to-see-address-book' %> . 
+      new_user_session_path, :class=>"address_book_signin" %> <%= I18n.t'ordersindex-notifications.to-see-reserved' %>. 
     </div>
 <% end %>
 

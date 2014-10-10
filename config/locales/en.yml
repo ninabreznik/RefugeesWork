@@ -167,7 +167,7 @@ en:
     customer-info: "Customer contact information"
     customer-info-explanation: "available only if you buy this lead"
     to-see-address-book: "to see customers in your Address book"
-
+    to-see-reserved: "to see reserved customers"
 # Buttons
   ordersindex-buttons: 
     buy: "Buy"

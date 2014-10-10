@@ -55,6 +55,24 @@ Wallet
   }
   ) %> 
 </div>
+<% else %>
+  <div class="order_show_buy"> 
+  <%= link_to(
+            "#{I18n.t'ordersshow-payment-buttons.wallet'}",
+            {
+              :controller => 'orders', 
+              :action => 'bank_transaction', 
+              :id => @order.id
+              },
+            :html =>
+            {
+              :method => :get, 
+              :remote => true
+            }
+           ) %> 
+</div>
+
+
 <% end %>
 
 
