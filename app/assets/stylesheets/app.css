@@ -14,7 +14,8 @@
 .top_menu_bar .not_logged_user {
   position: relative;
   left: 1.957%;
-  font-size: 12px;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
   display: inline-block;
 }
 .top_menu_bar .logged_user .fa.fa-info-circle,
@@ -217,7 +218,7 @@
 .body_leads_index {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -264,18 +265,11 @@
   padding: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
 }
 .body_leads_index .lead_box .lead_title:hover {
   background-color: #ffae4d;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 10px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
-  border-bottom: 1px solid #e7e7e7;
 }
 .body_leads_index .lead_box .lead_title .fa.fa-star {
   color: #fcd229;
@@ -285,7 +279,7 @@
   color: #606060;
 }
 .body_leads_index .lead_box .lead_body {
-  font-size: 10px;
+  font-size: 14px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -300,7 +294,7 @@
 .body_leads_show {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -433,7 +427,7 @@
 .body_orders_show {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -548,7 +542,7 @@
   background-color: #b8b8b8;
 }
 .body_orders_show .order_show_notes {
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 50px;
   font-size: 20px;
   position: relative;
@@ -564,10 +558,11 @@
   position: relative;
   text-decoration: none;
   color: #606060;
-  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   padding: 20px;
-  font-size: 20px;
-  height: 400px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 300px;
   width: 67%;
   max-width: 1100px;
   min-width: 800px;
@@ -586,14 +581,14 @@
 }
 .body_orders_show .order_show_notes .order_show_notes_submit input,
 .body_orders_show .order_show_notes .order_show_notes_submit a {
-  margin-left: 799px;
+  margin-left: 835px;
   margin-top: 10px;
   color: #606060;
-  width: 100px;
   line-height: 24px;
   text-align: center;
   background-color: #b8b8b8;
-  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
@@ -607,7 +602,7 @@
 .body_bank_transaction {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -759,7 +754,7 @@
 .body_orders_reserved {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -813,7 +808,7 @@
   padding: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
 }
 .body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_title:hover {
@@ -823,11 +818,11 @@
   padding: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
 }
 .body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_body {
-  font-size: 10px;
+  font-size: 14px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -840,7 +835,7 @@
   padding-top: 7px;
 }
 .body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_notification {
-  font-size: 10px;
+  font-size: 14px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -867,11 +862,13 @@
   cursor: pointer;
   width: 57px;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
   position: relative;
   border-radius: 4px;
   padding: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -904,7 +901,7 @@
   border: 1px solid #fff;
   cursor: pointer;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   position: relative;
   border-radius: 4px;
@@ -925,12 +922,12 @@
   clear: both;
 }
 .body_dummy_orders_reserved {
-  opacity: 0.9;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  opacity: 0.5;
+  -webkit-filter: blur(1.6px);
+  -moz-filter: blur(1.6px);
+  -o-filter: blur(1.6px);
+  -ms-filter: blur(1.6px);
+  filter: blur(1.6px);
 }
 .body_dummy_orders_reserved .reserved_link_to_signup {
   width: 70%;
@@ -948,7 +945,7 @@
 .body_orders_address_book {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -994,21 +991,14 @@
   padding: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_title:hover {
   background-color: #ffae4d;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 10px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
-  border-bottom: 1px solid #e7e7e7;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_body {
-  font-size: 10px;
+  font-size: 14px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1027,9 +1017,8 @@
   position: relative;
   text-decoration: none;
   color: #606060;
-  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   padding: 7px;
-  font-size: 10px;
+  font-size: 14px;
   height: 150px;
   width: 260px;
   vertical-align: bottom;
@@ -1056,10 +1045,11 @@
   text-align: center;
   background-color: #b8b8b8;
   padding: 4px;
-  width: 80px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 10px;
+  font-size: 12px;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
 }
@@ -1080,12 +1070,12 @@
   margin-left: 450px;
 }
 .body_dummy_orders_address_book {
-  opacity: 0.9;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  opacity: 0.5;
+  -webkit-filter: blur(1.6px);
+  -moz-filter: blur(1.6px);
+  -o-filter: blur(1.6px);
+  -ms-filter: blur(1.6px);
+  filter: blur(1.6px);
 }
 .body_dummy_orders_address_book .address_book_link_to_signup {
   width: 70%;
@@ -1103,7 +1093,7 @@
 .body_new_lead_confirmation {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -1149,7 +1139,7 @@
 .body_profile {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -1258,7 +1248,7 @@
 .body_about {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -1345,7 +1335,7 @@
 .body_devise_login {
   background-image: url("./interior2.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   background-repeat: no-repeat;
@@ -1393,13 +1383,14 @@
   color: #606060;
   border: 1px solid #e8e8e8;
   cursor: pointer;
-  width: 57px;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   position: relative;
   border-radius: 4px;
   padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -1419,7 +1410,7 @@
 .body_devise_signup {
   background-image: url("./interior6.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   background-repeat: no-repeat;
@@ -1470,9 +1461,8 @@
   color: #606060;
   border: 1px solid #e8e8e8;
   cursor: pointer;
-  width: 57px;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   position: relative;
   border-radius: 4px;
@@ -1496,7 +1486,7 @@
 .body_devise_password_new {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -1531,9 +1521,9 @@
   color: #606060;
   border: 1px solid #e8e8e8;
   cursor: pointer;
-  width: 220px;
+  width: 250px;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   position: relative;
   border-radius: 4px;
@@ -1557,7 +1547,7 @@
 .body_devise_users_edit {
   background-image: url("./subtle_zebra_3d.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
@@ -1610,13 +1600,15 @@
   color: #606060;
   border: 1px solid #e8e8e8;
   cursor: pointer;
-  width: 67px;
+  width: 77px;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   position: relative;
   border-radius: 4px;
   padding: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -1645,11 +1637,13 @@
   cursor: pointer;
   width: 125px;
   line-height: 16px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   position: relative;
   border-radius: 4px;
   padding: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -1662,7 +1656,7 @@
 .body_leads_new {
   background-image: url("./interior1.png");
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   background-repeat: no-repeat;
@@ -1931,10 +1925,11 @@ margin-top
   margin-left: 240px;
   margin-top: 10px;
   padding: 4px;
+  padding-right: 30px;
+  padding-left: 30px;
   color: #fff;
   border: 1px solid #fb651e;
   cursor: pointer;
-  width: 90px;
   line-height: 20px;
   font-size: 12px;
   font-weight: bold;

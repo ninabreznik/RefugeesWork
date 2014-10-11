@@ -17,10 +17,10 @@ si:
   users-edit: #   "#{I18n.t'users-login.remember-me'}"
     
     edit-fields:
-      email: "-naslov"
+      email: "Elektronski naslov"
       password: "Geslo"
       password-confirmation: "Potrditev gesla"
-      current.password: "Trenutno geslo"
+      current-password: "Trenutno geslo"
   
     edit-title: "Posodobi profil"
     update-button: "Posodobi"

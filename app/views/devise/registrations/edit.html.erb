@@ -2,7 +2,7 @@
 <head>
   <title></title>
 </head>
-<body class="body_user_edit">
+<body class="body_devise_users_edit">
   <div class="user_edit">
 <div class="user_edit_title">
   <%= I18n.t'users-edit.edit-title' %>
@@ -37,7 +37,7 @@
     <%= button_to "#{I18n.t'users-edit.cancel-account-button'}", registration_path(resource_name), data: { confirm: "#{I18n.t'users-edit.sure'}"}, method: :delete %>
   </div>
 
-<div class="user_edit_back"><%= link_to "Back", :back %> </div>
+<div class="user_edit_back"><%= link_to "#{I18n.t'users-edit.back'}", :back %> </div>
 </div>
 
 
