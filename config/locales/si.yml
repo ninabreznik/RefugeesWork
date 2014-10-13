@@ -287,6 +287,31 @@ si:
     thank_you: "Thank you! Your inquiry was successfully sent."
     text: "Providers will soon contact you with their offers."
 
+# ############################################################################################
+# Page 9 - WALLET/PAYMENT (top up the wallet)
+# ############################################################################################
+  wallet-payment:
+    offer_title: "Polnjenje denarnice"
+    offer_item_username: "Uporabniško ime"
+    offer_date: "Datum"
+    offer_price: "Cena"
+    offer_price_amount: "100€ za 10 kontaktov, 200€ za 20 kontaktov, 300€ za 30 kontaktov itd."
+    offer_purpose: "Namen plačila"
+    offer_purpose_text: "Polnjenje denarnice"
+    offer_account: "Številka računa"
+    offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
+    offer_company: "Podjetje"
+    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_tax_id: "Davčna številka"
+    offer_tax_id_mojsosed: "49595105"
+    offer_address: "Naslov"
+    offer_mojsosed_address: "Radehova 39"
+    offer_city: "Mesto"
+    offer_mojsosed_city: "2230 Lenart"
+    offer_instructions: "Takoj po prejemu plačila bomo napolnili vašo denarnico. Stanje lahko vedno preverite na Profilu."
+
+
+
 
 
 

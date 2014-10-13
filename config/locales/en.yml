@@ -290,6 +290,30 @@ en:
     thank_you: "Thank you! Your inquiry was successfully sent."
     text: "Providers will soon contact you with their offers."
 
+# ############################################################################################
+# Page 9 - WALLET/PAYMENT (top up the wallet)
+# ############################################################################################
+
+  wallet-payment:
+    offer_title: "Topping up the wallet"
+    offer_item_username: "User name"
+    offer_date: "Date"
+    offer_price: "Price"
+    offer_price_amount: "10 €"
+    offer_purpose: "Payment purpose"
+    offer_purpose_text: "Lead payment"
+    offer_account: "Account number"
+    offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
+    offer_company: "Company"
+    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_tax_id: "TAX ID"
+    offer_tax_id_mojsosed: "49595105"
+    offer_address: "Address"
+    offer_mojsosed_address: "Radehova 39"
+    offer_city: "City"
+    offer_mojsosed_city: "2230 Lenart"
+    offer_instructions: "After your payment is processed, we will add money to your wallet. You can check your status under Profile. For more information don't hesitate to contact us on info@sosed.si"
+
 
 
 
