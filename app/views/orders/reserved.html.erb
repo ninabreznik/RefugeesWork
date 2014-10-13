@@ -282,11 +282,9 @@
     </div>
   </div>
 </div>
-
-
       <div class="reserved_link_to_signup">
-      You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
-      new_user_registration_path, :class=>"address_book_signup" %> or
+      On this page you can find all reserved leads - those that you maybe decide to buy in the next days. But to be able to see and add new reserved leads, you have to 
+      <%= link_to "#{I18n.t'ordersindex-buttons.signup'}", new_user_registration_path, :class=>"address_book_signup" %> /
       <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
       new_user_session_path, :class=>"address_book_signin" %> <%= I18n.t'ordersindex-notifications.to-see-reserved' %>. 
     </div>

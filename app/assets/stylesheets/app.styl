@@ -653,7 +653,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
           -webkit-font-smoothing: antialiased
           padding-top 7px
       .address_book_lead_notes
-        margin-left 6px
+        padding 5px
         #order_notes
           position relative
           text-decoration none
@@ -661,7 +661,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
           padding 7px
           font-size 12px 
           height 150px
-          width 260px
+          width 253px
           vertical-align bottom
           -webkit-column-break-inside: avoid
           -moz-column-break-inside: avoid
@@ -1145,70 +1145,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         text-decoration underline
         transition: all .25s ease-in-sine
 
-
-// :::::::::::: WALLET => staticpages/wallet :::::::::::: //
-
-.body_wallet
-  body-mixin()
-  .wallet
-    opacity 0.9
-    position relative
-    margin 60px auto  80px 0px
-    padding-bottom 40px
-    width 70%
-    max-width 1100px
-    min-width 800px
-    shift(0.079)
-    vertical-align bottom
-    -webkit-column-break-inside: avoid
-    -moz-column-break-inside: avoid
-    column-break-inside: avoid
-    background-color white
-    background-clip padding-box
-    border-radius 4px
-    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-    border 1px solid #ccc
-    line-break 1px  
-    .wallet_title
-      background-color Lead-Orange
-      border-top-left-radius 4px
-      border-top-right-radius 4px
-      padding 20px
-      font-weight bold
-      text-align center
-      -webkit-font-smoothing: antialiased
-      font-size 30px
-      border-bottom 1px solid #e7e7e7
-    .wallet_body
-      font-size 16px
-      padding-top 30px
-      padding-left 25px
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-      color #606060
-      line-height 150%
-    .wallet_buy input,   
-    .wallet_buy a 
-      span(1/7)
-      margin-top 050px
-      color #606060
-      center()
-      position relative
-      width 100px
-      text-align center
-      line-height 24px
-      background-color Buy-Button-Color
-      padding 5px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 14px
-      border 1px solid #E8E8E8  
-      border-radius 4px
-      &:hover
-        background-color #B8B8B8
-        transition: all .25s ease-in-sine 
-
-  // :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: //
+// :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: //
 
 .body_wallet_payment
   body-mixin()

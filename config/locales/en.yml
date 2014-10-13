@@ -140,7 +140,7 @@ en:
 # Payment buttons
   ordersshow-payment-buttons:
     choose-payment-text: "Choose type of payment"
-    paypal-checkout: "Checkout" 
+    paypal-checkout: "Paypal" 
     wallet: "Wallet" 
     bank-transfer: "Bank transfer"
 
@@ -164,6 +164,9 @@ en:
   staticpagesprofile-notification:
     wallet: "My wallet status"
     wallet-text: "You can top up your wallet when you buy a new lead. At your nex buy simply transfer desired amount. 10€ from that amount will be subtrackted for chosen lead and the rest will be added to your wallet."
+    wallet-buttons:
+      bank: "Bank transfer"
+      paypal: "Paypal"
     logged-in-as: "Logged in as"
     bought-leads: "Number of bought leads"
     last-bought-lead: "Last bought lead"

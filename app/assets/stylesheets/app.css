@@ -1002,7 +1002,7 @@
   padding-top: 7px;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes {
-  margin-left: 6px;
+  padding: 5px;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes #order_notes {
   position: relative;
@@ -1011,7 +1011,7 @@
   padding: 7px;
   font-size: 12px;
   height: 150px;
-  width: 260px;
+  width: 253px;
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
@@ -2043,123 +2043,6 @@ margin-top
 }
 .body_leads_new .lead_new .lead_new_shared_links:hover {
   text-decoration: underline;
-  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
-}
-.body_wallet {
-  background-image: url("./subtle_zebra_3d.png");
-  margin: 0px;
-  font-size: 12px;
-  color: #606060;
-  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-}
-.body_wallet a {
-  text-decoration: none;
-  color: #606060;
-  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-}
-.body_wallet .wallet {
-  opacity: 0.9;
-  position: relative;
-  margin: 60px auto 80px 0px;
-  padding-bottom: 40px;
-  width: 70%;
-  max-width: 1100px;
-  min-width: 800px;
-  position: relative;
-  left: 8.137%;
-  vertical-align: bottom;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
-  background-color: #fff;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  border: 1px solid #ccc;
-  line-break: 1px;
-}
-.body_wallet .wallet .wallet_title {
-  background-color: #ffae4d;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 20px;
-  font-weight: bold;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  font-size: 30px;
-  border-bottom: 1px solid #e7e7e7;
-}
-.body_wallet .wallet .wallet_body {
-  font-size: 16px;
-  padding-top: 30px;
-  padding-left: 25px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #606060;
-  line-height: 150%;
-}
-.body_wallet .wallet .wallet_buy input,
-.body_wallet .wallet .wallet_buy a {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  padding-left: 0;
-  padding-right: 0;
-  text-align: inherit;
-  width: 14.285714285714299%;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: 50px;
-  color: #606060;
-  *zoom: 1;
-  width: auto;
-  max-width: 1410px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 100px;
-  text-align: center;
-  line-height: 24px;
-  background-color: #ffae4d;
-  padding: 5px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 14px;
-  border: 1px solid #e8e8e8;
-  border-radius: 4px;
-}
-.body_wallet .wallet .wallet_buy input:before,
-.body_wallet .wallet .wallet_buy a:before,
-.body_wallet .wallet .wallet_buy input:after,
-.body_wallet .wallet .wallet_buy a:after {
-  content: '';
-  display: table;
-}
-.body_wallet .wallet .wallet_buy input:after,
-.body_wallet .wallet .wallet_buy a:after {
-  clear: both;
-}
-.body_wallet .wallet .wallet_buy input:before,
-.body_wallet .wallet .wallet_buy a:before,
-.body_wallet .wallet .wallet_buy input:after,
-.body_wallet .wallet .wallet_buy a:after {
-  content: '';
-  display: table;
-}
-.body_wallet .wallet .wallet_buy input:after,
-.body_wallet .wallet .wallet_buy a:after {
-  clear: both;
-}
-.body_wallet .wallet .wallet_buy input:hover,
-.body_wallet .wallet .wallet_buy a:hover {
-  background-color: #b8b8b8;
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_wallet_payment {
