@@ -1,0 +1,1 @@
+../../../test/mailers/user_mailer_test.rb

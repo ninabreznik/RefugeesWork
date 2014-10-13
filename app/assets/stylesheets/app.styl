@@ -1,4 +1,5 @@
 @import 'jeet/index'
+@import 'axis'
 
 // edit()
 
@@ -33,6 +34,7 @@ App-Font-Family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic 
 // :::::::::::: MIXINS :::::::::::::: //
 
 body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
+  top_menu_bar()
   background-image  backgroundImage
   margin 0px
   font-size 12px
@@ -43,48 +45,49 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     color #606060
     font-family App-Font-Family
 
+
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
 
 .top_menu_bar
   shift (-1/1000)
   background-color Menu-Top-Color
   border-bottom 1px solid #ccc
+  padding-top 3px
   position fixed
   top 0
   z-index 999
   width 100%
-  height 33px
-  padding-bottom 7px
   .logged_user, 
   .not_logged_user
+    padding-bottom 2px
     shift(0.019)
-    font-size 14px
+    font-size 12px
     -webkit-font-smoothing: antialiased
     display inline-block
-    .fa.fa-info-circle
-      color #606060
-      &:hover
-        color Lead-Orange
-        -webkit-font-smoothing: antialiased
+
   .logo
     shift(0.38)
     height 35px
     display inline-block
   .info
+    padding-bottom 2px
     shift(0.574)
-    font-size 19px
+    font-size 20px
     display inline-block
     -webkit-font-smoothing: antialiased
+    .fa.fa-info-circle
+      color #606060
+      &:hover
+        color Lead-Orange
+
   
 .bottom_menu_bar
-  shift (-0.02)
+  padding-left 82px
   background-color Menu-Bottom-Color
   position fixed
   bottom 0
   z-index 999
-  width 102%
-  height 40px
-  padding-left 131px
+  width 100%
   border-top 1px solid #ccc
   font-size 20px
   a[href="/"]
@@ -100,7 +103,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     &:hover
       color Lead-Orange
   .fa.fa-home::after
-    content: " Home"
+    content " Home"
     font-size 14px
     padding-bottom 4px
     &:hover
@@ -146,7 +149,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     span(1/4)
     text-align center
     width 207.8px
-    border-right 1px solid #e7e7e7
+    // border-right 1px solid #e7e7e7
     padding 7px
     font-size 22px
   .fa.fa-cog
@@ -167,21 +170,22 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
 .body_leads_index
   body-mixin()
   .columns
+    
     opacity 0.9
     shift (-1/15)
     width 70%
     max-width 1100px
     min-width 800px
-    margin 50px auto
-    -webkit-column-count 3
-    -webkit-column-gap 10px
-    -webkit-column-fill auto
+    margin 60px auto
     -moz-column-count 3
-    -moz-column-gap 10px
-    -moz-column-fill: auto
+    -webkit-column-count 3
     column-count: 3
-    column-gap: 15px
-    column-fill: auto
+    -moz-column-gap 10px
+    -webkit-column-gap 10px
+    column-gap 15px
+    // -webkit-column-fill auto
+    // -moz-column-fill: auto
+    // column-fill: auto
   .lead_box
     vertical-align bottom
     -webkit-column-break-inside: avoid
@@ -194,6 +198,8 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     border 1px solid #ccc
     margin-bottom 15px
     line-break 1px
+    hover-darken(percent = 5%)
+    transition: all .25s ease-in-sine
     .lead_title
       background-color Lead-Orange
       border-top-left-radius 4px
@@ -203,8 +209,8 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       -webkit-font-smoothing: antialiased
       font-size 14px
       border-bottom 1px solid #e7e7e7
-      &:hover
-        background-color Lead-Orange-light
+      hover-darken(percent = 15%)
+      transition: all .25s ease-in-sine
       .fa.fa-star
         color #fcd229
         font-size 16px
@@ -269,7 +275,6 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         margin-top 20px
         margin-right 15px
     .lead_show_price
-      // shift(0.423)
       text-align center
       font-size 16px
       padding 10px
@@ -283,23 +288,8 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       margin-top 50px
     .lead_show_buy input,   
     .lead_show_buy a 
-      span(1/7)
-      margin-top 0px
-      color #606060
-      center()
-      position relative
-      width 100px
-      text-align center
-      line-height 24px
-      background-color Buy-Button-Color
-      padding 5px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 14px
-      border 1px solid #E8E8E8  
-      border-radius 4px
-      &:hover
-        background-color #B8B8B8 
+      margin-left 395px
+      button(color = Lead-Orange)
 
 
 // :::::::::::: ORDERS/show => buy lead :::::::::::: //
@@ -364,21 +354,10 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       padding 7px
     .order_show_buy input,   
     .order_show_buy a 
-      color #606060
       span(1/7)
-      shift(0.3)
-      position relative
-      width 100px
-      text-align center
-      background-color Buy-Button-Color
-      padding 5px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 14px
-      border 1px solid #E8E8E8  
-      border-radius 4px
-      &:hover
-        background-color #B8B8B8
+      shift(0.2)
+      margin-left 3px
+      button(color = Lead-Orange)
   .order_show_notes
     margin-top 5px
     margin-bottom 50px
@@ -413,25 +392,14 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       margin-bottom 7px
       margin-top 7px
       line-break 1px 
+      hover-darken(percent = 5%)
+      transition: all .25s ease-in-sine
     .order_show_notes_submit input
     .order_show_notes_submit a
-      margin-left 835px
+      margin-left 815px
       margin-top 10px
-      color #606060
-      // width 100px
-      line-height 24px
-      text-align center
-      background-color #B8B8B8
-      padding-left 10px
-      padding-right 10px
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      font-size 12px
-      border 1px solid #E8E8E8  
-      border-radius 4px
-      &:hover
-        background-color Buy-Button-Color
-    
+      button(color = Lead-Orange)
+      
 
 
         
@@ -444,6 +412,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     opacity 0.9
     margin 38px auto
     padding 100px
+    padding-top 70px
     background-color white
     .offer_title
       center(420px)
@@ -452,40 +421,41 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       font-size 28px
       margin-bottom 30px
     .offer_company_info 
-      shift(0.61)
+      shift(0.55)
       color #606060
-      padding 10px
-      border 4px solid #e7e7e7
+      text-align left
+      border 1px solid #e7e7e7
       box-shadow inset 0 0 0 0 #CCC
       border-radius 4px
-      margin-bottom 7px
+      padding 4px 7px 4px 7px
+      background-color Lead-Subtitle 
     .offer_date
       color #606060
       font-size 16px
       margin-bottom 20px
-      shift(-0.2)
+      margin-top 10px
+      shift(-0.29)
       text-align right
     .offer_sosed_info
       shift(0.075)
       margin-top 20px
       color #606060
       text-align left
-      padding 10px
-      border 4px solid #e7e7e7
+      border 1px solid #e7e7e7
       box-shadow inset 0 0 0 0 #CCC
       border-radius 4px
       .offer_sosed_info_price td,
         font-weight bold
-        padding 4px
-        font-size 12px
-        background-color Lead-Subtitle     
+        padding 7px 30px 7px 30px
+        font-size 16px
+        background-color Lead-Subtitle
       .offer_sosed_info_item td
-        font-weight bold
-        padding 4px
+        background-color Lead-Subtitle     
+        padding 7px 30px 7px 30px
         font-size 12px
     .offer_show_lead
-      // position relative 
-      top 30px
+      margin-top 37px
+      padding-bottom 20px
       center(70%)
       shift(-0.07)
       height 30%
@@ -499,8 +469,6 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       border-radius 4px
       box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
       border 1px solid #ccc
-      margin-bottom 10px
-      margin-top 7px
       line-break 1px  
       .offer_show_lead_title
         background-color Lead-Orange
@@ -522,20 +490,16 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         .offer_show_lead_subtitle
           font-weight bold
           -webkit-font-smoothing: antialiased
-          // padding-top 4px
-          // padding-bottom 4px
-          // padding-left 4px
           margin-top 20px
-          // background-color Lead-Subtitle
           margin-right 15px
         .ordersindex-notifications.customer-info
           color red
     .offer_instructions
       width 70%
-      margin-top 70px
-      font-size 14px
-      shift(0.075)
-      // width 850px
+      margin-top 20px
+      font-size 12px
+      font-weight bold
+      shift(0.08)
 
   // :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
 .body_orders_reserved
@@ -551,7 +515,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     width 70%
     max-width 1100px
     min-width 800px
-    margin 50px auto
+    margin 60px auto
     -webkit-column-count 3
     -webkit-column-gap 10px
     -webkit-column-fill auto
@@ -582,15 +546,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         -webkit-font-smoothing: antialiased
         font-size 14px
         border-bottom 1px solid #e7e7e7
-        &:hover
-          background-color Lead-Orange-light
-          border-top-left-radius 4px
-          border-top-right-radius 4px
-          padding 10px
-          font-weight bold
-          -webkit-font-smoothing: antialiased
-          font-size 14px
-          border-bottom 1px solid #e7e7e7      
+        hover-darken(percent = 15%)  
       .address_book_lead_body
         font-size 14px
         padding 10px
@@ -614,45 +570,17 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         .address_book_lead_notification_explanation
           font-weight normal
       .address_book_buttons
+        margin-left 90px
         .address_book_buy_button
-          center()
-          color #606060
-          border 1px solid #E8E8E8  
-          cursor pointer
-          width 57px
-          line-height 16px
-          font-size 14px
-          font-weight bold
-          position relative
-          border-radius 4px
-          padding 4px
-          padding-right 10px
-          padding-left 10px
-          margin-top 10px
-          margin-bottom 10px  
-          text-align center
-          background-color #B8B8B8
-          -webkit-font-smoothing: antialiased
-          &:hover
-            background-color Buy-Button-Color
+          margin-top 20px
+          button(color = Lead-Orange)
         .address_book_remove_button input
-        .address_book_remove_button a  
-          center()
+        .address_book_remove_button a 
+          margin-top 5px 
+          margin-bottom 5px
+          margin-left -50px
           color #606060
-          border 1px solid white  
-          cursor pointer
-          // text-decoration underline
-          line-height 16px
-          font-size 12px
-          font-weight normal
-          position relative
-          border-radius 4px
-          // padding 4px
-          margin-bottom 7px  
-          text-align center
-          background-color white
-          -webkit-font-smoothing: antialiased
-          // font-weight bold 
+          button(color = white)
 .body_dummy_orders_reserved,
   opacity 0.5
   -webkit-filter: blur(1.6px); 
@@ -681,16 +609,16 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     width 70%
     max-width 1100px
     min-width 800px
-    margin 50px auto
+    margin 60px auto
+    column-count: 3
     -webkit-column-count 3
     -webkit-column-gap 10px
     -webkit-column-fill auto
     -moz-column-count 3
     -moz-column-gap 10px
     -moz-column-fill: auto
-    column-count: 3
     column-gap: 15px
-    column-fill: auto
+    column-fill: balance
     .address_book_lead_box
       vertical-align bottom
       -webkit-column-break-inside: avoid
@@ -712,8 +640,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         -webkit-font-smoothing: antialiased
         font-size 14px
         border-bottom 1px solid #e7e7e7
-        &:hover
-          background-color Lead-Orange-light
+        hover-darken(percent = 15%)
       .address_book_lead_body
         font-size 14px
         padding 10px
@@ -732,7 +659,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
           text-decoration none
           color #606060       
           padding 7px
-          font-size 14px 
+          font-size 12px 
           height 150px
           width 260px
           vertical-align bottom
@@ -747,26 +674,13 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
           margin-bottom 7px
           margin-top 7px
           line-break 1px 
+          hover-darken(percent = 5%)
         .address_book_lead_notes_button input
         .address_book_lead_notes_button a
-          shift(0.673)
+          shift(0.66)
           margin-bottom 7px
-          color #606060
-          width 67px
-          line-height 16px
-          text-align center
-          background-color #B8B8B8
-          padding 4px
-          padding-right 10px
-          padding-left 10px
-          // width 80px
-          font-weight bold
-          -webkit-font-smoothing: antialiased
-          font-size 12px
-          border 1px solid #E8E8E8  
-          border-radius 4px
-          &:hover
-            background-color Buy-Button-Color
+          margin-top 3px
+          button(color = Lead-Orange)
       .address_book_link_to-signup"
         font-size 12px
   .address_book_bought_leads
@@ -822,7 +736,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     width 70%
     max-width 1100px
     min-width 800px
-    margin 50px auto
+    margin 60px auto
     -webkit-column-count 3
     -webkit-column-gap 10px
     -webkit-column-fill auto
@@ -854,8 +768,10 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         -webkit-font-smoothing: antialiased
         font-size 12px
         border-bottom 1px solid #e7e7e7
+        hover-darken(percent = 15%)
+        transition: all .25s ease-in-sine
       .profile_dashboard_body
-        padding 30px
+        padding 30px 30px 20px 30px
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         color #606060
@@ -866,20 +782,16 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
           font-weight bold
         .profile_dashboard_body_logout,
         .profile_dashboard_body_edit
-          font-weight bold
-          -webkit-font-smoothing: antialiased
-          padding-top 7px
-          font-size 12px
-          display inline-block
-          text-align right
-          text-decoration underline
+          margin-top 30px
+          button(color = #82c0c7)
         .profile_dashboard_body_wallet_amount
-          font-size 80px
+          font-size 60px
           padding 24px
-        .profile_dashboard_body_wallet_transfer
-          font-size 10px
-          font-weight bold
-          // text-decoration underline
+        .profile_dashboard_body_wallet_buttons
+          display inline-block
+          margin-top 30px
+          .profile_dashboard_body_wallet_button
+            button(color = #82c0c7)
         .profile_dashboard_body_bought_leads_amount
           font-size 100px
           padding 24px
@@ -894,7 +806,8 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
           .profile_dashboard_body_login
             font-size 14px
             &:hover
-              text-decoration underline          
+              text-decoration underline
+              transition: all .25s ease-in-sine          
         .profile_dashboard_body_bought_leads_last
           font-size 24px
           font-weight bold
@@ -988,16 +901,16 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     .login_form_submit input
     .login_form_submit a 
       color #606060
-      border 1px solid #E8E8E8  
+      border 1px solid Buy-Button-Color  
       cursor pointer
-      line-height 16px
       font-size 12px
       font-weight bold
+      line-height 24px
       position relative
       border-radius 4px
       padding 4px
-      padding-left 10px
-      padding-right 10px
+      padding-left 20px
+      padding-right 20px
       margin-top 10px
       margin-bottom 10px  
       text-align center
@@ -1005,10 +918,13 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       -webkit-font-smoothing: antialiased
       &:hover
         background-color #B8B8B8
+        border 1px solid #B8B8B8
+        transition: all .25s ease-in-sine
     .login_shared_links
       font-size 12px
       &:hover
         text-decoration underline
+        transition: all .25s ease-in-sine
 
   // :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
 .body_devise_signup
@@ -1044,14 +960,16 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     .signup_form_submit input
     .signup_form_submit a 
       color #606060
-      border 1px solid #E8E8E8  
+      border 1px solid Buy-Button-Color  
       cursor pointer
-      line-height 16px
       font-size 12px
       font-weight bold
+      line-height 24px
       position relative
       border-radius 4px
       padding 4px
+      padding-left 20px
+      padding-right 20px
       margin-top 10px
       margin-bottom 10px  
       text-align center
@@ -1059,10 +977,13 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       -webkit-font-smoothing: antialiased
       &:hover
         background-color #B8B8B8
+        border 1px solid #B8B8B8
+        transition: all .25s ease-in-sine
     .signup_shared_links
       font-size 12px
       &:hover
         text-decoration underline
+        transition: all .25s ease-in-sine
       
 
   // :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: //
@@ -1088,28 +1009,14 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         border 1px solid #E8E8E8  
     .password_new_form_submit input
     .password_new_form_submit a 
-      color #606060
-      border 1px solid #E8E8E8  
-      cursor pointer
-      width 250px
-      line-height 16px
-      font-size 12px
-      font-weight bold
-      position relative
-      border-radius 4px
-      padding 4px
       margin-top 10px
       margin-bottom 10px  
-      text-align center
-      background-color Buy-Button-Color
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color #B8B8B8
+      button(color = Lead-Orange)
     .password_new_shared_links
       font-size 12px
       &:hover
         text-decoration underline
-            
+        transition: all .25s ease-in-sine    
   // :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
 .body_devise_users_edit
   body-mixin()
@@ -1138,52 +1045,21 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
         border 1px solid #E8E8E8  
     .user_edit_form_submit input
     .user_edit_form_submit a 
-      color #606060
-      border 1px solid #E8E8E8  
-      cursor pointer
-      width 77px
-      line-height 16px
-      font-size 12px
-      font-weight bold
-      position relative
-      border-radius 4px
-      padding 4px
-      padding-right 10px
-      padding-left 10px
       margin-top 10px
       margin-bottom 10px  
-      text-align center
-      background-color Buy-Button-Color
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color #B8B8B8
+      button(color = Lead-Orange)
     .user_edit_cancel_acount,
     .user_edit_unhappy,
     .user_edit_back
       font-size 12px
       &:hover
         text-decoration underline
+        transition: all .25s ease-in-sine
     .user_edit_button_cancel_account input
     .user_edit_button_cancel_account a
-      -webkit-font-smoothing: antialiased
-      color #606060
-      border 1px solid #E8E8E8  
-      cursor pointer
-      width 125px
-      line-height 16px
-      font-size 12px
-      font-weight bold
-      position relative
-      border-radius 4px
-      padding 4px
-      padding-right 10px
-      padding-left 10px
       margin-top 10px
       margin-bottom 10px  
-      text-align center
-      background-color Buy-Button-Color
-      &:hover
-        background-color #B8B8B8
+      button(color = Lead-Orange)
 
  // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
 .body_leads_new
@@ -1195,6 +1071,7 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
   -moz-background-size cover
   -o-background-size cover
   .lead_new
+    opacity 0.95
     border-radius 4px
     box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
     border 1px solid #9c9b9b
@@ -1260,31 +1137,134 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
       font-size 10px  
     .lead_new_form_submit input
     .lead_new_form_submit a 
-      margin-left 240px
-      margin-top 10px 
-      padding 4px
-      padding-right 30px
-      padding-left 30px
-      color white
-      border 1px solid #fb651e  
-      cursor pointer
-      // width 90px
-      line-height 20px
-      font-size 12px
-      font-weight bold
-      position relative
-      border-radius 4px
-      text-align center
-      background-color #fb651e
-      &:hover
-        background-color #B8B8B8
-        border 1px solid #B8B8B8
+      margin-left 254px
+      button(color = #f26421)
     .lead_new_shared_links
       font-size 12px
       &:hover
         text-decoration underline
+        transition: all .25s ease-in-sine
 
 
+// :::::::::::: WALLET => staticpages/wallet :::::::::::: //
+
+.body_wallet
+  body-mixin()
+  .wallet
+    opacity 0.9
+    position relative
+    margin 60px auto  80px 0px
+    padding-bottom 40px
+    width 70%
+    max-width 1100px
+    min-width 800px
+    shift(0.079)
+    vertical-align bottom
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid
+    background-color white
+    background-clip padding-box
+    border-radius 4px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
+    border 1px solid #ccc
+    line-break 1px  
+    .wallet_title
+      background-color Lead-Orange
+      border-top-left-radius 4px
+      border-top-right-radius 4px
+      padding 20px
+      font-weight bold
+      text-align center
+      -webkit-font-smoothing: antialiased
+      font-size 30px
+      border-bottom 1px solid #e7e7e7
+    .wallet_body
+      font-size 16px
+      padding-top 30px
+      padding-left 25px
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      color #606060
+      line-height 150%
+    .wallet_buy input,   
+    .wallet_buy a 
+      span(1/7)
+      margin-top 050px
+      color #606060
+      center()
+      position relative
+      width 100px
+      text-align center
+      line-height 24px
+      background-color Buy-Button-Color
+      padding 5px
+      font-weight bold
+      -webkit-font-smoothing: antialiased
+      font-size 14px
+      border 1px solid #E8E8E8  
+      border-radius 4px
+      &:hover
+        background-color #B8B8B8
+        transition: all .25s ease-in-sine 
+
+  // :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: //
+
+.body_wallet_payment
+  body-mixin()
+  .wallet_payment_offer
+    opacity 0.9
+    margin 38px auto
+    padding 100px
+    padding-top 70px
+    background-color white
+    .wallet_payment_offer_title
+      center(420px)
+      color Offer-Font-Color
+      font-weight bold
+      font-size 28px
+      margin-bottom 50px
+    .wallet_payment_offer_company_info 
+      shift(0.53)
+      color #606060
+      text-align left
+      border 1px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
+      border-radius 4px
+      padding 4px 7px 4px 7px
+      background-color Lead-Subtitle 
+    .wallet_payment_offer_date
+      color #606060
+      font-size 16px
+      margin-bottom 50px
+      margin-top 10px
+      shift(-0.21)
+      text-align right
+    .wallet_payment_offer_sosed_info
+      shift(0.075)
+      margin-top 20px
+      margin-bottom 10px
+      color #606060
+      text-align left
+      border 1px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
+      border-radius 4px
+      // bellow copy from bank transaction //
+      .wallet_payment_offer_sosed_info_price td
+        font-weight bold
+        padding 15px 30px 15px 30px
+        font-size 16px
+        background-color Lead-Subtitle
+      .wallet_payment_offer_sosed_info_item td
+        background-color Lead-Subtitle     
+        padding 7px 30px 7px 30px
+        font-size 12px
+    .wallet_payment_offer_instructions
+      width 70%
+      margin-top 20px
+      font-size 12px
+      font-weight bold
+      shift(0.08)
     
 
           

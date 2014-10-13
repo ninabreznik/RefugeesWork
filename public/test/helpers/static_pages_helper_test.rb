@@ -1,0 +1,1 @@
+../../../test/helpers/static_pages_helper_test.rb

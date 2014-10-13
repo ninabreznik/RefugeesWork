@@ -1,11 +1,12 @@
 <html>
 <head>
   <title></title>
+  <!-- <meta http-equiv="refresh" content="3;url=http://www.google.com/" /> -->
 </head>
 <body class="body_leads_index">
 <div class="columns">
 <% if @leads.present? %>
-  <% @leads.each do |lead| %>
+  <% @leads.sort.reverse.each do |lead| %>
     <% if user_signed_in? %> 
       <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>

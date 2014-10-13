@@ -11,13 +11,13 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="signup_form_email"><%= f.label :email %><br />
+  <div class="signup_form_email"><%= f.label :"#{I18n.t'users-signup.email'}" %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
-  <div class="signup_form_password"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+  <div class="signup_form_password"><%= f.label :"#{I18n.t'users-signup.password'}" %> <% if @validatable %><i>(<%= @minimum_password_length %> <%= I18n.t'users-signup.minimal-char' %>)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div class="signup_form_password_confirmation"><%= f.label :password_confirmation %><br />
+  <div class="signup_form_password_confirmation"><%= f.label :"#{I18n.t'users-signup.password-confirmation'}" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
   <div class="signup_form_submit"><%= f.submit "#{I18n.t'users-signup.signup'}" %></div>

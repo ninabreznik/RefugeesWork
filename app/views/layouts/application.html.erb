@@ -14,10 +14,9 @@
       </div>
     <% else %>
     <div class="not_logged_user">
-      <%= link_to "Login", new_user_session_path %> | <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "#{I18n.t'application.top-menu.login'}", new_user_session_path %> | <%= link_to "#{I18n.t'application.top-menu.signup'}", new_user_registration_path %>
     </div>
     <% end %>
-
     <div class="info">
       <%= link_to '<i class="fa fa-info-circle"></i>'.html_safe, about_path %>
     </div>
@@ -37,4 +36,5 @@
 
   </body>
 </html>
+
 

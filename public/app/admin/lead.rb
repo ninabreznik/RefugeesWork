@@ -1,0 +1,1 @@
+../../../app/admin/lead.rb

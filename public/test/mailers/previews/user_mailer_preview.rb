@@ -1,0 +1,1 @@
+../../../../test/mailers/previews/user_mailer_preview.rb

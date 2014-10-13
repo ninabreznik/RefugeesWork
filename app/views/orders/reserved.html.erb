@@ -5,7 +5,7 @@
 <body class="body_orders_reserved">
   <% if user_signed_in? && @orders.present? %>
   <div class="address_book_columns">
-    <% @orders.where(selector_id: current_user.id, paid: false).each do |order| %>
+    <% @orders.where(selector_id: current_user.id, paid: false).sort.reverse.each do |order| %>
     <div class="address_book_lead_box">
       <div class ="address_book_lead_title">
         <%= order.selected.business_type %>
@@ -46,7 +46,7 @@
         <div class="address_book_remove_button">
           <%= form_for(current_user.orders.find_by_selected_id(order.selected),
             html: { method: :delete }) do |c| %>
-          <%= c.submit 'ALI umakni kontakt iz rezerviranih' %>
+          <%= c.submit "#{I18n.t'ordersindex-buttons.remove-from-reserved'}" %>
             <% end %> 
         </div>
       </div>

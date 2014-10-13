@@ -1,0 +1,1 @@
+../../../config/initializers/backtrace_silencers.rb

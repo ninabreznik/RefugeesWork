@@ -5,7 +5,7 @@
 <body class="body_orders_address_book">
   <% if user_signed_in? && @orders.present? %>
   <div class="address_book_columns">
-      <% @orders.where(selector_id: current_user.id, paid: true).each do |order| %>
+      <% @orders.where(selector_id: current_user.id, paid: true).sort.reverse.each do |order| %>
     <div class="address_book_lead_box">
       <div class ="address_book_lead_title">
         <%= order.selected.business_type %>

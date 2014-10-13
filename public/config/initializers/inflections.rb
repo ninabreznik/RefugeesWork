@@ -1,0 +1,1 @@
+../../../config/initializers/inflections.rb

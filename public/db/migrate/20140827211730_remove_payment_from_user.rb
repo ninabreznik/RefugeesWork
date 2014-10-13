@@ -1,0 +1,1 @@
+../../../db/migrate/20140827211730_remove_payment_from_user.rb

@@ -1,0 +1,1 @@
+../../../test/models/admin_user_test.rb

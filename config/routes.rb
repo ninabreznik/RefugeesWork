@@ -48,8 +48,8 @@ resources :orders
 
   # Example of regular route:
 
-  get '/contact' => 'static_pages#contact'
-  get '/pricing' => 'static_pages#pricing'
+  get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
+  get '/wallet_payment' => 'static_pages#wallet_payment'
   get '/about' => 'static_pages#about'
   get '/payment_type' => 'static_pages#payment'
   get '/profile' => 'static_pages#profile'

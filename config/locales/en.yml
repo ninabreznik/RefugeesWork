@@ -1,17 +1,39 @@
 en:
 
 # ############################################################################################
+# Page 0 - APPLICATION 
+# ############################################################################################
+
+#Login and Logout
+  application:
+    top-menu:  
+      login: "Login"
+      signup: "Sign up"
+    bottom-menu:
+      home: " Home"
+      reserved: " Reserved"
+      address-book: " Address book"
+      profile: " Profile"
+
+
+# ############################################################################################
 # Page 0 - USERS (devise)
 # ############################################################################################
 
 #Signup
   users-signup: 
     signup: "Sign up"
+    email: "Email"
+    password: "Password"
+    minimal-char: "characters minimum"
+    password-confirmation: "Password confirmation"
 
 #Login
   users-login:
     login: "Login"
     remember-me: "Remember me"
+    email: "Email"
+    password: "Password"
 
 #Edit
   users-edit: #   "#{I18n.t'users-login.remember-me'}"
@@ -141,6 +163,11 @@ en:
 # Notification
   staticpagesprofile-notification:
     wallet: "My wallet status"
+    wallet-text: "You can top up your wallet when you buy a new lead. At your nex buy simply transfer desired amount. 10€ from that amount will be subtrackted for chosen lead and the rest will be added to your wallet."
+    logged-in-as: "Logged in as"
+    bought-leads: "Number of bought leads"
+    last-bought-lead: "Last bought lead"
+
 
 # ############################################################################################
 # Page 5 - ORDERS/INDEX (Address book) (Reserved)
@@ -231,7 +258,7 @@ en:
 # ############################################################################################
 
   orders-banktransaction:
-    offer_title: "Offer for lead: 14"
+    offer_title: "Offer for lead: "
     offer_item_username: "User name"
     offer_date: "Date"
     offer_price: "Price"
@@ -248,7 +275,7 @@ en:
     offer_mojsosed_address: "Radehova 39"
     offer_city: "City"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "After your payment is processed, money will be added to Sosed Wallet and you will be able to buy your lead. To top up Wallet for future purchases, transfer wished amount (i.e. 100 € for 10 leads) and you will be able to buy leads simply with a click on the Wallet. Contact us if you need more information."
+    offer_instructions: "After your payment is processed, lead will be activated and you will be able to find it in the Address book (with other bought leads)."
     lead:
       location: "Region" 
       zip: "Zip"
@@ -262,6 +289,7 @@ en:
   new_lead_confirmation:
     thank_you: "Thank you! Your inquiry was successfully sent."
     text: "Providers will soon contact you with their offers."
+
 
 
 

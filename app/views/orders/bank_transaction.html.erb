@@ -14,22 +14,7 @@
       <td><%= I18n.t'orders-banktransaction.offer_item_username' %>:</td>
       <td><%= current_user.email %></td>
     </tr>
-<!--     <tr class="offer_company_info_item">  
-      <td>Company name:</td>
-      <td> </td>
-    </tr>
-    <tr class="offer_company_info_item">
-      <td>Address:</td>
-      <td></td>
-    </tr>   
-    <tr class="offer_company_info_item"> 
-      <td>City:</td>
-      <td></td>
-    </tr>
-    <tr class="offer_company_info_item">
-      <td>TAX ID:</td>
-      <td></td>
-    </tr> -->
+  
   </table>
 
   <div class="offer_date">
@@ -43,7 +28,7 @@
     </tr>  
     <tr class="offer_sosed_info_item"> 
       <td><%= I18n.t'orders-banktransaction.offer_purpose' %>:</td>
-      <td><%= I18n.t'orders-banktransaction.offer_purpose_text' %></td>
+      <td><%= I18n.t'orders-banktransaction.offer_purpose_text' %> <%= @lead.id %></td>
     </tr>
     <tr class="offer_sosed_info_item">
       <td><%= I18n.t'orders-banktransaction.offer_account' %>:</td>

@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body class="body_wallet_payment">
+<div class="wallet_payment_offer">
+  <div class="wallet_payment_offer_title">
+    Polnjenje denarnice
+  </div>
+  <table class="wallet_payment_offer_company_info">
+    <tr class="wallet_payment_offer_company_info_item" >
+      <td><%= I18n.t'orders-banktransaction.offer_item_username' %>:</td>
+      <td><%= current_user.email %></td>
+    </tr>
+  
+  </table>
+
+  <div class="wallet_payment_offer_date">
+    <%= I18n.t'orders-banktransaction.offer_date' %>: <%= Date.today.strftime("%d/%m/%Y") %></strong><br>
+  </div>
+
+  <table class="wallet_payment_offer_sosed_info">
+    <tr class="wallet_payment_offer_sosed_info_price">
+      <td><%= I18n.t'orders-banktransaction.offer_price' %>:</td>
+      <td>100€ za 10 kontaktov, 200€ za 20 kontaktov, 300€ za 30 kontaktov itd.</td>
+    </tr>  
+    <tr class="wallet_payment_offer_sosed_info_item"> 
+      <td><%= I18n.t'orders-banktransaction.offer_purpose' %>:</td>
+      <td>Polnjenje denarnice</td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td><%= I18n.t'orders-banktransaction.offer_account' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_mojsosed_account' %></td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td><%= I18n.t'orders-banktransaction.offer_company' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_company_mojsosed' %></td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td><%= I18n.t'orders-banktransaction.offer_tax_id' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_tax_id_mojsosed' %></td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td><%= I18n.t'orders-banktransaction.offer_address' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_mojsosed_address' %></td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td><%= I18n.t'orders-banktransaction.offer_city' %>:</td>
+      <td><%= I18n.t'orders-banktransaction.offer_mojsosed_city' %></td>
+    </tr> 
+  </table>
+    <div class="wallet_payment_offer_instructions">
+    <%= I18n.t'orders-banktransaction.offer_instructions' %>
+  </div> 
+
+</div>
+</body>
+</html>
+
+
+

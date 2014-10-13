@@ -1,0 +1,1 @@
+../../../config/initializers/session_store.rb

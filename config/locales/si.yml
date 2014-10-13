@@ -1,17 +1,39 @@
 si:
 
 # ############################################################################################
+# Page 0 - APPLICATION 
+# ############################################################################################
+
+#Login and Logout
+  application: 
+    top-menu: 
+      login: "Prijava"
+      signup: "Registriraj se"
+    bottom-menu:
+      home: " Domov"
+      reserved: " Rezervirani"
+      address-book: " Imenik kontaktov"
+      profile: " Profil"
+
+
+# ############################################################################################
 # Page 0 - USERS (devise)
 # ############################################################################################
 
 #Signup
   users-signup: 
     signup: "Registriraj se"
+    email: "Elektronski naslov"
+    password: "Geslo"
+    minimal-char: "znakov ali več"
+    password-confirmation: "Potrditev gesla"
 
 #Login
   users-login:
     login: "Prijava"
     remember-me: "Ostanite prijavljeni"
+    email: "Elektronski naslov"
+    password: "Geslo"
 
 #Edit
   users-edit: #   "#{I18n.t'users-login.remember-me'}"
@@ -22,8 +44,8 @@ si:
       password-confirmation: "Potrditev gesla"
       current-password: "Trenutno geslo"
   
-    edit-title: "Posodobi profil"
-    update-button: "Posodobi"
+    edit-title: "Uredi profil"
+    update-button: "Uredi"
     password-tip: "pustite prazno, če ne želite spreminjati"
     current-password-tip: "potrebujemo vaše trenutno geslo, da potrdili spremembe"
     waiting-confirmation: "Currently waiting confirmation"
@@ -82,12 +104,13 @@ si:
     description: "Opis"
     name: "Ime"
 
+#Price
+    price: "Cena: 10 €"
+
 # Links
   leadsshow-links: 
     buy: "Nakup"
 
-#Price
-  price: "Cena: 10 €"
 
 
 # ############################################################################################
@@ -133,12 +156,16 @@ si:
 
 # Links
   staticpagesprofile-links:
-    edit-profile: "Urejanje profila"
+    edit-profile: "Uredi profil"
     logout: "Odjava"
 
 # Notification
   staticpagesprofile-notification:
     wallet: "Stanje v moji denarnici"
+    wallet-text: "Denarnico lahko napolnite ob nakupu novega kontakta. Ob nakupu enostavno nakažite željeni znesek. 10€ od vplačila bomo odšeli za nakup izbranega kontakta, preostali znesek pa bo dodan v vašo denarnico."
+    logged-in-as: "Prijavljeni ste kot"
+    bought-leads: "Število zakupljenih kontaktov"
+    last-bought-lead: "Zadnji zakupljen kontakt"
 
 # ############################################################################################
 # Page 5 - ORDERS/INDEX (Address book)
@@ -228,7 +255,7 @@ si:
 # ############################################################################################
 
   orders-banktransaction:
-    offer_title: "Ponudba za kontakt: 14"
+    offer_title: "Ponudba za kontakt: "
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
     offer_price: "Cena"
@@ -245,7 +272,7 @@ si:
     offer_mojsosed_address: "Radehova 39"
     offer_city: "Kraj"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "Po prejemu plačila bomo znesek dodali v vašo Denarnico in lahko boste kupili željen kontakt. Če želite napolniti denarnico za prihodnje nakupe, vplačajte željen znesek (npr. 100 evrov za 10 kontaktov) in kupujte kontakte preprosto s klikom na Denarnico. Za več informacij smo vam vedno na voljo."
+    offer_instructions: "Po prejemu plačila bomo znesek dodali v vašo Denarnico in lahko boste kupili željen kontakt. Če želite napolniti denarnico za prihodnje nakupe, vplačajte željen znesek (npr. 100 evrov za 10 kontaktov) in kupujte kontakte preprosto s klikom na Denarnico. Več na info@sosed.si"
     lead:
       location: "Regija" 
       zip: "Pošta"
