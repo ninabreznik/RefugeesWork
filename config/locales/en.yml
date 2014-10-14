@@ -212,7 +212,9 @@ en:
 # ############################################################################################
 
   staticpages-info:
-    thanks: "Thank you for using Sosed.biz app" 
+    thanks: "Thank you for using Sosed.biz app"
+    email: "Email"
+    email_text: "info@sosed.si" 
 
   #COMPANY INFO
     company_info: "Company info" 

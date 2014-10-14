@@ -212,6 +212,8 @@ si:
  
   staticpages-info:
     thanks: "Hvala, da uporabljate Sosed.biz aplikacijo" 
+    email: "E-naslov"
+    email_text: "info@sosed.si" 
 
   #COMPANY INFO
     company_info: "Podatki o podjetju" 
@@ -219,13 +221,13 @@ si:
     mojsosed: "Moj sosed d.o.o." 
     address: "Naslov"
     sosed_address: "Radehova 39"
-    city: "Mesto"
+    city: "Kraj"
     sosed_city: "2230 Lenart"
 
   #PAYMENT
     payment_purpose: "Namen plačila"
     payment_purpose_text: "Plačilo kontakta"
-    account: "Številka računa"
+    account: "TRR"
     sosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
     price: "Cena"
     price_amount: "10 €"
@@ -309,7 +311,7 @@ si:
     offer_tax_id_mojsosed: "49595105"
     offer_address: "Naslov"
     offer_mojsosed_address: "Radehova 39"
-    offer_city: "Mesto"
+    offer_city: "Kraj"
     offer_mojsosed_city: "2230 Lenart"
     offer_instructions: "Takoj po prejemu plačila bomo napolnili vašo denarnico. Stanje lahko vedno preverite na Profilu. Za morebitna dodatna vprašanja smo vam vedno na voljo na info@sosed.si"
 

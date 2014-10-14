@@ -210,7 +210,7 @@
   -webkit-font-smoothing: antialiased;
 }
 .body_leads_index {
-  background-image: url("./subtle_zebra_3d.png");
+  background-image: url("./interior5.png");
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -222,7 +222,6 @@
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_leads_index .columns {
-  opacity: 0.9;
   position: relative;
   left: -6.866666666666701%;
   width: 70%;
@@ -241,37 +240,38 @@
   column-gap: 15px;
 }
 .body_leads_index .lead_box {
+  background-color: #fff;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  -ms-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000;
+/* fallback color */
+  background: rgba(255,255,255,0.9);
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
-  background-color: #fff;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  border: 1px solid #ccc;
   margin-bottom: 15px;
   line-break: 1px;
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_leads_index .lead_box:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(242,242,242,0.9);
 }
 .body_leads_index .lead_box .lead_title {
+  color: #606060;
+  opacity: 0.85;
   background-color: #ffae4d;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
   padding: 10px;
   font-weight: bold;
-  -webkit-font-smoothing: antialiased;
   font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_leads_index .lead_box .lead_title:hover {
-  background-color: #ff971b;
+  background-color: rgba(217,217,217,0.9);
 }
 .body_leads_index .lead_box .lead_title .fa.fa-star {
   color: #fcd229;
@@ -294,7 +294,7 @@
   padding-top: 7px;
 }
 .body_leads_show {
-  background-image: url("./subtle_zebra_3d.png");
+  background-image: url("./interior2.png");
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -330,17 +330,14 @@
 }
 .body_leads_show .lead_show .lead_show_title {
   background-color: #ffae4d;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
   padding: 20px;
   font-weight: bold;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  font-size: 30px;
-  border-bottom: 1px solid #e7e7e7;
+  font-size: 40px;
 }
 .body_leads_show .lead_show .lead_show_body {
-  font-size: 16px;
+  font-size: 22px;
   padding-top: 7px;
   padding-left: 25px;
   -webkit-font-smoothing: antialiased;
@@ -356,7 +353,7 @@
 }
 .body_leads_show .lead_show .lead_show_price {
   text-align: center;
-  font-size: 16px;
+  font-size: 22px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -369,7 +366,7 @@
 }
 .body_leads_show .lead_show .lead_show_buy input,
 .body_leads_show .lead_show .lead_show_buy a {
-  margin-left: 395px;
+  margin-left: 380px;
   font-size: 13px;
   padding: 10px 22px;
   border-radius: 3px;
@@ -383,6 +380,7 @@
   text-decoration: none;
   display: inline-block;
   border: none;
+  font-size: 22px;
 }
 .body_leads_show .lead_show .lead_show_buy input:hover,
 .body_leads_show .lead_show .lead_show_buy a:hover,
@@ -432,17 +430,14 @@
 }
 .body_orders_show .order_show .order_show_title {
   background-color: #ffae4d;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
   padding: 20px;
   font-weight: bold;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  font-size: 30px;
-  border-bottom: 1px solid #e7e7e7;
+  font-size: 40px;
 }
 .body_orders_show .order_show .order_show_body {
-  font-size: 16px;
+  font-size: 22px;
   padding-top: 7px;
   padding-left: 25px;
   -webkit-font-smoothing: antialiased;
@@ -458,7 +453,7 @@
 }
 .body_orders_show .order_show .order_show_price {
   text-align: center;
-  font-size: 16px;
+  font-size: 22px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -501,6 +496,7 @@
   text-decoration: none;
   display: inline-block;
   border: none;
+  font-size: 22px;
 }
 .body_orders_show .order_show .order_show_buy input:before,
 .body_orders_show .order_show .order_show_buy a:before,
@@ -907,6 +903,7 @@
   background-color: #e6e6e6;
 }
 .body_dummy_orders_reserved {
+  position: relative;
   opacity: 0.5;
   -webkit-filter: blur(1.6px);
   -moz-filter: blur(1.6px);
@@ -915,17 +912,32 @@
   filter: blur(1.6px);
 }
 .body_dummy_orders_reserved .reserved_link_to_signup {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 103px;
+  background: #000;
+/* fallback color */
+  background: #000;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  padding: 10px;
+  top: 200px;
+  width: 100%;
   width: 70%;
-  font-size: 16px;
+  font-size: 28px;
   font-weight: bold;
-  max-width: 1100px;
-  min-width: 800px;
-  margin-top: 100px;
-  margin-left: 270px;
+  -webkit-font-smoothing: antialiased;
+  max-width: 800px;
+  min-width: 400px;
+  color: #fff;
+  letter-spacing: -1px;
 }
 .body_dummy_orders_reserved .reserved_link_to_signup .address_book_signup,
 .body_dummy_orders_reserved .reserved_link_to_signup .address_book_signin {
-  text-decoration: underline;
+  color: #ffae4d;
 }
 .body_orders_address_book {
   background-image: url("./subtle_zebra_3d.png");
@@ -1082,17 +1094,33 @@
   filter: blur(1.6px);
 }
 .body_dummy_orders_address_book .address_book_link_to_signup {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 103px;
+  background: #000;
+/* fallback color */
+  background: #000;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  padding: 10px;
+  top: 200px;
+  width: 100%;
   width: 70%;
-  font-size: 16px;
+  font-size: 28px;
   font-weight: bold;
-  max-width: 1100px;
-  min-width: 800px;
-  margin-top: 100px;
-  margin-left: 270px;
+  -webkit-font-smoothing: antialiased;
+  max-width: 800px;
+  min-width: 400px;
+  color: #fff;
+  letter-spacing: -1px;
+  letter-spacing: -1px;
 }
 .body_dummy_orders_address_book .address_book_link_to_signup .address_book_signup,
 .body_dummy_orders_address_book .address_book_link_to_signup .address_book_signin {
-  text-decoration: underline;
+  color: #ffae4d;
 }
 .body_new_lead_confirmation {
   background-image: url("./subtle_zebra_3d.png");
@@ -1141,7 +1169,7 @@
   padding-top: 20px;
 }
 .body_profile {
-  background-image: url("./subtle_zebra_3d.png");
+  background-image: url("./interior6.png");
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1178,36 +1206,36 @@
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
-  background-color: #fff;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  border: 1px solid #ccc;
+  background: #000;
+/* fallback color */
+  background: rgba(255,255,255,0.9);
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  -ms-filter: blur(0.7px);
+  filter: blur(0.7px);
   margin-bottom: 15px;
   line-break: 1px;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_title {
+  color: #606060;
+  font-weight: bold;
   text-align: center;
   background-color: #82c0c7;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  opacity: 0.9;
   padding: 10px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
-  border-bottom: 1px solid #e7e7e7;
-  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_title:hover {
-  background-color: #60afb8;
+  background-color: rgba(217,217,217,0.9);
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body {
+  color: #606060;
   padding: 30px 30px 20px 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #606060;
   text-align: center;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_username {
@@ -1283,6 +1311,7 @@
   font-weight: bold;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_signup {
+  color: #fff;
   padding-bottom: 7px;
   font-size: 14px;
 }
@@ -1762,10 +1791,9 @@
 }
 .body_leads_new .lead_new {
   opacity: 0.95;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  border: 1px solid #9c9b9b;
-  background-color: #ffae4d;
+  background: #000;
+/* fallback color */
+  background: rgba(0,0,0,0.7);
   *zoom: 1;
   float: left;
   display: inline;
@@ -1817,6 +1845,7 @@
 .body_leads_new .lead_new .lead_new_form_name,
 .body_leads_new .lead_new .lead_new_form_email,
 .body_leads_new .lead_new .lead_new_form_phone {
+  color: #fff;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 12px;
@@ -1836,7 +1865,7 @@
 .body_leads_new .lead_new .lead_new_form_name #lead_time,
 .body_leads_new .lead_new .lead_new_form_email #lead_time,
 .body_leads_new .lead_new .lead_new_form_phone #lead_time {
-  color: #606060;
+  color: #fff;
   padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
@@ -2026,6 +2055,7 @@ margin-top
   text-decoration: none;
   display: inline-block;
   border: none;
+  color: #222;
 }
 .body_leads_new .lead_new .lead_new_form_submit input:hover,
 .body_leads_new .lead_new .lead_new_form_submit a:hover,
