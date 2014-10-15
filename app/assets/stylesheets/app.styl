@@ -3,6 +3,14 @@
 
 // edit()
 
+// :::::::::::: BOX SIZING :::::::::::::: //
+
+html 
+  box-sizing border-box
+
+*, *:before, *:after 
+  box-sizing inherit
+
 // :::::::::::: COLORS :::::::::::::: //
 
 // ::: LEAD ::: //
@@ -33,9 +41,14 @@ App-Font-Family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic 
 
 // :::::::::::: MIXINS :::::::::::::: //
 
-body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
+body-mixin(backgroundImage = url("./subtle_zebra_3d.png")) 
   top_menu_bar()
-  background-image  backgroundImage
+  background-image  backgroundImage  
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed
   margin 0px
   font-size 12px
   color #606060
@@ -57,6 +70,9 @@ blur-mixin(intensity = 1.6px)
 .top_menu_bar
   shift (-1/1000)
   background-color Menu-Top-Color
+  blur-mixin(intensity = 0.7px)
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(255, 255, 255, 0.85);
   border-bottom 1px solid #ccc
   padding-top 3px
   position fixed
@@ -68,9 +84,8 @@ blur-mixin(intensity = 1.6px)
     padding-bottom 2px
     shift(0.019)
     font-size 12px
-    -webkit-font-smoothing: antialiased
     display inline-block
-
+    hover-color(Lead-Orange)
   .logo
     shift(0.38)
     height 35px
@@ -80,11 +95,9 @@ blur-mixin(intensity = 1.6px)
     shift(0.574)
     font-size 20px
     display inline-block
-    -webkit-font-smoothing: antialiased
     .fa.fa-info-circle
       color #606060
-      &:hover
-        color Lead-Orange
+      hover-color(Lead-Orange)
 
   
 .bottom_menu_bar
@@ -195,7 +208,7 @@ blur-mixin(intensity = 1.6px)
     background-color white
     blur-mixin(intensity = 0.7px)
     background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
@@ -212,7 +225,6 @@ blur-mixin(intensity = 1.6px)
       font-weight bold
       font-size 14px
       border-bottom 1px solid #e7e7e7
-      hover-darken(percent = 15%)
       transition: all .25s ease-in-sine
       .fa.fa-star
         color #fcd229
@@ -235,6 +247,12 @@ blur-mixin(intensity = 1.6px)
 
 .body_leads_show
   body-mixin(backgroundImage: url(./interior2.png))
+  .back_to_main_page_button
+    width 100%
+    height 100%
+    position absolute
+    top 0 
+    left 0
   .lead_show
     opacity 0.9
     position relative
@@ -262,33 +280,32 @@ blur-mixin(intensity = 1.6px)
       -webkit-font-smoothing: antialiased
       font-size 40px
     .lead_show_body
-      font-size 22px
-      padding-top 7px
+      font-size 24px
+      padding-top 30px
       padding-left 25px
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
       color #606060
       line-height 150%
-      .lead_show_subtitle
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        margin-top 20px
-        margin-right 15px
-    .lead_show_price
-      text-align center
-      font-size 22px
-      padding 10px
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-      color #606060
-      line-height 150%
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      padding-top 7px
-      margin-top 50px
+      .lead_show_items_long
+        width 60%
+        float right
+        padding-right 10px
+        // padding-left 5px
+      .lead_show_items_short,
+      .lead_show_items_long
+        display inline-block
+        vertical-align top
+        .lead_show_item
+          -webkit-font-smoothing: antialiased
+          margin-top 20px
+          margin-right 15px
+          .lead_show_subtitle
+            font-weight bold
+            display inline-block
     .lead_show_buy input,   
     .lead_show_buy a 
-      margin-left 380px
+      margin 50px 0 30px 340px
       button(color = Lead-Orange)
       font-size 22px
 
@@ -585,27 +602,28 @@ blur-mixin(intensity = 1.6px)
   position relative
   opacity 0.5
   blur-mixin()
-  .reserved_link_to_signup
-    position: absolute
-    margin-top 30px
-    margin-left 103px
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 1);
-    blur-mixin(intensity = 0px)
-    padding: 10px;
-    top: 200px;  
-    width: 100%; 
-    width 70%
-    font-size 28px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    max-width 800px
-    min-width 400px
-    color: white; 
-    letter-spacing: -1px;  
-    .address_book_signup,
-    .address_book_signin
-      color Lead-Orange
+.reserved_link_to_signup
+  position: absolute
+  margin-top 30px
+  margin-left 103px
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  position fixed
+  blur-mixin(intensity = 0px)
+  padding: 10px;
+  top: 200px;  
+  width: 100%; 
+  width 70%
+  font-size 28px
+  font-weight bold
+  -webkit-font-smoothing: antialiased
+  max-width 800px
+  min-width 400px
+  color: white; 
+  letter-spacing: -1px;  
+  .address_book_signup,
+  .address_book_signin
+    color Lead-Orange
    
 
 
@@ -702,28 +720,29 @@ blur-mixin(intensity = 1.6px)
 .body_dummy_orders_address_book
   opacity 0.5
   blur-mixin()
-  .address_book_link_to_signup
-    position: absolute
-    margin-top 30px
-    margin-left 103px
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 1);
-    blur-mixin(intensity = 0px)
-    padding: 10px;
-    top: 200px;  
-    width: 100%; 
-    width 70%
-    font-size 28px
-    font-weight bold
-    -webkit-font-smoothing: antialiased
-    max-width 800px
-    min-width 400px
-    color: white; 
-    letter-spacing: -1px;  
-    letter-spacing: -1px;  
-    .address_book_signup,
-    .address_book_signin
-      color Lead-Orange
+.address_book_link_to_signup
+  position: absolute
+  margin-top 30px
+  margin-left 103px
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  position fixed
+  blur-mixin(intensity = 0px)
+  padding: 10px;
+  top: 200px;  
+  width: 100%; 
+  width 70%
+  font-size 28px
+  font-weight bold
+  -webkit-font-smoothing: antialiased
+  max-width 800px
+  min-width 400px
+  color: white; 
+  letter-spacing: -1px;  
+  letter-spacing: -1px;  
+  .address_book_signup,
+  .address_book_signin
+    color Lead-Orange
 
   // :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: //
 .body_new_lead_confirmation
@@ -883,7 +902,8 @@ blur-mixin(intensity = 1.6px)
 
   // :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
 .body_devise_login
-  body-mixin(backgroundImage: url(./interior2.png))
+.body_devise_login
+  body-mixin(backgroundImage: url(interior2.png))
   background-repeat no-repeat
   background-position center top
   background-size cover
@@ -906,33 +926,20 @@ blur-mixin(intensity = 1.6px)
         padding 4px
         border-radius 4px
         margin-top 4px
-        height 20px
+        height 30px
         width 200px
         border 1px solid #E8E8E8  
     .login_form_remember_me
-      font-size 10px  
+      font-size 12px  
     .login_form_submit input
     .login_form_submit a 
-      color #606060
-      border 1px solid Buy-Button-Color  
-      cursor pointer
-      font-size 12px
-      font-weight bold
-      line-height 24px
       position relative
-      border-radius 4px
       padding 4px
       padding-left 20px
       padding-right 20px
       margin-top 10px
       margin-bottom 10px  
-      text-align center
-      background-color Buy-Button-Color
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color #B8B8B8
-        border 1px solid #B8B8B8
-        transition: all .25s ease-in-sine
+      button(color = Lead-Orange)
     .login_shared_links
       font-size 12px
       &:hover
@@ -967,31 +974,18 @@ blur-mixin(intensity = 1.6px)
         padding 4px
         border-radius 4px
         margin-top 4px
-        height 20px
+        height 30px
         width 200px
         border 1px solid #E8E8E8  
     .signup_form_submit input
     .signup_form_submit a 
-      color #606060
-      border 1px solid Buy-Button-Color  
-      cursor pointer
-      font-size 12px
-      font-weight bold
-      line-height 24px
       position relative
-      border-radius 4px
       padding 4px
       padding-left 20px
       padding-right 20px
       margin-top 10px
       margin-bottom 10px  
-      text-align center
-      background-color Buy-Button-Color
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color #B8B8B8
-        border 1px solid #B8B8B8
-        transition: all .25s ease-in-sine
+      button(color = Lead-Orange)
     .signup_shared_links
       font-size 12px
       &:hover
@@ -1053,7 +1047,7 @@ blur-mixin(intensity = 1.6px)
         padding 4px
         border-radius 4px
         margin-top 4px
-        height 20px
+        height 30px
         width 200px
         border 1px solid #E8E8E8  
     .user_edit_form_submit input
@@ -1084,7 +1078,6 @@ blur-mixin(intensity = 1.6px)
   -moz-background-size cover
   -o-background-size cover
   .lead_new
-    opacity 0.95
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     span(1.3/4)

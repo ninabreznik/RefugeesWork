@@ -1,7 +1,27 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
 .top_menu_bar {
   position: relative;
   left: -0.103%;
   background-color: #fff;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  -ms-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000;
+/* fallback color */
+  background: rgba(255,255,255,0.85);
   border-bottom: 1px solid #ccc;
   padding-top: 3px;
   position: fixed;
@@ -15,8 +35,11 @@
   position: relative;
   left: 1.957%;
   font-size: 12px;
-  -webkit-font-smoothing: antialiased;
   display: inline-block;
+}
+.top_menu_bar .logged_user:hover,
+.top_menu_bar .not_logged_user:hover {
+  background-color: #ffae4d;
 }
 .top_menu_bar .logo {
   position: relative;
@@ -30,13 +53,12 @@
   left: 59.122%;
   font-size: 20px;
   display: inline-block;
-  -webkit-font-smoothing: antialiased;
 }
 .top_menu_bar .info .fa.fa-info-circle {
   color: #606060;
 }
 .top_menu_bar .info .fa.fa-info-circle:hover {
-  color: #ffae4d;
+  background-color: #ffae4d;
 }
 .bottom_menu_bar {
   padding-left: 82px;
@@ -211,6 +233,13 @@
 }
 .body_leads_index {
   background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -248,7 +277,7 @@
   filter: blur(0.7px);
   background: #000;
 /* fallback color */
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
@@ -258,7 +287,7 @@
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_leads_index .lead_box:hover {
-  background-color: rgba(242,242,242,0.9);
+  background-color: rgba(242,242,242,0.95);
 }
 .body_leads_index .lead_box .lead_title {
   color: #606060;
@@ -269,9 +298,6 @@
   font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
-}
-.body_leads_index .lead_box .lead_title:hover {
-  background-color: rgba(217,217,217,0.9);
 }
 .body_leads_index .lead_box .lead_title .fa.fa-star {
   color: #fcd229;
@@ -295,6 +321,13 @@
 }
 .body_leads_show {
   background-image: url("./interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -304,6 +337,13 @@
   text-decoration: none;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_leads_show .back_to_main_page_button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .body_leads_show .lead_show {
   opacity: 0.9;
@@ -337,36 +377,38 @@
   font-size: 40px;
 }
 .body_leads_show .lead_show .lead_show_body {
-  font-size: 22px;
-  padding-top: 7px;
+  font-size: 24px;
+  padding-top: 30px;
   padding-left: 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #606060;
   line-height: 150%;
 }
-.body_leads_show .lead_show .lead_show_body .lead_show_subtitle {
-  font-weight: bold;
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long {
+  width: 60%;
+  float: right;
+  padding-right: 10px;
+}
+.body_leads_show .lead_show .lead_show_body .lead_show_items_short,
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long {
+  display: inline-block;
+  vertical-align: top;
+}
+.body_leads_show .lead_show .lead_show_body .lead_show_items_short .lead_show_item,
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long .lead_show_item {
   -webkit-font-smoothing: antialiased;
   margin-top: 20px;
   margin-right: 15px;
 }
-.body_leads_show .lead_show .lead_show_price {
-  text-align: center;
-  font-size: 22px;
-  padding: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #606060;
-  line-height: 150%;
+.body_leads_show .lead_show .lead_show_body .lead_show_items_short .lead_show_item .lead_show_subtitle,
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long .lead_show_item .lead_show_subtitle {
   font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  padding-top: 7px;
-  margin-top: 50px;
+  display: inline-block;
 }
 .body_leads_show .lead_show .lead_show_buy input,
 .body_leads_show .lead_show .lead_show_buy a {
-  margin-left: 380px;
+  margin: 50px 0 30px 340px;
   font-size: 13px;
   padding: 10px 22px;
   border-radius: 3px;
@@ -395,6 +437,13 @@
 }
 .body_orders_show {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -595,6 +644,13 @@
 }
 .body_bank_transaction {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -751,6 +807,13 @@
 }
 .body_orders_reserved {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -911,13 +974,14 @@
   -ms-filter: blur(1.6px);
   filter: blur(1.6px);
 }
-.body_dummy_orders_reserved .reserved_link_to_signup {
+.reserved_link_to_signup {
   position: absolute;
   margin-top: 30px;
   margin-left: 103px;
   background: #000;
 /* fallback color */
-  background: #000;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -o-filter: blur(0px);
@@ -935,12 +999,19 @@
   color: #fff;
   letter-spacing: -1px;
 }
-.body_dummy_orders_reserved .reserved_link_to_signup .address_book_signup,
-.body_dummy_orders_reserved .reserved_link_to_signup .address_book_signin {
+.reserved_link_to_signup .address_book_signup,
+.reserved_link_to_signup .address_book_signin {
   color: #ffae4d;
 }
 .body_orders_address_book {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1093,13 +1164,14 @@
   -ms-filter: blur(1.6px);
   filter: blur(1.6px);
 }
-.body_dummy_orders_address_book .address_book_link_to_signup {
+.address_book_link_to_signup {
   position: absolute;
   margin-top: 30px;
   margin-left: 103px;
   background: #000;
 /* fallback color */
-  background: #000;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -o-filter: blur(0px);
@@ -1118,12 +1190,19 @@
   letter-spacing: -1px;
   letter-spacing: -1px;
 }
-.body_dummy_orders_address_book .address_book_link_to_signup .address_book_signup,
-.body_dummy_orders_address_book .address_book_link_to_signup .address_book_signin {
+.address_book_link_to_signup .address_book_signup,
+.address_book_link_to_signup .address_book_signin {
   color: #ffae4d;
 }
 .body_new_lead_confirmation {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1170,6 +1249,13 @@
 }
 .body_profile {
   background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1332,6 +1418,13 @@
 }
 .body_about {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1418,7 +1511,14 @@
   font-size: 14px;
 }
 .body_devise_login {
-  background-image: url("./interior2.png");
+  background-image: url("interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1458,37 +1558,45 @@
   padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
-  height: 20px;
+  height: 30px;
   width: 200px;
   border: 1px solid #e8e8e8;
 }
 .body_devise_login .login .login_form_remember_me {
-  font-size: 10px;
+  font-size: 12px;
 }
 .body_devise_login .login .login_form_submit input,
 .body_devise_login .login .login_form_submit a {
-  color: #606060;
-  border: 1px solid #ffae4d;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 24px;
   position: relative;
-  border-radius: 4px;
   padding: 4px;
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-align: center;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
   background-color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
 }
 .body_devise_login .login .login_form_submit input:hover,
-.body_devise_login .login .login_form_submit a:hover {
-  background-color: #b8b8b8;
-  border: 1px solid #b8b8b8;
-  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+.body_devise_login .login .login_form_submit a:hover,
+.body_devise_login .login .login_form_submit input:focus,
+.body_devise_login .login .login_form_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_login .login .login_form_submit input:active,
+.body_devise_login .login .login_form_submit a:active {
+  background-color: #ff9f2c;
 }
 .body_devise_login .login .login_shared_links {
   font-size: 12px;
@@ -1499,6 +1607,13 @@
 }
 .body_devise_signup {
   background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1544,34 +1659,42 @@
   padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
-  height: 20px;
+  height: 30px;
   width: 200px;
   border: 1px solid #e8e8e8;
 }
 .body_devise_signup .signup .signup_form_submit input,
 .body_devise_signup .signup .signup_form_submit a {
-  color: #606060;
-  border: 1px solid #ffae4d;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 24px;
   position: relative;
-  border-radius: 4px;
   padding: 4px;
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-align: center;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
   background-color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
 }
 .body_devise_signup .signup .signup_form_submit input:hover,
-.body_devise_signup .signup .signup_form_submit a:hover {
-  background-color: #b8b8b8;
-  border: 1px solid #b8b8b8;
-  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+.body_devise_signup .signup .signup_form_submit a:hover,
+.body_devise_signup .signup .signup_form_submit input:focus,
+.body_devise_signup .signup .signup_form_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_signup .signup .signup_form_submit input:active,
+.body_devise_signup .signup .signup_form_submit a:active {
+  background-color: #ff9f2c;
 }
 .body_devise_signup .signup .signup_shared_links {
   font-size: 12px;
@@ -1582,6 +1705,13 @@
 }
 .body_devise_password_new {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1651,6 +1781,13 @@
 }
 .body_devise_users_edit {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1696,7 +1833,7 @@
   padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
-  height: 20px;
+  height: 30px;
   width: 200px;
   border: 1px solid #e8e8e8;
 }
@@ -1771,6 +1908,13 @@
 }
 .body_leads_new {
   background-image: url("./interior1.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
@@ -1790,7 +1934,6 @@
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_leads_new .lead_new {
-  opacity: 0.95;
   background: #000;
 /* fallback color */
   background: rgba(0,0,0,0.7);
@@ -2077,6 +2220,13 @@ margin-top
 }
 .body_wallet_payment {
   background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   font-size: 12px;
   color: #606060;
