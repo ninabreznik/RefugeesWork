@@ -3,22 +3,37 @@
   <title></title>
 </head>
 <body class="body_orders_show">
+  <a class="back_to_main_page_button" href="/"></a>
   <% if @order.present? %>
   <div class="order_show">
   <div class="order_show_title">
     <%= @lead.business_type %> 
   </div>
-  <div class="order_show_body">
-    <div class="order_show_subtitle">
-    <%= I18n.t'ordersshow-lead.location' %>:</div><%= @lead.location %>       
-    <div class="order_show_subtitle">
-    <%= I18n.t'ordersshow-lead.zip' %>:</div><%= @lead.zip %>          
-    <div class="order_show_subtitle">
-    <%= I18n.t'ordersshow-lead.time' %>:</div><%= @lead.time %>      
-    <div class="order_show_subtitle">
-    <%= I18n.t'ordersshow-lead.description' %>:</div><%= @lead.description %>   
-    <div class="order_show_subtitle">
-    <%= I18n.t'ordersshow-lead.name' %>:</div><%= @lead.name %>        
+  <div class="lead_show_body">
+  <div class="lead_show_items_short">
+    <div class="lead_show_item">
+      <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.location' %>:</div> 
+      <%= @lead.location %>
+    </div> 
+    <div class="lead_show_item">          
+      <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.zip' %>:</div> 
+      <%= @lead.zip %> 
+    </div> 
+    <div class="lead_show_item">             
+      <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> 
+      <%= @lead.time %>
+    </div>
+    <div class="lead_show_item">    
+      <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.name' %>:</div> 
+      <%= @lead.name %> 
+    </div> 
+  </div>  
+  <div class="lead_show_items_long">       
+    <div class="lead_show_item">          
+      <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.description' %>:</div> 
+      <%= @lead.description %> 
+    </div>
+  </div>        
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>

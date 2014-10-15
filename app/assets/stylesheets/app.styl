@@ -72,7 +72,7 @@ blur-mixin(intensity = 1.6px)
   background-color Menu-Top-Color
   blur-mixin(intensity = 0.7px)
   background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.8);
   border-bottom 1px solid #ccc
   padding-top 3px
   position fixed
@@ -85,7 +85,6 @@ blur-mixin(intensity = 1.6px)
     shift(0.019)
     font-size 12px
     display inline-block
-    hover-color(Lead-Orange)
   .logo
     shift(0.38)
     height 35px
@@ -97,7 +96,8 @@ blur-mixin(intensity = 1.6px)
     display inline-block
     .fa.fa-info-circle
       color #606060
-      hover-color(Lead-Orange)
+      &:hover
+        color Lead-Orange 
 
   
 .bottom_menu_bar
@@ -280,7 +280,7 @@ blur-mixin(intensity = 1.6px)
       -webkit-font-smoothing: antialiased
       font-size 40px
     .lead_show_body
-      font-size 24px
+      font-size 22px
       padding-top 30px
       padding-left 25px
       -webkit-font-smoothing: antialiased
@@ -289,7 +289,7 @@ blur-mixin(intensity = 1.6px)
       line-height 150%
       .lead_show_items_long
         width 60%
-        float right
+        padding-left 80px
         padding-right 10px
         // padding-left 5px
       .lead_show_items_short,
@@ -305,14 +305,20 @@ blur-mixin(intensity = 1.6px)
             display inline-block
     .lead_show_buy input,   
     .lead_show_buy a 
-      margin 50px 0 30px 340px
+      margin 30px 0 20px 330px
       button(color = Lead-Orange)
       font-size 22px
 
 
 // :::::::::::: ORDERS/show => buy lead :::::::::::: //
 .body_orders_show
-  body-mixin()
+  body-mixin(backgroundImage: url(./interior3.png))
+  .back_to_main_page_button
+    width 100%
+    height 100%
+    position absolute
+    top 0 
+    left 0
   .order_show
     opacity 0.9
     position relative
@@ -339,51 +345,52 @@ blur-mixin(intensity = 1.6px)
       text-align center
       -webkit-font-smoothing: antialiased
       font-size 40px
-    .order_show_body
+    .lead_show_body
       font-size 22px
-      padding-top 7px
+      padding-top 30px
       padding-left 25px
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
       color #606060
       line-height 150%
-      .order_show_subtitle
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        margin-top 20px
-        margin-right 15px
-    .order_show_price
-      text-align center
-      font-size 22px
-      padding 10px
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-      color #606060
-      line-height 150%
-      font-weight bold
-      -webkit-font-smoothing: antialiased
-      padding-top 7px
-      margin-top 50px
+      .lead_show_items_long
+        width 60%
+        padding-left 80px
+        padding-right 10px
+      .lead_show_items_short,
+      .lead_show_items_long
+        display inline-block
+        vertical-align top
+        .lead_show_item
+          -webkit-font-smoothing: antialiased
+          margin-top 20px
+          margin-right 15px
+          .lead_show_subtitle
+            font-weight bold
+            display inline-block
     .payment_buttons_choose_payment_text
       text-align center
       padding 7px
-    .order_show_buy input,   
-    .order_show_buy a 
-      span(1/7)
-      shift(0.2)
-      margin-left 3px
-      button(color = Lead-Orange)
-      font-size 22px
+    .order_show_buy_buttons
+      padding 7px
+      margin-left 220px
+      .order_show_buy   
+        display inline-block
+      .order_show_buy input,   
+      .order_show_buy a 
+        // margin-left 1px
+        button(color = Lead-Orange)
+        font-size 22px
   .order_show_notes
     margin-top 5px
     margin-bottom 50px
     font-size 20px
-    // font-weight bold
     shift(0.08)
     .order_show_notes_title
+      color white
       shift(0.008)
       margin-bottom 4px
-      width 100px
+      width 150px
     #order_notes
       position relative
       text-decoration none
@@ -520,7 +527,7 @@ blur-mixin(intensity = 1.6px)
 
   // :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
 .body_orders_reserved
-  body-mixin()
+  body-mixin(backgroundImage: url(./interior6.png))
   .address_book_reserved_leads
     opacity 0.9
     shift(0.37)
@@ -549,21 +556,19 @@ blur-mixin(intensity = 1.6px)
       column-break-inside: avoid
       background-color white
       background-clip padding-box
-      border-radius 4px
-      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-      border 1px solid #ccc
       margin-bottom 15px
       line-break 1px
+      blur-mixin(intensity = 0.7px)
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(255, 255, 255, 0.95);
       .address_book_lead_title
+        opacity 0.85
         background-color Lead-Orange
-        border-top-left-radius 4px
-        border-top-right-radius 4px
         padding 10px
         font-weight bold
         -webkit-font-smoothing: antialiased
         font-size 14px
         border-bottom 1px solid #e7e7e7
-        hover-darken(percent = 15%)  
       .address_book_lead_body
         font-size 14px
         padding 10px
@@ -629,7 +634,7 @@ blur-mixin(intensity = 1.6px)
 
     // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
 .body_orders_address_book
-  body-mixin()
+  body-mixin(backgroundImage: url(./interior2.png))
   .address_book_columns
     shift (-1/15)
     width 70%
@@ -652,21 +657,19 @@ blur-mixin(intensity = 1.6px)
       column-break-inside: avoid
       background-color white
       background-clip padding-box
-      border-radius 4px
-      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-      border 1px solid #ccc
       margin-bottom 15px
       line-break 1px
+      blur-mixin(intensity = 0.7px)
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(255, 255, 255, 0.95);
       .address_book_lead_title
+        opacity 0.85
         background-color Lead-Orange
-        border-top-left-radius 4px
-        border-top-right-radius 4px
         padding 10px
         font-weight bold
         -webkit-font-smoothing: antialiased
         font-size 14px
         border-bottom 1px solid #e7e7e7
-        hover-darken(percent = 15%)
       .address_book_lead_body
         font-size 14px
         padding 10px

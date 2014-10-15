@@ -38,9 +38,6 @@
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
         <% else %>
-            <div class="lead_show_price">
-              <%= I18n.t'leadsshow-lead.price' %>
-            </div>
               <%= render 'payment_confirmation_link' %>
         <% end %>
       <% else %>

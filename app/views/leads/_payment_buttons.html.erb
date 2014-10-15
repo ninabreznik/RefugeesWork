@@ -6,6 +6,7 @@
 PayPal/Merchant Services/BuyNowButtons
 ########################################
 --> 
+<div class="order_show_buy_buttons">
 <div class="order_show_buy">  
   <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", 
               @order.paypal_url(order_path(@order), paypal_notifications_url) 
@@ -74,7 +75,7 @@ Wallet
 
 
 <% end %>
-
+</div>
 
 <!--
 ########################################
