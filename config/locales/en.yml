@@ -173,7 +173,7 @@ en:
 
 
 # ############################################################################################
-# Page 5 - ORDERS/INDEX (Address book) (Reserved)
+# Page 5 - ORDERS/INDEX (ORDERS/ADDRESS_BOOK) (ORDERS/RESERVED)
 # ############################################################################################
 
 # Titles
@@ -196,8 +196,7 @@ en:
   ordersindex-notifications:
     customer-info: "Customer contact information"
     customer-info-explanation: "available only if you buy this lead"
-    to-see-address-book: "to see customers in your Address book"
-    to-see-reserved: "to see reserved customers"
+    to-see-address-book: "To see customers in your Address book you need to"
 # Buttons
   ordersindex-buttons: 
     buy: "Buy"
@@ -205,6 +204,11 @@ en:
     save: "Save"
     signup: "Sign up"
     login: "Login"
+
+# Users not signed_in text box
+  ordersindex_not_signed_in:
+    text_box: "On this page you can find all reserved leads - those that you maybe decide to buy in the next days. But to be able to see and add new reserved leads, you have to "
+
 
 
 # ############################################################################################

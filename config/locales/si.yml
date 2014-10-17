@@ -194,16 +194,20 @@ si:
   ordersindex-notifications:
     customer-info: "Kontaktne informacije stranke"
     customer-info-explanation: "na voljo le ob nakupu tega kontakta."
-    to-see-address-book: "za dostop do imenika kontaktov"
-    to-see-reserved: "za dostop do rezerviranih kontaktov"
+    to-see-address-book: "Za dostop do imenika kontaktov je potrebna"
 
 # Buttons
   ordersindex-buttons: 
     buy: "Kupi za 10€"
     remove-from-reserved: "Odstrani iz rezerviranih"
     save: "Shrani"
-    signup: "Registriraj se"
+    signup: "Registracija"
     login: "Prijava"
+
+# Users not signed_in text box
+  ordersindex_not_signed_in:
+    text_box: "Naj tej strani najdete rezervirane kontakte - tiste, ki jih boste morda zakupili v naslednjih dneh. Za dodajanje novih ali brskanje med obstoječimi rezerviranimi kontakti, je potrebna "
+
 
 
 # ############################################################################################
@@ -297,6 +301,7 @@ si:
 # ############################################################################################
   wallet-payment:
     offer_title: "Polnjenje denarnice"
+    offer_promotion: "Pri vsakem polnjenju nad 100€ prejmete dodatnih 10% vrednosti. Za polnjenje v višini 100€ prejmete tako v denarnico dodatnih 10€, za 200€ dodatnih 20€ itd.."
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
     offer_price: "Cena"

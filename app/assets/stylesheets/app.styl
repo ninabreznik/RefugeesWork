@@ -191,16 +191,16 @@ blur-mixin(intensity = 1.6px)
   .columns
     // opacity 0.7
     shift (-1/15)
-    width 70%
-    max-width 1100px
-    min-width 800px
+    width 80%
+    max-width 1500px
+    min-width 1000px
     margin 60px auto
     -moz-column-count 3
     -webkit-column-count 3
     column-count: 3
     -moz-column-gap 10px
     -webkit-column-gap 10px
-    column-gap 15px
+    column-gap 55px
     // -webkit-column-fill auto
     // -moz-column-fill: auto
     // column-fill: auto
@@ -213,19 +213,18 @@ blur-mixin(intensity = 1.6px)
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
     column-break-inside: avoid
-    margin-bottom 15px
+    margin-bottom 45px
     line-break 1px
     hover-darken(percent = 5%)
-    transition: all .25s ease-in-sine
+    // transition: all .25s ease-in-sine
     .lead_title
       color #606060
       opacity 0.85
       background-color Lead-Orange
-      padding 10px
+      padding 15px
       font-weight bold
       font-size 14px
-      border-bottom 1px solid #e7e7e7
-      transition: all .25s ease-in-sine
+      // transition: all .25s ease-in-sine
       .fa.fa-star
         color #fcd229
         font-size 16px
@@ -233,7 +232,7 @@ blur-mixin(intensity = 1.6px)
           color #606060
     .lead_body
       font-size 14px
-      padding 10px
+      padding 15px
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
       color #606060
@@ -267,10 +266,7 @@ blur-mixin(intensity = 1.6px)
     -moz-column-break-inside: avoid
     column-break-inside: avoid
     background-color white
-    background-clip padding-box
-    border-radius 4px
-    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-    border 1px solid #ccc
+    // background-clip padding-box
     line-break 1px  
     .lead_show_title
       background-color Lead-Orange
@@ -333,10 +329,6 @@ blur-mixin(intensity = 1.6px)
     -moz-column-break-inside: avoid
     column-break-inside: avoid
     background-color white
-    background-clip padding-box
-    border-radius 4px
-    box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-    border 1px solid #ccc
     line-break 1px  
     .order_show_title
       background-color Lead-Orange
@@ -387,36 +379,36 @@ blur-mixin(intensity = 1.6px)
     font-size 20px
     shift(0.08)
     .order_show_notes_title
-      color white
-      shift(0.008)
+      padding 7px
+      blur-mixin(intensity = 0.7px)
+      background: rgb(0, 0, 0); /* fallback color */
+      background-color Lead-Orange
+      opacity 0.95
+      color #606060
       margin-bottom 4px
       width 150px
     #order_notes
       position relative
+      blur-mixin(intensity = 0.7px)
+      background: rgb(0, 0, 0); /* fallback color */
+      background-color white
+      opacity 0.95
+      -webkit-column-break-inside: avoid
+      -moz-column-break-inside: avoid
+      column-break-inside: avoid
       text-decoration none
       color #606060    
       padding 20px
       font-size 16px
       -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale 
       height 300px
-      width 67%
+      width 71%
       max-width 1100px
       min-width 800px
-      vertical-align bottom
-      -webkit-column-break-inside: avoid
-      -moz-column-break-inside: avoid
-      column-break-inside: avoid
-      background-color white
-      background-clip padding-box
-      border-radius 4px
-      box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-      border 1px solid #ccc
       margin-bottom 7px
       margin-top 7px
       line-break 1px 
-      hover-darken(percent = 5%)
-      transition: all .25s ease-in-sine
+      border 0px
     .order_show_notes_submit input
     .order_show_notes_submit a
       margin-left 815px
@@ -536,9 +528,9 @@ blur-mixin(intensity = 1.6px)
     font-weight bold
   .address_book_columns
     shift (-1/15)
-    width 70%
-    max-width 1100px
-    min-width 800px
+    width 80%
+    max-width 1500px
+    min-width 1000px
     margin 60px auto
     -webkit-column-count 3
     -webkit-column-gap 10px
@@ -547,7 +539,7 @@ blur-mixin(intensity = 1.6px)
     -moz-column-gap 10px
     -moz-column-fill: auto
     column-count: 3
-    column-gap: 15px
+    column-gap: 55px
     column-fill: auto
     .address_book_lead_box
       vertical-align bottom
@@ -556,7 +548,7 @@ blur-mixin(intensity = 1.6px)
       column-break-inside: avoid
       background-color white
       background-clip padding-box
-      margin-bottom 15px
+      margin-bottom 45px
       line-break 1px
       blur-mixin(intensity = 0.7px)
       background: rgb(0, 0, 0); /* fallback color */
@@ -564,14 +556,14 @@ blur-mixin(intensity = 1.6px)
       .address_book_lead_title
         opacity 0.85
         background-color Lead-Orange
-        padding 10px
+        padding 15px
         font-weight bold
         -webkit-font-smoothing: antialiased
         font-size 14px
         border-bottom 1px solid #e7e7e7
       .address_book_lead_body
         font-size 14px
-        padding 10px
+        padding 15px
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         color #606060
@@ -592,17 +584,15 @@ blur-mixin(intensity = 1.6px)
         .address_book_lead_notification_explanation
           font-weight normal
       .address_book_buttons
-        margin-left 90px
+        margin-top 20px
         .address_book_buy_button
-          margin-top 20px
+          margin-left 80px
           button(color = Lead-Orange)
         .address_book_remove_button input
         .address_book_remove_button a 
-          margin-top 5px 
-          margin-bottom 5px
-          margin-left -50px
+          margin 5px 0px 5px 50px
           color #606060
-          button(color = white)
+          button(color = #eeeeee)
 .body_dummy_orders_reserved
   position relative
   opacity 0.5
@@ -637,9 +627,9 @@ blur-mixin(intensity = 1.6px)
   body-mixin(backgroundImage: url(./interior2.png))
   .address_book_columns
     shift (-1/15)
-    width 70%
-    max-width 1100px
-    min-width 800px
+    width 80%
+    max-width 1500px
+    min-width 1000px
     margin 60px auto
     column-count: 3
     -webkit-column-count 3
@@ -648,7 +638,7 @@ blur-mixin(intensity = 1.6px)
     -moz-column-count 3
     -moz-column-gap 10px
     -moz-column-fill: auto
-    column-gap: 15px
+    column-gap: 55px
     column-fill: balance
     .address_book_lead_box
       vertical-align bottom
@@ -657,22 +647,22 @@ blur-mixin(intensity = 1.6px)
       column-break-inside: avoid
       background-color white
       background-clip padding-box
-      margin-bottom 15px
+      margin-bottom 45px
       line-break 1px
       blur-mixin(intensity = 0.7px)
       background: rgb(0, 0, 0); /* fallback color */
       background: rgba(255, 255, 255, 0.95);
       .address_book_lead_title
         opacity 0.85
-        background-color Lead-Orange
-        padding 10px
+        background-color #82c0c7
+        padding 15px
         font-weight bold
         -webkit-font-smoothing: antialiased
         font-size 14px
         border-bottom 1px solid #e7e7e7
       .address_book_lead_body
         font-size 14px
-        padding 10px
+        padding 15px
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         color #606060
@@ -684,32 +674,30 @@ blur-mixin(intensity = 1.6px)
       .address_book_lead_notes
         padding 5px
         #order_notes
+          background-color white
+          opacity 0.5
           position relative
           text-decoration none
-          color #606060       
+          color #606060
+          // font-weight bold       
           padding 7px
           font-size 12px 
           height 150px
-          width 253px
+          width 293px
           vertical-align bottom
           -webkit-column-break-inside: avoid
           -moz-column-break-inside: avoid
           column-break-inside: avoid
-          background-color white
-          background-clip padding-box
-          border-radius 4px
-          box-shadow 0 1px 2px rgba(0, 0, 0, 0.05)
-          border 1px solid #ccc
-          margin-bottom 7px
-          margin-top 7px
+          margin 7px 0px 7px 0px
           line-break 1px 
+          border 1px solid #eeeeee 
           hover-darken(percent = 5%)
         .address_book_lead_notes_button input
         .address_book_lead_notes_button a
           shift(0.66)
           margin-bottom 7px
           margin-top 3px
-          button(color = Lead-Orange)
+          button(color = #82c0c7)
       .address_book_link_to-signup"
         font-size 12px
   .address_book_bought_leads
@@ -781,7 +769,7 @@ blur-mixin(intensity = 1.6px)
     -moz-column-gap 10px
     -moz-column-fill: auto
     column-count: 3
-    column-gap: 15px
+    column-gap: 55px
     column-fill: auto
     .profile_dashboard_box
       vertical-align bottom
@@ -791,7 +779,7 @@ blur-mixin(intensity = 1.6px)
       background: rgb(0, 0, 0); /* fallback color */
       background: rgba(255, 255, 255, 0.9);
       blur-mixin(intensity = 0.7px)
-      margin-bottom 15px
+      margin-bottom 45px
       line-break 1px
       .profile_dashboard_title
         color #606060
@@ -799,7 +787,7 @@ blur-mixin(intensity = 1.6px)
         text-align center
         background-color #82c0c7
         opacity 0.9
-        padding 10px
+        padding 15px
         font-weight bold
         -webkit-font-smoothing: antialiased
         font-size 12px
@@ -1157,30 +1145,40 @@ blur-mixin(intensity = 1.6px)
 // :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: //
 
 .body_wallet_payment
-  body-mixin()
+  body-mixin(backgroundImage: url(./interior2.png))
+  background-repeat no-repeat
+  background-position center top
+  background-size cover
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
   .wallet_payment_offer
-    opacity 0.9
-    margin 38px auto
+    opacity 0.95
+    width 63%
+    margin 80px auto
     padding 100px
     padding-top 70px
     background-color white
+    // box-shadow 0px 0px 20px white
     .wallet_payment_offer_title
       center(420px)
-      color Offer-Font-Color
+      color #606060
       font-weight bold
       font-size 28px
       margin-bottom 50px
+    .wallet_payment_offer_promotion
+      width 70%
+      color #606060
+      font-size 16px
+      margin 0px 0px 50px 90px
     .wallet_payment_offer_company_info 
       shift(0.53)
-      color #606060
+      color black
       text-align left
-      border 1px solid #e7e7e7
-      box-shadow inset 0 0 0 0 #CCC
-      border-radius 4px
       padding 4px 7px 4px 7px
-      background-color Lead-Subtitle 
+      background-color Lead-Orange 
     .wallet_payment_offer_date
-      color #606060
+      color black
       font-size 16px
       margin-bottom 50px
       margin-top 10px
@@ -1190,23 +1188,22 @@ blur-mixin(intensity = 1.6px)
       shift(0.075)
       margin-top 20px
       margin-bottom 10px
-      color #606060
+      color black
       text-align left
-      border 1px solid #e7e7e7
-      box-shadow inset 0 0 0 0 #CCC
-      border-radius 4px
       // bellow copy from bank transaction //
       .wallet_payment_offer_sosed_info_price td
         font-weight bold
         padding 15px 30px 15px 30px
         font-size 16px
-        background-color Lead-Subtitle
+        background-color Lead-Orange
+        color white
       .wallet_payment_offer_sosed_info_item td
-        background-color Lead-Subtitle     
-        padding 7px 30px 7px 30px
+        font-weight bold
+        background-color #eeeeee   
+        padding 15px 30px 15px 30px
         font-size 12px
     .wallet_payment_offer_instructions
-      width 70%
+      // width 70%
       margin-top 20px
       font-size 12px
       font-weight bold

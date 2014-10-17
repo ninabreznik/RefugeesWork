@@ -268,10 +268,11 @@ SRE - Poklicati!</textarea>
 </div>
 </div>
     <div class="address_book_link_to_signup">
-    You have to <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
-    new_user_registration_path, :class=>"address_book_signup" %> or
+    <%= I18n.t'ordersindex-notifications.to-see-address-book' %> 
+    <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
+    new_user_registration_path, :class=>"address_book_signup" %> /
     <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
-    new_user_session_path, :class=>"address_book_signin" %> <%= I18n.t'ordersindex-notifications.to-see-address-book' %> . 
+    new_user_session_path, :class=>"address_book_signin" %>. 
   </div>
 <% end %>
 </body>

@@ -19,9 +19,12 @@ class StaticPagesController < ApplicationController
   end
 
   def payment_confirmation
-    Rails.logger.debug 'XXXX'*100 + params.inspect
     @user = current_user
     @lead = Lead.find_by_id(params[:lead])
+  end
+
+  def wallet_payment
+    @user = current_user
   end
 
 end

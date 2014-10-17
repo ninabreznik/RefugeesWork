@@ -7,11 +7,16 @@
   <div class="wallet_payment_offer_title">
     <%= I18n.t'wallet-payment.offer_title' %>
   </div>
+  <div class="wallet_payment_offer_promotion">
+    <%= I18n.t'wallet-payment.offer_promotion' %>
+  </div>
   <table class="wallet_payment_offer_company_info">
     <tr class="wallet_payment_offer_company_info_item" >
       <td><%= I18n.t'wallet-payment.offer_item_username' %>:</td>
       <td><%= current_user.email %></td>
     </tr>
+
+
   
   </table>
 
@@ -26,7 +31,8 @@
     </tr>  
     <tr class="wallet_payment_offer_sosed_info_item"> 
       <td><%= I18n.t'wallet-payment.offer_purpose' %>:</td>
-      <td><%= I18n.t'wallet-payment.offer_purpose_text' %></td>
+ 
+      <td><%= I18n.t'wallet-payment.offer_purpose_text' %><%= current_user.orders.</td>
     </tr>
     <tr class="wallet_payment_offer_sosed_info_item">
       <td><%= I18n.t'wallet-payment.offer_account' %>:</td>
