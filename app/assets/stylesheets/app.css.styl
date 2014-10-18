@@ -1,4 +1,4 @@
-@import 'jeet/index'
+@import 'jeet'
 @import 'axis'
 
 // edit()
@@ -59,11 +59,11 @@ body-mixin(backgroundImage = url("./subtle_zebra_3d.png"))
     font-family App-Font-Family
 
 blur-mixin(intensity = 1.6px)
-  -webkit-filter: blur(intensity); 
-  -moz-filter: blur(intensity); 
-  -o-filter: blur(intensity); 
-  -ms-filter: blur(intensity); 
-  filter: blur(intensity);
+  -webkit-filter blur(intensity) 
+  -moz-filter blur(intensity) 
+  -o-filter blur(intensity) 
+  // -ms-filter blur(intensity) 
+  filter blur(intensity)
 
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
 
