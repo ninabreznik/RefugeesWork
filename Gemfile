@@ -28,6 +28,9 @@ gem 'spring',        group: :development
 
 gem 'less-rails'
 gem 'stylus'
+gem 'rspec',           '~> 2.14.0'
+gem 'sprockets-rails', '~> 2.0.0'
+gem 'railties',        '~> 4.1.0'
 
 gem "font-awesome-rails"
 
