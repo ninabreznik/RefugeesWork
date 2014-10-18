@@ -55,8 +55,6 @@ si:
     sure: "Ste prepričani?"
     back: "Nazaj"
 
-#<%= I18n.t'users-links.login' %> 
-#"#{I18n.t'users-links.login'}"
 #Links
   users-links:
     login: "Prijava"
@@ -66,6 +64,11 @@ si:
     unlock-instructions: "Niste prejeli navodil za odklep"
     sign-in-with: "Prijava z"
 
+  devise:
+    sessions: 
+      user:
+        signed_in: "Uspešno ste prijavljeni."
+        signed_out: "Uspešno ste bili odjavljeni."
 
 
 
@@ -301,7 +304,7 @@ si:
 # ############################################################################################
   wallet-payment:
     offer_title: "Polnjenje denarnice"
-    offer_promotion: "Pri vsakem polnjenju nad 100€ prejmete dodatnih 10% vrednosti. Za polnjenje v višini 100€ prejmete tako v denarnico dodatnih 10€, za 200€ dodatnih 20€ itd.."
+    offer_promotion: "Pri vsakem polnjenju nad 100€ prejmete dodatnih 10% vrednosti. Za polnjenje v višini 100€ prejmete tako v denarnico dodatnih 10€, za 200€ dodatnih 20€ itd."
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
     offer_price: "Cena"

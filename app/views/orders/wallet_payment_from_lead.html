@@ -26,10 +26,10 @@
       <td><%= I18n.t'wallet-payment.offer_price' %>:</td>
       <td><%= I18n.t'wallet-payment.offer_price_amount' %></td>
     </tr>  
-    <tr class="wallet_payment_offer_sosed_info_item"> 
-      <td><%= I18n.t'wallet-payment.offer_purpose' %>:</td>
-      <td><%= I18n.t'wallet-payment.offer_purpose_text' %></td>
-    </tr>
+      <tr class="wallet_payment_offer_sosed_info_item"> 
+        <td><%= I18n.t'wallet-payment.offer_purpose' %>:</td>
+        <td><%= I18n.t'wallet-payment.offer_purpose_text' %> / <%= @order.selected_id %></td>
+      </tr>
     <tr class="wallet_payment_offer_sosed_info_item">
       <td><%= I18n.t'wallet-payment.offer_account' %>:</td>
       <td><%= I18n.t'wallet-payment.offer_mojsosed_account' %></td>

@@ -14,7 +14,7 @@ resources :orders
   get '/address_book' => 'orders#address_book'
   get '/reserved' => 'orders#reserved'
   get '/bank_transaction' => 'orders#bank_transaction'
-
+  get '/wallet_payment_from_lead' => 'orders#wallet_payment_from_lead'
     # match '/orders/:id',       to: 'orders#show',          via: 'get'
     # match '/orders/:id',       to: 'orders#delete',        via: 'delete'
 

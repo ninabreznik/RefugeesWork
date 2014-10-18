@@ -61,8 +61,8 @@ Wallet
   <%= link_to(
             "#{I18n.t'ordersshow-payment-buttons.wallet'}",
             {
-              :controller => 'static_pages', 
-              :action => 'wallet_payment', 
+              :controller => 'orders', 
+              :action => 'wallet_payment_from_lead', 
               :id => @order.id
               },
             :html =>

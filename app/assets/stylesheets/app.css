@@ -57,7 +57,7 @@ html {
   color: #ffae4d;
 }
 .bottom_menu_bar {
-  padding-left: 82px;
+  padding-left: 110px;
   background-color: #fff;
   position: fixed;
   bottom: 0;
@@ -79,10 +79,10 @@ html {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
-  width: 207.8px;
+  width: 230px;
   border-right: 1px solid #e7e7e7;
   padding: 7px;
-  font-size: 22px;
+  font-size: 14px;
 }
 .bottom_menu_bar a[href="/"]:before,
 .bottom_menu_bar a[href="/"]:after {
@@ -92,21 +92,18 @@ html {
 .bottom_menu_bar a[href="/"]:after {
   clear: both;
 }
+.bottom_menu_bar a[href="/"]:hover {
+  color: #ffae4d;
+}
 .bottom_menu_bar .fa.fa-home {
   color: #606060;
+  font-size: 22px;
 }
 .bottom_menu_bar .fa.fa-home:hover {
   color: #ffae4d;
 }
-.bottom_menu_bar .fa.fa-home::after {
-  content: " Home";
-  font-size: 14px;
-  padding-bottom: 4px;
-}
-.bottom_menu_bar .fa.fa-home::after:hover {
-  color: #ffae4d;
-}
 .bottom_menu_bar a[href="/reserved"] {
+  background-color: #fff;
   *zoom: 1;
   float: left;
   display: inline;
@@ -118,10 +115,10 @@ html {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
-  width: 207.8px;
+  width: 230px;
   border-right: 1px solid #e7e7e7;
   padding: 7px;
-  font-size: 22px;
+  font-size: 14px;
 }
 .bottom_menu_bar a[href="/reserved"]:before,
 .bottom_menu_bar a[href="/reserved"]:after {
@@ -131,22 +128,18 @@ html {
 .bottom_menu_bar a[href="/reserved"]:after {
   clear: both;
 }
+.bottom_menu_bar a[href="/reserved"]:hover {
+  color: #ffae4d;
+}
 .bottom_menu_bar .fa.fa-star {
   color: #606060;
+  font-size: 22px;
 }
 .bottom_menu_bar .fa.fa-star:hover {
   color: #ffae4d;
 }
-.bottom_menu_bar .fa.fa-star::after {
-  content: " Reserved";
-  font-size: 14px;
-  padding-bottom: 4px;
-}
-.bottom_menu_bar .fa.fa-star::after:hover {
-  color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
-}
 .bottom_menu_bar a[href="/address_book"] {
+  background-color: #fff;
   *zoom: 1;
   float: left;
   display: inline;
@@ -158,10 +151,10 @@ html {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
-  width: 207.8px;
+  width: 230px;
   border-right: 1px solid #e7e7e7;
   padding: 7px;
-  font-size: 20px;
+  font-size: 14px;
 }
 .bottom_menu_bar a[href="/address_book"]:before,
 .bottom_menu_bar a[href="/address_book"]:after {
@@ -171,23 +164,18 @@ html {
 .bottom_menu_bar a[href="/address_book"]:after {
   clear: both;
 }
+.bottom_menu_bar a[href="/address_book"]:hover {
+  color: #ffae4d;
+}
 .bottom_menu_bar .fa.fa-users {
   color: #606060;
+  font-size: 20px;
 }
 .bottom_menu_bar .fa.fa-users:hover {
   color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
-}
-.bottom_menu_bar .fa.fa-users::after {
-  content: " Address book";
-  font-size: 14px;
-  padding-bottom: 4px;
-}
-.bottom_menu_bar .fa.fa-users::after:hover {
-  color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
 }
 .bottom_menu_bar a[href="/profile"] {
+  background-color: #fff;
   *zoom: 1;
   float: left;
   display: inline;
@@ -199,9 +187,10 @@ html {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
-  width: 207.8px;
+  width: 230px;
+  border-right: 1px solid #e7e7e7;
   padding: 7px;
-  font-size: 22px;
+  font-size: 14px;
 }
 .bottom_menu_bar a[href="/profile"]:before,
 .bottom_menu_bar a[href="/profile"]:after {
@@ -211,21 +200,24 @@ html {
 .bottom_menu_bar a[href="/profile"]:after {
   clear: both;
 }
+.bottom_menu_bar a[href="/profile"]:hover {
+  color: #ffae4d;
+}
 .bottom_menu_bar .fa.fa-cog {
   color: #606060;
+  font-size: 20px;
 }
 .bottom_menu_bar .fa.fa-cog:hover {
   color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
 }
-.bottom_menu_bar .fa.fa-cog::after {
-  content: " Profile";
-  font-size: 14px;
-  padding-bottom: 4px;
+a[href="#top"] {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  font-size: 26px;
 }
-.bottom_menu_bar .fa.fa-cog::after:hover {
+a[href="#top"] fa.fa-arrow-up:hover {
   color: #ffae4d;
-  -webkit-font-smoothing: antialiased;
 }
 .body_leads_index {
   background-image: url("./interior6.png");
@@ -622,7 +614,7 @@ html {
   background-color: #ff9f2c;
 }
 .body_bank_transaction {
-  background-image: url("./subtle_zebra_3d.png");
+  background-image: url("./interior2.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -634,6 +626,14 @@ html {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 .body_bank_transaction a {
   text-decoration: none;
@@ -641,8 +641,9 @@ html {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_bank_transaction .offer {
-  opacity: 0.9;
-  margin: 38px auto;
+  opacity: 0.95;
+  width: 63%;
+  margin: 80px auto;
   padding: 100px;
   padding-top: 70px;
   background-color: #fff;

@@ -101,7 +101,7 @@ blur-mixin(intensity = 1.6px)
 
   
 .bottom_menu_bar
-  padding-left 82px
+  padding-left 110px
   background-color Menu-Bottom-Color
   position fixed
   bottom 0
@@ -113,79 +113,72 @@ blur-mixin(intensity = 1.6px)
     background-color white
     span(1/4)
     text-align center
-    width 207.8px
+    width 230px
     border-right 1px solid #e7e7e7
     padding 7px
-    font-size 22px
-  .fa.fa-home
-    color #606060
+    font-size 14px
     &:hover
       color Lead-Orange
-  .fa.fa-home::after
-    content " Home"
-    font-size 14px
-    padding-bottom 4px
+  .fa.fa-home
+    color #606060
+    font-size 22px
     &:hover
       color Lead-Orange
   a[href="/reserved"]
+    background-color white
     span(1/4)
     text-align center
-    width 207.8px
+    width 230px
     border-right 1px solid #e7e7e7
     padding 7px
-    font-size 22px
+    font-size 14px
+    &:hover
+      color Lead-Orange
   .fa.fa-star
     color #606060
+    font-size 22px
     &:hover
       color Lead-Orange
-  .fa.fa-star::after
-    content: " Reserved"
-    font-size 14px
-    padding-bottom 4px
-    &:hover
-      color Lead-Orange
-      -webkit-font-smoothing: antialiased
   a[href="/address_book"]
+    background-color white
     span(1/4)
     text-align center
-    width 207.8px
+    width 230px
     border-right 1px solid #e7e7e7
     padding 7px
-    font-size 20px
+    font-size 14px
+    &:hover
+      color Lead-Orange
   .fa.fa-users
     color #606060
+    font-size 20px
     &:hover
       color Lead-Orange
-      -webkit-font-smoothing: antialiased
-  .fa.fa-users::after
-    content: " Address book"
-    font-size 14px
-    padding-bottom 4px
-    &:hover
-      color Lead-Orange
-      -webkit-font-smoothing: antialiased
   a[href="/profile"]
+    background-color white
     span(1/4)
     text-align center
-    width 207.8px
-    // border-right 1px solid #e7e7e7
+    width 230px
+    border-right 1px solid #e7e7e7
     padding 7px
-    font-size 22px
+    font-size 14px
+    &:hover
+      color Lead-Orange
   .fa.fa-cog
     color #606060
+    font-size 20px
     &:hover
       color Lead-Orange
-      -webkit-font-smoothing: antialiased
-  .fa.fa-cog::after
-    content: " Profile"
-    font-size 14px
-    padding-bottom 4px
-    &:hover
-      color Lead-Orange
-      -webkit-font-smoothing: antialiased
 
+a[href="#top"]
+  position fixed
+  bottom 50px
+  right 20px
+  font-size 26px
+  fa.fa-arrow-up
+    &:hover
+      color Lead-Orange
 // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
-
 .body_leads_index
   body-mixin(backgroundImage: url(./interior6.png))
   .columns
@@ -417,16 +410,20 @@ blur-mixin(intensity = 1.6px)
 
       
 
-
-        
-
   // :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
 
 .body_bank_transaction
-  body-mixin()
+  body-mixin(backgroundImage: url(./interior2.png))
+  background-repeat no-repeat
+  background-position center top
+  background-size cover
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
   .offer
-    opacity 0.9
-    margin 38px auto
+    opacity 0.95
+    width 63%
+    margin 80px auto
     padding 100px
     padding-top 70px
     background-color white
@@ -1143,6 +1140,7 @@ blur-mixin(intensity = 1.6px)
         transition: all .25s ease-in-sine
 
 // :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: //
+// :::::::::::: same styling also for ORDERS/WALLET_PAYMENT_FOR LEADS:::::::::::: //
 
 .body_wallet_payment
   body-mixin(backgroundImage: url(./interior2.png))

@@ -24,7 +24,7 @@ class StaticPagesController < ApplicationController
   end
 
   def wallet_payment
-    @user = current_user
+    @order = Order.find_by_id(params[:order])
   end
 
 end

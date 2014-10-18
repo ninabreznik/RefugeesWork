@@ -61,6 +61,11 @@ class OrdersController < ApplicationController
     @lead = @order.selected
   end
 
+  def wallet_payment_from_lead
+    @order = Order.find(params[:id])
+    @lead = @order.selected
+  end
+
   def address_book
     @orders = Order.all
   end

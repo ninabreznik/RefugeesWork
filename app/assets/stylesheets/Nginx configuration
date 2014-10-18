@@ -1,0 +1,58 @@
+##############################################################
+# Upstream must have unique name and unique socket. #
+# The socket must match what is in the app's unicorn.rb file #
+##############################################################
+upstream sosed_server {
+server unix:/tmp/unicorn.outfit_oyster-production.sock fail_timeout=0;
+}
+
+##############################
+# Rewrite www to non-www #
+##############################
+server{
+server_name www.sosed.biz;
+rewrite ^(.*) http://sosed.biz$1 permanent;
+}
+
+##############################
+# Server configs go here #
+##############################
+server {
+listen 80;
+
+client_max_body_size 4G;
+server_name sosed.biz;
+keepalive_timeout 5;
+
+#########################################################
+# This should go to the public folder of your rails app #
+#########################################################
+root /opt/outfit_oyster/production/current/public;
+
+try_files $uri/index.html $uri.html $uri @app;
+location @app {
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header Host $http_host;
+proxy_redirect off;
+
+#############################################
+# This should be http://upstream; with the #
+# upstream specified above. #
+#############################################
+proxy_pass http://sosed_server;
+}
+error_page 500 502 503 504 /500.html;
+location = /500.html {
+#########################################################
+# This should go to the public folder of your rails app #
+#########################################################
+root /opt/outfit_oyster/production/current/public;
+}
+
+location ~ "^/assets/(.*/)*.*-[0-9a-f]{32}\..*$" {
+  root /opt/outfit_oyster/production/current/public;
+  gzip_static on;
+  expires max;
+  add_header Cache-Control public;
+}
+}

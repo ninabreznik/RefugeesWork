@@ -55,6 +55,12 @@ en:
     sure: "Are you sure?"
     back: "Back"
 
+  devise:
+    sessions: 
+      user:
+        signed_in: "Succesfully signed in."
+        signed_out: "Successfuly signed out."
+
 #<%= I18n.t'users-links.login' %> 
 #"#{I18n.t'users-links.login'}"
 #Links
