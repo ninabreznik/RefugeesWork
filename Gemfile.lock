@@ -98,6 +98,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colorize (0.7.3)
+    commonjs (0.2.7)
     connection_pool (2.0.0)
     dashing-rails (2.4.0)
       batman-rails (~> 0.16.1)
@@ -138,6 +139,11 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+    less (2.5.1)
+      commonjs (~> 0.2.7)
+    less-rails (2.5.0)
+      actionpack (>= 3.1)
+      less (~> 2.5.0)
     libv8 (3.16.14.5)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -237,6 +243,7 @@ DEPENDENCIES
   devise
   formtastic
   jbuilder (~> 2.0)
+  less-rails
   puma
   rails (= 4.1.0)
   ransack!
