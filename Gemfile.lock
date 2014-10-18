@@ -105,6 +105,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.1)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     formtastic (2.3.1)
       actionpack (>= 3.0)
     has_scope (0.6.0.rc)
@@ -230,6 +232,7 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-unicorn
   devise
+  font-awesome-rails
   formtastic
   jbuilder (~> 2.0)
   less-rails

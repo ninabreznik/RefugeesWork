@@ -29,6 +29,8 @@ gem 'spring',        group: :development
 gem 'less-rails'
 gem 'stylus'
 
+gem "font-awesome-rails"
+
 #DEVISE
 gem 'devise'
 
