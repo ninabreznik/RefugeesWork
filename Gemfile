@@ -51,7 +51,6 @@ group :development do
 end
 
 #Dashing related stuff
-gem 'dashing-rails'
 gem 'puma'
 # gem 'nokogiri'
 # gem 'htmlentities'
