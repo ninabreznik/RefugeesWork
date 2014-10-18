@@ -193,6 +193,10 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    stylus (1.0.1)
+      execjs
+      stylus-source
+    stylus-source (0.42.2)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -236,6 +240,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   sqlite3 (= 1.3.9)
+  stylus
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)

@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'less-rails'
+gem 'stylus'
 
 #DEVISE
 gem 'devise'
