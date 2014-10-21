@@ -169,13 +169,13 @@ blur-mixin(intensity = 1.6px)
     font-size 20px
     &:hover
       color Lead-Orange
-
 a[href="#top"]
+  opacity 0.4
   position fixed
   bottom 50px
-  right 20px
-  font-size 26px
-  fa.fa-arrow-up
+  right 30px
+  font-size 48px
+  fa.fa-arrow-circle-up
     &:hover
       color Lead-Orange
 // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
@@ -1105,16 +1105,15 @@ a[href="#top"]
       margin-bottom 14px
       #lead_business_type,
       #lead_time
-        color white
+        color #606060
+        font-weight bold
+        font-size 12px
         padding 4px
         border-radius 4px
         margin-top 4px
         height 30px
         width 310 px
         border 1px solid #E8E8E8 
-        // margin-top 
-      #lead_zip,
-      #lead_description,
       #lead_name,
       #lead_email,
       #lead_phone
@@ -1123,8 +1122,33 @@ a[href="#top"]
         border-radius 4px
         margin-top 2px
         margin-left 0px
-        height 20px
-        width 300px
+        font-size 12px
+        height 30px
+        width 310px
+        border 1px solid #E8E8E8
+      #lead_zip
+        color #606060
+        font-weight bold
+        center()
+        padding 4px
+        border-radius 4px
+        margin-top 2px
+        margin-left 0px
+        font-size 12px
+        height 30px
+        width 310px
+        border 1px solid #E8E8E8  
+      #lead_description
+        color #606060
+        font-weight bold
+        center()
+        padding 4px
+        border-radius 4px
+        margin-top 2px
+        margin-left 0px
+        font-size 12px
+        height 70px
+        width 310px
         border 1px solid #E8E8E8  
     .lead_new_form_remember_me
       font-size 10px  
@@ -1154,23 +1178,26 @@ a[href="#top"]
     opacity 0.95
     width 63%
     margin 80px auto
-    padding 100px
-    padding-top 70px
+    padding 70px 20px 20px 30px
     background-color white
     // box-shadow 0px 0px 20px white
     .wallet_payment_offer_title
-      center(420px)
+      margin-left 32%
       color #606060
       font-weight bold
       font-size 28px
-      margin-bottom 50px
+      // margin-bottom 20px
+    .wallet_payment_paypal
+      button(color = Lead-Orange)
+      margin-left 87%
+      margin-bottom 80px
     .wallet_payment_offer_promotion
-      width 70%
+      // width 80%
       color #606060
-      font-size 16px
-      margin 0px 0px 50px 90px
+      font-size 14px
+      padding 0px 7px 40px 7px
     .wallet_payment_offer_company_info 
-      shift(0.53)
+      margin-left 1%
       color black
       text-align left
       padding 4px 7px 4px 7px
@@ -1178,12 +1205,12 @@ a[href="#top"]
     .wallet_payment_offer_date
       color black
       font-size 16px
-      margin-bottom 50px
+      margin-bottom 10px
       margin-top 10px
-      shift(-0.21)
-      text-align right
+      margin-left 1%
+      // text-align right
     .wallet_payment_offer_sosed_info
-      shift(0.075)
+      // shift(0.075)
       margin-top 20px
       margin-bottom 10px
       color black
@@ -1201,11 +1228,10 @@ a[href="#top"]
         padding 15px 30px 15px 30px
         font-size 12px
     .wallet_payment_offer_instructions
-      // width 70%
-      margin-top 20px
+      padding-top 20px
       font-size 12px
       font-weight bold
-      shift(0.08)
+      padding-bottom 50px
     
 
           

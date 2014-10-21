@@ -330,10 +330,24 @@ en:
     offer_instructions: "After your payment is processed, we will add money to your wallet. You can check your status under Profile. For more information don't hesitate to contact us on info@sosed.si"
 
 
+# ############################################################################################
+# Page 10 - LEADS/NEW (for getting customer leads)
+# ############################################################################################
 
-
-
-
+  lead-new:
+    title:  "Book a service"
+    instructions: "Send a free inquiry and up to 5 chosen providers will contact you with their special offers."
+    form:
+      prompt-business-type: "Who are you looking for?"
+      prompt-time: "When would you need a service?"
+      business_type: "Business type"
+      time: "Time"
+      zip: "Zip"
+      description: "Description"
+      name: "Name"
+      email: "Email"
+      phone: "Phone"
+      submit: "Send"
 
 
 
