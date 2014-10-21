@@ -60,6 +60,18 @@ en:
       user:
         signed_in: "Succesfully signed in."
         signed_out: "Successfuly signed out."
+    registrations:
+      user:
+        signed_up: "Succesfully signed up."
+    failure:  
+      unauthenticated: 'You need to sign in or sign up before continuing.'  
+      unconfirmed: 'You have to confirm your account before continuing.'  
+      locked: 'Your account is locked.'  
+      invalid: 'OH NOES! ERROR IN TEH EMAIL!'  
+      invalid_token: 'Invalid authentication token.'  
+      timeout: 'Your session expired, please sign in again to continue.'  
+      inactive: 'Your account was not activated yet.'  
+
 
 #<%= I18n.t'users-links.login' %> 
 #"#{I18n.t'users-links.login'}"
@@ -349,5 +361,14 @@ en:
       phone: "Phone"
       submit: "Send"
 
+
+# ############################################################################################
+# Page 11 - ACTIVE ADMIN
+# ############################################################################################
+  
+  active_admin:
+    devise:
+      login:
+        title: "ADMIN"
 
 

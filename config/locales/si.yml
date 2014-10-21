@@ -69,6 +69,17 @@ si:
       user:
         signed_in: "Uspešno ste prijavljeni."
         signed_out: "Uspešno ste bili odjavljeni."
+    registrations:
+      user:
+        signed_up: "Uspešno ste ste registrirali."
+    failure:  
+      unauthenticated: 'Za nadaljevanje je potrebna prijava/registracija.'  
+      unconfirmed: 'Za nadaljevanje je morate potrditi vaš uporabniški račun.'  
+      locked: 'Vaš račun je zaklenjen'  
+      invalid: 'OH NOES! ERROR IN TEH EMAIL!'  
+      invalid_token: 'Neveljavna avtentikacija.'  
+      timeout: 'Vaša seja je potekla, za nadaljevanje se je potrebno ponovno vpisati.'  
+      inactive: 'Vaš uporabniški račun še ni bil aktiviran.'  
 
 
 
@@ -341,6 +352,15 @@ si:
       email: "E-naslov"
       phone: "Telefon"
       submit: "Pošlji"
+
+# ############################################################################################
+# Page 11 - ACTIVE ADMIN
+# ############################################################################################
+  
+  active_admin:
+    devise:
+      login:
+        title: "ADMIN"
 
 
 
