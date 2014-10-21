@@ -1,0 +1,2321 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+.top_menu_bar {
+  position: relative;
+  left: -0.103%;
+  background-color: #fff;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000; /* fallback color */
+  background: rgba(255,255,255,0.8);
+  border-bottom: 1px solid #ccc;
+  padding-top: 3px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+.top_menu_bar .logged_user,
+.top_menu_bar .not_logged_user {
+  padding-bottom: 2px;
+  position: relative;
+  left: 1.957%;
+  font-size: 12px;
+  display: inline-block;
+}
+.top_menu_bar .logo {
+  position: relative;
+  left: 39.14%;
+  height: 35px;
+  display: inline-block;
+}
+.top_menu_bar .info {
+  padding-bottom: 2px;
+  position: relative;
+  left: 59.122%;
+  font-size: 20px;
+  display: inline-block;
+}
+.top_menu_bar .info .fa.fa-info-circle {
+  color: #606060;
+}
+.top_menu_bar .info .fa.fa-info-circle:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar {
+  padding-left: 110px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  font-size: 20px;
+}
+.bottom_menu_bar a[href="/"] {
+  background-color: #fff;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+  width: 230px;
+  border-right: 1px solid #e7e7e7;
+  padding: 7px;
+  font-size: 14px;
+}
+.bottom_menu_bar a[href="/"]:before,
+.bottom_menu_bar a[href="/"]:after {
+  content: '';
+  display: table;
+}
+.bottom_menu_bar a[href="/"]:after {
+  clear: both;
+}
+.bottom_menu_bar a[href="/"]:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar .fa.fa-home {
+  color: #606060;
+  font-size: 22px;
+}
+.bottom_menu_bar .fa.fa-home:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar a[href="/reserved"] {
+  background-color: #fff;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+  width: 230px;
+  border-right: 1px solid #e7e7e7;
+  padding: 7px;
+  font-size: 14px;
+}
+.bottom_menu_bar a[href="/reserved"]:before,
+.bottom_menu_bar a[href="/reserved"]:after {
+  content: '';
+  display: table;
+}
+.bottom_menu_bar a[href="/reserved"]:after {
+  clear: both;
+}
+.bottom_menu_bar a[href="/reserved"]:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar .fa.fa-star {
+  color: #606060;
+  font-size: 22px;
+}
+.bottom_menu_bar .fa.fa-star:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar a[href="/address_book"] {
+  background-color: #fff;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+  width: 230px;
+  border-right: 1px solid #e7e7e7;
+  padding: 7px;
+  font-size: 14px;
+}
+.bottom_menu_bar a[href="/address_book"]:before,
+.bottom_menu_bar a[href="/address_book"]:after {
+  content: '';
+  display: table;
+}
+.bottom_menu_bar a[href="/address_book"]:after {
+  clear: both;
+}
+.bottom_menu_bar a[href="/address_book"]:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar .fa.fa-users {
+  color: #606060;
+  font-size: 20px;
+}
+.bottom_menu_bar .fa.fa-users:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar a[href="/profile"] {
+  background-color: #fff;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+  width: 230px;
+  border-right: 1px solid #e7e7e7;
+  padding: 7px;
+  font-size: 14px;
+}
+.bottom_menu_bar a[href="/profile"]:before,
+.bottom_menu_bar a[href="/profile"]:after {
+  content: '';
+  display: table;
+}
+.bottom_menu_bar a[href="/profile"]:after {
+  clear: both;
+}
+.bottom_menu_bar a[href="/profile"]:hover {
+  color: #ffae4d;
+}
+.bottom_menu_bar .fa.fa-cog {
+  color: #606060;
+  font-size: 20px;
+}
+.bottom_menu_bar .fa.fa-cog:hover {
+  color: #ffae4d;
+}
+a[href="#top"] {
+  opacity: 0.4;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  font-size: 48px;
+}
+a[href="#top"] fa.fa-arrow-circle-up:hover {
+  color: #ffae4d;
+}
+.body_leads_index {
+  background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_leads_index a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_leads_index .columns {
+  position: relative;
+  left: -6.866666666666701%;
+  width: 80%;
+  max-width: 1500px;
+  min-width: 1000px;
+  margin: 60px auto;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  -webkit-column-gap: 55px;
+  -moz-column-gap: 55px;
+  column-gap: 55px;
+}
+.body_leads_index .lead_box {
+  background-color: #fff;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000; /* fallback color */
+  background: rgba(255,255,255,0.95);
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  margin-bottom: 45px;
+  line-break: 1px;
+}
+.body_leads_index .lead_box:hover {
+  background-color: rgba(242,242,242,0.95);
+}
+.body_leads_index .lead_box .lead_title {
+  color: #606060;
+  opacity: 0.85;
+  background-color: #ffae4d;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.body_leads_index .lead_box .lead_title .fa.fa-star {
+  color: #fcd229;
+  font-size: 16px;
+}
+.body_leads_index .lead_box .lead_title .fa.fa-star:hover {
+  color: #606060;
+}
+.body_leads_index .lead_box .lead_body {
+  font-size: 14px;
+  padding: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+}
+.body_leads_index .lead_box .lead_body .lead_subtitle {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 7px;
+}
+.body_leads_show {
+  background-image: url("./interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_leads_show a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_leads_show .back_to_main_page_button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body_leads_show .lead_show {
+  opacity: 0.9;
+  position: relative;
+  margin: 60px auto 80px 0px;
+  padding-bottom: 40px;
+  width: 70%;
+  max-width: 1100px;
+  min-width: 800px;
+  position: relative;
+  left: 8.137%;
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background-color: #fff;
+  line-break: 1px;
+}
+.body_leads_show .lead_show .lead_show_title {
+  background-color: #ffae4d;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-size: 40px;
+}
+.body_leads_show .lead_show .lead_show_body {
+  font-size: 22px;
+  padding-top: 30px;
+  padding-left: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+}
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long {
+  width: 60%;
+  padding-left: 80px;
+  padding-right: 10px;
+}
+.body_leads_show .lead_show .lead_show_body .lead_show_items_short,
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long {
+  display: inline-block;
+  vertical-align: top;
+}
+.body_leads_show .lead_show .lead_show_body .lead_show_items_short .lead_show_item,
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long .lead_show_item {
+  -webkit-font-smoothing: antialiased;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.body_leads_show .lead_show .lead_show_body .lead_show_items_short .lead_show_item .lead_show_subtitle,
+.body_leads_show .lead_show .lead_show_body .lead_show_items_long .lead_show_item .lead_show_subtitle {
+  font-weight: bold;
+  display: inline-block;
+}
+.body_leads_show .lead_show .lead_show_buy input,
+.body_leads_show .lead_show .lead_show_buy a {
+  margin: 30px 0 20px 330px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  font-size: 22px;
+}
+.body_leads_show .lead_show .lead_show_buy input:hover,
+.body_leads_show .lead_show .lead_show_buy a:hover,
+.body_leads_show .lead_show .lead_show_buy input:focus,
+.body_leads_show .lead_show .lead_show_buy a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_leads_show .lead_show .lead_show_buy input:active,
+.body_leads_show .lead_show .lead_show_buy a:active {
+  background-color: #ff9f2c;
+}
+.body_orders_show {
+  background-image: url("./interior3.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_orders_show a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_orders_show .back_to_main_page_button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body_orders_show .order_show {
+  opacity: 0.9;
+  position: relative;
+  padding-bottom: 80px;
+  margin: 60px auto 60px 0px;
+  width: 70%;
+  max-width: 1100px;
+  min-width: 800px;
+  position: relative;
+  left: 8.137%;
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background-color: #fff;
+  line-break: 1px;
+}
+.body_orders_show .order_show .order_show_title {
+  background-color: #ffae4d;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-size: 40px;
+}
+.body_orders_show .order_show .lead_show_body {
+  font-size: 22px;
+  padding-top: 30px;
+  padding-left: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+}
+.body_orders_show .order_show .lead_show_body .lead_show_items_long {
+  width: 60%;
+  padding-left: 80px;
+  padding-right: 10px;
+}
+.body_orders_show .order_show .lead_show_body .lead_show_items_short,
+.body_orders_show .order_show .lead_show_body .lead_show_items_long {
+  display: inline-block;
+  vertical-align: top;
+}
+.body_orders_show .order_show .lead_show_body .lead_show_items_short .lead_show_item,
+.body_orders_show .order_show .lead_show_body .lead_show_items_long .lead_show_item {
+  -webkit-font-smoothing: antialiased;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.body_orders_show .order_show .lead_show_body .lead_show_items_short .lead_show_item .lead_show_subtitle,
+.body_orders_show .order_show .lead_show_body .lead_show_items_long .lead_show_item .lead_show_subtitle {
+  font-weight: bold;
+  display: inline-block;
+}
+.body_orders_show .order_show .payment_buttons_choose_payment_text {
+  text-align: center;
+  padding: 7px;
+}
+.body_orders_show .order_show .order_show_buy_buttons {
+  padding: 7px;
+  margin-left: 220px;
+}
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy {
+  display: inline-block;
+}
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy input,
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy a {
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  font-size: 22px;
+}
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy input:hover,
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy a:hover,
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy input:focus,
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy input:active,
+.body_orders_show .order_show .order_show_buy_buttons .order_show_buy a:active {
+  background-color: #ff9f2c;
+}
+.body_orders_show .order_show_notes {
+  margin-top: 5px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  position: relative;
+  left: 8.24%;
+}
+.body_orders_show .order_show_notes .order_show_notes_title {
+  padding: 7px;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000; /* fallback color */
+  background-color: #ffae4d;
+  opacity: 0.95;
+  color: #606060;
+  margin-bottom: 4px;
+  width: 150px;
+}
+.body_orders_show .order_show_notes #order_notes {
+  position: relative;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000; /* fallback color */
+  background-color: #fff;
+  opacity: 0.95;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  text-decoration: none;
+  color: #606060;
+  padding: 20px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  height: 300px;
+  width: 71%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  line-break: 1px;
+  border: 0px;
+}
+.body_orders_show .order_show_notes .order_show_notes_submit input,
+.body_orders_show .order_show_notes .order_show_notes_submit a {
+  margin-left: 815px;
+  margin-top: 10px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_orders_show .order_show_notes .order_show_notes_submit input:hover,
+.body_orders_show .order_show_notes .order_show_notes_submit a:hover,
+.body_orders_show .order_show_notes .order_show_notes_submit input:focus,
+.body_orders_show .order_show_notes .order_show_notes_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_orders_show .order_show_notes .order_show_notes_submit input:active,
+.body_orders_show .order_show_notes .order_show_notes_submit a:active {
+  background-color: #ff9f2c;
+}
+.body_bank_transaction {
+  background-image: url("./interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.body_bank_transaction a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_bank_transaction .offer {
+  opacity: 0.95;
+  width: 63%;
+  margin: 80px auto;
+  padding: 100px;
+  padding-top: 70px;
+  background-color: #fff;
+}
+.body_bank_transaction .offer .offer_title {
+  *zoom: 1;
+  width: auto;
+  max-width: 420px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  color: #606060;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.body_bank_transaction .offer .offer_title:before,
+.body_bank_transaction .offer .offer_title:after {
+  content: '';
+  display: table;
+}
+.body_bank_transaction .offer .offer_title:after {
+  clear: both;
+}
+.body_bank_transaction .offer .offer_company_info {
+  position: relative;
+  left: 56.650000000000006%;
+  color: #606060;
+  text-align: left;
+  border: 1px solid #e7e7e7;
+  box-shadow: inset 0 0 0 0 #ccc;
+  border-radius: 4px;
+  padding: 4px 7px 4px 7px;
+  background-color: #f0f0f0;
+}
+.body_bank_transaction .offer .offer_date {
+  color: #606060;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  position: relative;
+  left: -29.869999999999997%;
+  text-align: right;
+}
+.body_bank_transaction .offer .offer_sosed_info {
+  position: relative;
+  left: 7.725%;
+  margin-top: 20px;
+  color: #606060;
+  text-align: left;
+  border: 1px solid #e7e7e7;
+  box-shadow: inset 0 0 0 0 #ccc;
+  border-radius: 4px;
+}
+.body_bank_transaction .offer .offer_sosed_info .offer_sosed_info_price td,
+.body_bank_transaction .offer .offer_sosed_info font-weight bold {
+  padding: 7px 30px 7px 30px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+.body_bank_transaction .offer .offer_sosed_info .offer_sosed_info_item td {
+  background-color: #f0f0f0;
+  padding: 7px 30px 7px 30px;
+  font-size: 12px;
+}
+.body_bank_transaction .offer .offer_show_lead {
+  margin-top: 37px;
+  padding-bottom: 20px;
+  *zoom: 1;
+  width: auto;
+  max-width: 70%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  left: -7.210000000000001%;
+  height: 30%;
+  width: 70%;
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background-color: #fff;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border: 1px solid #ccc;
+  line-break: 1px;
+}
+.body_bank_transaction .offer .offer_show_lead:before,
+.body_bank_transaction .offer .offer_show_lead:after {
+  content: '';
+  display: table;
+}
+.body_bank_transaction .offer .offer_show_lead:after {
+  clear: both;
+}
+.body_bank_transaction .offer .offer_show_lead .offer_show_lead_title {
+  background-color: #ffae4d;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.body_bank_transaction .offer .offer_show_lead .offer_show_lead_body {
+  font-size: 16px;
+  padding-top: 3px;
+  padding-left: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+}
+.body_bank_transaction .offer .offer_show_lead .offer_show_lead_body .offer_show_lead_subtitle {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.body_bank_transaction .offer .offer_show_lead .offer_show_lead_body .ordersindex-notifications.customer-info {
+  color: #d13f19;
+}
+.body_bank_transaction .offer .offer_instructions {
+  width: 70%;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  left: 8.24%;
+}
+.body_orders_reserved {
+  background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_orders_reserved a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_orders_reserved .address_book_reserved_leads {
+  opacity: 0.9;
+  position: relative;
+  left: 38.11%;
+  margin-top: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.body_orders_reserved .address_book_columns {
+  position: relative;
+  left: -6.866666666666701%;
+  width: 80%;
+  max-width: 1500px;
+  min-width: 1000px;
+  margin: 60px auto;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 55px;
+  -moz-column-gap: 55px;
+  column-gap: 55px;
+  -moz-column-fill: auto;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box {
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background-color: #fff;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin-bottom: 45px;
+  line-break: 1px;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000; /* fallback color */
+  background: rgba(255,255,255,0.95);
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_title {
+  opacity: 0.85;
+  background-color: #ffae4d;
+  padding: 15px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_body {
+  font-size: 14px;
+  padding: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_body .address_book_lead_subtitle {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 7px;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_notification {
+  font-size: 14px;
+  padding: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+  font-weight: bold;
+  padding-top: 7px;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_notification .address_book_lead_notification_explanation {
+  font-weight: normal;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons {
+  margin-top: 20px;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button {
+  margin-left: 80px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:hover,
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:active {
+  background-color: #ff9f2c;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input,
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a {
+  margin: 5px 0px 5px 50px;
+  color: #606060;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #eee;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input:hover,
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a:hover,
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input:focus,
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a:focus {
+  background-color: #e2e2e2;
+  color: #474747;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input:active,
+.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a:active {
+  background-color: #d6d6d6;
+}
+.body_dummy_orders_reserved {
+  position: relative;
+  opacity: 0.5;
+  -webkit-filter: blur(1.6px);
+  -moz-filter: blur(1.6px);
+  -o-filter: blur(1.6px);
+  filter: blur(1.6px);
+}
+.reserved_link_to_signup {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 103px;
+  background: #000; /* fallback color */
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+  padding: 10px;
+  top: 200px;
+  width: 100%;
+  width: 70%;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  max-width: 800px;
+  min-width: 400px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.reserved_link_to_signup .address_book_signup,
+.reserved_link_to_signup .address_book_signin {
+  color: #ffae4d;
+}
+.body_orders_address_book {
+  background-image: url("./interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_orders_address_book a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_orders_address_book .address_book_columns {
+  position: relative;
+  left: -6.866666666666701%;
+  width: 80%;
+  max-width: 1500px;
+  min-width: 1000px;
+  margin: 60px auto;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  -webkit-column-gap: 55px;
+  -moz-column-gap: 55px;
+  column-gap: 55px;
+  -moz-column-fill: balance;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box {
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background-color: #fff;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin-bottom: 45px;
+  line-break: 1px;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  background: #000; /* fallback color */
+  background: rgba(255,255,255,0.95);
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_title {
+  opacity: 0.85;
+  background-color: #82c0c7;
+  padding: 15px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_body {
+  font-size: 14px;
+  padding: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #606060;
+  line-height: 150%;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_body .address_book_lead_subtitle {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 7px;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes {
+  padding: 5px;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes #order_notes {
+  background-color: #fff;
+  opacity: 0.5;
+  position: relative;
+  text-decoration: none;
+  color: #606060;
+  padding: 7px;
+  font-size: 12px;
+  height: 150px;
+  width: 293px;
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  margin: 7px 0px 7px 0px;
+  line-break: 1px;
+  border: 1px solid #eee;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes #order_notes:hover {
+  background-color: rgba(242,242,242,0.95);
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input,
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a {
+  position: relative;
+  left: 67.98%;
+  margin-bottom: 7px;
+  margin-top: 3px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #82c0c7;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input:hover,
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a:hover,
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input:focus,
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a:focus {
+  background-color: #77bac2;
+  color: #474747;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input:active,
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a:active {
+  background-color: #6bb5bd;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_link_to-signup {
+  font-size: 12px;
+}
+.body_orders_address_book .address_book_bought_leads {
+  font-size: 20px;
+  font-weight: bold;
+  width: 70%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin-top: 100px;
+  margin-left: 450px;
+}
+.body_dummy_orders_address_book {
+  opacity: 0.5;
+  -webkit-filter: blur(1.6px);
+  -moz-filter: blur(1.6px);
+  -o-filter: blur(1.6px);
+  filter: blur(1.6px);
+}
+.address_book_link_to_signup {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 103px;
+  background: #000; /* fallback color */
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+  padding: 10px;
+  top: 200px;
+  width: 100%;
+  width: 70%;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  max-width: 800px;
+  min-width: 400px;
+  color: #fff;
+  letter-spacing: -1px;
+  letter-spacing: -1px;
+}
+.address_book_link_to_signup .address_book_signup,
+.address_book_link_to_signup .address_book_signin {
+  color: #ffae4d;
+}
+.body_new_lead_confirmation {
+  background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_new_lead_confirmation a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_new_lead_confirmation .new_lead_confirmation {
+  margin-top: 200px;
+  padding: 20px;
+  *zoom: 1;
+  width: auto;
+  max-width: 420px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.body_new_lead_confirmation .new_lead_confirmation:before,
+.body_new_lead_confirmation .new_lead_confirmation:after {
+  content: '';
+  display: table;
+}
+.body_new_lead_confirmation .new_lead_confirmation:after {
+  clear: both;
+}
+.body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_thank_you {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 20px;
+}
+.body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_text {
+  font-size: 16px;
+  padding-top: 40px;
+}
+.body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_signature {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.body_profile {
+  background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_profile a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_profile .profile_dashboard_columns {
+  position: relative;
+  left: -6.866666666666701%;
+  width: 70%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 60px auto;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 55px;
+  -moz-column-gap: 55px;
+  column-gap: 55px;
+  -moz-column-fill: auto;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box {
+  vertical-align: bottom;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  background: #000; /* fallback color */
+  background: rgba(255,255,255,0.9);
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  filter: blur(0.7px);
+  margin-bottom: 45px;
+  line-break: 1px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_title {
+  color: #606060;
+  font-weight: bold;
+  text-align: center;
+  background-color: #82c0c7;
+  opacity: 0.9;
+  padding: 15px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_title:hover {
+  background-color: rgba(217,217,217,0.9);
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body {
+  color: #606060;
+  padding: 30px 30px 20px 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_username {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_logout,
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_edit {
+  margin-top: 30px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #82c0c7;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_logout:hover,
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_edit:hover,
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_logout:focus,
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_edit:focus {
+  background-color: #77bac2;
+  color: #474747;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_logout:active,
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_edit:active {
+  background-color: #6bb5bd;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_amount {
+  font-size: 60px;
+  padding: 24px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons {
+  display: inline-block;
+  margin-top: 30px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button {
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #82c0c7;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:hover,
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:focus {
+  background-color: #77bac2;
+  color: #474747;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:active {
+  background-color: #6bb5bd;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_bought_leads_amount {
+  font-size: 100px;
+  padding: 24px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup {
+  font-size: 14px;
+  font-weight: bold;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_signup {
+  color: #fff;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_signup:hover {
+  text-decoration: underline;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_login {
+  font-size: 14px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_login:hover {
+  text-decoration: underline;
+  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_bought_leads_last {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 24px;
+}
+.body_about {
+  background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_about a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_about .info_body {
+  margin-left: 96px;
+  padding: 50px;
+  width: 69%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin-top: 40px;
+  background-color: #fff;
+  font-size: 12px;
+  color: #606060;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 150%;
+}
+.body_about .info_body .info_thanks {
+  text-align: center;
+  color: #606060;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.body_about .info_body .info_table {
+  *zoom: 1;
+  width: auto;
+  max-width: 420px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 20px;
+  color: #606060;
+  text-align: left;
+  padding: 10px;
+  border: 4px solid #e7e7e7;
+  box-shadow: inset 0 0 0 0 #ccc;
+  border-radius: 4px;
+}
+.body_about .info_body .info_table:before,
+.body_about .info_body .info_table:after {
+  content: '';
+  display: table;
+}
+.body_about .info_body .info_table:after {
+  clear: both;
+}
+.body_about .info_body .info_table .info_table_item {
+  font-weight: bold;
+  padding: 4px;
+  font-size: 12px;
+  background-color: #f0f0f0;
+}
+.body_about .info_body .info_table .info_table_item td {
+  font-weight: bold;
+  padding: 4px;
+  font-size: 12px;
+}
+.body_about .info_body .info_faq_title {
+  text-align: left;
+  color: #606060;
+  font-weight: bold;
+  font-size: 28px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.body_about .info_body .info_faq_question {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.body_about .info_body .info_faq_answer {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.body_devise_login {
+  background-image: url("interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.body_devise_login a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_devise_login .login {
+  margin-top: 60px;
+  margin-left: 20px;
+}
+.body_devise_login .login .login_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.body_devise_login .login .login_form_email,
+.body_devise_login .login .login_form_password {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.body_devise_login .login .login_form_email #user_email,
+.body_devise_login .login .login_form_password #user_email,
+.body_devise_login .login .login_form_email #user_password,
+.body_devise_login .login .login_form_password #user_password {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 30px;
+  width: 200px;
+  border: 1px solid #e8e8e8;
+}
+.body_devise_login .login .login_form_remember_me {
+  font-size: 12px;
+}
+.body_devise_login .login .login_form_submit input,
+.body_devise_login .login .login_form_submit a {
+  position: relative;
+  padding: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_devise_login .login .login_form_submit input:hover,
+.body_devise_login .login .login_form_submit a:hover,
+.body_devise_login .login .login_form_submit input:focus,
+.body_devise_login .login .login_form_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_login .login .login_form_submit input:active,
+.body_devise_login .login .login_form_submit a:active {
+  background-color: #ff9f2c;
+}
+.body_devise_login .login .login_shared_links {
+  font-size: 12px;
+}
+.body_devise_login .login .login_shared_links:hover {
+  text-decoration: underline;
+  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.body_devise_signup {
+  background-image: url("./interior6.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.body_devise_signup a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_devise_signup .signup {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+.body_devise_signup .signup .signup_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.body_devise_signup .signup .signup_form_email,
+.body_devise_signup .signup .signup_form_password,
+.body_devise_signup .signup .signup_form_password_confirmation {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.body_devise_signup .signup .signup_form_email #user_email,
+.body_devise_signup .signup .signup_form_password #user_email,
+.body_devise_signup .signup .signup_form_password_confirmation #user_email,
+.body_devise_signup .signup .signup_form_email #user_password,
+.body_devise_signup .signup .signup_form_password #user_password,
+.body_devise_signup .signup .signup_form_password_confirmation #user_password,
+.body_devise_signup .signup .signup_form_email #user_password_confirmation,
+.body_devise_signup .signup .signup_form_password #user_password_confirmation,
+.body_devise_signup .signup .signup_form_password_confirmation #user_password_confirmation {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 30px;
+  width: 200px;
+  border: 1px solid #e8e8e8;
+}
+.body_devise_signup .signup .signup_form_submit input,
+.body_devise_signup .signup .signup_form_submit a {
+  position: relative;
+  padding: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_devise_signup .signup .signup_form_submit input:hover,
+.body_devise_signup .signup .signup_form_submit a:hover,
+.body_devise_signup .signup .signup_form_submit input:focus,
+.body_devise_signup .signup .signup_form_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_signup .signup .signup_form_submit input:active,
+.body_devise_signup .signup .signup_form_submit a:active {
+  background-color: #ff9f2c;
+}
+.body_devise_signup .signup .signup_shared_links {
+  font-size: 12px;
+}
+.body_devise_signup .signup .signup_shared_links:hover {
+  text-decoration: underline;
+  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.body_devise_password_new {
+  background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_devise_password_new a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_devise_password_new .password_new {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+.body_devise_password_new .password_new .password_new_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.body_devise_password_new .password_new .password_new_form_email {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.body_devise_password_new .password_new .password_new_form_email #user_email {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 20px;
+  width: 300px;
+  border: 1px solid #e8e8e8;
+}
+.body_devise_password_new .password_new .password_new_form_submit input,
+.body_devise_password_new .password_new .password_new_form_submit a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_devise_password_new .password_new .password_new_form_submit input:hover,
+.body_devise_password_new .password_new .password_new_form_submit a:hover,
+.body_devise_password_new .password_new .password_new_form_submit input:focus,
+.body_devise_password_new .password_new .password_new_form_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_password_new .password_new .password_new_form_submit input:active,
+.body_devise_password_new .password_new .password_new_form_submit a:active {
+  background-color: #ff9f2c;
+}
+.body_devise_password_new .password_new .password_new_shared_links {
+  font-size: 12px;
+}
+.body_devise_password_new .password_new .password_new_shared_links:hover {
+  text-decoration: underline;
+  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.body_devise_users_edit {
+  background-image: url("./subtle_zebra_3d.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_devise_users_edit a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_devise_users_edit .user_edit {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+.body_devise_users_edit .user_edit .user_edit_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.body_devise_users_edit .user_edit .user_edit_form_email,
+.body_devise_users_edit .user_edit .user_edit_form_password,
+.body_devise_users_edit .user_edit .user_edit_form_password_confirmation,
+.body_devise_users_edit .user_edit .user_edit_form_current_password {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.body_devise_users_edit .user_edit .user_edit_form_email #user_email,
+.body_devise_users_edit .user_edit .user_edit_form_password #user_email,
+.body_devise_users_edit .user_edit .user_edit_form_password_confirmation #user_email,
+.body_devise_users_edit .user_edit .user_edit_form_current_password #user_email,
+.body_devise_users_edit .user_edit .user_edit_form_email #user_password,
+.body_devise_users_edit .user_edit .user_edit_form_password #user_password,
+.body_devise_users_edit .user_edit .user_edit_form_password_confirmation #user_password,
+.body_devise_users_edit .user_edit .user_edit_form_current_password #user_password,
+.body_devise_users_edit .user_edit .user_edit_form_email #user_password_confirmation,
+.body_devise_users_edit .user_edit .user_edit_form_password #user_password_confirmation,
+.body_devise_users_edit .user_edit .user_edit_form_password_confirmation #user_password_confirmation,
+.body_devise_users_edit .user_edit .user_edit_form_current_password #user_password_confirmation,
+.body_devise_users_edit .user_edit .user_edit_form_email #user_current_password,
+.body_devise_users_edit .user_edit .user_edit_form_password #user_current_password,
+.body_devise_users_edit .user_edit .user_edit_form_password_confirmation #user_current_password,
+.body_devise_users_edit .user_edit .user_edit_form_current_password #user_current_password {
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 30px;
+  width: 200px;
+  border: 1px solid #e8e8e8;
+}
+.body_devise_users_edit .user_edit .user_edit_form_submit input,
+.body_devise_users_edit .user_edit .user_edit_form_submit a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_devise_users_edit .user_edit .user_edit_form_submit input:hover,
+.body_devise_users_edit .user_edit .user_edit_form_submit a:hover,
+.body_devise_users_edit .user_edit .user_edit_form_submit input:focus,
+.body_devise_users_edit .user_edit .user_edit_form_submit a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_users_edit .user_edit .user_edit_form_submit input:active,
+.body_devise_users_edit .user_edit .user_edit_form_submit a:active {
+  background-color: #ff9f2c;
+}
+.body_devise_users_edit .user_edit .user_edit_cancel_acount,
+.body_devise_users_edit .user_edit .user_edit_unhappy,
+.body_devise_users_edit .user_edit .user_edit_back {
+  font-size: 12px;
+}
+.body_devise_users_edit .user_edit .user_edit_cancel_acount:hover,
+.body_devise_users_edit .user_edit .user_edit_unhappy:hover,
+.body_devise_users_edit .user_edit .user_edit_back:hover {
+  text-decoration: underline;
+  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account input,
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account input:hover,
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account a:hover,
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account input:focus,
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account a:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account input:active,
+.body_devise_users_edit .user_edit .user_edit_button_cancel_account a:active {
+  background-color: #ff9f2c;
+}
+.body_leads_new {
+  background-image: url("./interior1.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.body_leads_new a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_leads_new .lead_new {
+  background: #000; /* fallback color */
+  background: rgba(0,0,0,0.7);
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 32.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+  position: relative;
+  left: 46.35%;
+  padding-bottom: 14px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+}
+.body_leads_new .lead_new:before,
+.body_leads_new .lead_new:after {
+  content: '';
+  display: table;
+}
+.body_leads_new .lead_new:after {
+  clear: both;
+}
+.body_leads_new .lead_new .lead_new_title {
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.body_leads_new .lead_new .lead_new_instructions {
+  -webkit-font-smoothing: antialiased;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.body_leads_new .lead_new .lead_new_form_business_type,
+.body_leads_new .lead_new .lead_new_form_time,
+.body_leads_new .lead_new .lead_new_form_zip,
+.body_leads_new .lead_new .lead_new_form_description,
+.body_leads_new .lead_new .lead_new_form_name,
+.body_leads_new .lead_new .lead_new_form_email,
+.body_leads_new .lead_new .lead_new_form_phone {
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_time #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_zip #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_description #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_name #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_email #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_phone #lead_business_type,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_time,
+.body_leads_new .lead_new .lead_new_form_time #lead_time,
+.body_leads_new .lead_new .lead_new_form_zip #lead_time,
+.body_leads_new .lead_new .lead_new_form_description #lead_time,
+.body_leads_new .lead_new .lead_new_form_name #lead_time,
+.body_leads_new .lead_new .lead_new_form_email #lead_time,
+.body_leads_new .lead_new .lead_new_form_phone #lead_time {
+  color: #606060;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 30px;
+  width: 310px;
+  border: 1px solid #e8e8e8;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_name,
+.body_leads_new .lead_new .lead_new_form_time #lead_name,
+.body_leads_new .lead_new .lead_new_form_zip #lead_name,
+.body_leads_new .lead_new .lead_new_form_description #lead_name,
+.body_leads_new .lead_new .lead_new_form_name #lead_name,
+.body_leads_new .lead_new .lead_new_form_email #lead_name,
+.body_leads_new .lead_new .lead_new_form_phone #lead_name,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_email,
+.body_leads_new .lead_new .lead_new_form_time #lead_email,
+.body_leads_new .lead_new .lead_new_form_zip #lead_email,
+.body_leads_new .lead_new .lead_new_form_description #lead_email,
+.body_leads_new .lead_new .lead_new_form_name #lead_email,
+.body_leads_new .lead_new .lead_new_form_email #lead_email,
+.body_leads_new .lead_new .lead_new_form_phone #lead_email,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_phone,
+.body_leads_new .lead_new .lead_new_form_time #lead_phone,
+.body_leads_new .lead_new .lead_new_form_zip #lead_phone,
+.body_leads_new .lead_new .lead_new_form_description #lead_phone,
+.body_leads_new .lead_new .lead_new_form_name #lead_phone,
+.body_leads_new .lead_new .lead_new_form_email #lead_phone,
+.body_leads_new .lead_new .lead_new_form_phone #lead_phone {
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-left: 0px;
+  font-size: 12px;
+  height: 30px;
+  width: 310px;
+  border: 1px solid #e8e8e8;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_time #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_zip #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_description #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_name #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_email #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_phone #lead_name:before,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_time #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_zip #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_description #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_name #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_email #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_phone #lead_email:before,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_time #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_zip #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_description #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_name #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_email #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_phone #lead_phone:before,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_phone:after {
+  content: '';
+  display: table;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_name:after,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_email:after,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_phone:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_phone:after {
+  clear: both;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_zip,
+.body_leads_new .lead_new .lead_new_form_time #lead_zip,
+.body_leads_new .lead_new .lead_new_form_zip #lead_zip,
+.body_leads_new .lead_new .lead_new_form_description #lead_zip,
+.body_leads_new .lead_new .lead_new_form_name #lead_zip,
+.body_leads_new .lead_new .lead_new_form_email #lead_zip,
+.body_leads_new .lead_new .lead_new_form_phone #lead_zip {
+  color: #606060;
+  font-weight: bold;
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-left: 0px;
+  font-size: 12px;
+  height: 30px;
+  width: 310px;
+  border: 1px solid #e8e8e8;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_time #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_zip #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_description #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_name #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_email #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_phone #lead_zip:before,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_zip:after {
+  content: '';
+  display: table;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_zip:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_zip:after {
+  clear: both;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_description,
+.body_leads_new .lead_new .lead_new_form_time #lead_description,
+.body_leads_new .lead_new .lead_new_form_zip #lead_description,
+.body_leads_new .lead_new .lead_new_form_description #lead_description,
+.body_leads_new .lead_new .lead_new_form_name #lead_description,
+.body_leads_new .lead_new .lead_new_form_email #lead_description,
+.body_leads_new .lead_new .lead_new_form_phone #lead_description {
+  color: #606060;
+  font-weight: bold;
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-left: 0px;
+  font-size: 12px;
+  height: 70px;
+  width: 310px;
+  border: 1px solid #e8e8e8;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_time #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_zip #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_description #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_name #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_email #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_phone #lead_description:before,
+.body_leads_new .lead_new .lead_new_form_business_type #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_description:after {
+  content: '';
+  display: table;
+}
+.body_leads_new .lead_new .lead_new_form_business_type #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_time #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_zip #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_description #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_name #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_email #lead_description:after,
+.body_leads_new .lead_new .lead_new_form_phone #lead_description:after {
+  clear: both;
+}
+.body_leads_new .lead_new .lead_new_form_remember_me {
+  font-size: 10px;
+}
+.body_leads_new .lead_new .lead_new_form_submit input,
+.body_leads_new .lead_new .lead_new_form_submit a {
+  margin-left: 254px;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #f26421;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  color: #222;
+}
+.body_leads_new .lead_new .lead_new_form_submit input:hover,
+.body_leads_new .lead_new .lead_new_form_submit a:hover,
+.body_leads_new .lead_new .lead_new_form_submit input:focus,
+.body_leads_new .lead_new .lead_new_form_submit a:focus {
+  background-color: #f15b14;
+  color: #474747;
+}
+.body_leads_new .lead_new .lead_new_form_submit input:active,
+.body_leads_new .lead_new .lead_new_form_submit a:active {
+  background-color: #ea540e;
+}
+.body_leads_new .lead_new .lead_new_shared_links {
+  font-size: 12px;
+}
+.body_leads_new .lead_new .lead_new_shared_links:hover {
+  text-decoration: underline;
+  transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.body_wallet_payment {
+  background-image: url("./interior2.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-size: 12px;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.body_wallet_payment a {
+  text-decoration: none;
+  color: #606060;
+  font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+}
+.body_wallet_payment .wallet_payment_offer {
+  opacity: 0.95;
+  width: 63%;
+  margin: 80px auto;
+  padding: 70px 20px 20px 30px;
+  background-color: #fff;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_title {
+  margin-left: 32%;
+  color: #606060;
+  font-weight: bold;
+  font-size: 28px;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal {
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background-color: #ffae4d;
+  color: #494949;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  margin-left: 87%;
+  margin-bottom: 80px;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal:hover,
+.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal:focus {
+  background-color: #ffa63c;
+  color: #474747;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal:active {
+  background-color: #ff9f2c;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_promotion {
+  color: #606060;
+  font-size: 14px;
+  padding: 0px 7px 40px 7px;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_company_info {
+  margin-left: 1%;
+  color: #222;
+  text-align: left;
+  padding: 4px 7px 4px 7px;
+  background-color: #ffae4d;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_date {
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 1%;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #222;
+  text-align: left;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info .wallet_payment_offer_sosed_info_price td {
+  font-weight: bold;
+  padding: 15px 30px 15px 30px;
+  font-size: 16px;
+  background-color: #ffae4d;
+  color: #fff;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info .wallet_payment_offer_sosed_info_item td {
+  font-weight: bold;
+  background-color: #eee;
+  padding: 15px 30px 15px 30px;
+  font-size: 12px;
+}
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_instructions {
+  padding-top: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}

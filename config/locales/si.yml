@@ -342,6 +342,22 @@ si:
     title:  "Oddajte brezplačno povpraševanje"
     instructions: "Oddajte povpraševanje in 5 izbranih izvajalcev se vam bo oglasilo z neobvezujočimi ponudbami."
     form:
+      business-types:
+        painting: "Slikopleskarstvo"
+        fasades: "Fasaderstvo"
+        renovations: "Renovacije"
+        mechanical_installations: "Strojne instalacije"
+        electrical_installations: "Električne instalacije"
+        knauf: "Suhomontaža"
+        ceramics: "Keramičarstvo"
+        parquet: "Parketarstvo"
+        roofing: "Krovstvo"
+        masonry: "Mizarstvo"
+      form-time:
+        asap: "Takoj"
+        fourteendays: "V naslednjih 14 dneh"
+        onetothreemonths: "V 1-3 mesecev"
+        flexible: "Po dogovoru"
       prompt-business-type: "Katerega izvajalca potrebujete?"
       prompt-time: "Kdaj?"
       business_type: "Dejavnost"
@@ -352,6 +368,7 @@ si:
       email: "E-naslov"
       phone: "Telefon"
       submit: "Pošlji"
+
 
 # ############################################################################################
 # Page 11 - ACTIVE ADMIN

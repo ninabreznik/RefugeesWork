@@ -35,23 +35,23 @@ class LeadsController < ApplicationController
     # ]
  
     @business_types = [
-      ["Slikopleskarstvo", "Slikopleskarstvo"], 
-      ["Fasaderstvo", "Fasaderstvo"], 
-      ["Renovacije", "Renovacije"],
-      ["Strojne instalacije", "Strojne instalacije"],
-      ["Električne instalacije", "Električne instalacije"], 
-      ["Suhomontaža", "Suhomontaža"],
-      ["Keramičastvo", "Keramičastvo"], 
-      ["Parketarstvo", "Parketarstvo"], 
-      ["Krovstvo", "Krovstvo"], 
-      ["Mizarstvo", "Mizarstvo"]
+      ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"], 
+      ["#{I18n.t'lead-new.form.business-types.fasades'}", "#{I18n.t'lead-new.form.business-types.fasades'}"], 
+      ["#{I18n.t'lead-new.form.business-types.renovations'}", "#{I18n.t'lead-new.form.business-types.renovations'}"],
+      ["#{I18n.t'lead-new.form.business-types.mechanical_installations'}", "#{I18n.t'lead-new.form.business-types.mechanical_installations'}"],
+      ["#{I18n.t'lead-new.form.business-types.electrical_installations'}", "#{I18n.t'lead-new.form.business-types.electrical_installations'}"], 
+      ["#{I18n.t'lead-new.form.business-types.knauf'}", "#{I18n.t'lead-new.form.business-types.knauf'}"],
+      ["#{I18n.t'lead-new.form.business-types.ceramics'}", "#{I18n.t'lead-new.form.business-types.ceramics'}"], 
+      ["#{I18n.t'lead-new.form.business-types.parquet'}", "#{I18n.t'lead-new.form.business-types.parquet'}"], 
+      ["#{I18n.t'lead-new.form.business-types.roofing'}", "#{I18n.t'lead-new.form.business-types.roofing'}"], 
+      ["#{I18n.t'lead-new.form.business-types.masonry'}", "#{I18n.t'lead-new.form.business-types.masonry'}"]
     ]
 
     @time = [
-      ["Takoj"], 
-      ["V naslednjih 14 dneh"], 
-      ["V 1-3 mesecev"], 
-      ["Po dogovoru"]
+      ["#{I18n.t'lead-new.form.form-time.asap'}"], 
+      ["#{I18n.t'lead-new.form.form-time.fourteendays'}"], 
+      ["#{I18n.t'lead-new.form.form-time.onetothreemonths'}"], 
+      ["#{I18n.t'lead-new.form.form-time.flexible'}"]
     ]
   end
 
