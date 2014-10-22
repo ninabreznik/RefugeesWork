@@ -1269,7 +1269,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   text-align: center;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_username {
-  font-size: 20px;
+  font-size: 14px;
   padding-bottom: 20px;
   font-weight: bold;
 }
@@ -1302,7 +1302,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   background-color: #6bb5bd;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_amount {
-  font-size: 60px;
+  font-size: 57px;
   padding: 24px;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons {
@@ -2241,47 +2241,42 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   opacity: 0.95;
   width: 63%;
   margin: 80px auto;
-  padding: 70px 20px 20px 30px;
+  padding: 100px;
+  padding-top: 70px;
   background-color: #fff;
 }
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_title {
-  margin-left: 32%;
+  *zoom: 1;
+  width: auto;
+  max-width: 420px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
   color: #606060;
   font-weight: bold;
   font-size: 28px;
+  margin-bottom: 50px;
 }
-.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal {
-  font-size: 13px;
-  padding: 10px 22px;
-  border-radius: 3px;
-  background-color: #ffae4d;
-  color: #494949;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  line-height: 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border: none;
-  margin-left: 87%;
-  margin-bottom: 80px;
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_title:before,
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_title:after {
+  content: '';
+  display: table;
 }
-.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal:hover,
-.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal:focus {
-  background-color: #ffa63c;
-  color: #474747;
-}
-.body_wallet_payment .wallet_payment_offer .wallet_payment_paypal:active {
-  background-color: #ff9f2c;
+.body_wallet_payment .wallet_payment_offer .wallet_payment_offer_title:after {
+  clear: both;
 }
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_promotion {
+  width: 70%;
   color: #606060;
-  font-size: 14px;
-  padding: 0px 7px 40px 7px;
+  font-size: 16px;
+  margin: 0px 0px 50px 90px;
 }
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_company_info {
-  margin-left: 1%;
+  position: relative;
+  left: 54.59%;
   color: #222;
   text-align: left;
   padding: 4px 7px 4px 7px;
@@ -2290,11 +2285,15 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_date {
   color: #222;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   margin-top: 10px;
-  margin-left: 1%;
+  position: relative;
+  left: -21.63%;
+  text-align: right;
 }
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info {
+  position: relative;
+  left: 7.725%;
   margin-top: 20px;
   margin-bottom: 10px;
   color: #222;
@@ -2314,8 +2313,9 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   font-size: 12px;
 }
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_instructions {
-  padding-top: 20px;
+  margin-top: 20px;
   font-size: 12px;
   font-weight: bold;
-  padding-bottom: 50px;
+  position: relative;
+  left: 8.24%;
 }
