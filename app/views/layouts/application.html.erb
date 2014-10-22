@@ -2,14 +2,14 @@
 <head>
     <title>LeadShareApp</title>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="/assets/app.css">
     <link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="./"> -->
   </head>
 <body>
 <a id="top" name="top"> &nbsp; </a>
   <div class="top_menu_bar">
-    <%= link_to '<img class="logo" src="/assets/sosed.biz.png"/>'.html_safe, root_path %>
+    <%= link_to '<img class="logo" src="/images/sosed.biz.png"/>'.html_safe, root_path %>
     <% if user_signed_in? %>
       <div class="logged_user"> 
         <%= link_to current_user.email, profile_path %> 

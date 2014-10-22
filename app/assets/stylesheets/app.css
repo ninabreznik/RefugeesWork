@@ -207,7 +207,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   color: #ffae4d;
 }
 .body_leads_index {
-  background-image: url("./interior6.png");
+  background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -290,7 +290,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   padding-top: 7px;
 }
 .body_leads_show {
-  background-image: url("./interior2.png");
+  background-image: url("/images/interior2.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -400,7 +400,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   background-color: #ff9f2c;
 }
 .body_orders_show {
-  background-image: url("./interior3.png");
+  background-image: url("/images/interior3.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -595,7 +595,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   background-color: #ff9f2c;
 }
 .body_bank_transaction {
-  background-image: url("./interior2.png");
+  background-image: url("/images/interior2.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -767,7 +767,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   left: 8.24%;
 }
 .body_orders_reserved {
-  background-image: url("./interior6.png");
+  background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -959,7 +959,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   color: #ffae4d;
 }
 .body_orders_address_book {
-  background-image: url("./interior2.png");
+  background-image: url("/images/interior2.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -1057,7 +1057,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   column-break-inside: avoid;
   margin: 7px 0px 7px 0px;
   line-break: 1px;
-  border: 1px solid #eee;
+  border: 2px solid #82c0c7;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes #order_notes:hover {
   background-color: rgba(242,242,242,0.95);
@@ -1194,7 +1194,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   padding-top: 20px;
 }
 .body_profile {
-  background-image: url("./interior6.png");
+  background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -1455,7 +1455,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   font-size: 14px;
 }
 .body_devise_login {
-  background-image: url("interior2.png");
+  background-image: url("/images/interior2.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -1550,7 +1550,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_devise_signup {
-  background-image: url("./interior6.png");
+  background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -1851,7 +1851,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   background-color: #ff9f2c;
 }
 .body_leads_new {
-  background-image: url("./interior1.png");
+  background-image: url("/images/interior1.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -2211,7 +2211,7 @@ a[href="#top"] fa.fa-arrow-circle-up:hover {
   transition: all 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .body_wallet_payment {
-  background-image: url("./interior2.png");
+  background-image: url("/images/interior2.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
