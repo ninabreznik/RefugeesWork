@@ -37,15 +37,19 @@
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-            <div class="order_show_subtitle">
-            <%= I18n.t'ordersshow-lead.phone' %>:</div><%= @lead.phone %>  
-            <div class="order_show_subtitle">
-            <%= I18n.t'ordersshow-lead.email' %>:</div><%= @lead.email %>          
+          <div class="lead_show_items_short_additional">
+            <div class="lead_show_item"> 
+              <div class="lead_show_subtitle"><%= I18n.t'ordersshow-lead.phone' %>:</div>
+              <%= @lead.phone %> 
+            </div> 
+            <div class="lead_show_item"> 
+              <div class="lead_show_subtitle"><%= I18n.t'ordersshow-lead.email' %>:</div>
+              <%= @lead.email %>          
             </div>
           </div>
           <div class="order_show_notes">
             <div class="order_show_notes_title">
-              <%= I18n.t'ordersshow-lead.notes' %>  
+              <%= I18n.t'ordersshow-lead.notes' %>:  
             </div>                             
             <%= form_for (@order) do |l| %>
               <div class="order_show_notes_text_area">

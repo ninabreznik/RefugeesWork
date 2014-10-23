@@ -14,26 +14,7 @@ class LeadsController < ApplicationController
 
   def new
     @lead = Lead.new
-    # @business_types = [
-    #   ["Painting", "Painting"], 
-    #   ["Fasades", "Fasades"], 
-    #   ["Renovations", "Renovations"],
-    #   ["Mechanical Installations", "Mechanical Installations"],
-    #   ["Electrical Installations", "Electrical Installations"], 
-    #   ["Knauf", "Knauf"],
-    #   ["Ceramics", "Ceramics"], 
-    #   ["Parquet", "Parquet"], 
-    #   ["Roofing", "Roofing"], 
-    #   ["Masonry", "Masonry"]
-    # ]
 
-    # @time = [
-    #   ["As soon as possible"], 
-    #   ["In the next 14 days"], 
-    #   ["In 1-3 months"], 
-    #   ["Flexible"]
-    # ]
- 
     @business_types = [
       ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"], 
       ["#{I18n.t'lead-new.form.business-types.fasades'}", "#{I18n.t'lead-new.form.business-types.fasades'}"], 

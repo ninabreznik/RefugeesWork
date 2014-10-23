@@ -2,92 +2,82 @@
 <head>
   <title></title>
 </head>
-<body class="body_about">
 
-<div class="info_body">
+<body>
 
-<div class="info_thanks">
-  <%= I18n.t'staticpages-info.thanks' %> 
-</div>
-
-<table class="info_table">
-  <tr class="info_table_item">
-    <td><%= I18n.t'staticpages-info.company' %>:</td>
-    <td><%= I18n.t'staticpages-info.mojsosed' %></td>
-  </tr>
-  <tr class="info_table_item">  
-    <td><%= I18n.t'staticpages-info.address' %>:</td>
-    <td><%= I18n.t'staticpages-info.sosed_address' %></td>
-  </tr>
-  <tr class="info_table_item">
-    <td><%= I18n.t'staticpages-info.city' %>:</td>
-    <td><%= I18n.t'staticpages-info.sosed_city' %></td>
-  </tr>   
-  <tr class="info_table_item">
-    <td><%= I18n.t'staticpages-info.email' %>:</td>
-    <td><%= I18n.t'staticpages-info.email_text' %></td>
-  </tr>
-  <tr class="info_table_item">
-    <td><%= I18n.t'staticpages-info.account' %>:</td>
-    <td><%= I18n.t'staticpages-info.sosed_account' %></td>
-  </tr>
-</table>
-
-<div class="info_faq_title">
-  <%= I18n.t'staticpages-info.faq' %>
+<div class="container_landing_page">
+  <div class="container_landing_page_photo"></div>
+  <div class="container_landing_page_welcome"></div>
+  <div class="container_landing_page_why_sosed"></div>
+  <div class="container_landing_page_buttons"></div>
+      <div class="container_landing_page_login">
+      <%= link_to "Login", new_user_session_path %>
+    </div>     
+    <div class="container_landing_page_signup">
+      <%= link_to "Sign up", new_user_registration_path %>
+    </div>
+  </div>
 </div>
 
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q1' %>
-</div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a1' %>
+<div class="containter_columns_with_background_picture">
+  <div class="about_dashboard_columns">
+  <div class="about_dashboard_box">
+    <div class ="about_dashboard_title">
+        Title: 
+    </div>
+      <div class="about_dashboard_body"> 
+        <div class="about_dashboard_body_username">  
+         First
+        </div>
+      </div>
+  </div>
+   <div class="about_dashboard_box">
+    <div class ="about_dashboard_title">
+        Title: 
+    </div>
+      <div class="about_dashboard_body"> 
+        <div class="about_dashboard_body_username">  
+          Second
+        </div>
+      </div>
+  </div>
+    <div class="about_dashboard_box">
+    <div class ="about_dashboard_title">
+        Title: 
+    </div>
+      <div class="about_dashboard_body"> 
+        <div class="about_dashboard_body_username">  
+          Third
+        </div>
+      </div>
+  </div>
+    <div class="about_dashboard_box">
+    <div class ="about_dashboard_title">
+        Title: 
+    </div>
+      <div class="about_dashboard_body"> 
+        <div class="about_dashboard_body_username">  
+          Third
+        </div>
+      </div>
+  </div>
+  <div class="about_dashboard_box">
+  <div class ="about_dashboard_title">
+      Title: 
+  </div>
+    <div class="about_dashboard_body"> 
+      <div class="about_dashboard_body_username">  
+        Third
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
 
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q2' %>
+<div class="container_landing_page">
+  <div class="container_landing_page_photo"></div>
+  <div class="container_landing_page_welcome"></div>
+  <div class="container_landing_page_why_sosed"></div>
 </div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a2' %>
-</div>
-
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q3' %>
-</div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a3' %>
-</div>
-
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q4' %>
-</div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a4' %>
-</div>
-
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q5' %>
-</div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a5' %>
-</div>
-
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q6' %>
-</div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a6' %>
-</div>
-
-<div class="info_faq_question">
-  <%= I18n.t'staticpages-info.faq-q7' %>
-</div>
-<div class="info_faq_answer">
-  <%= I18n.t'staticpages-info.faq-a7' %>
-</div>
-</div>
-
-
-
 </body>
 </html>

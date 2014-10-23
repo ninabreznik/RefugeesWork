@@ -233,6 +233,9 @@ en:
 # Page 6 - STATIC_PAGES/ABOUT (info)
 # ############################################################################################
 
+
+## NOT RIGHT!!!
+
   staticpages-info:
     thanks: "Thank you for using Sosed.biz app"
     email: "Email"
