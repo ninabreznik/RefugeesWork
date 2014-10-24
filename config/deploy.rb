@@ -1,7 +1,7 @@
 # require "bundler/capistrano"
 
-require "config/recipes/base"
-require "config/recipes/unicorn"
+load Rails.root.join("config","recipes","base.rb")
+load "config/recipes/unicorn"
 # load "config/recipes/database"
 # load "config/recipes/mailer"
 
