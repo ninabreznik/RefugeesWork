@@ -1,7 +1,7 @@
 # require "bundler/capistrano"
 
-load Rails.root.join("config","recipes","base.rb")
-load "config/recipes/unicorn"
+load "#{File.absolute_path(File.dirname(__FILE__))}/config/recipes/base.rb"
+load "#{File.absolute_path(File.dirname(__FILE__))}/config/recipes/unicorn"
 # load "config/recipes/database"
 # load "config/recipes/mailer"
 
