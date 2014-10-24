@@ -22,7 +22,7 @@ set :domain, '5.39.51.100'
 # set :db, domain, :primary => true
 
 set :rails_env, :production
-set :deploy_to, "/opt/#{application}"
+set :deploy_to, "/opt/leadshareapp"
 set :branch, "production"
 
 set :bundle_without, [:development, :test]
