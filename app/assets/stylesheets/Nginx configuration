@@ -3,7 +3,7 @@
 # The socket must match what is in the app's unicorn.rb file #
 ##############################################################
 upstream sosed_server {
-server unix:/tmp/unicorn.outfit_oyster-production.sock fail_timeout=0;
+server unix:/tmp/unicorn.leadshareapp.sock fail_timeout=0;
 }
 
 ##############################
