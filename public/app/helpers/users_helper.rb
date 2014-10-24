@@ -1,1 +1,0 @@
-../../../app/helpers/users_helper.rb

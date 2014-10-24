@@ -1,1 +1,0 @@
-../../../app/admin/admin_user.rb

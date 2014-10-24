@@ -1,1 +1,0 @@
-../../../app/admin/order.rb
