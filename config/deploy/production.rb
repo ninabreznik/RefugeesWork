@@ -51,8 +51,8 @@
 # # set_default(:database_name) { 'minimal_production' }
 # set_default(:database_pool) { 5 }
 
-# set_default(:app_root) { "#{deploy_to}/current" }
-# set_default(:initd_script_target) { "/etc/init.d" }
+set_default(:app_root) { "#{deploy_to}/current" }
+set_default(:initd_script_target) { "/etc/init.d" }
 
 # set :mailer_config do
 #  {
