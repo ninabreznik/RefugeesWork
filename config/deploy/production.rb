@@ -19,7 +19,7 @@
 set :domain, '5.39.51.100'
 # set :app, domain
 # set :web, domain
-set :db, domain, :primary => true
+# set :db, domain, :primary => true
 
 set :rails_env, :production
 set :deploy_to, "/opt/#{application}"
