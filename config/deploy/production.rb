@@ -17,8 +17,8 @@
 
 #server '5.39.51.100', user: 'ninabreznik', roles: %w{web app db}, :primary => true
 set :domain, '5.39.51.100'
-set :app, domain
-set :web, domain
+# set :app, domain
+# set :web, domain
 set :db, domain, :primary => true
 
 set :rails_env, :production
