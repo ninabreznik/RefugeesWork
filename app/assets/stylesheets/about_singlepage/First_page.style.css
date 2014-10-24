@@ -8,7 +8,7 @@ body, html {
 }
 
 body {
-    font-family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
+    font-family:  'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -137,7 +137,7 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 1.7em;
-    font-family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+    font-family: 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
 }
 
 
@@ -357,7 +357,7 @@ hr {
 }
 
 .lg-paneldark, .lg-panelthindark {
-    background-color: #FFAE4D;
+    background-image: url(/images/interior5.png);
 }
 
 .lg-paneldark, .lg-panellight, .lg-panelthindark, .lg-panelthinlight {
@@ -445,7 +445,7 @@ hr {
 .lg-columnpicturefixed {
     height: 350px;
     overflow: hidden;
-    background-color: #82c0c7;
+    background-image: url("assets/interior2.png");
     opacity: 0.7;
 }
 
@@ -608,7 +608,7 @@ hr {
 .darker {
     background: rgb(0, 0, 0); /* fallback color */
     background-color: white;
-    opacity: 0.9;
+    opacity: 0.8;
     color: white;
 }
 
