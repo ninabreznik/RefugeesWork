@@ -1,7 +1,7 @@
 # require "bundler/capistrano"
 
-# load "config/recipes/base"
-# load "config/recipes/unicorn"
+load "config/recipes/base"
+load "config/recipes/unicorn"
 # load "config/recipes/database"
 # load "config/recipes/mailer"
 
@@ -60,13 +60,13 @@ namespace :deploy do
 
   after :publishing, :restart
 
-  # after :restart, :clear_cache do
-  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
-  #     # Here we can do anything such as:
-  #     # within release_path do
-  #     #   execute :rake, 'cache:clear'
-  #     # end
-  #   end
-  # end
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
 
 end
