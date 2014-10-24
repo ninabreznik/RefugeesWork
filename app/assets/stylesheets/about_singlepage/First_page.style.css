@@ -850,7 +850,7 @@ textarea:focus, input:focus {
 
 .lg-pricecolumn {
     border: solid 1px;
-    border-color:rgba(38,54,51,1)
+    border-color:rgba(38,54,51,1);
     padding: 2px;
     min-width: 220px;
 }
