@@ -40,7 +40,7 @@ server '5.39.51.100', user: 'ninabreznik', roles: %w{web app}
 # set :linked_files, %w{config/database.yml .env}
 # set :linked_dirs, %w{tmp/pids}
 
-# set :unicorn_config_path, "config/unicorn.rb"
+set :unicorn_config_path, "config/unicorn.rb"
 
 # set :rbenv_type, :user # or :system, depends on your rbenv setup
 # set :rbenv_prefix, "RAILS_ENV=production RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
