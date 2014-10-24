@@ -1,7 +1,7 @@
 # require "bundler/capistrano"
 
-load "/config/recipes/base"
-load "/config/recipes/unicorn"
+load "recipes/base"
+load "recipes/unicorn"
 # load "config/recipes/database"
 # load "config/recipes/mailer"
 
