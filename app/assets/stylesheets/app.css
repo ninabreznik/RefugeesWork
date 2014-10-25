@@ -216,24 +216,18 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_leads_index .columns {
+  margin-top: 60px;
   position: relative;
-  left: -6.866666666666701%;
-  width: 80%;
-  max-width: 1500px;
-  min-width: 1000px;
-  margin: 60px auto;
-  -moz-column-count: 3;
-  -webkit-column-count: 3;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -moz-column-gap: 10px;
-  -webkit-column-gap: 10px;
-  -webkit-column-gap: 55px;
-  -moz-column-gap: 55px;
-  column-gap: 55px;
+  left: 4.12%;
 }
 .body_leads_index .lead_box {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 24.040000000000003%;
+  margin-left: 0%;
+  margin-right: 5.5%;
   background-color: #fff;
   -webkit-filter: blur(0.7px);
   -moz-filter: blur(0.7px);
@@ -247,6 +241,17 @@ a[href="#top"]:hover {
   column-break-inside: avoid;
   margin-bottom: 45px;
   line-break: 1px;
+}
+.body_leads_index .lead_box:before,
+.body_leads_index .lead_box:after {
+  content: '';
+  display: table;
+}
+.body_leads_index .lead_box:after {
+  clear: both;
+}
+.body_leads_index .lead_box:last-child {
+  margin-right: 0%;
 }
 .body_leads_index .lead_box:hover {
   background-color: rgba(242,242,242,0.95);
@@ -798,25 +803,17 @@ a[href="#top"]:hover {
 .body_orders_reserved .address_book_columns {
   position: relative;
   left: -6.866666666666701%;
-  width: 80%;
-  max-width: 1500px;
-  min-width: 1000px;
-  margin: 60px auto;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 10px;
-  -webkit-column-fill: auto;
-  -moz-column-count: 3;
-  -moz-column-gap: 10px;
-  -moz-column-fill: auto;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-gap: 55px;
-  -moz-column-gap: 55px;
-  column-gap: 55px;
-  -moz-column-fill: auto;
+  position: relative;
+  left: 4.12%;
 }
 .body_orders_reserved .address_book_columns .address_book_lead_box {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 24.040000000000003%;
+  margin-left: 0%;
+  margin-right: 5.5%;
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
@@ -833,6 +830,17 @@ a[href="#top"]:hover {
   filter: blur(0.7px);
   background: #000; /* fallback color */
   background: rgba(255,255,255,0.95);
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box:before,
+.body_orders_reserved .address_book_columns .address_book_lead_box:after {
+  content: '';
+  display: table;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box:after {
+  clear: both;
+}
+.body_orders_reserved .address_book_columns .address_book_lead_box:last-child {
+  margin-right: 0%;
 }
 .body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_title {
   opacity: 0.85;
@@ -980,27 +988,18 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_orders_address_book .address_book_columns {
+  margin-top: 60px;
   position: relative;
-  left: -6.866666666666701%;
-  width: 80%;
-  max-width: 1500px;
-  min-width: 1000px;
-  margin: 60px auto;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 10px;
-  -webkit-column-fill: auto;
-  -moz-column-count: 3;
-  -moz-column-gap: 10px;
-  -moz-column-fill: auto;
-  -webkit-column-gap: 55px;
-  -moz-column-gap: 55px;
-  column-gap: 55px;
-  -moz-column-fill: balance;
+  left: 4.12%;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 24.040000000000003%;
+  margin-left: 0%;
+  margin-right: 5.5%;
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
@@ -1017,6 +1016,17 @@ a[href="#top"]:hover {
   filter: blur(0.7px);
   background: #000; /* fallback color */
   background: rgba(255,255,255,0.95);
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box:before,
+.body_orders_address_book .address_book_columns .address_book_lead_box:after {
+  content: '';
+  display: table;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box:after {
+  clear: both;
+}
+.body_orders_address_book .address_book_columns .address_book_lead_box:last-child {
+  margin-right: 0%;
 }
 .body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_title {
   opacity: 0.85;
@@ -1215,27 +1225,18 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_profile .profile_dashboard_columns {
+  margin-top: 60px;
   position: relative;
-  left: -6.866666666666701%;
-  width: 70%;
-  max-width: 1100px;
-  min-width: 800px;
-  margin: 60px auto;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 10px;
-  -webkit-column-fill: auto;
-  -moz-column-count: 3;
-  -moz-column-gap: 10px;
-  -moz-column-fill: auto;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-gap: 55px;
-  -moz-column-gap: 55px;
-  column-gap: 55px;
-  -moz-column-fill: auto;
+  left: 4.12%;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 24.040000000000003%;
+  margin-left: 0%;
+  margin-right: 5.5%;
   vertical-align: bottom;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
@@ -1248,6 +1249,17 @@ a[href="#top"]:hover {
   filter: blur(0.7px);
   margin-bottom: 45px;
   line-break: 1px;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box:before,
+.body_profile .profile_dashboard_columns .profile_dashboard_box:after {
+  content: '';
+  display: table;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box:after {
+  clear: both;
+}
+.body_profile .profile_dashboard_columns .profile_dashboard_box:last-child {
+  margin-right: 0%;
 }
 .body_profile .profile_dashboard_columns .profile_dashboard_box .profile_dashboard_title {
   color: #606060;

@@ -177,22 +177,10 @@ a[href="#top"]
 .body_leads_index
   body-mixin(backgroundImage: url(/images/interior6.png))
   .columns
-    // opacity 0.7
-    shift (-1/15)
-    width 80%
-    max-width 1500px
-    min-width 1000px
-    margin 60px auto
-    -moz-column-count 3
-    -webkit-column-count 3
-    column-count: 3
-    -moz-column-gap 10px
-    -webkit-column-gap 10px
-    column-gap 55px
-    // -webkit-column-fill auto
-    // -moz-column-fill: auto
-    // column-fill: auto
+    margin-top 60px
+    shift (1/25)
   .lead_box
+    column(0.28, offset: 0, gutter: 5.5)
     background-color white
     blur-mixin(intensity = 0.7px)
     background: rgb(0, 0, 0); /* fallback color */
@@ -527,20 +515,10 @@ a[href="#top"]
     font-weight bold
   .address_book_columns
     shift (-1/15)
-    width 80%
-    max-width 1500px
-    min-width 1000px
-    margin 60px auto
-    -webkit-column-count 3
-    -webkit-column-gap 10px
-    -webkit-column-fill auto
-    -moz-column-count 3
-    -moz-column-gap 10px
-    -moz-column-fill: auto
-    column-count: 3
-    column-gap: 55px
-    column-fill: auto
+    // margin-top 60px
+    shift (1/25)
     .address_book_lead_box
+      column(0.28, offset: 0, gutter: 5.5)
       vertical-align bottom
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
@@ -625,21 +603,11 @@ a[href="#top"]
 .body_orders_address_book
   body-mixin(backgroundImage: url(/images/interior2.png))
   .address_book_columns
-    shift (-1/15)
-    width 80%
-    max-width 1500px
-    min-width 1000px
-    margin 60px auto
-    column-count: 3
-    -webkit-column-count 3
-    -webkit-column-gap 10px
-    -webkit-column-fill auto
-    -moz-column-count 3
-    -moz-column-gap 10px
-    -moz-column-fill: auto
-    column-gap: 55px
-    column-fill: balance
+    margin-top 60px
+    shift (1/25)
     .address_book_lead_box
+      column(0.28, offset: 0, gutter: 5.5)
+      // margin-top 60px
       vertical-align bottom
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
@@ -756,21 +724,11 @@ a[href="#top"]
 .body_profile
   body-mixin(backgroundImage: url(/images/interior6.png))
   .profile_dashboard_columns
-    shift (-1/15)
-    width 70%
-    max-width 1100px
-    min-width 800px
-    margin 60px auto
-    -webkit-column-count 3
-    -webkit-column-gap 10px
-    -webkit-column-fill auto
-    -moz-column-count 3
-    -moz-column-gap 10px
-    -moz-column-fill: auto
-    column-count: 3
-    column-gap: 55px
-    column-fill: auto
+    margin-top 60px
+    shift (1/25)
     .profile_dashboard_box
+      column(0.28, offset: 0, gutter: 5.5)
+      // margin-top 60px
       vertical-align bottom
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
