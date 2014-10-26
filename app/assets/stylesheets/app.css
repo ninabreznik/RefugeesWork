@@ -11,8 +11,10 @@ html {
   box-sizing: inherit;
 }
 .top_menu_bar {
-  position: relative;
-  left: -0.103%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
   background-color: #fff;
   -webkit-filter: blur(0.7px);
   -moz-filter: blur(0.7px);
@@ -22,30 +24,30 @@ html {
   background: rgba(255,255,255,0.8);
   border-bottom: 1px solid #ccc;
   padding-top: 3px;
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  width: 100%;
 }
 .top_menu_bar .logged_user,
 .top_menu_bar .not_logged_user {
   padding-bottom: 2px;
-  position: relative;
-  left: 1.957%;
-  font-size: 12px;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
   display: inline-block;
+}
+.top_menu_bar .logged_user:hover,
+.top_menu_bar .not_logged_user:hover {
+  opacity: 0.7;
 }
 .top_menu_bar .logo {
   position: relative;
-  left: 39.14%;
-  height: 35px;
+  left: 41.2%;
+  height: 37px;
   display: inline-block;
 }
 .top_menu_bar .info {
   padding-bottom: 2px;
   position: relative;
-  left: 59.122%;
-  font-size: 20px;
+  left: 59.739999999999995%;
+  font-size: 21px;
   display: inline-block;
 }
 .top_menu_bar .info .fa.fa-info-circle {
@@ -63,9 +65,12 @@ html {
   width: 100%;
   border-top: 1px solid #ccc;
   font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
 }
 .bottom_menu_bar a[href="/"] {
   color: #666;
+  font-size: 14px;
   background-color: #fff;
   *zoom: 1;
   float: left;
@@ -78,7 +83,6 @@ html {
   width: 230px;
   border-right: 1px solid #e7e7e7;
   padding: 7px;
-  font-size: 14px;
 }
 .bottom_menu_bar a[href="/"]:before,
 .bottom_menu_bar a[href="/"]:after {
@@ -216,45 +220,37 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 .body_leads_index .columns {
-  margin-top: 60px;
-  position: relative;
-  left: 4.12%;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  -moz-column-fill: auto;
 }
 .body_leads_index .lead_box {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 24.040000000000003%;
-  margin-left: 0%;
-  margin-right: 5.5%;
-  background-color: #fff;
-  -webkit-filter: blur(0.7px);
-  -moz-filter: blur(0.7px);
-  -o-filter: blur(0.7px);
-  filter: blur(0.7px);
-  background: #000; /* fallback color */
-  background: rgba(255,255,255,0.95);
-  vertical-align: bottom;
+  display: inline-block;
+  background: #fefefe;
+  border: 2px solid #fafafa;
+  box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  margin: 0 2px 15px;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
-  margin-bottom: 45px;
-  line-break: 1px;
-}
-.body_leads_index .lead_box:before,
-.body_leads_index .lead_box:after {
-  content: '';
-  display: table;
-}
-.body_leads_index .lead_box:after {
-  clear: both;
-}
-.body_leads_index .lead_box:last-child {
-  margin-right: 0%;
-}
-.body_leads_index .lead_box:hover {
-  background-color: rgba(242,242,242,0.95);
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit--webkit-linear-gradient(45deg, #fff, #f9f9f9);
+  background: -webkit--moz-linear-gradient(45deg, #fff, #f9f9f9);
+  background: -webkit--o-linear-gradient(45deg, #fff, #f9f9f9);
+  background: -webkit--ms-linear-gradient(45deg, #fff, #f9f9f9);
+  background: -webkit-linear-gradient(45deg, #fff, #f9f9f9);
+  opacity: 1;
 }
 .body_leads_index .lead_box .lead_title {
   color: #606060;
@@ -963,6 +959,7 @@ a[href="#top"]:hover {
   min-width: 400px;
   color: #fff;
   letter-spacing: -1px;
+  line-height: 150%;
 }
 .reserved_link_to_signup .address_book_signup,
 .reserved_link_to_signup .address_book_signin {
@@ -1137,16 +1134,14 @@ a[href="#top"]:hover {
   filter: blur(0px);
   padding: 10px;
   top: 200px;
-  width: 100%;
-  width: 70%;
   font-size: 28px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  max-width: 800px;
+  max-width: 1000px;
   min-width: 400px;
   color: #fff;
   letter-spacing: -1px;
-  letter-spacing: -1px;
+  line-height: 150%;
 }
 .address_book_link_to_signup .address_book_signup,
 .address_book_link_to_signup .address_book_signin {
