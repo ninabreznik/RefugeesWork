@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require wookmark/jquery.wookmark.js
+//= require wookmark/wookmark-jquery/jquery.wookmark.js
