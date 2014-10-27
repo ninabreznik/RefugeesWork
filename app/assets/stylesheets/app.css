@@ -219,22 +219,7 @@ a[href="#top"]:hover {
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
-.body_leads_index .columns {
-  -webkit-column-count: 3;
-  -webkit-column-gap: 10px;
-  -webkit-column-fill: auto;
-  -moz-column-count: 3;
-  -moz-column-gap: 10px;
-  -moz-column-fill: auto;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
-  -moz-column-fill: auto;
-}
-.body_leads_index .lead_box {
+.body_leads_index .columns .lead_box {
   display: inline-block;
   background: #fefefe;
   border: 2px solid #fafafa;
@@ -252,7 +237,7 @@ a[href="#top"]:hover {
   background: -webkit-linear-gradient(45deg, #fff, #f9f9f9);
   opacity: 1;
 }
-.body_leads_index .lead_box .lead_title {
+.body_leads_index .columns .lead_box .lead_title {
   color: #606060;
   opacity: 0.85;
   background-color: #ffae4d;
@@ -260,14 +245,14 @@ a[href="#top"]:hover {
   font-weight: bold;
   font-size: 14px;
 }
-.body_leads_index .lead_box .lead_title .fa.fa-star {
+.body_leads_index .columns .lead_box .lead_title .fa.fa-star {
   color: #fcd229;
   font-size: 16px;
 }
-.body_leads_index .lead_box .lead_title .fa.fa-star:hover {
+.body_leads_index .columns .lead_box .lead_title .fa.fa-star:hover {
   color: #606060;
 }
-.body_leads_index .lead_box .lead_body {
+.body_leads_index .columns .lead_box .lead_body {
   font-size: 14px;
   padding: 15px;
   -webkit-font-smoothing: antialiased;
@@ -275,7 +260,7 @@ a[href="#top"]:hover {
   color: #606060;
   line-height: 150%;
 }
-.body_leads_index .lead_box .lead_body .lead_subtitle {
+.body_leads_index .columns .lead_box .lead_body .lead_subtitle {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   padding-top: 7px;
