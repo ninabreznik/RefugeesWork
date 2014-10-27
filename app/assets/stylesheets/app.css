@@ -225,7 +225,6 @@ a[href="#top"]:hover {
 .body_leads_index .columns .wookmark {
   list-style-type: none;
   position: relative; /** Needed to ensure items are laid out relative to this container **/
-  margin: 0;
   padding: 0;
 }
 .body_leads_index .columns .wookmark .lead_box {
@@ -233,7 +232,6 @@ a[href="#top"]:hover {
   background: #fefefe;
   border: 2px solid #fafafa;
   box-shadow: 0 1px 2px rgba(34,25,25,0.4);
-  margin: 0 2px 15px;
   padding: 15px;
   padding-bottom: 5px;
   background: -webkit--webkit-linear-gradient(45deg, #fff, #f9f9f9);
