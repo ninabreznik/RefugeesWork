@@ -172,6 +172,7 @@ si:
   staticpagesprofile-links:
     edit-profile: "Uredi profil"
     logout: "Odjava"
+    logged-as: "Prijavljeni ste"
 
 # Notification
   staticpagesprofile-notification:
@@ -183,6 +184,8 @@ si:
     logged-in-as: "Prijavljeni ste kot"
     bought-leads: "Število zakupljenih kontaktov"
     last-bought-lead: "Zadnji zakupljen kontakt"
+    no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
+    you-need-to-sign-in: "Za pregled teh informacij morate biti prijavljeni."
 
 # ############################################################################################
 # Page 5 - ORDERS/INDEX (Address book)

@@ -177,6 +177,7 @@ en:
   staticpagesprofile-links:
     edit-profile: "Edit profile"
     logout: "Logout"
+    logged-as: "Logged in as"
 
 # Notification
   staticpagesprofile-notification:
@@ -188,6 +189,7 @@ en:
     logged-in-as: "Logged in as"
     bought-leads: "Number of bought leads"
     last-bought-lead: "Last bought lead"
+    no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
 
 
 # ############################################################################################

@@ -729,76 +729,75 @@ a[href="#top"]
 
   // :::::::::::: PROFILE :::::::::::: //
 .body_profile
-  body-mixin(backgroundImage: url(/images/interior6.png))
-  .profile_dashboard_columns
-    margin-top 60px
-    shift (1/25)
-    .profile_dashboard_box
-      column(0.28, offset: 0, gutter: 5.5)
-      // margin-top 60px
-      vertical-align bottom
-      -webkit-column-break-inside: avoid
-      -moz-column-break-inside: avoid
-      column-break-inside: avoid
-      background: rgb(0, 0, 0); /* fallback color */
-      background: rgba(255, 255, 255, 0.9);
-      blur-mixin(intensity = 0.7px)
-      margin-bottom 45px
-      line-break 1px
-      .profile_dashboard_title
-        color #606060
-        font-weight bold
-        text-align center
-        background-color #82c0c7
-        opacity 0.9
-        padding 15px
-        font-weight bold
-        -webkit-font-smoothing: antialiased
-        font-size 12px
-        hover-darken(percent = 15%)
-      .profile_dashboard_body
-        color #606060
-        padding 30px 30px 20px 30px
-        -webkit-font-smoothing: antialiased
-        -moz-osx-font-smoothing: grayscale
-        text-align center
-        .profile_dashboard_body_username
-          font-size 14px
-          padding-bottom 20px
+  body-mixin(backgroundImage: url(/images/interior5.png))
+  .columns
+    column-mixin()
+    .wookmark
+      wookmarkMixin()
+      .lead_box
+        leadBoxMixin(defaultMarginLeft: 18px)
+        .profile_dashboard_title
+          color #606060
           font-weight bold
-        .profile_dashboard_body_logout,
-        .profile_dashboard_body_edit
-          margin-top 30px
-          button(color = #82c0c7)
-        .profile_dashboard_body_wallet_amount
-          font-size 57px
-          padding 24px
-        .profile_dashboard_body_wallet_buttons
-          display inline-block
-          margin-top 30px
-          .profile_dashboard_body_wallet_button
+          text-align center
+          background-color #82c0c7
+          opacity 0.9
+          padding 15px
+          font-weight bold
+          -webkit-font-smoothing: antialiased
+          font-size 12px
+          hover-darken(percent = 15%)
+        .profile_dashboard_body
+          color #606060
+          padding 30px 30px 20px 30px
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+          text-align center
+          width 280px
+          .profile_dashboard_body_username
+            font-size 14px
+            padding-bottom 20px
+            font-weight bold
+          .profile_dashboard_body_logout,
+          .profile_dashboard_body_edit
+            margin-top 30px
             button(color = #82c0c7)
-        .profile_dashboard_body_bought_leads_amount
-          font-size 100px
-          padding 24px
-        .profile_dashboard_title_login_or_signup
-          font-size 14px
-          font-weight bold
-          .profile_dashboard_body_signup
-            color white
-            padding-bottom 7px
+          .profile_dashboard_body_wallet_amount
+            font-size 57px
+            padding 24px
+          .profile_dashboard_body_wallet_buttons
+            display inline-block
+            margin-top 30px
+            .profile_dashboard_body_wallet_button
+              button(color = #82c0c7)
+          .profile_dashboard_body_bought_leads_amount
+            font-size 100px
+            padding 24px
+          .profile_dashboard_title_login_or_signup
             font-size 14px
-            &:hover
-              text-decoration underline
-          .profile_dashboard_body_login
+            font-weight bold
+            .profile_dashboard_body_signup
+              color white
+              padding-bottom 7px
+              font-size 14px
+              &:hover
+                text-decoration underline
+            .profile_dashboard_body_login
+              font-size 14px
+              &:hover
+                text-decoration underline
+                transition: all .25s ease-in-sine          
+          .profile_dashboard_body_bought_leads_last
+            font-size 24px
+            font-weight bold
+            padding 24px
+            line-height 100%
+          .profile_dashboard_body_no_bought_leads,
+          .profile_dashboard_body_not_signed_in
             font-size 14px
-            &:hover
-              text-decoration underline
-              transition: all .25s ease-in-sine          
-        .profile_dashboard_body_bought_leads_last
-          font-size 24px
-          font-weight bold
-          padding 24px
+            padding-bottom 20px
+            font-weight bold
+            opacity 0.3
 
   // :::::::::::: ABOUT :::::::::::: //
 // .body_about
