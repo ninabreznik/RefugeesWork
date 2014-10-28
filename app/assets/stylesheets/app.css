@@ -891,7 +891,7 @@ a[href="#top"]:hover {
 .body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button a:active {
   background-color: #d6d6d6;
 }
-.body_orders_reserved .body_dummy_orders_reserved {
+.body_dummy_orders_reserved {
   position: relative;
   opacity: 0.5;
   -webkit-filter: blur(1.6px);
@@ -899,7 +899,7 @@ a[href="#top"]:hover {
   -o-filter: blur(1.6px);
   filter: blur(1.6px);
 }
-.body_orders_reserved .reserved_link_to_signup {
+.reserved_link_to_signup {
   position: absolute;
   margin-top: 30px;
   margin-left: 103px;
@@ -923,8 +923,8 @@ a[href="#top"]:hover {
   letter-spacing: -1px;
   line-height: 150%;
 }
-.body_orders_reserved .reserved_link_to_signup .address_book_signup,
-.body_orders_reserved .reserved_link_to_signup .address_book_signin {
+.reserved_link_to_signup .address_book_signup,
+.reserved_link_to_signup .address_book_signin {
   color: #ffae4d;
 }
 .body_orders_address_book {
