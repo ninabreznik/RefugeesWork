@@ -221,24 +221,20 @@ a[href="#top"]:hover {
 }
 .body_leads_index .columns {
   position: relative;
+  margin-top: 60px;
 }
 .body_leads_index .columns .wookmark {
   list-style-type: none;
   position: relative; /** Needed to ensure items are laid out relative to this container **/
-  padding: 0;
+  padding: 0px;
 }
 .body_leads_index .columns .wookmark .lead_box {
+  margin-left: 42px;
+  padding: 15px;
   display: none;
   background: #fefefe;
   border: 2px solid #fafafa;
   box-shadow: 0 1px 2px rgba(34,25,25,0.4);
-  padding: 15px;
-  padding-bottom: 5px;
-  background: -webkit--webkit-linear-gradient(45deg, #fff, #f9f9f9);
-  background: -webkit--moz-linear-gradient(45deg, #fff, #f9f9f9);
-  background: -webkit--o-linear-gradient(45deg, #fff, #f9f9f9);
-  background: -webkit--ms-linear-gradient(45deg, #fff, #f9f9f9);
-  background: -webkit-linear-gradient(45deg, #fff, #f9f9f9);
   opacity: 0.9;
 }
 .body_leads_index .columns .wookmark .lead_box .lead_title {
@@ -263,7 +259,7 @@ a[href="#top"]:hover {
   -moz-osx-font-smoothing: grayscale;
   color: #606060;
   line-height: 150%;
-  width: 300px;
+  width: 280px;
 }
 .body_leads_index .columns .wookmark .lead_box .lead_body .lead_subtitle {
   font-weight: bold;
@@ -786,71 +782,47 @@ a[href="#top"]:hover {
   font-size: 20px;
   font-weight: bold;
 }
-.body_orders_reserved .address_book_columns {
+.body_orders_reserved .columns {
   position: relative;
-  left: -6.866666666666701%;
-  position: relative;
-  left: 4.12%;
+  margin-top: 60px;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 24.040000000000003%;
-  margin-left: 0%;
-  margin-right: 5.5%;
-  vertical-align: bottom;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
-  background-color: #fff;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  margin-bottom: 45px;
-  line-break: 1px;
-  -webkit-filter: blur(0.7px);
-  -moz-filter: blur(0.7px);
-  -o-filter: blur(0.7px);
-  filter: blur(0.7px);
-  background: #000; /* fallback color */
-  background: rgba(255,255,255,0.95);
+.body_orders_reserved .columns .wookmark {
+  list-style-type: none;
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  padding: 0px;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box:before,
-.body_orders_reserved .address_book_columns .address_book_lead_box:after {
-  content: '';
-  display: table;
+.body_orders_reserved .columns .wookmark .lead_box {
+  margin-left: 18px;
+  padding: 15px;
+  display: none;
+  background: #fefefe;
+  border: 2px solid #fafafa;
+  box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  opacity: 0.9;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box:after {
-  clear: both;
-}
-.body_orders_reserved .address_book_columns .address_book_lead_box:last-child {
-  margin-right: 0%;
-}
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_title {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_lead_title {
+  color: #606060;
   opacity: 0.85;
   background-color: #ffae4d;
   padding: 15px;
   font-weight: bold;
-  -webkit-font-smoothing: antialiased;
   font-size: 14px;
-  border-bottom: 1px solid #e7e7e7;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_body {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_lead_body {
   font-size: 14px;
   padding: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #606060;
   line-height: 150%;
+  width: 280px;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_body .address_book_lead_subtitle {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_lead_body .address_book_lead_subtitle {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   padding-top: 7px;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_notification {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_lead_notification {
   font-size: 14px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
@@ -860,13 +832,13 @@ a[href="#top"]:hover {
   font-weight: bold;
   padding-top: 7px;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_lead_notification .address_book_lead_notification_explanation {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_lead_notification .address_book_lead_notification_explanation {
   font-weight: normal;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons {
   margin-top: 20px;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_buy_button {
   margin-left: 80px;
   font-size: 13px;
   padding: 10px 22px;
@@ -882,16 +854,16 @@ a[href="#top"]:hover {
   display: inline-block;
   border: none;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:hover,
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:focus {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_buy_button:hover,
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_buy_button:focus {
   background-color: #ffa63c;
   color: #474747;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_buy_button:active {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_buy_button:active {
   background-color: #ff9f2c;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input,
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button input,
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button a {
   margin: 5px 0px 5px 50px;
   color: #606060;
   font-size: 13px;
@@ -908,18 +880,18 @@ a[href="#top"]:hover {
   display: inline-block;
   border: none;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input:hover,
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a:hover,
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input:focus,
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a:focus {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button input:hover,
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button a:hover,
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button input:focus,
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button a:focus {
   background-color: #e2e2e2;
   color: #474747;
 }
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button input:active,
-.body_orders_reserved .address_book_columns .address_book_lead_box .address_book_buttons .address_book_remove_button a:active {
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button input:active,
+.body_orders_reserved .columns .wookmark .lead_box .address_book_buttons .address_book_remove_button a:active {
   background-color: #d6d6d6;
 }
-.body_dummy_orders_reserved {
+.body_orders_reserved .body_dummy_orders_reserved {
   position: relative;
   opacity: 0.5;
   -webkit-filter: blur(1.6px);
@@ -927,7 +899,7 @@ a[href="#top"]:hover {
   -o-filter: blur(1.6px);
   filter: blur(1.6px);
 }
-.reserved_link_to_signup {
+.body_orders_reserved .reserved_link_to_signup {
   position: absolute;
   margin-top: 30px;
   margin-left: 103px;
@@ -951,8 +923,8 @@ a[href="#top"]:hover {
   letter-spacing: -1px;
   line-height: 150%;
 }
-.reserved_link_to_signup .address_book_signup,
-.reserved_link_to_signup .address_book_signin {
+.body_orders_reserved .reserved_link_to_signup .address_book_signup,
+.body_orders_reserved .reserved_link_to_signup .address_book_signin {
   color: #ffae4d;
 }
 .body_orders_address_book {
@@ -974,48 +946,25 @@ a[href="#top"]:hover {
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
-.body_orders_address_book .address_book_columns {
-  margin-top: 60px;
+.body_orders_address_book .columns {
   position: relative;
-  left: 4.12%;
+  margin-top: 60px;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 24.040000000000003%;
-  margin-left: 0%;
-  margin-right: 5.5%;
-  vertical-align: bottom;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
-  background-color: #fff;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  margin-bottom: 45px;
-  line-break: 1px;
-  -webkit-filter: blur(0.7px);
-  -moz-filter: blur(0.7px);
-  -o-filter: blur(0.7px);
-  filter: blur(0.7px);
-  background: #000; /* fallback color */
-  background: rgba(255,255,255,0.95);
+.body_orders_address_book .columns .wookmark {
+  list-style-type: none;
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  padding: 0px;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box:before,
-.body_orders_address_book .address_book_columns .address_book_lead_box:after {
-  content: '';
-  display: table;
+.body_orders_address_book .columns .wookmark .lead_box {
+  margin-left: 18px;
+  padding: 15px;
+  display: none;
+  background: #fefefe;
+  border: 2px solid #fafafa;
+  box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  opacity: 0.9;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box:after {
-  clear: both;
-}
-.body_orders_address_book .address_book_columns .address_book_lead_box:last-child {
-  margin-right: 0%;
-}
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_title {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_title {
   opacity: 0.85;
   background-color: #82c0c7;
   padding: 15px;
@@ -1024,23 +973,24 @@ a[href="#top"]:hover {
   font-size: 14px;
   border-bottom: 1px solid #e7e7e7;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_body {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_body {
   font-size: 14px;
   padding: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #606060;
   line-height: 150%;
+  width: 280px;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_body .address_book_lead_subtitle {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_body .address_book_lead_subtitle {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   padding-top: 7px;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes {
   padding: 5px;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes #order_notes {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes #order_notes {
   background-color: #fff;
   opacity: 0.5;
   position: relative;
@@ -1058,11 +1008,11 @@ a[href="#top"]:hover {
   line-break: 1px;
   border: 2px solid #82c0c7;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes #order_notes:hover {
-  background-color: rgba(242,242,242,0.95);
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes #order_notes:hover {
+  background-color: #f1f1f1;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input,
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button input,
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button a {
   position: relative;
   left: 67.98%;
   margin-bottom: 7px;
@@ -1081,18 +1031,18 @@ a[href="#top"]:hover {
   display: inline-block;
   border: none;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input:hover,
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a:hover,
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input:focus,
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a:focus {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button input:hover,
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button a:hover,
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button input:focus,
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button a:focus {
   background-color: #77bac2;
   color: #474747;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button input:active,
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_lead_notes .address_book_lead_notes_button a:active {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button input:active,
+.body_orders_address_book .columns .wookmark .lead_box .address_book_lead_notes .address_book_lead_notes_button a:active {
   background-color: #6bb5bd;
 }
-.body_orders_address_book .address_book_columns .address_book_lead_box .address_book_link_to-signup {
+.body_orders_address_book .columns .wookmark .lead_box .address_book_link_to-signup {
   font-size: 12px;
 }
 .body_orders_address_book .address_book_bought_leads {
