@@ -1,0 +1,273 @@
+.row {
+    overflow:hidden;
+}
+
+input, textarea, .form-control {
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+label {
+    font-weight: inherit;
+}
+
+textarea {
+    resize:vertical;
+}
+
+.btn {
+    border-radius:3px;
+}
+
+button > .glyphicon {
+    margin-right:10px;
+}
+
+button:hover {
+    color:white !important;
+}
+
+.input-group-btn > button {
+    border-radius:0px;
+}
+
+.center-block{
+    text-align: center;
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.btn-lg {
+    height:46px;
+}
+
+.lg-spacer-top-extrasmall {
+    margin-top:5px;
+}
+.lg-spacer-bottom-extrasmall {
+    margin-bottom:5px;
+}
+
+.lg-spacer-small {
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.lg-spacer-bottom-small {
+    margin-bottom:15px;
+}
+
+.lg-spacer-medium {
+    margin-top:40px;
+    margin-bottom:50px;
+}
+
+.lg-spacer-bottom-medium {
+    margin-bottom:50px;
+}
+
+.lg-spacer-top-medium {
+    margin-top:40px;
+}
+
+.lg-removehorizontalpadding {
+    padding-left:0px;
+    padding-right:0px;
+}
+
+
+.row-no-padding[class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+.block {
+    display:block;
+}
+
+.nopadding {
+    padding:0px;
+    margin:0px;
+}
+
+.smallpadding {
+    padding:5px;
+    margin:0px;
+}
+
+
+/* TODO make this responsive */
+.padding-xs {
+    padding:10px;
+}
+
+
+
+.lg-fullheight {
+    height:100%;
+    min-height:650px;
+}
+
+.lg-minfullheight {
+	height:100%;
+    min-height:650px;
+}
+
+#wrapper {
+  padding-left: 300px;
+  height:100%;
+}
+
+#sidebar-wrapper {
+  margin-left: -300px;
+  left: 300px;
+  width: 300px;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-container, .page-content {
+    height:100%;
+}
+
+
+#page-content-wrapper {
+  width: 100%;
+  height:100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 300px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 300px;
+      width: 300px;
+    }
+
+}
+
+.lg-overflowfix {
+    overflow:hidden;
+}
+
+.lg-labelbutton {
+    transition:all ease .1s;
+}
+.lg-labelbutton:hover {
+    background-color:#5bc0de;
+
+}
+
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .lg-hero-title {
+        font-size: 2.2em !important;
+    }
+
+    .lg-hero-title-medium {
+        font-size: 1.9em !important;
+    }
+
+    h1 {
+        font-size: 1.7em !important;
+    }
+    h2 {
+        font-size: 1.3em !important;
+    }
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .lg-hero-title {
+        font-size: 2.2em !important;
+    }
+
+    .lg-hero-title-medium {
+        font-size: 1.9em !important;
+    }
+
+    h1 {
+        font-size: 1.7em !important;
+    }
+    h2 {
+        font-size: 1.3em !important;
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .lg-hero-title {
+        font-size: 1.9em !important;
+    }
+
+    .lg-hero-title-medium {
+        font-size: 1.6em !important;
+    }
+
+    h1 {
+        font-size: 1.4em !important;
+    }
+    h2 {
+        font-size: 1.1em !important;
+    }
+
+}
+
+/* portrait phones and smaller */
+@media (max-width: 480px) {
+
+    .lg-hero-title {
+        font-size: 1.9em !important;
+    }
+
+    .lg-hero-title-medium {
+        font-size: 1.6em !important;
+    }
+    h1 {
+        font-size: 1.4em !important;
+    }
+    h2 {
+        font-size: 1.1em !important;
+    }
+}
