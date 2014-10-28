@@ -116,12 +116,12 @@ leadBoxMixin(defaultMarginLeft = 42px)
     &:hover
       opacity 0.7
   .logo
-    shift(0.4)
+    shift(0.44)
     height 37px
     display inline-block
   .info
     padding-bottom 2px
-    shift(0.58)
+    shift(0.7)
     font-size 21px
     display inline-block
     .fa.fa-info-circle
@@ -131,7 +131,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
   
 .bottom_menu_bar
-  padding-left 110px
+  // padding-left 110px
   background-color Menu-Bottom-Color
   position fixed
   bottom 0
@@ -139,7 +139,6 @@ leadBoxMixin(defaultMarginLeft = 42px)
   width 100%
   border-top 1px solid #ccc
   font-size 20px
-  -webkit-font-smoothing: antialiased
   font-weight bold
   a[href="/"]
     color Menu-Bottom-Button-Color
@@ -147,9 +146,10 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    width 230px
+    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
+    -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-home
@@ -159,10 +159,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    width 230px
+    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     font-size 14px
+    -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-star
@@ -172,10 +173,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    width 230px
+    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     font-size 14px
+    -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-users
@@ -185,10 +187,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    width 230px
+    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     font-size 14px
+    -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-cog
@@ -223,6 +226,7 @@ a[href="#top"]
           .fa.fa-star
             color #fcd229
             font-size 16px
+            shift 0.44
             &:hover
               color #606060
         .lead_body
@@ -295,10 +299,11 @@ a[href="#top"]
           .lead_show_subtitle
             font-weight bold
             display inline-block
-    .lead_show_buy input,   
+    .lead_show_buy input
     .lead_show_buy a 
       margin 30px 0 20px 330px
-      button(color = Lead-Orange)
+      button()
+      background-color Lead-Orange
       font-size 22px
 
 
@@ -374,7 +379,7 @@ a[href="#top"]
       .order_show_buy input,   
       .order_show_buy a 
         // margin-left 1px
-        button(color = Lead-Orange)
+        button(color: Lead-Orange)
         font-size 22px
   .order_show_notes
     margin-top 5px
@@ -416,7 +421,7 @@ a[href="#top"]
     .order_show_notes_submit a
       margin-left 717px
       margin-top 10px
-      button(color = Lead-Orange)
+      button()
 
       
 
@@ -438,29 +443,32 @@ a[href="#top"]
     padding-top 70px
     background-color white
     .offer_title
-      center(420px)
+      // center(420px)
       color Offer-Font-Color
       font-weight bold
       font-size 28px
-      margin-bottom 30px
+      margin-bottom 60px
     .offer_company_info 
-      shift(0.55)
+      // shift(0.55)
       color #606060
-      text-align left
+      // text-align left
       border 1px solid #e7e7e7
       box-shadow inset 0 0 0 0 #CCC
       border-radius 4px
-      padding 4px 7px 4px 7px
-      background-color Lead-Subtitle 
+      padding 4px 7px 4px 10px
+      background-color Lead-Subtitle
+    .offer_company_info td:last-child
+      text-align left
+    .offer_company_info td:first-child
+      text-align left
+      width 109px
     .offer_date
       color #606060
-      font-size 16px
-      margin-bottom 20px
-      margin-top 10px
-      shift(-0.29)
-      text-align right
+      font-size 13px
+      margin 10px 10px 20px 10px
+      text-align left
     .offer_sosed_info
-      shift(0.075)
+      // shift(0.075)
       margin-top 20px
       color #606060
       text-align left
@@ -469,20 +477,20 @@ a[href="#top"]
       border-radius 4px
       .offer_sosed_info_price td,
         font-weight bold
-        padding 7px 30px 7px 30px
+        padding 30px 30px 15px 15px
         font-size 16px
         background-color Lead-Subtitle
       .offer_sosed_info_item td
         background-color Lead-Subtitle     
-        padding 7px 30px 7px 30px
+        padding 15px 30px 10px 15px
         font-size 12px
     .offer_show_lead
       margin-top 37px
       padding-bottom 20px
-      center(70%)
-      shift(-0.07)
+      // center(70%)
+      // shift(-0.07)
       height 30%
-      width 70%
+      // width 70%
       vertical-align bottom
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
@@ -518,11 +526,11 @@ a[href="#top"]
         .ordersindex-notifications.customer-info
           color red
     .offer_instructions
-      width 70%
+      // width 70%
       margin-top 20px
       font-size 12px
       font-weight bold
-      shift(0.08)
+      // shift(0.08)
 
   // :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
     
@@ -577,17 +585,14 @@ a[href="#top"]
             button(color = Lead-Orange)
           .address_book_remove_button input
           .address_book_remove_button a 
-            margin 5px 0px 5px 50px
-            color #606060
-            button(color = #eeeeee)
+            margin 10px 0px 5px 50px
+            button()
 .body_dummy_orders_reserved
   position relative
   opacity 0.5
   blur-mixin()
 .reserved_link_to_signup
-  position: absolute
-  margin-top 30px
-  margin-left 103px
+  margin-left 210px
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
   position fixed
@@ -645,7 +650,7 @@ a[href="#top"]
           padding 5px
           #order_notes
             background-color white
-            opacity 0.5
+            // opacity 0.8
             position relative
             text-decoration none
             color #606060
@@ -667,7 +672,7 @@ a[href="#top"]
             shift(0.66)
             margin-bottom 7px
             margin-top 3px
-            button(color = #82c0c7)
+            button()
         .address_book_link_to-signup
           font-size 12px
   .address_book_bought_leads
@@ -684,7 +689,7 @@ a[href="#top"]
 .address_book_link_to_signup
   position: absolute
   margin-top 30px
-  margin-left 103px
+  margin-left 210px
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
   position fixed
@@ -841,7 +846,8 @@ a[href="#top"]
       padding-right 20px
       margin-top 10px
       margin-bottom 10px  
-      button(color = Lead-Orange)
+      button()
+      background-color red
     .login_shared_links
       font-size 12px
       &:hover
@@ -887,7 +893,8 @@ a[href="#top"]
       padding-right 20px
       margin-top 10px
       margin-bottom 10px  
-      button(color = Lead-Orange)
+      button()
+      background-color Lead-Orange
     .signup_shared_links
       font-size 12px
       &:hover
@@ -997,6 +1004,7 @@ a[href="#top"]
       font-size 28px
       font-weight bold
       margin-bottom 20px
+      line-height 120%
     .lead_new_instructions
       -webkit-font-smoothing: antialiased
       padding-left 20px
@@ -1005,6 +1013,7 @@ a[href="#top"]
       font-size 20px
       font-weight bold
       margin-bottom 40px
+      line-height 120%
     .lead_new_form_business_type,
     .lead_new_form_time,
     .lead_new_form_zip,
@@ -1069,8 +1078,9 @@ a[href="#top"]
     .lead_new_form_submit input
     .lead_new_form_submit a 
       margin-left 254px
-      button(color = #f26421)
-      color black
+      color white
+      button()
+      background-color Lead-Orange
     .lead_new_shared_links
       font-size 12px
       &:hover
