@@ -9,9 +9,7 @@ class OrdersController < ApplicationController
     @leads = Lead.all
     #@lead = @order.selected
     #@bought_leads = Order.all.where(selector_id: current_user.id, paid: true)
-    if @order.present?
-      @lead = @order.selected 
-    end
+    @lead = @order.selected if @order.present?
   end
 
   def create

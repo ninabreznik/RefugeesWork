@@ -9,6 +9,8 @@ class LeadsController < ApplicationController
   def show
     @lead = Lead.find_by_id(params[:id])
     @leads = Lead.all
+    @reserved_leads = @lead.reverse_orders.where(selector_id: current_user.id)
+
     #@order = @lead.reverse_orders.where(selector_id: current_user.id)
   end
 

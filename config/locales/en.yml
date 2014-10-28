@@ -178,6 +178,8 @@ en:
     edit-profile: "Edit profile"
     logout: "Logout"
     logged-as: "Logged in as"
+    sign-in: "Sign in"
+    sign-up: "Sign up"
 
 # Notification
   staticpagesprofile-notification:
@@ -187,9 +189,11 @@ en:
       bank: "Bank transfer"
       paypal: "Paypal"
     logged-in-as: "Logged in as"
+    not-logged-in: "Not logged in"
     bought-leads: "Number of bought leads"
     last-bought-lead: "Last bought lead"
     no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
+    you-need-to-sign-in: "Za pregled teh informacij morate biti prijavljeni."
 
 
 # ############################################################################################

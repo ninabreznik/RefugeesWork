@@ -1,0 +1,15 @@
+<div class="top_menu_bar">
+  <a href="<%= root_path %>"><%= image_tag('sosed.biz.png') %></a>
+  <% if user_signed_in? %>
+    <div class="logged_user"> 
+      <%= link_to current_user.email, profile_path %> 
+    </div>
+  <% else %>
+    <div class="not_logged_user">
+    <%= link_to "#{I18n.t'application.top-menu.login'}", new_user_session_path %> | <%= link_to "#{I18n.t'application.top-menu.signup'}", new_user_registration_path %>
+    </div>
+  <% end %>
+  <div class="info">
+    <a href="<%= about_path %>"><i class="fa fa-info-circle"></i></a>
+  </div>
+</div>

@@ -1,8 +1,4 @@
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+<div>
   <div>
     <% if user_signed_in? %>
     <h1>Hey, you!</h1>
@@ -16,5 +12,4 @@
       <%= link_to "Sign up", new_user_registration_path %> or
       <%= link_to "Login", new_user_session_path %> <br>
     <% end %>
-</body>
-</html>
+</div>

@@ -1,8 +1,4 @@
-<html>
-<head>
-  <title></title>
-</head>
-<body class="body_profile">
+<div class="body_profile">
   <div class="columns">
   <ul class="wookmark">
     <% if user_signed_in? %>
@@ -91,15 +87,15 @@
     <% else %>
     <div class="lead_box">
           <div class ="profile_dashboard_title">
-            <%= I18n.t'staticpagesprofile-links.logged-as' %>:
+            <%= I18n.t'staticpagesprofile-notification.not-logged-in' %>:
           </div>
           <div class="profile_dashboard_body"> 
             <div class="profile_dashboard_title_login_or_signup">
               <div class="profile_dashboard_body_signup">
-                <%= link_to "Sign up", new_user_registration_path %>
+                <%= link_to "#{I18n.t'staticpagesprofile-links.sign-up'}", new_user_registration_path %>
               </div> 
               <div class="profile_dashboard_body_login">
-                <%= link_to "Login", new_user_session_path %>
+                <%= link_to "#{I18n.t'staticpagesprofile-links.sign-in'}", new_user_session_path %>
               </div>
             </div>
           </div>
@@ -141,47 +137,4 @@
 </ul>
 </div>
 
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-  
-  <!-- JAVASCRIPT - WOOKMARK - columns -->
-
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-<script src="/assets/wookmark/jquery/dist/jquery.min.js"></script>
-
-  <!-- Include the plug-in -->
-  <script src="/assets/wookmark/wookmark-jquery/jquery.wookmark.js"></script>
-
-  <!-- Once the page is loaded, initalize the plug-in. -->
-  <script type="text/javascript">
-    (function ($){
-      var handler = $('.lead_box');
-
-      handler.wookmark({
-          // Prepare layout options.
-          autoResize: true, // This will auto-update the layout when the browser window is resized.
-          container: $('.columns'), // Optional, used for some extra CSS styling
-          offset: 15, // Optional, the distance between grid items
-          outerOffset: 10, // Optional, the distance to the containers border
-          itemWidth: 400 // Optional, the width of a grid item
-      });
-
-      // Capture clicks on grid items.
-      // handler.click(function(){
-      //   // Randomize the height of the clicked item.
-      //   var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
-      //   $(this).css('height', newHeight+'px');
-
-      //   // Update the layout.
-      //   handler.wookmark();
-      // });
-    })(jQuery);
-  </script>
-
-  <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-                          <!-- END OF WOOKMARK JAVASCRIPT -->
-
-  <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-</body>
-</html>
+</div>

@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+    render 'about', layout: false
   end
 
   def faq

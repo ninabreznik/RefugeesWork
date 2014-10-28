@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<head>
-    <title>LeadShareApp</title>
-    <%= csrf_meta_tags %>
-    <!-- <link rel="stylesheet" type="text/css" href="/assets/app.css"> -->
-    <link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.min.css">
-    <%= stylesheet_link_tag "application", :media => "all" %>
-  
-  </head>
-<body>
-<a id="top" name="top"> &nbsp; </a>
-  <div class="top_menu_bar">
-    <%= link_to '<img class="logo" src="/images/sosed.biz.png"/>'.html_safe, root_path %>
-    <% if user_signed_in? %>
-      <div class="logged_user"> 
-        <%= link_to current_user.email, profile_path %> 
-      </div>
-    <% else %>
-    <div class="not_logged_user">
-      <%= link_to "#{I18n.t'application.top-menu.login'}", new_user_session_path %> | <%= link_to "#{I18n.t'application.top-menu.signup'}", new_user_registration_path %>
-    </div>
-    <% end %>
-    <div class="info">
-      <%= link_to '<i class="fa fa-info-circle"></i>'.html_safe, about_path %>
-    </div>
-  </div>
 
-  <div class="bottom_menu_bar">
-    <a href="/"><i class="fa fa-home"></i><%= I18n.t'application.bottom-menu.home' %></a>
-    <a href="/reserved"><i class="fa fa-star"></i> <%= I18n.t'application.bottom-menu.reserved' %></a>
-    <a href="/address_book"><i class="fa fa-users"></i> <%= I18n.t'application.bottom-menu.address-book' %></a>
-    <a href="/profile"><i class="fa fa-cog"></i> <%= I18n.t'application.bottom-menu.profile' %></a>
-  </div>
-<% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
+<head>
+  <title>LeadShareApp</title>
+  <link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <a id="top" name="top"> &nbsp; </a>
+  
+  <%= render 'layouts/top_menu' %>
+  
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+    
   <%= yield %>
 
-<a href='#top'><i class="fa fa-arrow-circle-up"></i></a>
-  </body>
-  
+  <%= render 'layouts/bottom_menu' %>
+
+  <a href='#top'><i class="fa fa-arrow-circle-up"></i></a>
+
+  <%= render 'layouts/wookmark' %>
+
+</body>
 </html>
 
 

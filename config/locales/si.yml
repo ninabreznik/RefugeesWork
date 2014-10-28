@@ -93,7 +93,7 @@ si:
   leadsindex-lead:
     location: "Regija" 
     zip: "Pošta"
-    time: "Kdaj?"
+    time: "Kdaj"
     description: "Opis"
     name: "Ime"
 
@@ -114,7 +114,7 @@ si:
   leadsshow-lead:
     location: "Regija" 
     zip: "Pošta"
-    time: "Kdaj?"
+    time: "Kdaj"
     description: "Opis"
     name: "Ime"
 
@@ -135,7 +135,7 @@ si:
   ordersshow-lead:
     location: "Regija" 
     zip: "Pošta"
-    time: "Kdaj?"
+    time: "Kdaj"
     description: "Opis"
     name: "Ime"
     phone: "Telefon"
@@ -173,7 +173,8 @@ si:
     edit-profile: "Uredi profil"
     logout: "Odjava"
     logged-as: "Prijavljeni ste"
-
+    sign-in: "Prijava"
+    sign-up: "Registracija"
 # Notification
   staticpagesprofile-notification:
     wallet: "Stanje v moji denarnici"
@@ -182,6 +183,7 @@ si:
       bank: "Predračun"
       paypal: "Paypal"
     logged-in-as: "Prijavljeni ste kot"
+    not-logged-in: "Niste prijavljeni"
     bought-leads: "Število zakupljenih kontaktov"
     last-bought-lead: "Zadnji zakupljen kontakt"
     no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
@@ -200,7 +202,7 @@ si:
   ordersindex-lead:
     location: "Regija" 
     zip: "Pošta"
-    time: "Kdaj?"
+    time: "Kdaj"
     description: "Opis"
     name: "Ime"
     phone: "Telefon"
@@ -302,7 +304,7 @@ si:
     lead:
       location: "Regija" 
       zip: "Pošta"
-      time: "Kdaj?"
+      time: "Kdaj"
       description: "Opis"
       name: "Ime"
 
@@ -362,7 +364,7 @@ si:
         onetothreemonths: "V 1-3 mesecev"
         flexible: "Po dogovoru"
       prompt-business-type: "Katerega izvajalca potrebujete?"
-      prompt-time: "Kdaj?"
+      prompt-time: "Kdaj"
       business_type: "Dejavnost"
       time: "Termin"
       zip: "Pošta"
