@@ -717,23 +717,22 @@ a[href="#top"]
 
   // :::::::::::: PROFILE :::::::::::: //
 .body_profile
-  body-mixin(backgroundImage: url(/images/interior6.png))
+  body-mixin(backgroundImage: url(/images/interior3.png))
+  height 1500px
   .columns
     column-mixin()
     .wookmark
       wookmarkMixin()
       .lead_box
-        leadBoxMixin(defaultMarginLeft: 18px)
+        leadBoxMixin()
         .profile_dashboard_title
-          color #606060
-          font-weight bold
-          text-align center
+          opacity 0.85
           background-color #82c0c7
-          opacity 0.9
           padding 15px
           font-weight bold
           -webkit-font-smoothing: antialiased
-          font-size 12px
+          font-size 14px
+          border-bottom 1px solid #e7e7e7
         .profile_dashboard_body
           color #606060
           padding 30px 30px 20px 30px
@@ -747,14 +746,14 @@ a[href="#top"]
             font-weight bold
           .profile_dashboard_body_logout,
           .profile_dashboard_body_edit
-            margin-top 30px
+            padding-top 30px
             button(color = #82c0c7)
           .profile_dashboard_body_wallet_amount
             font-size 57px
             padding 24px
           .profile_dashboard_body_wallet_buttons
             display inline-block
-            margin-top 30px
+            padding-top 30px
             .profile_dashboard_body_wallet_button
               button(color = #82c0c7)
           .profile_dashboard_body_bought_leads_amount
@@ -796,12 +795,7 @@ a[href="#top"]
 .body_devise_login
 .body_devise_login
   body-mixin(backgroundImage: url(/images/interior6.png))
-  background-repeat no-repeat
-  background-position center top
-  background-size cover
-  -webkit-background-size cover
-  -moz-background-size cover
-  -o-background-size cover  
+  height 1500px
   .login
     margin-top 60px
     margin-left 20px  

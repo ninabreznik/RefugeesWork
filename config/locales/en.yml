@@ -186,8 +186,7 @@ en:
     wallet: "My wallet status"
     wallet-text: "You can top up your wallet when you buy a new lead. At your nex buy simply transfer desired amount. 10€ from that amount will be subtrackted for chosen lead and the rest will be added to your wallet."
     wallet-buttons:
-      bank: "Bank transfer"
-      paypal: "Paypal"
+      bank: "Top the wallet"
     logged-in-as: "Logged in as"
     not-logged-in: "Not logged in"
     bought-leads: "Number of bought leads"

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users 
     match '/users/:id/edit',       to: 'users#edit',        via: 'edit'
+    
   resources :leads
   resources :paypal_notifications, only: [:create]
 

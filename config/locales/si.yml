@@ -180,8 +180,7 @@ si:
     wallet: "Stanje v moji denarnici"
     wallet-text: "Denarnico lahko napolnite ob nakupu novega kontakta. Ob nakupu enostavno nakažite željeni znesek. 10€ od vplačila bomo odšeli za nakup izbranega kontakta, preostali znesek pa bo dodan v vašo denarnico."
     wallet-buttons:
-      bank: "Predračun"
-      paypal: "Paypal"
+      bank: "Polnjenje denarnice"
     logged-in-as: "Prijavljeni ste kot"
     not-logged-in: "Niste prijavljeni"
     bought-leads: "Število zakupljenih kontaktov"

@@ -9,7 +9,7 @@
 
 /* line 13 : /usr/local/lib/node_modules/rupture/rupture/index.styl */
 
-/* line 1139 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/index.styl */
+/* line 1133 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/index.styl */
 
@@ -29,7 +29,7 @@
 
 /* line 90 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/flex.styl */
 
-/* line 1139 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/gradients.styl */
+/* line 1133 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/gradients.styl */
 
@@ -57,7 +57,7 @@
 
 /* line 5 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/reset.styl */
 
-/* line 1139 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/text/index.styl */
+/* line 1133 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/text/index.styl */
 
@@ -93,7 +93,7 @@
 
 /* line 28 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/size.styl */
 
-/* line 1139 : /usr/local/lib/node_modules/axis/axis/index.styl */
+/* line 1133 : /usr/local/lib/node_modules/axis/axis/index.styl */
 
 /* line 61 : /usr/local/lib/node_modules/axis/axis/index.styl */
 
@@ -161,7 +161,7 @@
 
 /* line 28 : /Users/ninabreznik/Code/Ruby/LeadShareApp/node_modules/jeet/stylus/jeet/_grid.styl */
 
-/* line 1139 : /usr/local/lib/node_modules/axis/axis/index.styl */
+/* line 1133 : /usr/local/lib/node_modules/axis/axis/index.styl */
 
 /* line 61 : /Users/ninabreznik/Code/Ruby/LeadShareApp/node_modules/axis/axis/index.styl */
 
@@ -1607,7 +1607,7 @@ a[href="#top"]:hover {
 
 /* line 719 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile {
-  background-image: url("/images/interior6.png");
+  background-image: url("/images/interior3.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -1619,6 +1619,7 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  height: 1500px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -1628,22 +1629,22 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 721 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 722 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns {
   position: relative;
   margin-top: 29px;
 }
 
-/* line 723 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 724 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark {
   list-style-type: none;
   position: relative; /** Needed to ensure items are laid out relative to this container **/
   padding: 0px;
 }
 
-/* line 725 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 726 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box {
-  margin-left: 18px;
+  margin-left: 42px;
   padding: 15px;
   display: none;
   background: #fefefe;
@@ -1652,20 +1653,18 @@ a[href="#top"]:hover {
   opacity: 0.9;
 }
 
-/* line 727 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 728 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_title {
-  color: #606060;
-  font-weight: bold;
-  text-align: center;
+  opacity: 0.85;
   background-color: #82c0c7;
-  opacity: 0.9;
   padding: 15px;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-/* line 737 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 736 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body {
   color: #606060;
   padding: 30px 30px 20px 30px;
@@ -1675,17 +1674,17 @@ a[href="#top"]:hover {
   width: 280px;
 }
 
-/* line 744 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 743 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_username {
   font-size: 14px;
   padding-bottom: 20px;
   font-weight: bold;
 }
 
-/* line 748 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 747 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout,
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit {
-  margin-top: 30px;
+  padding-top: 30px;
   font-size: 13px;
   padding: 10px 22px;
   border-radius: 3px;
@@ -1716,19 +1715,19 @@ a[href="#top"]:hover {
   background-color: #6bb5bd;
 }
 
-/* line 752 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 751 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_amount {
   font-size: 57px;
   padding: 24px;
 }
 
-/* line 755 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 754 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons {
   display: inline-block;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
-/* line 758 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 757 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button {
   font-size: 13px;
   padding: 10px 22px;
@@ -1757,41 +1756,41 @@ a[href="#top"]:hover {
   background-color: #6bb5bd;
 }
 
-/* line 760 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 759 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_bought_leads_amount {
   font-size: 100px;
   padding: 24px;
 }
 
-/* line 763 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 762 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_title_login_or_signup {
   font-size: 14px;
   font-weight: bold;
 }
 
-/* line 766 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 765 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_signup {
   color: #fff;
   padding-bottom: 7px;
   font-size: 14px;
 }
 
-/* line 770 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 769 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_signup:hover {
   text-decoration: underline;
 }
 
-/* line 772 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 771 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_login {
   font-size: 14px;
 }
 
-/* line 774 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 773 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_title_login_or_signup .profile_dashboard_body_login:hover {
   text-decoration: underline;
 }
 
-/* line 776 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 775 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_bought_leads_last {
   font-size: 24px;
   font-weight: bold;
@@ -1799,7 +1798,7 @@ a[href="#top"]:hover {
   line-height: 100%;
 }
 
-/* line 781 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 780 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_no_bought_leads,
 .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_not_signed_in {
   font-size: 14px;
@@ -1808,7 +1807,7 @@ a[href="#top"]:hover {
   opacity: 0.3;
 }
 
-/* line 796 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 795 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login {
   background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
@@ -1822,14 +1821,7 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-  background-repeat: no-repeat;
-  background-position: center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  height: 1500px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -1839,27 +1831,27 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 805 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 799 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login {
   margin-top: 60px;
   margin-left: 20px;
 }
 
-/* line 808 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 802 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* line 812 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 806 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_form_email,
 .body_devise_login .login .login_form_password {
   font-size: 12px;
   margin-bottom: 14px;
 }
 
-/* line 816 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 810 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_form_email #user_email,
 .body_devise_login .login .login_form_password #user_email,
 .body_devise_login .login .login_form_email #user_password,
@@ -1872,12 +1864,12 @@ a[href="#top"]:hover {
   border: 1px solid #e8e8e8;
 }
 
-/* line 824 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 818 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_form_remember_me {
   font-size: 12px;
 }
 
-/* line 826 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 820 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_form_submit input,
 .body_devise_login .login .login_form_submit a {
   position: relative;
@@ -1917,17 +1909,17 @@ a[href="#top"]:hover {
   background-color: #0068c3;
 }
 
-/* line 836 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 830 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_shared_links {
   font-size: 12px;
 }
 
-/* line 838 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 832 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login .login_shared_links:hover {
   text-decoration: underline;
 }
 
-/* line 842 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 836 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup {
   background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
@@ -1958,20 +1950,20 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 850 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 844 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup {
   margin-top: 60px;
   margin-left: 100px;
 }
 
-/* line 854 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 848 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* line 858 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 852 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_form_email,
 .body_devise_signup .signup .signup_form_password,
 .body_devise_signup .signup .signup_form_password_confirmation {
@@ -1979,7 +1971,7 @@ a[href="#top"]:hover {
   margin-bottom: 14px;
 }
 
-/* line 863 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 857 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_form_email #user_email,
 .body_devise_signup .signup .signup_form_password #user_email,
 .body_devise_signup .signup .signup_form_password_confirmation #user_email,
@@ -1997,7 +1989,7 @@ a[href="#top"]:hover {
   border: 1px solid #e8e8e8;
 }
 
-/* line 872 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 866 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_form_submit input,
 .body_devise_signup .signup .signup_form_submit a {
   position: relative;
@@ -2037,17 +2029,17 @@ a[href="#top"]:hover {
   background-color: #0068c3;
 }
 
-/* line 882 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 876 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_shared_links {
   font-size: 12px;
 }
 
-/* line 884 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 878 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_shared_links:hover {
   text-decoration: underline;
 }
 
-/* line 890 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 884 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new {
   background-image: url("./subtle_zebra_3d.png");
   background-repeat: no-repeat;
@@ -2070,26 +2062,26 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 892 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 886 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new {
   margin-top: 60px;
   margin-left: 100px;
 }
 
-/* line 895 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 889 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* line 899 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 893 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_form_email {
   font-size: 12px;
   margin-bottom: 14px;
 }
 
-/* line 902 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 896 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_form_email #user_email {
   padding: 4px;
   border-radius: 4px;
@@ -2099,7 +2091,7 @@ a[href="#top"]:hover {
   border: 1px solid #e8e8e8;
 }
 
-/* line 909 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 903 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_form_submit input,
 .body_devise_password_new .password_new .password_new_form_submit a {
   margin-top: 10px;
@@ -2134,17 +2126,17 @@ a[href="#top"]:hover {
   background-color: #ff9f2c;
 }
 
-/* line 914 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 908 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_shared_links {
   font-size: 12px;
 }
 
-/* line 916 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 910 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_shared_links:hover {
   text-decoration: underline;
 }
 
-/* line 919 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 913 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit {
   background-image: url("./subtle_zebra_3d.png");
   background-repeat: no-repeat;
@@ -2167,20 +2159,20 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 921 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 915 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit {
   margin-top: 60px;
   margin-left: 100px;
 }
 
-/* line 924 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 918 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* line 928 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 922 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_form_email,
 .body_devise_users_edit .user_edit .user_edit_form_password,
 .body_devise_users_edit .user_edit .user_edit_form_password_confirmation,
@@ -2189,7 +2181,7 @@ a[href="#top"]:hover {
   margin-bottom: 14px;
 }
 
-/* line 934 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 928 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_form_email #user_email,
 .body_devise_users_edit .user_edit .user_edit_form_password #user_email,
 .body_devise_users_edit .user_edit .user_edit_form_password_confirmation #user_email,
@@ -2214,7 +2206,7 @@ a[href="#top"]:hover {
   border: 1px solid #e8e8e8;
 }
 
-/* line 944 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 938 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_form_submit input,
 .body_devise_users_edit .user_edit .user_edit_form_submit a {
   margin-top: 10px;
@@ -2249,21 +2241,21 @@ a[href="#top"]:hover {
   background-color: #0068c3;
 }
 
-/* line 949 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 943 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_cancel_acount,
 .body_devise_users_edit .user_edit .user_edit_unhappy,
 .body_devise_users_edit .user_edit .user_edit_back {
   font-size: 12px;
 }
 
-/* line 953 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 947 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_cancel_acount:hover,
 .body_devise_users_edit .user_edit .user_edit_unhappy:hover,
 .body_devise_users_edit .user_edit .user_edit_back:hover {
   text-decoration: underline;
 }
 
-/* line 955 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 949 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit .user_edit_button_cancel_account input,
 .body_devise_users_edit .user_edit .user_edit_button_cancel_account a {
   margin-top: 10px;
@@ -2298,7 +2290,7 @@ a[href="#top"]:hover {
   background-color: #0068c3;
 }
 
-/* line 962 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 956 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new {
   background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
@@ -2321,7 +2313,7 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 970 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 964 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new {
   background: #000; /* fallback color */
   background: rgba(0,0,0,0.7);
@@ -2352,7 +2344,7 @@ a[href="#top"]:hover {
   clear: both;
 }
 
-/* line 979 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 973 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_title {
   -webkit-font-smoothing: antialiased;
   color: #fff;
@@ -2365,7 +2357,7 @@ a[href="#top"]:hover {
   line-height: 120%;
 }
 
-/* line 989 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 983 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_instructions {
   -webkit-font-smoothing: antialiased;
   padding-left: 20px;
@@ -2377,7 +2369,7 @@ a[href="#top"]:hover {
   line-height: 120%;
 }
 
-/* line 998 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 992 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_business_type,
 .body_leads_new .lead_new .lead_new_form_time,
 .body_leads_new .lead_new .lead_new_form_zip,
@@ -2392,7 +2384,7 @@ a[href="#top"]:hover {
   margin-bottom: 14px;
 }
 
-/* line 1010 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1004 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_business_type #lead_business_type,
 .body_leads_new .lead_new .lead_new_form_time #lead_business_type,
 .body_leads_new .lead_new .lead_new_form_zip #lead_business_type,
@@ -2418,7 +2410,7 @@ a[href="#top"]:hover {
   border: 1px solid #e8e8e8;
 }
 
-/* line 1021 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1015 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_business_type #lead_name,
 .body_leads_new .lead_new .lead_new_form_time #lead_name,
 .body_leads_new .lead_new .lead_new_form_zip #lead_name,
@@ -2531,7 +2523,7 @@ a[href="#top"]:hover {
   clear: both;
 }
 
-/* line 1033 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1027 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_business_type #lead_zip,
 .body_leads_new .lead_new .lead_new_form_time #lead_zip,
 .body_leads_new .lead_new .lead_new_form_zip #lead_zip,
@@ -2590,7 +2582,7 @@ a[href="#top"]:hover {
   clear: both;
 }
 
-/* line 1045 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1039 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_business_type #lead_description,
 .body_leads_new .lead_new .lead_new_form_time #lead_description,
 .body_leads_new .lead_new .lead_new_form_zip #lead_description,
@@ -2649,12 +2641,12 @@ a[href="#top"]:hover {
   clear: both;
 }
 
-/* line 1057 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1051 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_remember_me {
   font-size: 10px;
 }
 
-/* line 1059 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1053 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_form_submit input,
 .body_leads_new .lead_new .lead_new_form_submit a {
   margin-left: 254px;
@@ -2690,17 +2682,17 @@ a[href="#top"]:hover {
   background-color: #0068c3;
 }
 
-/* line 1065 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1059 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_shared_links {
   font-size: 12px;
 }
 
-/* line 1067 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1061 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_leads_new .lead_new .lead_new_shared_links:hover {
   text-decoration: underline;
 }
 
-/* line 1073 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1067 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment {
   background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
@@ -2724,7 +2716,7 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 1076 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1070 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer {
   *zoom: 1;
   width: auto;
@@ -2757,7 +2749,7 @@ a[href="#top"]:hover {
   clear: both;
 }
 
-/* line 1086 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1080 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_title {
   *zoom: 1;
   width: auto;
@@ -2786,7 +2778,7 @@ a[href="#top"]:hover {
   clear: both;
 }
 
-/* line 1092 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1086 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_promotion {
   margin-top: 20px;
   margin-bottom: 50px;
@@ -2796,7 +2788,7 @@ a[href="#top"]:hover {
   padding: 4px;
 }
 
-/* line 1099 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1093 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_company_info {
   color: #606060;
   border: 1px solid #e7e7e7;
@@ -2806,18 +2798,18 @@ a[href="#top"]:hover {
   background-color: #f0f0f0;
 }
 
-/* line 1106 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1100 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_company_info td:last-child {
   text-align: left;
 }
 
-/* line 1108 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1102 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_company_info td:first-child {
   text-align: left;
   width: 109px;
 }
 
-/* line 1111 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1105 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_date {
   color: #606060;
   font-size: 13px;
@@ -2825,7 +2817,7 @@ a[href="#top"]:hover {
   text-align: left;
 }
 
-/* line 1116 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1110 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info {
   margin-top: 20px;
   color: #606060;
@@ -2835,7 +2827,7 @@ a[href="#top"]:hover {
   border-radius: 4px;
 }
 
-/* line 1123 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1117 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info .wallet_payment_offer_sosed_info_price td {
   font-weight: bold;
   padding: 15px 30px 15px 30px;
@@ -2844,7 +2836,7 @@ a[href="#top"]:hover {
   color: #fff;
 }
 
-/* line 1129 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1123 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info .wallet_payment_offer_sosed_info_item td {
   font-weight: bold;
   background-color: #eee;
@@ -2852,12 +2844,12 @@ a[href="#top"]:hover {
   font-size: 12px;
 }
 
-/* line 1134 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1128 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_sosed_info .wallet_payment_offer_sosed_info_item td:last-child {
   padding: 15px 30px 15px 30px;
 }
 
-/* line 1136 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 1130 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_wallet_payment .wallet_payment_offer .wallet_payment_offer_instructions {
   margin-top: 20px;
   font-size: 12px;
