@@ -1619,7 +1619,7 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-  height: 1500px;
+  height: 1600px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -1821,7 +1821,8 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-  height: 1500px;
+  margin-top: 29px;
+  height: 1600px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -1833,7 +1834,7 @@ a[href="#top"]:hover {
 
 /* line 799 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_login .login {
-  margin-top: 60px;
+  padding-top: 30px;
   margin-left: 20px;
 }
 
@@ -1933,14 +1934,8 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-  background-repeat: no-repeat;
-  background-position: center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  margin-top: 29px;
+  height: 1600px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -1950,20 +1945,20 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 844 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 840 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup {
-  margin-top: 60px;
+  padding-top: 30px;
   margin-left: 100px;
 }
 
-/* line 848 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 843 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* line 852 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 847 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_form_email,
 .body_devise_signup .signup .signup_form_password,
 .body_devise_signup .signup .signup_form_password_confirmation {
@@ -1971,7 +1966,7 @@ a[href="#top"]:hover {
   margin-bottom: 14px;
 }
 
-/* line 857 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 852 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_form_email #user_email,
 .body_devise_signup .signup .signup_form_password #user_email,
 .body_devise_signup .signup .signup_form_password_confirmation #user_email,
@@ -1989,7 +1984,7 @@ a[href="#top"]:hover {
   border: 1px solid #e8e8e8;
 }
 
-/* line 866 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 861 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_form_submit input,
 .body_devise_signup .signup .signup_form_submit a {
   position: relative;
@@ -2029,19 +2024,19 @@ a[href="#top"]:hover {
   background-color: #0068c3;
 }
 
-/* line 876 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 871 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_shared_links {
   font-size: 12px;
 }
 
-/* line 878 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 873 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_signup .signup .signup_shared_links:hover {
   text-decoration: underline;
 }
 
-/* line 884 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 879 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new {
-  background-image: url("./subtle_zebra_3d.png");
+  background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -2053,6 +2048,8 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  margin-top: 29px;
+  height: 1600px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -2062,36 +2059,36 @@ a[href="#top"]:hover {
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* line 886 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 883 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new {
-  margin-top: 60px;
+  padding-top: 30px;
   margin-left: 100px;
 }
 
-/* line 889 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 886 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* line 893 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 890 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_form_email {
   font-size: 12px;
   margin-bottom: 14px;
 }
 
-/* line 896 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 893 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_form_email #user_email {
   padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
-  height: 20px;
+  height: 30px;
   width: 300px;
   border: 1px solid #e8e8e8;
 }
 
-/* line 903 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 900 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_form_submit input,
 .body_devise_password_new .password_new .password_new_form_submit a {
   margin-top: 10px;
@@ -2099,8 +2096,8 @@ a[href="#top"]:hover {
   font-size: 13px;
   padding: 10px 22px;
   border-radius: 3px;
-  background-color: #ffae4d;
-  color: #494949;
+  background-color: #0074d9;
+  color: #fff;
   cursor: pointer;
   font-weight: bold;
   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -2109,6 +2106,7 @@ a[href="#top"]:hover {
   text-decoration: none;
   display: inline-block;
   border: none;
+  background-color: #ffae4d;
 }
 
 /* line 72 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
@@ -2116,29 +2114,29 @@ a[href="#top"]:hover {
 .body_devise_password_new .password_new .password_new_form_submit a:hover,
 .body_devise_password_new .password_new .password_new_form_submit input:focus,
 .body_devise_password_new .password_new .password_new_form_submit a:focus {
-  background-color: #ffa63c;
-  color: #474747;
+  background-color: #006ece;
+  color: #f7f7f7;
 }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
 .body_devise_password_new .password_new .password_new_form_submit input:active,
 .body_devise_password_new .password_new .password_new_form_submit a:active {
-  background-color: #ff9f2c;
+  background-color: #0068c3;
 }
 
-/* line 908 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 906 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_shared_links {
   font-size: 12px;
 }
 
-/* line 910 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 908 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_password_new .password_new .password_new_shared_links:hover {
   text-decoration: underline;
 }
 
-/* line 913 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
+/* line 911 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit {
-  background-image: url("./subtle_zebra_3d.png");
+  background-image: url("/images/interior6.png");
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -2150,6 +2148,8 @@ a[href="#top"]:hover {
   font-size: 12px;
   color: #606060;
   font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+  margin-top: 29px;
+  height: 1600px;
 }
 
 /* line 58 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -2161,7 +2161,7 @@ a[href="#top"]:hover {
 
 /* line 915 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
 .body_devise_users_edit .user_edit {
-  margin-top: 60px;
+  padding-top: 30px;
   margin-left: 100px;
 }
 

@@ -718,7 +718,7 @@ a[href="#top"]
   // :::::::::::: PROFILE :::::::::::: //
 .body_profile
   body-mixin(backgroundImage: url(/images/interior3.png))
-  height 1500px
+  height 1600px
   .columns
     column-mixin()
     .wookmark
@@ -793,11 +793,11 @@ a[href="#top"]
 
   // :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
 .body_devise_login
-.body_devise_login
   body-mixin(backgroundImage: url(/images/interior6.png))
-  height 1500px
+  margin-top 29px
+  height 1600px
   .login
-    margin-top 60px
+    padding-top 30px
     margin-left 20px  
     .login_title
       font-size 28px
@@ -835,16 +835,11 @@ a[href="#top"]
   // :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
 .body_devise_signup
   body-mixin(backgroundImage: url(/images/interior6.png))
-  background-repeat no-repeat
-  background-position center top
-  background-size cover
-  -webkit-background-size cover
-  -moz-background-size cover
-  -o-background-size cover  
+  margin-top 29px
+  height 1600px
   .signup
-    margin-top 60px
+    padding-top 30px
     margin-left 100px
-
     .signup_title
       font-size 28px
       font-weight bold
@@ -882,9 +877,11 @@ a[href="#top"]
   // :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: //
 
 .body_devise_password_new
-  body-mixin()
+  body-mixin(backgroundImage: url(/images/interior6.png))
+  margin-top 29px
+  height 1600px
   .password_new
-    margin-top 60px
+    padding-top 30px
     margin-left 100px  
     .password_new_title
       font-size 28px
@@ -897,23 +894,26 @@ a[href="#top"]
         padding 4px
         border-radius 4px
         margin-top 4px
-        height 20px
+        height 30px
         width 300px
         border 1px solid #E8E8E8  
     .password_new_form_submit input
     .password_new_form_submit a 
       margin-top 10px
       margin-bottom 10px  
-      button(color = Lead-Orange)
+      button()
+      background-color Lead-Orange
     .password_new_shared_links
       font-size 12px
       &:hover
         text-decoration underline
   // :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
 .body_devise_users_edit
-  body-mixin()
+  body-mixin(backgroundImage: url(/images/interior6.png))
+  margin-top 29px
+  height 1600px
   .user_edit
-    margin-top 60px
+    padding-top 30px
     margin-left 100px  
     .user_edit_title
       font-size 28px
