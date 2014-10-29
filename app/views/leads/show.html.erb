@@ -1,5 +1,4 @@
 <div class="body_leads_show">
-  <a class="back_to_main_page_button" href="/"></a>
   <% if @lead.present? %> 
     <div class="lead_show">
       <div class="lead_show_title">
@@ -34,7 +33,9 @@
       <% if @reserved_leads.present? %>
         <% if @reserved_leads.first.paid == true %>
         <% else %>
+        <div class="lead_show_buy">
               <%= render 'payment_confirmation_link' %>
+        </div>
         <% end %>
       <% else %>
         <div class="lead_show_buy">

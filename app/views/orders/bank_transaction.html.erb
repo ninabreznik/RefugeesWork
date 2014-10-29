@@ -1,11 +1,7 @@
-<html>
-<head>
-  <title></title>
-</head>
-<body class="body_bank_transaction">
-  <% if @order.present? %>
 
+<div class="body_bank_transaction">
 <div class="offer">
+<% if @order.present? %>
   <div class="offer_title">
     <%= I18n.t'orders-banktransaction.offer_title' %><%= @lead.id %>
   </div>
@@ -14,13 +10,10 @@
       <td><%= I18n.t'orders-banktransaction.offer_item_username' %>:</td>
       <td><%= current_user.email %></td>
     </tr>
-  
   </table>
-
   <div class="offer_date">
     <%= I18n.t'orders-banktransaction.offer_date' %>: <%= Date.today.strftime("%d/%m/%Y") %></strong><br>
   </div>
-
   <table class="offer_sosed_info">
     <tr class="offer_sosed_info_price">
       <td><%= I18n.t'orders-banktransaction.offer_price' %>:</td>
@@ -51,7 +44,6 @@
       <td><%= I18n.t'orders-banktransaction.offer_mojsosed_city' %></td>
     </tr> 
   </table>
-
   <div class="offer_show_lead">
     <div class="offer_show_lead_title">
       <%= @lead.business_type %> 
@@ -69,15 +61,9 @@
         <%= I18n.t'orders-banktransaction.lead.name' %>:</div> <%= @lead.name %>          
     </div>
   </div>
-
   <div class="offer_instructions">
     <%= I18n.t'orders-banktransaction.offer_instructions' %>
   </div> 
-
-
-
-</div>
 <% end %>
-
-</body>
-</html>
+</div>
+</div>

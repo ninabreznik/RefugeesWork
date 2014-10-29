@@ -1,5 +1,5 @@
 <div class="top_menu_bar">
-  <a href="<%= root_path %>"><%= image_tag('sosed.biz.png') %></a>
+  <a href="<%= root_path %>"><%= image_tag 'sosed.biz.png', :class => 'logo' %></a>
   <% if user_signed_in? %>
     <div class="logged_user"> 
       <%= link_to current_user.email, profile_path %> 

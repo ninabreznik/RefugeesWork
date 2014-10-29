@@ -71,7 +71,7 @@ blur-mixin(intensity = 1.6px)
 //                 LEAD LISTING MIXINS 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::
   
-column-mixin(defaultTop = 60px)
+column-mixin(defaultTop = 29px)
   position: relative;
   margin-top: defaultTop
 
@@ -119,6 +119,8 @@ leadBoxMixin(defaultMarginLeft = 42px)
     shift(0.44)
     height 37px
     display inline-block
+    &:hover
+      opacity 0.7
   .info
     padding-bottom 2px
     shift(0.7)
@@ -244,28 +246,20 @@ a[href="#top"]
 // :::::::::::: LEADS/show => individual lead :::::::::::: //
 
 .body_leads_show
-  body-mixin(backgroundImage: url(/images/interior2.png))
-  .back_to_main_page_button
-    width 100%
-    height 100%
-    // position absolute
-    top 0 
-    left 0
+  body-mixin(backgroundImage: url(/images/interior6.png))
   .lead_show
+    shift 0.15
     opacity 0.9
-    // position relative
-    margin 60px 20px  80px 0px
+    margin 29px 0px 0px 0px
     padding-bottom 40px
     width 70%
     max-width 1100px
     min-width 800px
-    shift 0.15
-    vertical-align bottom
+    // vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
     column-break-inside: avoid
     background-color white
-    // background-clip padding-box
     line-break 1px  
     .lead_show_title
       background-color Lead-Orange
@@ -285,8 +279,6 @@ a[href="#top"]
       .lead_show_items_long
         width 60%
         padding-left 150px
-        // padding-right 10px
-        // display inline
       .lead_show_items_short,
       .lead_show_items_long
         display inline-block
@@ -299,17 +291,17 @@ a[href="#top"]
           .lead_show_subtitle
             font-weight bold
             // display inline-block
-    .lead_show_buy input
+    .lead_show_buy input,
     .lead_show_buy a 
-      margin 30px 0 20px 330px
-      button()
-      background-color Lead-Orange
+      margin 50px 0 20px 330px
+      button(color: Lead-Orange)
+      // background-color Lead-Orange
       font-size 22px
 
 
 // :::::::::::: ORDERS/show => buy lead :::::::::::: //
 .body_orders_show
-  body-mixin(backgroundImage: url(/images/interior3.png))
+  body-mixin(backgroundImage: url(/images/interior6.png))
   .back_to_main_page_button
     width 100%
     height 100%
@@ -317,20 +309,18 @@ a[href="#top"]
     top 0 
     left 0
   .order_show
+    shift 0.15
     opacity 0.9
-    // position relative
-    margin 60px 20px  80px 0px
+    margin 29px 0px 0px 0px
     padding-bottom 40px
     width 70%
     max-width 1100px
     min-width 800px
-    shift 0.15
-    vertical-align bottom
+    // vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
     column-break-inside: avoid
     background-color white
-    // background-clip padding-box
     line-break 1px  
     .order_show_title
       background-color Lead-Orange
@@ -341,7 +331,7 @@ a[href="#top"]
       font-size 40px
     .lead_show_body
       font-size 22px
-      padding-top 30px
+      padding 30px
       padding-left 25px
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
@@ -371,7 +361,7 @@ a[href="#top"]
             display inline-block
     .payment_buttons_choose_payment_text
       text-align center
-      padding 7px
+      padding 50px 10px 30px 10px
     .order_show_buy_buttons
       padding 7px
       margin-left 220px
@@ -429,30 +419,26 @@ a[href="#top"]
   // :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
 
 .body_bank_transaction
-  body-mixin(backgroundImage: url(/images/interior2.png))
-  background-repeat no-repeat
-  background-position center top
-  background-size cover
-  -webkit-background-size cover
-  -moz-background-size cover
-  -o-background-size cover
+  body-mixin(backgroundImage: url(/images/interior5.png))
+  margin-top 29px
   .offer
+    center(720px)
     opacity 0.95
     width 63%
-    margin 80px auto
-    padding 100px
+    position relative
+    top 10px
+    padding 40px
     padding-top 70px
+    padding-bottom 70px
     background-color white
     .offer_title
       // center(420px)
       color Offer-Font-Color
       font-weight bold
       font-size 28px
-      margin-bottom 60px
+      padding-bottom 60px
     .offer_company_info 
-      // shift(0.55)
       color #606060
-      // text-align left
       border 1px solid #e7e7e7
       box-shadow inset 0 0 0 0 #CCC
       border-radius 4px
@@ -620,7 +606,7 @@ a[href="#top"]
     // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
 
 .body_orders_address_book
-  body-mixin(backgroundImage: url(/images/interior2.png))
+  body-mixin(backgroundImage: url(/images/interior6.png))
   .columns
     column-mixin()
     .wookmark
@@ -668,12 +654,13 @@ a[href="#top"]
             line-break 1px 
             border 2px solid #82c0c7 
             hover-darken(percent = 5%)
-          .address_book_lead_notes_button input
+          .address_book_lead_notes_button input,
           .address_book_lead_notes_button a
+            button()
+            background-color Lead-Orange
             shift(0.66)
             margin-bottom 7px
             margin-top 3px
-            button()
         .address_book_link_to-signup
           font-size 12px
   .address_book_bought_leads
@@ -730,7 +717,7 @@ a[href="#top"]
 
   // :::::::::::: PROFILE :::::::::::: //
 .body_profile
-  body-mixin(backgroundImage: url(/images/interior5.png))
+  body-mixin(backgroundImage: url(/images/interior6.png))
   .columns
     column-mixin()
     .wookmark
@@ -808,7 +795,7 @@ a[href="#top"]
   // :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
 .body_devise_login
 .body_devise_login
-  body-mixin(backgroundImage: url(/images/interior2.png))
+  body-mixin(backgroundImage: url(/images/interior6.png))
   background-repeat no-repeat
   background-position center top
   background-size cover
@@ -973,20 +960,20 @@ a[href="#top"]
 
  // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
 .body_leads_new
-  body-mixin(backgroundImage: url(/images/interior1.png))
-  background-repeat no-repeat
-  background-position center top
-  background-size cover
-  -webkit-background-size cover
-  -moz-background-size cover
-  -o-background-size cover
+  body-mixin(backgroundImage: url(/images/interior6.png))
+  // background-repeat no-repeat
+  // background-position center top
+  // background-size cover
+  // -webkit-background-size cover
+  // -moz-background-size cover
+  // -o-background-size cover
   .lead_new
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     span(1.3/4)
     shift(0.45)
     padding-bottom 14px
-    margin-top 50px
+    margin-top 70px
     margin-bottom 100px
     margin-left 100px  
     .lead_new_title
@@ -1084,52 +1071,55 @@ a[href="#top"]
 // :::::::::::: same styling also for ORDERS/WALLET_PAYMENT_FOR LEADS:::::::::::: //
 
 .body_wallet_payment
-  body-mixin(backgroundImage: url(/images/interior2.png))
-  background-repeat no-repeat
-  background-position center top
-  background-size cover
-  -webkit-background-size cover
-  -moz-background-size cover
-  -o-background-size cover
+  body-mixin(backgroundImage: url(/images/interior6.png))
+  margin-top 29px
   .wallet_payment_offer
+    center(720px)
     opacity 0.95
     width 63%
-    margin 80px auto
-    padding 100px
+    position relative
+    top 10px
+    padding 40px
     padding-top 70px
+    padding-bottom 70px
     background-color white
-    // box-shadow 0px 0px 20px white
     .wallet_payment_offer_title
       center(420px)
       color #606060
       font-weight bold
       font-size 28px
-      margin-bottom 50px
+      padding-bottom 50px
     .wallet_payment_offer_promotion
-      width 70%
-      color #606060
-      font-size 16px
-      margin 0px 0px 50px 90px
-    .wallet_payment_offer_company_info 
-      shift(0.53)
-      color black
-      text-align left
-      padding 4px 7px 4px 7px
-      background-color Lead-Orange 
-    .wallet_payment_offer_date
-      color black
-      font-size 16px
-      margin-bottom 50px
-      margin-top 10px
-      shift(-0.21)
-      text-align right
-    .wallet_payment_offer_sosed_info
-      shift(0.075)
       margin-top 20px
-      margin-bottom 10px
-      color black
+      margin-bottom 50px
+      font-size 13px
+      font-weight bold
+      background-color Lead-Orange
+      padding 4px
+    .wallet_payment_offer_company_info 
+      color #606060
+      border 1px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
+      border-radius 4px
+      padding 4px 7px 4px 10px
+      background-color Lead-Subtitle
+    .wallet_payment_offer_company_info  td:last-child
       text-align left
-      // bellow copy from bank transaction //
+    .wallet_payment_offer_company_info  td:first-child
+      text-align left
+      width 109px
+    .wallet_payment_offer_date
+      color #606060
+      font-size 13px
+      margin 10px 10px 20px 10px
+      text-align left
+    .wallet_payment_offer_sosed_info
+      margin-top 20px
+      color #606060
+      text-align left
+      border 1px solid #e7e7e7
+      box-shadow inset 0 0 0 0 #CCC
+      border-radius 4px
       .wallet_payment_offer_sosed_info_price td
         font-weight bold
         padding 15px 30px 15px 30px
@@ -1139,14 +1129,14 @@ a[href="#top"]
       .wallet_payment_offer_sosed_info_item td
         font-weight bold
         background-color #eeeeee   
-        padding 15px 30px 15px 30px
+        padding 15px 30px 0px 30px
         font-size 12px
+      .wallet_payment_offer_sosed_info_item td:last-child
+        padding 15px 30px 15px 30px
     .wallet_payment_offer_instructions
-      // width 70%
       margin-top 20px
       font-size 12px
       font-weight bold
-      shift(0.08)
     
 
           
