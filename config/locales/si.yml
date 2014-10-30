@@ -213,7 +213,8 @@ si:
     customer-info: "Kontaktne informacije stranke"
     customer-info-explanation: "na voljo le ob nakupu tega kontakta."
     to-see-address-book: "Za dostop do imenika kontaktov je potrebna"
-
+    signed_in_but_no_orders: "Tukaj najdete kontakte, pri katerih niste pa dokončali nakupa."
+    signed_in_but_no_bought: "V imeniku strank najdete vse kontakte, ki ste jih zakupili."
 # Buttons
   ordersindex-buttons: 
     buy: "Kupi za 10€"

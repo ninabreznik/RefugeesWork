@@ -1,5 +1,5 @@
-
 <div class="body_leads_index">
+
 <div class="columns">
 
 <ul class="wookmark">
@@ -39,23 +39,26 @@
       <% end %> 
     <% else%>
  <div class="lead_box">
-          <div class ="lead_title">
-            <%= link_to "#{lead.business_type}", lead_path(lead) %> 
-          </div>
-            <div class="lead_body">
-              <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.location' %>:</div>     <%= lead.location %>   <br>
-              <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.zip' %>:</div>          <%= lead.zip %>        <br>
-              <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.time' %>:</div>         <%= lead.time %>       <br>
-              <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.description' %>:</div>  <%= lead.description %><br>
-              <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.name' %>:</div>        <%= lead.name %>       <br>
-            </div>
-          </div>
+      <div class ="lead_title">
+        <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+      </div>
+      <div class="lead_body">
+        <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.location' %>:</div>     <%= lead.location %>   <br>
+        <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.zip' %>:</div>          <%= lead.zip %>        <br>
+        <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.time' %>:</div>         <%= lead.time %>       <br>
+        <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.description' %>:</div>  <%= lead.description %><br>
+        <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.name' %>:</div>        <%= lead.name %>       <br>
+      </div>
+  </div>
     <% end %>
   <% end %>
 <% else %>
-  <%= I18n.t'leadsindex-notification.no-leads-available' %>
-<% end %>
 </ul>
+</div>
+<div class="leads_index_no_leads_available">
+  <%= I18n.t'leadsindex-notification.no-leads-available' %>
+</div>
+<% end %>
 </div>
 <script type="text/javascript">
   window.onload = function () {
@@ -70,6 +73,5 @@
     }
   };
 </script>
-</div>
 
 

@@ -74,6 +74,7 @@ blur-mixin(intensity = 1.6px)
 column-mixin(defaultTop = 29px)
   position: relative;
   margin-top: defaultTop
+  min-height 1500px
 
 wookmarkMixin(defautPadding = 0px)
   list-style-type: none;
@@ -242,6 +243,24 @@ a[href="#top"]
             font-weight bold
             -webkit-font-smoothing: antialiased
             padding-top 7px
+  .leads_index_no_leads_available
+    position: absolute
+    margin-top 30px
+    margin-left 210px
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    position fixed
+    blur-mixin(intensity = 0px)
+    padding: 10px;
+    top: 200px;  
+    font-size 28px
+    font-weight bold
+    -webkit-font-smoothing: antialiased
+    max-width 1000px
+    min-width 400px
+    color: white; 
+    letter-spacing: -1px;  
+    line-height 150%
 
 // :::::::::::: LEADS/show => individual lead :::::::::::: //
 
@@ -294,8 +313,8 @@ a[href="#top"]
     .lead_show_buy input,
     .lead_show_buy a 
       margin 50px 0 20px 330px
-      button(color: Lead-Orange)
-      // background-color Lead-Orange
+      button()
+      background-color Lead-Orange
       font-size 22px
 
 
@@ -577,13 +596,12 @@ a[href="#top"]
 .body_dummy_orders_reserved
   position relative
   opacity 0.5
-  blur-mixin()
+  blur-mixin(intensity = 0.7px)
 .reserved_link_to_signup
   margin-left 210px
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
   position fixed
-  blur-mixin(intensity = 0px)
   padding: 10px;
   top: 200px;  
   width: 100%; 
@@ -673,7 +691,7 @@ a[href="#top"]
     margin-left 450px
 .body_dummy_orders_address_book
   opacity 0.5
-  blur-mixin()
+  blur-mixin(intensity = 0.7px)
 .address_book_link_to_signup
   position: absolute
   margin-top 30px
@@ -681,7 +699,7 @@ a[href="#top"]
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
   position fixed
-  blur-mixin(intensity = 0px)
+  // blur-mixin(intensity = 0px)
   padding: 10px;
   top: 200px;  
   font-size 28px
@@ -955,6 +973,8 @@ a[href="#top"]
  // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
 .body_leads_new
   body-mixin(backgroundImage: url(/images/interior6.png))
+  height 1600px
+  margin-top 30px
   // background-repeat no-repeat
   // background-position center top
   // background-size cover
