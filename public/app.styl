@@ -134,7 +134,6 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
   
 .bottom_menu_bar
-  // padding-left 110px
   background-color Menu-Bottom-Color
   position fixed
   bottom 0
@@ -266,6 +265,12 @@ a[href="#top"]
 
 .body_leads_show
   body-mixin(backgroundImage: url(/images/interior6.png))
+  .back_to_main_page_button
+    width 100%
+    height 100%
+    position absolute
+    top 0 
+    left 0
   .lead_show
     shift 0.15
     opacity 0.9
@@ -595,8 +600,7 @@ a[href="#top"]
             button()
 .body_dummy_orders_reserved
   position relative
-  opacity 0.5
-  blur-mixin(intensity = 0.7px)
+  blur-mixin(intensity = 1.1px)
 .reserved_link_to_signup
   margin-left 210px
   background: rgb(0, 0, 0); /* fallback color */
@@ -690,8 +694,8 @@ a[href="#top"]
     margin-top 100px
     margin-left 450px
 .body_dummy_orders_address_book
-  opacity 0.5
-  blur-mixin(intensity = 0.7px)
+  // opacity 0.5
+  blur-mixin(intensity = 1.1px)
 .address_book_link_to_signup
   position: absolute
   margin-top 30px
