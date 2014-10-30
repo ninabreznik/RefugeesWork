@@ -15,6 +15,7 @@ html
 
 // ::: LEAD ::: //
 Lead-Orange = #FFAE4D
+Lead-Blue = #82c0c7
 Lead-Orange-light = #FFAE4D
 Lead-Subtitle = #F0F0F0
 
@@ -83,6 +84,7 @@ wookmarkMixin(defautPadding = 0px)
 
 leadBoxMixin(defaultMarginLeft = 42px)
   margin-left defaultMarginLeft
+  width 303px
   padding: 15px;
   display none
   background: #FEFEFE;
@@ -218,10 +220,10 @@ a[href="#top"]
       .lead_box
         leadBoxMixin()
         .lead_title
-          color #606060
           opacity 0.85
           background-color Lead-Orange
           padding 15px
+          color #606060
           font-weight bold
           font-size 14px
           .fa.fa-star
@@ -529,6 +531,7 @@ a[href="#top"]
         -moz-osx-font-smoothing: grayscale
         color #606060
         line-height 150%
+        width 280px
         .offer_show_lead_subtitle
           font-weight bold
           -webkit-font-smoothing: antialiased
@@ -558,12 +561,12 @@ a[href="#top"]
     .wookmark
       wookmarkMixin()
       .lead_box
-        leadBoxMixin(defaultMarginLeft: 18px)
+        leadBoxMixin()
         .address_book_lead_title
-          color #606060
           opacity 0.85
           background-color Lead-Orange
           padding 15px
+          color #606060
           font-weight bold
           font-size 14px
         .address_book_lead_body
@@ -594,10 +597,12 @@ a[href="#top"]
           .address_book_buy_button
             margin-left 80px
             button(color = Lead-Orange)
-          .address_book_remove_button input
+          .address_book_remove_button input,
           .address_book_remove_button a 
             margin 10px 0px 5px 50px
             button()
+            decoration none
+            // text-decoration none
 .body_dummy_orders_reserved
   position relative
   blur-mixin(intensity = 1.1px)
@@ -634,15 +639,14 @@ a[href="#top"]
     .wookmark
       wookmarkMixin()
       .lead_box
-        leadBoxMixin(defaultMarginLeft: 18px)
+        leadBoxMixin()
         .address_book_lead_title
           opacity 0.85
-          background-color #82c0c7
+          background-color Lead-Blue
           padding 15px
+          color #606060
           font-weight bold
-          -webkit-font-smoothing: antialiased
           font-size 14px
-          border-bottom 1px solid #e7e7e7
         .address_book_lead_body
           font-size 14px
           padding 15px
@@ -667,7 +671,7 @@ a[href="#top"]
             padding 7px
             font-size 12px 
             height 150px
-            width 293px
+            width 100%
             vertical-align bottom
             -webkit-column-break-inside: avoid
             -moz-column-break-inside: avoid
@@ -748,18 +752,18 @@ a[href="#top"]
       .lead_box
         leadBoxMixin()
         .profile_dashboard_title
+          text-align center
           opacity 0.85
           background-color #82c0c7
           padding 15px
           font-weight bold
-          -webkit-font-smoothing: antialiased
           font-size 14px
-          border-bottom 1px solid #e7e7e7
         .profile_dashboard_body
           color #606060
           padding 30px 30px 20px 30px
           -webkit-font-smoothing: antialiased
           -moz-osx-font-smoothing: grayscale
+          line-height 150%
           text-align center
           width 280px
           .profile_dashboard_body_username
