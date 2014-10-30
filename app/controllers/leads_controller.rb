@@ -36,6 +36,7 @@ class LeadsController < ApplicationController
       ["#{I18n.t'lead-new.form.form-time.onetothreemonths'}"], 
       ["#{I18n.t'lead-new.form.form-time.flexible'}"]
     ]
+
   end
 
   def create
