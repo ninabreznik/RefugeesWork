@@ -213,9 +213,9 @@ si:
   ordersindex-notifications:
     customer-info: "Kontaktne informacije stranke"
     customer-info-explanation: "na voljo le ob nakupu tega kontakta."
-    to-see-address-book: "Za dostop do imenika kontaktov je potrebna"
-    signed_in_but_no_orders: "Tukaj najdete kontakte, pri katerih niste pa dokončali nakupa."
-    signed_in_but_no_bought: "V imeniku strank najdete vse kontakte, ki ste jih zakupili."
+    to-see-address-book: "Dobrodošli! Za dostop do imenika kontaktov je potrebna"
+    signed_in_but_no_orders: "Tukaj vas bodo čakali vsi kontakti, pri katerih niste dokončali nakupa."
+    signed_in_but_no_bought: "V imeniku strank vas bodo čakali kontakti strank, ki ste jih zakupili. Zraven vsakega kontakta imate tudi beležko, kamor zabeležite, v kateri fazi dogovorov ste trenutno s stranko."
 # Buttons
   ordersindex-buttons: 
     buy: "Kupi za 10€"
@@ -226,7 +226,7 @@ si:
 
 # Users not signed_in text box
   ordersindex_not_signed_in:
-    text_box: "Naj tej strani najdete rezervirane kontakte - tiste, ki jih boste morda zakupili v naslednjih dneh. Za dodajanje novih ali brskanje med obstoječimi rezerviranimi kontakti, je potrebna "
+    text_box: "Dobrodošli! Naj tej strani najdete rezervirane kontakte - tiste, ki jih boste morda zakupili v naslednjih dneh. Za dodajanje novih ali brskanje med obstoječimi rezerviranimi kontakti, je potrebna "
 
 
 

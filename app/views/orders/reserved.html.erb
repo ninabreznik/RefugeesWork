@@ -1,5 +1,10 @@
 <div class="body_orders_reserved">
-<% if user_signed_in? && @orders.present? %>
+<% if user_signed_in? && @orders.where(selector_id: current_user.id, paid:false).count == 0 %>
+ <%= render 'orders/body_dummy_orders_reserved' %>
+  <div class="address_book_link_to_signup">
+    <%= I18n.t'ordersindex-notifications.signed_in_but_no_orders' %>   
+  </div>
+<% elsif user_signed_in? && @orders.present? %>
   <div class="columns">
     <ul class="wookmark">
     <% @orders.where(selector_id: current_user.id, paid: false).sort.reverse.each do |order| %>
@@ -53,17 +58,11 @@
 </div>
 <% else %>
  <%= render 'orders/body_dummy_orders_reserved' %>
-     <% if user_signed_in? %>
-      <div class="address_book_link_to_signup">
-        <%= I18n.t'ordersindex-notifications.signed_in_but_no_orders' %>   
-    </div>
-    <% else %>
     <div class="reserved_link_to_signup">
       <%= I18n.t'ordersindex_not_signed_in.text_box' %> 
       <%= link_to "#{I18n.t'ordersindex-buttons.signup'}", new_user_registration_path, :class=>"address_book_signup" %> /
       <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
       new_user_session_path, :class=>"address_book_signin" %>.
     </div>
-<% end %>
 <% end %>
 </div>
