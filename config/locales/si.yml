@@ -7,8 +7,8 @@ si:
 #Login and Logout
   application: 
     top-menu: 
-      login: "Prijava"
-      signup: "Registriraj se"
+      login: "prijava"
+      signup: "registriraj se"
     bottom-menu:
       home: " Domov"
       reserved: " Rezervirani"

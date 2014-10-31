@@ -18,6 +18,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  # def destroy
+  # end
+
   private
 
   # def correct_user

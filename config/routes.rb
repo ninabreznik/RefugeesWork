@@ -4,35 +4,40 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users 
-    match '/users/:id/edit',       to: 'users#edit',        via: 'edit'
-    
+    match '/users/:id/edit',       to: 'users#edit',                     via: 'edit'
+    # match '/users/sign_out',       to: 'sessions#destroy',        via: 'delete'
+  
   resources :leads
+  
   resources :paypal_notifications, only: [:create]
-
- match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
-
-resources :orders
-  get '/address_book' => 'orders#address_book'
-  get '/reserved' => 'orders#reserved'
-  get '/bank_transaction' => 'orders#bank_transaction'
-  get '/wallet_payment_from_lead' => 'orders#wallet_payment_from_lead'
+    match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
+  
+  resources :orders
+    get '/address_book' => 'orders#address_book'
+    get '/reserved' => 'orders#reserved'
+    get '/bank_transaction' => 'orders#bank_transaction'
+    get '/wallet_payment_from_lead' => 'orders#wallet_payment_from_lead'
     # match '/orders/:id',       to: 'orders#show',          via: 'get'
     # match '/orders/:id',       to: 'orders#delete',        via: 'delete'
 
 
+  # You can have the root of your site routed with "root"
+  root 'leads#index'
 
-  
   #post 'paypal_confirm'  => 'orders#paypal_payment_notification'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
 
   get 'leads/index'
-
   get 'leads/show'
-
   get 'leads/new'
-
   get 'leads/edit'
 
+  get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
+  get '/wallet_payment' => 'static_pages#wallet_payment'
 
+  get '/about' => 'static_pages#about'
+  get '/payment_type' => 'static_pages#payment'
+  get '/profile' => 'static_pages#profile'
+  get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -44,17 +49,8 @@ resources :orders
 
  
 
-  # You can have the root of your site routed with "root"
-  root 'leads#index'
 
   # Example of regular route:
-
-  get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
-  get '/wallet_payment' => 'static_pages#wallet_payment'
-  get '/about' => 'static_pages#about'
-  get '/payment_type' => 'static_pages#payment'
-  get '/profile' => 'static_pages#profile'
-  get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
