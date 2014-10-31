@@ -60,6 +60,7 @@ si:
     login: "Prijava"
     signup: "Registriraj se"
     forgot-password: "Ste pozabili geslo?"
+    send-password-instructions: "Pošljite mi navodila"
     confirmation-instructions: "Niste prejeli potrditvenih navodil?"
     unlock-instructions: "Niste prejeli navodil za odklep"
     sign-in-with: "Prijava z"

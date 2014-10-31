@@ -2,7 +2,7 @@
 <div class="body_devise_password_new">
   <div class="password_new">
 <div class="password_new_title">
-  Forgot your password?
+  <%= I18n.t'users-links.forgot-password' %>
 </div>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -12,7 +12,7 @@
     <%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
-  <div class="password_new_form_submit"><%= f.submit "Send me reset password instructions" %></div>
+  <div class="password_new_form_submit"><%= f.submit "#{I18n.t'users-links.send-password-instructions'}" %></div>
 <% end %>
 
 <div class="password_new_shared_links">

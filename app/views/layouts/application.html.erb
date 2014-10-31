@@ -12,10 +12,6 @@
   <a id="top" name="top"> &nbsp; </a>
   
   <%= render 'layouts/top_menu' %>
-  
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
     
   <%= yield %>
 
