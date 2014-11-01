@@ -234,10 +234,10 @@ html {
   z-index: 999;
   width: 100%;
   background-color: #fff;
-  -webkit-filter: blur(0.7px);
-  -moz-filter: blur(0.7px);
-  -o-filter: blur(0.7px);
-  filter: blur(0.7px);
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
   background: #000; /* fallback color */
   background: rgba(255,255,255,0.8);
   border-bottom: 1px solid #ccc;
