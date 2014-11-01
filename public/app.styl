@@ -148,9 +148,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
   bottom 0
   z-index 999
   width 100%
-  // hight 100px
   border-top 1px solid #ccc
-  font-size 20px
   font-weight bold
   a[href="/"]
     text-decoration none
@@ -159,13 +157,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     -webkit-font-smoothing: antialiased
     &:hover
-      color Menu-Bottom-Button-Hover-Color
-    
+      color Menu-Bottom-Button-Hover-Color  
   .fa.fa-home
     font-size 22px
   a[href="/reserved"]
@@ -174,7 +170,6 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     font-size 14px
@@ -189,7 +184,6 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     font-size 14px
@@ -204,7 +198,6 @@ leadBoxMixin(defaultMarginLeft = 42px)
     background-color white
     span(1/4)
     text-align center
-    // width 260px
     border-right 1px solid #e7e7e7
     padding 7px
     font-size 14px
@@ -291,14 +284,13 @@ a[href="#top"]
     top 0 
     left 0
   .lead_show
-    shift 0.15
+    shift 0.08
     opacity 0.9
     margin 29px 0px 0px 0px
     padding 30px
     width 70%
     max-width 1100px
     min-width 1050px
-    // vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
     column-break-inside: avoid
@@ -329,14 +321,16 @@ a[href="#top"]
           -webkit-font-smoothing: antialiased
           margin-top 20px
           line-height 150%
-          // margin-right 15px
+          padding-bottom 20px
+          // margin-bottom 20px
           .lead_show_subtitle
             font-weight bold
-            // display inline-block
+            display inline-block
     .lead_show_buy input,
     .lead_show_buy a 
-      margin 50px 0 20px 330px
-      button()
+      shift 0.4
+      margin 50px 0 20px 0px
+      button(color = Lead-Orange)
       background-color Lead-Orange
       font-size 22px
 
@@ -352,14 +346,13 @@ a[href="#top"]
     top 0 
     left 0
   .order_show
-    shift 0.15
+    shift 0.08
     opacity 0.9
     margin 29px 0px 0px 0px
     padding 30px
     width 70%
     max-width 1100px
     min-width 1050px
-    // vertical-align bottom
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
     column-break-inside: avoid
@@ -384,12 +377,12 @@ a[href="#top"]
         padding-left 150px
       .lead_show_items_short_additional
         padding 5px
-        background-color Lead-Orange
+        width 100%
+        background-color #eee
         blur-mixin(intensity = 0.7px)
       .lead_show_items_short,
       .lead_show_items_long,
       .lead_show_items_short_additional
-        margin-top 10px
         display inline-block
         vertical-align top
         .lead_show_item
@@ -406,7 +399,7 @@ a[href="#top"]
       padding 50px 10px 30px 10px
     .order_show_buy_buttons
       padding 7px
-      margin-left 25%
+      shift 0.25
       .order_show_buy   
         display inline-block
       .order_show_buy input,   
@@ -441,9 +434,9 @@ a[href="#top"]
       font-size 16px
       -webkit-font-smoothing: antialiased
       height 300px
-      width 71%
+      width 100%
       max-width 1100px
-      min-width 1050px
+      min-width 500px
       margin-bottom 7px
       margin-top 7px
       line-break 1px 
@@ -452,9 +445,9 @@ a[href="#top"]
         background-color #F0F0F0
     .order_show_notes_submit input
     .order_show_notes_submit a
-      margin-left 717px
+      shift 0.885
       margin-top 10px
-      button()
+      button(color = Lead-Orange)
 
       
 
@@ -616,7 +609,7 @@ a[href="#top"]
           .address_book_remove_button input,
           .address_book_remove_button a 
             margin 10px 0px 5px 50px
-            button()
+            button(color = Lead-Orange)
             decoration none
             // text-decoration none
 .body_dummy_orders_reserved
@@ -695,11 +688,10 @@ a[href="#top"]
             margin 7px 0px 7px 0px
             line-break 1px 
             border 2px solid #82c0c7 
-            hover-darken(percent = 5%)
+            // hover-darken(percent = 5%)
           .address_book_lead_notes_button input,
           .address_book_lead_notes_button a
-            button()
-            background-color Lead-Orange
+            button(color = Lead-Orange)
             shift(0.66)
             margin-bottom 7px
             margin-top 3px
@@ -867,8 +859,7 @@ a[href="#top"]
       padding-right 20px
       margin-top 10px
       margin-bottom 10px  
-      button()
-      background-color red
+      button(color = Lead-Orange)
     .login_shared_links
       font-size 14px
       // font-weight bold 
@@ -911,7 +902,7 @@ a[href="#top"]
       padding-right 20px
       margin-top 10px
       margin-bottom 10px  
-      button()
+      button(color = Lead-Orange)
       background-color Lead-Orange
     .signup_shared_links
       font-size 14px
@@ -949,7 +940,7 @@ a[href="#top"]
     .password_new_form_submit a 
       margin-top 10px
       margin-bottom 10px  
-      button()
+      button(color = Lead-Orange)
       background-color Lead-Orange
     .password_new_shared_links
       font-size 14px
@@ -989,7 +980,7 @@ a[href="#top"]
     .user_edit_form_submit a 
       margin-top 10px
       margin-bottom 10px  
-      button()
+      button(color = Lead-Orange)
     .user_edit_cancel_acount,
     .user_edit_unhappy,
     .user_edit_back
@@ -1000,7 +991,7 @@ a[href="#top"]
     .user_edit_button_cancel_account a
       margin-top 10px
       margin-bottom 10px  
-      button()
+      button(color = Lead-Orange)
 
  // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
 .body_leads_new
@@ -1107,7 +1098,7 @@ a[href="#top"]
     .lead_new_form_submit a 
       margin-left 254px
       color white
-      button()
+      button(color = Lead-Orange)
       background-color Lead-Orange
     .lead_new_shared_links
       font-size 12px
