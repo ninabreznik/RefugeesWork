@@ -41,7 +41,7 @@ Buy-Button-Color = #FFAE4D
 Offer-Font-Color = black
 
 // ::: FONT ::: //
-App-Font-Family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif
+App-Font-Family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック', sans-serif
 
 
 // :::::::::::: MIXINS :::::::::::::: //
@@ -102,6 +102,10 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
 
+body
+  margin 0px
+  padding 0px
+
 .top_menu_bar
   position fixed
   top 0
@@ -113,6 +117,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
   background: rgba(255, 255, 255, 0.8);
   border-bottom 1px solid #ccc
   padding-top 3px
+  font-family App-Font-Family
   .logged_user, 
   .not_logged_user
     padding-bottom 2px
@@ -145,15 +150,17 @@ leadBoxMixin(defaultMarginLeft = 42px)
 .bottom_menu_bar
   background-color Menu-Bottom-Color
   position fixed
-  bottom 0
+  bottom 0px
   z-index 999
   width 100%
   border-top 1px solid #ccc
   font-weight bold
+  font-family App-Font-Family
+  letter-spacing 1.4px
   a[href="/"]
     text-decoration none
     color Menu-Bottom-Button-Color
-    font-size 14px
+    font-size 12px
     background-color white
     span(1/4)
     text-align center
@@ -164,6 +171,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
       color Menu-Bottom-Button-Hover-Color  
   .fa.fa-home
     font-size 22px
+    padding-right 15px
   a[href="/reserved"]
     text-decoration none
     color Menu-Bottom-Button-Color
@@ -172,12 +180,13 @@ leadBoxMixin(defaultMarginLeft = 42px)
     text-align center
     border-right 1px solid #e7e7e7
     padding 7px
-    font-size 14px
+    font-size 12px
     -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-star
     font-size 22px
+    padding-right 15px
   a[href="/address_book"]
     text-decoration none
     color Menu-Bottom-Button-Color
@@ -186,12 +195,13 @@ leadBoxMixin(defaultMarginLeft = 42px)
     text-align center
     border-right 1px solid #e7e7e7
     padding 7px
-    font-size 14px
+    font-size 12px
     -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-users
-    font-size 19px
+    font-size 22px
+    padding-right 15px
   a[href="/profile"]
     text-decoration none
     color Menu-Bottom-Button-Color
@@ -200,12 +210,15 @@ leadBoxMixin(defaultMarginLeft = 42px)
     text-align center
     border-right 1px solid #e7e7e7
     padding 7px
-    font-size 14px
+    font-size 12px
     -webkit-font-smoothing: antialiased
     &:hover
       color Menu-Bottom-Button-Hover-Color
   .fa.fa-cog
-    font-size 19px
+    font-size 22px
+    padding-right 15px
+    
+
 a[href="#top"]
   text-decoration none
   opacity 0.2

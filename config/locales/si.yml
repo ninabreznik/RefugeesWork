@@ -10,10 +10,10 @@ si:
       login: "prijava"
       signup: "registriraj se"
     bottom-menu:
-      home: " Domov"
-      reserved: " Rezervirani"
-      address-book: " Imenik kontaktov"
-      profile: " Profil"
+      home: " DOMOV"
+      reserved: " REZERVIRANI"
+      address-book: " IMENIK KONTAKTOV"
+      profile: " PROFIL"
 
 
 # ############################################################################################
