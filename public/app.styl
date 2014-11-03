@@ -1837,8 +1837,8 @@ leadBoxMixin(defaultMarginLeft = 42px)
     font-size 28px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    max-width 1000px
-    min-width 400px
+    max-width 800px
+    min-width 700px
     color: white; 
     letter-spacing: -1px;  
     line-height 150%
@@ -2335,7 +2335,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
     .not_logged_user
       margin-left -59px
       padding-bottom 2px
-      font-size 9px
+      font-size 10px
       -webkit-font-smoothing: antialiased
       font-weight bold
       display inline-block
@@ -2352,7 +2352,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
         opacity 0.7
     .info
       padding-bottom 2px
-      shift(0.6)
+      shift(0.7)
       font-size 19px
       display inline-block
       .fa.fa-info-circle
@@ -2458,7 +2458,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
   .body_leads_index
     body-mixin(backgroundImage: url(/images/interior1.png))
     .columns
-      column-mixin()
+      column-mixin(margin-top = 25px)
       .wookmark
         wookmarkMixin()
         .lead_box
@@ -2501,7 +2501,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
       font-size 28px
       font-weight bold
       -webkit-font-smoothing: antialiased
-      max-width 1000px
+      max-width 700px
       min-width 400px
       color: white; 
       letter-spacing: -1px;  
@@ -2521,11 +2521,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
     .lead_show
       shift 0.03
       opacity 0.9
-      margin 29px 0px 0px 0px
+      margin 26px 0px 0px 0px
       padding 30px
       width 93%
-      max-width 400px
-      min-width 200px
+      max-width 700px
+      min-width 400px
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
       column-break-inside: avoid
@@ -2563,7 +2563,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
               display inline-block
       .lead_show_buy input,
       .lead_show_buy a 
-        shift 0.2
+        shift 0.32
         margin 20px 0 20px 0px
         button(color = Lead-Orange)
         background-color Lead-Orange
@@ -2583,11 +2583,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
     .order_show
       shift 0.03
       opacity 0.9
-      margin 29px 0px 0px 0px
+      margin 26px 0px 0px 0px
       padding 30px
       width 93%
-      max-width 400px
-      min-width 200px
+      max-width 700px
+      min-width 400px
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
       column-break-inside: avoid
@@ -2612,7 +2612,9 @@ leadBoxMixin(defaultMarginLeft = 42px)
           width 90%
           padding-left 0px
         .lead_show_items_short_additional
-          padding 5px
+          padding 20px
+          padding-left 10px
+          margin-left -10px
           width 100%
           background-color #eee
           blur-mixin(intensity = 0.7px)
@@ -2634,8 +2636,8 @@ leadBoxMixin(defaultMarginLeft = 42px)
         padding 50px 10px 30px 5px
       .order_show_buy_buttons
         padding 7px
-        shift 0.15
-        width 100px
+        shift 0.33
+        width 200px
         .order_show_buy   
           display inline-block
         .order_show_buy input,   
@@ -2643,6 +2645,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
           margin-bottom 2px
           button(color: Lead-Orange)
           font-size 22px
+          width 150px
     .order_show_notes
       margin-top 5px
       margin-bottom 50px
@@ -2671,8 +2674,8 @@ leadBoxMixin(defaultMarginLeft = 42px)
         -webkit-font-smoothing: antialiased
         height 300px
         width 100%
-        max-width 400px
-        min-width 200px
+        max-width 700px
+        min-width 400px
         margin-bottom 7px
         margin-top 7px
         line-break 1px 
@@ -2681,7 +2684,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
           background-color #F0F0F0
       .order_show_notes_submit input
       .order_show_notes_submit a
-        shift 0.7
+        shift 0.83
         margin-top 10px
         button(color = Lead-Orange)
 
@@ -2691,11 +2694,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
   .body_bank_transaction
     body-mixin(backgroundImage: url(/images/interior4.png))
-    margin-top 29px
+    margin-top 25px
     .offer
       center(720px)
       opacity 0.95
-      width 85%
+      width 90%
       position relative
       top 10px
       padding 40px
@@ -2802,7 +2805,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
       font-size 20px
       font-weight bold
     .columns
-      column-mixin()
+      column-mixin(margin-top = 25px)
       .wookmark
         wookmarkMixin()
         .lead_box
@@ -2863,7 +2866,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
     font-size 28px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    max-width 1000px
+    max-width 700px
     min-width 400px
     color: white; 
     letter-spacing: -1px;  
@@ -2877,7 +2880,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
   .body_orders_address_book
     body-mixin(backgroundImage: url(/images/interior6.png))
     .columns
-      column-mixin()
+      column-mixin(margin-top = 25px)
       .wookmark
         wookmarkMixin()
         .lead_box
@@ -2952,7 +2955,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
     font-size 28px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    max-width 1000px
+    max-width 700px
     min-width 400px
     color: white; 
     letter-spacing: -1px;  
@@ -3058,7 +3061,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
     // :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
   .body_devise_login
     body-mixin(backgroundImage: url(/images/interior6.png))
-    margin-top 29px
+    margin-top 25px
     padding-top 20px
     padding-bottom 1050px
     .login
@@ -3102,7 +3105,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
     // :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
   .body_devise_signup
     body-mixin(backgroundImage: url(/images/interior6.png))
-    margin-top 29px
+    margin-top 25px
     padding-top 20px
     padding-bottom 1050px
     .signup
@@ -3148,7 +3151,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
   .body_devise_password_new
     body-mixin(backgroundImage: url(/images/interior6.png))
-    margin-top 29px
+    margin-top 25px
     padding-top 20px
     padding-bottom 1050px
     .password_new
@@ -3181,13 +3184,13 @@ leadBoxMixin(defaultMarginLeft = 42px)
           text-decoration underline
     // :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
   .body_devise_users_edit
-    body-mixin(backgroundImage: url(/images/interior6.png))
-    margin-top 29px
+    body-mixin(backgroundImage: url(/images/interior3.png))
+    margin-top 25px
     padding-top 20px
     padding-bottom 1050px
     .user_edit
       padding-top 30px
-      margin-left 20px  
+      margin-left 20px
       .user_edit_title
         font-size 28px
         font-weight bold
@@ -3338,11 +3341,11 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
   .body_wallet_payment
     body-mixin(backgroundImage: url(/images/interior6.png))
-    margin-top 29px
+    margin-top 25px
     .wallet_payment_offer
       center(720px)
       opacity 0.95
-      width 85%
+      width 90%
       position relative
       top 10px
       padding 40px
