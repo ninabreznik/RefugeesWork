@@ -2798,7 +2798,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
     .address_book_reserved_leads
       opacity 0.9
       shift(0.37)
-      margin-top 60px
+      margin-top 30px
       font-size 20px
       font-weight bold
     .columns
@@ -2852,23 +2852,22 @@ leadBoxMixin(defaultMarginLeft = 42px)
     position relative
     blur-mixin(intensity = 1.1px)
   .reserved_link_to_signup
+    position: absolute
+    margin-top 30px
     margin-left 10%
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.85);
     position fixed
     padding: 50px;
-    top: 200px;  
-    width: 100%; 
-    width 70%
+    top: 50px;  
     font-size 28px
     font-weight bold
     -webkit-font-smoothing: antialiased
-    max-width 1050px
+    max-width 1000px
     min-width 400px
     color: white; 
-    letter-spacing: -1px
-    line-height 150%   
-    .address_book_signup,
+    letter-spacing: -1px;  
+    line-height 150%
     .address_book_signin
       color Lead-Orange
      
@@ -3230,8 +3229,8 @@ leadBoxMixin(defaultMarginLeft = 42px)
    // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
   .body_leads_new
     body-mixin(backgroundImage: url(/images/interior6.png))
-    margin-top 29px
-    padding-top 15px
+    margin-top 33px
+    // padding-top 15px
     padding-bottom 1000px
     .lead_new
       background: rgb(0, 0, 0); /* fallback color */
@@ -3239,9 +3238,10 @@ leadBoxMixin(defaultMarginLeft = 42px)
       width 90%
       span(3.5/4)
       padding-bottom 14px
-      margin-top 0px
+      margin-top 5px
       margin-bottom 100px
       margin-left 10px  
+      left 10px
       .lead_new_title
         -webkit-font-smoothing: antialiased
         color white
@@ -3259,8 +3259,8 @@ leadBoxMixin(defaultMarginLeft = 42px)
         color white
         font-size 16px
         font-weight bold
-        margin-bottom 25px
-        line-height 120%
+        margin-bottom 20px
+        line-height 110%
       .lead_new_form_business_type,
       .lead_new_form_time,
       .lead_new_form_zip,
