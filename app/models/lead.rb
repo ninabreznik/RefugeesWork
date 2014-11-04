@@ -9,6 +9,18 @@ class Lead < ActiveRecord::Base
                                    dependent: :destroy
   has_many :selectors, through: :reverse_orders, source: :selector
 
+  # :::::::::::::: VALIDATIONS :::::::::::::::::::
+
+  validates :business_type, presence: true
+  validates :time, presence: true
+  validates :description, presence: true
+  validates :zip, presence: true, length: { is: 4 } 
+  validates :email, presence: true
+  validates :phone, presence: true
+
+
+
+
 
   def assign_location_from_zip
     if self.zip > 999 && self.zip < 1999

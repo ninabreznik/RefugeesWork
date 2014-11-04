@@ -2485,7 +2485,8 @@ html {
   padding: 4px;
   border-radius: 4px;
   margin-top: 4px;
-  width: 20%;
+  height: 30px;
+  width: 310px;
   border: 1px solid #e8e8e8;
 }
 
@@ -2525,7 +2526,8 @@ html {
   margin-top: 2px;
   margin-left: 0px;
   font-size: 12px;
-  width: 20%;
+  height: 30px;
+  width: 310px;
   border: 1px solid #e8e8e8;
 }
 
@@ -2625,7 +2627,8 @@ html {
   margin-top: 2px;
   margin-left: 0px;
   font-size: 12px;
-  width: 20%;
+  height: 30px;
+  width: 310px;
   border: 1px solid #e8e8e8;
 }
 
@@ -2683,7 +2686,8 @@ html {
   margin-top: 2px;
   margin-left: 0px;
   font-size: 12px;
-  width: 20%;
+  height: 70px;
+  width: 310px;
   border: 1px solid #e8e8e8;
 }
 
