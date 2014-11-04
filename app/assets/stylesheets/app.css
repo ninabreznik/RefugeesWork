@@ -7935,7 +7935,7 @@ html {
   .body_leads_index .leads_index_no_leads_available {
     position: absolute;
     margin-top: 30px;
-    margin-left: 210px;
+    margin-left: 50px;
     background: #000; /* fallback color */
     background: rgba(0,0,0,0.7);
     position: fixed;
@@ -7945,11 +7945,11 @@ html {
     filter: blur(0px);
     padding: 50px;
     top: 200px;
-    font-size: 28px;
+    font-size: 23px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    max-width: 1000px;
-    min-width: 400px;
+    max-width: 550px;
+    min-width: 200px;
     color: #fff;
     letter-spacing: -1px;
     line-height: 150%;
@@ -8715,17 +8715,17 @@ html {
   .reserved_link_to_signup {
     position: absolute;
     margin-top: 30px;
-    margin-left: 10%;
+    margin-left: 5%;
     background: #000; /* fallback color */
     background: rgba(0,0,0,0.85);
     position: fixed;
     padding: 50px;
     top: 50px;
-    font-size: 28px;
+    font-size: 23px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    max-width: 1000px;
-    min-width: 400px;
+    max-width: 550px;
+    min-width: 200px;
     color: #fff;
     letter-spacing: -1px;
     line-height: 150%;
@@ -8909,11 +8909,11 @@ html {
     position: fixed;
     padding: 50px;
     top: 200px;
-    font-size: 28px;
+    font-size: 23px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    max-width: 1000px;
-    min-width: 400px;
+    max-width: 550px;
+    min-width: 200px;
     color: #fff;
     letter-spacing: -1px;
     line-height: 150%;
