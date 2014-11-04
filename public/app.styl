@@ -97,8 +97,23 @@ leadBoxMixin(defaultMarginLeft = 42px)
   // background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
   opacity: 0.9;
 
-
-
+bottomButtonMixin(defaultFontSize = 12px)
+  padding 8px
+  text-decoration none
+  color Menu-Bottom-Button-Color
+  background-color white
+  span(1/4)
+  text-align center
+  border-right 1px solid #e7e7e7
+  font-size defaultFontSize
+  -webkit-font-smoothing: antialiased
+  &:hover
+    background-color Menu-Bottom-Button-Hover-Color
+    text-decoration none
+  a
+    text-decoration none
+    color Menu-Bottom-Button-Color
+    
 +above(804px)
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
 
@@ -156,63 +171,23 @@ leadBoxMixin(defaultMarginLeft = 42px)
     font-weight bold
     font-family App-Font-Family
     letter-spacing 1.4px
-    a[href="/"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      font-size 12px
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color  
+    .button_home
+      bottomButtonMixin()  
     .fa.fa-home
       font-size 22px
       padding-right 10px
-    a[href="/reserved"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 12px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_reserved
+      bottomButtonMixin()  
     .fa.fa-star
       font-size 22px
       padding-right 10px
-    a[href="/address_book"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 12px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_address_book
+      bottomButtonMixin()  
     .fa.fa-users
       font-size 22px
       padding-right 10px
-    a[href="/profile"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 12px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_profile
+      bottomButtonMixin()  
     .fa.fa-cog
       font-size 22px
       padding-right 10px
@@ -233,7 +208,7 @@ leadBoxMixin(defaultMarginLeft = 42px)
   // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
 
   .body_leads_index
-    body-mixin(backgroundImage: url(/images/interior1.png))
+    body-mixin(backgroundImage: url(/images/interior6.png))
     .columns
       column-mixin()
       .wookmark
@@ -1200,14 +1175,6 @@ leadBoxMixin(defaultMarginLeft = 42px)
 
 // ############################################################################################
 
-
-
-// ############################################################################################
-
-// ############################################################################################
-
-// ############################################################################################
-
 +below(804px)
 
 // :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
@@ -1266,63 +1233,23 @@ leadBoxMixin(defaultMarginLeft = 42px)
     font-weight bold
     font-family App-Font-Family
     letter-spacing 1.4px
-    a[href="/"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      font-size 10px
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color  
+    .button_home
+      bottomButtonMixin(defaultFontSize = 10px)
     .fa.fa-home
       font-size 19px
       padding-right 10px
-    a[href="/reserved"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_reserved
+      bottomButtonMixin(defaultFontSize = 10px)
     .fa.fa-star
       font-size 19px
       padding-right 10px
-    a[href="/address_book"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_address_book
+      bottomButtonMixin(defaultFontSize = 10px)
     .fa.fa-users
       font-size 19px
       padding-right 10px
-    a[href="/profile"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_profile
+      bottomButtonMixin(defaultFontSize = 10px)
     .fa.fa-cog
       font-size 19px
       padding-right 10px
@@ -2371,75 +2298,36 @@ leadBoxMixin(defaultMarginLeft = 42px)
     width 100%
     font-weight bold
     font-family App-Font-Family
-    // letter-spacing 1.4px
-    a[href="/"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      font-size 10px
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color  
+    letter-spacing 1.4px
+    .button_home
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-home
       font-size 21px
       padding-right 5px
-    a[href="/reserved"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_reserved
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-star
       font-size 21px
       padding-right 5px
-    a[href="/address_book"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_address_book
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-users
-      font-size 19px
+      font-size 21px
       padding-right 5px
-    a[href="/profile"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_profile
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-cog
       font-size 21px
       padding-right 5px
+      text-align center
       
 
   a[href="#top"]
@@ -3372,75 +3260,36 @@ leadBoxMixin(defaultMarginLeft = 42px)
     width 100%
     font-weight bold
     font-family App-Font-Family
-    // letter-spacing 1.4px
-    a[href="/"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      font-size 10px
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color  
+    letter-spacing 1.4px
+    .button_home
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-home
       font-size 21px
       padding-right 5px
-    a[href="/reserved"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_reserved
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-star
       font-size 21px
       padding-right 5px
-    a[href="/address_book"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_address_book
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-users
-      font-size 19px
+      font-size 21px
       padding-right 5px
-    a[href="/profile"]
-      padding 8px
-      text-decoration none
-      color Menu-Bottom-Button-Color
-      background-color white
-      span(1/4)
-      text-align center
-      border-right 1px solid #e7e7e7
-      font-size 10px
-      -webkit-font-smoothing: antialiased
-      &:hover
-        background-color Menu-Bottom-Button-Hover-Color
+    .button_profile
+      bottomButtonMixin(defaultFontSize = 10px)
       span
         display none
     .fa.fa-cog
       font-size 21px
       padding-right 5px
+      text-align center
       
 
   a[href="#top"]
@@ -4414,3 +4263,10 @@ leadBoxMixin(defaultMarginLeft = 42px)
     left 70px
     color Lead-Orange
     font-size 14px
+
+// ############################################################################################
+
+// ############################################################################################
+
+// ############################################################################################
+
