@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
   def paypal_url(return_url, notify_url)
     values = {
       :business => 'nina.breznik@sosed.si',
-      :cmd => '_s-xclick',
+      :cmd => '_xclick',
       :upload => 1,
       :return => return_url,
       :invoice => id,
@@ -18,8 +18,8 @@ class Order < ActiveRecord::Base
     }
       values.merge!({
         "amount" => 10,
-        "item_name" => order.selected_id,
-        "item_number" => id,
+        "item_name" => 'Kontakt',
+        "item_number" => 1
         "quantity" => 1
       })
     "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
