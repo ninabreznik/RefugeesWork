@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
   def paypal_url(return_url, notify_url)
     values = {
       :business => 'nina.breznik@sosed.si',
-      :cmd => '_s-xclick',
+      :cmd => '_xclick',
       :upload => 1,
       :return => return_url,
       :invoice => id,
