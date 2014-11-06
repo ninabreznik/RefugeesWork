@@ -17,10 +17,10 @@ class Order < ActiveRecord::Base
       :currency_code => 'EUR'
     }
       values.merge!({
-        "Cena" => 1,
-        "Ime artikla" => 'Kontakt',
-        "Št. artikla" => id,
-        "Količina" => 1
+        "amount" => 10,
+        "item_name" => 'Kontakt',
+        "item_number" => 4144,
+        "quantity" => 1
       })
     "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
   end
