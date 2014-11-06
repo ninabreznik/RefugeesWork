@@ -208,7 +208,7 @@ bottomButtonMixin(defaultFontSize = 12px)
   // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
 
   .body_leads_index
-    body-mixin(backgroundImage: url(/images/interior6.png))
+    body-mixin(backgroundImage: url(/images/interior1.png))
     .columns
       column-mixin()
       .wookmark
@@ -271,12 +271,12 @@ bottomButtonMixin(defaultFontSize = 12px)
       top 0 
       left 0
     .lead_show
-      shift 0.04
+      shift 0.15
       margin-right 7px
       opacity 0.9
       margin 29px 0px 0px 0px
       padding 30px
-      width 90%
+      width 70%
       max-width 1290px
       min-width 800px
       -webkit-column-break-inside: avoid
@@ -294,6 +294,7 @@ bottomButtonMixin(defaultFontSize = 12px)
       .lead_show_body
         font-size 22px
         padding-left 25px
+        padding-top 40px
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         color Offer-Font-Color
@@ -316,7 +317,7 @@ bottomButtonMixin(defaultFontSize = 12px)
       .lead_show_buy input,
       .lead_show_buy a 
         shift 0.4
-        margin 50px 0 20px 0px
+        margin 40px 0 40px 0px
         button(color = Lead-Orange)
         background-color Lead-Orange
         font-size 22px
@@ -333,14 +334,13 @@ bottomButtonMixin(defaultFontSize = 12px)
       top 0 
       left 0
     .order_show
-      shift 0.04
-      margin-right 7px
+      shift 0.15
       opacity 0.9
-      margin 29px 0px 0px 0px
+      margin 15px 15px 0px 0px
       padding 30px
-      width 90%
+      width 70%
       max-width 1290px
-      min-width 800px
+      min-width 600px
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
       column-break-inside: avoid
@@ -356,12 +356,13 @@ bottomButtonMixin(defaultFontSize = 12px)
       .lead_show_body
         font-size 22px
         padding-left 25px
+        padding-top 40px
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         color Offer-Font-Color
         line-height 150%
         .lead_show_items_long
-          width 60%
+          width 50%
           padding-left 140px
         .lead_show_items_short_additional
           padding 5px
@@ -383,10 +384,11 @@ bottomButtonMixin(defaultFontSize = 12px)
               display inline-block
       .payment_buttons_choose_payment_text
         text-align center
-        padding 50px 10px 30px 10px
+        padding 50px 10px 30px 0px
       .order_show_buy_buttons
         padding 7px
-        shift 0.25
+        padding-bottom 40px
+        shift 0.21
         .order_show_buy   
           display inline-block
         .order_show_buy input,   
@@ -432,8 +434,10 @@ bottomButtonMixin(defaultFontSize = 12px)
           background-color #F0F0F0
       .order_show_notes_submit input
       .order_show_notes_submit a
-        shift 0.885
+        shift 0.87
         margin-top 10px
+        margin-bottom 40px
+        margin-right 5px 
         button(color = Lead-Orange)
 
         
@@ -1371,10 +1375,10 @@ bottomButtonMixin(defaultFontSize = 12px)
       shift 0.03
       opacity 0.9
       margin 29px 0px 0px 0px
-      padding 30px
-      width 90%
-      max-width 795px
-      min-width 400px
+      left 100px
+      width 70%
+      max-width 803px
+      min-width 600px
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
       column-break-inside: avoid
@@ -1403,7 +1407,7 @@ bottomButtonMixin(defaultFontSize = 12px)
           vertical-align top
           .lead_show_item
             -webkit-font-smoothing: antialiased
-            margin-top 20px
+            margin-top 40px
             line-height 150%
             padding-bottom 20px
             // margin-bottom 20px
@@ -1412,8 +1416,8 @@ bottomButtonMixin(defaultFontSize = 12px)
               display inline-block
       .lead_show_buy input,
       .lead_show_buy a 
-        shift 0.4
-        margin 50px 0 20px 0px
+        shift 0.34
+        margin 50px 0 40px 0px
         button(color = Lead-Orange)
         background-color Lead-Orange
         font-size 22px
@@ -1433,10 +1437,10 @@ bottomButtonMixin(defaultFontSize = 12px)
       shift 0.08
       opacity 0.9
       margin 29px 0px 0px 0px
-      padding 30px
-      width 90%
-      max-width 795px
-      min-width 400px
+      left 100px
+      width 70%
+      max-width 803px
+      min-width 600px
       -webkit-column-break-inside: avoid
       -moz-column-break-inside: avoid
       column-break-inside: avoid
@@ -1452,6 +1456,7 @@ bottomButtonMixin(defaultFontSize = 12px)
       .lead_show_body
         font-size 22px
         padding-left 25px
+        padding-top 40px
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         color Offer-Font-Color
@@ -1461,7 +1466,7 @@ bottomButtonMixin(defaultFontSize = 12px)
           padding-left 115px
         .lead_show_items_short_additional
           padding 5px
-          width 100%
+          width 95%
           background-color #eee
           blur-mixin(intensity = 0.7px)
         .lead_show_items_short,
@@ -1482,7 +1487,8 @@ bottomButtonMixin(defaultFontSize = 12px)
         padding 50px 10px 30px 5px
       .order_show_buy_buttons
         padding 7px
-        shift 0.14
+        padding-bottom 40px
+        shift 0.05
         .order_show_buy   
           display inline-block
         .order_show_buy input,   
@@ -1517,7 +1523,7 @@ bottomButtonMixin(defaultFontSize = 12px)
         font-size 16px
         -webkit-font-smoothing: antialiased
         height 300px
-        width 100%
+        width 95%
         max-width 1100px
         min-width 500px
         margin-bottom 7px
@@ -1528,8 +1534,10 @@ bottomButtonMixin(defaultFontSize = 12px)
           background-color #F0F0F0
       .order_show_notes_submit input
       .order_show_notes_submit a
-        shift 0.85
+        shift 0.78
         margin-top 10px
+        margin-bottom 40px
+        margin-right 5px 
         button(color = Lead-Orange)
 
         
@@ -2446,8 +2454,8 @@ bottomButtonMixin(defaultFontSize = 12px)
       shift 0.03
       opacity 0.9
       margin 26px 0px 0px 0px
-      padding 30px
-      width 93%
+      left 90px
+      width 70%
       max-width 700px
       min-width 400px
       -webkit-column-break-inside: avoid
@@ -2487,8 +2495,8 @@ bottomButtonMixin(defaultFontSize = 12px)
               display inline-block
       .lead_show_buy input,
       .lead_show_buy a 
-        shift 0.32
-        margin 20px 0 20px 0px
+        shift 0.27
+        margin 20px 0 40px 0px
         button(color = Lead-Orange)
         background-color Lead-Orange
         font-size 22px
@@ -2505,11 +2513,11 @@ bottomButtonMixin(defaultFontSize = 12px)
       top 0 
       left 0
     .order_show
-      shift 0.03
+      shift 0.16
       opacity 0.9
       margin 26px 0px 0px 0px
-      padding 30px
-      width 93%
+      // left 90px
+      width 70%
       max-width 700px
       min-width 400px
       -webkit-column-break-inside: avoid
@@ -2537,9 +2545,8 @@ bottomButtonMixin(defaultFontSize = 12px)
           padding-left 0px
         .lead_show_items_short_additional
           padding 20px
-          padding-left 10px
           margin-left -10px
-          width 100%
+          width 95%
           background-color #eee
           blur-mixin(intensity = 0.7px)
         .lead_show_items_short,
@@ -2557,10 +2564,10 @@ bottomButtonMixin(defaultFontSize = 12px)
               display inline-block
       .payment_buttons_choose_payment_text
         text-align center
-        padding 50px 10px 30px 5px
+        padding 50px 10px 30px 0px
       .order_show_buy_buttons
         padding 7px
-        shift 0.33
+        shift 0.27
         width 200px
         .order_show_buy   
           display inline-block
@@ -2597,9 +2604,9 @@ bottomButtonMixin(defaultFontSize = 12px)
         font-size 16px
         -webkit-font-smoothing: antialiased
         height 300px
-        width 100%
+        width 95%
         max-width 700px
-        min-width 400px
+        min-width 300px
         margin-bottom 7px
         margin-top 7px
         line-break 1px 
@@ -2608,8 +2615,10 @@ bottomButtonMixin(defaultFontSize = 12px)
           background-color #F0F0F0
       .order_show_notes_submit input
       .order_show_notes_submit a
-        shift 0.83
+        shift 0.75
         margin-top 10px
+        margin-bottom 40px
+        margin-right 5px 
         button(color = Lead-Orange)
 
         
@@ -3408,8 +3417,8 @@ bottomButtonMixin(defaultFontSize = 12px)
       // shift 0.03
       opacity 0.9
       margin 29px 0px 0px 0px
-      padding 30px
-      width 93%
+      left 90px
+      width 70%
       max-width 550px
       min-width 200px
       -webkit-column-break-inside: avoid
@@ -3449,8 +3458,8 @@ bottomButtonMixin(defaultFontSize = 12px)
               display inline-block
       .lead_show_buy input,
       .lead_show_buy a 
-        shift 0.25
-        margin 20px 0 20px 0px
+        shift 0.17
+        margin 20px 0 40px 0px
         button(color = Lead-Orange)
         background-color Lead-Orange
         font-size 22px
@@ -3470,8 +3479,8 @@ bottomButtonMixin(defaultFontSize = 12px)
       shift 0.03
       opacity 0.9
       margin 29px 0px 0px 0px
-      padding 30px
-      width 93%
+      left 90px
+      width 70%
       max-width 550px
       min-width 200px
       -webkit-column-break-inside: avoid
@@ -3517,10 +3526,10 @@ bottomButtonMixin(defaultFontSize = 12px)
               display inline-block
       .payment_buttons_choose_payment_text
         text-align center
-        padding 30px 10px 20px 5px
+        padding 30px 10px 20px 0px
       .order_show_buy_buttons
         padding 7px
-        shift 0.28
+        shift 0.18
         width 100px
         .order_show_buy   
           display inline-block
@@ -3556,7 +3565,7 @@ bottomButtonMixin(defaultFontSize = 12px)
         font-size 16px
         -webkit-font-smoothing: antialiased
         height 300px
-        width 100%
+        width 95%
         max-width 550px
         min-width 200px
         margin-bottom 7px
@@ -3567,8 +3576,10 @@ bottomButtonMixin(defaultFontSize = 12px)
           background-color #F0F0F0
       .order_show_notes_submit input
       .order_show_notes_submit a
-        shift 0.7
+        shift 0.6
         margin-top 10px
+        margin-bottom 40px
+        margin-right 5px 
         button(color = Lead-Orange)
 
         
