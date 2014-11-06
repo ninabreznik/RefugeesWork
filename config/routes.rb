@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get '/payment_type' => 'static_pages#payment'
   get '/profile' => 'static_pages#profile'
   get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
+  get '/payment_confirmation' => 'static_pages#payment_confirmation'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

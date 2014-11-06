@@ -1,13 +1,15 @@
-<strong>Your wallet:</strong> <%= @user.wallet %> eur  <br>
-<strong>Price for the lead:</strong> 10eur  <br>
-<strong>State in your wallet after purchase:</strong> <%= @user.wallet - 10 %> eur. <br>
-<h3>Business Type: <%= @lead.business_type %></h3>
-    Location: <%= @lead.location %> <br>
-    ZIP: <%= @lead.zip %> <br>
-    Time: <%= @lead.time %> <br>
-    Description: <%= @lead.description %><br>
 
-<%= form_for(current_user.payments.build(paid_id: @lead.id)) do |p| %>
-  <%= p.hidden_field :paid_id %>       
-  <%= p.submit "Confirm" %>
-<% end %>
+<div class="body_payment_confirmation">
+<div class="payment_confirmation_wrapper">
+  <div class="payment_confirmation_title">
+    Plačilo je bilo uspešno! 
+  </div>
+  <div class="payment_confirmation_text">
+    Hvala za zaupanje. Zakupljen kontakt najdete v Imeniku kontaktov.  
+  </div>
+
+</div>
+</div>
+
+
+

@@ -20,8 +20,6 @@ class StaticPagesController < ApplicationController
   end
 
   def payment_confirmation
-    @user = current_user
-    @lead = Lead.find_by_id(params[:lead])
   end
 
   def wallet_payment

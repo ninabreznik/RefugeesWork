@@ -172,7 +172,7 @@ bottomButtonMixin(defaultFontSize = 12px)
     font-family App-Font-Family
     letter-spacing 1.4px
     .button_home
-      bottomButtonMixin()  
+      bottomButtonMixin()   
     .fa.fa-home
       font-size 22px
       padding-right 10px
@@ -1167,6 +1167,35 @@ bottomButtonMixin(defaultFontSize = 12px)
     font-size 14px
           
 
+  // :::::::::::: PAYMENT CONFIRMATION :::::::::::: //
+
+  .body_payment_confirmation
+    body-mixin(backgroundImage: url(/images/interior4.png))
+    margin-top 29px
+    padding-bottom 1500px
+    .payment_confirmation_wrapper
+      center(720px)
+      opacity 0.95
+      width 95%
+      position relative
+      top 70px
+      padding 40px
+      padding-top 30px
+      padding-bottom 30px
+      background-color black
+      .payment_confirmation_title
+        center(550px)
+        color white
+        font-weight bold
+        font-size 28px
+        padding-bottom 30px
+      .payment_confirmation_text
+        margin-top 20px
+        margin-bottom 30px
+        font-size 22px
+        font-weight bold
+        background-color Lead-Orange
+        padding 4px
 
 
 // ############################################################################################

@@ -215,7 +215,7 @@ si:
     customer-info-explanation: "na voljo le ob nakupu tega kontakta."
     to-see-address-book: "Dobrodošli! Za dostop do imenika kontaktov je potrebna"
     signed_in_but_no_orders: "Tukaj vas bodo čakali vsi kontakti, pri katerih niste dokončali nakupa."
-    signed_in_but_no_bought: "V imeniku strank vas bodo čakali kontakti strank, ki ste jih zakupili. Zraven vsakega kontakta imate tudi beležko, kamor zabeležite, v kateri fazi dogovorov ste trenutno s stranko."
+    signed_in_but_no_bought: "V imeniku kontaktov vas bodo čakali kontakti strank, ki ste jih zakupili. Zraven vsakega kontakta imate tudi beležko, kamor zabeležite, v kateri fazi dogovorov ste trenutno s stranko."
 # Buttons
   ordersindex-buttons: 
     buy: "Kupi za 10€"
@@ -262,7 +262,7 @@ si:
     faq-a1: "Pri Sosedu smo strokovnjaki za marketing in do kontaktov prihajamo na veliko načinov. V pomoč so nam predvsem sodobne tehnologije, tako da kot glavno orodje uporabljamo splet, pa tudi zunanje oglaševanje, mrežo naših stalnih strank, partnerske mreže in druge medije."
 
     faq-q2: "V kakšni obliki mi posredujete kontakte strank?"
-    faq-a2: "Povpraševanja in kontakte strank vam posredujemo takoj po prejemu plačila (pri bančnem nakazilu je to do 48ur, pri drugih oblikah plačila pa v roku nekaj minut).ko jih prejmemo. Kontakt najdete v Imeniku strank. Pogledamo skladnost z vašimi željamo glede regije in vam posredujemo povpraševanje stranke v roku 24h od prejema. Na vaš elektronski naslov vam torej pošljemo telefonsko številko, e-naslov ter opis naročila stranke."
+    faq-a2: "Povpraševanja in kontakte strank vam posredujemo takoj po prejemu plačila (pri bančnem nakazilu je to do 48ur, pri drugih oblikah plačila pa v roku nekaj minut).ko jih prejmemo. Kontakt najdete v Imeniku kontaktov. Pogledamo skladnost z vašimi željamo glede regije in vam posredujemo povpraševanje stranke v roku 24h od prejema. Na vaš elektronski naslov vam torej pošljemo telefonsko številko, e-naslov ter opis naročila stranke."
 
     faq-q3: "Kakšno pogodbo moram podpisati? "
     faq-a3: "Za sodelovanje ni potrebno podpisati nobene pogodbe. Enostavno se odločite za zakup željenega kontakta, mi pa vam po opravljenem plačilu posredujemo kontaktne podatke o stranki ter pošljemo račun za opravljeno plačilo."
