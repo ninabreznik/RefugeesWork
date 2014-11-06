@@ -17,10 +17,7 @@ class Lead < ActiveRecord::Base
   validates :zip, presence: true, length: { is: 4 } 
   validates :email, presence: true
   validates :phone, presence: true
-
-
-
-
+  validates :name, presence: true
 
   def assign_location_from_zip
     if self.zip > 999 && self.zip < 1999
