@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module LeadShareApp
   class Application < Rails::Application
     initializer 'setup_asset_pipeline', :group => :all  do |app|

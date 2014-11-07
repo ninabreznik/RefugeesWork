@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
     render 'about', layout: false
   end
 
+  def info
+  end
+
   def faq
   end
 

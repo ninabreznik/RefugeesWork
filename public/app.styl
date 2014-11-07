@@ -1206,6 +1206,117 @@ bottomButtonMixin(defaultFontSize = 12px)
         font-weight bold
         background-color Lead-Orange
         padding 4px
+  
+  // :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: //
+  .body_info_singlepage
+    font-family App-Font-Family
+    .section_picture
+      body-mixin(backgroundImage: url(/images/interior1.png))
+      margin-top 29px
+      padding-bottom 600px
+      .section_picture_background
+        padding 50px
+        // top 300px
+        opacity 0.8
+        background-color black
+        .section_picture_title
+          top 20px
+          padding-top 110px
+          width 450px
+          shift 0.36
+          font-size 60px
+          font-weight bold
+          color white
+        .section_picture_text
+          top 5px
+          padding 10px
+          width 450px
+          shift 0.32
+          font-size 24px
+          color white
+        .section_picture_buttons
+          top 40px
+          padding-bottom 90px
+          shift 0.39
+          font-size 18px
+        .section_picture_buttons_signup
+          button(color = Lead-Orange)
+          width 120px
+        .section_picture_buttons_signin
+          button(color = Lead-Orange)
+          width 135px
+        .fa.fa-angle-down
+          top 70px
+          shift 0.47
+          color white
+          font-weight bold
+          font-size 100px
+    .section_welcome
+      padding 70px 60px 100px 60px
+      background-color #aaa
+      color white
+      letter-spacing 1.4px
+      font-weight: 300
+      .section_welcome_title
+        font-size 18px
+        color Lead-Orange
+        margin-bottom 10px
+      .section_welcome_subtitle
+        font-size 32px
+        letter-spacing 2px
+        margin-bottom 30px
+      .section_welcome_text
+        font-size 18px
+        line-height 150%
+    .section_divided   
+      padding-bottom 400px
+      color white
+      font-size 32px
+      letter-spacing 1.4px
+      line-height 200%
+      .section_divided_left
+        span(1/2)
+        width 50%
+        padding 150px 100px 150px 100px
+        background-color Lead-Orange
+      .section_divided_right
+        span(1/2)
+        width 50%
+        padding 150px 100px 150px 100px
+        background-color #82c0c7
+    .section_how_it_works
+      // margin-top 160px
+      padding 0px 0px 60px 0px
+      background-color white
+      letter-spacing 1.4px
+      font-weight: 300
+      color black
+      .section_how_it_works_image
+        body-mixin(backgroundImage: url(/images/interior5.png))
+        margin-top 29px
+        padding-bottom 200px
+      .section_how_it_works_title
+        margin 60px 60px 60px 30px
+        font-size 32px
+        color Lead-Orange
+      .section_how_it_works_text
+        margin 60px 60px 60px 30px
+        font-size 18px
+        line-height 150%
+    .section_our_team
+      // margin-top 160px
+      padding 60px 60px 60px 60px
+      background-color Lead-Orange
+      letter-spacing 1.4px
+      font-weight: 300
+      color white
+      .section_our_team_title
+        font-size 32px
+        margin-bottom 30px
+      .section_our_team_text
+        font-size 18px
+      // .section_how_it_works_image
+        
 
 
 // ############################################################################################
