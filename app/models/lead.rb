@@ -15,7 +15,7 @@ class Lead < ActiveRecord::Base
   validates :time, presence: true
   validates :description, presence: true
   validates :zip, presence: true, length: { is: 4 } 
-  validates :email, presence: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   validates :phone, presence: true
   validates :name, presence: true
 

@@ -1356,47 +1356,82 @@ bottomButtonMixin(defaultFontSize = 12px)
         font-size 22px
     .section_join_sosed
       background-color Lead-Blue
-      color white
+      color black
       font-size 18px
       text-transform: uppercase
+      font-weight bold
       letter-spacing 1.4px
       line-height 200%
-      .section_join_sosed_left
-        span(1/3)
-        // margin-top 238px
-        padding 50px 50px 42px 50px
-        background-color black
-        opacity 0.8
-      .section_join_sosed_middle
-        span(1/3)
-        padding 50px 50px 78px 50px
-        // margin-top 238px
-        background-color black
-        opacity 0.8
-      .section_join_sosed_right
-        span(1/3)
-        padding 50px 50px 78px 50px
-        // margin-top 238px
-        background-color black
-        opacity 0.8
+      .section_why_sosed_image
+        body-mixin(backgroundImage: url(/images/interior5.png))
+        padding-bottom 400px
+      .fa.fa-line-chart,
+      .fa.fa-paper-plane-o,
+      .fa.fa-thumbs-up
+        text-align center
+        padding 50px 580px 0px 600px
+        font-size 100px
+        background-color Lead-Orange
+        color black
+      .section_join_sosed_introduce,
+      .section_join_sosed_cooperation,
+      .section_join_sosed_success
+        text-align center
+        color black
+        padding 30px 50px 20px 50px
+        background-color Lead-Orange  
     .section_why_sosed
       padding 0px 0px 60px 0px
-      // background-color white
       letter-spacing 1.4px
       font-weight: 300
       color black
-      .section_why_sosed_image
-        body-mixin(backgroundImage: url(/images/interior2.png))
-        padding-bottom 200px
       .section_why_sosed_title
         margin 60px 60px 60px 30px
         font-size 32px
-        color Lead-Orange
+        color Lead-Blue
+        font-weight bold
       .section_why_sosed_text
-        margin 60px 60px 60px 30px
+        margin 60px 60px 30px 30px
         font-size 18px
         line-height 150%
-
+    .section_form
+      padding 0px 0px 0px 0px
+      letter-spacing 1.4px
+      font-weight: 300
+      color black
+      #mc_embed_signup
+        background-color Lead-Blue
+        padding 50px 0px 30px 0px
+      #mc_embed_signup label
+        font-size 32px
+        color white
+        text-align center
+      #mce-EMAIL
+        margin-left 400px
+        width 400px
+      #mc-embedded-subscribe
+        shift 0.4
+        background-color Lead-Orange
+        width 200px
+    .section_company_info
+      text-align center
+      background-color Lead-Blue
+      color white
+      font-size 14px
+      .section_company_info_name
+        font-size 18px
+        text-transform: uppercase
+        color white
+        font-weight bold
+      .section_company_info_name,
+      .section_company_info_street,
+      .section_company_info_city,
+      .section_company_info_tax_number,
+      .section_company_info_bank_account,
+      .section_company_info_contact
+        padding 7px 0px 0px 0px
+      &:last-child
+        padding-bottom 80px
 
 // ############################################################################################
 
