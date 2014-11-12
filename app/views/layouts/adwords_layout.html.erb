@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+  <title>LeadShareApp</title>
+  <link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @-ms-viewport{
+      width: device-width;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="top" name="top"> &nbsp; </a>
+ <div class="top_menu_bar">
+  <a href="<%= leads_new_path %>"><%= image_tag 'sosed.biz.png', :class => 'logo' %></a>
+</div>    
+  <%= yield %>
+
+  <a href='#top'><i class="fa fa-arrow-circle-up"></i></a>
+
+</body>
+</html>
+
+

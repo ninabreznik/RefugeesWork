@@ -1,43 +1,76 @@
 
 <div class="body_leads_new">
-<div class="lead_new">
-  <div class="lead_new_title">
-    <%= I18n.t'lead-new.title' %>
+<section class="lead_new_photo">
+  <div class="lead_new_explanation">
+    <div class="lead_new_explanation_first">  
+      <i class="fa fa-pencil"></i>         Pošljite povpraševanje       </div>
+    <div class="lead_new_explanation_second"> 
+      <i class="fa fa-files-o"></i>        Primerjajte ponudbe           </div>
+    <div class="lead_new_explanation_third">  
+      <i class="fa fa-check-square-o"></i> Izberite pravega izvajalca.  </div>
   </div>
-  <div class="lead_new_instructions">
-    <%= I18n.t'lead-new.instructions' %>
-  </div>
+  <div class="lead_new">
+    <div class="lead_new_title">
+      <%= I18n.t'lead-new.title' %>
+    </div>
+    <div class="lead_new_instructions">
+      <%= I18n.t'lead-new.instructions' %>
+    </div>
 
-<%= form_for (@lead) do |l| %>
-  <div class="lead_new_form_business_type">
-    <%= l.select :business_type, @business_types, {:prompt=>"#{I18n.t'lead-new.form.prompt-business-type'}"}, required: "required" %> <br>
+  <%= form_for (@lead) do |l| %>
+    <div class="lead_new_form_business_type">
+      <%= l.select :business_type, @business_types, {:prompt=>"#{I18n.t'lead-new.form.prompt-business-type'}"}, required: "required" %> <br>
+    </div>
+    <div class="lead_new_form_time">
+      <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}, required: "required" %> <br>
+    </div>
+    <div class="lead_new_form_zip">
+      <%= l.label :"#{I18n.t'lead-new.form.zip'}" %>
+      <%= l.text_field :zip, required: "required" %>
+    </div>
+    <div class="lead_new_form_description">
+      <%= l.label :"#{I18n.t'lead-new.form.description'}" %>
+      <%= l.text_field :description, required: "required" %>
+    </div>
+    <div class="lead_new_form_name">
+      <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
+      <%= l.text_field :name %>
+    </div>
+    <div class="lead_new_form_email">
+      <%= l.label :"#{I18n.t'lead-new.form.email'}" %>
+      <%= l.text_field :email, required: "required" %>
+    </div>
+    <div class="lead_new_form_phone">
+      <%= l.label :"#{I18n.t'lead-new.form.phone'}" %>
+      <%= l.text_field :phone, required: "required" %>
+    </div>
+    <div class="lead_new_form_submit">
+      <%= l.submit "Send" %>
+    </div>
+    <% end %>
   </div>
-  <div class="lead_new_form_time">
-    <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}, required: "required" %> <br>
+</section>
+<section class="lead_new_we_help">
+  <div class="lead_new_we_help_title">
+    Pomagamo vam najti izkušene izvajalce in to po ceni, ki vam ustreza.
   </div>
-  <div class="lead_new_form_zip">
-    <%= l.label :"#{I18n.t'lead-new.form.zip'}" %>
-    <%= l.text_field :zip, required: "required" %>
+  <div class="lead_new_we_help_categories_title">
+    Več sto strank je že uspešno zaključilo svoj projekt v skupaj preko 10 kategorijah.
   </div>
-  <div class="lead_new_form_description">
-    <%= l.label :"#{I18n.t'lead-new.form.description'}" %>
-    <%= l.text_field :description, required: "required" %>
+  <div class="lead_new_we_help_categories_list">
+    <i class="fa fa-check-square-o"> Slikopleskarstvo</i> 
+    <i class="fa fa-check-square-o"> Fasaderstvo</i> 
+    <i class="fa fa-check-square-o"> Suhomontaža</i> 
+    <i class="fa fa-check-square-o"> Keramika</i> 
+    <i class="fa fa-check-square-o"> Parket</i> 
+    <i class="fa fa-check-square-o"> Elektrikarska dela</i> 
+    <i class="fa fa-check-square-o"> Strojne instalacije</i> 
+    <i class="fa fa-check-square-o"> Krovstvo</i> 
+    <i class="fa fa-check-square-o"> Mizarstvo</i>  
   </div>
-  <div class="lead_new_form_name">
-    <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
-    <%= l.text_field :name %>
-  </div>
-  <div class="lead_new_form_email">
-    <%= l.label :"#{I18n.t'lead-new.form.email'}" %>
-    <%= l.text_field :email, required: "required" %>
-  </div>
-  <div class="lead_new_form_phone">
-    <%= l.label :"#{I18n.t'lead-new.form.phone'}" %>
-    <%= l.text_field :phone, required: "required" %>
-  </div>
-  <div class="lead_new_form_submit">
-    <%= l.submit "Send" %>
-  </div>
-  <% end %>
-</div>
+</section> 
+<section class="lead_new_company_info">
+  <div class="lead_new_company_info_name">Moj sosed d.o.o.</div>
+  <div class="lead_new_company_info_contact">Email: info@sosed.si</div>
+</section> 
 </div>

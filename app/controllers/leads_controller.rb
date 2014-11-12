@@ -36,7 +36,7 @@ class LeadsController < ApplicationController
       ["#{I18n.t'lead-new.form.form-time.onetothreemonths'}"], 
       ["#{I18n.t'lead-new.form.form-time.flexible'}"]
     ]
-
+    render 'new', layout: 'adwords_layout'
   end
 
   def create

@@ -345,7 +345,7 @@ si:
 # ############################################################################################
 
   lead-new:
-    title:  "Oddajte brezplačno povpraševanje"
+    title:  "Pošljite brezplačno povpraševanje"
     instructions: "Oddajte povpraševanje in 5 izbranih izvajalcev se vam bo oglasilo z neobvezujočimi ponudbami."
     form:
       business-types:
