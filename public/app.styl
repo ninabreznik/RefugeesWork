@@ -63,6 +63,23 @@ body-mixin(backgroundImage = url(/images/cream_pixels.png))
     color Offer-Font-Color
     font-family App-Font-Family
 
+mobile-body-mixin(backgroundImage = url(/images/cream_pixels.png)) 
+  top_menu_bar()
+  background-image  backgroundImage  
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed
+  margin 0px
+  font-size 8px
+  color Offer-Font-Color
+  font-family App-Font-Family
+  a  
+    text-decoration none
+    color Offer-Font-Color
+    font-family App-Font-Family
+
 blur-mixin(intensity = 1.6px)
   -webkit-filter blur(intensity) 
   -moz-filter blur(intensity) 
@@ -94,8 +111,17 @@ leadBoxMixin(defaultMarginLeft = 42px)
   background: #FEFEFE;
   border: 2px solid #FAFAFA;
   box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  // background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
   opacity: 0.9;
+
+mobileLeadBoxMixin(defaultMarginLeft = 60px)
+  margin-left defaultMarginLeft
+  width 90%
+  padding: 5px;
+  display none
+  background: #FEFEFE;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  opacity: 0.9;  
 
 bottomButtonMixin(defaultFontSize = 12px)
   padding 8px
@@ -115,12 +141,11 @@ bottomButtonMixin(defaultFontSize = 12px)
     color Menu-Bottom-Button-Color
     
 
-@import "app_below_4000px"
 @import "app_below_1300px"
 @import "app_below_804px"
 @import "app_below_706px"
 @import "app_below_550px"
+@import "app_below_350px"
 
  
-+below(706px)
-  app_below_706px(start_background: #ff0000)
+  
