@@ -1,0 +1,110 @@
+.body_orders_show
+      body-mixin(backgroundImage: url(/images/interior3.png))
+      padding-bottom 100px
+      .back_to_main_page_button
+        width 100%
+        height 100%
+        position absolute
+        top 0 
+        left 0
+      .order_show
+        shift 0.03
+        opacity 0.9
+        margin 29px 0px 0px 0px
+        width 90%
+        -webkit-column-break-inside: avoid
+        -moz-column-break-inside: avoid
+        column-break-inside: avoid
+        background-color white
+        line-break 1px  
+        .order_show_title
+          background-color Lead-Orange
+          padding 18px
+          margin-bottom 10px
+          font-weight bold
+          text-align center
+          -webkit-font-smoothing: antialiased
+          font-size 22px
+        .lead_show_body
+          font-size 12px
+          padding-left 5px
+          padding-top 10px
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+          color Offer-Font-Color
+          line-height 150%
+          .lead_show_items_long
+            width 90%
+            padding-left 0px
+          .lead_show_items_short_additional
+            padding 5px
+            width 100%
+            background-color #eee
+            blur-mixin(intensity = 0.7px)
+          .lead_show_items_short,
+          .lead_show_items_long,
+          .lead_show_items_short_additional
+            display inline-block
+            vertical-align top
+            .lead_show_item
+              -webkit-font-smoothing: antialiased
+              margin-top 10px
+              line-height 150%
+              padding-bottom 10px
+              .lead_show_subtitle
+                font-weight bold
+                display inline-block
+        .payment_buttons_choose_payment_text
+          text-align center
+          padding 30px 10px 20px 0px
+        .order_show_buy_buttons
+          padding 7px
+          shift 0.18
+          width 40%
+          .order_show_buy   
+            display inline-block
+          .order_show_buy input,   
+          .order_show_buy a 
+            margin-bottom 2px
+            button(color: Lead-Orange)
+            font-size 12px
+      .order_show_notes
+        margin-top 5px
+        margin-bottom 50px
+        font-size 12px
+        margin-left -10px
+        .order_show_notes_title
+          padding 5px
+          margin-top 20px
+          margin-bottom 4px
+          color Offer-Font-Color
+          font-weight bold
+          width 150px
+        #order_notes
+          position relative
+          blur-mixin(intensity = 0.7px)
+          background: rgb(0, 0, 0); /* fallback color */
+          background-color white
+          opacity 0.95
+          -webkit-column-break-inside: avoid
+          -moz-column-break-inside: avoid
+          column-break-inside: avoid
+          text-decoration none
+          color Offer-Font-Color    
+          padding 4px
+          font-size 10px
+          -webkit-font-smoothing: antialiased
+          height 100px
+          width 95%
+          margin-bottom 7px
+          margin-top 7px
+          line-break 1px 
+          border 2px solid #eeeeee
+          &:hover
+            background-color #F0F0F0
+        .order_show_notes_submit input
+        .order_show_notes_submit a
+          shift 0.6
+          margin-top 10px
+          margin-bottom 10px
+          margin-right 5px 

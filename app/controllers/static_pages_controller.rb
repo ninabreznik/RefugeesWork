@@ -25,6 +25,10 @@ class StaticPagesController < ApplicationController
   def payment_confirmation
   end
 
+  def new_lead_confirmation
+    render 'new_lead_confirmation', layout: 'adwords_layout'
+  end
+
   def wallet_payment
     @order = Order.find_by_id(params[:order])
   end

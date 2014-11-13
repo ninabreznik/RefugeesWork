@@ -284,13 +284,13 @@ si:
 # ############################################################################################
 
   orders-banktransaction:
-    offer_title: "Ponudba za kontakt: "
+    offer_title: "Ponudba za kontakt, št.: "
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
     offer_price: "Cena"
     offer_price_amount: "10 €"
     offer_purpose: "Namen plačila"
-    offer_purpose_text: "Plačilo kontakta"
+    offer_purpose_text: "Plačilo kontakta, št."
     offer_account: "Številka TRR"
     offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
     offer_company: "Podjetje"
@@ -313,8 +313,8 @@ si:
 # Page 8 - STATICPAGES/NEW_LEAD_CONFIRMATION (for new leads)
 # ############################################################################################
   new_lead_confirmation:
-    thank_you: "Thank you! Your inquiry was successfully sent."
-    text: "Providers will soon contact you with their offers."
+    thank_you: "Hvala! Vaše povpraševanje je bilo uspešno poslano. "
+    text: "V kratkem vas bodo kontaktirali preverjeni izvajalci s svojimi ponudbami."
 
 # ############################################################################################
 # Page 9 - WALLET/PAYMENT (top up the wallet)

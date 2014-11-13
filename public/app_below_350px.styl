@@ -36,9 +36,9 @@
           opacity 0.7
       .info
         padding-bottom 2px
-        shift(0.5)
+        // shift(0.5)
         font-size 14px
-        display inline-block
+        // display inline-block
         .fa.fa-info-circle
           color Offer-Font-Color
           &:hover
@@ -144,13 +144,10 @@
         top 0 
         left 0
       .lead_show
-        // shift 0.03
+        shift 0.03
         opacity 0.9
         margin 29px 0px 0px 0px
-        left 90px
-        width 70%
-        max-width 550px
-        min-width 200px
+        width 90%
         -webkit-column-break-inside: avoid
         -moz-column-break-inside: avoid
         column-break-inside: avoid
@@ -163,10 +160,11 @@
           font-weight bold
           text-align center
           -webkit-font-smoothing: antialiased
-          font-size 28px
+          font-size 22px
         .lead_show_body
-          font-size 20px
-          padding-left 25px
+          font-size 12px
+          padding-left 5px
+          padding-top 10px
           -webkit-font-smoothing: antialiased
           -moz-osx-font-smoothing: grayscale
           color Offer-Font-Color
@@ -188,11 +186,11 @@
                 display inline-block
         .lead_show_buy input,
         .lead_show_buy a 
-          shift 0.17
+          center(120px)
           margin 20px 0 40px 0px
           button(color = Lead-Orange)
           background-color Lead-Orange
-          font-size 22px
+          font-size 12px
     /* :::::::::::: ORDERS/show => buy lead :::::::::::: */
     .body_orders_show
       body-mixin(backgroundImage: url(/images/interior3.png))
@@ -255,8 +253,7 @@
           padding 30px 10px 20px 0px
         .order_show_buy_buttons
           padding 7px
-          shift 0.18
-          width 40%
+          center(300px)
           .order_show_buy   
             display inline-block
           .order_show_buy input,   
@@ -315,22 +312,19 @@
         width 95%
         position relative
         top 10px
-        padding 40px
+        padding 20px
         padding-top 70px
         padding-bottom 70px
         background-color white
         .offer_title
-          // center(420px)
-          color Offer-Font-Color
+          color Lead-Blue
           font-weight bold
-          font-size 28px
-          padding-bottom 60px
+          font-size 18px
+          padding-bottom 30px
         .offer_company_info 
           color Offer-Font-Color
           border 1px solid #e7e7e7
-          box-shadow inset 0 0 0 0 #CCC
-          border-radius 4px
-          padding 4px 7px 4px 10px
+          padding 4px 7px 4px 7px
           background-color Lead-Subtitle
         .offer_company_info td:last-child
           text-align left
@@ -339,33 +333,29 @@
           width 109px
         .offer_date
           color Offer-Font-Color
-          font-size 13px
-          margin 10px 10px 20px 10px
+          font-size 12px
+          margin 10px 7px 20px 7px
           text-align left
         .offer_sosed_info
-          // shift(0.075)
           margin-top 20px
           color Offer-Font-Color
           text-align left
           border 1px solid #e7e7e7
-          box-shadow inset 0 0 0 0 #CCC
           border-radius 4px
           .offer_sosed_info_price td,
             font-weight bold
-            padding 30px 30px 15px 15px
-            font-size 16px
+            color Lead-Blue
+            padding 20px 30px 10px 15px
+            font-size 12px
             background-color Lead-Subtitle
           .offer_sosed_info_item td
             background-color Lead-Subtitle     
-            padding 15px 30px 10px 15px
-            font-size 12px
+            padding 10px 30px 10px 15px
+            font-size 10px
         .offer_show_lead
           margin-top 37px
           padding-bottom 20px
-          // center(70%)
-          // shift(-0.07)
           height 30%
-          // width 70%
           vertical-align bottom
           -webkit-column-break-inside: avoid
           -moz-column-break-inside: avoid
@@ -383,10 +373,10 @@
             padding 10px
             font-weight bold
             -webkit-font-smoothing: antialiased
-            font-size 20px
+            font-size 16px
             border-bottom 1px solid #e7e7e7
           .offer_show_lead_body
-            font-size 16px
+            font-size 12px
             padding-top 3px
             padding-left 25px
             -webkit-font-smoothing: antialiased
@@ -402,11 +392,10 @@
             .ordersindex-notifications.customer-info
               color red
         .offer_instructions
-          // width 70%
+          center(420px)
           margin-top 20px
-          font-size 12px
+          font-size 10px
           font-weight bold
-          // shift(0.08)
     /* :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: */
     .body_orders_reserved
       mobile-body-mixin(backgroundImage: url(/images/interior5.png))
@@ -497,6 +486,7 @@
           wookmarkMixin()
           .lead_box
             mobileLeadBoxMixin()
+              width 90%
             .address_book_lead_title
               opacity 0.85
               background-color Lead-Blue
@@ -575,23 +565,6 @@
       .address_book_signup,
       .address_book_signin
         color Lead-Orange
-    /* :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: */
-    .body_new_lead_confirmation
-      body-mixin()
-      .new_lead_confirmation
-        margin-top 200px
-        padding 20px
-        center(420px)
-        .new_lead_confirmation_thank_you
-          font-weight bold
-          font-size 20px
-          padding-top 20px
-        .new_lead_confirmation_text
-          font-size 16px
-          padding-top 40px
-        .new_lead_confirmation_signature
-          font-size 14px
-          padding-top 20px
     /* :::::::::::: PROFILE :::::::::::: */
     .body_profile
       body-mixin(backgroundImage: url(/images/interior3.png))
@@ -661,7 +634,7 @@
                 opacity 0.3
     /* :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: */
     .body_devise_login
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 29px
       padding-top 20px
       padding-bottom 1050px
@@ -704,7 +677,7 @@
             text-decoration underline
     /* :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: */
     .body_devise_signup
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 29px
       padding-top 20px
       padding-bottom 1050px
@@ -747,7 +720,7 @@
             text-decoration underline    
     /* :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: */
     .body_devise_password_new
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 29px
       padding-top 20px
       padding-bottom 1050px
@@ -781,7 +754,7 @@
             text-decoration underline
     /* :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: */
     .body_devise_users_edit
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 29px
       padding-top 20px
       padding-bottom 1050px
@@ -827,21 +800,23 @@
           button(color = Lead-Orange)
     /* :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: */
     .body_leads_new
-      margin-top 23px
+      margin-top 17px
       font-family App-Font-Family
       .lead_new_photo  
         body-mixin(backgroundImage: url(/images/interior1.png))
         padding-top 20px
-        padding-bottom 750px
+        padding-bottom 50px
         .lead_new
-          span(1.5/3)  
-          background: rgb(0, 0, 0); /* fallback color */
-          background: rgba(0, 0, 0, 0.7);
-          // shift(0.09)
-          padding-bottom 14px
+          stack()
+          left 10px
+          margin-left 0px
+          margin-top 30px
           margin-top 30px
           margin-bottom 40px
-          // margin-left 10px  
+          width 90% 
+          background: rgb(0, 0, 0); /* fallback color */
+          background: rgba(0, 0, 0, 0.7);
+          padding-bottom 14px
           .lead_new_title
             -webkit-font-smoothing: antialiased
             color Lead-Orange
@@ -933,11 +908,12 @@
             &:hover
               text-decoration underline
         .lead_new_explanation
-          span(1/3)      
-          margin-top 60px
-          shift 0.03
+          stack()  
+          margin-left 0px
+          width 40%    
+          margin-top 20px
           padding 20px
-          font-size 21px
+          font-size 12px
           font-weight bold
           color white
           background: rgb(0, 0, 0); /* fallback color */
@@ -945,46 +921,47 @@
           .lead_new_explanation_first,
           .lead_new_explanation_second,
           .lead_new_explanation_third
-            padding-bottom 30px
-            width 100%
-            text-align center
+            padding-bottom 20px
+            width 60%
+            // text-align center
             .fa.fa-pencil,
             .fa.fa-files-o,
             .fa.fa-check-square-o
-              font-size 45px
+              margin-left 10px
+              font-size 35px
               padding-right 30px
               padding-bottom 10px
       .lead_new_we_help      
-        padding 80px 40px 80px 40px
+        padding 40px 40px 40px 40px
         background-color white
         color #606060
         .lead_new_we_help_title
-          font-size 22px
+          font-size 16px
           text-transform: uppercase
           text-align center
           color Lead-Orange
-          margin-bottom 50px
+          margin-bottom 20px
         .lead_new_we_help_categories_title
-          font-size 18px
+          font-size 12px
           font-weight bold
           text-align center
-          margin-bottom 60px
+          margin-bottom 40px
         .lead_new_we_help_categories_list
           text-align center
-          font-size 14px
+          font-size 12px
           shift 0.03
           .fa.fa-check-square-o
             padding 10px 10px 0px 0px
-            font-size 20px
+            font-size 14px
             color #606060
             opacity 0.8
       .lead_new_company_info
         padding 50px 0px 50px 0px
         background-color black
         text-align center
-        font-size 18px
+        font-size 12px
         .lead_new_company_info_name
-          font-size 16px
+          font-size 14px
           text-transform: uppercase
           color white
           font-weight bold
@@ -1108,7 +1085,7 @@
             shift 0.42
             color white
             font-weight bold
-            font-size 50px
+            font-size 30px
       .section_welcome
         padding 50px 60px 60px 60px
         background-color #aaa
@@ -1116,32 +1093,32 @@
         letter-spacing 1.4px
         font-weight: 300
         .section_welcome_title
-          font-size 18px
+          font-size 22px
           color Lead-Orange
           margin-bottom 10px
         .section_welcome_subtitle
-          font-size 32px
+          font-size 16px
           letter-spacing 2px
           margin-bottom 30px
         .section_welcome_text
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_divided   
         padding-bottom 300px
         color white
-        font-size 20px
+        font-size 14px
         letter-spacing 1.4px
         line-height 200%
         .section_divided_left
           span(1/2)
           width 50%
-          height 650px
+          height 500px
           padding 100px 20px 100px 20px
           background-color Lead-Orange
         .section_divided_right
           span(1/2)
           width 50%
-          height 650px
+          height 500px
           padding 100px 20px 100px 20px
           background-color #82c0c7
       .section_how_it_works
@@ -1156,11 +1133,11 @@
           padding-bottom 600px
         .section_how_it_works_title
           margin 60px 60px 60px 30px
-          font-size 32px
+          font-size 22px
           color Lead-Orange
         .section_how_it_works_text
           margin 60px 60px 60px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_our_team
         padding 0px 0px 60px 0px
@@ -1171,13 +1148,13 @@
         text-align center
         .fa.fa-heart
           margin 60px 60px 20px 30px
-          font-size 80px
+          font-size 50px
         .section_our_team_title
           margin 20px 60px 60px 30px
-          font-size 32px
+          font-size 22px
         .section_our_team_text
           margin 60px 60px 60px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_budget
         padding 0px 0px 60px 0px
@@ -1188,15 +1165,15 @@
         text-align center
         .fa.fa-calculator
           margin 60px 60px 20px 30px
-          font-size 80px
+          font-size 50px
           color Lead-Orange
         .section_budget_title
           margin 20px 60px 60px 30px
-          font-size 32px
+          font-size 22px
           color Lead-Orange
         .section_budget_text
           margin 60px 60px 60px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_what_customers_want
         padding 60px 60px 60px 60px
@@ -1206,17 +1183,17 @@
         text-align center
         .section_what_customers_want_title
           margin-bottom 30px
-          font-size 35px
+          font-size 22px
         .fa.fa-check-square-o
-          font-size 35px
+          font-size 22px
           margin-right 10px
         .section_what_customers_want_item
           margin-bottom 20px
-          font-size 16px
+          font-size 12px
       .section_join_sosed
         background-color Lead-Orange
         color black
-        font-size 18px
+        font-size 12px
         text-transform: uppercase
         font-weight bold
         letter-spacing 1.4px
@@ -1229,7 +1206,7 @@
         .fa.fa-thumbs-up
           shift 0.3
           padding 50px 0px 0px 0px
-          font-size 100px
+          font-size 70px
           background-color Lead-Orange
           color black
         .section_join_sosed_introduce,
@@ -1247,32 +1224,31 @@
         text-align center
         .section_why_sosed_title
           margin 60px 60px 60px 30px
-          font-size 32px
+          font-size 16px
           color Lead-Blue
           font-weight bold
         .section_why_sosed_text
           margin 60px 60px 30px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_form
-        padding 0px 0px 0px 0px
         letter-spacing 1.4px
         font-weight: 300
         color black
-        left -20px
         #mc_embed_signup
           background-color Lead-Blue
           padding 50px 0px 30px 0px
         #mc_embed_signup label
-          font-size 14px
+          font-size 20px
           color white
+          text-align center
         #mce-EMAIL
-          width 150px
-          left 80px
+          shift 0.21
+          width 200px
         #mc-embedded-subscribe 
+          shift 0.32
           background-color Lead-Orange
           width 100px
-          left 100px
       .section_company_info
         text-align center
         background-color Lead-Blue
@@ -1292,4 +1268,23 @@
           padding 7px 0px 0px 0px
         &:last-child
           padding-bottom 80px
+    /* :::::::::::::::::::::::: STATICPAGES/NEW_LEAD_CONFIRMATION :::::::::::::::::::::::::: */
+    .body_new_lead_confirmation
+      body-mixin(backgroundImage: url(/images/interior1.png))
+      margin-top 16px
+      padding-top 200px
+      padding-bottom 300px
+      .new_lead_confirmation
+        center(550px)
+        margin-top 0px
+        padding 20px
+        background-color black
+        opacity 0.8
+        color white
+        .new_lead_confirmation_thank_you
+          font-size 22px
+          font-weight bold
+        .new_lead_confirmation_text
+          font-size 14px
+          padding-top 40px 
       

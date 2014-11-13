@@ -1,6 +1,5 @@
-+below(5000px)
-// :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: //
-
++below(1300px)
+  /* :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: */
   body
     margin 0px
     padding 0px
@@ -36,15 +35,13 @@
           opacity 0.7
       .info
         padding-bottom 2px
-        shift(0.7)
+        shift(0.5)
         font-size 21px
         display inline-block
         .fa.fa-info-circle
           color Offer-Font-Color
           &:hover
-            color Lead-Orange 
-
-      
+            color Lead-Orange       
     .bottom_menu_bar
       background-color Menu-Bottom-Color
       position fixed
@@ -86,10 +83,8 @@
       fa.fa-arrow-circle-up
       &:hover
         opacity 0.8
-        color Lead-Orange
-        
-    // :::::::::::: LEADS/INDEX => homepage :::::::::::: //
-
+        color Lead-Orange      
+    /* :::::::::::: LEADS/INDEX => homepage :::::::::::: */
     .body_leads_index
       body-mixin(backgroundImage: url(/images/interior1.png))
       .columns
@@ -141,9 +136,7 @@
         color: white; 
         letter-spacing: -1px;  
         line-height 150%
-
-    // :::::::::::: LEADS/show => individual lead :::::::::::: //
-
+    /* :::::::::::: LEADS/show => individual lead :::::::::::: */
     .body_leads_show
       body-mixin(backgroundImage: url(/images/interior2.png))
       padding-bottom 100px
@@ -204,9 +197,7 @@
           button(color = Lead-Orange)
           background-color Lead-Orange
           font-size 22px
-
-
-    // :::::::::::: ORDERS/show => buy lead :::::::::::: //
+    /* :::::::::::: ORDERS/show => buy lead :::::::::::: */
     .body_orders_show
       body-mixin(backgroundImage: url(/images/interior3.png))
       padding-bottom 100px
@@ -245,7 +236,7 @@
           color Offer-Font-Color
           line-height 150%
           .lead_show_items_long
-            width 50%
+            width 40%
             padding-left 140px
           .lead_show_items_short_additional
             padding 5px
@@ -321,12 +312,8 @@
           margin-top 10px
           margin-bottom 40px
           margin-right 5px 
-          button(color = Lead-Orange)
-
-          
-
-      // :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: //
-
+          button(color = Lead-Orange)    
+    /* :::::::::::: BANK TRANSACTION => offer for the lead :::::::::::: */
     .body_bank_transaction
       body-mixin(backgroundImage: url(/images/interior4.png))
       margin-top 29px
@@ -428,9 +415,7 @@
           font-size 12px
           font-weight bold
           // shift(0.08)
-
-      // :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: //
-        
+    /* :::::::::::: ORDERS/RESERVED => Reserved Leads :::::::::::: */       
     .body_orders_reserved
       body-mixin(backgroundImage: url(/images/interior5.png))
       .address_book_reserved_leads
@@ -509,12 +494,7 @@
       .address_book_signup,
       .address_book_signin
         color Lead-Orange
-       
-
-
-
-        // :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: //
-
+    /* :::::::::::: ORDERS/ADDRESS_BOOK => Bought Leads :::::::::::: */
     .body_orders_address_book
       body-mixin(backgroundImage: url(/images/interior6.png))
       .columns
@@ -598,27 +578,7 @@
       .address_book_signup,
       .address_book_signin
         color Lead-Orange
-
-
-      // :::::::::::: NEW_LEAD_CONFIRMATION.html.erb => landing page after submitting new lead :::::::::::: //
-    .body_new_lead_confirmation
-      body-mixin()
-      .new_lead_confirmation
-        margin-top 200px
-        padding 20px
-        center(420px)
-        .new_lead_confirmation_thank_you
-          font-weight bold
-          font-size 20px
-          padding-top 20px
-        .new_lead_confirmation_text
-          font-size 16px
-          padding-top 40px
-        .new_lead_confirmation_signature
-          font-size 14px
-          padding-top 20px
-
-      // :::::::::::: PROFILE :::::::::::: //
+    /* :::::::::::: PROFILE :::::::::::: */
     .body_profile
       body-mixin(backgroundImage: url(/images/interior3.png))
       .columns
@@ -685,15 +645,7 @@
                 padding-bottom 20px
                 font-weight bold
                 opacity 0.3
-
-      // :::::::::::: ABOUT :::::::::::: //
-    // .body_about
-    //   body-mixin()     
-
-    //see assets/stylesheets/about_singlepage/
-      
-
-      // :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: //
+    /* :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: */
     .body_devise_login
       body-mixin(backgroundImage: url(/images/interior6.png))
       margin-top 29px
@@ -736,8 +688,7 @@
           // font-weight bold 
           &:hover
             text-decoration underline
-
-      // :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: //
+    /* :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: */
     .body_devise_signup
       body-mixin(backgroundImage: url(/images/interior6.png))
       margin-top 29px
@@ -780,10 +731,7 @@
           // font-weight bold 
           &:hover
             text-decoration underline
-          
-
-      // :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: //
-
+    /* :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: */
     .body_devise_password_new
       body-mixin(backgroundImage: url(/images/interior6.png))
       margin-top 29px
@@ -817,7 +765,7 @@
           font-size 14px
           &:hover
             text-decoration underline
-      // :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: //
+    /* :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: */
     .body_devise_users_edit
       body-mixin(backgroundImage: url(/images/interior6.png))
       margin-top 29px
@@ -863,8 +811,7 @@
           margin-top 10px
           margin-bottom 10px  
           button(color = Lead-Orange)
-
-     // :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: //
+    /* :::::::::::: LEADS/NEW (new lead - for end customers (B2C))  :::::::::::: */
     .body_leads_new
       margin-top 27px
       font-family App-Font-Family
@@ -1028,13 +975,9 @@
         .lead_new_company_info_name,
         .lead_new_company_info_contact
           padding 7px 0px 0px 0px
-          color white
-        
-
-      
-    // :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: //
-    // :::::::::::: same styling also for ORDERS/WALLET_PAYMENT_FOR LEADS:::::::::::: //
-
+          color white      
+    /* :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: */
+    /* :::::::::::: same styling also for ORDERS/WALLET_PAYMENT_FOR LEADS:::::::::::: */
     .body_wallet_payment
       body-mixin(backgroundImage: url(/images/interior6.png))
       margin-top 29px
@@ -1102,19 +1045,14 @@
           margin-top 20px
           font-size 12px
           font-weight bold
-
-    // :::::::::::: DEVISE ALERTS :::::::::::: //
-
+    /* :::::::::::: DEVISE ALERTS :::::::::::: */
     .alert.alert-notice
       position relative
       top 60px
       left 70px
       color Lead-Orange
       font-size 14px
-            
-
-    // :::::::::::: PAYMENT CONFIRMATION :::::::::::: //
-
+    /* :::::::::::: PAYMENT CONFIRMATION :::::::::::: */
     .body_payment_confirmation
       body-mixin(backgroundImage: url(/images/interior4.png))
       margin-top 29px
@@ -1147,9 +1085,8 @@
           font-size 22px
           font-weight bold
           background-color Lead-Orange
-          padding 4px
-    
-    // :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: //
+          padding 4px 
+    /* :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: */
     .body_info_singlepage
       font-family App-Font-Family
       .section_picture
@@ -1341,25 +1278,21 @@
           font-size 18px
           line-height 150%
       .section_form
-        col(1/1)
-        shift 0.33
-        padding 0px 0px 0px 0px
         letter-spacing 1.4px
         font-weight: 300
         color black
         #mc_embed_signup
-          text-align center
           background-color Lead-Blue
           padding 50px 0px 30px 0px
         #mc_embed_signup label
           font-size 32px
           color white
-          // text-align center
+          text-align center
         #mce-EMAIL
-          shift 0.02
+          shift 0.33
           width 400px
         #mc-embedded-subscribe 
-          shift 0.06
+          shift 0.4
           background-color Lead-Orange
           width 200px
       .section_company_info
@@ -1381,3 +1314,26 @@
           padding 7px 0px 0px 0px
         &:last-child
           padding-bottom 80px
+    /* :::::::::::::::::::::::: STATICPAGES/NEW_LEAD_CONFIRMATION :::::::::::::::::::::::::: */
+    .body_new_lead_confirmation
+      body-mixin(backgroundImage: url(/images/interior1.png))
+      margin-top 26px
+      padding-top 200px
+      padding-bottom 300px
+      .new_lead_confirmation
+        center(550px)
+        margin-top 0px
+        padding 20px
+        background-color black
+        opacity 0.8
+        color white
+        .new_lead_confirmation_thank_you
+          font-size 26px
+          font-weight bold
+        .new_lead_confirmation_text
+          font-size 18px
+          padding-top 40px
+
+
+
+

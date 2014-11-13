@@ -38,7 +38,7 @@
         padding-bottom 2px
         shift(0.7)
         font-size 19px
-        display inline-block
+        // display inline-block
         .fa.fa-info-circle
           color Offer-Font-Color
           &:hover
@@ -675,7 +675,7 @@
                 opacity 0.3
     /* :::::::::::: DEVISE/LOGIN (sessions/new)  :::::::::::: */
     .body_devise_login
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 25px
       padding-top 20px
       padding-bottom 1050px
@@ -718,7 +718,7 @@
             text-decoration underline
     /* :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: */
     .body_devise_signup
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 25px
       padding-top 20px
       padding-bottom 1050px
@@ -761,7 +761,7 @@
             text-decoration underline
     /* :::::::::::: DEVISE/PASSWORD/NEW (passwords/new) :::::::::::: */
     .body_devise_password_new
-      body-mixin(backgroundImage: url(/images/interior6.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 25px
       padding-top 20px
       padding-bottom 1050px
@@ -795,7 +795,7 @@
             text-decoration underline
     /* :::::::::::: DEVISE/USERS/EDIT (registrations/new) :::::::::::: */
     .body_devise_users_edit
-      body-mixin(backgroundImage: url(/images/interior3.png))
+      body-mixin(backgroundImage: url(/images/cream_pixels.png))
       margin-top 25px
       padding-top 20px
       padding-bottom 1050px
@@ -1085,7 +1085,7 @@
       font-family App-Font-Family
       .section_picture
         body-mixin(backgroundImage: url(/images/interior1.png))
-        margin-top 29px
+        margin-top 25px
         padding-bottom 600px
         .section_picture_background
           padding-top 100px
@@ -1095,7 +1095,7 @@
           .section_picture_title
             top 20px
             width 450px
-            shift 0.26
+            // shift 0.26
             font-size 60px
             font-weight bold
             color white
@@ -1103,13 +1103,13 @@
             top 5px
             padding 10px
             width 450px
-            shift 0.2
+            // shift 0.2
             font-size 24px
             color white
           .section_picture_buttons
             top 40px
             padding-bottom 90px
-            shift 0.29
+            // shift 0.29
             font-size 18px
           .section_picture_buttons_signup
             button(color = Lead-Orange)
@@ -1268,7 +1268,6 @@
           font-size 18px
           line-height 150%
       .section_form
-        padding 0px 0px 0px 0px
         letter-spacing 1.4px
         font-weight: 300
         color black
@@ -1276,16 +1275,16 @@
           background-color Lead-Blue
           padding 50px 0px 30px 0px
         #mc_embed_signup label
-          font-size 32px
+          font-size 28px
           color white
           text-align center
         #mce-EMAIL
-          shift 0.22
-          width 400px
+          shift 0.23
+          width 300px
         #mc-embedded-subscribe 
-          shift 0.35
+          shift 0.34
           background-color Lead-Orange
-          width 200px
+          width 150px
       .section_company_info
         text-align center
         background-color Lead-Blue
@@ -1305,3 +1304,22 @@
           padding 7px 0px 0px 0px
         &:last-child
           padding-bottom 80px
+    /* :::::::::::::::::::::::: STATICPAGES/NEW_LEAD_CONFIRMATION :::::::::::::::::::::::::: */
+    .body_new_lead_confirmation
+      body-mixin(backgroundImage: url(/images/interior1.png))
+      margin-top 26px
+      padding-top 200px
+      padding-bottom 300px
+      .new_lead_confirmation
+        center(550px)
+        margin-top 0px
+        padding 20px
+        background-color black
+        opacity 0.8
+        color white
+        .new_lead_confirmation_thank_you
+          font-size 26px
+          font-weight bold
+        .new_lead_confirmation_text
+          font-size 18px
+          padding-top 40px   
