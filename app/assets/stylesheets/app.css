@@ -683,7 +683,7 @@ html {
     font-size: 12px;
     color: #222;
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-    padding-bottom: 100px;
+    padding-bottom: 600px;
   }
 
 /* line 61 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -822,7 +822,7 @@ html {
     font-size: 12px;
     color: #222;
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
-    padding-bottom: 100px;
+    padding-bottom: 600px;
   }
 
 /* line 61 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -3393,7 +3393,7 @@ html {
     margin-left: 0%;
     margin-right: 0%;
     width: 50%;
-    height: 500px;
+    height: 100%;
     padding: 150px 100px 150px 100px;
     background-color: #ffae4d;
   }
@@ -3420,7 +3420,7 @@ html {
     margin-left: 0%;
     margin-right: 0%;
     width: 50%;
-    height: 500px;
+    height: 100%;
     padding: 150px 100px 150px 100px;
     background-color: #82c0c7;
   }
@@ -3461,7 +3461,7 @@ html {
     color: #222;
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
     margin-top: 29px;
-    padding-bottom: 400px;
+    padding-bottom: 600px;
   }
 
 /* line 61 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app.styl */
@@ -14114,7 +14114,7 @@ html {
 /* line 1289 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_550px.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_350px.styl */
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 550px) {
 
 /* line 3 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_350px.styl */
   body {
