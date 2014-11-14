@@ -38,7 +38,7 @@ set :rbenv_ruby, '2.1.3'
 server '5.39.51.100', user: 'ninabreznik', roles: %w{web app}
 
 # set :linked_files, %w{config/database.yml .env}
-set :linked_dirs, %w{tmp/pids}
+set :linked_dirs, %w{tmp/pids db config}
 
 set :unicorn_config_path, "config/unicorn.rb"
 
