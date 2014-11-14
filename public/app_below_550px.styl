@@ -17,9 +17,9 @@
       font-family App-Font-Family
       .logged_user, 
       .not_logged_user
-        margin-left -40px
+        margin-left -35px
         padding-bottom 2px
-        font-size 10px
+        font-size 6px
         -webkit-font-smoothing: antialiased
         font-weight bold
         display inline-block
@@ -29,20 +29,20 @@
           text-decoration none
           color Menu-Top-Button-Color
       .logo
-        shift 0.45
+        margin-left -27px
         height 35px
         display inline-block
         &:hover
           opacity 0.7
       .info
         padding-bottom 2px
-        // margin-left 50px
-        font-size 19px
+        // shift(0.5)
+        font-size 14px
         // display inline-block
         .fa.fa-info-circle
           color Offer-Font-Color
           &:hover
-            color Lead-Orange 
+            color Lead-Orange
     .bottom_menu_bar
       background-color Menu-Bottom-Color
       // border-right 1px solid Lead-Orange
@@ -595,7 +595,7 @@
     .body_profile
       body-mixin(backgroundImage: url(/images/interior3.png))
       .columns
-        column-mixin()
+        column-mixin(margin-top = 25px)
         .wookmark
           wookmarkMixin()
           .lead_box
@@ -1071,32 +1071,29 @@
     .body_info_singlepage
       font-family App-Font-Family
       .section_picture
-        body-mixin(backgroundImage: url(/images/interior1.png))
+        mobile-body-mixin(backgroundImage: url(/images/interior1.png))
         margin-top 25px
         padding-bottom 400px
         .section_picture_background
           padding-top 100px
-          padding-bottom 300px
+          padding-bottom 50px
           opacity 0.8
           background-color black
           .section_picture_title
-            top 60px
-            width 450px
-            shift 0.24
-            font-size 48px
+            left -60px
+            font-size 35px
             font-weight bold
             color white
           .section_picture_text
             top 50px
-            padding 20px
-            width 450px
-            shift 0.1
-            font-size 24px
+            left -10px
+            center(280px)
+            font-size 16px
             color white
           .section_picture_buttons
             margin-top 40px
             padding-bottom 90px
-            shift 0.25
+            left 10px
             font-size 18px
           .section_picture_buttons_signup
             button(color = Lead-Orange)
@@ -1105,12 +1102,12 @@
             button(color = Lead-Orange)
             width 135px
           .fa.fa-angle-down
-            top 120px
-            padding-bottom 190px
+            top 50px
+            padding-bottom 50px
             shift 0.42
             color white
             font-weight bold
-            font-size 100px
+            font-size 30px
       .section_welcome
         padding 50px 60px 60px 60px
         background-color #aaa
@@ -1118,30 +1115,32 @@
         letter-spacing 1.4px
         font-weight: 300
         .section_welcome_title
-          font-size 18px
+          font-size 22px
           color Lead-Orange
           margin-bottom 10px
         .section_welcome_subtitle
-          font-size 32px
+          font-size 16px
           letter-spacing 2px
           margin-bottom 30px
         .section_welcome_text
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_divided   
         padding-bottom 300px
         color white
-        font-size 20px
+        font-size 14px
         letter-spacing 1.4px
         line-height 200%
         .section_divided_left
           span(1/2)
           width 50%
+          height 500px
           padding 100px 20px 100px 20px
           background-color Lead-Orange
         .section_divided_right
           span(1/2)
           width 50%
+          height 500px
           padding 100px 20px 100px 20px
           background-color #82c0c7
       .section_how_it_works
@@ -1151,16 +1150,16 @@
         font-weight: 300
         color black
         .section_how_it_works_image
-          body-mixin(backgroundImage: url(/images/interior5.png))
+          body-mixin(backgroundImage: url(/images/interior2.png))
           margin-top 29px
-          padding-bottom 400px
+          padding-bottom 600px
         .section_how_it_works_title
           margin 60px 60px 60px 30px
-          font-size 32px
+          font-size 22px
           color Lead-Orange
         .section_how_it_works_text
           margin 60px 60px 60px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_our_team
         padding 0px 0px 60px 0px
@@ -1171,13 +1170,13 @@
         text-align center
         .fa.fa-heart
           margin 60px 60px 20px 30px
-          font-size 80px
+          font-size 50px
         .section_our_team_title
           margin 20px 60px 60px 30px
-          font-size 32px
+          font-size 22px
         .section_our_team_text
           margin 60px 60px 60px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_budget
         padding 0px 0px 60px 0px
@@ -1188,15 +1187,15 @@
         text-align center
         .fa.fa-calculator
           margin 60px 60px 20px 30px
-          font-size 80px
+          font-size 50px
           color Lead-Orange
         .section_budget_title
           margin 20px 60px 60px 30px
-          font-size 32px
+          font-size 22px
           color Lead-Orange
         .section_budget_text
           margin 60px 60px 60px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_what_customers_want
         padding 60px 60px 60px 60px
@@ -1206,30 +1205,30 @@
         text-align center
         .section_what_customers_want_title
           margin-bottom 30px
-          font-size 35px
+          font-size 22px
         .fa.fa-check-square-o
-          font-size 35px
+          font-size 22px
           margin-right 10px
         .section_what_customers_want_item
           margin-bottom 20px
-          font-size 16px
+          font-size 12px
       .section_join_sosed
         background-color Lead-Orange
         color black
-        font-size 18px
+        font-size 12px
         text-transform: uppercase
         font-weight bold
         letter-spacing 1.4px
         line-height 200%
         .section_why_sosed_image
-          body-mixin(backgroundImage: url(/images/interior5.png))
+          backgroundImage: url(/images/interior6.png)
           padding-bottom 400px
         .fa.fa-line-chart,
         .fa.fa-paper-plane-o,
         .fa.fa-thumbs-up
-          shift 0.44
+          shift 0.3
           padding 50px 0px 0px 0px
-          font-size 100px
+          font-size 70px
           background-color Lead-Orange
           color black
         .section_join_sosed_introduce,
@@ -1247,12 +1246,12 @@
         text-align center
         .section_why_sosed_title
           margin 60px 60px 60px 30px
-          font-size 32px
+          font-size 16px
           color Lead-Blue
           font-weight bold
         .section_why_sosed_text
           margin 60px 60px 30px 30px
-          font-size 18px
+          font-size 12px
           line-height 150%
       .section_form
         letter-spacing 1.4px
@@ -1262,21 +1261,21 @@
           background-color Lead-Blue
           padding 50px 0px 30px 0px
         #mc_embed_signup label
-          font-size 24px
+          font-size 20px
           color white
           text-align center
         #mce-EMAIL
-          shift 0.26
+          shift 0.21
           width 200px
         #mc-embedded-subscribe 
-          shift 0.34
+          shift 0.32
           background-color Lead-Orange
           width 100px
       .section_company_info
         text-align center
         background-color Lead-Blue
         color white
-        font-size 14px
+        font-size 11px
         .section_company_info_name
           font-size 18px
           text-transform: uppercase

@@ -1,4 +1,4 @@
-+below(550px)
++below(350px)
   /* :::::::::::: APPLICATION.html.erb => menu buttons & login :::::::::::: */
   body
     margin 0px
@@ -481,7 +481,7 @@
     .body_orders_address_book
       body-mixin(backgroundImage: url(/images/interior6.png))
       .columns
-        column-mixin(margin-top = 25px)
+        column-mixin(defaultTop: 18px)
         .wookmark
           wookmarkMixin()
           .lead_box
@@ -569,7 +569,7 @@
     .body_profile
       body-mixin(backgroundImage: url(/images/interior3.png))
       .columns
-        column-mixin()
+        column-mixin(defaultTop: 18px)
         .wookmark
           wookmarkMixin()
           .lead_box
@@ -1050,11 +1050,11 @@
       font-family App-Font-Family
       .section_picture
         mobile-body-mixin(backgroundImage: url(/images/interior1.png))
-        margin-top 25px
+        margin-top 18px
         padding-bottom 400px
         .section_picture_background
           padding-top 100px
-          padding-bottom 5px
+          padding-bottom 33px
           opacity 0.8
           background-color black
           .section_picture_title
