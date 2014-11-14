@@ -227,10 +227,10 @@ html {
   box-sizing: inherit;
 }
 
-/* line 1 : /Users/ninabreznik/Code/Ruby/LeadShareApp/node_modules/axis/axis/tables.styl */
+/* line 1335 : /Users/ninabreznik/Code/Ruby/LeadShareApp/node_modules/axis/axis/tables.styl */
 
-/* line 36 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
-@media only screen and (min-width: 804px) {
+/* line 33 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
+@media only screen and (max-width: 5000px) {
 
 /* line 3 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
   body {
