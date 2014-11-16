@@ -18,8 +18,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # def destroy
-  # end
+  def destroy
+    redirect_to(root_path)
+  end
 
   private
 
