@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   resources :users 
     match '/users/:id/edit',       to: 'users#edit',                     via: 'edit'
-    # match '/users/sign_out',       to: 'sessions#destroy',        via: 'delete'
   
   resources :leads
   

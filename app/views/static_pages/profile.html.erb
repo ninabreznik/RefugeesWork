@@ -13,7 +13,7 @@
         <%= current_user.email %> 
       </div>
       <div class="profile_dashboard_body_logout">
-        <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :delete %> 
+        <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %> 
       </div>
       <div class="profile_dashboard_body_edit">
         <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
