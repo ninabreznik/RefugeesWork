@@ -868,7 +868,7 @@
               padding 4px
               border-radius 4px
               margin-top 4px
-              height 30px
+              height 40px
               width 80%
               border 1px solid Lead-Orange 
             #lead_name,
@@ -880,7 +880,7 @@
               margin-top 2px
               margin-left 0px
               font-size 12px
-              height 30px
+              height 40px
               width 80%
               border 1px solid #E8E8E8
             #lead_zip
@@ -892,7 +892,7 @@
               margin-top 2px
               margin-left 0px
               font-size 12px
-              height 30px
+              height 40px
               width 80%
               border 1px solid #E8E8E8  
             #lead_description
@@ -904,7 +904,7 @@
               margin-top 2px
               margin-left 0px
               font-size 12px
-              height 70px
+              height 80px
               width 80%
               border 1px solid #E8E8E8  
           .lead_new_form_remember_me
@@ -954,28 +954,49 @@
           text-align center
           margin-bottom 60px
         .lead_new_we_help_categories_list
-          text-align left
+          text-align center
           font-size 16px
           shift 0.03
           .fa.fa-check-square-o
             padding 10px 10px 0px 0px
-            font-size 28px
+            font-size 16px
             color #606060
             opacity 0.8
+      .lead_new_testimonials
+        padding 50px 220px 50px 220px
+        background-color Lead-Blue
+        text-align left
+        font-size 16px
+        .lead_new_testimonials_text
+          color #eee
+          text-align center
+          padding-bottom 50px
+          .fa.fa-quote-left,
+          .fa.fa-quote-right
+            font-size 25px
+            color white
+            padding 0px 5px 0px 5px
       .lead_new_company_info
         padding 50px 0px 50px 0px
         background-color black
         text-align center
         font-size 18px
-        .lead_new_company_info_name
-          font-size 20px
-          text-transform: uppercase
-          color white
-          font-weight bold
-        .lead_new_company_info_name,
-        .lead_new_company_info_contact
+        .lead_new_company_info_contact input,
+        .lead_new_company_info_contact a
           padding 7px 0px 0px 0px
-          color white      
+          color white
+          font-size 14px 
+          text-decoration none  
+          &:hover
+            color Lead-Orange
+        .lead_new_company_info_address
+          padding 7px 0px 0px 0px
+          color white
+          font-size 14px    
+        .lead_new_company_info_name,
+        .lead_new_company_info_phone
+          font-size 24px
+          color Lead-Orange
     /* :::::::::::: WALLET_PAYMENT => adding money to the wallet :::::::::::: */
     /* :::::::::::: same styling also for ORDERS/WALLET_PAYMENT_FOR LEADS:::::::::::: */
     .body_wallet_payment

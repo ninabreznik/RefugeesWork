@@ -24,6 +24,7 @@
     <div class="lead_new_form_time">
       <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}, required: "required" %> <br>
     </div>
+
     <div class="lead_new_form_zip">
       <%= l.label :"#{I18n.t'lead-new.form.zip'}" %>
       <%= l.text_field :zip, required: "required" %>
@@ -32,6 +33,7 @@
       <%= l.label :"#{I18n.t'lead-new.form.description'}" %>
       <%= l.text_field :description, required: "required" %>
     </div>
+    
     <div class="lead_new_form_name">
       <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
       <%= l.text_field :name %>
@@ -61,16 +63,27 @@
     <i class="fa fa-check-square-o"> Slikopleskarstvo</i> 
     <i class="fa fa-check-square-o"> Fasaderstvo</i> 
     <i class="fa fa-check-square-o"> Suhomontaža</i> 
+    <i class="fa fa-check-square-o"> Interior design</i>  
     <i class="fa fa-check-square-o"> Keramika</i> 
     <i class="fa fa-check-square-o"> Parket</i> 
     <i class="fa fa-check-square-o"> Elektrikarska dela</i> 
     <i class="fa fa-check-square-o"> Strojne instalacije</i> 
     <i class="fa fa-check-square-o"> Krovstvo</i> 
-    <i class="fa fa-check-square-o"> Mizarstvo</i>  
   </div>
 </section> 
+<section class="lead_new_testimonials">
+  <div class="lead_new_testimonials_text"><i class="fa fa-quote-left"></i>G. Robert, ki nam je barval fasado, je bil izredno prijazen, z zelo ugodno ponudbo.<i class="fa fa-quote-right"></i>(Danijel)</div>
+  
+
+  <div class="lead_new_testimonials_text"><i class="fa fa-quote-left"></i>Zelo sem zadovoljen in sem vas že priporočal naprej svojemu prijatelju.<i class="fa fa-quote-right"></i>(Milan)</div>
+  
+
+  <div class="lead_new_testimonials_text"><i class="fa fa-quote-left"></i>Všeč mi je, da sem z vašo pomočjo prišla v stik z zelo dobrim mojstrom, ki mi je pametno svetoval in to čisto brezplačno, potem pa sva se dogovorila še za dejansko sodelovanje, ki je bilo resnično profesionalno.<i class="fa fa-quote-right"></i>(Anja)</div>
+</section>
 <section class="lead_new_company_info">
+  <div class="lead_new_company_info_phone"> 080 4144</div>
   <div class="lead_new_company_info_name">Moj sosed d.o.o.</div>
-  <div class="lead_new_company_info_contact">Email: info@sosed.si</div>
+  <div class="lead_new_company_info_address">Radehova 39, 2230 Lenart</div>
+  <div class="lead_new_company_info_address">Jablonskistr. 24, 10405 Berlin</div>
+  <div class="lead_new_company_info_contact"><%= mail_to "info@sosed.si", "info@sosed.si" %></div>
 </section> 
-</div>
