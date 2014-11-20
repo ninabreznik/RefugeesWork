@@ -12,16 +12,6 @@
       width: device-width;
     }
   </style>
-</head>
-
-<body>
-  <a id="top" name="top"> &nbsp; </a>
- <div class="top_menu_bar">
-  <a href="<%= leads_new_path %>"><%= image_tag 'sosed.biz.png', :class => 'logo' %></a>
-</div>    
-  <%= yield %>
-
-  <a href='#top'><i class="fa fa-arrow-circle-up"></i></a>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,6 +22,16 @@
     ga('send', 'pageview');
 
   </script>
+</head>
+
+<body>
+  <a id="top" name="top"> &nbsp; </a>
+ <div class="top_menu_bar">
+  <a href="<%= leads_new_path %>"><%= image_tag 'sosed.biz.png', :class => 'logo' %></a>
+</div>    
+  <%= yield %>
+
+  <a href='#top'><i class="fa fa-arrow-circle-up"></i></a>
 </body>
 </html>
 
