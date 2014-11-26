@@ -1,7 +1,7 @@
 # require "bundler/capistrano"
 
 # load "config/recipes/database"
-load "config/recipes/mailer"
+# load "config/recipes/mailer"
 
 # set :stages, %w(development production)
 # set :default_stage, "development"
