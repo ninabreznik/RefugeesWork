@@ -54,23 +54,23 @@
 # set_default(:app_root) { "#{deploy_to}/current" }
 # set_default(:initd_script_target) { "/etc/init.d" }
 
-set :mailer_config do
- {
-     "#{rails_env}" => {
-         raise_delivery_errors: true,
-         default_url_options: {
-             host: defined?(mailer_host) ? mailer_host : "5.39.51.100"
-         },
-         delivery_method: :smtp,
-         smtp_settings: {
-             address: defined?(smtp_address) ? smtp_address : "smtp.mandrillapp.com",
-             port: defined?(smtp_port) ? smtp_port : 587,
-             user_name: "ninabreznik@gmail.com",
-             password: "GnUQAUKHxIO7YpSGcY2Lzg"
-         }
-     }
- }
-end
+# set :mailer_config do
+#  {
+#      "#{rails_env}" => {
+#          raise_delivery_errors: true,
+#          default_url_options: {
+#              host: defined?(mailer_host) ? mailer_host : "5.39.51.100"
+#          },
+#          delivery_method: :smtp,
+#          smtp_settings: {
+#              address: defined?(smtp_address) ? smtp_address : "smtp.mandrillapp.com",
+#              port: defined?(smtp_port) ? smtp_port : 587,
+#              user_name: "ninabreznik@gmail.com",
+#              password: ""
+#          }
+#      }
+#  }
+# end
 
 
 # # Custom SSH Options
