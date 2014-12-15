@@ -46,7 +46,7 @@ class Lead < ActiveRecord::Base
   end
   
   def steps
-    %w[first description]
+    %w[first description contact]
   end
 
   def next_step

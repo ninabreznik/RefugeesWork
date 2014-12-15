@@ -53,10 +53,9 @@ class LeadsController < ApplicationController
       @lead.next_step
     end
     session[:lead_step] = @lead.current_step
-    
     if @lead.save
-      redirect_to new_lead_confirmation_url
       session[:lead_step] = session[:lead_params] = nil
+      redirect_to new_lead_confirmation_url
     else 
       redirect_to leads_new_url
     end

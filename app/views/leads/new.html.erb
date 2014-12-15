@@ -20,8 +20,9 @@
     <%= form_for (@lead) do |l| %>
       <%= render "#{@lead.current_step}_step", :l => l %>
       <div class="lead_new_form_submit">
-        <%= l.submit "Naprej" %>
         <%= l.submit "Nazaj", :name => "back_button" unless @lead.first_step? %>
+        <%= l.submit "Naprej" unless @lead.last_step? %>
+        <%= l.submit "Pošlji" if @lead.last_step? %>
       </div>
     <% end %>
     <p><%= link_to "Nazaj", leads_new_path %></p>
