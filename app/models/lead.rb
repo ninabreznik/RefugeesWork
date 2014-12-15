@@ -8,6 +8,7 @@ class Lead < ActiveRecord::Base
                                    class_name: "Order",
                                    dependent: :destroy
   has_many :selectors, through: :reverse_orders, source: :selector
+  attr_writer :current_step
 
   # :::::::::::::: VALIDATIONS :::::::::::::::::::
 
@@ -18,6 +19,7 @@ class Lead < ActiveRecord::Base
   validates :email, presence: true
   validates :phone, presence: true
   # validates :name, presence: true
+
 
   def assign_location_from_zip
     if self.zip > 999 && self.zip < 1999
@@ -37,6 +39,30 @@ class Lead < ActiveRecord::Base
     elsif self.zip > 8999 && self.zip < 10000
       self.location = "Murska Sobota"                 
     end 
+  end
+
+  def current_step
+    @current_step || steps.first
+  end
+  
+  def steps
+    %w[first description]
+  end
+
+  def next_step
+    self.current_step = steps[steps.index(current_step)+1]
+  end
+
+  def previous_step
+    self.current_step = steps[steps.index(current_step)-1]
+  end
+
+  def first_step?
+    current_step == steps.first
+  end
+
+  def last_step?
+    current_step == steps.last
   end
 
 end
