@@ -4,10 +4,19 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users 
-    match '/users/:id/edit',       to: 'users#edit',                     via: 'edit'
+    match '/users/:id/edit',          to: 'users#edit',       via: 'edit'
   
   resources :leads
-  
+    match '/arhitekt',                to: 'leads#new',        via: 'get'
+    match '/fasaderstvo',             to: 'leads#new',        via: 'get'
+    match '/gradnja',                 to: 'leads#new',        via: 'get'
+    match '/instalacije',             to: 'leads#new',        via: 'get'
+    match '/krovstvo',                to: 'leads#new',        via: 'get'
+    match '/prenove',                 to: 'leads#new',        via: 'get'
+    match '/slikopleskarstvo',        to: 'leads#new',        via: 'get'
+    match '/zidarstvo',               to: 'leads#new',        via: 'get'
+
+
   resources :paypal_notifications, only: [:create]
     match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
   

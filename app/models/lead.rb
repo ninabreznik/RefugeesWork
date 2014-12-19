@@ -46,7 +46,11 @@ class Lead < ActiveRecord::Base
   end
   
   def steps
-    %w[first description contact]
+    if business_type == "#{I18n.t'lead-new.form.business-types.building_house'}"
+      %w[first building_house description contact]
+    else
+      %w[first description contact]
+    end
   end
 
   def next_step

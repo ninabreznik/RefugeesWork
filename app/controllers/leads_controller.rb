@@ -19,24 +19,23 @@ class LeadsController < ApplicationController
     @lead = Lead.new(session[:lead_params])
     @lead.current_step = session[:lead_step]
 
-    @business_types = [
-      ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"], 
+     @business_types = [
+      ["#{I18n.t'lead-new.form.business-types.architecture'}", "#{I18n.t'lead-new.form.business-types.architecture'}"], 
       ["#{I18n.t'lead-new.form.business-types.fasades'}", "#{I18n.t'lead-new.form.business-types.fasades'}"], 
-      ["#{I18n.t'lead-new.form.business-types.renovations'}", "#{I18n.t'lead-new.form.business-types.renovations'}"],
-      ["#{I18n.t'lead-new.form.business-types.mechanical_installations'}", "#{I18n.t'lead-new.form.business-types.mechanical_installations'}"],
-      ["#{I18n.t'lead-new.form.business-types.electrical_installations'}", "#{I18n.t'lead-new.form.business-types.electrical_installations'}"], 
-      ["#{I18n.t'lead-new.form.business-types.knauf'}", "#{I18n.t'lead-new.form.business-types.knauf'}"],
-      ["#{I18n.t'lead-new.form.business-types.ceramics'}", "#{I18n.t'lead-new.form.business-types.ceramics'}"], 
-      ["#{I18n.t'lead-new.form.business-types.parquet'}", "#{I18n.t'lead-new.form.business-types.parquet'}"], 
+      ["#{I18n.t'lead-new.form.business-types.building_house'}", "#{I18n.t'lead-new.form.business-types.building_house'}"],
+      ["#{I18n.t'lead-new.form.business-types.instalations'}", "#{I18n.t'lead-new.form.business-types.instalations'}"],
       ["#{I18n.t'lead-new.form.business-types.roofing'}", "#{I18n.t'lead-new.form.business-types.roofing'}"], 
-      ["#{I18n.t'lead-new.form.business-types.masonry'}", "#{I18n.t'lead-new.form.business-types.masonry'}"]
+      ["#{I18n.t'lead-new.form.business-types.renovations'}", "#{I18n.t'lead-new.form.business-types.renovations'}"], 
+      ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"],
+      ["#{I18n.t'lead-new.form.business-types.masonry'}", "#{I18n.t'lead-new.form.business-types.masonry'}"], 
     ]
 
     @time = [
       ["#{I18n.t'lead-new.form.form-time.asap'}"], 
       ["#{I18n.t'lead-new.form.form-time.fourteendays'}"], 
       ["#{I18n.t'lead-new.form.form-time.onetothreemonths'}"], 
-      ["#{I18n.t'lead-new.form.form-time.flexible'}"]
+      ["#{I18n.t'lead-new.form.form-time.flexible'}"],
+      ["#{I18n.t'lead-new.form.form-time.informative'}"] 
     ]
     render 'new', layout: 'adwords_layout'
   end
