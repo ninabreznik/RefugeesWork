@@ -10,7 +10,11 @@
   <table class="wallet_payment_offer_company_info">
     <tr class="wallet_payment_offer_company_info_item" >
       <td><%= I18n.t'wallet-payment.offer_item_username' %>:</td>
-      <td><%= current_user.email %></td>
+      <% if user_signed_in? %>
+        <td><%= current_user.email %></td>
+      <% else %>
+        <td> Vaše podjetje </td>
+      <% end %>
     </tr>
   </table>
 
