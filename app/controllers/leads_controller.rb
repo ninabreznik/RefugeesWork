@@ -15,42 +15,61 @@ class LeadsController < ApplicationController
   end
 
   def new
-    @lead = Lead.new
+    session[:lead_params] ||= {}
+    @lead = Lead.new(session[:lead_params])
+    @lead.current_step = session[:lead_step]
 
-    @business_types = [
-      ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"], 
+     @business_types = [
+      ["#{I18n.t'lead-new.form.business-types.architecture'}", "#{I18n.t'lead-new.form.business-types.architecture'}"], 
       ["#{I18n.t'lead-new.form.business-types.fasades'}", "#{I18n.t'lead-new.form.business-types.fasades'}"], 
-      ["#{I18n.t'lead-new.form.business-types.renovations'}", "#{I18n.t'lead-new.form.business-types.renovations'}"],
-      ["#{I18n.t'lead-new.form.business-types.mechanical_installations'}", "#{I18n.t'lead-new.form.business-types.mechanical_installations'}"],
-      ["#{I18n.t'lead-new.form.business-types.electrical_installations'}", "#{I18n.t'lead-new.form.business-types.electrical_installations'}"], 
-      ["#{I18n.t'lead-new.form.business-types.knauf'}", "#{I18n.t'lead-new.form.business-types.knauf'}"],
-      ["#{I18n.t'lead-new.form.business-types.ceramics'}", "#{I18n.t'lead-new.form.business-types.ceramics'}"], 
-      ["#{I18n.t'lead-new.form.business-types.parquet'}", "#{I18n.t'lead-new.form.business-types.parquet'}"], 
+      ["#{I18n.t'lead-new.form.business-types.building_house'}", "#{I18n.t'lead-new.form.business-types.building_house'}"],
+      ["#{I18n.t'lead-new.form.business-types.mechanical_instalations'}", "#{I18n.t'lead-new.form.business-types.mechanical_instalations'}"],
+      ["#{I18n.t'lead-new.form.business-types.electrical_instalations'}", "#{I18n.t'lead-new.form.business-types.electrical_instalations'}"],
       ["#{I18n.t'lead-new.form.business-types.roofing'}", "#{I18n.t'lead-new.form.business-types.roofing'}"], 
-      ["#{I18n.t'lead-new.form.business-types.masonry'}", "#{I18n.t'lead-new.form.business-types.masonry'}"]
+      ["#{I18n.t'lead-new.form.business-types.renovations'}", "#{I18n.t'lead-new.form.business-types.renovations'}"], 
+      ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"],
+      ["#{I18n.t'lead-new.form.business-types.masonry'}", "#{I18n.t'lead-new.form.business-types.masonry'}"], 
     ]
 
     @time = [
-      ["#{I18n.t'lead-new.form.form-time.asap'}"], 
       ["#{I18n.t'lead-new.form.form-time.fourteendays'}"], 
       ["#{I18n.t'lead-new.form.form-time.onetothreemonths'}"], 
-      ["#{I18n.t'lead-new.form.form-time.flexible'}"]
+      ["#{I18n.t'lead-new.form.form-time.flexible'}"],
+      ["#{I18n.t'lead-new.form.form-time.consulting'}"],
+      ["#{I18n.t'lead-new.form.form-time.informative'}"] 
     ]
+
+    @property_types = [
+      ["Hiša"],
+      ["Večstanovanjski objekt"],
+      ["Pisarna"],
+      ["Poslovni prostor"],
+      ["Drugo"]
+    ]
+
+    @material_supply = [
+      ["Da, sami bomo priskrbeli material."],
+      ["Da, vendar bi potrebovali pomoč."],
+      ["Ne, potrebovali bomo tudi material."]
+    ]
+
     render 'new', layout: 'adwords_layout'
   end
 
   def create
-    @lead = Lead.create(
-      :name           => params[:lead][:name], 
-      :email          => params[:lead][:email], 
-      :description    => params[:lead][:description], 
-      :zip            => params[:lead][:zip], 
-      :phone          => params[:lead][:phone], 
-      :business_type  => params[:lead][:business_type], 
-      :time           => params[:lead][:time], 
-      :location       => params[:lead][:location]
-    )
+    session[:lead_params].deep_merge!(lead_params) if (lead_params)
+    @lead = Lead.new(session[:lead_params])
+    @lead.current_step = session[:lead_step]
+    if params[:back_button]
+      @lead.previous_step
+    elsif @lead.last_step?
+        @lead.save 
+    else
+      @lead.next_step
+    end
+    session[:lead_step] = @lead.current_step
     if @lead.save
+      session[:lead_step] = session[:lead_params] = nil
       redirect_to new_lead_confirmation_url
     else 
       redirect_to leads_new_url
@@ -75,6 +94,8 @@ class LeadsController < ApplicationController
       :business_type, 
       :time, 
       :location,
+      :material_supply,
+      :property_type,
       :selector_id,
       :selected_id,
       :payer_id,
@@ -82,6 +103,7 @@ class LeadsController < ApplicationController
       :paid
     )
   end
+
 
   def current_lead
     current_lead=(lead)

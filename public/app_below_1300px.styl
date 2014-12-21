@@ -235,9 +235,6 @@
           -moz-osx-font-smoothing: grayscale
           color Offer-Font-Color
           line-height 150%
-          .lead_show_items_long
-            width 40%
-            padding-left 140px
           .lead_show_items_short_additional
             padding 5px
             width 100%
@@ -853,16 +850,19 @@
           .lead_new_form_description,
           .lead_new_form_name,
           .lead_new_form_email,
-          .lead_new_form_phone
+          .lead_new_form_phone,
+          .lead_new_form_property_type,
+          .lead_new_form_material_supply
             color white
             padding-left 20px
             padding-right 20px
             font-size 12px
             margin-bottom 14px
-            #lead_business_type,
-            #lead_time
+            #lead_business_type,    
+            #lead_time,
+            #lead_property_type,
+            #lead_material_supply
               color Offer-Font-Color
-              background-color Lead-Orange
               font-weight bold
               font-size 12px
               padding 4px
@@ -870,7 +870,7 @@
               margin-top 4px
               height 40px
               width 80%
-              border 1px solid Lead-Orange 
+              border 1px solid #E8E8E8   
             #lead_name,
             #lead_email,
             #lead_phone
@@ -906,7 +906,9 @@
               font-size 12px
               height 80px
               width 80%
-              border 1px solid #E8E8E8  
+              border 1px solid #E8E8E8
+            #lead_description input
+              display inline-block  
           .lead_new_form_remember_me
             font-size 10px  
           .lead_new_form_submit input

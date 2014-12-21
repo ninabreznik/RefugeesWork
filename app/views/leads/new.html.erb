@@ -7,7 +7,7 @@
     <div class="lead_new_explanation_second"> 
       <i class="fa fa-files-o"></i>        Primerjajte ponudbe           </div>
     <div class="lead_new_explanation_third">  
-      <i class="fa fa-check-square-o"></i> Izberite pravega izvajalca.  </div>
+      <i class="fa fa-check-square-o"></i> Izberite preverjenega izvajalca.  </div>
   </div>
   <div class="lead_new">
     <div class="lead_new_title">
@@ -17,38 +17,13 @@
       <%= I18n.t'lead-new.instructions' %>
     </div>
 
-  <%= form_for (@lead) do |l| %>
-    <div class="lead_new_form_business_type">
-      <%= l.select :business_type, @business_types, {:prompt=>"#{I18n.t'lead-new.form.prompt-business-type'}"}, required: "required" %> <br>
-    </div>
-    <div class="lead_new_form_time">
-      <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}, required: "required" %> <br>
-    </div>
-
-    <div class="lead_new_form_zip">
-      <%= l.label :"#{I18n.t'lead-new.form.zip'}" %>
-      <%= l.text_field :zip, required: "required" %>
-    </div>
-    <div class="lead_new_form_description">
-      <%= l.label :"#{I18n.t'lead-new.form.description'}" %>
-      <%= l.text_field :description, required: "required" %>
-    </div>
-    
-    <div class="lead_new_form_name">
-      <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
-      <%= l.text_field :name %>
-    </div>
-    <div class="lead_new_form_email">
-      <%= l.label :"#{I18n.t'lead-new.form.email'}" %>
-      <%= l.text_field :email, required: "required" %>
-    </div>
-    <div class="lead_new_form_phone">
-      <%= l.label :"#{I18n.t'lead-new.form.phone'}" %>
-      <%= l.text_field :phone, required: "required" %>
-    </div>
-    <div class="lead_new_form_submit">
-      <%= l.submit "Send" %>
-    </div>
+    <%= form_for (@lead) do |l| %>
+      <%= render "#{@lead.current_step}_step", :l => l %>
+      <div class="lead_new_form_submit">
+        <%= l.submit "Nazaj", :name => "back_button" unless @lead.first_step? %>
+        <%= l.submit "Naprej" unless @lead.last_step? %>
+        <%= l.submit "Pošlji" if @lead.last_step? %>
+      </div>
     <% end %>
   </div>
 </section>
@@ -60,15 +35,15 @@
     Več sto strank je že uspešno zaključilo svoj projekt v skupaj preko 10 kategorijah.
   </div>
   <div class="lead_new_we_help_categories_list">
-    <i class="fa fa-check-square-o"> Slikopleskarstvo</i> 
-    <i class="fa fa-check-square-o"> Fasaderstvo</i> 
-    <i class="fa fa-check-square-o"> Suhomontaža</i> 
-    <i class="fa fa-check-square-o"> Interior design</i>  
-    <i class="fa fa-check-square-o"> Keramika</i> 
-    <i class="fa fa-check-square-o"> Parket</i> 
-    <i class="fa fa-check-square-o"> Elektrikarska dela</i> 
+    <i class="fa fa-check-square-o"> Arhitekti</i> 
+    <i class="fa fa-check-square-o"> Gradnja</i> 
+    <i class="fa fa-check-square-o"> Zidarstvo</i> 
+    <i class="fa fa-check-square-o"> Prenove</i>  
     <i class="fa fa-check-square-o"> Strojne instalacije</i> 
-    <i class="fa fa-check-square-o"> Krovstvo</i> 
+    <i class="fa fa-check-square-o"> Električne instalacije</i> 
+    <i class="fa fa-check-square-o"> Slikopleskarstvo</i> 
+    <i class="fa fa-check-square-o"> Fasade</i> 
+    <i class="fa fa-check-square-o"> Strehe</i> 
   </div>
 </section> 
 <section class="lead_new_testimonials">

@@ -1,0 +1,22 @@
+<div class="lead_body">
+  <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.location' %>:</div>     
+    <%= lead.location %>   <br>
+  <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.zip' %>:</div>          
+    <%= lead.zip %>        <br>
+  <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.time' %>:</div>         
+    <%= lead.time %>       <br>
+  <% if lead.property_type.present? %>
+    <div class="lead_subtitle">Vrsta objekta:</div>         
+      <%= lead.property_type %>       <br>
+  <% else %>
+  <% end %>
+  <% if lead.material_supply.present? %>
+    <div class="lead_subtitle">Bo stranka priskrbela material?:</div>         
+    <%= lead.material_supply %>       <br>  
+  <% else %>
+  <% end %>
+  <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.description' %>:</div>  
+    <%= lead.description %><br>
+  <div class="lead_subtitle"><%= I18n.t'leadsindex-lead.name' %>:</div>        
+    <%= lead.name %>       <br>
+</div>
