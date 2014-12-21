@@ -23,7 +23,8 @@ class LeadsController < ApplicationController
       ["#{I18n.t'lead-new.form.business-types.architecture'}", "#{I18n.t'lead-new.form.business-types.architecture'}"], 
       ["#{I18n.t'lead-new.form.business-types.fasades'}", "#{I18n.t'lead-new.form.business-types.fasades'}"], 
       ["#{I18n.t'lead-new.form.business-types.building_house'}", "#{I18n.t'lead-new.form.business-types.building_house'}"],
-      ["#{I18n.t'lead-new.form.business-types.instalations'}", "#{I18n.t'lead-new.form.business-types.instalations'}"],
+      ["#{I18n.t'lead-new.form.business-types.mechanical_instalations'}", "#{I18n.t'lead-new.form.business-types.mechanical_instalations'}"],
+      ["#{I18n.t'lead-new.form.business-types.electrical_instalations'}", "#{I18n.t'lead-new.form.business-types.electrical_instalations'}"],
       ["#{I18n.t'lead-new.form.business-types.roofing'}", "#{I18n.t'lead-new.form.business-types.roofing'}"], 
       ["#{I18n.t'lead-new.form.business-types.renovations'}", "#{I18n.t'lead-new.form.business-types.renovations'}"], 
       ["#{I18n.t'lead-new.form.business-types.painting'}", "#{I18n.t'lead-new.form.business-types.painting'}"],
@@ -31,12 +32,27 @@ class LeadsController < ApplicationController
     ]
 
     @time = [
-      ["#{I18n.t'lead-new.form.form-time.asap'}"], 
       ["#{I18n.t'lead-new.form.form-time.fourteendays'}"], 
       ["#{I18n.t'lead-new.form.form-time.onetothreemonths'}"], 
       ["#{I18n.t'lead-new.form.form-time.flexible'}"],
+      ["#{I18n.t'lead-new.form.form-time.consulting'}"],
       ["#{I18n.t'lead-new.form.form-time.informative'}"] 
     ]
+
+    @property_types = [
+      ["Hiša"],
+      ["Večstanovanjski objekt"],
+      ["Pisarna"],
+      ["Poslovni prostor"],
+      ["Drugo"]
+    ]
+
+    @material_supply = [
+      ["Da, sami bomo priskrbeli material."],
+      ["Da, vendar bi potrebovali pomoč."],
+      ["Ne, potrebovali bomo tudi material."]
+    ]
+
     render 'new', layout: 'adwords_layout'
   end
 
@@ -78,6 +94,8 @@ class LeadsController < ApplicationController
       :business_type, 
       :time, 
       :location,
+      :material_supply,
+      :property_type,
       :selector_id,
       :selected_id,
       :payer_id,

@@ -346,13 +346,14 @@ si:
 
   lead-new:
     title:  "Pošljite brezplačno povpraševanje"
-    instructions: "Oddajte povpraševanje in 5 izbranih izvajalcev se vam bo oglasilo z neobvezujočimi ponudbami."
+    instructions: "Oddajte povpraševanje in 5 preverjenih izvajalcev se vam bo oglasilo z neobvezujočimi ponudbami."
     form:
       business-types:
         architecture: "Arhitekti"
         fasades: "Fasaderstvo"
         building_house: "Gradnja"
-        instalations: "Instalacije"
+        mechanical_instalations: "Strojne instalacije"
+        electrical_instalations: "Električne instalacije"
         roofing: "Strehe"
         renovations: "Prenova"
         painting: "Slikopleskarstvo"
@@ -362,9 +363,10 @@ si:
         fourteendays: "V naslednjih 14 dneh"
         onetothreemonths: "V 1-3 mesecev"
         flexible: "Po dogovoru"
+        consulting: "Potrebujem svetovanje (več ur)"
         informative: "Zanima me informativna cena"
       prompt-business-type: "Katerega izvajalca potrebujete? *"
-      prompt-time: "Kdaj *"
+      prompt-time: "Kdaj bi želeli pričeti s projektom? *"
       business_type: "Dejavnost *"
       time: "Termin *"
       zip: "Poštna številka *"
