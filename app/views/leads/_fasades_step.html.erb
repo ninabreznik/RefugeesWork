@@ -8,14 +8,6 @@
   <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}%> <br>
 </div>
 
-<!-- <div class="lead_new_form_property_type">
-  <%= l.select :property_type, @property_types, {:prompt=>"Vrsta objekta"}%> <br>
-</div>
-
-<div class="lead_new_form_material_supply">
-  <%= l.select :material_supply, @material_supply, {:prompt=>"Boste sami priskrbeli material?"}%> <br>
-</div> -->
-
 <div class="lead_new_form_name">
   <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
   <%= l.text_field :name %>
