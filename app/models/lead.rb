@@ -1,6 +1,7 @@
 class Lead < ActiveRecord::Base
 
   before_create :assign_location_from_zip
+  before_save :assign_location_from_zip
 # ###############################################################################
 # Relationship betweer User & Lead, through Order
 # ###############################################################################
