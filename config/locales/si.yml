@@ -11,7 +11,7 @@ si:
       signup: "registriraj se"
     bottom-menu:
       home: " DOMOV"
-      reserved: " SLEDIM"
+      reserved: " SPREMLJAM"
       address-book: " IMENIK KONTAKTOV"
       profile: " PROFIL"
 
@@ -195,7 +195,7 @@ si:
 
 # Titles
   ordersindex-titles:
-    reserved: "Trenutno ne sledite nobenim kontaktom."
+    reserved: "Trenutno ne spremljate nobenih kontaktov."
     address-book: "Trenutno nimate nobenega zakupljenega kontakta."
 
 # Lead body
@@ -219,14 +219,14 @@ si:
 # Buttons
   ordersindex-buttons: 
     buy: "Kupi za 10€"
-    remove-from-reserved: "Ne sledi več"
+    remove-from-reserved: "Ne spremljaj več"
     save: "Shrani"
     signup: "Registracija"
     login: "Prijava"
 
 # Users not signed_in text box
   ordersindex_not_signed_in:
-    text_box: "Dobrodošli! Naj tej strani najdete kontakte, ki jim sledite - tiste, ki jih boste morda zakupili v prihodnje. Za dodajanje novih ali brskanje kontaktov, ki jim sledite, je potrebna "
+    text_box: "Dobrodošli! Naj tej strani najdete kontakte, ki jih spremljate - tiste, ki jih boste morda zakupili v prihodnje. Za dodajanje novih ali brskanje kontaktov, ki jih spremljate, je potrebna "
 
 
 
