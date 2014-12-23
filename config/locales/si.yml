@@ -321,7 +321,7 @@ si:
 # ############################################################################################
   wallet-payment:
     offer_title: "Nakup kontaktov"
-    offer_promotion: "::::::::::::: NOVO! Prihranite za kontakte in izberite 1 ali 6 mesecev brezplačnih kontaktov! :::::::::::::"
+    offer_promotion: "::::::::::::: NOVO! Prihranite za kontakte in izberite 1 ali 6 mesecev neomejenih kontaktov! :::::::::::::"
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
     offer_price: "Cena"
