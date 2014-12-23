@@ -4,7 +4,7 @@
 
 <ul class="wookmark">
 <% if @leads.present? %>
-  <% @leads.sort.reverse.each do |lead| %>
+  <% @sorted_leads.each do |lead| %>
     <% if user_signed_in? %> 
       <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>

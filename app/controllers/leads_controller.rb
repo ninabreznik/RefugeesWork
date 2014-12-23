@@ -4,6 +4,7 @@ class LeadsController < ApplicationController
     @leads = Lead.all
     @lead = Lead.find_by_id(params[:id])
     @user = current_user
+    @sorted_leads = @leads.sort.reverse
   end
 
   def show
