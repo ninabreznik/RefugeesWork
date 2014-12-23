@@ -320,12 +320,12 @@ si:
 # Page 9 - WALLET/PAYMENT (top up the wallet)
 # ############################################################################################
   wallet-payment:
-    offer_title: "Polnjenje denarnice"
-    offer_promotion: "Pri polnjenju denarnice za 100€ ali več vam podarimo dodatnih 10% vrednosti. Za 100€ prejmete tako dodatnih 10€, za 200€ dodatnih 20€ itd."
+    offer_title: "Nakup kontaktov"
+    offer_promotion: "::::::::::::: NOVO! Prihranite za kontakte in izberite 1 ali 6 mesecev brezplačnih kontaktov! :::::::::::::"
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
     offer_price: "Cena"
-    offer_price_amount: "100€ za 10 kontaktov, 200€ za 20 kontaktov, 300€ za 30 kontaktov itd."
+    offer_price_amount: "1 kontakt (10€), 1 mesec neomejenih kontaktov (45€) ali 6 mesecev neomejenih kontaktov (240€)"
     offer_purpose: "Referenca"
     offer_purpose_text: "SI05 19-1235-84503"
     offer_account: "Številka računa"
@@ -338,7 +338,7 @@ si:
     offer_mojsosed_address: "Radehova 39"
     offer_city: "Kraj"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "Takoj po prejemu plačila bomo napolnili vašo denarnico. Stanje lahko vedno preverite na Profilu. Za morebitna dodatna vprašanja smo vam vedno na voljo na info@sosed.si"
+    offer_instructions: "Takoj po prejemu plačila boste lahko dostopili do enega oz. neomejenih kontaktov. Za morebitna dodatna vprašanja smo vam vedno na voljo na nina.breznik@sosed.si"
 
 # ############################################################################################
 # Page 10 - LEADS/NEW (for getting customer leads)
