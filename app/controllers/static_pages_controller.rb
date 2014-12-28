@@ -12,7 +12,8 @@ class StaticPagesController < ApplicationController
   def info
   end
 
-  def faq
+  def profile
+    render 'profile', layout: 'with_zopim'
   end
 
   def contact
