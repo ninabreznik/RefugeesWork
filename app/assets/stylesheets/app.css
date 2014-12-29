@@ -233,7 +233,7 @@ html {
 @media only screen and (max-width: 5000px) {
 
 /* line 3 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
-  .zopim:last-child {
+  .zopim {
     position: absolute;
     bottom: 38px;
   }
@@ -3900,7 +3900,7 @@ html {
   }
 }
 
-/* line 1 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
+/* line 1302 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_804px.styl */
 @media only screen and (max-width: 804px) {
