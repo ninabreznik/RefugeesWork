@@ -227,7 +227,7 @@ html {
   box-sizing: inherit;
 }
 
-/* line 1 : /Users/ninabreznik/Code/Ruby/LeadShareApp/node_modules/axis/axis/tables.styl */
+/* line 1361 : /Users/ninabreznik/Code/Ruby/LeadShareApp/node_modules/axis/axis/tables.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
 @media only screen and (max-width: 5000px) {
@@ -258,7 +258,7 @@ html {
 
 /* line 6 : /Users/ninabreznik/Code/Ruby/LeadShareApp/public/app_below_1300px.styl */
   body .zopim:last-child {
-    position: absolute;
+    position: relative;
     bottom: 38px;
   }
 
