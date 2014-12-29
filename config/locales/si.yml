@@ -124,7 +124,7 @@ si:
 
 # Links
   leadsshow-links: 
-    buy: "Kupi za 10€"
+    follow: "Spremljaj/Kupi kontakt"
 
 
 
@@ -154,7 +154,7 @@ si:
 
 # Payment buttons
   ordersshow-payment-buttons:
-    choose-payment-text: "Izberite način plačila"
+    choose-payment-text: "Izberite način plačila za nakup kontakta"
     paypal-checkout: "Paypal" 
     wallet: "Denarnica" 
     bank-transfer: "Predračun" 
@@ -218,7 +218,7 @@ si:
     signed_in_but_no_bought: "V imeniku kontaktov vas bodo čakali kontakti strank, ki ste jih zakupili. Zraven vsakega kontakta imate tudi beležko, kamor zabeležite, v kateri fazi dogovorov ste trenutno s stranko."
 # Buttons
   ordersindex-buttons: 
-    buy: "Kupi za 10€"
+    buy: "Kupi"
     remove-from-reserved: "Ne spremljaj več"
     save: "Shrani"
     signup: "Registracija"
@@ -301,7 +301,7 @@ si:
     offer_mojsosed_address: "Radehova 39"
     offer_city: "Kraj"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "Po prejemu plačila bomo znesek dodali v vašo Denarnico in lahko boste kupili željen kontakt. Če želite napolniti denarnico za prihodnje nakupe, vplačajte željen znesek (npr. 100 evrov za 10 kontaktov) in kupujte kontakte preprosto s klikom na Denarnico. Več na info@sosed.si"
+    offer_instructions: "Po prejemu plačila bomo znesek dodali v vašo Denarnico in lahko boste kupili željen kontakt. Če želite kupiti več kontaktov, si poglejte ponudbo za mesečno naročnino."
     lead:
       location: "Regija" 
       zip: "Pošta"

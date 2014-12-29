@@ -2,63 +2,64 @@
 <div class="body_orders_show">
   <a class="back_to_main_page_button" href="/"></a>
   <% if @order.present? %>
-<div class="order_show">
-  <div class="order_show_title">
-    <%= @lead.business_type %> 
-  </div>
-  <div class="lead_show_body">
-  <div class="lead_show_items_short">      
-      <div class="lead_show_item">
-        <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.location' %>:</div> 
-        <%= @lead.location %>
-      </div> 
-      <div class="lead_show_item">          
-        <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.zip' %>:</div> 
-        <%= @lead.zip %> 
-      </div> 
-      <div class="lead_show_item">             
-        <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> 
-        <%= @lead.time %>
+    <div class="order_show">
+      <div class="order_show_title">
+        <%= @lead.business_type %> 
       </div>
-      <div class="lead_show_item">          
-        <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.description' %>:</div> 
-        <%= @lead.description %> 
-      </div>
-      <div class="lead_show_item">    
-        <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.name' %>:</div> 
-        <%= @lead.name %> 
-      </div> 
-    </div>         
+      <div class="lead_show_body">
+        <div class="lead_show_items_short">      
+          <div class="lead_show_item">
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.location' %>:</div> 
+              <%= @lead.location %>
+          </div> 
+          <div class="lead_show_item">          
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.zip' %>:</div> 
+              <%= @lead.zip %> 
+          </div> 
+          <div class="lead_show_item">             
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> <%= @lead.time %>
+          </div>
+          <div class="lead_show_item">          
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.description' %>:</div> 
+              <%= @lead.description %> 
+          </div>
+          <div class="lead_show_item">    
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.name' %>:</div> 
+              <%= @lead.name %> 
+          </div> 
+        </div>         
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
         <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
           <div class="lead_show_items_short_additional">
             <div class="lead_show_item"> 
               <div class="lead_show_subtitle"><%= I18n.t'ordersshow-lead.phone' %>:</div>
-              <%= @lead.phone %> 
+                <%= @lead.phone %> 
             </div> 
             <div class="lead_show_item"> 
               <div class="lead_show_subtitle"><%= I18n.t'ordersshow-lead.email' %>:</div>
-              <%= @lead.email %>          
+                <%= @lead.email %>          
             </div>
           </div>
-          <div class="order_show_notes">
-            <div class="order_show_notes_title">
-              <%= I18n.t'ordersshow-lead.notes' %>:  
-            </div>                             
-            <%= form_for (@order) do |l| %>
-              <div class="order_show_notes_text_area">
-                <%= text_area(:order, :notes, :size => 20, :value => "#{@order.notes}") %>
-              </div>
-              <div class="order_show_notes_submit">
-                <%= l.submit "#{I18n.t'ordersshow-links.notes-save'}" %>
-              </div>
-            <% end %>
-          </div>
+            <div class="order_show_notes">
+              <div class="order_show_notes_title">
+                <%= I18n.t'ordersshow-lead.notes' %>:  
+              </div>                             
+              <%= form_for (@order) do |l| %>
+                <div class="order_show_notes_text_area">
+                  <%= text_area(:order, :notes, :size => 20, :value => "#{@order.notes}") %>
+                </div>
+                <div class="order_show_notes_submit">
+                  <%= l.submit "#{I18n.t'ordersshow-links.notes-save'}" %>
+                </div>
+              <% end %>
+            </div>
         <% else %>
+         <!--  <%= render 'buy_popup' %> -->
           <%= render 'leads/payment_buttons' %>
         <% end %>
       <% else %>
+       <!--  <%= render 'buy_popup' %> -->
         <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>
           <div class="order_show_buy">       
@@ -71,11 +72,11 @@
         <%= link_to "#{I18n.t'ordersshow-links.buy'}", user_registration_path %>
       </div>      
     <% end %>
-<% else %>
-<div class="order_show_not_avaliable">  
-  <%= I18n.t'ordersshow-notification.lead-not-available' %>
-</div>
-<% end %>
-</div>
-</div>
-</div>
+  <% else %>
+    <div class="order_show_not_avaliable">  
+      <%= I18n.t'ordersshow-notification.lead-not-available' %>
+    </div>
+  <% end %>
+  </div>
+  </div>
+  </div>

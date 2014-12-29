@@ -41,14 +41,14 @@
           <%- # PLEASE REFACTOR ME! NO DB QUERY OR BUILD STATEMENT IN VIEWS! %>
           <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
             <%= o.hidden_field :selected_id %>       
-            <%= o.submit "#{I18n.t'leadsshow-links.buy'}" %>
+            <%= o.submit "#{I18n.t'leadsshow-links.follow'}" %>
           <% end %>
         </div>
       </div>
       <% end %> 
     <% else%>
       <div class="lead_show_buy">
-        <%= link_to "#{I18n.t'leadsshow-links.buy'}", user_registration_path %>
+        <%= link_to "#{I18n.t'leadsshow-links.follow'}", user_registration_path %>
       </div>      
     <% end %>
     </div>
