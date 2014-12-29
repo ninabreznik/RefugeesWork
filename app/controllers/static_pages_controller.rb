@@ -13,7 +13,6 @@ class StaticPagesController < ApplicationController
   end
 
   def profile
-    render 'profile', layout: 'with_zopim'
   end
 
   def contact
