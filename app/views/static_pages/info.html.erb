@@ -1,16 +1,4 @@
 <div class="body_info_singlepage">
-  <div class="section_picture">
-    <div class="section_picture_background">
-      <div class="section_picture_title">SOSED.BIZ</div>
-      <div class="section_picture_text">Vsak dan nova povpraševanja strank.</div>
-      <div class="section_picture_buttons">
-        <div class="section_picture_buttons_signup"><%= link_to "#{I18n.t'staticpagesprofile-links.sign-up'}", new_user_registration_path %></div>
-        <div class="section_picture_buttons_signin"><%= link_to "#{I18n.t'staticpagesprofile-links.sign-in'}", new_user_session_path %></div>
-      </div>
-      <i class="fa fa-angle-down"></i>
-    </div>
-  </div>
-
   <section class="section_welcome">
     <div class="section_welcome_title">Dobrodošli na Sosed.biz</div>
     <div class="section_welcome_subtitle">STE PRIPRAVLJENI NA NOVE STRANKE?</div>
@@ -19,10 +7,10 @@
 
   <section class="section_divided">
     <div class="section_divided_left">
-      Na našo stran prihaja na desetine strank, ki iščejo zanesljive izvajalce za izvedbo njihovih projektov.
+      Na našo stran dnevno prihajajo stranke, ki iščejo zanesljive izvajalce za izvedbo njihovih projektov.
     </div>
     <div class="section_divided_right">
-      V bazi imamo tudi že nekaj 100 izvajalcev, ki z našo pomočjo povečujejo obseg svojega posla.
+      V bazi imamo tudi že nekaj deset izvajalcev iz različnih področij, ki z našo pomočjo povečujejo obseg svojega posla.
     </div>
   </section>
 
@@ -43,7 +31,7 @@
   <section class="section_budget">
     <i class="fa fa-calculator"></i>
     <div class="section_budget_title">Sami odločate, koliko denarja boste porabili na Sosed.biz.</div>
-    <div class="section_budget_text">Ponavadi za določeno povpraševanje tekmujete z enim ali dvema ponudnikoma, maksimalno pa vas je lahko pet.<br>Potrudite se, da izstopate - naj si vas stranka zapomni.</div>
+    <div class="section_budget_text">Ponavadi za določeno povpraševanje tekmujete z enim ali dvema ponudnikoma, maksimalno pa vas je lahko pet.<br>Potrudite se, da boste izstopali - naj si vas stranka zapomni.<br>Kontakte strank lahko zakupite posamično, lahko pa se odločite tudi za <%=link_to "pakete neomejenih kontaktov.", plans_path %> </div>
   </section>
 
   <section class="section_what_customers_want">
@@ -57,7 +45,7 @@
   <section class="section_join_sosed">
     <div class="section_why_sosed_image"></div>
     <i class="fa fa-line-chart"></i>
-    <div class="section_join_sosed_introduce">Radi vas predstavimo novim strankam. In tako spravimo več denarja v vaš žep.</div>
+    <div class="section_join_sosed_introduce">Radi vas predstavimo novim strankam.<br> In tako spravimo več denarja v vaš žep.</div>
     <i class="fa fa-paper-plane-o"></i>
     <div class="section_join_sosed_cooperation">Veselimo se sodelovanja z vami. Dobrodošli!</div> 
     <i class="fa fa-thumbs-up"></i>   
@@ -95,6 +83,6 @@
     <div class="section_company_info_city">2230 Lenart</div>
     <div class="section_company_info_tax_number">Davčna številka: 49595105</div>
     <div class="section_company_info_bank_account">TRR: SI56 0410 2000 2065 311</div>
-    <div class="section_company_info_contact">Email: info@sosed.si</div>
+    <div class="section_company_info_contact"><a href="mailto:nina.breznik@sosed.si">email: info@sosed.si</a></div>
   </section>
 </div>
