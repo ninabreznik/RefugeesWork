@@ -255,6 +255,27 @@
               .lead_show_subtitle
                 font-weight bold
                 display inline-block
+        .order_show_buy_popup
+          shift 0.28
+          font-size 16px
+          line-height 150%
+          color black
+          border-radius 4px
+          background-color #eee
+          padding 15px
+          width 40%
+          text-align center
+          .order_show_buy_popup_item
+            padding 5px
+            padding-top 15px
+            padding-bottom 15px
+            button(color = Lead-Blue)
+            font-size 14px
+            margin-bottom 10px
+            margin-top 10px
+            text-align center
+            width 70%
+            line-height 150%
         .payment_buttons_choose_payment_text
           text-align center
           padding 50px 10px 30px 0px
@@ -1358,6 +1379,74 @@
         .new_lead_confirmation_text
           font-size 18px
           padding-top 40px
+          
+    /* :::::::::::::::::::::::: STATICPAGES/NEW_LEAD_CONFIRMATION :::::::::::::::::::::::::: */
+    .body_plans
+      body-mixin()
+      margin-top 29px
+      padding-bottom 50px
+      .plans_title
+        color Lead-Blue
+        opacity 0.85
+        font-size 36px
+        text-align center
+        padding-top 80px
+        padding-bottom 80px
+      .lead_box
+        width 303px
+        height 425px
+        margin-top 250px
+        padding 15px
+        background-color #eee
+        opacity 0.85
+        color black
+        text-align center 
+        .plans_item_text:first-child
+          font-weight bold
+          color black
+          font-size 20px
+          background-color Lead-Blue
+          padding 15px
+          text-align center
+        .plans_item_text:nth-child(2)
+          font-weight bold
+          color white
+          font-size 26px
+          background-color Lead-Orange
+          padding 15px
+          margin-bottom 10px
+          text-align center
+        .plans_item_text
+          font-size 15px
+          padding 20px 25px 0px 30px
+          text-align left
+        .plans_item_buy_button
+          margin-top 40px
+          position absolute
+          bottom 20px
+          right 100px
+          font-size 16px !important
+          button(color = Lead-Orange)
+      .plans_item_note
+        color black
+        font-size 14px
+        shift 0.3
+        padding-bottom 40px
+        width 60%
+      .plans_faq_item
+        margin-top 40px
+        shift 0.28
+        width 40%
+        color black
+        font-size 18px
+        line-height 150%
+        .plans_faq_item_question
+          font-size 22px
+          font-weight bold
+          padding-bottom 7px
+        .plans_faq_item_answer
+          font-weight italics
+          padding-bottom 20px
 
 
 

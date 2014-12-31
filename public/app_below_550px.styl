@@ -268,6 +268,26 @@
               .lead_show_subtitle
                 font-weight bold
                 display inline-block
+        .order_show_buy_popup
+          shift 0.1
+          font-size 16px
+          line-height 130%
+          color black
+          border-radius 4px
+          background-color #eee
+          padding 15px
+          width 85%
+          text-align center
+          .order_show_buy_popup_item
+            button(color = Lead-Blue)
+            padding 5px
+            padding-top 15px
+            padding-bottom 15px
+            font-size 12px
+            margin-bottom 10px
+            margin-top 10px
+            text-align center
+            width 80%
         .payment_buttons_choose_payment_text
           text-align center
           padding 30px 10px 20px 0px
@@ -1313,5 +1333,56 @@
           font-weight bold
         .new_lead_confirmation_text
           font-size 18px
-          padding-top 40px 
+          padding-top 40px
+
+    /* :::::::::::::::::::::::: STATICPAGES/NEW_LEAD_CONFIRMATION :::::::::::::::::::::::::: */
+    .body_plans
+      body-mixin()
+      margin-top 29px
+      padding-bottom 50px
+      .plans_title
+        color Lead-Blue
+        opacity 0.85
+        font-size 28px
+        text-align center
+        padding-top 80px
+        padding-bottom 80px
+      .lead_box
+        margin-top 250px
+        padding 25px
+        background-color #eee
+        opacity 0.85
+        color black
+        text-align center 
+        .plans_item_text
+          font-size 14px
+          padding 10px
+        .plans_item_text:first-child
+          font-weight bold
+          color black
+          font-size 16px
+          background-color Lead-Blue
+          padding-bottom 20px
+          &:hover
+            color #606060
+      .plans_item_note
+        color black
+        font-size 14px
+        shift 0.3
+        padding-bottom 40px
+        width 60%
+      .plans_faq_item
+        margin-top 40px
+        shift 0.28
+        width 40%
+        color black
+        font-size 14px
+        line-height 150%
+        .plans_faq_item_question
+          font-size 18px
+          font-weight bold
+          padding-bottom 7px
+        .plans_faq_item_answer
+          font-weight italics
+          padding-bottom 20px 
       

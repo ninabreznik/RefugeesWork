@@ -55,11 +55,11 @@
               <% end %>
             </div>
         <% else %>
-         <!--  <%= render 'buy_popup' %> -->
+         <%= render 'buy_popup' %> 
           <%= render 'leads/payment_buttons' %>
         <% end %>
       <% else %>
-       <!--  <%= render 'buy_popup' %> -->
+        <%= render 'buy_popup' %> 
         <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>
           <div class="order_show_buy">       

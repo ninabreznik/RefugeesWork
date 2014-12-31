@@ -124,7 +124,7 @@ si:
 
 # Links
   leadsshow-links: 
-    follow: "Spremljaj/Kupi kontakt"
+    follow: "Kupi kontakt"
 
 
 
@@ -154,7 +154,7 @@ si:
 
 # Payment buttons
   ordersshow-payment-buttons:
-    choose-payment-text: "Izberite način plačila za nakup kontakta"
+    choose-payment-text: "Nadaljujte z nakupom kontakta. Izberite način plačila"
     paypal-checkout: "Paypal" 
     wallet: "Denarnica" 
     bank-transfer: "Predračun" 
@@ -321,11 +321,11 @@ si:
 # ############################################################################################
   wallet-payment:
     offer_title: "Nakup kontaktov"
-    offer_promotion: "::::::::::::: NOVO! Prihranite za kontakte in izberite 1 ali 6 mesecev neomejenih kontaktov! :::::::::::::"
+    offer_promotion: "Pri polnjenju denarnice za 100€ ali več vam podarimo dodatnih 10% vrednosti. Za 100€ prejmete tako dodatnih 10€, za 200€ dodatnih 20€ itd."
     offer_item_username: "Uporabniško ime"
     offer_date: "Datum"
-    offer_price: "Cena"
-    offer_price_amount: "1 kontakt (10€), 1 mesec neomejenih kontaktov (45€) ali 6 mesecev neomejenih kontaktov (240€)"
+    offer_price: "Znesek"
+    offer_price_amount: "Denarnico lahko napolnite z zneskom po izbiri. Minimalen znesek je 10€."
     offer_purpose: "Referenca"
     offer_purpose_text: "SI05 19-1235-84503"
     offer_account: "Številka računa"
@@ -338,7 +338,7 @@ si:
     offer_mojsosed_address: "Radehova 39"
     offer_city: "Kraj"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "Takoj po prejemu plačila boste lahko dostopili do enega oz. neomejenih kontaktov. Za morebitna dodatna vprašanja smo vam vedno na voljo na nina.breznik@sosed.si"
+    offer_instructions: "Takoj po prejemu plačila bomo napolnili vašo denarnico. Stanje lahko vedno preverite na Profilu. Za morebitna dodatna vprašanja smo vam vedno na voljo na info@sosed.si"
 
 # ############################################################################################
 # Page 10 - LEADS/NEW (for getting customer leads)

@@ -42,6 +42,11 @@ Rails.application.routes.draw do
   get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
   get '/wallet_payment' => 'static_pages#wallet_payment'
 
+  get '/plans' => 'static_pages#plans'
+  get '/plans_1' => 'static_pages#plans_1'
+  get '/plans_2' => 'static_pages#plans_2'
+  get '/plans_3' => 'static_pages#plans_3'
+
   get '/about' => 'static_pages#about'
   get '/info' => 'static_pages#info'
   get '/payment_type' => 'static_pages#payment'
