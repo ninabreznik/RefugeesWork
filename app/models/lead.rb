@@ -42,6 +42,8 @@ class Lead < ActiveRecord::Base
     end 
   end
 
+  # :::::::::::::: LEAD/NEW forms :::::::::::::::::::  
+
   def current_step
     @current_step || steps.first
   end
