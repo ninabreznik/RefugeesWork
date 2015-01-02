@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     match '/instalacije',             to: 'leads#new',        via: 'get'
     match '/krovstvo',                to: 'leads#new',        via: 'get'
     match '/prenove',                 to: 'leads#new',        via: 'get'
-    match '/slikopleskarstvo',        to: 'leads#new',        via: 'get'
+    match '/slikopleskarstvo',        to: 'leads#painting',   via: 'get'
     match '/zidarstvo',               to: 'leads#new',        via: 'get'
 
 
