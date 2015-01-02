@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     match '/users/:id/edit',          to: 'users#edit',       via: 'edit'
   
   resources :leads
-    match '/arhitekt',                to: 'leads#new',        via: 'get'
+    match '/arhitekt',                to: 'leads#architect',  via: 'get'
     match '/fasaderstvo',             to: 'leads#new',        via: 'get'
     match '/gradnja',                 to: 'leads#new',        via: 'get'
     match '/instalacije',             to: 'leads#new',        via: 'get'
