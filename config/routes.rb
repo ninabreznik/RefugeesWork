@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     match '/slikopleskarstvo',        to: 'leads#painting',   via: 'get'
     match '/zidarstvo',               to: 'leads#new',        via: 'get'
 
+    match '/delim',                   to: 'leads#share',      via: 'get'
 
   resources :paypal_notifications, only: [:create]
     match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
