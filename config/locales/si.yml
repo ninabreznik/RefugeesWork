@@ -124,7 +124,7 @@ si:
 
 # Links
   leadsshow-links: 
-    follow: "Kupi kontakt"
+    follow: "Izberi kontakt"
 
 
 
@@ -150,7 +150,7 @@ si:
   ordersshow-links:
     address-book: "Imenik kontaktov"
     notes-save: "Shrani"
-    buy: "Kupi za 10€"
+    buy: "Izberi kontakt"
 
 # Payment buttons
   ordersshow-payment-buttons:
@@ -218,7 +218,7 @@ si:
     signed_in_but_no_bought: "V imeniku kontaktov vas bodo čakali kontakti strank, ki ste jih zakupili. Zraven vsakega kontakta imate tudi beležko, kamor zabeležite, v kateri fazi dogovorov ste trenutno s stranko."
 # Buttons
   ordersindex-buttons: 
-    buy: "Kupi"
+    buy: "Izberi"
     remove-from-reserved: "Ne spremljaj več"
     save: "Shrani"
     signup: "Registracija"

@@ -128,7 +128,7 @@ class LeadsController < ApplicationController
       ["#{I18n.t'lead-new.form.form-time.informative'}"] 
     ]
 
-    render 'share', layout: 'adwords_layout'
+    # render 'share', layout: 'adwords_layout'
   end
 
   def create

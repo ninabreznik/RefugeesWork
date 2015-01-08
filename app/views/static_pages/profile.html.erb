@@ -2,52 +2,85 @@
   <div class="columns">
   <ul class="wookmark">
 
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
   
-  <div class="lead_box">
-    <div class ="profile_dashboard_title">
-      <%= I18n.t'staticpagesprofile-notification.logged-in-as' %>: 
-    </div>
-    <div class="profile_dashboard_body"> 
-      <div class="profile_dashboard_body_username">  
-        <%= current_user.email %> 
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        <%= I18n.t'staticpagesprofile-notification.logged-in-as' %>: 
       </div>
-      <div class="profile_dashboard_body_logout">
-        <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %> 
-      </div>
-      <div class="profile_dashboard_body_edit">
-        <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
-      </div>
-    </div>
-  </div>
-
-  <div class="lead_box">
-    <div class ="profile_dashboard_title">
-      <%= I18n.t'staticpagesprofile-notification.wallet' %>:
-    </div>
-    <div class="profile_dashboard_body">
-      <div class="profile_dashboard_body_wallet_amount">
-        <%= current_user.wallet %> € 
-      </div>
-      <div class="profile_dashboard_body_wallet_buttons">
-        <div class="profile_dashboard_body_wallet_button">
-          <%= link_to "#{I18n.t'staticpagesprofile-notification.wallet-buttons.bank'}", wallet_payment_url %> 
+      <div class="profile_dashboard_body"> 
+        <div class="profile_dashboard_body_username">  
+          <%= current_user.email %> 
+        </div>
+        <div class="profile_dashboard_body_logout">
+          <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %> 
+        </div>
+        <div class="profile_dashboard_body_edit">
+          <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
         </div>
       </div>
     </div>
-  </div>
 
-      <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
-        <div class="lead_box">
-          <div class ="profile_dashboard_title">
-            <%= I18n.t'staticpagesprofile-notification.bought-leads' %>:
-          </div>
-          <div class="profile_dashboard_body"> 
-            <div class="profile_dashboard_body_bought_leads_amount">  
-              <%= Order.all.where(selector_id: current_user.id, paid: true).count %>
-            </div> 
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        Gradbenik gradbeniku:
+      </div>
+      <div class="profile_dashboard_body"> 
+        <div class="profile_dashboard_body_not_signed_in"> 
+          Oddajte storitev, ki je ne izvajate - vzemite tisto, ki jo potrebujete.
+        </div>
+        <div class="profile_dashboard_body_wallet_buttons">
+          <div class="profile_dashboard_body_wallet_button">
+            <%= link_to "Oddaj storitev", delim_path %>
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        <%= I18n.t'staticpagesprofile-notification.logged-in-as' %>: 
+      </div>
+      <div class="profile_dashboard_body"> 
+        <div class="profile_dashboard_body_username">  
+          <%= current_user.email %> 
+        </div>
+        <div class="profile_dashboard_body_logout">
+          <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %> 
+        </div>
+        <div class="profile_dashboard_body_edit">
+          <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
+        </div>
+      </div>
+    </div>
+
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        <%= I18n.t'staticpagesprofile-notification.wallet' %>:
+      </div>
+      <div class="profile_dashboard_body">
+        <div class="profile_dashboard_body_wallet_amount">
+          <%= current_user.wallet %> € 
+        </div>
+        <div class="profile_dashboard_body_wallet_buttons">
+          <div class="profile_dashboard_body_wallet_button">
+            <%= link_to "#{I18n.t'staticpagesprofile-notification.wallet-buttons.bank'}", wallet_payment_url %> 
           </div>
         </div>
+      </div>
+    </div>
+
+    <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          <%= I18n.t'staticpagesprofile-notification.bought-leads' %>:
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_bought_leads_amount">  
+            <%= Order.all.where(selector_id: current_user.id, paid: true).count %>
+          </div> 
+        </div>
+      </div>
         
       <div class="lead_box">
         <div class ="profile_dashboard_title">
@@ -85,7 +118,7 @@
         </div>
       <% end %>
     
-    <% else %>
+  <% else %>
 
   <div class="lead_box">
     <div class ="profile_dashboard_title">
@@ -102,6 +135,22 @@
       </div>
     </div>
   </div>
+
+<div class="lead_box">
+  <div class ="profile_dashboard_title">
+    Gradbenik gradbeniku:
+  </div>
+  <div class="profile_dashboard_body"> 
+    <div class="profile_dashboard_body_not_signed_in"> 
+      Daš storitev, ki je ne izvajaš, vzameš tisto, ki jo izvajaš.
+    </div>
+    <div class="profile_dashboard_body_wallet_buttons">
+      <div class="profile_dashboard_body_wallet_button">
+        <%= link_to "Oddaj storitev", delim_path %>
+      </div> 
+    </div> 
+  </div>
+</div>
 
   <div class="lead_box">
     <div class ="profile_dashboard_title">
