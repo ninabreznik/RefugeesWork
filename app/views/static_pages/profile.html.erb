@@ -39,23 +39,6 @@
 
     <div class="lead_box">
       <div class ="profile_dashboard_title">
-        <%= I18n.t'staticpagesprofile-notification.logged-in-as' %>: 
-      </div>
-      <div class="profile_dashboard_body"> 
-        <div class="profile_dashboard_body_username">  
-          <%= current_user.email %> 
-        </div>
-        <div class="profile_dashboard_body_logout">
-          <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %> 
-        </div>
-        <div class="profile_dashboard_body_edit">
-          <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
-        </div>
-      </div>
-    </div>
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
         <%= I18n.t'staticpagesprofile-notification.wallet' %>:
       </div>
       <div class="profile_dashboard_body">
