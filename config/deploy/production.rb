@@ -107,6 +107,8 @@ set :branch, 'master'
 
 set :rails_env, 'production'
 
+set :linked_files, %w{db/production.sqlite3}
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
