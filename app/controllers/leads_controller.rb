@@ -106,7 +106,9 @@ class LeadsController < ApplicationController
   end
 
   def share
-    @lead = Lead.new
+    session[:lead_params] ||= {}
+    @lead = Lead.new(session[:lead_params])
+    @lead.current_step = session[:lead_step]
 
      @business_types = [
       ["#{I18n.t'lead-new.form.business-types.architecture'}", "#{I18n.t'lead-new.form.business-types.architecture'}"], 
