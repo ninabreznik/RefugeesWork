@@ -57,8 +57,6 @@ ActiveRecord::Schema.define(version: 20150108213917) do
     t.string   "business_type"
     t.string   "time"
     t.string   "location"
-    t.string   "material_supply"
-    t.string   "property_type"
   end
 
   create_table "orders", force: true do |t|
