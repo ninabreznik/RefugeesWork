@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 
 gem 'rails_12factor'
-
+ruby '2.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
@@ -48,7 +48,6 @@ gem 'formtastic'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
 
 # Use Capistrano for deployment
 group :development do
