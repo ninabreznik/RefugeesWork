@@ -7,11 +7,6 @@ PayPal/Merchant Services/BuyNowButtons
 ########################################
 --> 
 <div class="order_show_buy_buttons">
-<div class="order_show_buy">  
-  <%= link_to "#{I18n.t'ordersshow-payment-buttons.paypal-checkout'}", 
-              @order.paypal_url(order_path(@order), paypal_notifications_url) 
-  %> 
-</div> 
 
 
 <!--       
@@ -19,31 +14,16 @@ PayPal/Merchant Services/BuyNowButtons
 BankPayment
 ########################################
 --> 
-<div class="order_show_buy"> 
-  <%= link_to(
-            "#{I18n.t'ordersshow-payment-buttons.bank-transfer'}",
-            {
-              :controller => 'orders', 
-              :action => 'bank_transaction', 
-              :id => @order.id
-              },
-            :html =>
-            {
-              :method => :get, 
-              :remote => true
-            }
-           ) %> 
-</div>
+
 
 <!--       
 ########################################
 Wallet
 ########################################
 -->
-<% if @lead.selectors.where(id: current_user.id).first.wallet >= 10 %>
   <div class="order_show_buy"> 
     <%= link_to(
-  "#{I18n.t'ordersshow-payment-buttons.wallet'}",
+  "POTRJUJEM PREVZEM STRANKE",
   {
     :controller => 'orders', 
     :action => 'edit', 
@@ -55,26 +35,6 @@ Wallet
     :remote => true
   }
   ) %> 
-</div>
-<% else %>
-  <div class="order_show_buy"> 
-  <%= link_to(
-            "#{I18n.t'ordersshow-payment-buttons.wallet'}",
-            {
-              :controller => 'orders', 
-              :action => 'wallet_payment_from_lead', 
-              :id => @order.id
-              },
-            :html =>
-            {
-              :method => :get, 
-              :remote => true
-            }
-           ) %> 
-</div>
-
-
-<% end %>
 </div>
 
 <!--

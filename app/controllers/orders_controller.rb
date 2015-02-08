@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
   def create
     @lead = Lead.find_by_id(params[:order][:selected_id])
     current_user.select!(@lead)
-    @price = 10
+    # @price = 10
     @user = current_user
     redirect_to order_path(id: @lead.reverse_orders.where(selector_id: current_user.id).first.id)
   end
@@ -27,14 +27,7 @@ class OrdersController < ApplicationController
 
   def edit
     @order = Order.find(params[:id])
-    if current_user.wallet >= 10
-      @order.update_attributes(:paid => true)
-      @price = 10
-      new_wallet_status = current_user.wallet - @price
-      current_user.update_attributes(:wallet => new_wallet_status)
-    else
-     # @order.paypal_payment_notification
-    end
+    @order.update_attributes(:paid => true)
     redirect_to payment_confirmation_url
   end
 
@@ -89,4 +82,8 @@ class OrdersController < ApplicationController
     )
   end
 
+  # def create_conversation(beta)
+  #  current_user.send_message(beta, "Pozdrav, zanima me vaš projekt. Kako vam lahko pomagam?", "Vaš projekt na Sosed.biz")
+  # end
+ 
 end

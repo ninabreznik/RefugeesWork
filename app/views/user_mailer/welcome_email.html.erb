@@ -4,15 +4,26 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to Sosed.biz, </h1>
+    <h1>Dobrodošli na <%= root_url %>, </h1>
     <p>
-      You have successfully signed up to our app with <%= @user.email %>.<br>
+      Uspešno ste se registrirali z uporabniškim imenom: <%= @user.email %>.<br>
+    </p>
+    <%- if @pass %>
+      <p>
+        Vaše začasno geslo je: <%= @pass %>
+      </p>
+      <p>
+        Predlagamo vam, da ga ob naslednji prijavi v aplikacijo zamenjate!
+      </p>
+    <%- end %>
+    <p>
+      Za prijavo v aplikacijo kliknite na <%= link_to "to povezavo", root_url %>.
     </p>
     <p>
-      To login to the site, just follow this link: <%= %>.
+      Hvala, da ste se nam pridružili, v kratkem vas ponovno kontaktiramo. Za kakršnakoli vprašanja sem vam vedno na voljo! 
+      <br><br>Lep dan še naprej.
     </p>
-    <p>Thanks for joining and have a great day!</p>
       <br>
-    <p>Nina</p>
+    <p>Nina Breznik, <%= root_url %></p>
   </body>
 </html>

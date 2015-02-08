@@ -7,15 +7,7 @@ Rails.application.routes.draw do
     match '/users/:id/edit',          to: 'users#edit',       via: 'edit'
   
   resources :leads
-    match '/arhitekt',                to: 'leads#architect',  via: 'get'
-    match '/fasaderstvo',             to: 'leads#new',        via: 'get'
-    match '/gradnja',                 to: 'leads#new',        via: 'get'
-    match '/instalacije',             to: 'leads#new',        via: 'get'
-    match '/krovstvo',                to: 'leads#new',        via: 'get'
-    match '/prenove',                 to: 'leads#new',        via: 'get'
-    match '/slikopleskarstvo',        to: 'leads#painting',   via: 'get'
-    match '/zidarstvo',               to: 'leads#new',        via: 'get'
-
+    match '/narocilo',                to: 'leads#new',        via: 'get'
     match '/delim',                   to: 'leads#share',      via: 'get'
 
   resources :paypal_notifications, only: [:create]

@@ -3,7 +3,7 @@
   <% if @lead.present? %> 
     <div class="lead_show">
       <div class="lead_show_title">
-        <%= @lead.business_type %> 
+        Servis
       </div>
       <div class="lead_show_body">
         <div class="lead_show_items_short">      
@@ -15,13 +15,13 @@
             <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.zip' %>:</div> 
             <%= @lead.zip %> 
           </div> 
-          <div class="lead_show_item">             
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> 
-            <%= @lead.time %>
-          </div>
           <div class="lead_show_item">          
             <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.description' %>:</div> 
             <%= @lead.description %> 
+          </div>
+          <div class="lead_show_item">             
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> 
+            <%= @lead.time %>
           </div>
           <div class="lead_show_item">    
             <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.name' %>:</div> 
@@ -30,7 +30,7 @@
         </div>  
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
-        <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
+        <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true || @leads.where("created_at > ?", Time.now - 3.months) %>
         <% else %>
         <div class="lead_show_buy">
               <%= render 'payment_confirmation_link' %>

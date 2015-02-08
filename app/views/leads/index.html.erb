@@ -20,7 +20,7 @@
       <% else %>
           <div class="lead_box">
             <div class ="lead_title">
-              <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+              <%= link_to "Servis", lead_path(lead) %> 
             </div>
             <%= render 'lead_body_for_index', :lead => lead %>
           </div>
@@ -28,7 +28,7 @@
     <% else%>
  <div class="lead_box">
       <div class ="lead_title">
-        <%= link_to "#{lead.business_type}", lead_path(lead) %> 
+        <%= link_to "Servis", lead_path(lead) %> 
       </div>
       <%= render 'lead_body_for_index', :lead => lead %>
   </div>

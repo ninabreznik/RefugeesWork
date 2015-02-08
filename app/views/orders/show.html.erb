@@ -4,7 +4,7 @@
   <% if @order.present? %>
     <div class="order_show">
       <div class="order_show_title">
-        <%= @lead.business_type %> 
+        Servis
       </div>
       <div class="lead_show_body">
         <div class="lead_show_items_short">      
@@ -16,12 +16,12 @@
             <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.zip' %>:</div> 
               <%= @lead.zip %> 
           </div> 
-          <div class="lead_show_item">             
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> <%= @lead.time %>
-          </div>
           <div class="lead_show_item">          
             <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.description' %>:</div> 
               <%= @lead.description %> 
+          </div>
+          <div class="lead_show_item">             
+            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> <%= @lead.time %>
           </div>
           <div class="lead_show_item">    
             <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.name' %>:</div> 
@@ -55,11 +55,9 @@
               <% end %>
             </div>
         <% else %>
-         <%= render 'buy_popup' %> 
           <%= render 'leads/payment_buttons' %>
         <% end %>
       <% else %>
-        <%= render 'buy_popup' %> 
         <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
           <%= o.hidden_field :selected_id %>
           <div class="order_show_buy">       
