@@ -55,6 +55,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
+  gem 'sqlite3', '1.3.9'
 end
 
 #Dashing related stuff
