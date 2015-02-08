@@ -3,10 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 ruby '2.1.2'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+group :production do
+  gem 'pg'
+end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -59,7 +61,7 @@ group :development do
 end
 
 #Dashing related stuff
-gem 'puma'
+  gem 'puma'
 # gem 'nokogiri'
 # gem 'htmlentities'
 
