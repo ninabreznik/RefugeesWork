@@ -9,6 +9,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  username: ninabreznik
 
 development:
   adapter: sqlite3
@@ -28,5 +29,5 @@ test:
 production:
   <<: *default
   database: my_production_database
-  url:  <%= ENV["DATABASE_URL"] %>
-  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
+  # url:  <%= ENV["DATABASE_URL"] %>
+  # pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
