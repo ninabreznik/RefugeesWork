@@ -26,8 +26,8 @@ class LeadsController < ApplicationController
       ["V roku 24h"], 
       ["V roku 7 dni"],
       ["Po dogovoru"],
-      ["Servis nad daljavo"]  
-      ["Potrebujem informativni pogovor"],
+      ["Servis nad daljavo"],  
+      ["Potrebujem informativni pogovor"]
     ]
 
     render 'new', layout: 'adwords_layout'
@@ -43,8 +43,8 @@ class LeadsController < ApplicationController
       ["Nujno čimprej"], 
       ["V roku 24h"], 
       ["V roku 7 dni"],
-      ["Po dogovoru"] 
-      ["Potrebujem informativni pogovor"],
+      ["Po dogovoru"], 
+      ["Potrebujem informativni pogovor"]
     ]
 
     # render 'share', layout: 'adwords_layout'
