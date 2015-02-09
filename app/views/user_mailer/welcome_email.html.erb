@@ -8,14 +8,6 @@
     <p>
       Uspešno ste se registrirali z uporabniškim imenom: <%= @user.email %>.<br>
     </p>
-    <%- if @pass %>
-      <p>
-        Vaše začasno geslo je: <%= @pass %>
-      </p>
-      <p>
-        Predlagamo vam, da ga ob naslednji prijavi v aplikacijo zamenjate!
-      </p>
-    <%- end %>
     <p>
       Za prijavo v aplikacijo kliknite na <%= link_to "to povezavo", root_url %>.
     </p>

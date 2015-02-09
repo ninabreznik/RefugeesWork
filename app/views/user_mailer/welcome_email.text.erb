@@ -2,10 +2,6 @@ Dobrodošli na <%= root_url %>
 ===============================================
  
 Uspešno ste se registrirali z uporabniškim imenom: <%= @user.email %>.
-<%- if @pass %>
-Vaše začasno geslo je: <%= @pass %>
-Predlagamo vam, da ga ob naslednji prijavi v aplikacijo zamenjate!
-<%- end %>
 
 Za prijavo v aplikacijo kliknite na <%= link_to "to povezavo", root_url %>.
 
