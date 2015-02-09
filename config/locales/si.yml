@@ -124,7 +124,7 @@ si:
 
 # Links
   leadsshow-links: 
-    follow: "Izberi kontakt"
+    follow: "Prevzemi stranko"
 
 
 
@@ -150,11 +150,11 @@ si:
   ordersshow-links:
     address-book: "Imenik kontaktov"
     notes-save: "Shrani"
-    buy: "Izberi kontakt"
+    buy: "Prevzemi stranko"
 
 # Payment buttons
   ordersshow-payment-buttons:
-    choose-payment-text: "Nadaljujte z nakupom kontakta. Izberite način plačila"
+    choose-payment-text: "Če ste prepričani, da boste servis zagotovo opravili, potrdite z gumbom spodaj in prevzemite stranko"
     paypal-checkout: "Paypal" 
     wallet: "Denarnica" 
     bank-transfer: "Predračun" 
@@ -184,9 +184,9 @@ si:
       bank: "Polnjenje denarnice"
     logged-in-as: "Prijavljeni ste kot"
     not-logged-in: "Niste prijavljeni"
-    bought-leads: "Število zakupljenih kontaktov"
-    last-bought-lead: "Zadnji zakupljen kontakt"
-    no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
+    bought-leads: "Število potrjenih kontaktov"
+    last-bought-lead: "Zadnji potrjen kontakt"
+    no-bought-leads: "Trenutno nimate nobenih potrjenih kontaktov."
     you-need-to-sign-in: "Za pregled teh informacij morate biti prijavljeni."
 
 # ############################################################################################
@@ -196,7 +196,7 @@ si:
 # Titles
   ordersindex-titles:
     reserved: "Trenutno ne spremljate nobenih kontaktov."
-    address-book: "Trenutno nimate nobenega zakupljenega kontakta."
+    address-book: "Trenutno nimate nobenega potrjenega kontakta."
 
 # Lead body
   ordersindex-lead:
@@ -212,10 +212,10 @@ si:
 # Notifications
   ordersindex-notifications:
     customer-info: "Kontaktne informacije stranke"
-    customer-info-explanation: "na voljo le ob nakupu tega kontakta."
+    customer-info-explanation: "na voljo le ob potrditvi tega kontakta."
     to-see-address-book: "Dobrodošli! Za dostop do imenika kontaktov je potrebna"
-    signed_in_but_no_orders: "Tukaj vas bodo čakali vsi kontakti, pri katerih niste dokončali nakupa."
-    signed_in_but_no_bought: "V imeniku kontaktov vas bodo čakali kontakti strank, ki ste jih zakupili. Zraven vsakega kontakta imate tudi beležko, kamor zabeležite, v kateri fazi dogovorov ste trenutno s stranko."
+    signed_in_but_no_orders: "Tukaj vas bodo čakali vsi kontakti, pri katerih niste dokončno potrdili sprejema servisa."
+    signed_in_but_no_bought: "V imeniku kontaktov vas bodo čakali kontakti strank, ki ste jih potrdili. Zraven vsakega kontakta imate tudi beležko za poročilo po opravljenem servisu."
 # Buttons
   ordersindex-buttons: 
     buy: "Izberi"
@@ -226,7 +226,7 @@ si:
 
 # Users not signed_in text box
   ordersindex_not_signed_in:
-    text_box: "Dobrodošli! Naj tej strani najdete kontakte, ki jih spremljate - tiste, ki jih boste morda zakupili v prihodnje. Za dodajanje novih ali brskanje kontaktov, ki jih spremljate, je potrebna "
+    text_box: "Dobrodošli! Naj tej strani najdete kontakte, ki jih spremljate - tiste, ki jih boste morda potrdili v prihodnje. Za dodajanje novih ali brskanje kontaktov, ki jih spremljate, je potrebna "
 
 
 
@@ -314,7 +314,7 @@ si:
 # ############################################################################################
   new_lead_confirmation:
     thank_you: "Hvala! Vaše povpraševanje je bilo uspešno poslano. "
-    text: "V kratkem vas bodo kontaktirali preverjeni izvajalci s svojimi ponudbami."
+    text: "V kratkem vas bomo kontaktirali, da potrdimo termin."
 
 # ############################################################################################
 # Page 9 - WALLET/PAYMENT (top up the wallet)
@@ -345,8 +345,8 @@ si:
 # ############################################################################################
 
   lead-new:
-    title:  "Pošljite brezplačno povpraševanje"
-    instructions: "Oddajte povpraševanje in 5 preverjenih izvajalcev se vam bo oglasilo s ponudbami in predstavitvijo."
+    title:  "Sosed servis"
+    instructions: "Oddajte povpraševanje in ob izbranem terminu vam bomo poslali serviserja."
     form:
       business-types:
         architecture: "Arhitekti"
@@ -366,7 +366,7 @@ si:
         consulting: "Potrebujem svetovanje (več ur)"
         informative: "Zanima me informativna cena"
       prompt-business-type: "Katerega izvajalca potrebujete? *"
-      prompt-time: "Kdaj bi želeli pričeti s projektom? *"
+      prompt-time: "Kdaj potrebujete strokovnjaka? *"
       business_type: "Dejavnost *"
       time: "Termin *"
       zip: "Poštna številka *"

@@ -23,11 +23,11 @@
 
     <div class="lead_box">
       <div class ="profile_dashboard_title">
-        Gradbenik gradbeniku:
+        Sosed sosedu:
       </div>
       <div class="profile_dashboard_body"> 
         <div class="profile_dashboard_body_not_signed_in"> 
-          Oddajte storitev, ki je ne izvajate - vzemite tisto, ki jo potrebujete.
+          Oddajte kontakt stranke, ki je ne boste uspeli servisirati - delite z drugimi in si prislužite %.
         </div>
         <div class="profile_dashboard_body_wallet_buttons">
           <div class="profile_dashboard_body_wallet_button">
@@ -45,18 +45,13 @@
         <div class="profile_dashboard_body_wallet_amount">
           <%= current_user.wallet %> € 
         </div>
-        <div class="profile_dashboard_body_wallet_buttons">
-          <div class="profile_dashboard_body_wallet_button">
-            <%= link_to "#{I18n.t'staticpagesprofile-notification.wallet-buttons.bank'}", wallet_payment_url %> 
-          </div>
-        </div>
       </div>
     </div>
 
     <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
       <div class="lead_box">
         <div class ="profile_dashboard_title">
-          <%= I18n.t'staticpagesprofile-notification.bought-leads' %>:
+           Število potrjenih servisov:
         </div>
         <div class="profile_dashboard_body"> 
           <div class="profile_dashboard_body_bought_leads_amount">  
@@ -67,7 +62,7 @@
         
       <div class="lead_box">
         <div class ="profile_dashboard_title">
-           <%= I18n.t'staticpagesprofile-notification.last-bought-lead' %>:
+           Zadnji potrjen servis:
         </div>
         <div class="profile_dashboard_body"> 
           <div class="profile_dashboard_body_bought_leads_last">  
@@ -80,7 +75,7 @@
 
         <div class="lead_box">
           <div class ="profile_dashboard_title">
-            <%= I18n.t'staticpagesprofile-notification.bought-leads' %>:
+            Število potrjenih servisov:
           </div>
           <div class="profile_dashboard_body"> 
             <div class="profile_dashboard_body_no_bought_leads">  
@@ -91,7 +86,7 @@
         
         <div class="lead_box">
           <div class ="profile_dashboard_title">
-            <%= I18n.t'staticpagesprofile-notification.last-bought-lead' %>:
+            Zadnji potrjen servis:
           </div>
           <div class="profile_dashboard_body"> 
             <div class="profile_dashboard_body_no_bought_leads">  
@@ -121,11 +116,11 @@
 
 <div class="lead_box">
   <div class ="profile_dashboard_title">
-    Gradbenik gradbeniku:
+    Sosed sosedu:
   </div>
   <div class="profile_dashboard_body"> 
     <div class="profile_dashboard_body_not_signed_in"> 
-      Daš storitev, ki je ne izvajaš, vzameš tisto, ki jo izvajaš.
+      Daš kontakt stranke, ki je ne boš servisiral, vzameš tisto, ki jo lahko.
     </div>
     <div class="profile_dashboard_body_wallet_buttons">
       <div class="profile_dashboard_body_wallet_button">

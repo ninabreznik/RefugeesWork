@@ -30,7 +30,7 @@
         </div>  
     <% if user_signed_in? %> 
       <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
-        <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true || @leads.where("created_at > ?", Time.now - 3.months) %>
+        <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
         <% else %>
         <div class="lead_show_buy">
               <%= render 'payment_confirmation_link' %>

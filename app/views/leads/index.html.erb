@@ -5,35 +5,37 @@
 <ul class="wookmark">
 <% if @leads.present? %>
   <% @sorted_leads.each do |lead| %>
-    <% if user_signed_in? %> 
-      <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
-        <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-        <% else %> 
-          <div class="lead_box">
-            <div class ="lead_title">
-              <%= link_to "#{lead.business_type}", lead_path(lead) %>
-              <%= link_to '<i class="fa fa-star"></i>'.html_safe, orders_path %> 
+    <% if lead.reverse_orders.where(paid: true).count == 0 %>
+      <% if user_signed_in? %> 
+        <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
+          <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
+          <% else %> 
+            <div class="lead_box">
+              <div class ="lead_title">
+                <%= link_to "Servis", lead_path(lead) %>
+                <%= link_to '<i class="fa fa-star"></i>'.html_safe, orders_path %> 
+              </div>
+              <%= render 'lead_body_for_index', :lead => lead %>
             </div>
-            <%= render 'lead_body_for_index', :lead => lead %>
-          </div>
-        <% end %>
-      <% else %>
-          <div class="lead_box">
-            <div class ="lead_title">
-              <%= link_to "Servis", lead_path(lead) %> 
+          <% end %>
+        <% else %>
+            <div class="lead_box">
+              <div class ="lead_title">
+                <%= link_to "Servis", lead_path(lead) %> 
+              </div>
+              <%= render 'lead_body_for_index', :lead => lead %>
             </div>
-            <%= render 'lead_body_for_index', :lead => lead %>
-          </div>
-      <% end %> 
-    <% else%>
- <div class="lead_box">
-      <div class ="lead_title">
-        <%= link_to "Servis", lead_path(lead) %> 
-      </div>
-      <%= render 'lead_body_for_index', :lead => lead %>
-  </div>
+        <% end %> 
+      <% else%>
+   <div class="lead_box">
+        <div class ="lead_title">
+          <%= link_to "Servis", lead_path(lead) %> 
+        </div>
+        <%= render 'lead_body_for_index', :lead => lead %>
+    </div>
+      <% end %>
+      <% end %>
     <% end %>
-  <% end %>
 <% else %>
 </ul>
 </div>

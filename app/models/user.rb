@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :orders, foreign_key: "selector_id"
   has_many :selected_leads, through: :orders, source: :selected 
 
-
+  has_many :leads
 
    # #############################################################################
   # Order between User and Lead

@@ -2,18 +2,18 @@
 <section class="lead_new_photo">
   <div class="lead_new_explanation">
     <div class="lead_new_explanation_first">  
-      <i class="fa fa-pencil"></i>         Delite povpraševanje </div>
+      <i class="fa fa-pencil"></i>         Oddajte kontakt stranke </div>
     <div class="lead_new_explanation_second"> 
-      <i class="fa fa-files-o"></i>        Spoznajte zainteresirane izvajalce </div>
+      <i class="fa fa-files-o"></i>        Mi poiščemo prostega serviserja </div>
     <div class="lead_new_explanation_third">  
-      <i class="fa fa-check-square-o"></i> Dogovorite se za provizijo </div>
+      <i class="fa fa-check-square-o"></i> Vi prejmete provizijo </div>
   </div>
   <div class="lead_new">
     <div class="lead_new_title">
-      Gradbenik gradbeniku 
+      Sosed sosedu
     </div>
     <div class="lead_new_instructions">
-      Oddajte storitev, ki je ne izvajate - vzemite tisto, ki jo potrebujete. <br><br>Delite povpraševanje in pomagali vam bomo najti do 5 primernih izvajalcev, zainteresiranih za sodelovanje.<br>
+      Oddajte kontakt stranke, ki je ne boste uspeli servisirati. <br>Delite z drugimi in si prislužite %.<br>
     </div>
     <%= form_for (@lead) do |l| %>
       <%= render "#{@lead.current_step}_step", :l => l %>
@@ -27,22 +27,22 @@
 </section>
 <section class="lead_new_we_help">
   <div class="lead_new_we_help_title">
-    Zaslužite s projekti, ki jih ne morete sprejeti. Oddajte povpraševanje in se z izbranim izvajalcem dogovorite za provizijo. 
+    Zaslužite s servisi, ki jih ne morete sprejeti. Oddajte kontakt stranke in poskrbeli bomo, da boste prejeli provizijo. 
   </div>
   <div class="lead_new_we_help_categories_title">
     Uspešni so tisti, ki se znajo povezati.<br>
-    Za vsako povpraševanje, ki ga boste oddali, pa bomo v vašo Denarnico dodali tudi 10€, ki jih lahko potem uporabite za nakup kontaktov, ki jih potrebujete vi. 
+    Za kontakt, ki ga boste oddali, bomo poiskali prostega serviserja. 
   </div>
   <div class="lead_new_we_help_categories_list">
-    <i class="fa fa-check-square-o"> Arhitekti</i> 
-    <i class="fa fa-check-square-o"> Gradnja</i> 
-    <i class="fa fa-check-square-o"> Zidarstvo</i> 
-    <i class="fa fa-check-square-o"> Prenove</i>  
-    <i class="fa fa-check-square-o"> Strojne instalacije</i> 
-    <i class="fa fa-check-square-o"> Električne instalacije</i> 
-    <i class="fa fa-check-square-o"> Slikopleskarstvo</i> 
-    <i class="fa fa-check-square-o"> Fasade</i> 
-    <i class="fa fa-check-square-o"> Strehe</i> 
+    <i class="fa fa-check-square-o"> Odstranjevanje virusov</i> 
+    <i class="fa fa-check-square-o"> Nameščanje in popravila programske opreme</i> 
+    <i class="fa fa-check-square-o"> Omrežja</i> 
+    <i class="fa fa-check-square-o"> Trening 1-na-1</i>  
+    <i class="fa fa-check-square-o"> Namestitve strojne opreme</i> 
+    <i class="fa fa-check-square-o"> Nadgradnja</i> 
+    <i class="fa fa-check-square-o"> Zaščita</i> 
+    <i class="fa fa-check-square-o"> Svetovanje</i> 
+    <i class="fa fa-check-square-o"> Nakup opreme</i> 
   </div>
 </section> 
 <section class="lead_new_testimonials">
@@ -58,6 +58,5 @@
   <div class="lead_new_company_info_phone"> 080 4144</div>
   <div class="lead_new_company_info_name">Moj sosed d.o.o.</div>
   <div class="lead_new_company_info_address">Radehova 39, 2230 Lenart</div>
-  <div class="lead_new_company_info_address">Jablonskistr. 24, 10405 Berlin</div>
   <div class="lead_new_company_info_contact"><%= mail_to "info@sosed.si", "info@sosed.si" %></div>
 </section> 

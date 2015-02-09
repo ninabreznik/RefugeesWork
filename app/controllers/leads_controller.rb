@@ -89,6 +89,7 @@ class LeadsController < ApplicationController
       :business_type, 
       :time, 
       :location,
+      :address,
       :material_supply,
       :property_type,
       :selector_id,

@@ -10,7 +10,7 @@
       <% @orders.where(selector_id: current_user.id, paid: true).sort.reverse.each do |order| %>
         <div class="lead_box">
           <div class ="address_book_lead_title">
-            <%= order.selected.business_type %>
+            Servis
           </div>
           <div class="address_book_lead_body">
             <div class="address_book_lead_subtitle">
@@ -23,12 +23,14 @@
               <%= I18n.t'ordersindex-lead.time' %>:</div> <%= order.selected.time %> 
             <div class="address_book_lead_subtitle">
               <%= I18n.t'ordersindex-lead.name' %>:</div> <%= order.selected.name %>
-            <div class="address_book_lead_customer_info">
+            <div class="address_book_lead_subtitle">
               <%= I18n.t'ordersindex-notifications.customer-info' %>:</div>
             <div class="address_book_lead_subtitle">
               <%= I18n.t'ordersindex-lead.phone' %>:</div> <%= order.selected.phone %> 
             <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.email' %>:</div> <%= order.selected.email %>
+              <%= I18n.t'ordersindex-lead.email' %>:</div> <%= order.selected.email %><br><br><br>
+          <div class="address_book_lead_subtitle">
+              POROČILO SERVISA</div>
           </div>
             <div class="address_book_lead_notes">      
               <%= form_for (order) do |l| %>
