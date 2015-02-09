@@ -227,7 +227,7 @@ html {
   box-sizing: inherit;
 }
 
-/* line 1 : /Users/ninabreznik/Code/Ruby/sosed_si_app/node_modules/axis/axis/tables.styl */
+/* line 1408 : /Users/ninabreznik/Code/Ruby/sosed_si_app/node_modules/axis/axis/tables.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
 @media only screen and (max-width: 5000px) {
@@ -1679,7 +1679,7 @@ html {
     background: rgba(0,0,0,0.85);
     position: fixed;
     padding: 50px;
-    top: 350px;
+    top: 250px;
     font-size: 28px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
@@ -5349,7 +5349,7 @@ html {
     background: rgba(0,0,0,0.85);
     position: fixed;
     padding: 50px;
-    top: 350px;
+    top: 250px;
     font-size: 28px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
@@ -8939,7 +8939,7 @@ html {
     background: rgba(0,0,0,0.85);
     position: fixed;
     padding: 50px;
-    top: 350px;
+    top: 200px;
     font-size: 23px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
@@ -12523,7 +12523,7 @@ html {
     background: rgba(0,0,0,0.85);
     position: fixed;
     padding: 50px;
-    top: 350px;
+    top: 200px;
     font-size: 12px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
@@ -16178,7 +16178,7 @@ html {
     background: rgba(0,0,0,0.85);
     position: fixed;
     padding: 50px;
-    top: 350px;
+    top: 200px;
     font-size: 23px;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
