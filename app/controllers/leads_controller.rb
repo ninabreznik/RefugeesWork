@@ -43,7 +43,8 @@ class LeadsController < ApplicationController
       ["Nujno čimprej"], 
       ["V roku 24h"], 
       ["V roku 7 dni"],
-      ["Po dogovoru"], 
+      ["Po dogovoru"],
+      ["Servis nad daljavo"],  
       ["Potrebujem informativni pogovor"]
     ]
 
