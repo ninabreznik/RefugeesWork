@@ -7,7 +7,7 @@
   <%= l.text_field :zip %>
 </div>
 
-<%= l.hidden_field :tracking_link, value: request.url.split('=').second %>
+<%= l.hidden_field :tracking_link, value: request.url %>
 
 <div class="lead_new_form_description">
   <%= l.label :"#{I18n.t'lead-new.form.description'}" %>
