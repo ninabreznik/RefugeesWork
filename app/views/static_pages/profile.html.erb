@@ -32,33 +32,6 @@
 
     <div class="lead_box">
       <div class ="profile_dashboard_title">
-        Sosed sosedu:
-      </div>
-      <div class="profile_dashboard_body"> 
-        <div class="profile_dashboard_body_not_signed_in"> 
-          Oddajte kontakt stranke, ki je ne boste uspeli servisirati - delite z drugimi in si prislužite %.
-        </div>
-        <div class="profile_dashboard_body_wallet_buttons">
-          <div class="profile_dashboard_body_wallet_button">
-            <%= link_to "Oddaj storitev", delim_path %>
-          </div> 
-        </div> 
-      </div>
-    </div>
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
-        Število naročil preko vaše afiliacijske kode:
-      </div>
-      <div class="profile_dashboard_body">
-        <div class="profile_dashboard_body_wallet_amount">
-          <%= @all_affiliation_customer_for_certain_user%>
-        </div>
-      </div>
-    </div>
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
         Afiliacijska koda:
       </div>
       <div class="profile_dashboard_body">
@@ -71,13 +44,13 @@
                 <%= u.label :"Vpišite svoje ime"  %>
                 <%= u.text_field :name %>
                 <%= u.submit "Generirajte kodo" %>
-            <% end %> <br>
+            <% end %> 
           <% else %>
-            <div class="profile_dashboard_body_username">  
+            <div class="profile_dashboard_body_bought_leads_last">  
               <%= @user_tracking_id %>
-            </div>
-            <div class="profile_dashboard_body_not_signed_in">
-              Vaša afiliacijska povezava: 
+            </div><br>
+            <div class="profile_dashboard_body_username"> 
+              Vaša afiliacijska povezava:
               www.leadshareapp.com<%= @user_tracking_link %>
             </div>
           <% end %>
@@ -106,6 +79,34 @@
           </div> 
         </div>
       </div>
+
+
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        Število naročil preko vaše afiliacijske kode:
+      </div>
+      <div class="profile_dashboard_body">
+        <div class="profile_dashboard_body_wallet_amount">
+          <%= @all_affiliation_customer_for_certain_user%>
+        </div>
+      </div>
+    </div>
+
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        Sosed sosedu:
+      </div>
+      <div class="profile_dashboard_body"> 
+        <div class="profile_dashboard_body_not_signed_in"> 
+          Oddajte kontakt stranke, ki je ne boste uspeli servisirati - delite z drugimi in si prislužite %. 
+        </div>
+        <div class="profile_dashboard_body_wallet_buttons">
+          <div class="profile_dashboard_body_wallet_button">
+            <%= link_to "Oddaj storitev", delim_path(id: @user_tracking_id) %>
+          </div> 
+        </div> 
+      </div>
+    </div>
 
       <% else %>
 
