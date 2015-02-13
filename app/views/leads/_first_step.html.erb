@@ -1,13 +1,15 @@
+<div class="lead_new_form_time">
+  <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}%> <br>
+</div>
+
 <div class="lead_new_form_zip">
   <%= l.label :"#{I18n.t'lead-new.form.zip'}" %>
   <%= l.text_field :zip %>
 </div>
 
+<%= l.hidden_field :tracking_link, value: request.url.split('=').second %>
+
 <div class="lead_new_form_description">
   <%= l.label :"#{I18n.t'lead-new.form.description'}" %>
   <%= l.text_field :description %>
-</div>
-
-<div class="lead_new_form_time">
-  <%= l.select :time, @time, {:prompt=>"#{I18n.t'lead-new.form.prompt-time'}"}%> <br>
 </div>

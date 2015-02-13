@@ -17,7 +17,16 @@
         </div>
         <div class="profile_dashboard_body_edit">
           <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
-        </div>
+        </div><br><br>
+        <% if current_user.accepted_terms_of_use == true %>
+          <div class="profile_dashboard_body_not_signed_in"> 
+            Dogovor o sodelovanju: Potrjen 
+          </div>
+        <% else %>
+          <div class="profile_dashboard_body_not_signed_in"> 
+            Za aktivacijo vašega uporabniškega računa <%= link_to "POTRDITE dogovor o sodelovanju.", terms_of_use_path %> 
+          </div>
+        <% end %> 
       </div>
     </div>
 
@@ -45,6 +54,44 @@
         <div class="profile_dashboard_body_wallet_amount">
           <%= current_user.wallet %> € 
         </div>
+      </div>
+    </div>
+
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        Število naročil preko vaše afiliacijske kode:
+      </div>
+      <div class="profile_dashboard_body">
+        <div class="profile_dashboard_body_wallet_amount">
+          <%= @all_affiliation_customer_for_certain_user%>
+        </div>
+      </div>
+    </div>
+
+    <div class="lead_box">
+      <div class ="profile_dashboard_title">
+        Afiliacijska koda:
+      </div>
+      <div class="profile_dashboard_body">
+          <% if @user_tracking_id == nil %>
+          <div class="profile_dashboard_body_not_signed_in"> 
+            Pripeljite nove stranke na stran za  <%= link_to "naročilo servisa", leads_new_path %> in si zaslužite 10% od Sosedove provizije za vse storitve, ki pridejo preko vas.<br><br>
+            Generirajte afiliacijsko kodo
+          </div>
+            <%= form_for (@user), url: tracking_id_user_path(@user), method: :post do |u| %>
+                <%= u.label :"Vpišite svoje ime"  %>
+                <%= u.text_field :name %>
+                <%= u.submit "Generirajte kodo" %>
+            <% end %> <br>
+          <% else %>
+            <div class="profile_dashboard_body_username">  
+              <%= @user_tracking_id %>
+            </div>
+            <div class="profile_dashboard_body_not_signed_in">
+              Vaša afiliacijska povezava: 
+              <%= @user_tracking_link %>
+            </div>
+          <% end %>
       </div>
     </div>
 

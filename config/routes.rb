@@ -3,12 +3,21 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  resources :users 
+  resources :users do
     match '/users/:id/edit',          to: 'users#edit',       via: 'edit'
+    member do
+      post 'tracking_id'
+      post 'accepted_terms_of_use'
+    end
+  end
   
   resources :leads
+    root 'leads#index'
     match '/narocilo',                to: 'leads#new',        via: 'get'
     match '/delim',                   to: 'leads#share',      via: 'get'
+    get 'leads/show'
+    get 'leads/new'
+    get 'leads/edit'
 
   resources :paypal_notifications, only: [:create]
     match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
@@ -23,29 +32,21 @@ Rails.application.routes.draw do
 
 
   # You can have the root of your site routed with "root"
-  root 'leads#index'
 
   #post 'paypal_confirm'  => 'orders#paypal_payment_notification'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
 
-  get 'leads/index'
-  get 'leads/show'
-  get 'leads/new'
-  get 'leads/edit'
-
-  get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
-  get '/wallet_payment' => 'static_pages#wallet_payment'
-
-  get '/plans' => 'static_pages#plans'
-  get '/plans_1' => 'static_pages#plans_1'
-  get '/plans_2' => 'static_pages#plans_2'
-  get '/plans_3' => 'static_pages#plans_3'
-
-  get '/about' => 'static_pages#about'
-  get '/info' => 'static_pages#info'
-  get '/payment_type' => 'static_pages#payment'
-  get '/profile' => 'static_pages#profile'
-  get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
-  get '/payment_confirmation' => 'static_pages#payment_confirmation'
+  resources :static_pages
+    get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
+    get '/wallet_payment' => 'static_pages#wallet_payment'
+    get '/about' => 'static_pages#about'
+    get '/info' => 'static_pages#info'
+    get '/payment_type' => 'static_pages#payment'
+    get '/profile' => 'static_pages#profile'
+    get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
+    get '/payment_confirmation' => 'static_pages#payment_confirmation'
+    get 'tracking_link' => 'static_pages#tracking_link'
+    get 'terms_of_use' => 'static_pages#terms_of_use'
+    get 'accepted_terms_confirmation' => 'static_pages#accepted_terms_confirmation'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

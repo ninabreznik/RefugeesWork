@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208224138) do
+ActiveRecord::Schema.define(version: 20150212232559) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20150208224138) do
     t.string   "location"
     t.string   "address"
     t.integer  "user_id"
+    t.string   "tracking_link"
+    t.string   "affiliation_id"
   end
 
   create_table "orders", force: true do |t|
@@ -97,6 +99,9 @@ ActiveRecord::Schema.define(version: 20150208224138) do
     t.datetime "updated_at"
     t.integer  "wallet",                 default: 0
     t.string   "business_type"
+    t.string   "tracking_id"
+    t.string   "name"
+    t.boolean  "accepted_terms_of_use"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,147 @@
+<% if user_signed_in? %>
+<div class="body_wallet_payment">
+<div class="wallet_payment_offer">
+  <div class="wallet_payment_offer_title">
+    Dogovor o sodelovanju
+  </div>
+  <div class="wallet_payment_offer_promotion">
+    I. Posrednik in izvajalec<br><br>
+
+    1. LeadShareApp.com <br>
+    Moj sosed d.o.o., <br>
+    Radehova 39, 2230 Lenart v Slovenskih goricah, <br>
+    davčna številka 49595105 (posrednik).<br><br>
+    2. VI (<%= current_user.email %>) 
+  </div>
+
+  <div class="wallet_payment_offer_promotion">
+    II. Predmet dogovora o poslovnem sodelovanju<br><br>
+    Predmet dogovora je posredovanje kontaktnih podatkov zainteresiranih strank, 
+    obveznosti posrednika in izvajalca, plačilni pogoji in čas trajanja sodelovanja. 
+    Predmet dogovora je  tudi obveznost izvajalca, da strokovno, kvalitetno z zagotovljeno garancijo  izvede dogovorjeno storitev in na račun posrednika nakaže  delež od zaračunane storitve. Storitve se izvajajo v Ljubljani in okolici, po posebnem dogovoru pa tudi po ostalih delih Slovenije.<br>
+    Dogovor o sodelovanju je sklenjen za nedoločeno obdobje in prične veljati s sprejemom Pogojev sodelovanja (spodaj). <br>
+    Posrednik in izvajalec lahko sodelovanje odpovesta kadarkoli, pred tem pa morata 
+    oba pogodbenika poravnati vse medsebojne finančne obveznosti. <br>
+    MOJ SOSED d.o.o. si pridružuje pravico, da poslovno sodelovanje z izvajalcem,  prekine 
+    takoj, če ugotovi hujše kršitve tega dogovora in poslovnega dogovora s stranko, oziroma se 
+    kljub opozorilu ne odpravijo večkratne lažje kršitve. <br>
+  </div>
+
+  <div class="wallet_payment_offer_instructions">
+    III. Obveznosti posrednika:    
+  </div> 
+  <table class="wallet_payment_offer_sosed_info">
+    <tr class="wallet_payment_offer_sosed_info_price">
+      <td> </td>
+      <td>S podpisom dogovora se MOJ SOSED d.o.o. – posrednik zavezuje k naslednjemu:</td>
+    </tr>  
+    <tr class="wallet_payment_offer_sosed_info_item"> 
+      <td>1.</td>
+      <td>da izvajalce preko LeadShareApp.com tekoče obvešča o konkretnih naročnikih posameznih dogovorjenih storitev,
+      </td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>2.</td>
+      <td>da se z zainteresirano stranko za posamezno storitev (kadar je to mogoče) dogovori za čas in kraj obiska izvajalca,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>3.</td>
+      <td>da bodo kontaktni podatki o stranki, dnevu predvidenega obiska, željah in pričakovanjih stranke posredovani izvajalcu čim prej preko LeadShareApp.com,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>4.</td>
+      <td>da preverja zadovoljstvo strank in ob morebitnih reklamacijah in drugih nezadovoljstvih, obvešča izvajalca ter predlaga odpravo pomanjkljivosti,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>5.</td>
+      <td>da izvajalcu takoj po  prejemu informacije o končanih delih pošlje račun za posredovane kontaktne podatke strank (po ceniku iz točke V. tega dogovora),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>6.</td>
+      <td>da si v kontaktih s stranko maksimalno prizadeva k uspešnosti dogovora za izvedbo konkretne storitve,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>7.</td>
+      <td>da izvajalcu takoj po prejemu plačil drugih izvajalcev v roku 7 dni posreduje plačilo afiliacije (10% od Sosedove provizije za vse storitve, ki so prišle preko izvajalčeve afiliacijske kode ali afiliacijske povezave),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>8.</td>
+      <td>da skrbi, da se z osebnimi podatki strank ravna v skladu z določili Zakona o varstvu osebnih podatkov.</td>
+    </tr> 
+  </table><br>
+
+  <div class="wallet_payment_offer_instructions">
+    IV. Obveznosti izvajalca:   
+  </div> 
+  <table class="wallet_payment_offer_sosed_info">
+    <tr class="wallet_payment_offer_sosed_info_price">
+      <td> </td>
+      <td>S strinjanjem z Dogovorom o sodelovanju se izvajalec obvezuje:</td>
+    </tr>  
+    <tr class="wallet_payment_offer_sosed_info_item"> 
+      <td>1.</td>
+      <td>da bo na LeadShareApp.com potrdil samo naročila, ki jih bo lahko sam strokovno opravil,
+      </td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>2.</td>
+      <td>da bo ob dogovorjenem terminu obiskal stranko in izvedel storitev,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>3.</td>
+      <td>da bo v primeru zamude (izjemoma) pravočasno telefonično obvestil stranko in se opravičil ter dogovoril za drug termin obiska. O novem dogovorjenem terminu obiska stranke mora to vnesti v aplikacijo, </td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>4.</td>
+      <td>da bo dogovorjene storitve opravil strokovno in kvalitetno, za svoje delo nosil odgovornost in strankam zagotavljal garancijo za opravljeno storitev (tj. reševal morebitne reklamacije),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>5.</td>
+      <td>da bo storitev zaračunaval v skladu s cenikom storitev, ki se nahaja na Sosed.si/cenik</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>6.</td>
+      <td>da bo po končani opravljeni storitvi v ustrezno evidenco pod rubriko Poročilo servisa opisal opravljeno delo, zaračunan znesek ter druge podrobnosti in dogovore s stranko (npr. optimizacija računalnika, izobraževanje 1 uro….),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>7.</td>
+      <td>da bo sproti pošiljal na naslov info@sosed.si, kopijo izdanih računov strankam (scan),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>8.</td>
+      <td>da bo po prejetem računu na TRR račun podjetja MOJ SOSED d.o.o. številka SI56 0410 2000 2065 311, odprti pri NKB Maribor, izvedel plačilo v dogovorjenem roku,</td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>8.</td>
+      <td>da bo vse storitve, ki jih bo izvedel pri posamezni stranki naknadno, vnesel v aplikacijo skupaj z njegovo afiliacijsko kodo oz. preko njegove afiliacijske povezave - potem pa te storitve izvedel sam ali prepustil drugim serviserjem,</td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>8.</td>
+      <td>da bo z osebnimi podatki strank dosledno ravnal v skladu z določili Zakona o varstvu osebnih podatkov in da bo podatke strank uporabljal samo za izvajanje tega sporazuma.</td>
+    </tr>  
+  </table>
+    <div class="wallet_payment_offer_promotion">
+      V. Cenik posredovanja kontaktnih podatkov naročnikov storitev preko LeadShareApp aplikacije<br><br>
+      Izvajalec se obvezuje, da bo tedensko (oz. po izvedeni posamezni storitvi) na naslov info@sosed.si  posredoval skenirane izdanih račune, ki bodo izdani na podlagi naročil na aplikaciji LeadShareApp.com. Na podlagi teh dokumentov bo podjetje MOJ SOSED d.o.o. zapiralo posamezne storitve in izvajalcu izstavilo zbirni račun za posredovanje kontaktnih podatkov strank, ki znaša 30% od posamezne zaračunane storitve. 
+    </div>
+    <div class="wallet_payment_offer_promotion">
+      VI. Afiliacija <br><br>
+      Za vsako stranko, ki bo servis naročila preko afiliacijske kode oz. afiliacijske povezave izvajalca, po podjetje Moj sosed d.o.o. ob prejemu plačil opravljenih servisov s strani drugih izvajalcev nato izvajalcu - afiliatorju nakazalo 10% vrednosti storitev posameznega servisa. Več o afiliaciji in generiranju kode najdete na svojem Profilu.
+    </div>
+    <div class="wallet_payment_offer_promotion">
+      VII. Dogovor o poslovnem sodelovanju <br><br>
+      Posrednik in izvajalec se strinjata o vsebini dogovora o poslovnem sodelovanju. Vse spremembe bosta sprejemala soglasno. Vse morebitne nesoglasja bosta partnerja reševala sporazumno. V kolikor to ne bo možno, bosta nesoglasja odstopila pristojnemu okrajnemu sodišču v Lenartu v Slovenskih goricah. 
+    </div>
+    <div class="wallet_payment_offer_instructions">
+      MOJ SOSED d.o.o. 2015
+    </div> <br><br>
+     <%= form_for (@user), url: accepted_terms_of_use_user_path(@user), method: :post do |u| %>
+        <%= u.check_box :accepted_terms_of_use %>
+        <%= u.label :"Potrjujem Dogovor o sodelovanju in se zavezujem k upoštevanju njegovih določil."  %><br><br>
+        <%= u.submit "Potrdite" %>
+      <% end %> <br>
+    </div>
+</div>
+<% end %>
+
+

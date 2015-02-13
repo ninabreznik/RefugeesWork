@@ -1,10 +1,5 @@
 class StaticPagesController < ApplicationController
 
-  def home
-    @campaigns = Campaign.all.sort_by{|e| e[:title]}
-    @campaign = Campaign.new
-  end
-
   def about
     render 'about', layout: false
   end
@@ -13,9 +8,28 @@ class StaticPagesController < ApplicationController
   end
 
   def profile
+    if current_user.present?
+      @user = current_user
+      tracking_link_customers = Lead.all.where(tracking_link: @user.tracking_id).count
+      tracking_id_customers = Lead.all.where(affiliation_id: @user.tracking_id).count
+      @all_affiliation_customer_for_certain_user = tracking_link_customers + tracking_id_customers
+      @user_tracking_id = @user.tracking_id 
+      @user_tracking_link = leads_new_path(id: @user_tracking_id)
+    end
   end
 
-  def contact
+  def tracking_link
+    @tracking_id = current_user.tracking_id
+    @tracking_link = leads_new_path(id: @tracking_id)
+  end
+
+  def terms_of_use
+    if current_user.present?
+      @user = current_user
+    end
+  end
+
+  def accepted_terms_confirmation
   end
 
   def all_campaigns

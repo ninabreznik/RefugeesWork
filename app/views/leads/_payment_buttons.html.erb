@@ -1,41 +1,29 @@
-<div class="payment_buttons_choose_payment_text">
-  <%= I18n.t'ordersshow-payment-buttons.choose-payment-text' %>:
-</div>
-<!--       
-########################################
-PayPal/Merchant Services/BuyNowButtons
-########################################
---> 
-<div class="order_show_buy_buttons">
-
-
-<!--       
-########################################
-BankPayment
-########################################
---> 
-
-
-<!--       
-########################################
-Wallet
-########################################
--->
-  <div class="order_show_buy"> 
-    <%= link_to(
-  "POTRJUJEM PREVZEM STRANKE",
-  {
-    :controller => 'orders', 
-    :action => 'edit', 
-    :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
-    },
-  :html =>
-  {
-    :method => :patch, 
-    :remote => true
-  }
-  ) %> 
-</div>
+<% if current_user.accepted_terms_of_use == true %>
+  <div class="payment_buttons_choose_payment_text">
+    <%= I18n.t'ordersshow-payment-buttons.choose-payment-text' %>:
+  </div>
+  <div class="order_show_buy_buttons">
+    <div class="order_show_buy"> 
+      <%= link_to(
+      "POTRJUJEM PREVZEM STRANKE",
+      {
+        :controller => 'orders', 
+        :action => 'edit', 
+        :id => @lead.reverse_orders.where(selector_id: current_user.id).first.id
+        },
+      :html =>
+      {
+        :method => :patch, 
+        :remote => true
+      }
+      ) %> 
+    </div>
+  </div>
+<% else %>
+  <div class="payment_buttons_choose_payment_text">
+    Za prevzem kontakta morate najprej <%= link_to "POTRDITI Dogovor o sodelovanju.", terms_of_use_path %>
+  </div>
+<% end %>
 
 <!--
 ########################################
