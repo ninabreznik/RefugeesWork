@@ -1,4 +1,3 @@
-<% if user_signed_in? %>
 <div class="body_wallet_payment">
 <div class="wallet_payment_offer">
   <div class="wallet_payment_offer_title">
@@ -11,7 +10,11 @@
     Moj sosed d.o.o., <br>
     Radehova 39, 2230 Lenart v Slovenskih goricah, <br>
     davčna številka 49595105 (posrednik).<br><br>
-    2. VI (<%= current_user.email %>) 
+    <% if user_signed_in? %>
+      2. VI (<%= current_user.email %>)
+    <% else %>
+      2. VI
+    <% end %> 
   </div>
 
   <div class="wallet_payment_offer_promotion">
@@ -132,6 +135,7 @@
       VII. Dogovor o poslovnem sodelovanju <br><br>
       Posrednik in izvajalec se strinjata o vsebini dogovora o poslovnem sodelovanju. Vse spremembe bosta sprejemala soglasno. Vse morebitne nesoglasja bosta partnerja reševala sporazumno. V kolikor to ne bo možno, bosta nesoglasja odstopila pristojnemu okrajnemu sodišču v Lenartu v Slovenskih goricah. 
     </div>
+    <% if user_signed_in? %>
     <div class="wallet_payment_offer_instructions">
       MOJ SOSED d.o.o. 2015
     </div> <br><br>
@@ -140,8 +144,21 @@
         <%= u.label :"Potrjujem Dogovor o sodelovanju in se zavezujem k upoštevanju njegovih določil."  %><br><br>
         <%= u.submit "Potrdite" %>
       <% end %> <br>
+    <% else %>
+      <div class="wallet_payment_offer_instructions">
+        Sprejem Dogovora o sodelovanju je pogoj za pričetek sodelovanja.
+        Za nadaljevanje je potrebna
+        <%= link_to "REGISTRACIJA", new_user_registration_path %> oz.
+        <%= link_to "PRIJAVA", new_user_session_path %>
+        v aplikacijo.
+        
+      </div>
+      <div class="wallet_payment_offer_instructions">
+      MOJ SOSED d.o.o. 2015
+    </div> 
+    <% end %>
     </div>
 </div>
-<% end %>
+
 
 
