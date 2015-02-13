@@ -48,17 +48,6 @@
 
     <div class="lead_box">
       <div class ="profile_dashboard_title">
-        <%= I18n.t'staticpagesprofile-notification.wallet' %>:
-      </div>
-      <div class="profile_dashboard_body">
-        <div class="profile_dashboard_body_wallet_amount">
-          <%= current_user.wallet %> € 
-        </div>
-      </div>
-    </div>
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
         Število naročil preko vaše afiliacijske kode:
       </div>
       <div class="profile_dashboard_body">
@@ -89,7 +78,7 @@
             </div>
             <div class="profile_dashboard_body_not_signed_in">
               Vaša afiliacijska povezava: 
-              <%= @user_tracking_link %>
+              www.leadshareapp.com<%= @user_tracking_link %>
             </div>
           <% end %>
       </div>
@@ -176,17 +165,6 @@
     </div> 
   </div>
 </div>
-
-  <div class="lead_box">
-    <div class ="profile_dashboard_title">
-        <%= I18n.t'staticpagesprofile-notification.wallet' %>:
-    </div>
-    <div class="profile_dashboard_body">
-      <div class="profile_dashboard_body_not_signed_in">
-         <%= I18n.t'staticpagesprofile-notification.you-need-to-sign-in' %>
-      </div>
-    </div>
-  </div>
 
   <div class="lead_box">
     <div class ="profile_dashboard_title">

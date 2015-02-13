@@ -58,13 +58,13 @@ class LeadsController < ApplicationController
     if params[:back_button]
       @lead.previous_step
     elsif @lead.last_step?
+        check_tracking_link(@lead)
         @lead.save 
     else
       @lead.next_step
     end
     session[:lead_step] = @lead.current_step
     if @lead.save
-      check_tracking_link(@lead)
       auto_create_user!(@lead)
       session[:lead_step] = session[:lead_params] = nil
       redirect_to new_lead_confirmation_url
@@ -127,10 +127,9 @@ class LeadsController < ApplicationController
   end
 
   def check_tracking_link(lead)
-    if lead.tracking_id.include?("=")
-        lead.tracking_id = lead.tracking_id.split('=').second
+    if lead.tracking_link.include?("=")
+        lead.tracking_link = lead.tracking_link.split('=').second
       end
-    lead.save
   end
 
   def current_lead
