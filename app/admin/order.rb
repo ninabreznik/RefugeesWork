@@ -5,8 +5,6 @@ ActiveAdmin.register Order do
     selectable_column
     id_column
     column :selector_id
-    column :selector_id
-    column :selector_id
     column :selected_id
     column :paid
     column :notes

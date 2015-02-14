@@ -96,9 +96,6 @@ class LeadsController < ApplicationController
       :property_type,
       :selector_id,
       :selected_id,
-      :payer_id,
-      :paid_id,
-      :paid,
       :tracking_link,
       :affiliation_id
     )

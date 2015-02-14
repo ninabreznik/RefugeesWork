@@ -5,38 +5,44 @@ permit_params :business_type, :zip, :location, :description, :time, :name, :emai
 index do
   selectable_column
   id_column
-  column :business_type  
-  column :zip
-  column :location
-  column :description
   column :time
+  column :location
+  column :zip
+  column :description
   column :name
-  column :email
+  column :address
   column :phone
+  column :email
+  column :tracking_link
+  column :affiliation_id
   actions
 end
 
-  filter :business_type  
-  filter :zip
-  filter :location
-  filter :description
   filter :time
+  filter :location
+  filter :zip
+  filter :description
   filter :name
-  filter :email
+  filter :address
   filter :phone
+  filter :email
+  filter :tracking_link
+  filter :affiliation_id
   filter :created_at
   filter :updated_at
 
 form do |f|
   f.inputs "Lead Details" do
-  f.input :business_type  
-  f.input :zip
-  f.input :location
-  f.input :description
-  f.input :time
-  f.input :name
-  f.input :email
-  f.input :phone
+  f.inputs :time
+  f.inputs :location
+  f.inputs :zip
+  f.inputs :description
+  f.inputs :name
+  f.inputs :address
+  f.inputs :phone
+  f.inputs :email
+  f.inputs :tracking_link
+  f.inputs :affiliation_id
   end
   f.actions
 end
