@@ -1,0 +1,8 @@
+  <% if current_user.present? %>
+    <div class="promo_image_wrapper">
+      <img class ="promo_image" alt="Obvestilo_3" src="images/obvestilo_3.png" width="595px" height="842px" />
+      <div class="promo_image_affilication_code">
+        <%= current_user.tracking_id %>
+      </div>
+    </div>
+  <% end %>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-    match '/users/:id/edit',          to: 'users#edit',       via: 'edit'
+    match '/users/:id/edit',            to: 'users#edit',       via: 'edit'
     member do
       post 'tracking_id'
       post 'accepted_terms_of_use'
@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   
   resources :leads
     root 'leads#index'
-    match '/narocilo',                to: 'leads#new',        via: 'get'
-    match '/delim',                   to: 'leads#share',      via: 'get'
+    match '/narocilo',                  to: 'leads#new',        via: 'get'
+    match '/delim',                     to: 'leads#share',      via: 'get'
     get 'leads/show'
     get 'leads/new'
     get 'leads/edit'
@@ -23,86 +23,30 @@ Rails.application.routes.draw do
     match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
   
   resources :orders
-    get '/address_book' => 'orders#address_book'
-    get '/reserved' => 'orders#reserved'
-    get '/bank_transaction' => 'orders#bank_transaction'
-    get '/wallet_payment_from_lead' => 'orders#wallet_payment_from_lead'
-    # match '/orders/:id',       to: 'orders#show',          via: 'get'
-    # match '/orders/:id',       to: 'orders#delete',        via: 'delete'
-
-
-  # You can have the root of your site routed with "root"
-
-  #post 'paypal_confirm'  => 'orders#paypal_payment_notification'  #'paypal_confirm' is a callback I provide to Paypal and it triggers 'orders#paypal_confirm'
-
+    get '/address_book'                 => 'orders#address_book'
+    get '/reserved'                     => 'orders#reserved'
+    get '/bank_transaction'             => 'orders#bank_transaction'
+    get '/wallet_payment_from_lead'     => 'orders#wallet_payment_from_lead'
+  
   resources :static_pages
-    get '/wallet_payment_type' => 'static_pages#wallet_payment_type'
-    get '/wallet_payment' => 'static_pages#wallet_payment'
-    get '/about' => 'static_pages#about'
-    get '/info' => 'static_pages#info'
-    get '/payment_type' => 'static_pages#payment'
-    get '/profile' => 'static_pages#profile'
-    get '/new_lead_confirmation' => 'static_pages#new_lead_confirmation'
-    get '/payment_confirmation' => 'static_pages#payment_confirmation'
-    get 'tracking_link' => 'static_pages#tracking_link'
-    get 'terms_of_use' => 'static_pages#terms_of_use'
-    get 'accepted_terms_confirmation' => 'static_pages#accepted_terms_confirmation'
+    get '/wallet_payment_type'          => 'static_pages#wallet_payment_type'
+    get '/wallet_payment'               => 'static_pages#wallet_payment'
+    get '/about'                        => 'static_pages#about'
+    get '/info'                         => 'static_pages#info'
+    get '/payment_type'                 => 'static_pages#payment'
+    get '/profile'                      => 'static_pages#profile'
+    get '/new_lead_confirmation'        => 'static_pages#new_lead_confirmation'
+    get '/payment_confirmation'         => 'static_pages#payment_confirmation'
+    get 'tracking_link'                 => 'static_pages#tracking_link'
+    get 'terms_of_use'                  => 'static_pages#terms_of_use'
+    get 'accepted_terms_confirmation'   => 'static_pages#accepted_terms_confirmation'
+    get '/promo'                        => 'static_pages#promo'
+    get '/promo_obvestilo_1'            => 'static_pages#promo_obvestilo_1'
+    get '/promo_obvestilo_2'            => 'static_pages#promo_obvestilo_2'
+    get '/promo_obvestilo_3'            => 'static_pages#promo_obvestilo_3'
+    get '/promo_obvestilo_4'            => 'static_pages#promo_obvestilo_4'
+    get '/promo_obvestilo_5'            => 'static_pages#promo_obvestilo_5'
+    get '/price_list'                   => 'static_pages#price_list'
+    get '/roadmap'                      => 'static_pages#roadmap'
 
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-  # match '/signup',       to: 'users#new',            via: 'get'
-  # match '/signin',       to: 'sessions#new',         via: 'get'
-  # match '/signout',      to: 'sessions#destroy',     via: 'delete'
-  #match '/orders',       to: 'orders#create',        via: 'post' 
-
- 
-
-
-  # Example of regular route:
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-end
+  end

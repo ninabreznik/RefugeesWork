@@ -11,9 +11,9 @@
     Radehova 39, 2230 Lenart v Slovenskih goricah, <br>
     davčna številka 49595105 (posrednik).<br><br>
     <% if user_signed_in? %>
-      2. VI (<%= current_user.email %>)
+      2. izvajalec-serviser (<%= current_user.email %>)
     <% else %>
-      2. VI
+      2. izvajalec-serviser (VI)
     <% end %> 
   </div>
 
@@ -21,7 +21,7 @@
     II. Predmet dogovora o poslovnem sodelovanju<br><br>
     Predmet dogovora je posredovanje kontaktnih podatkov zainteresiranih strank, 
     obveznosti posrednika in izvajalca, plačilni pogoji in čas trajanja sodelovanja. 
-    Predmet dogovora je  tudi obveznost izvajalca, da strokovno, kvalitetno z zagotovljeno garancijo  izvede dogovorjeno storitev in na račun posrednika nakaže  delež od zaračunane storitve. Storitve se izvajajo v Ljubljani in okolici, po posebnem dogovoru pa tudi po ostalih delih Slovenije.<br>
+    Predmet dogovora je  tudi obveznost izvajalca, da strokovno, kvalitetno z zagotovljeno garancijo  izvede dogovorjeno storitev in na račun posrednika nakaže  delež od zaračunane storitve. Storitve se izvajajo v vaši okolici, po želji ali posebnem dogovoru pa tudi po ostalih delih Slovenije.<br>
     Dogovor o sodelovanju je sklenjen za nedoločeno obdobje in prične veljati s sprejemom Pogojev sodelovanja (spodaj). <br>
     Posrednik in izvajalec lahko sodelovanje odpovesta kadarkoli, pred tem pa morata 
     oba pogodbenika poravnati vse medsebojne finančne obveznosti. <br>
@@ -65,7 +65,8 @@
     </tr> 
     <tr class="wallet_payment_offer_sosed_info_item">
       <td>7.</td>
-      <td>da izvajalcu takoj po prejemu plačil drugih izvajalcev v roku 7 dni posreduje plačilo afiliacije (10% od Sosedove provizije za vse storitve, ki so prišle preko izvajalčeve afiliacijske kode ali afiliacijske povezave),</td>
+      <td>da izvajalcu takoj po prejemu plačil drugih izvajalcev mesečno posreduje plačilo afiliacije (90% od Sosedove provizije za vse storitve, ki so prišle preko izvajalčeve afiliacijske kode ali afiliacijske povezave po plačilu stroškov)<br> <br>
+        <i class="fa fa-file-o"></i> <%= link_to "Za podrobnosti glede stroškov, afiliacije in plačil kliknite tukaj!", price_list_path %></td>
     </tr> 
     <tr class="wallet_payment_offer_sosed_info_item">
       <td>8.</td>
@@ -100,11 +101,11 @@
     </tr> 
     <tr class="wallet_payment_offer_sosed_info_item">
       <td>5.</td>
-      <td>da bo storitev zaračunaval v skladu s cenikom storitev, ki se nahaja na Sosed.si/cenik</td>
+      <td>da bo storitev zaračunaval v skladu s cenikom storitev, ki se nahaja na Sosed.si/cenik in strankam za opravljene storitve izdal račun svojega podjetja,</td>
     </tr> 
     <tr class="wallet_payment_offer_sosed_info_item">
       <td>6.</td>
-      <td>da bo po končani opravljeni storitvi v ustrezno evidenco pod rubriko Poročilo servisa opisal opravljeno delo, zaračunan znesek ter druge podrobnosti in dogovore s stranko (npr. optimizacija računalnika, izobraževanje 1 uro….),</td>
+      <td>da bo po končani opravljeni storitvi v ustrezno evidenco na Imeniku strank pod rubriko Poročilo servisa opisal opravljeno delo, zaračunan znesek ter druge podrobnosti in dogovore s stranko (npr. optimizacija računalnika, izobraževanje 1 uro….),</td>
     </tr> 
     <tr class="wallet_payment_offer_sosed_info_item">
       <td>7.</td>
@@ -112,38 +113,47 @@
     </tr> 
     <tr class="wallet_payment_offer_sosed_info_item">
       <td>8.</td>
-      <td>da bo po prejetem računu na TRR račun podjetja MOJ SOSED d.o.o. številka SI56 0410 2000 2065 311, odprti pri NKB Maribor, izvedel plačilo v dogovorjenem roku,</td>
+      <td>da bo po prejetem računu za plačilo provizije na TRR račun podjetja MOJ SOSED d.o.o. številka SI56 0410 2000 2065 311, odprti pri NKB Maribor, izvedel plačilo v dogovorjenem roku,</td>
     </tr>
     <tr class="wallet_payment_offer_sosed_info_item">
-      <td>8.</td>
-      <td>da bo vse storitve, ki jih bo izvedel pri posamezni stranki naknadno, vnesel v aplikacijo skupaj z njegovo afiliacijsko kodo oz. preko njegove afiliacijske povezave - potem pa te storitve izvedel sam ali prepustil drugim serviserjem,</td>
+      <td>9.</td>
+      <td>da bo vsa naročila strank, ki jih je našel preko aplikacije, vnesel v aplikacijo - potem pa te storitve potrdil sam ali prepustil drugim serviserjem (razen če gre za reklmacijo, v tem primeru bo vedno sam ponovno brezplačno obiskal stranko ali na težavo odpravil na daljavo),</td>
     </tr>
     <tr class="wallet_payment_offer_sosed_info_item">
-      <td>8.</td>
+      <td>10.</td>
       <td>da bo z osebnimi podatki strank dosledno ravnal v skladu z določili Zakona o varstvu osebnih podatkov in da bo podatke strank uporabljal samo za izvajanje tega sporazuma.</td>
     </tr>  
   </table>
     <div class="wallet_payment_offer_promotion">
       V. Cenik posredovanja kontaktnih podatkov naročnikov storitev preko LeadShareApp aplikacije<br><br>
-      Izvajalec se obvezuje, da bo tedensko (oz. po izvedeni posamezni storitvi) na naslov info@sosed.si  posredoval skenirane izdanih račune, ki bodo izdani na podlagi naročil na aplikaciji LeadShareApp.com. Na podlagi teh dokumentov bo podjetje MOJ SOSED d.o.o. zapiralo posamezne storitve in izvajalcu izstavilo zbirni račun za posredovanje kontaktnih podatkov strank, ki znaša 30% od posamezne zaračunane storitve (10% za afiliatorja in 20% za dežurni OKC (organizacijsko-komunikacijski center z 080 številko) ter blagovno znamko in vzdrževanje aplikacije). V prihodnosti načrtujemo skladno z avtomatizacijo del OKC znižanje tega odstotka.
+      Izvajalec se obvezuje, da bo tedensko (najkasneje v nedeljo do polnoči) na naslov info@sosed.si  posredoval skenirane izdanih račune za pretekli teden, ki bodo izdani na podlagi naročil na aplikaciji LeadShareApp.com. Na podlagi teh dokumentov bo podjetje MOJ SOSED d.o.o. zapiralo posamezne storitve in izvajalcu izstavilo zbirni tedenski račun za posredovanje kontaktnih podatkov strank, ki znaša 30% od posamezne zaračunane storitve.<br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "Za podrobnosti glede stroškov, afiliacije in plačil kliknite tukaj!", price_list_path %>
     </div>
     <div class="wallet_payment_offer_promotion">
       VI. Afiliacija <br><br>
-      Za vsako stranko, ki bo servis naročila preko afiliacijske kode oz. afiliacijske povezave izvajalca, po podjetje Moj sosed d.o.o. ob prejemu plačil opravljenih servisov s strani drugih izvajalcev nato izvajalcu - afiliatorju nakazalo 10% vrednosti storitev posameznega servisa. Več o afiliaciji in generiranju kode najdete na svojem Profilu.
+      Od vsakega izvajalca se pričakuje, da bo skrbel tudi za promocijo Sosed storitev. Na strani <%= link_to "PROMO", promo_path %> lahko izbere promocijska obvestila, jih natisne in pripiše svojo afiliacijsko kodo (kodo generira na strani <%= link_to "PROFIL", profile_path %>). Nato obvestila distribuira na oglasne deske v stanovanjskih blokih ali na druge oglasne deske.<br><br>
+      Za vsako stranko, ki bo servis naročila preko afiliacijske kode oz. afiliacijske povezave izvajalca, bo podjetje Moj sosed d.o.o. ob prejemu plačil provizije s strani drugih izvajalcev nato afiliatorju mesečno plačalo odstotek za afiliacijo. <br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "Za podrobnosti glede stroškov, afiliacije in plačil kliknite tukaj!", price_list_path %>
     </div>
     <div class="wallet_payment_offer_promotion">
       VII. Dogovor o poslovnem sodelovanju <br><br>
       Posrednik in izvajalec se strinjata o vsebini dogovora o poslovnem sodelovanju. Vse spremembe bosta sprejemala soglasno. Vse morebitne nesoglasja bosta partnerja reševala sporazumno. V kolikor to ne bo možno, bosta nesoglasja odstopila pristojnemu okrajnemu sodišču v Lenartu v Slovenskih goricah. 
     </div>
     <% if user_signed_in? %>
-    <div class="wallet_payment_offer_instructions">
-      MOJ SOSED d.o.o. 2015
-    </div> <br><br>
      <%= form_for (@user), url: accepted_terms_of_use_user_path(@user), method: :post do |u| %>
         <%= u.check_box :accepted_terms_of_use %>
         <%= u.label :"Potrjujem Dogovor o sodelovanju in se zavezujem k upoštevanju njegovih določil."  %><br><br>
         <%= u.submit "Potrdite" %>
-      <% end %> <br>
+      <% end %> <br><br>
+    <div class="wallet_payment_offer_instructions">
+      MOJ SOSED d.o.o. 2015
+    </div> <br><br>
+    <div class="wallet_payment_offer_instructions">
+      POVEZAVE:<br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "PROVIZIJA", price_list_path %><br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "PROMO STRAN - s promocijskim materialom", promo_path %><br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "GENERIRANJE AFILIACIJSKE KODE", profile_path %><br><br>
+    </div> <br><br>
     <% else %>
       <div class="wallet_payment_offer_instructions">
         Sprejem Dogovora o sodelovanju je pogoj za pričetek sodelovanja.
@@ -155,8 +165,14 @@
       </div>
       <div class="wallet_payment_offer_instructions">
       MOJ SOSED d.o.o. 2015
-    </div> 
+    </div>
     <% end %>
+    <div class="wallet_payment_offer_instructions">
+      POVEZAVE:<br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "PROVIZIJA", price_list_path %><br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "PROMO STRAN - s promocijskim materialom", promo_path %><br><br>
+      <i class="fa fa-file-o"></i> <%= link_to "GENERIRANJE AFILIACIJSKE KODE", profile_path %><br><br>
+    </div> <br><br>
     </div>
 </div>
 

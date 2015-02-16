@@ -29,13 +29,33 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def promo
+  end
+
+  def promo_obvestilo_1
+  end
+
+  def promo_obvestilo_2
+  end
+
+  def promo_obvestilo_3
+  end
+
+  def promo_obvestilo_4
+  end
+
+  def promo_obvestilo_5
+  end
+
   def accepted_terms_confirmation
   end
 
-  def all_campaigns
-    @campaigns = Campaign.find_by_title('Painting')
+  def price_list
   end
 
+  def roadmap
+  end
+  
   def payment_confirmation
   end
 
