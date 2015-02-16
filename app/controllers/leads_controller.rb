@@ -20,16 +20,6 @@ class LeadsController < ApplicationController
     @lead = Lead.new(session[:lead_params])
     @lead.current_step = session[:lead_step]
 
-
-    @time = [
-      ["Nujno čimprej"], 
-      ["V roku 24h"], 
-      ["V roku 7 dni"],
-      ["Po dogovoru"],
-      ["Servis nad daljavo"],  
-      ["Potrebujem informativni pogovor"]
-    ]
-
     render 'new', layout: 'adwords_layout'
   end
 
@@ -39,14 +29,6 @@ class LeadsController < ApplicationController
     @lead = Lead.new(session[:lead_params])
     @lead.current_step = session[:lead_step]
 
-    @time = [
-      ["Nujno čimprej"], 
-      ["V roku 24h"], 
-      ["V roku 7 dni"],
-      ["Po dogovoru"],
-      ["Servis nad daljavo"],  
-      ["Potrebujem informativni pogovor"]
-    ]
 
     # render 'share', layout: 'adwords_layout'
   end
