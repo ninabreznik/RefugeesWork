@@ -58,31 +58,7 @@
       </div>
     </div>
 
-
-    <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
-      <div class="lead_box">
-        <div class ="profile_dashboard_title">
-           Število potrjenih servisov:
-        </div>
-        <div class="profile_dashboard_body"> 
-          <div class="profile_dashboard_body_bought_leads_amount">  
-            <%= Order.all.where(selector_id: current_user.id, paid: true).count %>
-          </div> 
-        </div>
-      </div>
-        
-      <div class="lead_box">
-        <div class ="profile_dashboard_title">
-           Zadnji potrjen servis:
-        </div>
-        <div class="profile_dashboard_body"> 
-          <div class="profile_dashboard_body_bought_leads_last">  
-            <%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.business_type %> (<%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.location %>) 
-          </div> 
-        </div>
-      </div>
-
-      <div class="lead_box">
+    <div class="lead_box">
       <div class ="profile_dashboard_title">
         Afiliacijska koda:
       </div>
@@ -162,6 +138,32 @@
       </div>
     </div>
 
+
+
+    <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+           Število potrjenih servisov:
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_bought_leads_amount">  
+            <%= Order.all.where(selector_id: current_user.id, paid: true).count %>
+          </div> 
+        </div>
+      </div>
+        
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+           Zadnji potrjen servis:
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_bought_leads_last">  
+            <%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.business_type %> (<%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.location %>) 
+          </div> 
+        </div>
+      </div>
+
+      
 
       <% else %>
 

@@ -9,7 +9,7 @@
 
 /* line 13 : /usr/local/lib/node_modules/rupture/rupture/index.styl */
 
-/* line 147 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/index.styl */
+/* line 1 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/index.styl */
 
@@ -29,7 +29,7 @@
 
 /* line 90 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/flex.styl */
 
-/* line 147 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/gradients.styl */
+/* line 1 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/gradients.styl */
 
@@ -57,7 +57,7 @@
 
 /* line 5 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/reset.styl */
 
-/* line 147 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/text/index.styl */
+/* line 1 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/text/index.styl */
 
@@ -93,7 +93,7 @@
 
 /* line 28 : /usr/local/lib/node_modules/axis/node_modules/nib/lib/nib/size.styl */
 
-/* line 147 : /usr/local/lib/node_modules/axis/axis/index.styl */
+/* line 1 : /usr/local/lib/node_modules/axis/axis/index.styl */
 
 /* line 61 : /usr/local/lib/node_modules/axis/axis/index.styl */
 
@@ -161,7 +161,7 @@
 
 /* line 28 : /Users/ninabreznik/Code/Ruby/sosed_si_app/node_modules/jeet/stylus/jeet/_grid.styl */
 
-/* line 147 : /usr/local/lib/node_modules/axis/axis/index.styl */
+/* line 1 : /usr/local/lib/node_modules/axis/axis/index.styl */
 
 /* line 61 : /Users/ninabreznik/Code/Ruby/sosed_si_app/node_modules/axis/axis/index.styl */
 
@@ -227,7 +227,7 @@ html {
   box-sizing: inherit;
 }
 
-/* line 1455 : /Users/ninabreznik/Code/Ruby/sosed_si_app/node_modules/axis/axis/tables.styl */
+/* line 1462 : /Users/ninabreznik/Code/Ruby/sosed_si_app/node_modules/axis/axis/tables.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
 @media only screen and (max-width: 5000px) {
@@ -3390,7 +3390,7 @@ html {
   body .body_info_singlepage .section_welcome {
     margin-top: 29px;
     padding: 70px 60px 100px 60px;
-    background-color: #aaa;
+    background-color: #222;
     color: #fff;
     letter-spacing: 1.4px;
     font-weight: 300;
@@ -3421,10 +3421,9 @@ html {
     color: #fff;
     font-size: 32px;
     letter-spacing: 1.4px;
-    line-height: 200%;
   }
 
-/* line 1168 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1167 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_divided .section_divided_left {
     *zoom: 1;
     float: left;
@@ -3433,7 +3432,7 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
+    height: 200px;
     padding: 50px;
     background-color: #ffae4d;
   }
@@ -3450,7 +3449,7 @@ html {
     clear: both;
   }
 
-/* line 1173 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1172 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_divided .section_divided_right {
     *zoom: 1;
     float: left;
@@ -3459,7 +3458,7 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
+    height: 200px;
     padding: 50px;
     background-color: #82c0c7;
   }
@@ -3476,7 +3475,7 @@ html {
     clear: both;
   }
 
-/* line 1178 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1177 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_how_it_works {
     padding: 0px 0px 60px 0px;
     background-color: #fff;
@@ -3485,7 +3484,7 @@ html {
     color: #222;
   }
 
-/* line 1184 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1183 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_image {
     background-image: url("/images/interior4.jpg");
     background-repeat: no-repeat;
@@ -3510,21 +3509,21 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1188 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1187 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_title {
     margin: 60px 60px 60px 30px;
     font-size: 32px;
     color: #ffae4d;
   }
 
-/* line 1192 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1191 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1196 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1195 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_our_team {
     padding: 0px 0px 60px 0px;
     background-color: #ffae4d;
@@ -3534,57 +3533,67 @@ html {
     text-align: center;
   }
 
-/* line 1203 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1202 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_our_team .fa.fa-heart {
     margin: 60px 60px 20px 30px;
     font-size: 80px;
   }
 
-/* line 1206 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1205 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
   }
 
-/* line 1209 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1208 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1213 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1212 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+  body .body_info_singlepage .section_our_team .section_our_team_text a {
+    color: #fff;
+  }
+
+/* line 1214 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_budget {
     padding: 0px 0px 60px 0px;
-    background-color: #606060;
+    background-color: #222;
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #ffae4d;
     text-align: center;
   }
 
-/* line 1220 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1221 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_budget .fa.fa-calculator {
     margin: 60px 60px 20px 30px;
     font-size: 80px;
     color: #ffae4d;
   }
 
-/* line 1224 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1225 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_budget .section_budget_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
     color: #ffae4d;
   }
 
-/* line 1228 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1229 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_budget .section_budget_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1232 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1233 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+  body .body_info_singlepage .section_budget .section_budget_text a {
+    color: #ffae4d;
+  }
+
+/* line 1235 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_what_customers_want {
     padding: 60px 60px 60px 60px;
     background-color: #222;
@@ -3593,25 +3602,25 @@ html {
     text-align: center;
   }
 
-/* line 1238 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1241 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_title {
     margin-bottom: 50px;
     font-size: 48px;
   }
 
-/* line 1241 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1244 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_what_customers_want .fa.fa-check-square-o {
     font-size: 30px;
     margin-right: 10px;
   }
 
-/* line 1244 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1247 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_item {
     margin-bottom: 20px;
     font-size: 18px;
   }
 
-/* line 1247 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1250 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_join_sosed {
     background-color: #ffae4d;
     color: #222;
@@ -3622,7 +3631,7 @@ html {
     line-height: 200%;
   }
 
-/* line 1255 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1258 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_join_sosed .section_why_sosed_image {
     background-image: url("/images/interior2.jpg");
     background-repeat: no-repeat;
@@ -3646,7 +3655,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1258 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1261 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_join_sosed .fa.fa-line-chart,
   body .body_info_singlepage .section_join_sosed .fa.fa-paper-plane-o,
   body .body_info_singlepage .section_join_sosed .fa.fa-thumbs-up {
@@ -3658,7 +3667,7 @@ html {
     color: #222;
   }
 
-/* line 1266 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1269 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_join_sosed .section_join_sosed_introduce,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_cooperation,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_success {
@@ -3668,7 +3677,7 @@ html {
     background-color: #ffae4d;
   }
 
-/* line 1273 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1276 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_why_sosed {
     padding: 0px 0px 60px 0px;
     letter-spacing: 1.4px;
@@ -3676,7 +3685,7 @@ html {
     color: #222;
   }
 
-/* line 1278 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1281 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_title {
     margin: 60px 60px 60px 30px;
     font-size: 32px;
@@ -3684,41 +3693,46 @@ html {
     font-weight: bold;
   }
 
-/* line 1283 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1286 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_text {
     margin: 60px 60px 30px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1287 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1290 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+  body .body_info_singlepage .section_why_sosed .section_why_sosed_text a {
+    color: #222;
+  }
+
+/* line 1292 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_form {
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #222;
   }
 
-/* line 1291 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1296 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup {
     background-color: #82c0c7;
     padding: 50px 0px 30px 0px;
   }
 
-/* line 1294 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1299 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup label {
     font-size: 32px;
     color: #fff;
     text-align: center;
   }
 
-/* line 1298 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1303 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_form #mce-EMAIL {
     position: relative;
     left: 33.989999999999995%;
     width: 400px;
   }
 
-/* line 1301 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1306 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_form #mc-embedded-subscribe {
     position: relative;
     left: 41.2%;
@@ -3726,15 +3740,16 @@ html {
     width: 200px;
   }
 
-/* line 1305 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1310 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_company_info {
+    padding-top: 20px;
     text-align: center;
-    background-color: #82c0c7;
+    background-color: #222;
     color: #fff;
     font-size: 14px;
   }
 
-/* line 1310 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1316 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name {
     font-size: 18px;
     text-transform: uppercase;
@@ -3742,22 +3757,23 @@ html {
     font-weight: bold;
   }
 
-/* line 1315 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1321 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name,
   body .body_info_singlepage .section_company_info .section_company_info_street,
   body .body_info_singlepage .section_company_info .section_company_info_city,
   body .body_info_singlepage .section_company_info .section_company_info_tax_number,
   body .body_info_singlepage .section_company_info .section_company_info_bank_account,
-  body .body_info_singlepage .section_company_info .section_company_info_contact {
+  body .body_info_singlepage .section_company_info .section_company_info_contact a {
     padding: 7px 0px 0px 0px;
+    color: #fff;
   }
 
-/* line 1322 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1329 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_info_singlepage .section_company_info:last-child {
     padding-bottom: 80px;
   }
 
-/* line 1325 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1332 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_new_lead_confirmation {
     background-image: url("/images/interior1.jpg");
     background-repeat: no-repeat;
@@ -3783,7 +3799,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1330 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1337 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation {
     *zoom: 1;
     width: auto;
@@ -3813,19 +3829,19 @@ html {
     clear: both;
   }
 
-/* line 1337 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1344 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_thank_you {
     font-size: 26px;
     font-weight: bold;
   }
 
-/* line 1340 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1347 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_text {
     font-size: 18px;
     padding-top: 40px;
   }
 
-/* line 1345 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1352 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans {
     background-image: url("/images/cream_pixels.png");
     background-repeat: no-repeat;
@@ -3850,7 +3866,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1349 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1356 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .plans_title {
     color: #82c0c7;
     opacity: 0.85;
@@ -3860,7 +3876,7 @@ html {
     padding-bottom: 80px;
   }
 
-/* line 1356 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1363 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .lead_box {
     width: 303px;
     height: 425px;
@@ -3872,7 +3888,7 @@ html {
     text-align: center;
   }
 
-/* line 1365 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1372 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .lead_box .plans_item_text:first-child {
     font-weight: bold;
     color: #222;
@@ -3882,7 +3898,7 @@ html {
     text-align: center;
   }
 
-/* line 1372 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1379 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .lead_box .plans_item_text:nth-child(2) {
     font-weight: bold;
     color: #fff;
@@ -3893,14 +3909,14 @@ html {
     text-align: center;
   }
 
-/* line 1380 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1387 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .lead_box .plans_item_text {
     font-size: 15px;
     padding: 20px 25px 0px 30px;
     text-align: left;
   }
 
-/* line 1384 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1391 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .lead_box .plans_item_buy_button {
     margin-top: 40px;
     position: absolute;
@@ -3934,7 +3950,7 @@ html {
     background-color: #ff9f2c;
   }
 
-/* line 1391 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1398 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .plans_item_note {
     color: #222;
     font-size: 14px;
@@ -3944,7 +3960,7 @@ html {
     width: 60%;
   }
 
-/* line 1397 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1404 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .plans_faq_item {
     margin-top: 40px;
     position: relative;
@@ -3955,20 +3971,20 @@ html {
     line-height: 150%;
   }
 
-/* line 1404 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1411 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .plans_faq_item .plans_faq_item_question {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 7px;
   }
 
-/* line 1408 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1415 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_plans .plans_faq_item .plans_faq_item_answer {
     font-weight: italics;
     padding-bottom: 20px;
   }
 
-/* line 1413 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1420 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_promo {
     background-image: url("/images/interior6.jpg");
     background-repeat: no-repeat;
@@ -3991,7 +4007,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1415 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1422 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_promo .columns {
     position: relative;
     margin-top: 29px;
@@ -3999,14 +4015,14 @@ html {
     padding-bottom: 1050px;
   }
 
-/* line 1417 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1424 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_promo .columns .wookmark {
     list-style-type: none;
     position: relative; /** Needed to ensure items are laid out relative to this container **/
     padding: 0px;
   }
 
-/* line 1419 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1426 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_promo .columns .wookmark .lead_box {
     margin-left: 42px;
     width: 303px;
@@ -4017,7 +4033,7 @@ html {
     box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   }
 
-/* line 1427 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1434 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_promo .columns .wookmark .lead_box .profile_dashboard_title {
     text-align: center;
     opacity: 0.85;
@@ -4027,7 +4043,7 @@ html {
     font-size: 14px;
   }
 
-/* line 1434 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1441 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .body_promo .columns .wookmark .lead_box .profile_dashboard_body {
     color: #222;
     padding: 30px 30px 20px 30px;
@@ -4038,12 +4054,12 @@ html {
     width: 280px;
   }
 
-/* line 1444 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1451 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .promo_image_wrapper {
     height: 1500px;
   }
 
-/* line 1446 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1453 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .promo_image_wrapper .promo_image {
     margin-top: 170px;
     position: absolute;
@@ -4062,14 +4078,14 @@ html {
     padding-bottom: 50px;
   }
 
-/* line 1450 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1457 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
   body .promo_image_wrapper .promo_image_affiliation_code {
     color: #d13f19;
     margin-top: 300px;
   }
 }
 
-/* line 1354 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
+/* line 1353 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_1300px.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
 @media only screen and (max-width: 804px) {
@@ -7261,7 +7277,7 @@ html {
 /* line 1121 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_welcome {
     padding: 70px 60px 100px 60px;
-    background-color: #aaa;
+    background-color: #222;
     color: #fff;
     letter-spacing: 1.4px;
     font-weight: 300;
@@ -7293,7 +7309,6 @@ html {
     color: #fff;
     font-size: 24px;
     letter-spacing: 1.4px;
-    line-height: 200%;
   }
 
 /* line 1144 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
@@ -7305,9 +7320,8 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
-    height: 100%;
-    padding: 150px 100px 150px 100px;
+    height: 450px;
+    padding: 150px 50px 150px 50px;
     background-color: #ffae4d;
   }
 
@@ -7323,7 +7337,7 @@ html {
     clear: both;
   }
 
-/* line 1150 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1149 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_divided .section_divided_right {
     *zoom: 1;
     float: left;
@@ -7332,9 +7346,8 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
-    height: 100%;
-    padding: 150px 100px 150px 100px;
+    height: 450px;
+    padding: 150px 50px 150px 50px;
     background-color: #82c0c7;
   }
 
@@ -7350,7 +7363,7 @@ html {
     clear: both;
   }
 
-/* line 1156 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1154 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_how_it_works {
     padding: 0px 0px 60px 0px;
     background-color: #fff;
@@ -7359,7 +7372,7 @@ html {
     color: #222;
   }
 
-/* line 1162 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1160 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_image {
     background-image: url("/images/interior4.jpg");
     background-repeat: no-repeat;
@@ -7384,21 +7397,21 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1166 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1164 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_title {
     margin: 60px 60px 60px 30px;
     font-size: 32px;
     color: #ffae4d;
   }
 
-/* line 1170 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1168 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1174 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1172 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_our_team {
     padding: 0px 30px 60px 30px;
     background-color: #ffae4d;
@@ -7408,57 +7421,57 @@ html {
     text-align: center;
   }
 
-/* line 1181 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1179 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_our_team .fa.fa-heart {
     margin: 60px 60px 20px 30px;
     font-size: 80px;
   }
 
-/* line 1184 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1182 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
   }
 
-/* line 1187 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1185 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1191 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1189 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_budget {
     padding: 0px 30px 60px 30px;
-    background-color: #606060;
+    background-color: #222;
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #ffae4d;
     text-align: center;
   }
 
-/* line 1198 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1196 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_budget .fa.fa-calculator {
     margin: 60px 60px 20px 30px;
     font-size: 80px;
     color: #ffae4d;
   }
 
-/* line 1202 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1200 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_budget .section_budget_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
     color: #ffae4d;
   }
 
-/* line 1206 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1204 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_budget .section_budget_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1210 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1208 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_what_customers_want {
     padding: 60px 60px 60px 60px;
     background-color: #222;
@@ -7467,25 +7480,25 @@ html {
     text-align: left;
   }
 
-/* line 1216 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1214 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_title {
     margin-bottom: 50px;
     font-size: 42px;
   }
 
-/* line 1219 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1217 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_what_customers_want .fa.fa-check-square-o {
     font-size: 35px;
     margin-right: 15px;
   }
 
-/* line 1222 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1220 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_item {
     margin-bottom: 20px;
     font-size: 22px;
   }
 
-/* line 1225 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1223 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_join_sosed {
     padding: 0px 0px 0px 0px;
     background-color: #ffae4d;
@@ -7497,7 +7510,7 @@ html {
     line-height: 200%;
   }
 
-/* line 1234 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1232 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_join_sosed .section_why_sosed_image {
     background-image: url("/images/interior2.jpg");
     background-repeat: no-repeat;
@@ -7521,7 +7534,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1237 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1235 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_join_sosed .fa.fa-line-chart,
   body .body_info_singlepage .section_join_sosed .fa.fa-paper-plane-o,
   body .body_info_singlepage .section_join_sosed .fa.fa-thumbs-up {
@@ -7533,7 +7546,7 @@ html {
     color: #222;
   }
 
-/* line 1245 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1243 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_join_sosed .section_join_sosed_introduce,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_cooperation,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_success {
@@ -7543,7 +7556,7 @@ html {
     background-color: #ffae4d;
   }
 
-/* line 1252 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1250 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_why_sosed {
     padding: 0px 30px 60px 30px;
     letter-spacing: 1.4px;
@@ -7552,7 +7565,7 @@ html {
     text-align: center;
   }
 
-/* line 1258 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1256 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_title {
     margin: 60px 60px 60px 30px;
     font-size: 32px;
@@ -7560,41 +7573,41 @@ html {
     font-weight: bold;
   }
 
-/* line 1263 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1261 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_text {
     margin: 60px 60px 30px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1267 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1265 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_form {
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #222;
   }
 
-/* line 1271 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1269 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup {
     background-color: #82c0c7;
     padding: 50px 0px 30px 0px;
   }
 
-/* line 1274 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1272 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup label {
     font-size: 32px;
     color: #fff;
     text-align: center;
   }
 
-/* line 1278 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1276 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_form #mce-EMAIL {
     position: relative;
     left: 23.69%;
     width: 400px;
   }
 
-/* line 1281 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1279 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_form #mc-embedded-subscribe {
     position: relative;
     left: 35.02%;
@@ -7602,15 +7615,16 @@ html {
     width: 200px;
   }
 
-/* line 1285 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1283 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_company_info {
+    padding-top: 20px;
     text-align: center;
-    background-color: #82c0c7;
+    background-color: #222;
     color: #fff;
     font-size: 14px;
   }
 
-/* line 1290 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1289 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name {
     font-size: 18px;
     text-transform: uppercase;
@@ -7618,7 +7632,7 @@ html {
     font-weight: bold;
   }
 
-/* line 1295 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1294 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name,
   body .body_info_singlepage .section_company_info .section_company_info_street,
   body .body_info_singlepage .section_company_info .section_company_info_city,
@@ -7628,12 +7642,12 @@ html {
     padding: 7px 0px 0px 0px;
   }
 
-/* line 1302 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1301 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_info_singlepage .section_company_info:last-child {
     padding-bottom: 80px;
   }
 
-/* line 1305 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1304 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_new_lead_confirmation {
     background-image: url("/images/interior1.jpg");
     background-repeat: no-repeat;
@@ -7659,7 +7673,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1310 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1309 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation {
     *zoom: 1;
     width: auto;
@@ -7689,19 +7703,19 @@ html {
     clear: both;
   }
 
-/* line 1317 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1316 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_thank_you {
     font-size: 26px;
     font-weight: bold;
   }
 
-/* line 1320 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1319 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_text {
     font-size: 18px;
     padding-top: 40px;
   }
 
-/* line 1326 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1325 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_promo {
     background-image: url("/images/interior6.jpg");
     background-repeat: no-repeat;
@@ -7724,7 +7738,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1328 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1327 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_promo .columns {
     position: relative;
     margin-top: 29px;
@@ -7732,14 +7746,14 @@ html {
     padding-bottom: 1050px;
   }
 
-/* line 1330 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1329 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_promo .columns .wookmark {
     list-style-type: none;
     position: relative; /** Needed to ensure items are laid out relative to this container **/
     padding: 0px;
   }
 
-/* line 1332 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1331 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_promo .columns .wookmark .lead_box {
     margin-left: 42px;
     width: 303px;
@@ -7750,7 +7764,7 @@ html {
     box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   }
 
-/* line 1340 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1339 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_promo .columns .wookmark .lead_box .profile_dashboard_title {
     text-align: center;
     opacity: 0.85;
@@ -7760,7 +7774,7 @@ html {
     font-size: 14px;
   }
 
-/* line 1347 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
+/* line 1346 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_804px.styl */
   body .body_promo .columns .wookmark .lead_box .profile_dashboard_body {
     color: #222;
     padding: 30px 30px 20px 30px;
@@ -9416,7 +9430,7 @@ html {
     font-size: 13px;
     padding: 10px 22px;
     border-radius: 3px;
-    background-color: #82c0c7;
+    background-color: #ffae4d;
     color: #494949;
     cursor: pointer;
     font-weight: bold;
@@ -9433,14 +9447,14 @@ html {
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:hover,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout:focus,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:focus {
-    background-color: #77bac2;
+    background-color: #ffa63c;
     color: #474747;
   }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout:active,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:active {
-    background-color: #6bb5bd;
+    background-color: #ff9f2c;
   }
 
 /* line 663 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
@@ -9460,7 +9474,7 @@ html {
     font-size: 13px;
     padding: 10px 22px;
     border-radius: 3px;
-    background-color: #82c0c7;
+    background-color: #ffae4d;
     color: #494949;
     cursor: pointer;
     font-weight: bold;
@@ -9475,13 +9489,13 @@ html {
 /* line 72 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:hover,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:focus {
-    background-color: #77bac2;
+    background-color: #ffa63c;
     color: #474747;
   }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:active {
-    background-color: #6bb5bd;
+    background-color: #ff9f2c;
   }
 
 /* line 671 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
@@ -10997,7 +11011,7 @@ html {
 /* line 1154 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
   body .body_info_singlepage .section_welcome {
     padding: 70px 60px 100px 60px;
-    background-color: #aaa;
+    background-color: #222;
     color: #fff;
     letter-spacing: 1.4px;
     font-weight: 300;
@@ -11041,7 +11055,7 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
+    height: 450px;
     padding: 150px 50px 150px 50px;
     background-color: #ffae4d;
   }
@@ -11067,7 +11081,7 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
+    height: 450px;
     padding: 150px 50px 150px 50px;
     background-color: #82c0c7;
   }
@@ -11164,7 +11178,7 @@ html {
 /* line 1222 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
   body .body_info_singlepage .section_budget {
     padding: 0px 0px 60px 0px;
-    background-color: #606060;
+    background-color: #222;
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #ffae4d;
@@ -11338,7 +11352,7 @@ html {
 /* line 1315 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
   body .body_info_singlepage .section_company_info {
     text-align: center;
-    background-color: #82c0c7;
+    background-color: #222;
     color: #fff;
     font-size: 14px;
   }
@@ -11505,7 +11519,7 @@ html {
   }
 }
 
-/* line 1420 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
+/* line 1418 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_706px.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
 @media only screen and (max-width: 550px) {
@@ -13071,7 +13085,7 @@ html {
     font-size: 13px;
     padding: 10px 22px;
     border-radius: 3px;
-    background-color: #82c0c7;
+    background-color: #ffae4d;
     color: #494949;
     cursor: pointer;
     font-weight: bold;
@@ -13088,14 +13102,14 @@ html {
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:hover,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout:focus,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:focus {
-    background-color: #77bac2;
+    background-color: #ffa63c;
     color: #474747;
   }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout:active,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:active {
-    background-color: #6bb5bd;
+    background-color: #ff9f2c;
   }
 
 /* line 648 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
@@ -13115,7 +13129,7 @@ html {
     font-size: 13px;
     padding: 10px 22px;
     border-radius: 3px;
-    background-color: #82c0c7;
+    background-color: #ffae4d;
     color: #494949;
     cursor: pointer;
     font-weight: bold;
@@ -13130,13 +13144,13 @@ html {
 /* line 72 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:hover,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:focus {
-    background-color: #77bac2;
+    background-color: #ffa63c;
     color: #474747;
   }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:active {
-    background-color: #6bb5bd;
+    background-color: #ff9f2c;
   }
 
 /* line 656 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
@@ -14673,7 +14687,7 @@ html {
 /* line 1138 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_welcome {
     padding: 50px 60px 60px 60px;
-    background-color: #aaa;
+    background-color: #222;
     color: #fff;
     letter-spacing: 1.4px;
     font-weight: 300;
@@ -14703,7 +14717,7 @@ html {
   body .body_info_singlepage .section_divided {
     padding-bottom: 300px;
     color: #fff;
-    font-size: 14px;
+    font-size: 23px;
     letter-spacing: 1.4px;
     line-height: 200%;
   }
@@ -14717,8 +14731,7 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
-    height: 500px;
+    height: 400px;
     padding: 100px 20px 100px 20px;
     background-color: #ffae4d;
   }
@@ -14735,7 +14748,7 @@ html {
     clear: both;
   }
 
-/* line 1167 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1166 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_divided .section_divided_right {
     *zoom: 1;
     float: left;
@@ -14744,8 +14757,7 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
-    height: 500px;
+    height: 400px;
     padding: 100px 20px 100px 20px;
     background-color: #82c0c7;
   }
@@ -14762,7 +14774,7 @@ html {
     clear: both;
   }
 
-/* line 1173 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1171 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_how_it_works {
     padding: 0px 0px 60px 0px;
     background-color: #fff;
@@ -14771,7 +14783,7 @@ html {
     color: #222;
   }
 
-/* line 1179 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1177 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_image {
     background-image: url("/images/interior4.jpg");
     background-repeat: no-repeat;
@@ -14796,21 +14808,21 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1183 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1181 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_title {
     margin: 60px 60px 60px 30px;
     font-size: 22px;
     color: #ffae4d;
   }
 
-/* line 1187 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1185 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_text {
     margin: 60px 60px 60px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1191 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1189 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_our_team {
     padding: 0px 0px 60px 0px;
     background-color: #ffae4d;
@@ -14820,57 +14832,57 @@ html {
     text-align: center;
   }
 
-/* line 1198 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1196 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_our_team .fa.fa-heart {
     margin: 60px 60px 20px 30px;
     font-size: 50px;
   }
 
-/* line 1201 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1199 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_title {
     margin: 20px 60px 60px 30px;
     font-size: 22px;
   }
 
-/* line 1204 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1202 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_text {
     margin: 60px 60px 60px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1208 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1206 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_budget {
     padding: 0px 0px 60px 0px;
-    background-color: #606060;
+    background-color: #222;
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #ffae4d;
     text-align: center;
   }
 
-/* line 1215 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1213 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_budget .fa.fa-calculator {
     margin: 60px 60px 20px 30px;
     font-size: 50px;
     color: #ffae4d;
   }
 
-/* line 1219 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1217 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_budget .section_budget_title {
     margin: 20px 60px 60px 30px;
     font-size: 22px;
     color: #ffae4d;
   }
 
-/* line 1223 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1221 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_budget .section_budget_text {
     margin: 60px 60px 60px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1227 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1225 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_what_customers_want {
     padding: 60px 60px 60px 60px;
     background-color: #222;
@@ -14879,25 +14891,25 @@ html {
     text-align: center;
   }
 
-/* line 1233 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1231 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_title {
     margin-bottom: 30px;
     font-size: 22px;
   }
 
-/* line 1236 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1234 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_what_customers_want .fa.fa-check-square-o {
     font-size: 22px;
     margin-right: 10px;
   }
 
-/* line 1239 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1237 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_item {
     margin-bottom: 20px;
     font-size: 12px;
   }
 
-/* line 1242 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1240 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_join_sosed {
     background-color: #ffae4d;
     color: #222;
@@ -14908,13 +14920,13 @@ html {
     line-height: 200%;
   }
 
-/* line 1250 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1248 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_join_sosed .section_why_sosed_image {
     backgroundImage: url("/images/interior2.jpg");
     padding-bottom: 400px;
   }
 
-/* line 1253 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1251 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_join_sosed .fa.fa-line-chart,
   body .body_info_singlepage .section_join_sosed .fa.fa-paper-plane-o,
   body .body_info_singlepage .section_join_sosed .fa.fa-thumbs-up {
@@ -14926,7 +14938,7 @@ html {
     color: #222;
   }
 
-/* line 1261 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1259 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_join_sosed .section_join_sosed_introduce,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_cooperation,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_success {
@@ -14936,7 +14948,7 @@ html {
     background-color: #ffae4d;
   }
 
-/* line 1268 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1266 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_why_sosed {
     padding: 0px 0px 60px 0px;
     letter-spacing: 1.4px;
@@ -14945,7 +14957,7 @@ html {
     text-align: center;
   }
 
-/* line 1274 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1272 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_title {
     margin: 60px 60px 60px 30px;
     font-size: 16px;
@@ -14953,41 +14965,41 @@ html {
     font-weight: bold;
   }
 
-/* line 1279 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1277 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_text {
     margin: 60px 60px 30px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1283 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1281 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_form {
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #222;
   }
 
-/* line 1287 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1285 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup {
     background-color: #82c0c7;
     padding: 50px 0px 30px 0px;
   }
 
-/* line 1290 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1288 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup label {
     font-size: 20px;
     color: #fff;
     text-align: center;
   }
 
-/* line 1294 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1292 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_form #mce-EMAIL {
     position: relative;
     left: 21.63%;
     width: 200px;
   }
 
-/* line 1297 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1295 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_form #mc-embedded-subscribe {
     position: relative;
     left: 32.96%;
@@ -14995,15 +15007,15 @@ html {
     width: 100px;
   }
 
-/* line 1301 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1299 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_company_info {
     text-align: center;
-    background-color: #82c0c7;
+    background-color: #222;
     color: #fff;
     font-size: 11px;
   }
 
-/* line 1306 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1304 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name {
     font-size: 18px;
     text-transform: uppercase;
@@ -15011,7 +15023,7 @@ html {
     font-weight: bold;
   }
 
-/* line 1311 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1309 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name,
   body .body_info_singlepage .section_company_info .section_company_info_street,
   body .body_info_singlepage .section_company_info .section_company_info_city,
@@ -15021,12 +15033,12 @@ html {
     padding: 7px 0px 0px 0px;
   }
 
-/* line 1318 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1316 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_info_singlepage .section_company_info:last-child {
     padding-bottom: 80px;
   }
 
-/* line 1321 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1319 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_new_lead_confirmation {
     background-image: url("/images/interior1.jpg");
     background-repeat: no-repeat;
@@ -15052,7 +15064,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1326 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1324 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation {
     *zoom: 1;
     width: auto;
@@ -15082,19 +15094,19 @@ html {
     clear: both;
   }
 
-/* line 1333 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1331 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_thank_you {
     font-size: 26px;
     font-weight: bold;
   }
 
-/* line 1336 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1334 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_text {
     font-size: 18px;
     padding-top: 40px;
   }
 
-/* line 1341 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1339 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans {
     background-image: url("/images/cream_pixels.png");
     background-repeat: no-repeat;
@@ -15119,7 +15131,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1345 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1343 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .plans_title {
     color: #82c0c7;
     opacity: 0.85;
@@ -15129,7 +15141,7 @@ html {
     padding-bottom: 80px;
   }
 
-/* line 1352 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1350 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .lead_box {
     margin-top: 250px;
     padding: 25px;
@@ -15139,13 +15151,13 @@ html {
     text-align: center;
   }
 
-/* line 1359 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1357 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .lead_box .plans_item_text {
     font-size: 14px;
     padding: 10px;
   }
 
-/* line 1362 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1360 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .lead_box .plans_item_text:first-child {
     font-weight: bold;
     color: #222;
@@ -15154,12 +15166,12 @@ html {
     padding-bottom: 20px;
   }
 
-/* line 1368 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1366 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .lead_box .plans_item_text:first-child:hover {
     color: #606060;
   }
 
-/* line 1370 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1368 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .plans_item_note {
     color: #222;
     font-size: 14px;
@@ -15169,7 +15181,7 @@ html {
     width: 60%;
   }
 
-/* line 1376 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1374 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .plans_faq_item {
     margin-top: 40px;
     position: relative;
@@ -15180,20 +15192,20 @@ html {
     line-height: 150%;
   }
 
-/* line 1383 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1381 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .plans_faq_item .plans_faq_item_question {
     font-size: 18px;
     font-weight: bold;
     padding-bottom: 7px;
   }
 
-/* line 1387 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1385 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_plans .plans_faq_item .plans_faq_item_answer {
     font-weight: italics;
     padding-bottom: 20px;
   }
 
-/* line 1392 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1390 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_profile {
     background-image: url("/images/cream_pixels.png");
     background-repeat: no-repeat;
@@ -15216,7 +15228,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1394 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1392 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_profile .columns {
     position: relative;
     margin-top: 25px;
@@ -15224,14 +15236,14 @@ html {
     padding-bottom: 1050px;
   }
 
-/* line 1396 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1394 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_profile .columns .wookmark {
     list-style-type: none;
     position: relative; /** Needed to ensure items are laid out relative to this container **/
     padding: 0px;
   }
 
-/* line 1398 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1396 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_profile .columns .wookmark .lead_box {
     margin-left: 42px;
     width: 303px;
@@ -15242,7 +15254,7 @@ html {
     box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   }
 
-/* line 1406 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1404 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_title {
     text-align: center;
     opacity: 0.85;
@@ -15252,7 +15264,7 @@ html {
     font-size: 14px;
   }
 
-/* line 1413 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1411 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body {
     color: #222;
     padding: 30px 30px 20px 30px;
@@ -15264,7 +15276,7 @@ html {
   }
 }
 
-/* line 1344 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
+/* line 1342 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_550px.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
 @media only screen and (max-width: 350px) {
@@ -16865,7 +16877,7 @@ html {
     font-size: 13px;
     padding: 10px 22px;
     border-radius: 3px;
-    background-color: #82c0c7;
+    background-color: #ffae4d;
     color: #494949;
     cursor: pointer;
     font-weight: bold;
@@ -16882,14 +16894,14 @@ html {
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:hover,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout:focus,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:focus {
-    background-color: #77bac2;
+    background-color: #ffa63c;
     color: #474747;
   }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_logout:active,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_edit:active {
-    background-color: #6bb5bd;
+    background-color: #ff9f2c;
   }
 
 /* line 619 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
@@ -16909,7 +16921,7 @@ html {
     font-size: 13px;
     padding: 10px 22px;
     border-radius: 3px;
-    background-color: #82c0c7;
+    background-color: #ffae4d;
     color: #494949;
     cursor: pointer;
     font-weight: bold;
@@ -16924,13 +16936,13 @@ html {
 /* line 72 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:hover,
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:focus {
-    background-color: #77bac2;
+    background-color: #ffa63c;
     color: #474747;
   }
 
 /* line 76 : /usr/local/lib/node_modules/axis/axis/buttons.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body .profile_dashboard_body_wallet_buttons .profile_dashboard_body_wallet_button:active {
-    background-color: #6bb5bd;
+    background-color: #ff9f2c;
   }
 
 /* line 627 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
@@ -18465,7 +18477,7 @@ html {
 /* line 1113 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_welcome {
     padding: 50px 60px 60px 60px;
-    background-color: #aaa;
+    background-color: #222;
     color: #fff;
     letter-spacing: 1.4px;
     font-weight: 300;
@@ -18495,7 +18507,7 @@ html {
   body .body_info_singlepage .section_divided {
     padding-bottom: 300px;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1.4px;
     line-height: 200%;
   }
@@ -18509,7 +18521,6 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
     height: 500px;
     padding: 100px 20px 100px 20px;
     background-color: #ffae4d;
@@ -18527,7 +18538,7 @@ html {
     clear: both;
   }
 
-/* line 1142 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1141 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_divided .section_divided_right {
     *zoom: 1;
     float: left;
@@ -18536,7 +18547,6 @@ html {
     width: 50%;
     margin-left: 0%;
     margin-right: 0%;
-    width: 50%;
     height: 500px;
     padding: 100px 20px 100px 20px;
     background-color: #82c0c7;
@@ -18554,7 +18564,7 @@ html {
     clear: both;
   }
 
-/* line 1148 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1146 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_how_it_works {
     padding: 0px 0px 60px 0px;
     background-color: #fff;
@@ -18563,7 +18573,7 @@ html {
     color: #222;
   }
 
-/* line 1154 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1152 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_image {
     background-image: url("/images/interior4.jpg");
     background-repeat: no-repeat;
@@ -18588,21 +18598,21 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1158 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1156 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_title {
     margin: 60px 60px 60px 30px;
     font-size: 22px;
     color: #ffae4d;
   }
 
-/* line 1162 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1160 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_how_it_works .section_how_it_works_text {
     margin: 60px 60px 60px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1166 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1164 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_our_team {
     padding: 0px 0px 60px 0px;
     background-color: #ffae4d;
@@ -18612,57 +18622,57 @@ html {
     text-align: center;
   }
 
-/* line 1173 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1171 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_our_team .fa.fa-heart {
     margin: 60px 60px 20px 30px;
     font-size: 50px;
   }
 
-/* line 1176 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1174 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_title {
     margin: 20px 60px 60px 30px;
     font-size: 22px;
   }
 
-/* line 1179 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1177 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_our_team .section_our_team_text {
     margin: 60px 60px 60px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1183 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1181 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_budget {
     padding: 0px 0px 60px 0px;
-    background-color: #606060;
+    background-color: welcome;
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #ffae4d;
     text-align: center;
   }
 
-/* line 1190 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1188 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_budget .fa.fa-calculator {
     margin: 60px 60px 20px 30px;
     font-size: 50px;
     color: #ffae4d;
   }
 
-/* line 1194 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1192 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_budget .section_budget_title {
     margin: 20px 60px 60px 30px;
     font-size: 22px;
     color: #ffae4d;
   }
 
-/* line 1198 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1196 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_budget .section_budget_text {
     margin: 60px 60px 60px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1202 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1200 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_what_customers_want {
     padding: 60px 60px 60px 60px;
     background-color: #222;
@@ -18671,25 +18681,25 @@ html {
     text-align: center;
   }
 
-/* line 1208 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1206 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_title {
     margin-bottom: 30px;
     font-size: 22px;
   }
 
-/* line 1211 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1209 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_what_customers_want .fa.fa-check-square-o {
     font-size: 22px;
     margin-right: 10px;
   }
 
-/* line 1214 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1212 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_what_customers_want .section_what_customers_want_item {
     margin-bottom: 20px;
     font-size: 12px;
   }
 
-/* line 1217 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1215 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_join_sosed {
     background-color: #ffae4d;
     color: #222;
@@ -18700,13 +18710,13 @@ html {
     line-height: 200%;
   }
 
-/* line 1225 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1223 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_join_sosed .section_why_sosed_image {
     backgroundImage: url("/images/interior2.jpg");
     padding-bottom: 400px;
   }
 
-/* line 1228 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1226 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_join_sosed .fa.fa-line-chart,
   body .body_info_singlepage .section_join_sosed .fa.fa-paper-plane-o,
   body .body_info_singlepage .section_join_sosed .fa.fa-thumbs-up {
@@ -18718,7 +18728,7 @@ html {
     color: #222;
   }
 
-/* line 1236 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1234 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_join_sosed .section_join_sosed_introduce,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_cooperation,
   body .body_info_singlepage .section_join_sosed .section_join_sosed_success {
@@ -18728,7 +18738,7 @@ html {
     background-color: #ffae4d;
   }
 
-/* line 1243 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1241 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_why_sosed {
     padding: 0px 0px 60px 0px;
     letter-spacing: 1.4px;
@@ -18737,7 +18747,7 @@ html {
     text-align: center;
   }
 
-/* line 1249 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1247 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_title {
     margin: 60px 60px 60px 30px;
     font-size: 16px;
@@ -18745,41 +18755,41 @@ html {
     font-weight: bold;
   }
 
-/* line 1254 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1252 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_why_sosed .section_why_sosed_text {
     margin: 60px 60px 30px 30px;
     font-size: 12px;
     line-height: 150%;
   }
 
-/* line 1258 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1256 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_form {
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #222;
   }
 
-/* line 1262 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1260 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup {
     background-color: #82c0c7;
     padding: 50px 0px 30px 0px;
   }
 
-/* line 1265 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1263 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_form #mc_embed_signup label {
     font-size: 20px;
     color: #fff;
     text-align: center;
   }
 
-/* line 1269 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1267 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_form #mce-EMAIL {
     position: relative;
     left: 21.63%;
     width: 200px;
   }
 
-/* line 1272 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1270 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_form #mc-embedded-subscribe {
     position: relative;
     left: 32.96%;
@@ -18787,15 +18797,15 @@ html {
     width: 100px;
   }
 
-/* line 1276 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1274 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_company_info {
     text-align: center;
-    background-color: #82c0c7;
+    background-color: #222;
     color: #fff;
     font-size: 11px;
   }
 
-/* line 1281 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1279 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name {
     font-size: 18px;
     text-transform: uppercase;
@@ -18803,7 +18813,7 @@ html {
     font-weight: bold;
   }
 
-/* line 1286 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1284 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_company_info .section_company_info_name,
   body .body_info_singlepage .section_company_info .section_company_info_street,
   body .body_info_singlepage .section_company_info .section_company_info_city,
@@ -18813,12 +18823,12 @@ html {
     padding: 7px 0px 0px 0px;
   }
 
-/* line 1293 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1291 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_info_singlepage .section_company_info:last-child {
     padding-bottom: 80px;
   }
 
-/* line 1296 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1294 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_new_lead_confirmation {
     background-image: url("/images/interior1.jpg");
     background-repeat: no-repeat;
@@ -18844,7 +18854,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1301 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1299 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation {
     *zoom: 1;
     width: auto;
@@ -18874,19 +18884,19 @@ html {
     clear: both;
   }
 
-/* line 1308 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1306 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_thank_you {
     font-size: 22px;
     font-weight: bold;
   }
 
-/* line 1311 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1309 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_text {
     font-size: 14px;
     padding-top: 40px;
   }
 
-/* line 1316 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1314 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_profile {
     background-image: url("/images/cream_pixels.png");
     background-repeat: no-repeat;
@@ -18909,7 +18919,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1318 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1316 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_profile .columns {
     position: relative;
     margin-top: 18px;
@@ -18917,14 +18927,14 @@ html {
     padding-bottom: 1050px;
   }
 
-/* line 1320 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1318 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_profile .columns .wookmark {
     list-style-type: none;
     position: relative; /** Needed to ensure items are laid out relative to this container **/
     padding: 0px;
   }
 
-/* line 1322 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1320 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_profile .columns .wookmark .lead_box {
     margin-left: 42px;
     width: 303px;
@@ -18935,7 +18945,7 @@ html {
     box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   }
 
-/* line 1330 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1328 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_title {
     text-align: center;
     opacity: 0.85;
@@ -18945,7 +18955,7 @@ html {
     font-size: 14px;
   }
 
-/* line 1337 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
+/* line 1335 : /Users/ninabreznik/Code/Ruby/sosed_si_app/public/app_below_350px.styl */
   body .body_profile .columns .wookmark .lead_box .profile_dashboard_body {
     color: #222;
     padding: 30px 30px 20px 30px;
