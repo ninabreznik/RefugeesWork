@@ -23,7 +23,7 @@ ActiveAdmin.register User do
     filter :email  
     filter :wallet
     filter :tracking_id
-    column :name
+    filter :name
     column :accepted_terms_of_use
     filter :sign_in_count
     filter :last_sign_in_at
