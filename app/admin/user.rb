@@ -36,6 +36,9 @@ ActiveAdmin.register User do
     f.inputs "User Details" do
       f.input :email
       f.input :wallet
+      f.input :name
+      f.input :accepted_terms_of_use
+      f.input :sign_in_count
     end
     f.actions
   end
