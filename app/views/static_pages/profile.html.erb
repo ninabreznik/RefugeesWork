@@ -90,6 +90,11 @@
                 www.leadshareapp.com<%= @user_tracking_link %>
               </div> 
             </div><br><br>
+            <%= form_for (@user), url: tracking_id_user_path(@user), method: :post do |u| %>
+                  <%= u.label :"Vnesite besedo"  %>
+                  <%= u.text_field :name %>
+                  <%= u.submit "Spremenite kodo" %>
+              <% end %> 
           <% end %>
       </div>
     </div>
