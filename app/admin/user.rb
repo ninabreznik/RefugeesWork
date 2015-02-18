@@ -24,7 +24,7 @@ ActiveAdmin.register User do
     filter :wallet
     filter :tracking_id
     filter :name
-    column :accepted_terms_of_use
+    filter :accepted_terms_of_use
     filter :sign_in_count
     filter :last_sign_in_at
     filter :current_sign_in_at
