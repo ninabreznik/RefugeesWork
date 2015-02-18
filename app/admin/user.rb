@@ -7,6 +7,9 @@ ActiveAdmin.register User do
     id_column
     column :email  
     column :wallet
+    column :tracking_id
+    column :name
+    column :accepted_terms_of_use
     column :sign_in_count
     column :last_sign_in_at
     column :current_sign_in_at
@@ -19,6 +22,9 @@ ActiveAdmin.register User do
 
     filter :email  
     filter :wallet
+    filter :tracking_id
+    column :name
+    column :accepted_terms_of_use
     filter :sign_in_count
     filter :last_sign_in_at
     filter :current_sign_in_at
