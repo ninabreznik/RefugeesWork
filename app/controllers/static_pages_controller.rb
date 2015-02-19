@@ -4,9 +4,6 @@ class StaticPagesController < ApplicationController
     render 'about', layout: false
   end
 
-  def info
-  end
-
   def profile
     if current_user.present?
       @user = current_user
@@ -27,6 +24,17 @@ class StaticPagesController < ApplicationController
     if current_user.present?
       @user = current_user
     end
+  end
+
+  def new_lead_confirmation
+    render 'new_lead_confirmation', layout: 'adwords_layout'
+  end
+
+  def wallet_payment
+    @order = Order.find_by_id(params[:order])
+  end
+  
+  def info
   end
 
   def promo
@@ -55,16 +63,12 @@ class StaticPagesController < ApplicationController
 
   def roadmap
   end
+
+  def faq
+  end
   
   def payment_confirmation
   end
 
-  def new_lead_confirmation
-    render 'new_lead_confirmation', layout: 'adwords_layout'
-  end
-
-  def wallet_payment
-    @order = Order.find_by_id(params[:order])
-  end
 
 end

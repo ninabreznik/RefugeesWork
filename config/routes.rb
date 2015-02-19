@@ -48,5 +48,6 @@ Rails.application.routes.draw do
     get '/promo_obvestilo_5'            => 'static_pages#promo_obvestilo_5'
     get '/price_list'                   => 'static_pages#price_list'
     get '/roadmap'                      => 'static_pages#roadmap'
+    get '/faq'                          => 'static_pages#faq'
 
   end
