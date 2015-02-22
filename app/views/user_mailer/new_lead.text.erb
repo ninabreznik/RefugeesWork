@@ -5,7 +5,9 @@ prejeli smo novo povpraševanje iz regije: <%= @lead.location %>.
 Termin: <%= @lead.time %>
 Opis: <%= @lead.description %>
 
-Afiliacijska koda: <%= @lead.affiliation_id %>
+<% if @lead.affiliation_id.present? %>
+  Afiliacijska koda: <%= @lead.affiliation_id %>
+<% end %> 
 
 To obvestilo je bilo poslano vsem Sosedovim agentom iz te regije. Če želite prevzeti servis, ga čimprej <%= link_to "potrdite na LeadShareApp", root_url %>.
 
