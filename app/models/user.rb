@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  # validates_format_of :tracking_id, with: /\A[a-zA-Z0-9\s\-_]+\z/, :on => :update
+  # validates_format_of :tracking_id, with: /\A[a-zA-Z0-9\s\-_]+\z/, :on => :update, presence: false
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

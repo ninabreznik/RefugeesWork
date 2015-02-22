@@ -34,7 +34,8 @@ class UsersController < ApplicationController
   end
 
   def tracking_id
-    name = params[:user][:name]
+    name = params[:user][:name].gsub(/\W/, '')
+
     @user = current_user
     @user.name = name
     @user.tracking_id = generate_tracking_id(name)
