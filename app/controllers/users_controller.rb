@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   def create
     if @user.save
       # Tell the UserMailer to send a welcome email after save
-      UserMailer.welcome_email(@user).deliver 
-      redirect_to terms_of_use_path
+      redirect_to profile_path
     end
   end
 
@@ -30,8 +29,8 @@ class UsersController < ApplicationController
     @user = current_user
     @user.accepted_terms_of_use = accepted_terms_of_use
     @user.save
-    UserMailer.welcome_email(@user).deliver 
-    redirect_to accepted_terms_confirmation_path
+    UserMailer.terms_of_use(@user).deliver 
+    redirect_to profile_path
   end
 
   def tracking_id
@@ -39,8 +38,10 @@ class UsersController < ApplicationController
     @user = current_user
     @user.name = name
     @user.tracking_id = generate_tracking_id(name)
-    @user.save
-    redirect_to tracking_link_path
+    if @user.save
+      UserMailer.affiliation_code(@user).deliver
+    end
+    redirect_to profile_path
   end
 
 

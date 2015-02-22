@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Uspešno ste potrdili Dogovor o sodelovanju.</h1>
+
+    <p>
+      Po pošti vam bomo poslali kopijo dogovora in osnovni Sosed paket z materiali za delo.
+    </p>
+    <p>
+      Sedaj lahko pričnemo!
+    </p>
+    <p>
+      Prejeta naročila bomo objavljali na <%= link_to "domači strani LeadShareApp", root_url %>. O vsakem novem naročilu vas bomo tudi obvestili preko e-pošte. Če bo naročilo prišlo preko vaše afiliacijske kode, boste o obveščeni 10 min pred ostalimi. <br>
+      Da bi pričeli s pridobivanjem naročil, je treba najprej poskrbeti za promocijo v vaši okolici. Na voljo imate več vrst obvestil za stanovanjske bloke in oglasne deske.
+    </p>
+    <p>
+      Kako sedaj naprej?<br>
+
+      Na <%= link_to "Profilu", profile_url %> generirajte najprej svojo afiliacijsko kodo, nato pa vam bomo poslali nadaljna navodila.
+    </p>
+    <p>
+      Lep dan še naprej in kmalu se spet slišimo.
+    </p>
+      <br>
+    <p>Nina Breznik, <br>
+      <%= root_url %><br>
+      <%= mail_to "nina.breznik@sosed.si", "e: nina.breznik@sosed.si" %>
+    </p>
+  </body>
+</html>

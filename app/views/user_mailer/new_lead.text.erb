@@ -1,0 +1,15 @@
+Pozdravljeni,
+
+prejeli smo novo povpraševanje iz regije: <%= @lead.location %>.
+
+Termin: <%= @lead.time %>
+Opis: <%= @lead.description %>
+
+Afiliacijska koda: <%= @lead.affiliation_id %>
+
+To obvestilo je bilo poslano vsem Sosedovim agentom iz te regije. Če želite prevzeti servis, ga čimprej <%= link_to "potrdite na LeadShareApp", root_url %>.
+
+
+Lep dan še naprej!
+Soseda Nina
+Sosed LeadShareApp
