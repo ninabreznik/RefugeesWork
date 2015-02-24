@@ -1,0 +1,23 @@
+
+Pozdravljeni, 
+
+uspešno ste prevzeli povpraševanje iz regije: <%= @lead.location %>.
+
+
+Podatke o stranki najdete v Imeniku kontaktov. Po opravljenem servisu stranki izdajte račun, v prazno polje v Imeniku strank pa opišite servis in navedite zaračunano storitev ter morebitne nadaljne dogovore s stranko. Na e-naslov info@sosed.si pa nam pošljite še skeniran račun, ki ste ga izdali stranki.
+
+Veliko uspeha in ne pozabite - stranko poskusite vnaprej seznaniti s ceno in vedno, ko ugotovite možnosti za izboljšave, stranki predlagajte dodatno storitev.
+
+Srečno!
+
+===================================================
+
+Termin: <%= @lead.time %>
+Opis: <%= @lead.description %>
+Podatki o servisu se nahajajo <%=link_to "v Imeniku kontaktov na LeadShareApp", address_book_url %>.
+
+Nina Breznik, 
+Moj Sosed 
+<%= root_url %>
+<%=mail_to "nina.breznik@sosed.si", "e: nina.breznik@sosed.si" %>
+    

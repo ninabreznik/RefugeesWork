@@ -17,6 +17,8 @@ class OrdersController < ApplicationController
     current_user.select!(@lead)
     # @price = 10
     @user = current_user
+    order = Order.all.where(selector_id: current_user.id, selected_id: @lead.id).first
+    UserMailer.new_order(order).deliver 
     redirect_to order_path(id: @lead.reverse_orders.where(selector_id: current_user.id).first.id)
   end
 

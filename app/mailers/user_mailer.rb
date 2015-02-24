@@ -30,5 +30,12 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Nov servis')
   end
 
+  def new_order(order)
+    @order = order
+    @lead = @order.selected
+    @user = @order.selector
+    mail(to: @user.email, subject: 'Uspešno ste potrdili servis')
+  end
+
 end
 
