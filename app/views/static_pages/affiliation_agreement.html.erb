@@ -1,0 +1,138 @@
+<div class="body_wallet_payment">
+<div class="wallet_payment_offer">
+  <div class="wallet_payment_offer_title">
+    Dogovor o afiliaciji 
+  </div>
+  <div class="wallet_payment_offer_promotion">
+    I. Posrednik<br><br>
+
+    LeadShareApp.com <br>
+    Moj sosed d.o.o., <br>
+    Radehova 39, 2230 Lenart v Slovenskih goricah, <br>
+    davčna številka 49595105 (posrednik).<br><br>
+    <% if user_signed_in? %>
+      2. Afiliator <br><br>
+      <%= current_user.email %>
+    <% else %>
+      2. Afiliator <br><br>
+      Vaše podjetje
+    <% end %> 
+  </div>
+
+  <div class="wallet_payment_offer_promotion">
+    II. Predmet dogovora o poslovnem sodelovanju<br><br>
+    Predmet dogovora je posredovanje kontaktnih podatkov zainteresiranih strank, 
+    obveznosti afiliatorja in posrednika, plačilni pogoji in čas trajanja sodelovanja. <br><br>
+    Predmet dogovora je  tudi obveznost izvajalca, da strokovno, kvalitetno z zagotovljeno garancijo  izvede dogovorjeno storitev in na račun posrednika nakaže delež od zaračunane storitve. <br><br>
+    Storitve se izvajajo na željeni lokaciji oz. po celotni Sloveniji.<br><br>
+    Dogovor o sodelovanju je sklenjen za nedoločeno obdobje in prične veljati s sprejemom Pogojev sodelovanja (spodaj). <br><br>
+    Posrednik in afiliator lahko sodelovanje odpovesta kadarkoli, pred tem pa morata 
+    oba pogodbenika poravnati vse medsebojne finančne obveznosti. <br><br>
+  </div>
+
+  <div class="wallet_payment_offer_instructions">
+    III. Obveznosti afiliatorja:    
+  </div> 
+  <table class="wallet_payment_offer_sosed_info">
+    <tr class="wallet_payment_offer_sosed_info_price">
+      <td> </td>
+      <td>S podpisom dogovora se afiliator zavezuje k naslednjemu:</td>
+    </tr>  
+    <tr class="wallet_payment_offer_sosed_info_item"> 
+      <td>1.</td>
+      <td>da preko LeadShareApp posreduje naročila za računalniške servise pri njegovih strankah/uporabnikih na domu ali preko oddaljene podpore,
+      </td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>2.</td>
+      <td>da se z zainteresirano stranko dogovori za čas in kraj obiska izvajalca za posamezno storitev (kadar to ni mogoče pa to napiše v opombo in stranko pokliče serviser ter se dogovori za termin),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>3.</td>
+      <td>da so kontaktni podatki o stranki, terminu predvidenega obiska, poštni številki, željah in pričakovanjih stranke točni in posredovani izvajalcem čim prej preko LeadShareApp.com,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>4.</td>
+      <td>da v naročilnico za svoje stranke vedno zabeleži tudi afiliacijsko kodo, ki jo generira na podstrani Profil na LeadShareApp.com.</td>
+    </tr> 
+  </table><br>
+
+  <div class="wallet_payment_offer_instructions">
+    IV. Obveznosti MOJ SOSED d.o.o. – posrednika:  
+  </div> 
+  <table class="wallet_payment_offer_sosed_info">
+    <tr class="wallet_payment_offer_sosed_info_price">
+      <td> </td>
+      <td>S strinjanjem z Dogovorom o sodelovanju se posrednik obvezuje:</td>
+    </tr>  
+    <tr class="wallet_payment_offer_sosed_info_item"> 
+      <td>1.</td>
+      <td>da bo na LeadShareApp.com zbral izvajalce, ki bodo naročene storitve strokovno opravili,
+      </td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>2.</td>
+      <td>da bo skrbel, da bodo izvajalci ob dogovorjenem terminu obiskali stranko in korektno izvedli storitve,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>3.</td>
+      <td>da bo zagotovil, da bodo v primeru zamude (izjemoma) izvajalci pravočasno telefonično obvestili stranko in se opravičili ter dogovorili za drug termin obiska, </td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>4.</td>
+      <td>da bo skrbel, da izvajalci dogovorjene storitve opravljajo strokovno in kvalitetno, za svoje delo pa bo vsak njihov izvajalec nosil odgovornost in strankam zagotavljal garancijo za opravljeno storitev (tj. reševal morebitne reklamacije),</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>5.</td>
+      <td>da bodo izvajalci storitve zaračunavali v skladu s dogovorjenim cenikom <br>(po ceni 23,77 EUR/h (+ddv) za servis pri stranki in 12,30 EUR/h (+ddv) za servis na daljavo) ter da bodo strankam za opravljene storitve izdali račun svojega podjetja,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>6.</td>
+      <td>da bo omogočil afiliatorju, da število servisov sproti spremlja na aplikaciji,</td>
+    </tr> 
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>7.</td>
+      <td>da bo mesečno posredoval afiliatorju kopije računov servisov, ki so jih izvajalci opravili pri njegovih strankah,</td>
+    </tr>
+    <tr class="wallet_payment_offer_sosed_info_item">
+      <td>8.</td>
+      <td>da bo z osebnimi podatki strank dosledno ravnal v skladu z določili Zakona o varstvu osebnih podatkov in da bo podatke strank uporabljal samo za izvajanje tega sporazuma.</td>
+    </tr>  
+  </table><br><br>
+
+    <div class="wallet_payment_offer_promotion">
+      V. Cenik posredovanja kontaktnih podatkov naročnikov storitev preko LeadShareApp aplikacije<br><br>
+      Posrednik se obvezuje, da bo mesečno na afiliatorjev e-naslov posredoval skenirane izdanih račune za pretekli mesec, ki bodo izdani na podlagi naročil na aplikaciji LeadShareApp.com. <br><br>
+      Na podlagi teh dokumentov bo afiliator nato posredniku izstavil zbirni mesečni račun za posredovanje kontaktnih podatkov strank, ki znaša 20% od posamezne zaračunane storitve.<br><br>
+    </div>
+    <div class="wallet_payment_offer_promotion">
+      VI. Dogovor o poslovnem sodelovanju <br><br>
+      Posrednik in izvajalec se strinjata o vsebini dogovora o poslovnem sodelovanju. <br><br>
+      Vse spremembe bosta sprejemala soglasno. Vse morebitne nesoglasja bosta partnerja reševala sporazumno. V kolikor to ne bo možno, bosta nesoglasja odstopila pristojnemu okrajnemu sodišču v Lenartu v Slovenskih goricah. 
+    </div>
+    <% if user_signed_in? %>
+     <%= form_for (@user), url: affiliation_agreement_user_path(@user), method: :post do |u| %>
+        <%= u.check_box :affiliation_agreement %>
+        <%= u.label :"Potrjujem Dogovor o sodelovanju in se zavezujem k upoštevanju njegovih določil."  %><br><br>
+        <%= u.submit "Potrdite" %>
+      <% end %> <br><br>
+    <div class="wallet_payment_offer_instructions">
+      MOJ SOSED d.o.o. 2015
+    </div> <br>
+    <% else %>
+      <div class="wallet_payment_offer_instructions">
+        Sprejem Dogovora o sodelovanju je pogoj za pričetek sodelovanja.
+        Za nadaljevanje je potrebna
+        <%= link_to "REGISTRACIJA", new_user_registration_path %> oz.
+        <%= link_to "PRIJAVA", new_user_session_path %>
+        v aplikacijo.     
+      </div>
+      <div class="wallet_payment_offer_instructions">
+      MOJ SOSED d.o.o. 2015
+    </div>
+    <% end %>
+    </div>
+</div>
+
+
+

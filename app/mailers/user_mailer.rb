@@ -10,8 +10,14 @@ class UserMailer < ActionMailer::Base
 
   def terms_of_use(user)
     @user = user
-    #@url  = 'http://example.com/login'
     mail(to: @user.email, subject: 'Uspešno ste potrdili dogovor o sodelovanju')
+  end
+
+  def affiliation_agreement(user)
+    @user = user 
+    @tracking_id = @user.tracking_id
+    #@url  = 'http://example.com/login'
+    mail(to: @user.email, subject: 'Uspešno ste potrdili dogovor o afiliaciji')
   end
 
   def affiliation_code(user)
@@ -26,8 +32,9 @@ class UserMailer < ActionMailer::Base
     @user = user
     @user_tracking_id = @user.tracking_id 
     @user_tracking_link = leads_new_path(id: @user_tracking_id)
-      # if @lead.affiliation_id == user.tracking_id || @lead.tracking_link == @user_tracking_link
-    mail(to: @user.email, subject: 'Nov servis')
+    if @user.accepted_terms_of_use == true
+      mail(to: @user.email, subject: 'Nov servis')
+    end
   end
 
   def new_order(order)

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     member do
       post 'tracking_id'
       post 'accepted_terms_of_use'
+      post 'affiliation_agreement'
     end
   end
   
@@ -39,6 +40,7 @@ Rails.application.routes.draw do
     get '/payment_confirmation'         => 'static_pages#payment_confirmation'
     get 'tracking_link'                 => 'static_pages#tracking_link'
     get 'terms_of_use'                  => 'static_pages#terms_of_use'
+    get 'affiliation_agreement'         => 'static_pages#affiliation_agreement'
     get 'accepted_terms_confirmation'   => 'static_pages#accepted_terms_confirmation'
     get '/promo'                        => 'static_pages#promo'
     get '/promo_obvestilo_1'            => 'static_pages#promo_obvestilo_1'

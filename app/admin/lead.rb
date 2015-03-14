@@ -1,6 +1,6 @@
 ActiveAdmin.register Lead do
 
-permit_params :business_type, :zip, :location, :description, :time, :name, :email, :phone
+permit_params :business_type, :zip, :location, :description, :time, :name, :email, :phone, :tracking_link, :affiliation_id
 
 index do
   selectable_column

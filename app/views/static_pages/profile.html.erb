@@ -2,6 +2,7 @@
   <div class="columns">
   <ul class="wookmark">
 
+<!-- ########################## USER SIGNED IN ######################### -->
   <% if user_signed_in? %>
   
     <div class="lead_box">
@@ -18,92 +19,89 @@
         <div class="profile_dashboard_body_edit">
           <%= link_to "#{I18n.t'staticpagesprofile-links.edit-profile'}", edit_user_registration_path %>
         </div><br><br>
-        <% if current_user.accepted_terms_of_use == true %>
-          <div class="profile_dashboard_body_not_signed_in"> 
-            <%= link_to "Dogovor o sodelovanju:", terms_of_use_path %> Potrjen 
+      </div>
+    </div>
+
+<!-- #################### USER SIGNED IN && NOT TECHNICIAN OR AFFILATOR YET ################### -->    
+    <% if current_user.accepted_terms_of_use != true && current_user.affiliation_agreement != true %>  
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          SERVISERJI
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_username">  
+            Dogovor o sodelovanju za računalniške strokovnjake
           </div>
-        <% else %>
-         <div class="profile_dashboard_body_wallet_buttons">
-              Za aktivacijo vašega uporabniškega računa<br>
+          <div class="profile_dashboard_body_wallet_buttons">
+            <% if current_user.accepted_terms_of_use == true %>
+              <div class="profile_dashboard_body_not_signed_in"> 
+                <%= link_to "Dogovor o sodelovanju je ", terms_of_use_path %> POTRJEN 
+              </div>
+          <% else %>
+            <div class="profile_dashboard_body_wallet_buttons">
+              <div class="profile_dashboard_body_wallet_button">
+                <%= link_to "Potrdite dogovor o sodelovanju", terms_of_use_path %> 
+              </div> 
+            </div>
+          <% end %> 
+          </div>
+        </div>
+      </div>
+
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          AFILIACIJA
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_username">  
+            Dogovor o afiliaciji za poslovne partnerje
+          </div>
+          <div class="profile_dashboard_body_wallet_buttons">
+            <% if current_user.affiliation_agreement == true %>
+              <div class="profile_dashboard_body_not_signed_in"> 
+                <%= link_to "Dogovor o afiliaciji je", affiliation_agreement_path %> POTRJEN
+              </div>
+              <div class="profile_dashboard_body_wallet_buttons">
+                <div class="profile_dashboard_body_wallet_button">
+                  <%= link_to "Naročite servis", leads_new_path %>
+                </div> 
+              </div>
+          <% else %>
+            <div class="profile_dashboard_body_wallet_buttons">
+              <div class="profile_dashboard_body_wallet_button">
+                <%= link_to "Potrdite dogovor o afiliaciji", affiliation_agreement_path  %> 
+              </div> 
+            </div>
+          <% end %> 
+          </div>
+        </div>
+      </div>
+ 
+<!-- ########################## USER SIGNED IN && TECHNICIAN ######################### -->
+    <% elsif current_user.accepted_terms_of_use == true %>
+      
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          SERVISERJI
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_wallet_buttons">
+            <% if current_user.accepted_terms_of_use == true %>
+              <div class="profile_dashboard_body_not_signed_in"> 
+                <%= link_to "Dogovor o sodelovanju:", terms_of_use_path %> Potrjen 
+              </div>
+          <% else %>
+            <div class="profile_dashboard_body_wallet_buttons">
               <div class="profile_dashboard_body_wallet_button">
                 <%= link_to "Potrdite dogovor o sodelovanju.", terms_of_use_path %> 
               </div> 
             </div>
-        <% end %> 
-      </div>
-    </div>
-
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
-        Cenik:
-      </div>
-      <div class="profile_dashboard_body"> 
-        <div class="profile_dashboard_body_wallet_buttons">
-          <div class="profile_dashboard_body_not_signed_in"> 
-            Registracija v aplikacijo je brezplačna, za posredovanje naročil pa se obračunava provizija.Podrobnosti si lahko preberete tukaj:
+          <% end %> 
           </div>
-          <div class="profile_dashboard_body_wallet_button">
-            <%= link_to "Provizija", price_list_path %>
-          </div> 
-        </div><br><br>
-      </div>
-    </div>
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
-        Afiliacijska koda:
-      </div>
-      <div class="profile_dashboard_body">
-          <% if @user_tracking_id == nil %>
-            <div class="profile_dashboard_body_not_signed_in"> 
-              Pripeljite nove stranke na stran za  <%= link_to "naročilo servisa", leads_new_path %> in si zaslužite 10% od Sosedove provizije za vse storitve, ki pridejo preko vas.<br><br>
-              Generirajte afiliacijsko kodo
-            </div>
-              <%= form_for (@user), url: tracking_id_user_path(@user), method: :post do |u| %>
-                  <%= u.label :"Vpišite svoje ime"  %>
-                  <%= u.text_field :name %>
-                  <%= u.submit "Generirajte kodo" %>
-              <% end %> 
-          <% else %>
-            <div class="profile_dashboard_body_wallet_buttons">
-              <div class="profile_dashboard_body_not_signed_in"> 
-                Vaša afiliacijska koda za promocijski material:
-              </div>
-              <div class="profile_dashboard_body_wallet_button">
-                <%= @user_tracking_id %>
-              </div> 
-            </div><br><br>
-            <div class="profile_dashboard_body_wallet_buttons">
-              <div class="profile_dashboard_body_not_signed_in"> 
-               Afiliacijski link:
-              </div>
-              <div class="profile_dashboard_body_not_signed_in"> 
-                www.leadshareapp.com<%= @user_tracking_link %>
-              </div> 
-            </div><br><br>
-            <%= form_for (@user), url: tracking_id_user_path(@user), method: :post do |u| %>
-                  <%= u.label :"Vnesite besedo"  %>
-                  <%= u.text_field :name %>
-                  <%= u.submit "Spremenite kodo" %>
-              <% end %> 
-          <% end %>
-      </div>
-    </div>
-
-
-    <div class="lead_box">
-      <div class ="profile_dashboard_title">
-        Število naročil preko vaše afiliacijske kode:
-      </div>
-      <div class="profile_dashboard_body">
-        <div class="profile_dashboard_body_wallet_amount">
-          <%= @all_affiliation_customer_for_certain_user%>
         </div>
       </div>
-    </div>
 
-     <div class="lead_box">
+      <div class="lead_box">
       <div class ="profile_dashboard_title">
         Promocijski material:
       </div>
@@ -125,7 +123,7 @@
       </div>
       <div class="profile_dashboard_body"> 
         <div class="profile_dashboard_body_not_signed_in"> 
-          Daš kontakt stranke, ki je ne boš servisiral in ob tem zaslužiš provizijo.
+          Deli kontakt stranke, ki je ne utegneš servisirati in si zasluži provizijo.
         </div>
         <div class="profile_dashboard_body_wallet_buttons">
           <div class="profile_dashboard_body_wallet_button">
@@ -135,60 +133,119 @@
       </div>
     </div>
 
-
-
-    <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
-      <div class="lead_box">
-        <div class ="profile_dashboard_title">
-           Število potrjenih servisov:
-        </div>
-        <div class="profile_dashboard_body"> 
-          <div class="profile_dashboard_body_bought_leads_amount">  
-            <%= Order.all.where(selector_id: current_user.id, paid: true).count %>
-          </div> 
-        </div>
-      </div>
-        
-      <div class="lead_box">
-        <div class ="profile_dashboard_title">
-           Zadnji potrjen servis:
-        </div>
-        <div class="profile_dashboard_body"> 
-          <div class="profile_dashboard_body_bought_leads_last">  
-            <%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.business_type %> (<%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.location %>) 
-          </div> 
-        </div>
-      </div>
-
-      
-
-      <% else %>
-
+      <% if Order.all.where(selector_id: current_user.id, paid: true).present? %>
         <div class="lead_box">
           <div class ="profile_dashboard_title">
-            Število potrjenih servisov:
+             Število potrjenih servisov:
           </div>
           <div class="profile_dashboard_body"> 
-            <div class="profile_dashboard_body_no_bought_leads">  
-              <%= I18n.t'staticpagesprofile-notification.no-bought-leads' %>
+            <div class="profile_dashboard_body_bought_leads_amount">  
+              <%= Order.all.where(selector_id: current_user.id, paid: true).count %>
+            </div> 
+          </div>
+        </div>        
+        <div class="lead_box">
+          <div class ="profile_dashboard_title">
+             Zadnji potrjen servis:
+          </div>
+          <div class="profile_dashboard_body"> 
+            <div class="profile_dashboard_body_bought_leads_last">  
+              <%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.business_type %> (<%= Order.all.where(selector_id: current_user.id, paid: true).last.selected.location %>) 
             </div> 
           </div>
         </div>
-        
-        <div class="lead_box">
-          <div class ="profile_dashboard_title">
-            Zadnji potrjen servis:
+        <% else %>
+          <div class="lead_box">
+            <div class ="profile_dashboard_title">
+              Število potrjenih servisov:
+            </div>
+            <div class="profile_dashboard_body"> 
+              <div class="profile_dashboard_body_no_bought_leads">  
+                <%= I18n.t'staticpagesprofile-notification.no-bought-leads' %>
+              </div> 
+            </div>
+          </div>    
+          <div class="lead_box">
+            <div class ="profile_dashboard_title">
+              Zadnji potrjen servis:
+            </div>
+            <div class="profile_dashboard_body"> 
+              <div class="profile_dashboard_body_no_bought_leads">  
+               <%= I18n.t'staticpagesprofile-notification.no-bought-leads' %>
+              </div> 
+            </div>
           </div>
-          <div class="profile_dashboard_body"> 
-            <div class="profile_dashboard_body_no_bought_leads">  
-             <%= I18n.t'staticpagesprofile-notification.no-bought-leads' %>
-            </div> 
-          </div>
-        </div>
       <% end %>
-    
-  <% else %>
 
+<!-- ########################## USER SIGNED IN && AFFILIATOR ######################### -->
+    <% elsif current_user.affiliation_agreement == true %>
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          AFILIACIJA
+        </div>
+        <div class="profile_dashboard_body"> 
+          <div class="profile_dashboard_body_wallet_buttons">
+            <% if current_user.affiliation_agreement == true %>
+              <div class="profile_dashboard_body_not_signed_in"> 
+                <%= link_to "Dogovor o afiliaciji:", affiliation_agreement_path %> Potrjen
+              </div>
+              <div class="profile_dashboard_body_wallet_buttons">
+                <div class="profile_dashboard_body_wallet_button">
+                  <%= link_to "Naročite servis", leads_new_path %>
+                </div> 
+              </div>
+          <% else %>
+            <div class="profile_dashboard_body_wallet_buttons">
+              <div class="profile_dashboard_body_wallet_button">
+                <%= link_to "Potrdite dogovor o sodelovanju.", affiliation_agreement_path  %> 
+              </div> 
+            </div>
+          <% end %> 
+          </div>
+        </div>
+      </div>
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          AFILIACIJA
+        </div>
+        <div class="profile_dashboard_body">
+          <% if @user_tracking_id == nil %>
+            <%= form_for (@user), url: tracking_id_user_path(@user), method: :post do |u| %>
+                <%= u.label :"Vpišite ime podjetja"  %>
+                <%= u.text_field :name %>
+                <%= u.submit "Generirajte kodo" %>
+            <% end %> 
+          <% else %>
+            <div class="profile_dashboard_body_wallet_buttons">
+              <div class="profile_dashboard_body_username">  
+                Vaša afiliacijska koda, ki jo vnesete v obrazec za naročilo storitve
+               </div>
+              <div class="profile_dashboard_body_wallet_button">
+                <%= @user_tracking_id %>
+              </div> 
+            </div><br><br><br>
+            <%= form_for (@user), url: tracking_id_user_path(@user), method: :post do |u| %>
+              <%= u.label :"Vnesite besedo"  %>
+              <%= u.text_field :name %>
+              <%= u.submit "Spremenite kodo" %>
+            <% end %> 
+          <% end %>
+        </div>
+      </div>
+      <div class="lead_box">
+        <div class ="profile_dashboard_title">
+          Število naročil, prispelih preko vaše afiliacijske kode:
+        </div>
+        <div class="profile_dashboard_body">
+          <div class="profile_dashboard_body_wallet_amount">
+            <%= @all_affiliation_customer_for_certain_user%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+<!-- ########################## USER NOT SIGNED IN  ######################### -->
+  <% else %>
   <div class="lead_box">
     <div class ="profile_dashboard_title">
       <%= I18n.t'staticpagesprofile-notification.not-logged-in' %>:
@@ -205,60 +262,7 @@
     </div>
   </div>
 
-  <div class="lead_box">
-      <div class ="profile_dashboard_title">
-        Cenik:
-      </div>
-      <div class="profile_dashboard_body"> 
-        <div class="profile_dashboard_body_wallet_buttons">
-          <div class="profile_dashboard_body_not_signed_in"> 
-            Registracija v aplikacijo je brezplačna, za posredovanje naročil pa se obračunava provizija.Podrobnosti si lahko preberete tukaj:
-          </div>
-          <div class="profile_dashboard_body_wallet_button">
-            <%= link_to "Provizija", price_list_path %>
-          </div> 
-        </div><br><br>
-      </div>
-    </div>
 
-
-<div class="lead_box">
-  <div class ="profile_dashboard_title">
-    Sosed sosedu:
-  </div>
-  <div class="profile_dashboard_body"> 
-    <div class="profile_dashboard_body_not_signed_in"> 
-      Daš kontakt stranke, ki je ne boš servisiral in ob tem zaslužiš provizijo.
-    </div>
-    <div class="profile_dashboard_body_wallet_buttons">
-      <div class="profile_dashboard_body_wallet_button">
-        <%= link_to "Oddaj storitev", delim_path %>
-      </div> 
-    </div> 
-  </div>
-</div>
-
-  <div class="lead_box">
-    <div class ="profile_dashboard_title">
-        Število potrjenih servisov:
-    </div>
-    <div class="profile_dashboard_body"> 
-      <div class="profile_dashboard_body_no_bought_leads"> 
-        <%= I18n.t'staticpagesprofile-notification.you-need-to-sign-in' %>
-      </div> 
-    </div>
-  </div>
-  
-  <div class="lead_box">
-    <div class ="profile_dashboard_title">
-       Zadnji potrjen servis:
-    </div>
-    <div class="profile_dashboard_body"> 
-      <div class="profile_dashboard_body_no_bought_leads">  
-       <%= I18n.t'staticpagesprofile-notification.you-need-to-sign-in' %>
-      </div> 
-    </div>
-  </div>
 
 <% end %>
 

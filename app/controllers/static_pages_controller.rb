@@ -26,6 +26,12 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def affiliation_agreement
+    if current_user.present?
+      @user = current_user
+    end
+  end
+
   def new_lead_confirmation
     render 'new_lead_confirmation', layout: 'adwords_layout'
   end

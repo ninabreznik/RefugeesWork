@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
 
-  permit_params :email, :wallet, :password, :password_confirmation
+  permit_params :email, :wallet, :password, :password_confirmation, :name, :tracking_id, :accepted_terms_of_use, :affiliation_agreement
 
   index do
     selectable_column
@@ -10,6 +10,7 @@ ActiveAdmin.register User do
     column :tracking_id
     column :name
     column :accepted_terms_of_use
+    column :affiliation_agreement
     column :sign_in_count
     column :last_sign_in_at
     column :current_sign_in_at
@@ -25,6 +26,7 @@ ActiveAdmin.register User do
     filter :tracking_id
     filter :name
     filter :accepted_terms_of_use
+    filter :affiliation_agreement
     filter :sign_in_count
     filter :last_sign_in_at
     filter :current_sign_in_at
@@ -38,6 +40,7 @@ ActiveAdmin.register User do
       f.input :wallet
       f.input :name
       f.input :accepted_terms_of_use
+      f.input :affiliation_agreement
       f.input :sign_in_count
     end
     f.actions

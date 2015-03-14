@@ -33,6 +33,15 @@ class UsersController < ApplicationController
     redirect_to profile_path
   end
 
+   def affiliation_agreement
+    affiliation_agreement = params[:user][:affiliation_agreement]
+    @user = current_user
+    @user.affiliation_agreement = affiliation_agreement
+    @user.save
+    UserMailer.affiliation_agreement(@user).deliver 
+    redirect_to profile_path
+  end
+
   def tracking_id
     name = params[:user][:name].gsub(/\W/, '')
 

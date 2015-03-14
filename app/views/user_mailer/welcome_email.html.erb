@@ -9,10 +9,13 @@
       Uspešno ste se registrirali z uporabniškim imenom: <%= @user.email %>.<br>
     </p>
     <p>
-      Prosimo vas, da si pogledate in potrdite še <%= link_to "Dogovor o sodelovanju", terms_of_use_url %>.
+      Če ste serviser, prosimo, da si preberete še <%= link_to "Dogovor o sodelovanju za serviserje", terms_of_use_url %>.
     </p>
     <p>
-      Hvala, da ste se nam pridružili, v kratkem vas ponovno kontaktiramo. Za kakršnakoli vprašanja sem vam vedno na voljo! 
+      Če ste afiliator, pa kliknite na <%= link_to "Dogovor o sodelovanju za afiliatorje", affiliation_agreement_url %>.
+    </p>
+    <p>
+      Hvala, da ste se nam pridružili. Za kakršnakoli vprašanja sem vam vedno na voljo! 
       <br><br>Lep dan še naprej.
     </p>
       <br>
