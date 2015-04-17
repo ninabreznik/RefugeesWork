@@ -27,15 +27,15 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Uspešno ste ustvarili afiliacijsko kodo')
   end
 
-  def new_lead(lead, user)
-    @lead = lead
-    @user = user
-    @user_tracking_id = @user.tracking_id 
-    @user_tracking_link = leads_new_path(id: @user_tracking_id)
-    if @user.accepted_terms_of_use == true
-      mail(to: @user.email, subject: 'Nov servis')
-    end
-  end
+  # def new_lead(lead, user)
+  #   @lead = lead
+  #   @user = user
+  #   @user_tracking_id = @user.tracking_id 
+  #   @user_tracking_link = leads_new_path(id: @user_tracking_id)
+  #   if @user.accepted_terms_of_use == true
+  #     mail(to: @user.email, subject: 'Nov servis')
+  #   end
+  # end
 
   def new_order(order)
     @order = order

@@ -50,9 +50,9 @@ class LeadsController < ApplicationController
       # auto_create_user!(@lead)
       session[:lead_step] = session[:lead_params] = nil
       redirect_to new_lead_confirmation_url
-      User.all.where(accepted_terms_of_use: true).each do |user|
-        UserMailer.new_lead(@lead, user).deliver 
-      end
+      # User.all.where(accepted_terms_of_use: true).each do |user|
+      #   UserMailer.new_lead(@lead, user).deliver 
+      # end
     else 
       redirect_to leads_new_url
     end
