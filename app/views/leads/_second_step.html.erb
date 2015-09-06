@@ -2,20 +2,11 @@
   <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
   <%= l.text_field :name %>
 </div>
-<div class="lead_new_form_name">
-  <%= l.label "Točen naslov" %>
-  <%= l.text_field :address %>
-</div>
 <div class="lead_new_form_phone">
-  <%= l.label :"#{I18n.t'lead-new.form.phone'}" %>
+  <%= l.label :"#{I18n.t'lead-new.form.phone'} (won't be published)*" %>
   <%= l.text_field :phone %>
 </div>
-<!-- <div class="lead_new_form_email">
-  <%= l.label :"#{I18n.t'lead-new.form.email'}" %>
+<div class="lead_new_form_phone">
+  <%= l.label :"Email (won't be published)*" %>
   <%= l.text_field :email %>
-</div> -->
-<div class="lead_new_form_name">
-  <%= l.label "Če imate kodo, jo vnesite tukaj:" %>
-  <%= l.text_field :affiliation_id %>
 </div>
-

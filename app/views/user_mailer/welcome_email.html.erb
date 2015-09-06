@@ -4,25 +4,20 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Dobrodošli na LeadShareApp, </h1>
+    <h1>Welcome to RefugeesWork, </h1>
     <p>
-      Uspešno ste se registrirali z uporabniškim imenom: <%= @user.email %>.<br>
+      We are very happy you joined our community.<br>
     </p>
     <p>
-      Če ste serviser, prosimo, da si preberete še <%= link_to "Dogovor o sodelovanju za serviserje", terms_of_use_url %>.
+      You have succesfully registered with username: <%= @user.email %>.
     </p>
     <p>
-      Če ste afiliator, pa kliknite na <%= link_to "Dogovor o sodelovanju za afiliatorje", affiliation_agreement_url %>.
-    </p>
-    <p>
-      Hvala, da ste se nam pridružili. Za kakršnakoli vprašanja sem vam vedno na voljo! 
-      <br><br>Lep dan še naprej.
+      <%= link_to "Here", leads_path %> you can find all jobs posted. You will also receive en email notification for every new job offer we receive.
+      <br><br>Have a nice day & good luck!
     </p>
       <br>
-    <p>Nina Breznik, <br>
-      Moj Sosed <br>
-      <%= root_url %><br>
-      <%= mail_to "nina.breznik@sosed.si", "e: nina.breznik@sosed.si" %>
+    <p>Yours,<br>
+    <%= link_to "RefugeesWork community", root_url %>
     </p>
   </body>
 </html>

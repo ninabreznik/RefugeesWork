@@ -5,37 +5,37 @@
 
 // :::::::::::: BOX SIZING :::::::::::::: //
 
-html 
+html
   box-sizing border-box
 
-*, *:before, *:after 
+*, *:before, *:after
   box-sizing inherit
 
 // :::::::::::: COLORS :::::::::::::: //
 
 // ::: LEAD ::: //
-Lead-Orange = #FFAE4D
-Lead-Blue = #82c0c7
-Lead-Orange-light = #FFAE4D
+Lead-Orange = #fac30e
+Lead-Blue = #04a498
+Lead-Orange-light = #fac30e
 Lead-Subtitle = #F0F0F0
 
 // ::: ORDER ::: //
-Order-Orange = #FFAE4D  
+Order-Orange = #FFAE4D
 Order-Orange-light = #FFAE4D
 Order-Subtitle = #FFEED9
 
 
 // ::: MENU ::: //
-Menu-Bottom-Color = white
+Menu-Bottom-Color = #eee
 Menu-Bottom-Button-Color = black
-Menu-Bottom-Button-Hover-Color = #FFAE4D 
-Menu-Top-Color = white
+Menu-Bottom-Button-Hover-Color = #FFAE4D
+Menu-Top-Color = #eee
 Menu-Top-Button-Color = black
-Menu-Top-Button-Hover-Color = #FFAE4D 
+Menu-Top-Button-Hover-Color = #FFAE4D
 
 // ::: BODY ::: //
 Background-Color = #EEEEEE
-Buy-Button-Color = #FFAE4D 
+Buy-Button-Color = #FFAE4D
 
 // ::: BODY ::: //
 Offer-Font-Color = black
@@ -46,9 +46,9 @@ App-Font-Family = 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic 
 
 // :::::::::::: MIXINS :::::::::::::: //
 
-body-mixin(backgroundImage = url(/images/cream_pixels.png)) 
+body-mixin(backgroundImage = url(/images/cream_pixels.png))
   top_menu_bar()
-  background-image  backgroundImage  
+  background-image  backgroundImage
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -58,14 +58,14 @@ body-mixin(backgroundImage = url(/images/cream_pixels.png))
   font-size 12px
   color Offer-Font-Color
   font-family App-Font-Family
-  a  
+  a
     text-decoration none
     color Offer-Font-Color
     font-family App-Font-Family
 
-mobile-body-mixin(backgroundImage = url(/images/cream_pixels.png)) 
+mobile-body-mixin(backgroundImage = url(/images/cream_pixels.png))
   top_menu_bar()
-  background-image  backgroundImage  
+  background-image  backgroundImage
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -75,22 +75,22 @@ mobile-body-mixin(backgroundImage = url(/images/cream_pixels.png))
   font-size 8px
   color Offer-Font-Color
   font-family App-Font-Family
-  a  
+  a
     text-decoration none
     color Offer-Font-Color
     font-family App-Font-Family
 
 blur-mixin(intensity = 1.6px)
-  -webkit-filter blur(intensity) 
-  -moz-filter blur(intensity) 
-  -o-filter blur(intensity) 
-  // -ms-filter blur(intensity) 
+  -webkit-filter blur(intensity)
+  -moz-filter blur(intensity)
+  -o-filter blur(intensity)
+  // -ms-filter blur(intensity)
   filter blur(intensity)
-  
-// :::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-//                 LEAD LISTING MIXINS 
+
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  
+//                 LEAD LISTING MIXINS
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 column-mixin(defaultTop = 29px)
   position: relative;
   margin-top: defaultTop
@@ -120,7 +120,7 @@ mobileLeadBoxMixin(defaultMarginLeft = 40px)
   background: #FEFEFE;
   border: 2px solid #FAFAFA;
   box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
- 
+
 
 bottomButtonMixin(defaultFontSize = 12px)
   padding 8px
@@ -138,13 +138,10 @@ bottomButtonMixin(defaultFontSize = 12px)
   a
     text-decoration none
     color Menu-Bottom-Button-Color
-    
+
 
 @import "app_below_1300px"
 @import "app_below_804px"
 @import "app_below_706px"
 @import "app_below_550px"
 @import "app_below_350px"
-
- 
-  

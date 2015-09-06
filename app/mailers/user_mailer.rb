@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   default from: "LeadShareApp@sosed.si"
- 
+
   def welcome_email(user, pass=nil)
     @user = user
     @pass = pass
@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def affiliation_agreement(user)
-    @user = user 
+    @user = user
     @tracking_id = @user.tracking_id
     #@url  = 'http://example.com/login'
     mail(to: @user.email, subject: 'Uspešno ste potrdili dogovor o afiliaciji')
@@ -22,20 +22,16 @@ class UserMailer < ActionMailer::Base
 
   def affiliation_code(user)
     @user = user
-    @user_tracking_id = @user.tracking_id 
+    @user_tracking_id = @user.tracking_id
     @user_tracking_link = leads_new_path(id: @user_tracking_id)
     mail(to: @user.email, subject: 'Uspešno ste ustvarili afiliacijsko kodo')
   end
 
-  # def new_lead(lead, user)
-  #   @lead = lead
-  #   @user = user
-  #   @user_tracking_id = @user.tracking_id 
-  #   @user_tracking_link = leads_new_path(id: @user_tracking_id)
-  #   if @user.accepted_terms_of_use == true
-  #     mail(to: @user.email, subject: 'Nov servis')
-  #   end
-  # end
+  def new_lead(lead, user)
+    @lead = lead
+    @user = user
+    mail(to: @user.email, subject: 'New job offer')
+  end
 
   def new_order(order)
     @order = order
@@ -45,4 +41,3 @@ class UserMailer < ActionMailer::Base
   end
 
 end
-

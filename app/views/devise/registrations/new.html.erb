@@ -1,7 +1,15 @@
 <div class="body_devise_signup">
   <div class="signup">
 <div class="signup_title">
-  <%= I18n.t'users-signup.signup' %> 
+  Join RefugeeWork community.
+  <br>
+  <br>
+  Find small jobs near you.
+  <br>
+  <br>
+  Apply for jobs and get them done.
+  <br>
+  <br>
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -9,6 +17,9 @@
 
   <div class="signup_form_email"><%= f.label :"#{I18n.t'users-signup.email'}" %><br />
   <%= f.email_field :email, autofocus: true %></div>
+
+  <div class="signup_form_email"><%= f.label :"What are your skills?" %><br />
+  <%= f.text_field :business_type %></div>
 
   <div class="signup_form_password"><%= f.label :"#{I18n.t'users-signup.password'}" %> <% if @validatable %><i>(<%= @minimum_password_length %> <%= I18n.t'users-signup.minimal-char' %>)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>

@@ -2,53 +2,28 @@
 <div class="body_leads_new">
 <section class="lead_new_photo">
   <div class="lead_new_explanation">
-    <div class="lead_new_explanation_first">  
-      <i class="fa fa-pencil"></i>         Opišite težavo       </div>
-    <div class="lead_new_explanation_second"> 
-      <i class="fa fa-files-o"></i>        Izberite termin          </div>
-    <div class="lead_new_explanation_third">  
-      <i class="fa fa-check-square-o"></i> Mi poiščemo prostega serviserja  </div>
+    <div class="lead_new_explanation_first">
+      <i class="fa fa-pencil"></i>         Say what you need?      </div>
+    <div class="lead_new_explanation_second">
+      <i class="fa fa-files-o"></i>        We find available refugees.          </div>
+    <div class="lead_new_explanation_third">
+      <i class="fa fa-check-square-o"></i> You help & get things done.  </div>
   </div>
   <div class="lead_new">
-    <div class="lead_new_title">
-      <%= I18n.t'lead-new.title' %>
-    </div>
+    <br>
     <div class="lead_new_instructions">
-      <%= I18n.t'lead-new.instructions' %>
+      Some refugees are hairdressers or fashion designers. Some carpenters. Some other translators or computer technicians. Do you need any of these or similar services?
+    </div>
+    <div class="lead_new_title">
+      Book a refugee!
     </div>
     <%= form_for (@lead) do |l| %>
       <%= render "#{@lead.current_step}_step", :l => l %>
       <div class="lead_new_form_submit">
-        <%= l.submit "Nazaj", :name => "back_button" unless @lead.first_step? %>
-        <%= l.submit "Naprej" unless @lead.last_step? %>
-        <%= l.submit "Pošlji" if @lead.last_step? %>
+        <%= l.submit "Back", :name => "back_button" unless @lead.first_step? %>
+        <%= l.submit "Next" unless @lead.last_step? %>
+        <%= l.submit "Send" if @lead.last_step? %>
       </div>
     <% end %>
   </div>
 </section>
-<section class="lead_new_we_help">
-  <div class="lead_new_we_help_title">
-    Smo računalniška enota za reševanje nujnih tehnoloških katastof.
-  </div>
-  <div class="lead_new_we_help_categories_title">
-    Pokličite nas na brezplačno številko 080 4144 ali takoj, s klikom na gumb, rezervirajte termin obiska računalniškega strokovnjaka!<br>
-  </div>
-  <div class="lead_new_we_help_categories_list">
-    <i class="fa fa-check-square-o"> Odstranjevanje virusov</i> 
-    <i class="fa fa-check-square-o"> Nameščanje in popravila programske opreme</i> 
-    <i class="fa fa-check-square-o"> Omrežja</i> 
-    <i class="fa fa-check-square-o"> Trening 1-na-1</i>  
-    <i class="fa fa-check-square-o"> Namestitve strojne opreme</i> 
-    <i class="fa fa-check-square-o"> Nadgradnja</i> 
-    <i class="fa fa-check-square-o"> Zaščita</i> 
-    <i class="fa fa-check-square-o"> Svetovanje</i> 
-    <i class="fa fa-check-square-o"> Nakup opreme</i> 
-  </div>
-</section> 
-<section class="lead_new_company_info">
-  <div class="lead_new_company_info_phone"> 080 4144</div>
-  <div class="lead_new_company_info_name">Moj sosed d.o.o.</div>
-  <div class="lead_new_company_info_address">Radehova 39, 2230 Lenart</div>
-  <div class="lead_new_company_info_address">Jablonskistr. 24, 10405 Berlin</div>
-  <div class="lead_new_company_info_contact"><%= mail_to "info@sosed.si", "info@sosed.si" %></div>
-</section> 

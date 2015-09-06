@@ -4,24 +4,20 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Pozdravljeni, </h1>
+    <h1>Hello, </h1>
 
     <p>
-      prejeli smo novo povpraševanje iz regije: <%= @lead.location %>.<br><br>
-
-      Termin: <%= @lead.time %><br>
-      Opis: <%= @lead.description %><br><br>
-
+      we just received a new job offer.
     </p>
 
     <p>
-      To obvestilo je bilo poslano vsem Sosedovim agentom iz te regije. Če želite prevzeti servis, ga čimprej <%= link_to "potrdite na LeadShareApp", root_url %>. Če servis na aplikaciji ni viden, pomeni, da ga je nekdo prevzel pred vami. Čimprej kliknite in <%= link_to "poglejte servis", root_url %>, ali je servis še na voljo.
+      To see the details, please <%= link_to "click here", root_url %>.
+      <br><br>Have a nice day & good luck!
     </p>
 
-    <p>Nina Breznik, <br>
-      Moj Sosed <br>
-      <%= root_url %><br>
-      <%= mail_to "nina.breznik@sosed.si", "e: nina.breznik@sosed.si" %>
+    <p>Yours,<br>
+    <%= link_to "RefugeesWork community", root_url %>
     </p>
+    
   </body>
 </html>

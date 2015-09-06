@@ -1,59 +1,67 @@
-<div class="body_orders_address_book"> 
+<div class="body_orders_address_book">
 <% if user_signed_in? && @orders.where(selector_id: current_user.id, paid:true).count == 0 %>
  <%= render 'orders/body_dummy_orders_address_book' %>
   <div class="address_book_link_to_signup">
-    <%= I18n.t'ordersindex-notifications.signed_in_but_no_bought' %>   
-  </div> 
+    <%= I18n.t'ordersindex-notifications.signed_in_but_no_bought' %>
+  </div>
   <% elsif user_signed_in? && @orders.present? %>
   <div class="columns">
     <ul class="wookmark">
       <% @orders.where(selector_id: current_user.id, paid: true).sort.reverse.each do |order| %>
         <div class="lead_box">
           <div class ="address_book_lead_title">
-            Servis
+            Offer #<%= order.id %>
           </div>
           <div class="address_book_lead_body">
-            <div class="address_book_lead_subtitle">
-            <%= order.selected.location %> </div>
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.zip' %>:</div><%= order.selected.zip %> 
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.description' %>:</div><%= order.selected.description %> 
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.time' %>:</div> <%= order.selected.time %> 
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.name' %>:</div> <%= order.selected.name %>
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-notifications.customer-info' %>:</div>
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.phone' %>:</div> <%= order.selected.phone %> 
-            <div class="address_book_lead_subtitle">
-              <%= I18n.t'ordersindex-lead.email' %>:</div> <%= order.selected.email %><br><br><br>
+                <% if order.selected.business_type.present? %>
+                  <div class="address_book_lead_subtitle">What needs to be done:</div>
+                    <%= order.selected.business_type %>   <br>
+                <% end %>
+                <% if order.selected.time.present? %>
+                  <div class="address_book_lead_subtitle">When:</div>
+                    <%= order.selected.time %>       <br>
+                <% end %>
+                <% if order.selected.address.present? %>
+                  <div class="address_book_lead_subtitle">Where:</div>
+                    <%= order.selected.address %>        <br>
+                <% end %>
+              <% if order.selected.description.present? %>
+                <div class="address_book_lead_subtitle">Description:</div>
+                  <%= order.selected.description %><br>
+              <% end %>
+              <% if order.selected.name.present? %>
+                <div class="address_book_lead_subtitle">Offered by:</div>
+                  <%= order.selected.name %>       <br>
+              <% end %>
+              <div class="address_book_lead_subtitle">Published at:</div>
+                <%= order.selected.created_at %>       <br>
+              <br>
+              <br>
+              <br>
+              <br>
           <div class="address_book_lead_subtitle">
-              POROČILO SERVISA</div>
+              Your personal Notes about the job (not visible to the client)</div>
           </div>
-            <div class="address_book_lead_notes">      
+            <div class="address_book_lead_notes">
               <%= form_for (order) do |l| %>
                 <%= text_area(:order, :notes, :size => 20, :value => "#{order.notes}") %>
                 <div class="address_book_lead_notes_button">
                   <%= l.submit "#{I18n.t'ordersindex-buttons.save'}" %>
                 </div>
-              <% end %> 
+              <% end %>
             </div>
         </div>
-      <% end %> 
+      <% end %>
   </ul>
 </div>
 <% else %>
  <%= render 'orders/body_dummy_orders_address_book' %>
     <div class="address_book_link_to_signup">
-    <%= I18n.t'ordersindex-notifications.to-see-address-book' %> 
+    <%= I18n.t'ordersindex-notifications.to-see-address-book' %>
     <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
     new_user_registration_path, :class=>"address_book_signup" %> /
-    <%= link_to "#{I18n.t'ordersindex-buttons.login'}", 
-    new_user_session_path, :class=>"address_book_signin" %>. 
+    <%= link_to "#{I18n.t'ordersindex-buttons.login'}",
+    new_user_session_path, :class=>"address_book_signin" %>.
   </div>
 <% end %>
 </div>
-
-

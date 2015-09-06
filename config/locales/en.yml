@@ -1,19 +1,19 @@
 en:
 
 # ############################################################################################
-# Page 0 - APPLICATION 
+# Page 0 - APPLICATION
 # ############################################################################################
 
 #Login and Logout
   application:
-    top-menu:  
+    top-menu:
       login: "Login"
       signup: "Sign up"
     bottom-menu:
-      home: " Home"
-      reserved: " Reserved"
-      address-book: " Address book"
-      profile: " Profile"
+      home: " HOME"
+      reserved: " STARRED"
+      address-book: " MY APPLICATIONS"
+      profile: " DASHBOARD"
 
 
 # ############################################################################################
@@ -21,7 +21,7 @@ en:
 # ############################################################################################
 
 #Signup
-  users-signup: 
+  users-signup:
     signup: "Sign up"
     email: "Email"
     password: "Password"
@@ -37,13 +37,13 @@ en:
 
 #Edit
   users-edit: #   "#{I18n.t'users-login.remember-me'}"
-    
+
     edit-fields:
       email: "Email"
       password: "Password"
       password-confirmation: "Password confirmation"
       current.password: "Current password"
-  
+
     edit-title: "Edit profile"
     update-button: "Update"
     password-tip: "leave blank if you don't want to change it"
@@ -56,24 +56,24 @@ en:
     back: "Back"
 
   devise:
-    sessions: 
+    sessions:
       user:
         signed_in: "Succesfully signed in."
         signed_out: "Successfuly signed out."
     registrations:
       user:
         signed_up: "Succesfully signed up."
-    failure:  
-      unauthenticated: 'You need to sign in or sign up before continuing.'  
-      unconfirmed: 'You have to confirm your account before continuing.'  
-      locked: 'Your account is locked.'  
-      invalid: 'OH NOES! ERROR IN TEH EMAIL!'  
-      invalid_token: 'Invalid authentication token.'  
-      timeout: 'Your session expired, please sign in again to continue.'  
-      inactive: 'Your account was not activated yet.'  
+    failure:
+      unauthenticated: 'You need to sign in or sign up before continuing.'
+      unconfirmed: 'You have to confirm your account before continuing.'
+      locked: 'Your account is locked.'
+      invalid: 'OH NOES! ERROR IN TEH EMAIL!'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Your session expired, please sign in again to continue.'
+      inactive: 'Your account was not activated yet.'
 
 
-#<%= I18n.t'users-links.login' %> 
+#<%= I18n.t'users-links.login' %>
 #"#{I18n.t'users-links.login'}"
 #Links
   users-links:
@@ -95,7 +95,7 @@ en:
 
 # Lead body
   leadsindex-lead:
-    location: "Region" 
+    location: "Region"
     zip: "Zip"
     time: "When?"
     description: "Description"
@@ -103,15 +103,15 @@ en:
 
 # Links
   leadsindex-links:
-    address-book: "Reserved"
+    address-book: "Starred"
 
 # Notification
   leadsindex-notification:
-    no-leads-available: "Currently there is no available leads."
+    no-leads-available: "Currently there is no available jobs."
 
 
 # ############################################################################################
-# Page 2 - LEADS/SHOW 
+# Page 2 - LEADS/SHOW
 # ############################################################################################
 
 # Lead body
@@ -126,7 +126,7 @@ en:
     price: "Price: 10 €"
 
 # Links
-  leadsshow-links: 
+  leadsshow-links:
     buy: "Buy"
 
 
@@ -137,7 +137,7 @@ en:
 
 # Lead body
   ordersshow-lead:
-    location: "Region" 
+    location: "Region"
     zip: "Zip"
     time: "When?"
     description: "Description"
@@ -151,21 +151,21 @@ en:
 
 # Links
   ordersshow-links:
-    address-book: "Address book"
+    address-book: "My applications"
     notes-save: "Save"
     buy: "Buy"
 
 # Payment buttons
   ordersshow-payment-buttons:
     choose-payment-text: "Choose type of payment"
-    paypal-checkout: "Paypal" 
-    wallet: "Wallet" 
+    paypal-checkout: "Paypal"
+    wallet: "Wallet"
     bank-transfer: "Bank transfer"
 
 
 # Notification
   ordersshow-notification:
-    lead-not-available: "Currently there is no available leads."
+    lead-not-available: "Currently there is no available jobs."
     successfully-paid-order: "Your payment was succesfully processed."
 
 
@@ -189,8 +189,8 @@ en:
       bank: "Top the wallet"
     logged-in-as: "Logged in as"
     not-logged-in: "Not logged in"
-    bought-leads: "Number of bought leads"
-    last-bought-lead: "Last bought lead"
+    bought-leads: "Number of jobs you applied for"
+    last-bought-lead: "Last job you applied for"
     no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
     you-need-to-sign-in: "Za pregled teh informacij morate biti prijavljeni."
 
@@ -201,8 +201,8 @@ en:
 
 # Titles
   ordersindex-titles:
-    reserved: "No reserved leads yet."
-    address-book: "No bought leads yet."
+    reserved: "No starred jobs yet."
+    address-book: "You didn't apply to any jobs yet."
 
 # Lead body
   ordersindex-lead:
@@ -219,20 +219,20 @@ en:
   ordersindex-notifications:
     customer-info: "Customer contact information"
     customer-info-explanation: "available only if you buy this lead"
-    to-see-address-book: "To see customers in your Address book you need to"
-    signed_in_but_no_orders: "Here you will find all the leads, for which you didn't finish payment yet."
-    signed_in_but_no_orders: "Here you will find all the your bought leads - address book of your customers."
+    to-see-address-book: "To see customers in My applications page you need to"
+    signed_in_but_no_orders: "Here you will find all the jobs, for which you didn't finish payment yet."
+    signed_in_but_no_bought: "Here you will find all the jobs you applied for."
 # Buttons
-  ordersindex-buttons: 
+  ordersindex-buttons:
     buy: "Buy"
-    remove-from-reserved: "Remove from reserved"
+    remove-from-reserved: "Remove from starred"
     save: "Save"
     signup: "Sign up"
     login: "Login"
 
 # Users not signed_in text box
   ordersindex_not_signed_in:
-    text_box: "On this page you can find all reserved leads - those that you maybe decide to buy in the next days. But to be able to see and add new reserved leads, you have to "
+    text_box: "On this page you can find all starred jobs - those that you maybe decide to apply for in the next days. But to be able to see and add new starred jobs, you have to "
 
 
 
@@ -244,18 +244,18 @@ en:
 ## NOT RIGHT!!!
 
   staticpages-info:
-    thanks: "Thank you for using Sosed.biz app"
+    thanks: "Thank you for using RefugeesWork app"
     email: "Email"
-    email_text: "info@sosed.si" 
+    email_text: "ninabreznik@gmail.com"
 
   #COMPANY INFO
-    company_info: "Company info" 
-    company: "Company"
-    mojsosed: "Moj sosed d.o.o." 
+    company_info: "Info about the innitiative"
+    company: "Name"
+    mojsosed: "RefugeesWork"
     address: "Address"
-    sosed_address: "Radehova 39"
+    sosed_address: "Adalbertstrasse 7-8"
     city: "City"
-    sosed_city: "2230 Lenart"
+    sosed_city: "Berlin"
 
   #PAYMENT
     payment_purpose: "Payment purpose"
@@ -305,16 +305,16 @@ en:
     offer_account: "Account number"
     offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
     offer_company: "Company"
-    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_company_mojsosed: "Moj sosed d.o.o."
     offer_tax_id: "TAX ID"
     offer_tax_id_mojsosed: "49595105"
     offer_address: "Address"
     offer_mojsosed_address: "Radehova 39"
     offer_city: "City"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "After your payment is processed, lead will be activated and you will be able to find it in the Address book (with other bought leads)."
+    offer_instructions: "After your payment is processed, lead will be activated and you will be able to find it in the My applications (with other jobs you applied for)."
     lead:
-      location: "Region" 
+      location: "Region"
       zip: "Zip"
       time: "When?"
       description: "Description"
@@ -325,7 +325,7 @@ en:
 # ############################################################################################
   new_lead_confirmation:
     thank_you: "Thank you! Your inquiry was successfully sent."
-    text: "Providers will soon contact you with their offers."
+    text: "Someone will soon contact you with her/his offer. If we don't find anyone available near you, we will notify you."
 
 # ############################################################################################
 # Page 9 - WALLET/PAYMENT (top up the wallet)
@@ -342,14 +342,14 @@ en:
     offer_account: "Account number"
     offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
     offer_company: "Company"
-    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_company_mojsosed: "Moj sosed d.o.o."
     offer_tax_id: "TAX ID"
     offer_tax_id_mojsosed: "49595105"
     offer_address: "Address"
     offer_mojsosed_address: "Radehova 39"
     offer_city: "City"
     offer_mojsosed_city: "2230 Lenart"
-    offer_instructions: "After your payment is processed, we will add money to your wallet. You can check your status under Profile. For more information don't hesitate to contact us on info@sosed.si"
+    offer_instructions: "After your payment is processed, we will add money to your wallet. You can check your status under Profile. For more information don't hesitate to contact us on ninabreznik@gmail.com"
 
 
 # ############################################################################################
@@ -1007,4 +1007,3 @@ en:
   time:
     formats:
       long: "%d/%m/%Y %H:%M"
-

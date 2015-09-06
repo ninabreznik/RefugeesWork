@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   protect_from_forgery :except => [:create]
   # before_action :authenticate_user!
-  
+
   def index
     @orders = Order.all
     @order = Order.find_by_id(params[:id])
@@ -18,8 +18,8 @@ class OrdersController < ApplicationController
     # @price = 10
     @user = current_user
     order = Order.all.where(selector_id: current_user.id, selected_id: @lead.id).first
-    UserMailer.new_order(order).deliver 
-    redirect_to order_path(id: @lead.reverse_orders.where(selector_id: current_user.id).first.id)
+    # UserMailer.new_order(order).deliver
+    redirect_to address_book_path
   end
 
   def show
@@ -87,5 +87,5 @@ class OrdersController < ApplicationController
   # def create_conversation(beta)
   #  current_user.send_message(beta, "Pozdrav, zanima me vaš projekt. Kako vam lahko pomagam?", "Vaš projekt na Sosed.biz")
   # end
- 
+
 end

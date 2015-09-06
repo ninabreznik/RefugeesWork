@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'registrations'}
 
   resources :users do
     match '/users/:id/edit',            to: 'users#edit',       via: 'edit'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       post 'affiliation_agreement'
     end
   end
-  
+
   resources :leads
     root 'leads#index'
     match '/narocilo',                  to: 'leads#new',        via: 'get'
@@ -22,13 +22,13 @@ Rails.application.routes.draw do
 
   resources :paypal_notifications, only: [:create]
     match '/paypal_notification',       to: 'paypal_notifications#create',        via: 'post'
-  
+
   resources :orders
     get '/address_book'                 => 'orders#address_book'
     get '/reserved'                     => 'orders#reserved'
     get '/bank_transaction'             => 'orders#bank_transaction'
     get '/wallet_payment_from_lead'     => 'orders#wallet_payment_from_lead'
-  
+
   resources :static_pages
     get '/wallet_payment_type'          => 'static_pages#wallet_payment_type'
     get '/wallet_payment'               => 'static_pages#wallet_payment'

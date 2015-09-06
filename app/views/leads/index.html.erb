@@ -1,49 +1,35 @@
 <div class="body_leads_index">
 
 <div class="columns">
-
 <ul class="wookmark">
-<% if @leads.present? %>
-  <% @sorted_leads.each do |lead| %>
-    <% if lead.reverse_orders.where(paid: true).count == 0 %>
-      <% if user_signed_in? %> 
-        <% if lead.reverse_orders.where(selector_id: current_user.id).present? %>
-          <% if lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-          <% else %> 
-            <div class="lead_box">
-              <div class ="lead_title">
-                <%= link_to "Servis", lead_path(lead) %>
-                <%= link_to '<i class="fa fa-star"></i>'.html_safe, orders_path %> 
-              </div>
-              <%= render 'lead_body_for_index', :lead => lead %>
-            </div>
-          <% end %>
-        <% else %>
-            <div class="lead_box">
-              <div class ="lead_title">
-                <%= link_to "Servis", lead_path(lead) %> 
-              </div>
-              <%= render 'lead_body_for_index', :lead => lead %>
-            </div>
-        <% end %> 
-      <% else%>
-   <div class="lead_box">
-        <div class ="lead_title">
-          <%= link_to "Servis", lead_path(lead) %> 
-        </div>
-        <%= render 'lead_body_for_index', :lead => lead %>
-    </div>
+<% if user_signed_in? %>
+  <% if @leads.present? %>
+    <% @sorted_leads.each do |lead| %>
+      <div class="lead_box">
+          <%= render 'lead_body_for_index', :lead => lead %>
+      </div>
       <% end %>
-      <% end %>
-    <% end %>
-<% else %>
 </ul>
 </div>
+  <% else%>
+    <div class="leads_index_no_leads_available">
+      <%= I18n.t'leadsindex-notification.no-leads-available' %>
+    </div>
+  <% end %>
+<% else %>
 <div class="leads_index_no_leads_available">
-  <%= I18n.t'leadsindex-notification.no-leads-available' %>
+  Welcome to RefugeesWork.
+  <br>
+  <br>
+  Book a refugee for something you need to get done!
+  <br>
+  Haircut? Cooking? Repairs? Translation? Design? Anything else?
+  <br>
+  <br>
+  <%= link_to "POST A JOB & HELP REFUGEES", new_lead_path %>
 </div>
 <% end %>
-</div>
+
 <script type="text/javascript">
     var leadboxes = document.querySelectorAll('.lead_box');
     for(var i = 0; i < leadboxes.length; i++) {
@@ -55,5 +41,3 @@
       })(i);
     }
 </script>
-
-

@@ -1,17 +1,13 @@
-Pozdravljeni,
+Hello,
 
-prejeli smo novo povpraševanje iz regije: <%= @lead.location %>.
+we just received a new job offer.
 
-Termin: <%= @lead.time %>
-Opis: <%= @lead.description %>
-
-
-To obvestilo je bilo poslano vsem Sosedovim agentom iz te regije. Če želite prevzeti servis, ga čimprej <%= link_to "potrdite na LeadShareApp", root_url %>. Če servis na aplikaciji ni viden, pomeni, da ga je nekdo prevzel pred vami. Čimprej kliknite in <%= link_to "poglejte servis", root_url %>, ali je servis še na voljo.
+To see the details, please <%= link_to "click here", root_url %>.
 
 
 Lep dan še naprej!
 
-  Nina Breznik, 
-  Moj Sosed
-  <%= root_url %>
-  <%= mail_to "nina.breznik@sosed.si", "e: nina.breznik@sosed.si" %>
+Have a nice day & good luck!
+
+Yours,
+<%= link_to "RefugeesWork community", root_url %>

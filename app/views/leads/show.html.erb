@@ -1,55 +1,60 @@
 <div class="body_leads_show">
   <a class="back_to_main_page_button" href="/"></a>
-  <% if @lead.present? %> 
+  <% if @lead.present? %>
     <div class="lead_show">
       <div class="lead_show_title">
-        Servis
+        New offer
       </div>
       <div class="lead_show_body">
-        <div class="lead_show_items_short">      
+        <div class="lead_show_items_short">
           <div class="lead_show_item">
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.location' %>:</div> 
-            <%= @lead.location %>
-          </div> 
-          <div class="lead_show_item">          
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.zip' %>:</div> 
-            <%= @lead.zip %> 
-          </div> 
-          <div class="lead_show_item">          
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.description' %>:</div> 
-            <%= @lead.description %> 
-          </div>
-          <div class="lead_show_item">             
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.time' %>:</div> 
-            <%= @lead.time %>
-          </div>
-          <div class="lead_show_item">    
-            <div class="lead_show_subtitle"><%= I18n.t'leadsshow-lead.name' %>:</div> 
-            <%= @lead.name %> 
-          </div> 
-        </div>  
-    <% if user_signed_in? %> 
-      <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
-        <% if @lead.reverse_orders.where(selector_id: current_user.id).first.paid == true %>
-        <% else %>
-        <div class="lead_show_buy">
-              <%= render 'payment_confirmation_link' %>
+          <% if @lead.business_type.present? %>
+            <div class="lead_show_subtitle">What needs to be done:</div>
+              <%= @lead.business_type %>   <br>
+          <% end %>
+          <br>
+          <% if @lead.time.present? %>
+            <div class="lead_show_subtitle">When:</div>
+              <%= @lead.time %>       <br>
+          <% end %>
+          <br>
+          <% if @lead.address.present? %>
+            <div class="lead_show_subtitle">Where:</div>
+              <%= @lead.address %>        <br>
+          <% end %>
+          <br>
+          <% if @lead.description.present? %>
+            <div class="lead_show_subtitle">Description:</div>
+              <%= @lead.description %><br>
+          <% end %>
+          <br>
+          <% if @lead.name.present? %>
+            <div class="lead_show_subtitle">Offered by:</div>
+              <%= @lead.name %>       <br>
+          <% end %>
+          <br>
+          <div class="lead_show_subtitle">Published at:</div>
+            <%= @lead.created_at %>       <br>
         </div>
-        <% end %>
+        </div>
+    <% if user_signed_in? %>
+      <% if @lead.reverse_orders.where(selector_id: current_user.id).present? %>
+        <div class="lead_show_buy">
+          <%= link_to "Continue to contact info", address_book_path %>
+        </div>
       <% else %>
         <div class="lead_show_buy">
           <%- # PLEASE REFACTOR ME! NO DB QUERY OR BUILD STATEMENT IN VIEWS! %>
           <%= form_for(current_user.orders.build(selected_id: @lead.id)) do |o| %>
-            <%= o.hidden_field :selected_id %>       
-            <%= o.submit "#{I18n.t'leadsshow-links.follow'}" %>
+            <%= o.hidden_field :selected_id %>
+            <%= o.submit "Continue to contact info" %>
           <% end %>
         </div>
-      </div>
-      <% end %> 
+      <% end %>
     <% else%>
       <div class="lead_show_buy">
-        <%= link_to "#{I18n.t'leadsshow-links.follow'}", user_registration_path %>
-      </div>      
+        <%= link_to "Sign in / Log in to see contact info", user_registration_path %>
+      </div>
     <% end %>
     </div>
 <% else %>
