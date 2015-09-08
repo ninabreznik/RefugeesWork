@@ -33,6 +33,16 @@
                 <div class="address_book_lead_subtitle">Offered by:</div>
                   <%= order.selected.name %>       <br>
               <% end %>
+              <br>
+              <br>
+              <% if order.selected.phone.present? %>
+                <div class="address_book_lead_subtitle">Phone:</div>
+                  <%= order.selected.phone %>       <br>
+              <% end %>
+              <% if order.selected.email.present? %>
+                <div class="address_book_lead_subtitle">Offered by:</div>
+                  <%= order.selected.email %>       <br>
+              <% end %>
               <div class="address_book_lead_subtitle">Published at:</div>
                 <%= order.selected.created_at %>       <br>
               <br>
