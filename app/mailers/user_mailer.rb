@@ -1,11 +1,11 @@
 class UserMailer < ActionMailer::Base
-  default from: "LeadShareApp@sosed.si"
+  default from: "we@refugeeswork.com"
 
   def welcome_email(user, pass=nil)
     @user = user
     @pass = pass
     #@url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Dobrodošli na Sosed LeadShareApp')
+    mail(to: @user.email, subject: 'Welcome to RefugeesWork')
   end
 
   def terms_of_use(user)
@@ -37,7 +37,7 @@ class UserMailer < ActionMailer::Base
     @order = order
     @lead = @order.selected
     @user = @order.selector
-    mail(to: @user.email, subject: 'Uspešno ste potrdili servis')
+    mail(to: @user.email, subject: 'Check your address book')
   end
 
 end
