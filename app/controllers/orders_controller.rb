@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
   def edit
     @order = Order.find(params[:id])
     @order.update_attributes(:paid => true)
-    redirect_to payment_confirmation_url
+    redirect_to address_book_path
   end
 
   def destroy
