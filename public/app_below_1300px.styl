@@ -89,13 +89,11 @@
     .body_leads_index
       body-mixin(backgroundImage: url(/images/interior1.jpg))
       margin-top 0px
-      padding-bottom 1200px
+      padding-bottom 300px
       .columns
         column-mixin()
         .wookmark
           wookmarkMixin()
-          margin-top 600px
-          margin-bottom 100px
           .lead_box
             leadBoxMixin()
             .lead_title
@@ -141,8 +139,12 @@
         color: white;
         letter-spacing: -1px;
         line-height 150%
-      .leads_index_no_leads_available a
+      .leads_index_no_leads_available_button_first a
         button(size: large)
+        margin-right 10%
+        float left
+      .leads_index_no_leads_available_button_second a
+        button(size: large, color: #fac30e)
     /* :::::::::::: LEADS/show => individual lead :::::::::::: */
     .body_leads_show
       body-mixin(backgroundImage: url(/images/interior2.jpg))
