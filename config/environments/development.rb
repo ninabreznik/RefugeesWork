@@ -1,13 +1,13 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.delivery_method = :smtp
-  
+
   config.action_mailer.smtp_settings = {
     address:              'smtp.mandrillapp.com',
     port:                 587,
     #domain:               'gmail.com',
     user_name:            'ninabreznik@gmail.com',
-    password:             'GnUQAUKHxIO7YpSGcY2Lzg',
+    password:             '8FXOFOHkdNCo85LHgczzFA',
     authentication:       'plain',
     enable_starttls_auto: true  }
 
@@ -46,7 +46,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
-  
+
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
