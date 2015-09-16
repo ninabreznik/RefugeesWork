@@ -1,30 +1,32 @@
 <div class="lead_body">
   <div class="lead_title">
-    <%= link_to "New offer", lead_path(lead) %>
+    <% if lead.business_type.present? %>
+      <%= lead.business_type %>
+    <% else %>
+      <%= link_to "New offer", lead_path(lead) %>
+    <% end %>
   </div>
-  <% if lead.business_type.present? %>
-    <div class="lead_subtitle">What needs to be done:</div>
-      <%= lead.business_type %>   <br>
+  <br>
+  <% if lead.address.present? %>
+    <div class="lead_subtitle">Location:</div>
+      <%= lead.address %>        <br><br>
+  <% end %>
+
+  <% if lead.description.present? %>
+    <div class="lead_subtitle">Description:</div>
+      <%= lead.description %><br>
   <% end %>
   <% if lead.time.present? %>
     <div class="lead_subtitle">When:</div>
       <%= lead.time %>       <br>
-  <% end %>
-  <% if lead.address.present? %>
-    <div class="lead_subtitle">Where:</div>
-      <%= lead.address %>        <br>
-  <% end %>
-  <% if lead.description.present? %>
-    <div class="lead_subtitle">Description:</div>
-      <%= lead.description %><br>
   <% end %>
   <% if lead.name.present? %>
     <div class="lead_subtitle">Offered by:</div>
       <%= lead.name %>       <br>
   <% end %>
   <br>
-  <div class="lead_subtitle">Published at:</div>
-    <%= lead.created_at %>       <br>
+  <div class="lead_subtitle"></div>
+    Published at: <%= lead.created_at.strftime("%d.%m.%y ob %H:%M") %>       <br>
 </div>
 
 <script type="text/javascript">
