@@ -1,14 +1,23 @@
 <div class="body_devise_users_edit">
   <div class="user_edit">
 <div class="user_edit_title">
-  Update your skills
+  Update your profile
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+  <div class="user_edit_form_email"><%= f.label :"Please, tell us your name" %><br />
+  <%= f.text_field :name %></div>
+
   <div class="user_edit_form_email"><%= f.label :"What are your skills?" %><br />
   <%= f.text_field :business_type %></div>
+
+  <div class="user_edit_form_email"><%= f.label :"Where are you originaly from?" %><br />
+  <%= f.text_field :country %></div>
+
+  <div class="user_edit_form_email"><%= f.label :"Where do you currently live?" %><br />
+  <%= f.text_field :city %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

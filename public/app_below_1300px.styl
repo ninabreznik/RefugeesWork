@@ -828,11 +828,17 @@
         .user_edit_form_email,
         .user_edit_form_password,
         .user_edit_form_password_confirmation,
-        .user_edit_form_business_type
+        .user_edit_form_business_type,
+        .user_edit_form_country,
+        .user_edit_form_city,
+        .user_edit_form_name
           font-size 14px
           font-weight bold
           margin-bottom 14px
-          #user_business_type
+          #user_business_type,
+          #user_city,
+          #user_country,
+          #user_name
             padding 4px
             border-radius 4px
             margin-top 4px
@@ -1165,6 +1171,35 @@
           font-weight bold
           background-color Lead-Orange
           padding 4px
+    /* :::::::::::: STATICPAGES/WELCOME landing singlepage :::::::::::: */
+    .body_welcome
+      body-mixin(backgroundImage: url(/images/interior1.jpg))
+      margin-top 29px
+      padding-bottom 1500px
+      .leads_index_no_leads_available
+        position: absolute
+        margin-top 30px
+        margin-left 210px
+        background: rgb(0, 0, 0); /* fallback color */
+        background: rgba(0, 0, 0, 0.7);
+        position fixed
+        blur-mixin(intensity = 0px)
+        padding: 50px;
+        top: 200px;
+        font-size 28px
+        font-weight bold
+        -webkit-font-smoothing: antialiased
+        max-width 1000px
+        min-width 400px
+        color: white;
+        letter-spacing: -1px;
+        line-height 150%
+      .leads_index_no_leads_available_button_first a
+        button(size: large)
+        margin-right 10%
+        float left
+      .leads_index_no_leads_available_button_second a
+        button(size: large, color: #fac30e)
     /* :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: */
     .body_info_singlepage
       font-family App-Font-Family

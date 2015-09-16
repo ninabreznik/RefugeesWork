@@ -4,9 +4,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def sign_up_params
     params.require(:user).permit(
-      :first_name,
-      :surname,
+      :name,
       :business_type,
+      :surname,
       :service,
       :de_service,
       :company,
@@ -27,22 +27,22 @@ class RegistrationsController < Devise::RegistrationsController
 
   def account_update_params
     params.require(:user).permit(
-      :first_name,
+      :name,
       :surname,
       :business_type,
+      :city,
+      :country,
       :service,
       :de_service,
       :company,
       :tax_id,
       :website,
       :phone,
-      :city,
       :hourly_rate,
       :bio,
       :de_bio,
       :picture,
       :email,
-      :country,
       :password,
       :password_confirmation,
       :current_password)

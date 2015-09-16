@@ -2,7 +2,6 @@
 
 <div class="columns">
 <ul class="wookmark">
-<% if user_signed_in? %>
   <% if @leads.present? %>
     <% @sorted_leads.each do |lead| %>
       <div class="lead_box">
@@ -16,25 +15,6 @@
       <%= I18n.t'leadsindex-notification.no-leads-available' %>
     </div>
   <% end %>
-<% else %>
-<div class="leads_index_no_leads_available">
-  Welcome to RefugeesWork.
-  <br>
-  <br>
-  Book a refugee for something you need to get done!
-  <br>
-  Haircut? Cooking? Repairs? Translation? Design? Anything else?
-  <br>
-  <br>
-  <div class="leads_index_no_leads_available_button_first">
-    <%= link_to "POST A JOB & HELP REFUGEES", new_lead_path %>
-  </div>
-  <div class="leads_index_no_leads_available_button_second">
-    <%= link_to "ARE YOU A REFUGEE? Register here", new_user_registration_path %>
-  </div>
-</div>
-<% end %>
-
 <script type="text/javascript">
     var leadboxes = document.querySelectorAll('.lead_box');
     for(var i = 0; i < leadboxes.length; i++) {

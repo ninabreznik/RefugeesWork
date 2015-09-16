@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :leads
-    root 'leads#index'
+    root 'static_pages#welcome'
     match '/narocilo',                  to: 'leads#new',        via: 'get'
     match '/delim',                     to: 'leads#share',      via: 'get'
     get 'leads/show'
