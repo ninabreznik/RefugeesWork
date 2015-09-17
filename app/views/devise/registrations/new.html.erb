@@ -18,9 +18,6 @@
   <div class="signup_form_email"><%= f.label :"#{I18n.t'users-signup.email'}" %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
-  <div class="signup_form_email"><%= f.label :"What are your skills?" %><br />
-  <%= f.text_field :business_type %></div>
-
   <div class="signup_form_password"><%= f.label :"#{I18n.t'users-signup.password'}" %> <% if @validatable %><i>(<%= @minimum_password_length %> <%= I18n.t'users-signup.minimal-char' %>)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 

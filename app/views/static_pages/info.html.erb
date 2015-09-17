@@ -1,23 +1,29 @@
 <div class="body_info_singlepage">
-  <section class="section_welcome">
-    <div class="section_welcome_title">Why shouldn't refugees be able to use their skills? </div>
-    <div class="section_welcome_title">Some of them are hairdressers or fashion designers. Some carpenters. Some other translators or computer technicians.</div>
-    <div class="section_welcome_title">Do you need any of these or similar services? </div>
-    <div class="section_welcome_subtitle">
-      <br>
-      Book a refugee for something you need to get done!</div>
-  </section>
 
   <section class="section_how_it_works">
     <div class="section_how_it_works_image"></div>
-    <div class="section_how_it_works_title"> YOU can make a difference! Activate yourself!</div>
-    <div class="section_how_it_works_text">Post a job/task and we will find the right refugee who can do it. To pay back you can prepare some nice meal, give a pice of clothing or ask what they need in return for their time. </div>
+    <div class="section_how_it_works_title"> YOU can make a difference! ACTIVATE YOURSELF!</div>
+    <div class="section_how_it_works_text"><%= link_to "POST A JOB & HELP REFUGEES", new_lead_path %> It can be a small one-day task, internship, B2B project or a full time job.  </div>
   </section>
 
   <section class="section_budget">
     <i class="fa fa-calculator"></i>
     <div class="section_budget_title">ARE YOU A REFUGEE?</div>
-    <div class="section_budget_text">Click <%= link_to "Register now", new_user_session_path %> and we will put you into our database and inform you when new jobs/tasks will be available near you.</div>
+    <div class="section_budget_text">Click <%= link_to "Register now", new_user_registration_path %> and we will put you into our database and inform you when new jobs/tasks will be available near you.</div>
+    <div class="section_budget_text">More resources: <br><br>
+      <a href="https://www.facebook.com/groups/refugeeswork">RefugeesWork on Facebook</a>
+      <br>
+      <a href="http://www.fluechtlinge-willkommen.de/ticket-anmeldung-refugee/">Find a room</a>
+      <br>
+      <a href="http://sharehaus.net/refugio/">ShareHouse Refugio</a>
+      <br>
+      <a href="https://foodsharing.de/karte">FoodShare</a>
+      <br>
+      <a href="http://www.meetup.com/CodingAmigos/">HackerSpace for developers</a>
+      <br>
+      <a href="https://titanpad.com/germanclassesforrefugees">German classes</a>
+
+    </div>
   </section>
 
   <section class="section_our_team">
@@ -28,14 +34,14 @@
 
 
   <section class="section_why_sosed">
-    <div class="section_why_sosed_title">Who are we and why are we doing this?</div>
-    <div class="section_why_sosed_text"> We are people from planet earth who want to help our friends in need. We are convinced that refugees should not be stigmatized and excluded. Instead, we should offer them a warm welcome. We believe we can establish a more humane culture of welcoming refugees!</div>
+    <div class="section_why_sosed_title">WHY ARE WE DOING THIS?</div>
+    <div class="section_why_sosed_text"> We are people from planet earth who want to help our friends in need. We are convinced that refugees should not be stigmatized and excluded. Instead, we should think of refugees not just as victims but as potential contributors to societies and economies in the future.</div>
   </section>
   <section class="section_company_info">
-    <div class="section_company_info_name">Made from people for people</div>
+    <div class="section_company_info_name">Be the change you want to see!</div>
     <br>
-    <div class="section_company_info_bank_account">Be the change you want to see.</div>
-    <div class="section_company_info_contact"><%= mail_to "ninabreznik@gmail.com", "Get in touch" %></div>
+    <div class="section_company_info_contact"><a href="https://www.facebook.com/groups/refugeeswork">JOIN DISCUSSION ON FACEBOOK GROUP</a>
+    <br>
     <br>
     <div class="section_company_info_city">We live in Berlin, Germany.</div>
     <div class="section_company_info_tax_number">But we come from Slovenia, Korea, Germany, Portugal, Spain, Bosnia, Peru, Taiwan, Lebanon, UK, France, USA and other.</div>
