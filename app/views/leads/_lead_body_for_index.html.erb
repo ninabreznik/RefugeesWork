@@ -1,7 +1,7 @@
 <div class="lead_body">
   <div class="lead_title">
     <% if lead.business_type.present? %>
-      <%= lead.business_type %>
+      <%= link_to lead.business_type, lead_path(lead) %>
     <% else %>
       <%= link_to "New offer", lead_path(lead) %>
     <% end %>

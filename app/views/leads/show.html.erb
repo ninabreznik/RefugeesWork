@@ -3,23 +3,17 @@
   <% if @lead.present? %>
     <div class="lead_show">
       <div class="lead_show_title">
-        New offer
+        <% if @lead.business_type.present? %>
+          <%= @lead.business_type %>
+        <% else %>
+          New offer
+        <% end %>
       </div>
       <div class="lead_show_body">
         <div class="lead_show_items_short">
           <div class="lead_show_item">
-          <% if @lead.business_type.present? %>
-            <div class="lead_show_subtitle">What needs to be done:</div>
-              <%= @lead.business_type %>   <br>
-          <% end %>
-          <br>
-          <% if @lead.time.present? %>
-            <div class="lead_show_subtitle">When:</div>
-              <%= @lead.time %>       <br>
-          <% end %>
-          <br>
           <% if @lead.address.present? %>
-            <div class="lead_show_subtitle">Where:</div>
+            <div class="lead_show_subtitle">Location:</div>
               <%= @lead.address %>        <br>
           <% end %>
           <br>
@@ -27,14 +21,15 @@
             <div class="lead_show_subtitle">Description:</div>
               <%= @lead.description %><br>
           <% end %>
-          <br>
+          <% if @lead.time.present? %>
+            <div class="lead_show_subtitle">When:</div>
+              <%= @lead.time %>       <br>
+          <% end %>
           <% if @lead.name.present? %>
-            <div class="lead_show_subtitle">Offered by:</div>
+            <div class="lead_show_subtitle">Contact:</div>
               <%= @lead.name %>       <br>
           <% end %>
           <br>
-          <div class="lead_show_subtitle">Published at:</div>
-            <%= @lead.created_at %>       <br>
         </div>
         </div>
     <% if user_signed_in? %>
