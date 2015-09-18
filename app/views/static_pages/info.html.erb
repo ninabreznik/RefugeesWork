@@ -1,11 +1,6 @@
 <div class="body_info_singlepage">
 
-  <section class="section_how_it_works">
-    <div class="section_how_it_works_image"></div>
-    <div class="section_how_it_works_title"> YOU can make a difference! ACTIVATE YOURSELF!</div>
-    <div class="section_how_it_works_text"><%= link_to "POST A JOB & HELP REFUGEES", new_lead_path %> It can be a small one-day task, internship, B2B project or a full time job.  </div>
-  </section>
-
+    <%= render "layouts/disqus" %>
   <section class="section_budget">
     <i class="fa fa-calculator"></i>
     <div class="section_budget_title">ARE YOU A REFUGEE?</div>
@@ -37,10 +32,13 @@
     <div class="section_why_sosed_title">WHY ARE WE DOING THIS?</div>
     <div class="section_why_sosed_text"> We are people from planet earth who want to help our friends in need. We are convinced that refugees should not be stigmatized and excluded. Instead, we should think of refugees not just as victims but as potential contributors to societies and economies in the future.</div>
   </section>
+
+
   <section class="section_company_info">
     <div class="section_company_info_name">Be the change you want to see!</div>
     <br>
     <div class="section_company_info_contact"><a href="https://www.facebook.com/groups/refugeeswork">JOIN DISCUSSION ON FACEBOOK GROUP</a>
+    </div>
     <br>
     <br>
     <div class="section_company_info_city">We live in Berlin, Germany.</div>
@@ -48,4 +46,5 @@
     <br>
     <div class="section_company_info_street"><a href="http://www.codingamigos.com/users/5">Built by Nina / Coding Amigos</a></div>
   </section>
+
 </div>
