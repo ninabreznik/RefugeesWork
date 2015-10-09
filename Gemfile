@@ -53,11 +53,14 @@ gem 'formtastic'
 
 # Use Capistrano for deployment
 group :development do
+  gem 'annotate', require: false
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
   gem 'sqlite3', '1.3.9'
+  gem 'better_errors'
+  gem 'quiet_assets'
 end
 
 #Dashing related stuff
