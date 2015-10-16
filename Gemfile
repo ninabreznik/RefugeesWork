@@ -71,10 +71,20 @@ group :development do
 end
 
 #Dashing related stuff
-  gem 'puma'
+gem 'puma'
 # gem 'nokogiri'
 # gem 'htmlentities'
 
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'fakeweb'
+end

@@ -26,26 +26,11 @@ describe Lead do
   describe :validations do
     specify { expect(build(:lead)).to be_valid }
 
-    specify { expect(build(:lead, business_type: "")).not_to be_valid }
-    specify { expect(build(:lead, business_type: nil)).not_to be_valid }
-
-    specify { expect(build(:lead, address: "")).not_to be_valid }
-    specify { expect(build(:lead, address: nil)).not_to be_valid }
-
     specify { expect(build(:lead, description: "")).not_to be_valid }
     specify { expect(build(:lead, description: nil)).not_to be_valid }
 
-    specify { expect(build(:lead, name: "")).not_to be_valid }
-    specify { expect(build(:lead, name: nil)).not_to be_valid }
-
     specify { expect(build(:lead, email: "")).not_to be_valid }
     specify { expect(build(:lead, email: nil)).not_to be_valid }
-
-    specify { expect(build(:lead, address: "")).not_to be_valid }
-    specify { expect(build(:lead, address: nil)).not_to be_valid }
-
-    specify { expect(build(:lead, time: "")).not_to be_valid }
-    specify { expect(build(:lead, time: nil)).not_to be_valid }
   end
 
   describe :scopes do
