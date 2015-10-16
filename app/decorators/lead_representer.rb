@@ -6,7 +6,7 @@ module LeadRepresenter
 
   property :id
   property :name
-  property :email,            if: lambda { |args| puts args;args[:authenticated] }
+  property :email,            if: lambda { |args| args[:authenticated] }
   property :description
   property :created_at
   property :updated_at

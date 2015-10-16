@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(version: 20151119165227) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "api_keys", force: true do |t|
+    t.string   "access_token",                null: false
+    t.integer  "user_id",                     null: false
+    t.boolean  "active",       default: true, null: false
+    t.datetime "expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "api_keys", ["access_token"], name: "index_api_keys_on_access_token", unique: true
+  add_index "api_keys", ["user_id"], name: "index_api_keys_on_user_id"
+
   create_table "leads", force: true do |t|
     t.string   "name"
     t.string   "email"

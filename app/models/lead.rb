@@ -38,8 +38,6 @@ class Lead < ActiveRecord::Base
   validates :address, presence: true
   validates :email, presence: true, format: {with: /.+@.+\..+/i}
 
-
-
   # :::::::::::::: LEAD/NEW forms :::::::::::::::::::
 
   def current_step
