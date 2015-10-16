@@ -44,28 +44,20 @@ class Lead < ActiveRecord::Base
     @current_step || steps.first
   end
 
+  BUSINESS_STEPS = {
+    I18n.t('lead-new.form.business-types.building_house')           => %w[first building],
+    I18n.t('lead-new.form.business-types.architect')                => %w[first architect],
+    I18n.t('lead-new.form.business-types.masonry')                  => %w[first masonry],
+    I18n.t('lead-new.form.business-types.renovation')               => %w[first renovation],
+    I18n.t('lead-new.form.business-types.mechanical_installations') => %w[first mechanical_installations],
+    I18n.t('lead-new.form.business-types.electrical_installations') => %w[first electrical_installations],
+    I18n.t('lead-new.form.business-types.painting')                 => %w[first painting],
+    I18n.t('lead-new.form.business-types.fasades')                  => %w[first fasades],
+    I18n.t('lead-new.form.business-types.roofing')                  => %w[first roofing]
+  }
+
   def steps
-    if business_type == "#{I18n.t'lead-new.form.business-types.building_house'}"
-      %w[first building]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.architect'}"
-      %w[first architect]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.masonry'}"
-      %w[first masonry]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.renovation'}"
-      %w[first renovation]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.mechanical_installations'}"
-      %w[first mechanical_installations]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.electrical_installations'}"
-      %w[first electrical_installations]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.painting'}"
-      %w[first painting]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.fasades'}"
-      %w[first fasades]
-    elsif business_type == "#{I18n.t'lead-new.form.business-types.roofing'}"
-      %w[first roofing]
-    else
-      %w[first second]
-    end
+    BUSINESS_STEPS[business_type] || %w[first second]
   end
 
   def next_step
