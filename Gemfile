@@ -50,8 +50,9 @@ gem 'formtastic'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'grape'
+gem 'grape-entity'
+gem 'grape-swagger'
 gem 'roar'
-gem 'grape-roar'
 gem 'grape-swagger-rails'
 
 # Use unicorn as the app server
