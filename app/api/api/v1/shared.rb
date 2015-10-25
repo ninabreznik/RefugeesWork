@@ -1,4 +1,4 @@
-module V1
+module API::V1
   module Shared
   extend ActiveSupport::Concern
 
@@ -16,7 +16,7 @@ module V1
 
         def current_user
           # find token. Check if valid.
-          token = ApiKey.where(access_token: params[:token]).first
+          token = ApiKey.where(access_token: params[:auth_token]).first
           if token && !token.expired?
             @current_user = User.find(token.user_id)
           else

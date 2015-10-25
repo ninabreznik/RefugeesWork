@@ -1,6 +1,6 @@
 require 'roar/json'
 
-module V1::Entity
+module API::V1::Entity
   class User < Grape::Entity
     expose :id
     expose :sign_in_count

@@ -1,6 +1,6 @@
 require 'roar/json'
 
-module V1::Entities
+module API::V1::Entities
   class Lead < Grape::Entity
     expose :id
     expose :name

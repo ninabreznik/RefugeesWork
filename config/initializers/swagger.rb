@@ -1,5 +1,5 @@
-GrapeSwaggerRails.options.url      = '/swagger_doc.json'
-GrapeSwaggerRails.options.app_url  = 'http://localhost:3000'
+GrapeSwaggerRails.options.url      = '/api/v1/doc.json'
+GrapeSwaggerRails.options.app_url  = "#{ENV['APPLICATION_URL']}"
 GrapeSwaggerRails.options.app_name = 'RefugeesWork'
 
 GrapeSwaggerRails.options.api_auth     = 'basic' # Or 'bearer' for OAuth

@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_one :api_key, dependent: :destroy
   has_many :orders, foreign_key: "selector_id"
   has_many :selected_leads, through: :orders, source: :selected
 

@@ -51,8 +51,8 @@ gem 'formtastic'
 
 gem 'grape'
 gem 'grape-entity'
-gem 'grape-swagger'
 gem 'roar'
+gem 'grape-swagger'
 gem 'grape-swagger-rails'
 
 # Use unicorn as the app server
