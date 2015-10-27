@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders, foreign_key: "selector_id"
-  has_many :selected_leads, through: :orders, source: :selected 
+  has_many :selected_leads, through: :orders, source: :selected
 
   has_many :leads
 

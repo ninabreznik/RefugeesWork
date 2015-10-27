@@ -107,7 +107,7 @@ en:
 
 # Notification
   leadsindex-notification:
-    no-leads-available: "Currently there is no available jobs."
+    no-leads-available: "Currently there is no available invitations."
 
 
 # ############################################################################################
@@ -165,7 +165,7 @@ en:
 
 # Notification
   ordersshow-notification:
-    lead-not-available: "Currently there is no available jobs."
+    lead-not-available: "Currently there is no available invitations."
     successfully-paid-order: "Your payment was succesfully processed."
 
 
@@ -189,8 +189,8 @@ en:
       bank: "Top the wallet"
     logged-in-as: "Logged in as"
     not-logged-in: "Not logged in"
-    bought-leads: "Number of jobs you applied for"
-    last-bought-lead: "Last job you applied for"
+    bought-leads: "Number of your users you contacted"
+    last-bought-lead: "Last invitation you applied for"
     no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
     you-need-to-sign-in: "Za pregled teh informacij morate biti prijavljeni."
 
@@ -201,8 +201,8 @@ en:
 
 # Titles
   ordersindex-titles:
-    reserved: "No starred jobs yet."
-    address-book: "You didn't apply to any jobs yet."
+    reserved: "No starred invitations yet."
+    address-book: "You didn't apply to any invitations yet."
 
 # Lead body
   ordersindex-lead:
@@ -219,9 +219,9 @@ en:
   ordersindex-notifications:
     customer-info: "Customer contact information"
     customer-info-explanation: "available only if you buy this lead"
-    to-see-address-book: "To see customers in My applications page you need to"
-    signed_in_but_no_orders: "Here you will find all the jobs, for which you didn't finish payment yet."
-    signed_in_but_no_bought: "Here you will find all the jobs you applied for."
+    to-see-address-book: "Here you will find all the users you connected with. To get started"
+    signed_in_but_no_orders: "Here you will find all the invitations, that you saved."
+    signed_in_but_no_bought: "Here you will find all the invitations, that you saved."
 # Buttons
   ordersindex-buttons:
     buy: "Buy"
@@ -232,7 +232,7 @@ en:
 
 # Users not signed_in text box
   ordersindex_not_signed_in:
-    text_box: "On this page you can find all starred jobs - those that you maybe decide to apply for in the next days. But to be able to see and add new starred jobs, you have to "
+    text_box: "On this page you can find all starred invitations - those that you maybe decide to apply for in the next days. But to be able to see and add new starred invitations, you have to "
 
 
 
@@ -324,8 +324,8 @@ en:
 # Page 8 - STATICPAGES/NEW_LEAD_CONFIRMATION (for new leads)
 # ############################################################################################
   new_lead_confirmation:
-    thank_you: "Thank you! Your inquiry was successfully sent."
-    text: "Someone will soon contact you with her/his offer. If we don't find anyone available near you, we will notify you."
+    thank_you: "Thank you! Your invitation was successfully sent."
+    text: "Someone will soon contact you. If nobody gets in touch, please let us know and we will try to help out:)"
 
 # ############################################################################################
 # Page 9 - WALLET/PAYMENT (top up the wallet)

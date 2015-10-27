@@ -11,9 +11,17 @@
     <p>
       You have succesfully registered with username: <%= @user.email %>.
     </p>
+    <%- if @pass %>
+      <p>
+        Your temporary password is: <%= @pass %>
+      </p>
+      <p>
+        We suggest you to change it with your next login!
+      </p>
+    <%- end %>
     <p>
-      <%= link_to "Here", leads_url %> you can find all jobs posted. You will also receive en email notification for every new job offer we receive.
-      <br><br>Have a nice day & good luck!
+      <%= link_to "Here", leads_url %> you can find all connection invitations posted. You will also receive en email notification for every new connection invitation we receive.
+      <br><br>Have a nice day & keep up good work!
     </p>
       <br>
     <p>Yours,<br>

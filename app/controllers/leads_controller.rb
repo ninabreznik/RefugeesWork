@@ -44,7 +44,7 @@ class LeadsController < ApplicationController
     end
     session[:lead_step] = @lead.current_step
     if @lead.save
-      # auto_create_user!(@lead)
+      auto_create_user!(@lead)
       session[:lead_step] = session[:lead_params] = nil
       redirect_to new_lead_confirmation_url
       User.all.each do |user|
@@ -83,27 +83,27 @@ class LeadsController < ApplicationController
     )
   end
 
-  # def auto_create_user!(lead)
-  #   if user_signed_in?
-  #     lead.user_id = current_user.id
-  #   else
-  #     user = User.find_by_email(lead.email)
-  #     if user
-  #       lead.user_id = user.id
-  #     else
-  #       pass = SecureRandom.hex[0..7]
-  #       user = User.create!(
-  #                email: lead.email,
-  #                password: pass,
-  #                password_confirmation: pass
-  #              )
-  #       lead.user_id = user.id
-  #       user.leads << lead
-  #       UserMailer.welcome_email(user, pass).deliver
-  #     end
-  #   end
-  #   lead.save
-  # end
+  def auto_create_user!(lead)
+    if user_signed_in?
+      lead.user_id = current_user.id
+    else
+      user = User.find_by_email(lead.email)
+      if user
+        lead.user_id = user.id
+      else
+        pass = SecureRandom.hex[0..7]
+        user = User.create!(
+                 email: lead.email,
+                 password: pass,
+                 password_confirmation: pass
+               )
+        lead.user_id = user.id
+        user.leads << lead
+        UserMailer.welcome_email(user, pass).deliver
+      end
+    end
+    lead.save
+  end
 
 
   def current_lead

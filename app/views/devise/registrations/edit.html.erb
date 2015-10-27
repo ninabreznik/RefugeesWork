@@ -1,7 +1,7 @@
 <div class="body_devise_users_edit">
   <div class="user_edit">
 <div class="user_edit_title">
-  Update your profile
+  Introduce yourself to the community
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -13,7 +13,7 @@
   <div class="user_edit_form_email"><%= f.label :"What are your skills?" %><br />
   <%= f.text_field :business_type %></div>
 
-  <div class="user_edit_form_email"><%= f.label :"Where are you originaly from?" %><br />
+  <div class="user_edit_form_email"><%= f.label :"What languages do you speak?" %><br />
   <%= f.text_field :country %></div>
 
   <div class="user_edit_form_email"><%= f.label :"Where do you currently live?" %><br />

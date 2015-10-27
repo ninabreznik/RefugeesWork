@@ -4,9 +4,14 @@ We are very happy you joined our community.
 
 You have succesfully registered with username: <%= @user.email %>.
 
-You will receive en email notification when we receive a new job offer.
+<%- if @pass %>
+    Your temporary password is: <%= @pass %>
+    We suggest you to change it with your next login!
+<%- end %>
 
-Have a nice day!
+<%= link_to "Here", leads_url %> you can find all connection invitations posted. You will also receive en email notification for every new connection invitation we receive.
+
+Have a nice day & keep up good work!
 
 Yours,
 <%= link_to "RefugeesWork community", root_url %>

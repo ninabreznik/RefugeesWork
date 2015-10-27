@@ -1094,6 +1094,38 @@
       left 70px
       color Lead-Orange
       font-size 14px
+    /* :::::::::::: STATICPAGES/WELCOME landing singlepage :::::::::::: */
+    .body_welcome
+      body-mixin(backgroundImage: url(/images/interior1.jpg))
+      margin-top 30px
+      padding-bottom 1500px
+      .leads_index_no_leads_available
+        position: absolute;
+        top: 5%;
+        margin-left: 5%;
+        background: #000;
+        background: rgba(0,0,0,0.7);
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        filter: blur(0px);
+        padding: 5%;
+        padding-bottom 10%
+        font-size: 20px;
+        font-weight: bold;
+        -webkit-font-smoothing: antialiased;
+        max-width: 60%;
+        min-width: 85%;
+        color: #fff;
+        letter-spacing: -1px;
+        line-height: 150%;
+      .leads_index_no_leads_available_button_first a
+        button(size: large)
+        margin-right 10%
+        margin-bottom 10%
+        float left
+      .leads_index_no_leads_available_button_second a
+        button(size: large, color: #fac30e)
     /* :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: */
     .body_info_singlepage
       font-family App-Font-Family

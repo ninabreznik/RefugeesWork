@@ -1,19 +1,24 @@
 <div class="lead_new_form_time">
-  <%= l.label :"What needs to be done?*" %>
+  <%= l.label :"What do you need or can help with?*" %>
+  <br>
+  (volunteering, freelancing, co-founding,
+  <br>
+  organizing, research, learning, collaboration etc.)
+  <br>
   <%= l.text_field :business_type %> <br>
 </div>
 
 <div class="lead_new_form_time">
-  <%= l.label :"#{I18n.t'lead-new.form.prompt-time'}*" %>
+  <%= l.label :"When?*" %><br>
   <%= l.text_field :time %> <br>
 </div>
 
 <div class="lead_new_form_zip">
-  <%= l.label :"Where? (country / city / street)*" %>
+  <%= l.label :"Where? (country / city)*" %><br>
   <%= l.text_field :address %>
 </div>
 
 <div class="lead_new_form_description">
-  <%= l.label :"#{I18n.t'lead-new.form.description'}*" %>
+  <%= l.label :"#{I18n.t'lead-new.form.description'}*" %><br>
   <%= l.text_field :description %>
 </div>

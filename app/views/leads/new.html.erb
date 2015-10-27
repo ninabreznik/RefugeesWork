@@ -3,20 +3,20 @@
 <section class="lead_new_photo">
   <div class="lead_new_explanation">
     <div class="lead_new_explanation_first">
-      <i class="fa fa-pencil"></i>         Say what you need?      </div>
+      <i class="fa fa-pencil"></i>         Say what you need/can help with?      </div>
     <div class="lead_new_explanation_second">
-      <i class="fa fa-files-o"></i>        We find available refugees.          </div>
+      <i class="fa fa-files-o"></i>        Other users get notified about your post.          </div>
     <div class="lead_new_explanation_third">
-      <i class="fa fa-check-square-o"></i> You help & get things done.  </div>
+      <i class="fa fa-check-square-o"></i> Users who can do/help, will get in touch with you.  </div>
   </div>
   <div class="lead_new">
     <br>
     <div class="lead_new_instructions">
-      Post a job/task and we will find the right refugee who can do what you need.     </div>
-    <div class="lead_new_instructions">
-    You can post part- and full time jobs, one time projects or volunteering/intership opportunities.  </div>
+      Tell us what do you need
+      <br>
+      or what you can help with!  </div>
     <div class="lead_new_title">
-      Post a new job!
+      Create new invitation!
     </div>
     <%= form_for (@lead) do |l| %>
       <%= render "#{@lead.current_step}_step", :l => l %>

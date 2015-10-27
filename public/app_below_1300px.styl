@@ -43,6 +43,7 @@
         display inline-block
         .fa.fa-weixin
           color Offer-Font-Color
+          text-decoration none
           &:hover
             color Lead-Orange
     .bottom_menu_bar
@@ -728,11 +729,11 @@
       color white
       .signup
         padding-top 30px
-        margin-left 20px
+        margin-left 5%
         .signup_title
           background: rgb(0, 0, 0); /* fallback color */
           background: rgba(0, 0, 0, 0.7);
-          width 40%
+          width 60%
           padding 2%
           padding-left 4%
           font-size 25px
@@ -741,13 +742,15 @@
           color #eee
         .signup_form_email,
         .signup_form_password,
-        .signup_form_password_confirmation
+        .signup_form_password_confirmation,
+        .user_new_form_field
           font-size 14px
           font-weight bold
           margin-bottom 14px
           #user_email,
           #user_password,
           #user_password_confirmation,
+          #user_name,
           #user_business_type
             padding 4px
             border-radius 4px
@@ -1179,24 +1182,24 @@
       .leads_index_no_leads_available
         position: absolute
         margin-top 30px
-        margin-left 210px
+        margin-left 190px
         background: rgb(0, 0, 0); /* fallback color */
         background: rgba(0, 0, 0, 0.7);
-        position fixed
         blur-mixin(intensity = 0px)
         padding: 50px;
-        top: 200px;
-        font-size 28px
+        top: 100px;
+        font-size 26px
         font-weight bold
         -webkit-font-smoothing: antialiased
-        max-width 1000px
-        min-width 400px
+        max-width 80%
+        min-width 65%
         color: white;
         letter-spacing: -1px;
         line-height 150%
       .leads_index_no_leads_available_button_first a
         button(size: large)
         margin-right 10%
+        margin-left 25%
         float left
       .leads_index_no_leads_available_button_second a
         button(size: large, color: #fac30e)
