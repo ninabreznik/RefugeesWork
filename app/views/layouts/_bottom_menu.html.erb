@@ -1,14 +1,14 @@
 <% if user_signed_in? %>
   <div class="bottom_menu_bar">
     <a class="button_home" href="/"><i class="fa fa-home"></i><span><%= I18n.t'application.bottom-menu.home' %></span></a>
-    <a class="button_reserved" href="/leads"><i class="fa fa-star"></i><span> SEE INVITATIONS</span></a>
+    <a class="button_reserved" href="/leads"><i class="fa fa-star"></i><span> SEE POSTS</span></a>
     <a class="button_address_book" href="/address_book"><i class="fa fa-users"></i><span> MY CONTACTS</span></a>
-    <a class="button_profile" href="/leads/new"><i class="fa fa-cog"></i><span> POST NEW INVITATION</span></a>
+    <a class="button_profile" href="/leads/new"><i class="fa fa-cog"></i><span> I NEED/I CAN HELP WITH</span></a>
   </div>
 <% else %>
   <div class="bottom_menu_bar">
     <a class="button_home" href="/"><i class="fa fa-home"></i><span><%= I18n.t'application.bottom-menu.home' %></span></a>
-    <a class="button_reserved" href="/leads"><i class="fa fa-star"></i><span> SEE INVITATIONS</span></a>
-    <a class="button_profile" href="/leads/new"><i class="fa fa-cog"></i><span> POST NEW INVITATION</span></a>    <a class="button_profile" href="/users/sign_up"><i class="fa fa-cog"></i><span> REGISTER</span></a>
+    <a class="button_reserved" href="/leads"><i class="fa fa-star"></i><span> SEE POSTS</span></a>
+    <a class="button_profile" href="/leads/new"><i class="fa fa-cog"></i><span> I NEED/I CAN HELP WITH</span></a>    <a class="button_profile" href="/users/sign_up"><i class="fa fa-cog"></i><span> REGISTER</span></a>
   </div>
 <% end %>

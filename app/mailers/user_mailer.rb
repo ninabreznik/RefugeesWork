@@ -30,7 +30,7 @@ class UserMailer < ActionMailer::Base
   def new_lead(lead, user)
     @lead = lead
     @user = user
-    mail(to: @user.email, subject: 'New invitation')
+    mail(to: @user.email, subject: 'New post')
   end
 
   def new_order(order)

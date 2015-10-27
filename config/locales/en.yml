@@ -107,7 +107,7 @@ en:
 
 # Notification
   leadsindex-notification:
-    no-leads-available: "Currently there is no available invitations."
+    no-leads-available: "Currently there is no available posts."
 
 
 # ############################################################################################
@@ -165,7 +165,7 @@ en:
 
 # Notification
   ordersshow-notification:
-    lead-not-available: "Currently there is no available invitations."
+    lead-not-available: "Currently there is no available posts."
     successfully-paid-order: "Your payment was succesfully processed."
 
 
@@ -190,7 +190,7 @@ en:
     logged-in-as: "Logged in as"
     not-logged-in: "Not logged in"
     bought-leads: "Number of your users you contacted"
-    last-bought-lead: "Last invitation you applied for"
+    last-bought-lead: "Last psot you applied for"
     no-bought-leads: "Trenutno nimate nobenih zakupljenih kontaktov."
     you-need-to-sign-in: "Za pregled teh informacij morate biti prijavljeni."
 
@@ -201,8 +201,8 @@ en:
 
 # Titles
   ordersindex-titles:
-    reserved: "No starred invitations yet."
-    address-book: "You didn't apply to any invitations yet."
+    reserved: "No starred posts yet."
+    address-book: "You didn't apply to any posts yet."
 
 # Lead body
   ordersindex-lead:
@@ -220,8 +220,8 @@ en:
     customer-info: "Customer contact information"
     customer-info-explanation: "available only if you buy this lead"
     to-see-address-book: "Here you will find all the users you connected with. To get started"
-    signed_in_but_no_orders: "Here you will find all the invitations, that you saved."
-    signed_in_but_no_bought: "Here you will find all the invitations, that you saved."
+    signed_in_but_no_orders: "Here you will find all the saved posts you saved."
+    signed_in_but_no_bought: "Here you will find all the posts you saved."
 # Buttons
   ordersindex-buttons:
     buy: "Buy"
@@ -232,7 +232,7 @@ en:
 
 # Users not signed_in text box
   ordersindex_not_signed_in:
-    text_box: "On this page you can find all starred invitations - those that you maybe decide to apply for in the next days. But to be able to see and add new starred invitations, you have to "
+    text_box: "On this page you can find all starred posts - those that you maybe decide to apply for in the next days. But to be able to see and add new starred posts, you have to "
 
 
 
@@ -324,7 +324,7 @@ en:
 # Page 8 - STATICPAGES/NEW_LEAD_CONFIRMATION (for new leads)
 # ############################################################################################
   new_lead_confirmation:
-    thank_you: "Thank you! Your invitation was successfully sent."
+    thank_you: "Thank you! Your post was successfully sent."
     text: "Someone will soon contact you. If nobody gets in touch, please let us know and we will try to help out:)"
 
 # ############################################################################################
