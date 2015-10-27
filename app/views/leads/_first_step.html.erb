@@ -1,11 +1,13 @@
 <div class="lead_new_form_time">
-  <%= l.label :"What do you need or can help with?*" %>
-  <br>
-  (volunteering, freelancing, co-founding,
-  <br>
-  organizing, research, learning, collaboration etc.)
-  <br>
-  <%= l.text_field :business_type %> <br>
+  <%= l.select :business_type, [
+      ["Volunteering"],
+      ["Freelancing"],
+      ["Co-founding"],
+      ["Organizing"],
+      ["Research"],
+      ["Learning"],
+      ["Collaboration"]
+    ], :prompt=>"What do you need or can help with?*"%>  <br>
 </div>
 
 <div class="lead_new_form_time">
@@ -14,8 +16,35 @@
 </div>
 
 <div class="lead_new_form_zip">
-  <%= l.label :"Where? (country / city)*" %><br>
-  <%= l.text_field :address %>
+  <%= l.select :address, [
+      ["Germany - Baden-Württemberg"],
+      ["Germany - Bavaria"],
+      ["Germany - Berlin"],
+      ["Germany - Brandenburg"],
+      ["Germany - Bremen"],
+      ["Germany - Hamburg"],
+      ["Germany - Hesse"],
+      ["Germany - Lower Saxony"],
+      ["Germany - Mecklenburg-Vorpommern"],
+      ["Germany - North Rhine-Westphalia"],
+      ["Germany - Rhineland-Palatinate"],
+      ["Germany - Saarland"],
+      ["Germany - Saxony"],
+      ["Germany - Saxony-Anhalt"],
+      ["Germany - Schleswig-Holstein"],
+      ["Germany - Thuringia"],
+      ["Austria"],
+      ["Slovenia"],
+      ["Croatia"],
+      ["Hungary"],
+      ["Serbia"],
+      ["Greece"],
+      ["Turkey"],
+      ["Egypt"],
+      ["Jordan"],
+      ["Lebanon"],
+      ["Other"]
+    ], :prompt=>"Where?*"%>  <br>
 </div>
 
 <div class="lead_new_form_description">

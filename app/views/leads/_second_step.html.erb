@@ -1,12 +1,22 @@
-<div class="lead_new_form_name">
-  <%= l.label :"#{I18n.t'lead-new.form.name'}"  %>
-  <%= l.text_field :name %>
-</div>
+
 <div class="lead_new_form_phone">
   <%= l.label :"Prefered contact (visible only to logged in users)*" %>
   <%= l.text_field :phone %>
 </div>
-<div class="lead_new_form_phone">
-  <%= l.label :"Email (visible only to logged in users)*" %>
-  <%= l.text_field :email %>
-</div>
+
+<% if user_signed_in? %>
+  <div class="lead_new_form_phone">
+    <%= l.label :"Your name*"  %>
+    <%= l.text_field :name, value: "#{current_user.email.split("@")[0]}" %>
+  </div>
+  <%= l.text_field :email, type: "hidden", value: "#{current_user.email}" %>
+<% else %>
+  <div class="lead_new_form_phone">
+    <%= l.label :"Your name*"  %>
+    <%= l.text_field :name %>
+  </div>
+    <div class="lead_new_form_phone">
+      <%= l.label :"Email (visible only to logged in users)*" %>
+      <%= l.text_field :email %>
+    </div>
+<% end %>
