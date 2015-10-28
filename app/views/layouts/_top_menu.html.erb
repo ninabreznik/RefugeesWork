@@ -1,14 +1,8 @@
 <div class="top_menu_bar">
   <a href="<%= root_path %>"><%= image_tag 'logo.png', :class => 'logo' %></a>
-  <% if user_signed_in? %>
     <div class="logged_user">
-      <%= link_to current_user.email, edit_user_registration_path %>
+      <a href="http://blog.refugeeswork.com">Visit our blog</a>
     </div>
-  <% else %>
-    <div class="not_logged_user">
-  <%= link_to "Register now ::", new_user_registration_path %>    <%= link_to " #{I18n.t'application.top-menu.login'}", new_user_session_path %>
-    </div>
-  <% end %>
   <div class="info">
     <a href="<%= info_path %>"><i class="fa fa-info-circle"></i></a>
   </div>

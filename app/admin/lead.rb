@@ -13,8 +13,8 @@ index do
   column :address
   column :phone
   column :email
-  column :tracking_link
-  column :affiliation_id
+  column :city
+  column :business_type
   actions
 end
 
@@ -26,8 +26,8 @@ end
   filter :address
   filter :phone
   filter :email
-  filter :tracking_link
-  filter :affiliation_id
+  filter :city
+  filter :business_type
   filter :created_at
   filter :updated_at
 
@@ -41,8 +41,44 @@ form do |f|
   f.inputs :address
   f.inputs :phone
   f.inputs :email
-  f.inputs :tracking_link
-  f.inputs :affiliation_id
+  f.inputs :city, collection: [
+    ["Germany - Baden-Württemberg"],
+    ["Germany - Bavaria"],
+    ["Germany - Berlin"],
+    ["Germany - Brandenburg"],
+    ["Germany - Bremen"],
+    ["Germany - Hamburg"],
+    ["Germany - Hesse"],
+    ["Germany - Lower Saxony"],
+    ["Germany - Mecklenburg-Vorpommern"],
+    ["Germany - North Rhine-Westphalia"],
+    ["Germany - Rhineland-Palatinate"],
+    ["Germany - Saarland"],
+    ["Germany - Saxony"],
+    ["Germany - Saxony-Anhalt"],
+    ["Germany - Schleswig-Holstein"],
+    ["Germany - Thuringia"],
+    ["Austria"],
+    ["Slovenia"],
+    ["Croatia"],
+    ["Hungary"],
+    ["Serbia"],
+    ["Greece"],
+    ["Turkey"],
+    ["Egypt"],
+    ["Jordan"],
+    ["Lebanon"],
+    ["Other"]
+  ]
+  f.inputs :business_type, collection: [
+    ["Volunteering"],
+    ["Freelancing"],
+    ["Co-founding"],
+    ["Organizing"],
+    ["Research"],
+    ["Learning"],
+    ["Collaboration"]
+  ]
   end
   f.actions
 end
