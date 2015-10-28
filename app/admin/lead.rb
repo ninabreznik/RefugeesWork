@@ -10,10 +10,9 @@ index do
   column :zip
   column :description
   column :name
-  column :address
   column :phone
   column :email
-  column :city, collection: [
+  column :address, collection: [
     ["Germany - Baden-Württemberg"],
     ["Germany - Bavaria"],
     ["Germany - Berlin"],
@@ -59,10 +58,9 @@ end
   filter :zip
   filter :description
   filter :name
-  filter :address
   filter :phone
   filter :email
-  filter :city, collection: [
+  filter :address, collection: [
     ["Germany - Baden-Württemberg"],
     ["Germany - Bavaria"],
     ["Germany - Berlin"],
@@ -105,7 +103,7 @@ form do |f|
   f.inputs :address
   f.inputs :phone
   f.inputs :email
-  f.inputs :city, collection: [
+  f.inputs :address, collection: [
     ["Germany - Baden-Württemberg"],
     ["Germany - Bavaria"],
     ["Germany - Berlin"],
