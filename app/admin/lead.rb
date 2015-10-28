@@ -13,8 +13,44 @@ index do
   column :address
   column :phone
   column :email
-  column :city
-  column :business_type
+  column :city, collection: [
+    ["Germany - Baden-Württemberg"],
+    ["Germany - Bavaria"],
+    ["Germany - Berlin"],
+    ["Germany - Brandenburg"],
+    ["Germany - Bremen"],
+    ["Germany - Hamburg"],
+    ["Germany - Hesse"],
+    ["Germany - Lower Saxony"],
+    ["Germany - Mecklenburg-Vorpommern"],
+    ["Germany - North Rhine-Westphalia"],
+    ["Germany - Rhineland-Palatinate"],
+    ["Germany - Saarland"],
+    ["Germany - Saxony"],
+    ["Germany - Saxony-Anhalt"],
+    ["Germany - Schleswig-Holstein"],
+    ["Germany - Thuringia"],
+    ["Austria"],
+    ["Slovenia"],
+    ["Croatia"],
+    ["Hungary"],
+    ["Serbia"],
+    ["Greece"],
+    ["Turkey"],
+    ["Egypt"],
+    ["Jordan"],
+    ["Lebanon"],
+    ["Other"]
+  ]
+  column :business_type, collection: [
+    ["Volunteering"],
+    ["Freelancing"],
+    ["Co-founding"],
+    ["Organizing"],
+    ["Research"],
+    ["Learning"],
+    ["Collaboration"]
+  ]
   actions
 end
 
@@ -26,7 +62,35 @@ end
   filter :address
   filter :phone
   filter :email
-  filter :city
+  filter :city, collection: [
+    ["Germany - Baden-Württemberg"],
+    ["Germany - Bavaria"],
+    ["Germany - Berlin"],
+    ["Germany - Brandenburg"],
+    ["Germany - Bremen"],
+    ["Germany - Hamburg"],
+    ["Germany - Hesse"],
+    ["Germany - Lower Saxony"],
+    ["Germany - Mecklenburg-Vorpommern"],
+    ["Germany - North Rhine-Westphalia"],
+    ["Germany - Rhineland-Palatinate"],
+    ["Germany - Saarland"],
+    ["Germany - Saxony"],
+    ["Germany - Saxony-Anhalt"],
+    ["Germany - Schleswig-Holstein"],
+    ["Germany - Thuringia"],
+    ["Austria"],
+    ["Slovenia"],
+    ["Croatia"],
+    ["Hungary"],
+    ["Serbia"],
+    ["Greece"],
+    ["Turkey"],
+    ["Egypt"],
+    ["Jordan"],
+    ["Lebanon"],
+    ["Other"]
+  ]
   filter :business_type
   filter :created_at
   filter :updated_at
