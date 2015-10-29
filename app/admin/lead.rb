@@ -29,6 +29,7 @@ index do
     ["Germany - Saxony-Anhalt"],
     ["Germany - Schleswig-Holstein"],
     ["Germany - Thuringia"],
+    ["Italy"],
     ["Austria"],
     ["Slovenia"],
     ["Croatia"],
