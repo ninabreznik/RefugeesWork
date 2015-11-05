@@ -12,11 +12,7 @@ class Lead < ActiveRecord::Base
 
   # :::::::::::::: VALIDATIONS :::::::::::::::::::
 
-  validates :business_type, presence: true
-  validates :address, presence: true
   validates :description, presence: true
-  validates :time, presence: true
-  validates :name, presence: true
   validates :email, presence: true
 
 
