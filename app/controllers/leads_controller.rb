@@ -1,10 +1,7 @@
 class LeadsController < ApplicationController
 
   def index
-    @leads = Lead.all
-    @lead = Lead.find_by_id(params[:id])
-    @user = current_user
-    @sorted_leads = @leads.sort.reverse
+    @leads = Lead.order(created_at: :desc)
   end
 
   def show
@@ -21,18 +18,14 @@ class LeadsController < ApplicationController
     @lead.current_step = session[:lead_step]
   end
 
-
   def share
     session[:lead_params] ||= {}
     @lead = Lead.new(session[:lead_params])
     @lead.current_step = session[:lead_step]
-
-
-    # render 'share', layout: 'adwords_layout'
   end
 
   def create
-    session[:lead_params].deep_merge!(lead_params) if (lead_params)
+    session[:lead_params].deep_merge!(lead_params) if lead_params
     @lead = Lead.new(session[:lead_params])
     @lead.current_step = session[:lead_step]
     if params[:back_button]
@@ -56,11 +49,9 @@ class LeadsController < ApplicationController
     end
   end
 
-
   def update
-      @lead = Lead.find(params[:id])
+    @lead = Lead.find(params[:id])
   end
-
 
   private
 
