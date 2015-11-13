@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
 
   mount GrapeSwaggerRails::Engine => '/swagger'
-  mount API => '/api'
+  mount API => '/'
 
-  resources :users do
-    match '/users/:id/edit',            to: 'users#edit',       via: 'edit'
+  resources :users, only: :edit do
     member do
       post 'tracking_id'
       post 'accepted_terms_of_use'
