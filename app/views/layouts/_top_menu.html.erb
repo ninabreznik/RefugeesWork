@@ -1,9 +1,9 @@
 <div class="top_menu_bar">
   <a href="<%= root_path %>"><%= image_tag 'logo.png', :class => 'logo' %></a>
     <div class="logged_user">
-      <a href="http://blog.refugeeswork.com">Visit our blog</a>
+      <%= link_to "Login/Register", new_user_registration_path %>
     </div>
   <div class="info">
-    <a href="<%= info_path %>"><i class="fa fa-info-circle"></i></a>
+    <a href="http://blog.refugeeswork.com"><i class="fa fa-rss-square"></i></a>
   </div>
 </div>
