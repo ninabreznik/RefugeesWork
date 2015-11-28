@@ -1,13 +1,13 @@
 <div class="body_orders_address_book">
-<% if user_signed_in? && @orders.where(selector_id: current_user.id, paid:true).count == 0 %>
- <%= render 'orders/body_dummy_orders_address_book' %>
+<% if user_signed_in? && @orders.paid_by_selector(current_user).none? %>
+  <%= render 'orders/body_dummy_orders_address_book' %>
   <div class="address_book_link_to_signup">
     <%= I18n.t'ordersindex-notifications.signed_in_but_no_bought' %>
   </div>
   <% elsif user_signed_in? && @orders.present? %>
   <div class="columns">
     <ul class="wookmark">
-      <% @orders.where(selector_id: current_user.id, paid: true).sort.reverse.each do |order| %>
+      <% @orders.paid_by_selector(current_user).order(created_at: :desc).include(:selected).each do |order| %>
         <div class="lead_box">
           <div class ="address_book_lead_title">
             Offer #<%= order.id %>
