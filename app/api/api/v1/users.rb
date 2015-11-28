@@ -29,31 +29,29 @@ class API::V1::Users < Grape::API
     end
     post do
       user = User.create! permitted_params[:user]
-      present user, with: ::API::V1::Entities::User
+      present user, with: ::API::V1::Entities::User, profile: true
     end
 
-    desc "Update the User, user must match authentication token."
+    desc "Update the User with authentication token."
     params do
-      requires :id, type: String, desc: "User ID"
       requires :auth_token, type: String, desc: "User authentication token"
       group :user, type: Hash, desc: 'User data' do
         requires :email,                   type: String, desc: ''
-        requires :password,                type: String, desc: ''
         requires :name,                    type: String, desc: ''
         requires :business_type,           type: String, desc: ''
         requires :accepted_terms_of_use,   type: Boolean, desc: ''
         requires :city,                    type: String, desc: ''
         requires :country,                 type: String, desc: ''
+
+        optional :password,                type: String, desc: ''
         optional :wallet,                  type: Integer, desc: ''
         optional :tracking_id,             type: String, desc: ''
       end
     end
-    put ':id' do
+    put :me do
       authenticate!
-      user = User.find(params['id'])
-      error!('403 Forbidden', 403) unless current_user == user
-      user.update! permitted_params['user']
-      present user, with: ::API::V1::Entities::User
+      current_user.update! permitted_params['user']
+      present current_user, with: ::API::V1::Entities::User, profile: true
     end
   end
 

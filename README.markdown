@@ -1,6 +1,19 @@
+# RefugeesWork.com
 
-license
-=======
+We help newcomers and locals to work together. Newcomers and local organisations or individuals can seek or offer tasks.
+
+[Have a read in our blog](https://refugeesblog.herokuapp.com/)
+
+
+## API
+
+We provide a basic Rest-API for creating accessing leads in our systems.
+
+[See the full API-documentation online](http://www.refugeeswork.com/swagger)
+
+_The API is beta and we welcome feature requests and improvements._
+
+## License
 
 ![CC BY-NC-ND 4.0](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License")
 

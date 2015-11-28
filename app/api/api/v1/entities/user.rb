@@ -15,5 +15,8 @@ module API::V1::Entities
     expose :email, :tracking_id, :city, :country, if: lambda { |object, options| options[:profile] }
     expose :name
     expose :accepted_terms_of_use
+    expose :access_token do |user|
+      user.api_key.access_token
+    end
   end
 end
