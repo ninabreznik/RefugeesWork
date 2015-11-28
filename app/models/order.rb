@@ -15,10 +15,12 @@ class Order < ActiveRecord::Base
   has_many :paypal_notifications
   belongs_to :selected, class_name: "Lead"
   belongs_to :selector, class_name: "User"
-  
+
   validates :selected_id, presence: true
   validates :selector_id, presence: true
-  
+
+  scope :paid_by_selector, -> (user) { where(selector_id: user.id, paid: true) }
+
   def paypal_url(return_url, notify_url)
     values = {
       :business => 'nina.breznik@sosed.si',
@@ -38,7 +40,7 @@ class Order < ActiveRecord::Base
     "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
   end
 
-  
+
 
   # def paypal_payment_notification   #IPN - instant payment notification (by PayPal)
   #   if status == "Completed"

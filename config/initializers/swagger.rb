@@ -1,4 +1,4 @@
-GrapeSwaggerRails.options.url      = '/api/v1/doc.json'
+GrapeSwaggerRails.options.url      = '/api/v1/swagger_doc'
 GrapeSwaggerRails.options.app_url  = "#{ENV['APPLICATION_URL']}"
 GrapeSwaggerRails.options.app_name = 'RefugeesWork'
 

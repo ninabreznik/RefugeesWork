@@ -5,7 +5,7 @@ class API::V1::Leads < Grape::API
 
     desc "Returns all leads"
     params do
-      requires :authtoken, type: String, desc: "User authentication token"
+      requires :auth_token, type: String, desc: "User authentication token"
     end
     get do
       authenticate!
@@ -19,47 +19,77 @@ class API::V1::Leads < Grape::API
 
     desc "Return leads by id"
     params do
-      requires :authtoken, type: String, desc: "User authentication token"
+      requires :auth_token, type: String, desc: "User authentication token"
       requires :id, type: Integer, desc: "Lead ID"
     end
     route_param :id do
       get do
         authenticate!
-        present Lead.find(params[:id]), with: V1::Entities::Lead, authenticated: true
+        lead = Lead.where(id: params['id']).first
+        error!('404 Not found', 404) unless lead
+        present lead, with: ::API::V1::Entities::Lead, authenticated: true
       end
     end
 
-    desc "Create new lead"
+    desc "Create new Lead"
     params do
-      #requires :authtoken, type: String, desc: "User authentication token"
+      #requires :auth_token, type: String, desc: "User authentication token"
 
-      requires :business_type, type: String, desc: "Title of the lead"
-      requires :address, type: String, desc: "Address"
-      requires :description, type: String, desc: "Description of the lead, can be multiline. Plain text"
-      requires :time, type: String, desc: "Time or Time range of the lead"
-      requires :name, type: String, desc: "Name of the lead's author"
-      requires :email, type: String, desc: "E-mail of the lead's author"
+      group :lead, type: Hash, desc: 'Lead data' do
+        requires :business_type, type: String, desc: "Title of the lead"
+        requires :address, type: String, desc: "Address"
+        requires :description, type: String, desc: "Description of the lead, can be multiline. Plain text"
+        requires :time, type: String, desc: "Time or Time range of the lead"
+        requires :name, type: String, desc: "Name of the lead's author"
+        requires :email, type: String, desc: "E-mail of the lead's author"
 
-      optional :zip, type: String, desc: "Zipcode where the lead is located"
-      optional :phone, type: String, desc: "Phone number of the lead's author"
-      optional :location, type: String, desc: "Location of the lead"
-      optional :affiliation_id, type: String, desc: "Affiliation ID"
+        optional :zip, type: String, desc: "Zipcode where the lead is located"
+        optional :phone, type: String, desc: "Phone number of the lead's author"
+        optional :location, type: String, desc: "Location of the lead"
+        optional :affiliation_id, type: String, desc: "Affiliation ID"
+      end
     end
     post do
-      authenticate!
-      Lead.create({
-        business_type:  params[:business_type],
-        address:        params[:address],
-        description:    params[:description],
-        time:           params[:time],
-        name:           params[:name],
-        email:          params[:email],
-        zip:            params[:zip],
-        phone:          params[:phone],
-        location:       params[:location],
-        affiliation_id: params[:affiliation_id]
-      })
+      puts "post"
+      #authenticate!
+      lead = Lead.create permitted_params['lead']
+      present lead, with: ::API::V1::Entities::Lead, authenticated: true
+    end
 
+    desc "Update existing Lead"
+    params do
+      requires :auth_token, type: String, desc: "User authentication token"
+
+      group :lead, type: Hash, desc: 'Lead data' do
+        requires :business_type, type: String, desc: "Title of the lead"
+        requires :address, type: String, desc: "Address"
+        requires :description, type: String, desc: "Description of the lead, can be multiline. Plain text"
+        requires :time, type: String, desc: "Time or Time range of the lead"
+        requires :name, type: String, desc: "Name of the lead's author"
+        requires :email, type: String, desc: "E-mail of the lead's author"
+
+        optional :zip, type: String, desc: "Zipcode where the lead is located"
+        optional :phone, type: String, desc: "Phone number of the lead's author"
+        optional :location, type: String, desc: "Location of the lead"
+        optional :affiliation_id, type: String, desc: "Affiliation ID"
+      end
+    end
+    route_param :id do
+      put do
+        authenticate!
+        lead = Lead.where(id: params['id']).first
+        error!('404 Not found', 404) unless lead
+        error!('403 Forbidden', 403) unless current_user == lead.user
+
+        lead.update!(permitted_params['lead'])
+        present lead, with: ::API::V1::Entities::Lead, authenticated: true
+      end
+    end
+  end
+
+  helpers do
+    def permitted_params
+      declared(params, include_missing: false).to_hash
     end
   end
 end
