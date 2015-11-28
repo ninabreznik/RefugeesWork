@@ -3,13 +3,32 @@ class API::V1::Users < Grape::API
 
   resources :users do
 
-    desc "Returns data of user associated to the authentication token"
+
     params do
       requires :auth_token, type: String, desc: "User authentication token"
     end
+    desc "Returns data of User associated to the authentication token"
     get :me do
       authenticate!
       present current_user, with: ::API::V1::Entities::User, profile: true
+    end
+
+    desc "Returns list of Orders from User associated to the authentication token"
+    get 'me/orders' do
+      authenticate!
+      present current_user.orders, with: ::API::V1::Entities::Order
+    end
+
+    desc "Returns list of Lead created by User associated to the authentication token"
+    get 'me/leads' do
+      authenticate!
+      present current_user.leads, with: ::API::V1::Entities::Lead
+    end
+
+    desc "Returns list of Lead selected by User associated to the authentication token"
+    get 'me/selected_leads' do
+      authenticate!
+      present current_user.selected_leads, with: ::API::V1::Entities::Lead
     end
 
     desc "Create a User"

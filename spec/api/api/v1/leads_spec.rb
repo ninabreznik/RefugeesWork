@@ -51,6 +51,31 @@ describe API::V1::Leads, 'Lead resource', api: true do
     end
   end
 
+  describe 'GET /api/leads/:id/orders' do
+    let(:lead) { create(:lead) }
+    context 'invalid auth_token is sent' do
+      it 'should respond with error code 400' do
+        get "/api/v1/leads/#{lead.id}/orders", auth_token: 'invalid-auth-token'
+        expect(response.body).to eq "{\"error\":\"Unauthorized. Invalid or expired token.\"}"
+        expect(response.status).to eq 401
+      end
+    end
+    context 'lead not found' do
+      it "returns error code 404" do
+        get "/api/v1/leads/#{rand(99)}/orders", auth_token: user.api_key.access_token
+        expect(response.body).to eq "{\"error\":\"404 Not found\"}"
+        expect(response.status).to eq 404
+      end
+    end
+    context 'given 3 orders' do
+      it 'returns 3 objects' do
+        create_list(:order, 3, selected: lead)
+        get "/api/v1/leads/#{lead.id}/orders", auth_token: user.api_key.access_token
+        expect(JSON.parse(response.body).count).to eq 3
+      end
+    end
+  end
+
   describe 'POST /api/leads' do
     let(:lead) { build(:lead) }
     context 'all mandatory parameters given' do

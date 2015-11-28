@@ -50,6 +50,61 @@ describe API::V1::Users, api: true do
       expect(response.status).to eq 200
     end
   end
+
+  describe 'GET /api/users/me/orders' do
+    let(:user) { create :user, :with_api_key }
+    context 'invalid auth_token is sent' do
+      it 'should respond with error code 400' do
+        get '/api/v1/users/me/orders', auth_token: 'invalid-auth-token'
+        expect(response.body).to eq "{\"error\":\"Unauthorized. Invalid or expired token.\"}"
+        expect(response.status).to eq 401
+      end
+    end
+    it "returns the list of order data" do
+      create_list :order, 3, selector: user
+      get '/api/v1/users/me/orders', auth_token: user.api_key.access_token
+      expect(response.status).to eq 200
+      response_data = JSON.parse(response.body)
+      expect(response_data.count).to eq 3
+    end
+  end
+
+  describe 'GET /api/users/me/leads' do
+    let(:user) { create :user, :with_api_key }
+    context 'invalid auth_token is sent' do
+      it 'should respond with error code 400' do
+        get '/api/v1/users/me/leads', auth_token: 'invalid-auth-token'
+        expect(response.body).to eq "{\"error\":\"Unauthorized. Invalid or expired token.\"}"
+        expect(response.status).to eq 401
+      end
+    end
+    it "returns the list of leads data" do
+      create_list :lead, 3, user: user
+      get '/api/v1/users/me/leads', auth_token: user.api_key.access_token
+      expect(response.status).to eq 200
+      response_data = JSON.parse(response.body)
+      expect(response_data.count).to eq 3
+    end
+  end
+
+  describe 'GET /api/users/me/selected_leads' do
+    let(:user) { create :user, :with_api_key }
+    context 'invalid auth_token is sent' do
+      it 'should respond with error code 400' do
+        get '/api/v1/users/me/selected_leads', auth_token: 'invalid-auth-token'
+        expect(response.body).to eq "{\"error\":\"Unauthorized. Invalid or expired token.\"}"
+        expect(response.status).to eq 401
+      end
+    end
+    it "returns the list of selected leads data" do
+      create_list :order, 3, selector: user
+      get '/api/v1/users/me/selected_leads', auth_token: user.api_key.access_token
+      expect(response.status).to eq 200
+      response_data = JSON.parse(response.body)
+      expect(response_data.count).to eq 3
+    end
+  end
+
   describe 'PUT /api/users/me' do
     let(:user) { build :user }
     let(:existing_user) { create(:user, :with_api_key) }

@@ -17,17 +17,26 @@ class API::V1::Leads < Grape::API
       present Lead.order(updated_at: :desc).all, with: ::API::V1::Entities::Lead, authenticated: false
     end
 
-    desc "Return leads by id"
+
     params do
       requires :auth_token, type: String, desc: "User authentication token"
       requires :id, type: Integer, desc: "Lead ID"
     end
     route_param :id do
+      desc "Return Lead by id"
       get do
         authenticate!
         lead = Lead.where(id: params['id']).first
         error!('404 Not found', 404) unless lead
         present lead, with: ::API::V1::Entities::Lead, authenticated: true
+      end
+
+      desc "Returns Orders of Lead"
+      get :orders do
+        authenticate!
+        lead = Lead.where(id: params['id']).first
+        error!('404 Not found', 404) unless lead
+        present lead.reverse_orders, with: ::API::V1::Entities::Order
       end
     end
 

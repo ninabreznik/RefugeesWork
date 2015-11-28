@@ -7,6 +7,7 @@ class API < Grape::API
 
   mount API::V1::Auth
   mount API::V1::Leads
+  mount API::V1::Orders
   mount API::V1::Users
 
   add_swagger_documentation  api_version: self.version

@@ -16,7 +16,7 @@ module API::V1::Entities
     expose :name
     expose :accepted_terms_of_use
     expose :access_token do |user|
-      user.api_key.access_token
+      user.api_key.try(:access_token)
     end
   end
 end
