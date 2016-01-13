@@ -1,10 +1,33 @@
 <div class="body_leads_index">
 
-<div class="columns">
-<ul class="wookmark">
+<div class="columns" id="main" role="main">
+  <ol id="filters">
+  <li data-filter='Volunteering'>
+    Volunteering
+  </li>
+  <li data-filter="Freelancing">
+    Freelancing
+  </li>
+  <li data-filter="Co-founding">
+    Co-founding
+  </li>
+  <li data-filter="Organizing">
+    Organizing
+  </li>
+  <li data-filter="Research">
+    Research
+  </li>
+  <li data-filter="Learning">
+    Learning
+  </li>
+  <li data-filter="Collaboration">
+    Collaboration
+  </li>
+</ol>
+<ul id="tiles" class="wookmark">
   <% if @leads.present? %>
     <% @sorted_leads.each do |lead| %>
-      <div class="lead_box">
+      <div class="lead_box" data-filter-class='["<%= lead.business_type %>"]'>
           <%= render 'lead_body_for_index', :lead => lead %>
       </div>
       <% end %>

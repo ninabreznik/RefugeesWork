@@ -92,6 +92,30 @@
       padding-bottom 300px
       .columns
         column-mixin()
+        #filters
+            list-style-type: none;
+            text-align: center;
+            padding 0px 100px
+            margin: 3% 6% 3% 6%;
+            position relative
+            z-index 3
+            background-color #00a599
+          #filters li
+            cursor: pointer;
+            margin: 0.5% 0.1% 0.5% 0.1%;
+             button(#F6F6F6)
+             color white
+             font-size 11px
+             background-color: transparent;
+             text-align center
+             -webkit-transition: all 0.15s ease-out;
+             -moz-transition: all 0.15s ease-out;
+             -o-transition: all 0.15s ease-out;
+             transition: all 0.15s ease-out;
+           #filters li.active
+             button(Lead-Orange)
+             font-size 11px
+             text-align center
         .wookmark
           wookmarkMixin()
           .lead_box

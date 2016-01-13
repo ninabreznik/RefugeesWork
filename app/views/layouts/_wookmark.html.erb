@@ -1,24 +1,49 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript">
-  (function ($){
-    var handler = $('.lead_box');
-
-    handler.wookmark({
-        // Prepare layout options.
-        autoResize: true, // This will auto-update the layout when the browser window is resized.
-        container: $('.columns'), // Optional, used for some extra CSS styling
-        offset: 15, // Optional, the distance between grid items
-        outerOffset: 10, // Optional, the distance to the containers border
-        itemWidth: 400 // Optional, the width of a grid item
-    });
-
-    // Capture clicks on grid items.
-    // handler.click(function(){
-    //   // Randomize the height of the clicked item.
-    //   var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
-    //   $(this).css('height', newHeight+'px');
-
-    //   // Update the layout.
-    //   handler.wookmark();
-    // });
-  })(jQuery);
+(function ($){
+  var handler = $('.lead_box'),
+      filters = $('#filters li');
+  var options = {
+      // Prepare layout options.
+      autoResize: true, // This will auto-update the layout when the browser window is resized.
+      container: $('.columns'), // Optional, used for some extra CSS styling
+      offset: 15, // Optional, the distance between grid items
+      outerOffset: 10, // Optional, the distance to the containers border
+      itemWidth: 400 // Optional, the width of a grid item
+  };
+  handler.wookmark(options);
+  // var posts = document.querySelectorAll('.lead_box');
+  // imagesLoaded( posts, function() {
+  //     handler.each(function(index,element) {
+  //         var image = element.querySelector("img");
+  //         var newHeight = $(image).height();
+  //         image.setAttribute("height", newHeight);
+  //     });
+  //     handler.wookmark(options);
+  // });
+  var onClickFilter = function(event) {
+        var item = $(event.currentTarget),
+            activeFilters = [];
+        if (!item.hasClass('active')) {
+          filters.removeClass('active');
+        }
+        item.toggleClass('active');
+        // Filter by the currently selected filter
+        if (item.hasClass('active')) {
+          activeFilters.push(item.data('filter'));
+        }
+        handler.wookmarkInstance.filter(activeFilters);
+      }
+      // Capture filter click events.
+      filters.click(onClickFilter);
+  // handler.wookmark(options);
+  // setTimeout(function() {
+  //     handler.each(function(index,element) {
+  //         var image = element.querySelector("img");
+  //         var newHeight = $(image).height();
+  //         image.setAttribute("height", newHeight);
+  //     });
+  //     handler.wookmark(options);
+  // }, 200);
+})(jQuery);
 </script>
