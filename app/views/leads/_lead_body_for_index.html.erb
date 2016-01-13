@@ -1,10 +1,6 @@
 <div class="lead_body">
   <div class="lead_title">
-    <% if lead.business_type.present? %>
       <%= link_to lead.business_type, lead_path(lead) %>
-    <% else %>
-      <%= link_to "New offer", lead_path(lead) %>
-    <% end %>
   </div>
   <br>
   <% if lead.address.present? %>
@@ -28,15 +24,3 @@
   <div class="lead_subtitle"></div>
     Published at: <%= lead.created_at.strftime("%d.%m.%y ob %H:%M") %>       <br>
 </div>
-
-<script type="text/javascript">
-    var leadboxes = document.querySelectorAll('.lead_box');
-    for(var i = 0; i < leadboxes.length; i++) {
-      (function leadbox (ID) {
-        leadboxes[ID].addEventListener('click', function onClick (event) {
-          var leadpath =leadboxes[ID].querySelector('a').getAttribute('href');
-          window.location.href = leadpath;
-        });
-      })(i);
-    }
-</script>

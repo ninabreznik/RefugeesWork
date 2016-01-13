@@ -118,6 +118,14 @@
              text-align center
         .wookmark
           wookmarkMixin()
+          #tiles
+            margin 0
+            #tiles li.inactive
+              visibility: hidden;
+              opacity: 0;
+          .lead_box.inactive
+            visibility: hidden;
+            opacity: 0;
           .lead_box
             leadBoxMixin()
             .lead_title

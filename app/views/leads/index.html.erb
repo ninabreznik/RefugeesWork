@@ -2,7 +2,7 @@
 
 <div class="columns" id="main" role="main">
   <ol id="filters">
-  <li data-filter='Volunteering'>
+  <li data-filter="Volunteering">
     Volunteering
   </li>
   <li data-filter="Freelancing">
@@ -28,17 +28,40 @@
   <% if @leads.present? %>
     <% @sorted_leads.each do |lead| %>
       <div class="lead_box" data-filter-class='["<%= lead.business_type %>"]'>
-          <%= render 'lead_body_for_index', :lead => lead %>
+        <div class="lead_body">
+          <div class="lead_title">
+              <%= link_to lead.business_type, lead_path(lead) %>
+          </div>
+          <br>
+          <% if lead.address.present? %>
+            <div class="lead_subtitle">Location:</div>
+              <%= lead.address %>        <br><br>
+          <% end %>
+
+          <% if lead.description.present? %>
+            <div class="lead_subtitle">Description:</div>
+              <%= lead.description %><br>
+          <% end %>
+          <% if lead.time.present? %>
+            <div class="lead_subtitle">When:</div>
+              <%= lead.time %>       <br>
+          <% end %>
+          <% if lead.name.present? %>
+            <div class="lead_subtitle">Offered by:</div>
+              <%= lead.name %>       <br>
+          <% end %>
+          <br>
+          <div class="lead_subtitle"></div>
+            Published at: <%= lead.created_at.strftime("%d.%m.%y ob %H:%M") %>       <br>
+        </div>
+
       </div>
       <% end %>
-</ul>
+      <% end %>
+    </ul>
+  </div>
 </div>
-  <% else%>
-    <div class="leads_index_no_leads_available">
-      <%= I18n.t'leadsindex-notification.no-leads-available' %>
-    </div>
-  <% end %>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var leadboxes = document.querySelectorAll('.lead_box');
     for(var i = 0; i < leadboxes.length; i++) {
       (function leadbox (ID) {
@@ -48,4 +71,4 @@
         });
       })(i);
     }
-</script>
+</script> -->
