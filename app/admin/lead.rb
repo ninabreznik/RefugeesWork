@@ -46,8 +46,8 @@ index do
     ["Volunteering"],
     ["Freelancing"],
     ["Co-founding"],
-    ["Organizing"],
-    ["Research"],
+    ["Starting a business"],
+    ["B2B"],
     ["Learning"],
     ["Collaboration"]
   ]
