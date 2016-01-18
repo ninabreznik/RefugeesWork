@@ -17,34 +17,6 @@
       border-bottom 1px solid #ccc
       padding-top 2px
       font-family App-Font-Family
-      .logged_user,
-      .not_logged_user
-        margin-left -35px
-        padding-bottom 2px
-        font-size 6px
-        -webkit-font-smoothing: antialiased
-        font-weight bold
-        display inline-block
-        &:hover
-          opacity 0.7
-        a
-          text-decoration none
-          color Menu-Top-Button-Color
-      .logo
-        margin-left -27px
-        height 35px
-        display inline-block
-        &:hover
-          opacity 0.7
-      .info
-        padding-bottom 2px
-        // shift(0.5)
-        font-size 14px
-        // display inline-block
-        .fa.fa-weixin
-          color Offer-Font-Color
-          &:hover
-            color Lead-Orange
     .bottom_menu_bar
       background-color Menu-Bottom-Color
       // border-right 1px solid Lead-Orange
@@ -101,7 +73,29 @@
     .body_leads_index
       body-mixin(backgroundImage: url(/images/interior2.jpg))
       .columns
-        column-mixin(margin-top = 25px)
+        column-mixin()
+        #filters
+            list-style-type: none;
+            text-align: center;
+            margin: 3% 6% 3% 6%;
+            position relative
+            z-index 3
+            background-color transparent
+          #filters li
+            cursor: pointer;
+            margin: 7.5% 0.1% 0.5% 0.1%
+             button(#00a599)
+             color white
+             font-size 11px
+             text-align center
+             -webkit-transition: all 0.15s ease-out;
+             -moz-transition: all 0.15s ease-out;
+             -o-transition: all 0.15s ease-out;
+             transition: all 0.15s ease-out;
+           #filters li.active
+             button(Lead-Orange)
+             font-size 11px
+             text-align center
         .wookmark
           wookmarkMixin()
           .lead_box
@@ -1126,6 +1120,10 @@
         float left
       .leads_index_no_leads_available_button_second a
         button(size: large, color: #fac30e)
+      .leads_index_no_leads_available_button_third a
+        button(size: large, color: #00a599 )
+        margin-left 7%
+        float left
     /* :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: */
     .body_info_singlepage
       font-family App-Font-Family
