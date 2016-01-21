@@ -1,0 +1,63 @@
+<footer>
+  <div class="footer_container">
+    <div class="footer_main_row">
+      <div class="footer_column_1">
+          <%= image_tag 'logo.png'%>
+          <br><br>
+          Work is the best pathway to connect newcomers with locals. We grow through the things we make together.
+      </div>
+      <div class="footer_column_2">
+        <div class="footer_column_2_column_3">
+          <ul>
+            <li>Browse</li>
+            <br>
+            <li><%= link_to "All posts", leads_path %></li>
+            <li><%= link_to "I am seeking", leads_new_path %></li>
+            <li><%= link_to "I am offering", leads_new_path %></li>
+          </ul>
+        </div>
+        <div class="footer_column_2_column_3">
+          <ul>
+            <li>CREATORS & SUPPORTERS</li>
+            <br>
+            <li><a href="https://www.twitter.com/ninabreznik">Nina Breznik</a></li>
+            <li><a href="https://twitter.com/AliceKohn">Alice Kohn</a></li>
+            <li><a href="https://www.serapath.de">Alexander Praetorius</a></li>
+            <li><a href="https://github.com/RefugeesWork/roadmap/issues/23">Others</a></li>
+            <br>
+            <li><a href="https://www.codingamigos.com">CodingAmigos</a></li>
+            <li><a href="https://www.zweidesign.co">ZweiDesign</a></li>
+            <li><a href="https://wizard.amigos.institute">Wizard Amigos Institute</a></li>
+          </ul>
+        </div>
+        <div class="footer_column_2_column_3">
+          <ul>
+            <li>ABOUT</li>
+            <br>
+            <li><%= link_to "More info", info_path %></li>
+            <li><a href="https://www.blog.refugeeswork.com">Blog</a></li>
+            <li><a href="https://github.com/RefugeesWork/roadmap">Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_column_1">
+        <ul>
+          <li>Contact us today</li>
+          <li><%= link_to "we@refugeeswork.com", "mailto:we@refugeeswork.com"%></li>
+          <br>
+          <li>Or find us on Facebook</li>
+          <li><a href="https://www.facebook.com/groups/RefugeesWork/">FB Group</a></li>
+          <li><a href="https://www.facebook.com/refugeeswork">FB Page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_social_row">
+      <ul>
+        <li><a href="https://github.com/ninabreznik/RefugeesWork"><i class="fa fa-copyright"></i></a></li>
+        <br>
+        <br>
+        <li class="copyright">&copy; <%= Time.now.year %> RefugeesWork is an open source project and can be reused for non-commercial purposes.</li>
+      </ul>
+    </div>
+  </div>
+</footer>
