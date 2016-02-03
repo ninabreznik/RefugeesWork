@@ -6,8 +6,8 @@ Rails.application.configure do
     address:              'smtp.mandrillapp.com',
     port:                 587,
     #domain:               'gmail.com',
-    user_name:            'ninabreznik@gmail.com',
-    password:             'GvL8Au1u5PopVVe4RIPqOg',
+    user_name:            'we@refugeeswork.com',
+    password:             ENV["MANDRILL_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true  }
 
