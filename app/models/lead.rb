@@ -13,7 +13,9 @@ class Lead < ActiveRecord::Base
   # :::::::::::::: VALIDATIONS :::::::::::::::::::
 
   validates :description, presence: true
-  validates :email, presence: true
+  validates :business_type, presence: true
+  validates :address, presence: true
+  validates :email, presence: true, format: {with: /.+@.+\..+/i}
 
 
 
