@@ -71,7 +71,7 @@
         color Lead-Orange
     /* :::::::::::: LEADS/INDEX => homepage :::::::::::: */
     .body_leads_index
-      body-mixin(backgroundImage: url(/images/interior2.jpg))
+      mobile-body-mixin(backgroundImage: url(/images/interior2.jpg))
       .columns
         column-mixin()
         #filters
@@ -80,13 +80,13 @@
             margin: 3% 6% 3% 6%;
             position relative
             z-index 3
-            background-color transparent
           #filters li
             cursor: pointer;
             margin: 7.5% 0.1% 0.5% 0.1%
              button(#00a599)
-             color white
+             color #00a599
              font-size 11px
+             background-color: white;
              text-align center
              -webkit-transition: all 0.15s ease-out;
              -moz-transition: all 0.15s ease-out;

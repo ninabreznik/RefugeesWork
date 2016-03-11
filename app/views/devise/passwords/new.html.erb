@@ -1,24 +1,23 @@
 
-<div class="body_devise_password_new">
-  <div class="password_new">
-<div class="password_new_title">
+<div class="body_devise_login">
+  <div class="login">
+<div class="login_title">
   <%= I18n.t'users-links.forgot-password' %>
 </div>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="password_new_form_email">
+  <div class="login_form_email">
     <%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
-  <div class="password_new_form_submit"><%= f.submit "#{I18n.t'users-links.send-password-instructions'}" %></div>
+  <div class="login_form_submit"><%= f.submit "#{I18n.t'users-links.send-password-instructions'}" %></div>
 <% end %>
 
-<div class="password_new_shared_links">
+<div class="login_shared_links">
   <%= render "devise/shared/links" %>
 </div>
 </div>
 
 </div>
-

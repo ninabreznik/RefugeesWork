@@ -40,7 +40,7 @@
         shift(0.63)
         font-size 24px
         display inline-block
-        .fa.fa-rss-square
+        .fa.fa-pencil-square-o
           color #00a599
           text-decoration none
           &:hover
@@ -99,14 +99,13 @@
             margin: 3% 6% 3% 6%;
             position relative
             z-index 3
-            background-color #00a599
           #filters li
             cursor: pointer;
             margin: 0.5% 0.1% 0.5% 0.1%;
              button(#F6F6F6)
-             color white
+             color #00a599
              font-size 11px
-             background-color: transparent;
+             background-color: white;
              text-align center
              -webkit-transition: all 0.15s ease-out;
              -moz-transition: all 0.15s ease-out;
@@ -149,6 +148,7 @@
               color Offer-Font-Color
               line-height 150%
               width 280px
+              cursor pointer
               .lead_subtitle
                 font-weight bold
                 -webkit-font-smoothing: antialiased
@@ -746,9 +746,9 @@
           button(color = Lead-Orange)
         .login_shared_links
           font-size 14px
-          // font-weight bold
-          &:hover
-            text-decoration underline
+          .login_shared_single_link
+            &:hover
+              text-decoration underline
         .login_shared_links a
           color white
     /* :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: */
@@ -1240,9 +1240,11 @@
       .leads_index_no_leads_available_button_second a
         button(size: large, color: #fac30e)
       .leads_index_no_leads_available_button_third a
-        button(size: large, color: #00a599 )
+        button(size: large, color: #fac30e )
         margin-left 36%
         float left
+        &:hover
+          font-color white
     /* :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: */
     .body_info_singlepage
       font-family App-Font-Family

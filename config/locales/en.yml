@@ -79,6 +79,7 @@ en:
   users-links:
     login: "Log in"
     signup: "Sign up"
+    send-password-instructions: "Reset password"
     forgot-password: "Forgot your password?"
     confirmation-instructions: "Didn't receive confirmation instructions?"
     unlock-instructions: "Didn't receive unlock instructions?"
