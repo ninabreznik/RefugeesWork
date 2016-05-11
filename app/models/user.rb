@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   after_create :send_admin_mail
   def send_admin_mail
-    UserMailer.welcome_email(self).deliver
+    #UserMailer.welcome_email(self).deliver
   end
 
    # #############################################################################

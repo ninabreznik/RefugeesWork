@@ -49,7 +49,7 @@ class LeadsController < ApplicationController
       redirect_to new_lead_confirmation_url
       subscribed_users = User.all.where(subscribed_to_notifications: true)
       subscribed_users.each do |user|
-        UserMailer.new_lead(@lead, user).deliver
+        #UserMailer.new_lead(@lead, user).deliver
       end
     else
       redirect_to leads_new_url
@@ -100,7 +100,7 @@ class LeadsController < ApplicationController
                )
         lead.user_id = user.id
         user.leads << lead
-        UserMailer.welcome_email(user, pass).deliver
+        #UserMailer.welcome_email(user, pass).deliver
       end
     end
     lead.save
