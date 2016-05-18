@@ -1,4 +1,4 @@
-##RefugeesWork is the **iniciative that tries to help refugees/newcomers to connect with the locals through working together**. The offered tasks should be a win-win situation for everyone, including newcomer, the organization and the city. No part of the equation should come out of the collaboration feeling used. Our focus is social engagement through working together and promoting self-employment.
+## RefugeesWork is the **iniciative that tries to help refugees/newcomers to connect with the locals through working together**. The offered tasks should be a win-win situation for everyone, including newcomer, the organization and the city. No part of the equation should come out of the collaboration feeling used. Our focus is social engagement through working together and promoting self-employment.
 
 Work is the best pathway to connect newcomers with locals. We grow through the things we make.
 
