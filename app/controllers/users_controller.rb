@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     @user.name = name
     @user.tracking_id = generate_tracking_id(name)
     if @user.save
-      # UserMailer.affiliation_code(@user).deliver
+      # UserMailer.affiliation_code(@user).deliver  #TODO: Mailgun!
     end
     redirect_to profile_path
   end
