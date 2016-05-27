@@ -2,6 +2,14 @@ class RegistrationsController < Devise::RegistrationsController
 
 after_filter :store_location
 
+  def create
+    super()
+    user = User.last
+    if user.created_at > Time.now - 3.seconds
+      UserMailer.welcome_email(user).deliver
+    end
+  end
+
   def store_location
     # store last url as long as it isn't a /users path
     session[:previous_url] = request.fullpath unless request.fullpath =~ /\/users/

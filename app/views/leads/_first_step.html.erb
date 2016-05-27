@@ -4,10 +4,10 @@
       ["Volunteering"],
       ["Freelancing"],
       ["Co-founding"],
-      ["B2B"],
+      ["Mentorship"],
       ["Learning"],
       ["Collaboration"]
-    ], :prompt=>"Title (choose from the list)*"%>  <br>
+    ], :prompt=>"Choose the title of your post*"%>  <br>
 </div>
 
 <div class="lead_new_form_time">
@@ -33,12 +33,13 @@
       ["Germany - Saxony-Anhalt"],
       ["Germany - Schleswig-Holstein"],
       ["Germany - Thuringia"],
-      ["Italy"],
+      ["Sweden"],
+      ["Norway"],
+      ["Findland"],
       ["Austria"],
-      ["Slovenia"],
-      ["Croatia"],
-      ["Hungary"],
-      ["Serbia"],
+      ["Switzerland"],
+      ["France"],
+      ["United Kingdom"],
       ["Greece"],
       ["Turkey"],
       ["Egypt"],
@@ -49,6 +50,6 @@
 </div>
 
 <div class="lead_new_form_description">
-  <%= l.label :"#{I18n.t'lead-new.form.description'}*" %><br>
+  <%= l.label :"Please describe your idea or service that you can offer*" %><br>
   <%= l.text_field :description %>
 </div>
