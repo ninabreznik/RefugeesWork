@@ -1,30 +1,30 @@
 <div class="body_orders_address_book">
-<% if user_signed_in? && @orders.where(selector_id: current_user.id, paid:true).count == 0 %>
- <%= render 'orders/body_dummy_orders_address_book' %>
-  <div class="address_book_link_to_signup">
-    <%= I18n.t'ordersindex-notifications.signed_in_but_no_bought' %>
-  </div>
+  <% if user_signed_in? && @orders.where(selector_id: current_user.id, paid:true).count == 0 %>
+   <%= render 'orders/body_dummy_orders_address_book' %>
+    <div class="address_book_link_to_signup">
+      <%= I18n.t'ordersindex-notifications.signed_in_but_no_bought' %>
+    </div>
   <% elsif user_signed_in? && @orders.present? %>
-  <div class="columns">
-    <ul class="wookmark">
-      <% @orders.where(selector_id: current_user.id, paid: true).sort.reverse.each do |order| %>
-        <div class="lead_box">
-          <div class ="address_book_lead_title">
-            Offer #<%= order.id %>
-          </div>
-          <div class="address_book_lead_body">
-                <% if order.selected.business_type.present? %>
-                  <div class="address_book_lead_subtitle">What needs to be done:</div>
-                    <%= order.selected.business_type %>   <br>
-                <% end %>
-                <% if order.selected.time.present? %>
-                  <div class="address_book_lead_subtitle">When:</div>
-                    <%= order.selected.time %>       <br>
-                <% end %>
-                <% if order.selected.address.present? %>
-                  <div class="address_book_lead_subtitle">Where:</div>
-                    <%= order.selected.address %>        <br>
-                <% end %>
+    <div class="columns">
+      <ul class="wookmark">
+        <% @orders.where(selector_id: current_user.id, paid: true).sort.reverse.each do |order| %>
+          <div class="lead_box">
+            <div class ="address_book_lead_title">
+              Offer #<%= order.id %>
+            </div>
+            <div class="address_book_lead_body">
+              <% if order.selected.business_type.present? %>
+                <div class="address_book_lead_subtitle">What needs to be done:</div>
+                  <%= order.selected.business_type %>   <br>
+              <% end %>
+              <% if order.selected.time.present? %>
+                <div class="address_book_lead_subtitle">When:</div>
+                  <%= order.selected.time %>       <br>
+              <% end %>
+              <% if order.selected.address.present? %>
+                <div class="address_book_lead_subtitle">Where:</div>
+                  <%= order.selected.address %>        <br>
+              <% end %>
               <% if order.selected.description.present? %>
                 <div class="address_book_lead_subtitle">Description:</div>
                   <%= order.selected.description %><br>
@@ -45,18 +45,19 @@
               <% end %>
               <div class="address_book_lead_subtitle">Published at:</div>
                 <%= order.selected.created_at %>
-        </div>
-      <% end %>
-  </ul>
-</div>
-<% else %>
- <%= render 'orders/body_dummy_orders_address_book' %>
-    <div class="address_book_link_to_signup">
-    <%= I18n.t'ordersindex-notifications.to-see-address-book' %>
-    <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
-    new_user_registration_path, :class=>"address_book_signup" %> /
-    <%= link_to "#{I18n.t'ordersindex-buttons.login'}",
-    new_user_session_path, :class=>"address_book_signin" %>.
-  </div>
-<% end %>
+              </div>
+            </div>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <%= render 'orders/body_dummy_orders_address_book' %>
+      <div class="address_book_link_to_signup">
+      <%= I18n.t'ordersindex-notifications.to-see-address-book' %>
+      <%= link_to "#{I18n.t'ordersindex-buttons.signup'}",
+      new_user_registration_path, :class=>"address_book_signup" %> /
+      <%= link_to "#{I18n.t'ordersindex-buttons.login'}",
+      new_user_session_path, :class=>"address_book_signin" %>.
+    </div>
+  <% end %>
 </div>
