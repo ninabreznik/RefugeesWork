@@ -4,7 +4,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.mailgun.org',
     port:                 587,
-    #domain:               'gmail.com',
+    domain:               'morning-spire-7243.herokuapp.com',
     user_name:            ENV['username'],
     password:             ENV['password'],
     authentication:       'plain',
