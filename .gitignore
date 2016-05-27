@@ -17,7 +17,8 @@ log
 /db/*.sqlite3-journal
 
 # Ignore Secret keys
- /config/secrets.yml
+config/secrets.yml
+config/application.yml
 
 
 # Ignore bundler config.

@@ -3,11 +3,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mandrillapp.com',
+    address:              'smtp.mailgun.org',
     port:                 587,
     #domain:               'gmail.com',
-    user_name:            'we@refugeeswork.com',
-    password:             ENV["MANDRILL_PASSWORD"],
+    user_name:            ENV['username'],
+    password:             ENV['password'],
     authentication:       'plain',
     enable_starttls_auto: true  }
 

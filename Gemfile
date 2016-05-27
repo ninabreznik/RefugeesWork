@@ -41,6 +41,9 @@ gem "font-awesome-rails"
 #DEVISE
 gem 'devise'
 
+#SECRETS
+gem 'figaro'
+
 #ACTIVE ADMIN
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'sass-rails', github: 'rails/sass-rails'
