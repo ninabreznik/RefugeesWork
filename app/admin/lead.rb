@@ -29,12 +29,13 @@ index do
     ["Germany - Saxony-Anhalt"],
     ["Germany - Schleswig-Holstein"],
     ["Germany - Thuringia"],
-    ["Italy"],
+    ["Sweden"],
+    ["Norway"],
+    ["Findland"],
     ["Austria"],
-    ["Slovenia"],
-    ["Croatia"],
-    ["Hungary"],
-    ["Serbia"],
+    ["Switzerland"],
+    ["France"],
+    ["United Kingdom"],
     ["Greece"],
     ["Turkey"],
     ["Egypt"],
@@ -134,11 +135,11 @@ form do |f|
     ["Other"]
   ]
   f.inputs :business_type, collection: [
+    ["Starting a business"],
     ["Volunteering"],
     ["Freelancing"],
     ["Co-founding"],
-    ["Organizing"],
-    ["Research"],
+    ["Mentorship"],
     ["Learning"],
     ["Collaboration"]
   ]

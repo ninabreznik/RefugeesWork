@@ -2,33 +2,18 @@ class LeadsController < ApplicationController
 
   def index
     @leads = Lead.all
-    @lead = Lead.find_by_id(params[:id])
-    @user = current_user
     @sorted_leads = @leads.sort.reverse
+    @user = current_user
   end
 
   def show
     @lead = Lead.find_by_id(params[:id])
-    @leads = Lead.all
-    # @reserved_leads = @lead.reverse_orders.where(selector_id: current_user.id)
-
-    #@order = @lead.reverse_orders.where(selector_id: current_user.id)
   end
 
   def new
     session[:lead_params] ||= {}
     @lead = Lead.new(session[:lead_params])
     @lead.current_step = session[:lead_step]
-  end
-
-
-  def share
-    session[:lead_params] ||= {}
-    @lead = Lead.new(session[:lead_params])
-    @lead.current_step = session[:lead_step]
-
-
-    # render 'share', layout: 'adwords_layout'
   end
 
   def create
@@ -55,12 +40,6 @@ class LeadsController < ApplicationController
       redirect_to leads_new_url
     end
   end
-
-
-  def update
-      @lead = Lead.find(params[:id])
-  end
-
 
   private
 

@@ -50,6 +50,9 @@
       ], :prompt=>"Where do you currently live?*"%>  <br>
 </div>
 
+<div class="user_edit_form_email"><%= f.label :"Receive notifications" %><br />
+  <%= f.check_box :subscribed_to_notifications %></div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

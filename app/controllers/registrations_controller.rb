@@ -11,7 +11,6 @@ after_filter :store_location
   end
 
   def store_location
-    # store last url as long as it isn't a /users path
     session[:previous_url] = request.fullpath unless request.fullpath =~ /\/users/
   end
 
@@ -43,6 +42,7 @@ after_filter :store_location
       :picture,
       :email,
       :country,
+      :subscribed_to_notifications,
       :password,
       :password_confirmation,
       :current_password)
@@ -65,6 +65,7 @@ after_filter :store_location
       :bio,
       :de_bio,
       :picture,
+      :subscribed_to_notifications,
       :email,
       :password,
       :password_confirmation,
