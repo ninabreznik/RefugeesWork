@@ -26,7 +26,7 @@
       <div class="lead_new_form_submit">
         <%= l.submit "Back", :name => "back_button" unless @lead.first_step? %>
         <%= l.submit "Next" unless @lead.last_step? %>
-        <%= l.submit "Send" if @lead.last_step? %>
+        <%= l.submit "Send", data: { disable_with: "Please wait..." } if @lead.last_step? %>
       </div>
     <% end %>
   </div>

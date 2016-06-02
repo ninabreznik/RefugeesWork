@@ -31,11 +31,11 @@ class LeadsController < ApplicationController
     if @lead.save
       auto_create_user!(@lead)
       session[:lead_step] = session[:lead_params] = nil
-      redirect_to new_lead_confirmation_url
       subscribed_users = User.all.where(subscribed_to_notifications: true)
-      subscribed_users.each do |user|
+        subscribed_users.each do |user|
       UserMailer.new_lead(@lead, user).deliver
       end
+      redirect_to new_lead_confirmation_url
     else
       redirect_to leads_new_url
     end
