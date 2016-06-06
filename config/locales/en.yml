@@ -27,6 +27,8 @@ en:
     password: "Password"
     minimal-char: "characters minimum"
     password-confirmation: "Password confirmation"
+    title: Join RefugeeWork community.
+    subtitle: We grow through the things we make. Join the community and tell what you need or can help with!
 
 #Login
   users-login:
@@ -84,11 +86,7 @@ en:
     confirmation-instructions: "Didn't receive confirmation instructions?"
     unlock-instructions: "Didn't receive unlock instructions?"
     sign-in-with: "Sign in with"
-
-
-
-
-
+    already-account: Already have an account?
 
 # ############################################################################################
 # Page 1 - LEADS/INDEX (root page)

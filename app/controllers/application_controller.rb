@@ -18,6 +18,17 @@ class ApplicationController < ActionController::Base
 #     session[:previous_url] = request.fullpath 
 #   end
 # end
+before_action :set_locale
+
+def set_locale
+  locale = params[:locale].try(:to_sym)
+  locale = I18n.default_locale unless I18n.available_locales.include?(locale)
+  I18n.locale = locale
+end
+
+def default_url_options(options = {})
+  { locale: I18n.locale }.merge(options)
+end
 
 def after_sign_in_path_for(resource)
   root_path

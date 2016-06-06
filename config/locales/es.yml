@@ -1,0 +1,19 @@
+es:
+  users-signup:
+    signup: Registrarte
+    email: Email
+    password: Contraseña
+    minimal-char: carácteres como mínimo
+    password-confirmation: Confirma tu contraseña
+    title: Únete a la comunidad de RefugeeWork.
+    subtitle: Crecemos a través de las cosas que hacemos. ¡Únete a la comunindad y di que necesitas o en que puedes ayudar!
+
+  users-links:
+    login: Entrar
+    signup: Regístrate
+    send-password-instructions: Resetear contraseña
+    forgot-password: ¿Has olvidado tu contraseña?
+    confirmation-instructions: ¿No recibiste instrucciones de confirmación?
+    unlock-instructions: ¿No recibiste instrucciones de desbloqueo?
+    sign-in-with: Entrar con
+    already-account: ¿Ya tienes una cuenta?

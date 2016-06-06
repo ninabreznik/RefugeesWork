@@ -1,0 +1,32 @@
+en:
+  menu:
+    languages:
+      es: Spanish
+      en: English
+  static_pages:
+    welcome:
+      b2b: B2B
+      browse_offers: BROWSE THE OFFERS
+      cofounding: Co-founding
+      collaboration: Collaboration
+      description: We help newcomers and locals to work together. Local organisations can help newcomers start their business, offer them volunteering opportunities or hire them as freelancers.
+      freelancing: Freelancing
+      learning: Learning
+      read_more: Read more...
+      start_business: Starting a business
+      title: Welcome to REFUGEES WORK
+      volunteering: Volunteering
+es:
+  static_pages:
+    welcome:
+      b2b: B2B
+      browse_offers: VER OFERTAS
+      cofounding: Cofundar
+      collaboration: Colaboración
+      description: Ayudamos a recién llegados y locales a trabajar juntos. Organizaciones locales pueden ayudar a recién llegados a empezar su negocio, ofrecerles oportunidades de voluntariado o contratarlos como autónomos.
+      freelancing: Autónomos
+      learning: Aprender
+      read_more: Leer más...
+      start_business: Empezar un negocio
+      title: Bienvenido a REFUGEES WORK
+      volunteering: Voluntariado
