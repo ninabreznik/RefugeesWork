@@ -1,25 +1,26 @@
 <div class="body_welcome">
   <div class="leads_index_no_leads_available">
-    Welcome to REFUGEES WORK
+    <%= t('.title') %>
     <br>
     <br>
-    We help newcomers and locals to work together. Local organisations can help newcomers start their business, offer them volunteering opportunities or hire them as freelancers. <%= link_to "Read more...", info_path %>
+    <%= t('.description') %> <%= link_to t('.read_more'), info_path %>
     <br>
     <br>
     <br>
     <div class="leads_index_no_leads_available_button_third">
-      <%= link_to "BROWSE THE OFFERS", leads_path %>
+      <%= link_to t('.browse_offers'), leads_path %>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-key"> Freelancing</i>
-    &nbsp &nbsp <i class="fa fa-cubes"> Starting a business</i>
-    &nbsp &nbsp <i class="fa fa-pencil"> Mentoring</i>
-    &nbsp &nbsp <i class="fa fa-users"> Co-founding</i>
-    &nbsp &nbsp <i class="fa fa-comments-o"> Collaboration</i>
-    &nbsp &nbsp <i class="fa fa-heart-o"> Volunteering</i>
-    &nbsp &nbsp <i class="fa fa-book"> Learning</i>
+    <i class="fa fa-key"> <%= t('.freelancing') %></i>
+    &nbsp &nbsp <i class="fa fa-cubes"> <%= t('.start_business') %> </i>
+    &nbsp &nbsp <i class="fa fa-pencil"> <%= t('.b2b') %> </i>
+    &nbsp &nbsp <i class="fa fa-users"> <%= t('.cofounding') %> </i>
+    &nbsp &nbsp <i class="fa fa-comments-o"> <%= t('.collaboration') %> </i>
+    &nbsp &nbsp <i class="fa fa-heart-o"> <%= t('.volunteering') %> </i>
+    &nbsp &nbsp <i class="fa fa-book"> <%= t('.learning') %> </i>
+
     <br>
     <br>
     <br>

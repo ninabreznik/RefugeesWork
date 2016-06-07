@@ -28,9 +28,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 gem 'less-rails'
 gem 'rspec',           '~> 2.14.0'
 gem 'sprockets-rails', '~> 2.0.0'
@@ -61,6 +58,9 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
   gem 'sqlite3', '1.3.9'
+  # speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
+  gem 'spring'
 end
 
 #Dashing related stuff
@@ -68,6 +68,9 @@ end
 # gem 'nokogiri'
 # gem 'htmlentities'
 
-
+group :test do
+  gem 'minitest-rails'
+  gem 'minitest-reporters'
+end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
