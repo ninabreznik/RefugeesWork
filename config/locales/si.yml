@@ -1,12 +1,12 @@
 si:
 
 # ############################################################################################
-# Page 0 - APPLICATION 
+# Page 0 - APPLICATION
 # ############################################################################################
 
 #Login and Logout
-  application: 
-    top-menu: 
+  application:
+    top-menu:
       login: "prijava"
       signup: "registriraj se"
     bottom-menu:
@@ -21,7 +21,7 @@ si:
 # ############################################################################################
 
 #Signup
-  users-signup: 
+  users-signup:
     signup: "Registriraj se"
     email: "Elektronski naslov"
     password: "Geslo"
@@ -37,13 +37,13 @@ si:
 
 #Edit
   users-edit: #   "#{I18n.t'users-login.remember-me'}"
-    
+
     edit-fields:
       email: "Elektronski naslov"
       password: "Geslo"
       password-confirmation: "Potrditev gesla"
       current-password: "Trenutno geslo"
-  
+
     edit-title: "Uredi profil"
     update-button: "Uredi"
     password-tip: "pustite prazno, če ne želite spreminjati"
@@ -66,21 +66,21 @@ si:
     sign-in-with: "Prijava z"
 
   devise:
-    sessions: 
+    sessions:
       user:
         signed_in: "Uspešno ste prijavljeni."
         signed_out: "Uspešno ste bili odjavljeni."
     registrations:
       user:
         signed_up: "Uspešno ste ste registrirali."
-    failure:  
-      unauthenticated: 'Za nadaljevanje je potrebna prijava/registracija.'  
-      unconfirmed: 'Za nadaljevanje je morate potrditi vaš uporabniški račun.'  
-      locked: 'Vaš račun je zaklenjen'  
-      invalid: 'OH NOES! ERROR IN TEH EMAIL!'  
-      invalid_token: 'Neveljavna avtentikacija.'  
-      timeout: 'Vaša seja je potekla, za nadaljevanje se je potrebno ponovno vpisati.'  
-      inactive: 'Vaš uporabniški račun še ni bil aktiviran.'  
+    failure:
+      unauthenticated: 'Za nadaljevanje je potrebna prijava/registracija.'
+      unconfirmed: 'Za nadaljevanje je morate potrditi vaš uporabniški račun.'
+      locked: 'Vaš račun je zaklenjen'
+      invalid: 'OH NOES! ERROR IN TEH EMAIL!'
+      invalid_token: 'Neveljavna avtentikacija.'
+      timeout: 'Vaša seja je potekla, za nadaljevanje se je potrebno ponovno vpisati.'
+      inactive: 'Vaš uporabniški račun še ni bil aktiviran.'
 
 
 
@@ -92,7 +92,7 @@ si:
 
 # Lead body
   leadsindex-lead:
-    location: "Regija" 
+    location: "Regija"
     zip: "Pošta"
     time: "Kdaj"
     description: "Opis"
@@ -108,12 +108,12 @@ si:
 
 
 # ############################################################################################
-# Page 2 - LEADS/SHOW 
+# Page 2 - LEADS/SHOW
 # ############################################################################################
 
 # Lead body
   leadsshow-lead:
-    location: "Regija" 
+    location: "Regija"
     zip: "Pošta"
     time: "Kdaj"
     description: "Opis"
@@ -123,7 +123,7 @@ si:
     price: "Cena: 10 €"
 
 # Links
-  leadsshow-links: 
+  leadsshow-links:
     follow: "Prevzemi stranko"
 
 
@@ -134,7 +134,7 @@ si:
 
 # Lead body
   ordersshow-lead:
-    location: "Regija" 
+    location: "Regija"
     zip: "Pošta"
     time: "Kdaj"
     description: "Opis"
@@ -155,9 +155,9 @@ si:
 # Payment buttons
   ordersshow-payment-buttons:
     choose-payment-text: "Če ste prepričani, da boste servis zagotovo opravili, potrdite z gumbom spodaj in prevzemite stranko"
-    paypal-checkout: "Paypal" 
-    wallet: "Denarnica" 
-    bank-transfer: "Predračun" 
+    paypal-checkout: "Paypal"
+    wallet: "Denarnica"
+    bank-transfer: "Predračun"
 
 # Notification
   ordersshow-notification:
@@ -200,7 +200,7 @@ si:
 
 # Lead body
   ordersindex-lead:
-    location: "Regija" 
+    location: "Regija"
     zip: "Pošta"
     time: "Kdaj"
     description: "Opis"
@@ -217,7 +217,7 @@ si:
     signed_in_but_no_orders: "Tukaj vas bodo čakali vsi kontakti, pri katerih niste dokončno potrdili sprejema servisa."
     signed_in_but_no_bought: "V imeniku kontaktov vas bodo čakali kontakti strank, ki ste jih potrdili. Zraven vsakega kontakta imate tudi beležko za poročilo po opravljenem servisu."
 # Buttons
-  ordersindex-buttons: 
+  ordersindex-buttons:
     buy: "Izberi"
     remove-from-reserved: "Ne spremljaj več"
     save: "Shrani"
@@ -233,16 +233,16 @@ si:
 # ############################################################################################
 # Page 6 - STATIC_PAGES/ABOUT (info)
 # ############################################################################################
- 
+
   staticpages-info:
-    thanks: "Hvala, da uporabljate Sosed.biz aplikacijo" 
+    thanks: "Hvala, da uporabljate Sosed.biz aplikacijo"
     email: "E-naslov"
-    email_text: "info@sosed.si" 
+    email_text: "info@sosed.si"
 
   #COMPANY INFO
-    company_info: "Podatki o podjetju" 
+    company_info: "Podatki o podjetju"
     company: "Podjetje"
-    mojsosed: "Moj sosed d.o.o." 
+    mojsosed: "Moj sosed d.o.o."
     address: "Naslov"
     sosed_address: "Radehova 39"
     city: "Kraj"
@@ -294,7 +294,7 @@ si:
     offer_account: "Številka TRR"
     offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
     offer_company: "Podjetje"
-    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_company_mojsosed: "Moj sosed d.o.o."
     offer_tax_id: "Davčna številka"
     offer_tax_id_mojsosed: "49595105"
     offer_address: "Naslov"
@@ -303,7 +303,7 @@ si:
     offer_mojsosed_city: "2230 Lenart"
     offer_instructions: "Po prejemu plačila bomo znesek dodali v vašo Denarnico in lahko boste kupili željen kontakt. Če želite kupiti več kontaktov, si poglejte ponudbo za mesečno naročnino."
     lead:
-      location: "Regija" 
+      location: "Regija"
       zip: "Pošta"
       time: "Kdaj"
       description: "Opis"
@@ -331,7 +331,7 @@ si:
     offer_account: "Številka računa"
     offer_mojsosed_account: "IBAN SI56 0410 2000 2065 311 (NOVA KBM d.d.)"
     offer_company: "Podjetje"
-    offer_company_mojsosed: "Moj sosed d.o.o." 
+    offer_company_mojsosed: "Moj sosed d.o.o."
     offer_tax_id: "Davčna številka"
     offer_tax_id_mojsosed: "49595105"
     offer_address: "Naslov"

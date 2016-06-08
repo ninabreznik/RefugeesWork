@@ -6,15 +6,6 @@
     margin 0px
     padding 0px
     .top_menu_bar
-      position fixed
-      top 0
-      z-index 999
-      width 100%
-      background-color Menu-Top-Color
-      blur-mixin(intensity =  0px)
-      background: rgb(0, 0, 0); /* fallback color */
-      background: rgba(255, 255, 255, 0.8);
-      border-bottom 1px solid #ccc
       padding-top 2px
       font-family App-Font-Family
       .logged_user,
@@ -37,14 +28,22 @@
         &:hover
           opacity 0.7
       .info
-        padding-bottom 2px
-        shift(0.7)
-        font-size 19px
-        // display inline-block
-        .fa.fa-weixin
-          color Offer-Font-Color
-          &:hover
-            color Lead-Orange
+        position: relative;
+        left: 38%;
+        font-size: 12px;
+        padding: 10px 20px;
+        border-radius: 3px;
+        color: #494949;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+        padding: 8px 15px;
+        bottom: 8px;
     .bottom_menu_bar
       background-color Menu-Bottom-Color
       position fixed
@@ -1203,11 +1202,8 @@
           font-size 18px
           line-height 150%
       .section_our_team
-        padding 0px 0px 60px 0px
-        background-color Lead-Orange
         letter-spacing 1.4px
         font-weight: 300
-        color white
         text-align center
         .fa.fa-heart
           margin 60px 60px 20px 30px
@@ -1216,15 +1212,11 @@
           margin 20px 60px 60px 30px
           font-size 32px
         .section_our_team_text
-          margin 60px 60px 60px 30px
           font-size 18px
           line-height 150%
       .section_budget
-        padding 0px 0px 60px 0px
-        background-color black
         letter-spacing 1.4px
         font-weight: 300
-        color Lead-Orange
         text-align center
         .fa.fa-calculator
           margin 60px 60px 20px 30px
@@ -1233,7 +1225,6 @@
         .section_budget_title
           margin 20px 60px 60px 30px
           font-size 32px
-          color Lead-Orange
         .section_budget_text
           margin 60px 60px 60px 30px
           font-size 18px

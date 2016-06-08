@@ -1,49 +1,101 @@
 <div class="body_info_singlepage">
-  <section class="section_our_team">
-    <br>
-    <div class="section_our_team_title">Are you a Newcomer? </div>
-    <div class="section_our_team_text">We connect you with the local ChangeMakers that can Help you aquire new Skills, open your Company or start your career as a Freelancer. <%= link_to "Click here", leads_new_path %> and search for opportunities or offer your support.</div>
-    <br>
-    <div class="section_our_team_title">How to get started?</div>
-    <div class="section_our_team_text">Click <%= link_to "Register now", new_user_registration_path %> and join the Commmunity. Make a plan what you want to do and create a post to find locals that will support you.</div>
-    <br>
-  </section>
+  <!-- <section class="section_our_team"> -->
   <section class="section_budget">
     <br>
-    <br>
-    <div class="section_budget_title">Are you a local ChangeMaker?</div>
-    <div class="section_budget_text">We partner with a range of Organizations, including Local Businesses, Schools and Nonprofits. These Organizations are united by a strong commitment to serving the needs of Vulnerable and/or Excluded Populations, either through offering help with Space and Mentorship or with Connecting Newcomers to the Market Opportunities. You can <%= link_to "Post your offer", leads_new_path %> or get in touch with us via email and we will help you figure out how you can help. Work is the best pathway to connect newcomers with locals. We grow through the things we make.</div>
-    <br>
-    <div class="section_budget_title">Legal</div>
-    <div class="section_budget_text">For Asylum Seekers (refugees in a pending asylum procedure), Volunteering is one option to Work in Companies and NGOs. Recognized Refugees & people granted subsidiary protection have Free Access to the Labour Market. They do not face any restrictions and can find a Job, start Freelancing or can start with their Small Business.</div>
-    <br>
-    <div class="section_budget_title">Useful links</div>
+    <div class="section_budget_title">Are you a Newcomer? </div>
     <div class="section_budget_text">
-    <a href="http://www.make-it-in-germany.com/en/for-qualified-professionals/working/setting-up-a-business-in-germany">Setting up a business in Germany</a>
+      Tell us what you are good at, what service can you offer
+      and the app will connect you to the locals that can offer you
+      a freelance work, partnership or a volunteering option
+      so you can get to know new people and aquire new skills. <br>
+      <%= link_to "Click here", leads_new_path %> and create your offer.
+    </div>
     <br>
-    <a href="https://www.anerkennung-in-deutschland.de/html/en/1843.php">Professional Recognition</a>
+    <div class="section_budget_title">How to get started?</div>
+    <div class="section_budget_text">
+      Click <%= link_to "Register now", new_user_registration_path %>
+      and join the Commmunity. <br>Describe what you can do
+      and create a post to connect with the locals that will work with you.
+    </div>
     <br>
-    <a href="http://www.refugeephrasebook.de/basic-conversation/">Refugee Phrasebook</a>
+    <div class="section_budget_title">And for the locals who want to help</div>
+    <div class="section_budget_text">
+      You can help newcomers re-start in their new home country.
+      You need help with something? Post a request and hire a newcomer
+      as a freelancer, business partner or as a volunteer.
+      <%= link_to "Join us!", new_user_registration_path %>
+    </div>
     <br>
-    <a href="https://www.mawista.com/blog/en/working-freelancer-germany/">Freelancing in Germany</a>
+  </section>
+  <section class="section_our_team">
     <br>
-    <a href="http://www.gtai.de/GTAI/Navigation/EN/welcome.html#invest">Germany Trade & Invest</a>
     <br>
-    <a href="https://www.berlin.de/fluechtlinge/berlin-engagiert-sich/berliner-initiativen/">Berlin Initiatives for Refugees</a>
+    <div class="section_our_team_title">Do you want to mentor newcomers?</div>
+    <div class="section_our_team_text">
+      We partner with a range of organizations,
+      including nonprofits, schools and incubators.
+      These organizations are united by a strong commitment
+      to serving the needs of vulnerable and/or excluded populations,
+      either through offering help with space and mentorship
+      or with connecting newcomers to the market opportunities.
+      You can <%= link_to "e-mail us", "mailto:we@refugeeswork.com" %>
+      and we will help you figure out how you can help and add you on our list of supporters.
+    </div>
+    <br>
+    <div class="section_our_team_title">Legal</div>
+    <div class="section_our_team_text">
+      For Asylum Seekers (refugees in a pending asylum procedure),
+      volunteering is one option to work in companies and NGOs.
+      Recognized Refugees & people granted subsidiary protection
+      have Free Access to the Labour Market.
+      They do not face any restrictions and can find a job,
+      start Freelancing or can start with their Small Business.
+    </div>
+    <br>
+    <div class="section_our_team_title">Useful links</div>
+    <div class="section_our_team_text">
+    <a href="http://www.make-it-in-germany.com/en/for-qualified-professionals/working/setting-up-a-business-in-germany">
+      Setting up a business in Germany
+    </a>
+    <br>
+    <a href="https://www.anerkennung-in-deutschland.de/html/en/1843.php">
+      Professional Recognition
+    </a>
+    <br>
+    <a href="http://www.refugeephrasebook.de/basic-conversation/">
+      Refugee Phrasebook
+    </a>
+    <br>
+    <a href="https://www.mawista.com/blog/en/working-freelancer-germany/">
+      Freelancing in Germany
+    </a>
+    <br>
+    <a href="http://www.gtai.de/GTAI/Navigation/EN/welcome.html#invest">
+      Germany Trade & Invest
+    </a>
+    <br>
+    <a href="https://www.berlin.de/fluechtlinge/berlin-engagiert-sich/berliner-initiativen/">
+      Berlin Initiatives for Refugees
+    </a>
     </div>
   </section>
 
   <section class="section_our_team">
     <i class="fa fa-heart"></i>
-    <div class="section_our_team_title">Info, press, partnership</div>
-    <div class="section_our_team_text">Contact us! <%= link_to "we@refugeeswork.com", "mailto:we@refugeeswork.com"%></div>
+    <div class="section_our_team_title">Get in touch</div>
+    <div class="section_our_team_text">Contact us!
+      <%= link_to "we@refugeeswork.com", "mailto:we@refugeeswork.com"%>
+    </div>
   </section>
 
 
   <section class="section_company_info">
     <div class="section_company_info_name">Be the change you want to see!</div>
     <br>
-    <div class="section_company_info_contact"><a href="https://www.facebook.com/groups/refugeeswork">Join our RefugeesWork community on Facebook</a>
+    <div class="section_company_info_contact">
+      <a href="https://github.com/RefugeesWork/roadmap">
+        Join our team!
+      </a>
     </div>
     <br>
     <div class="section_company_info_city">RefugeesWork was made in Berlin, Germany.</div>

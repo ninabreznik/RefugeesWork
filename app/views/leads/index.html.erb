@@ -2,32 +2,98 @@
 
 <div class="columns" id="main" role="main">
   <ol id="filters">
-  <li data-filter="Mentorship">
-    MENTORSHIP
+  <li data-filter="Germany - Baden-Württemberg">
+    DE - Baden-Württemberg (<%= @count_for_baden %>)
   </li>
-  <li data-filter="Volunteering">
-    VOLUNTEERING
+  <li data-filter="Germany - Bavaria">
+    DE - Bavaria (<%= @count_for_bavaria %>)
   </li>
-  <li data-filter="Freelancing">
-    FREELANCING
+  <li data-filter="Germany - Berlin">
+    DE - Berlin (<%= @count_for_berlin %>)
   </li>
-  <li data-filter="Starting a business">
-    NEW BUSINESS
+  <li data-filter="Germany - Brandenburg">
+    DE - Brandenburg (<%= @count_for_brandenburg %>)
   </li>
-  <li data-filter="Co-founding">
-    CO-FOUNDING
+  <li data-filter="Germany - Bremen">
+    DE - Bremen (<%= @count_for_bremen %>)
   </li>
-  <li data-filter="Collaboration">
-    COLLABORATION
+  <li data-filter="Germany - Hamburg">
+    DE - Hamburg (<%= @count_for_hamburg %>)
   </li>
-  <li data-filter="Learning">
-    LEARNING
+  <li data-filter="Germany - Hesse">
+    DE - Hesse (<%= @count_for_hesse %>)
+  </li>
+  <li data-filter="Germany - Lower Saxony">
+    DE - Lower Saxony (<%= @count_for_lowersaxony %>)
+  </li>
+  <li data-filter="Germany - Mecklenburg-Vorpommern">
+    DE - Mecklenburg-Vorpommern (<%= @count_for_mecklenburg %>)
+  </li>
+  <li data-filter="Germany - North Rhine-Westphalia">
+    DE - North Rhine-Westphalia (<%= @count_for_northrhine %>)
+  </li>
+  <li data-filter="Germany - Rhineland-Palatinate">
+    DE - Rhineland-Palatinate (<%= @count_for_rhineland %>)
+  </li>
+  <li data-filter="Germany - Saarland">
+    DE - Saarland (<%= @count_for_saarland %>)
+  </li>
+  <li data-filter="Germany - Saxony">
+    DE - Saxony (<%= @count_for_saxony %>)
+  </li>
+  <li data-filter="Germany - Saxony-Anhalt">
+    DE - Saxony-Anhalt (<%= @count_for_s_anhalt %>)
+  </li>
+  <li data-filter="Germany - Schleswig-Holstein">
+    DE - Schleswig-Holstein (<%= @count_for_schleswig %>)
+  </li>
+  <li data-filter="Germany - Thuringia">
+    DE - Thuringia (<%= @count_for_thuringia %>)
+  </li>
+  <li data-filter="Greece">
+    Greece (<%= @count_for_greece %>)
+  </li>
+  <li data-filter="Turkey">
+    Turkey (<%= @count_for_turkey %>)
+  </li>
+  <li data-filter="Egypt">
+    Egypt (<%= @count_for_egypt %>)
+  </li>
+  <li data-filter="Jordan">
+    Jordan (<%= @count_for_jordan %>)
+  </li>
+  <li data-filter="Lebanon">
+    Lebanon (<%= @count_for_lebanon %>)
+  </li>
+  <li data-filter="Sweden">
+    Sweden (<%= @count_for_sweden %>)
+  </li>
+  <li data-filter="Norway">
+    Norway (<%= @count_for_norway %>)
+  </li>
+  <li data-filter="Findland">
+    Findland (<%= @count_for_findland %>)
+  </li>
+  <li data-filter="Austria">
+    Austria (<%= @count_for_austria %>)
+  </li>
+  <li data-filter="Switzerland">
+    Switzerland (<%= @count_for_switzerland %>)
+  </li>
+  <li data-filter="France">
+    France (<%= @count_for_france %>)
+  </li>
+  <li data-filter="United Kingdom">
+    UK (<%= @count_for_uk %>)
+  </li>
+  <li data-filter="Other">
+    Other (<%= @count_for_other %>)
   </li>
 </ol>
 <ul id="tiles" class="wookmark">
   <% if @leads.present? %>
     <% @sorted_leads.each do |lead| %>
-      <div class="lead_box" data-filter-class='["<%= lead.business_type %>"]'>
+      <div class="lead_box" data-filter-class='["<%= lead.address %>"]'>
         <div class="lead_body">
           <div class="lead_title">
               <%= link_to lead.business_type, lead_path(lead) %>

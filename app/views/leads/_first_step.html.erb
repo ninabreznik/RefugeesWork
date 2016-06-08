@@ -7,12 +7,12 @@
       ["Mentorship"],
       ["Learning"],
       ["Collaboration"]
-    ], :prompt=>"Choose the title of your post*"%>  <br>
+    ], :prompt=>"Choose the title of your post*"%>  <br><br>
 </div>
 
-<div class="lead_new_form_time">
-  <%= l.label :"When?*" %><br>
-  <%= l.text_field :time %> <br>
+<div class="lead_new_form_description">
+  <%= l.label :"Describe what service you offer or you are looking for*" %><br>
+  <%= l.text_field :description %>
 </div>
 
 <div class="lead_new_form_zip">
@@ -46,10 +46,9 @@
       ["Jordan"],
       ["Lebanon"],
       ["Other"]
-    ], :prompt=>"Where?*"%>  <br>
+    ], :prompt=>"Where?*"%>
 </div>
-
-<div class="lead_new_form_description">
-  <%= l.label :"Please describe your idea or service that you can offer*" %><br>
-  <%= l.text_field :description %>
+<div class="lead_new_form_time">
+  <%= l.label :"When?*" %><br>
+  <%= l.text_field :time %> <br>
 </div>

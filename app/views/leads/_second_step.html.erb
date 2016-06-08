@@ -1,20 +1,16 @@
 
 <div class="lead_new_form_phone">
-  <%= l.label :"Phone (you can leave empty)" %>
+  <%= l.label :"Your name*"  %>
+  <%= l.text_field :name %>
+</div>
+<div class="lead_new_form_phone">
+  <%= l.label :"Contact info" %>
   <%= l.text_field :phone %>
 </div>
 
 <% if user_signed_in? %>
-  <div class="lead_new_form_phone">
-    <%= l.label :"Your name*"  %>
-    <%= l.text_field :name, value: "#{current_user.email.split("@")[0]}" %>
-  </div>
   <%= l.text_field :email, type: "hidden", value: "#{current_user.email}" %>
 <% else %>
-  <div class="lead_new_form_phone">
-    <%= l.label :"Your name*"  %>
-    <%= l.text_field :name %>
-  </div>
     <div class="lead_new_form_phone">
       <%= l.label :"Email*" %>
       <%= l.text_field :email %>

@@ -6,17 +6,20 @@
     margin 0px
     padding 0px
     .top_menu_bar
-      position fixed
-      top 0
-      z-index 999
-      width 100%
-      background-color Menu-Top-Color
-      blur-mixin(intensity =  0px)
-      background: rgb(0, 0, 0); /* fallback color */
-      background: rgba(255, 255, 255, 0.8);
-      border-bottom 1px solid #ccc
-      padding-top 3px
-      font-family App-Font-Family
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background-color: #fff;
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      filter: blur(0px);
+      background: #000;
+      background: rgba(255,255,255,1);
+      border-bottom: 1px solid #ccc;
+      padding-top: 3px;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
       .logged_user,
       .not_logged_user
         padding-bottom 2px
@@ -36,15 +39,27 @@
         display inline-block
         &:hover
           opacity 0.7
+      .info a
+        text-decoration none
+        color black
       .info
-        shift(0.63)
-        font-size 24px
-        display inline-block
-        .fa.fa-pencil-square-o
-          color #00a599
-          text-decoration none
-          &:hover
-            color Lead-Orange
+        position: relative;
+        left: 50%;
+        font-size: 13px;
+        padding: 10px 22px;
+        border-radius: 3px;
+        background-color: #fac30e;
+        color: #494949;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+        padding: 8px 15px;
+        bottom: 8px;
     .bottom_menu_bar
       background-color Menu-Bottom-Color
       position fixed
@@ -1208,7 +1223,7 @@
     /* :::::::::::: STATICPAGES/WELCOME landing singlepage :::::::::::: */
     .body_welcome
       body-mixin(backgroundImage: url(/images/interior1.jpg))
-      margin-top 29px
+      margin-top 2.55%
       padding-bottom 800px
       .leads_index_no_leads_available
         position: absolute
@@ -1229,9 +1244,9 @@
         letter-spacing: -1px;
         line-height 150%
       .leads_index_no_leads_available a
-        color #00a599
+        color #fac30e
         &:hover
-          color #eee
+          color #00a599
       .leads_index_no_leads_available_button_first a
         button(size: large, color: #fac30e)
         margin-right 2%
@@ -1248,9 +1263,7 @@
     /* :::::::::::: STATICPAGES/INFO landing singlepage :::::::::::: */
     .body_info_singlepage
       font-family App-Font-Family
-      margin-top 30px
-      #disqus_thread
-        padding 10%
+      margin-top 29px
       .section_welcome
         margin-top 29px
         padding 100px 60px 100px 100px
@@ -1310,8 +1323,8 @@
           margin 10px 50px 10px 50px
           width 300px
       .section_our_team
-        padding 0px 0px 60px 0px
-        background-color #606060
+        padding 0px 15% 60px 15%
+        background-color white
         letter-spacing 1.4px
         font-weight: 300
         color Lead-Blue
@@ -1325,17 +1338,20 @@
           text-align center
           font-weight bold
         .section_our_team_text
-          margin 60px 60px 60px 50px
+          text-aline center
           font-size 18px
           line-height 150%
         .section_our_team_text a
-          color white
+          color Lead-Blue
+          font-weight bold
+          &:hover
+            opacity 0.7
       .section_budget
-        padding 0px 50px 60px 50px
-        background-color black
+        padding 0px 15% 60px 15%
+        background-color Lead-Blue
         letter-spacing 1.4px
         font-weight: 300
-        color Lead-Orange
+        color white
         text-align center
         .fa.fa-calculator
           margin 60px 60px 20px 30px
@@ -1351,9 +1367,10 @@
           font-size 18px
           line-height 150%
         .section_budget_text a
-          color Lead-Orange
+          color white
+          font-weight bold
           &:hover
-           color white
+           opacity 0.7
       .section_what_customers_want
         padding 60px 60px 60px 60px
         background-color black
@@ -1432,15 +1449,15 @@
           background-color Lead-Orange
           width 200px
       .section_company_info
-        padding-top 20px
+        padding-top 30px
         text-align center
-        background-color black
-        color #eee
+        background-color Lead-Blue
+        color white
         font-size 14px
         .section_company_info_name
           font-size 18px
           text-transform: uppercase
-          color Lead-Blue
+          color white
           font-weight bold
         .section_company_info_name,
         .section_company_info_street,
@@ -1449,17 +1466,16 @@
         .section_company_info_bank_account,
         .section_company_info_contact a
           padding 7px 0px 0px 0px
-          color Lead-Blue
-        .section_company_info_contact a
+          color white
+        .section_company_info_contact a,
+        .section_company_info_street a
+          font-weight bold
+          color white
           &:hover
-            color white
+            opacity 0.8
         &:last-child
           padding-bottom 80px
-        .section_company_info_street a
-          text-decoration underline
-          color Lead-Blue
-          &:hover
-            color white
+
 
     /* :::::::::::::::::::::::: STATICPAGES/NEW_LEAD_CONFIRMATION :::::::::::::::::::::::::: */
     .body_new_lead_confirmation
