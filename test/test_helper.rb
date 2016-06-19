@@ -5,3 +5,7 @@ require 'minitest/rails'
 require 'minitest/reporters'
 
 Minitest::Reporters.use!
+
+class ActiveSupport::TestCase
+  include FactoryGirl::Syntax::Methods, Devise::TestHelpers
+end

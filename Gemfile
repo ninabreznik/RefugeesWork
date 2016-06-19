@@ -71,6 +71,7 @@ end
 group :test do
   gem 'minitest-rails'
   gem 'minitest-reporters'
+  gem 'factory_girl_rails'
 end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
