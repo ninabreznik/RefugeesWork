@@ -3,95 +3,94 @@
 <div class="columns" id="main" role="main">
   <ol id="filters">
   <li data-filter="Germany - Baden-Württemberg">
-    DE - Baden-Württemberg (<%= @count_for_baden %>)
+    DE - Baden-Württemberg (<%= @addresses_count["Germany - Baden-Württemberg"] %>)
   </li>
   <li data-filter="Germany - Bavaria">
-    DE - Bavaria (<%= @count_for_bavaria %>)
+    DE - Bavaria (<%= @addresses_count["Germany - Bavaria"] %>)
   </li>
   <li data-filter="Germany - Berlin">
-    DE - Berlin (<%= @count_for_berlin %>)
+    DE - Berlin (<%= @addresses_count["Germany - Berlin"] %>)
   </li>
   <li data-filter="Germany - Brandenburg">
-    DE - Brandenburg (<%= @count_for_brandenburg %>)
+    DE - Brandenburg (<%= @addresses_count["Germany - Brandenburg"] %>)
   </li>
   <li data-filter="Germany - Bremen">
-    DE - Bremen (<%= @count_for_bremen %>)
+    DE - Bremen (<%= @addresses_count["Germany - Bremen"] %>)
   </li>
   <li data-filter="Germany - Hamburg">
-    DE - Hamburg (<%= @count_for_hamburg %>)
+    DE - Hamburg (<%= @addresses_count["Germany - Hamburg"] %>)
   </li>
   <li data-filter="Germany - Hesse">
-    DE - Hesse (<%= @count_for_hesse %>)
+    DE - Hesse (<%= @addresses_count["Germany - Hesse"] %>)
   </li>
   <li data-filter="Germany - Lower Saxony">
-    DE - Lower Saxony (<%= @count_for_lowersaxony %>)
+    DE - Lower Saxony (<%= @addresses_count["Germany - Lower Saxony"] %>)
   </li>
   <li data-filter="Germany - Mecklenburg-Vorpommern">
-    DE - Mecklenburg-Vorpommern (<%= @count_for_mecklenburg %>)
+    DE - Mecklenburg-Vorpommern (<%= @addresses_count["Germany - Mecklenburg-Vorpommern"] %>)
   </li>
   <li data-filter="Germany - North Rhine-Westphalia">
-    DE - North Rhine-Westphalia (<%= @count_for_northrhine %>)
+    DE - North Rhine-Westphalia (<%= @addresses_count["Germany - North Rhine-Westphalia"] %>)
   </li>
   <li data-filter="Germany - Rhineland-Palatinate">
-    DE - Rhineland-Palatinate (<%= @count_for_rhineland %>)
+    DE - Rhineland-Palatinate (<%= @addresses_count["Germany - Rhineland-Palatinate"] %>)
   </li>
   <li data-filter="Germany - Saarland">
-    DE - Saarland (<%= @count_for_saarland %>)
+    DE - Saarland (<%= @addresses_count["Germany - Saarland"] %>)
   </li>
   <li data-filter="Germany - Saxony">
-    DE - Saxony (<%= @count_for_saxony %>)
+    DE - Saxony (<%= @addresses_count["Germany - Saxony"] %>)
   </li>
   <li data-filter="Germany - Saxony-Anhalt">
-    DE - Saxony-Anhalt (<%= @count_for_s_anhalt %>)
+    DE - Saxony-Anhalt (<%= @addresses_count["Germany - Saxony-Anhalt"] %>)
   </li>
   <li data-filter="Germany - Schleswig-Holstein">
-    DE - Schleswig-Holstein (<%= @count_for_schleswig %>)
+    DE - Schleswig-Holstein (<%= @addresses_count["Germany - Schleswig-Holstein"] %>)
   </li>
   <li data-filter="Germany - Thuringia">
-    DE - Thuringia (<%= @count_for_thuringia %>)
+    DE - Thuringia (<%= @addresses_count["Germany - Thuringia"] %>)
   </li>
   <li data-filter="Greece">
-    Greece (<%= @count_for_greece %>)
+    Greece (<%= @addresses_count["Greece"] %>)
   </li>
   <li data-filter="Turkey">
-    Turkey (<%= @count_for_turkey %>)
+    Turkey (<%= @addresses_count["Turkey"] %>)
   </li>
   <li data-filter="Egypt">
-    Egypt (<%= @count_for_egypt %>)
+    Egypt (<%= @addresses_count["Egypt"] %>)
   </li>
   <li data-filter="Jordan">
-    Jordan (<%= @count_for_jordan %>)
+    Jordan (<%= @addresses_count["Jordan"] %>)
   </li>
   <li data-filter="Lebanon">
-    Lebanon (<%= @count_for_lebanon %>)
+    Lebanon (<%= @addresses_count["Lebanon"] %>)
   </li>
   <li data-filter="Sweden">
-    Sweden (<%= @count_for_sweden %>)
+    Sweden (<%= @addresses_count["Sweden"] %>)
   </li>
   <li data-filter="Norway">
-    Norway (<%= @count_for_norway %>)
+    Norway (<%= @addresses_count["Norway"] %>)
   </li>
   <li data-filter="Findland">
-    Findland (<%= @count_for_findland %>)
+    Findland (<%= @addresses_count["Findland"] %>)
   </li>
   <li data-filter="Austria">
-    Austria (<%= @count_for_austria %>)
+    Austria (<%= @addresses_count["Austria"] %>)
   </li>
   <li data-filter="Switzerland">
-    Switzerland (<%= @count_for_switzerland %>)
+    Switzerland (<%= @addresses_count["Switzerland"] %>)
   </li>
   <li data-filter="France">
-    France (<%= @count_for_france %>)
+    France (<%= @addresses_count["France"] %>)
   </li>
   <li data-filter="United Kingdom">
-    UK (<%= @count_for_uk %>)
+    UK (<%= @addresses_count["United Kingdom"] %>)
   </li>
   <li data-filter="Other">
-    Other (<%= @count_for_other %>)
+    Other (<%= @addresses_count["Other"] %>)
   </li>
 </ol>
 <ul id="tiles" class="wookmark">
-  <% if @leads.present? %>
     <% @sorted_leads.each do |lead| %>
       <div class="lead_box" data-filter-class='["<%= lead.address %>"]'>
         <div class="lead_body">
@@ -122,10 +121,9 @@
         </div>
 
       </div>
-      <% end %>
-      <% end %>
-    </ul>
-  </div>
+    <% end %>
+  </ul>
+</div>
 </div>
 <script type="text/javascript">
     var leadboxes = document.querySelectorAll('.lead_box');
