@@ -5,3 +5,7 @@ require 'minitest/rails'
 require 'minitest/reporters'
 
 Minitest::Reporters.use!
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+end

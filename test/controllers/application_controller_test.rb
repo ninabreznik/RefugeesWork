@@ -6,11 +6,18 @@ ApplicationController.class_eval do
   end
 end
 
-Rails.application.routes.draw do
-  get 'any_action' => 'application#any_action'
-end
-
 class ApplicationControllerTest < ActionController::TestCase
+
+  def setup
+    Rails.application.routes.draw do
+      get 'any_action' => 'application#any_action'
+    end
+  end
+
+  def teardown
+    Rails.application.reload_routes!
+  end
+
   test 'it falls back to english without a locale' do
     get :any_action
     assert_response :success
