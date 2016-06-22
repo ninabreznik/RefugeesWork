@@ -1,27 +1,22 @@
 <div class="body_welcome">
   <div class="leads_index_no_leads_available">
+    <br>
     <%= t('.title') %>
+    <%= link_to t('.read_more'), info_path %>
     <br>
     <br>
-    <%= t('.description') %> <%= link_to t('.read_more'), info_path %>
-    <br>
+    <%= t('.description') %>
     <br>
     <br>
     <div class="leads_index_no_leads_available_button_third">
-      <%= link_to t('.browse_offers'), leads_path %>
+      <%= link_to t('.book'), new_lead_path %>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-key"> <%= t('.freelancing') %></i>
-    &nbsp &nbsp <i class="fa fa-cubes"> <%= t('.start_business') %> </i>
-    &nbsp &nbsp <i class="fa fa-pencil"> <%= t('.b2b') %> </i>
-    &nbsp &nbsp <i class="fa fa-users"> <%= t('.cofounding') %> </i>
-    &nbsp &nbsp <i class="fa fa-comments-o"> <%= t('.collaboration') %> </i>
-    &nbsp &nbsp <i class="fa fa-heart-o"> <%= t('.volunteering') %> </i>
-    &nbsp &nbsp <i class="fa fa-book"> <%= t('.learning') %> </i>
-
-    <br>
+    <i class="fa fa-users"> <%= t('.step1') %></i>
+    &nbsp &nbsp <i class="fa fa-heart-o"> <%= t('.step2') %> </i>
+    &nbsp &nbsp <i class="fa fa-comments-o"> <%= t('.step3') %> </i>
     <br>
     <br>
   </div>

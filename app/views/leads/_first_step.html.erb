@@ -1,15 +1,6 @@
 <div class="lead_new_form_time">
-  <%= l.select :business_type, [
-      ["Offer a service"],
-      ["Outsource work"],
-      ["Need support to become self employed"],
-      ["Offer guidance to self employment"]
-    ], :prompt=>"Choose the title of your post*"%>  <br><br>
-</div>
-
-<div class="lead_new_form_description">
-  <%= l.label :"Describe what service you offer or you are looking for*" %><br>
-  <%= l.text_field :description %>
+  <%= l.label :"What needs to be done?*" %><br>
+  <%= l.text_field :business_type %><br>
 </div>
 
 <div class="lead_new_form_zip">
@@ -45,6 +36,7 @@
       ["Other"]
     ], :prompt=>"Where?*"%>
 </div>
+
 <div class="lead_new_form_time">
   <%= l.label :"When?*" %><br>
   <%= l.text_field :time %> <br>

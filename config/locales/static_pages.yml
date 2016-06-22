@@ -6,24 +6,24 @@ en:
   static_pages:
     welcome:
       b2b: B2B
-      browse_offers: BROWSE THE MARKETPLACE
-      cofounding: Co-founding
-      collaboration: Collaboration
-      description: We help newcomers and locals to work together. Newcomers can offer their services and locals can help and hire them as freelancers, business partners or as volunteers.
-      freelancing: Freelancing
+      book: FIND AND BOOK A PRO
+      step1: Search and book
+      step2: Service completed
+      step3: Review & repeat
+      description: BOOK INDEPENDANT SERVICE PROFESSIONALS SAFELY AND EASILY.
       learning: Learning
       read_more: Read more...
       start_business: Starting a business
-      title: Welcome to REFUGEES WORK
+      title: Most newcomers are skilled translators or designers, cooks, journalists, programmers etc. Let's not keep them waiting for a job and help them with offering them freelance or volunteering opportunities.
       volunteering: Volunteering
 es:
   static_pages:
     welcome:
       b2b: B2B
-      browse_offers: VER OFERTAS
-      cofounding: Cofundar
-      collaboration: Colaboración
-      description: Ayudamos a recién llegados y locales a trabajar juntos. Organizaciones locales pueden ayudar a recién llegados a empezar su negocio, ofrecerles oportunidades de voluntariado o contratarlos como autónomos.
+      book: VER OFERTAS
+      step1: Cofundar
+      step2: Colaboración
+      step3: Ayudamos a recién llegados y locales a trabajar juntos. Organizaciones locales pueden ayudar a recién llegados a empezar su negocio, ofrecerles oportunidades de voluntariado o contratarlos como autónomos.
       freelancing: Autónomos
       learning: Aprender
       read_more: Leer más...

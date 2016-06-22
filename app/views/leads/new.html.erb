@@ -3,28 +3,30 @@
 <section class="lead_new_photo">
   <div class="lead_new_explanation">
     <div class="lead_new_explanation_first">
-      <i class="fa fa-pencil"></i>         Post what you offer or need.      </div>
+      <i class="fa fa-pencil"></i>         Tell us what you need.      </div>
     <div class="lead_new_explanation_second">
-      <i class="fa fa-files-o"></i>        App notifies about new post.          </div>
+      <i class="fa fa-files-o"></i>        Receive offers.          </div>
     <div class="lead_new_explanation_third">
-      <i class="fa fa-check-square-o"></i> Others can respond to your post on the marketplace. </div>
+      <i class="fa fa-check-square-o"></i> Contract the right pro. </div>
   </div>
   <div class="lead_new">
     <br>
     <div class="lead_new_instructions">
-       Some newcomers are skilled translators or designers,
-       cooks, journalists or programmers etc. Let's not keep them waiting
-       for a job and help them become self-employed.
+       Most newcomers are skilled translators or designers,
+       cooks, journalists, programmers etc. Let's not keep them waiting
+       for a job and help them with offering them freelance or volunteering opportunities.
        <br>
        <br>
-       Are you a newcomer? Tell us what service can you offer and we will help you
-       find a local company or organisation who could hire you. <br><br>
-       Not self-employed yet?
-       Create a support request to find a local organisation who can advise you and help you get started.
-       <a href=http://www.refugeeswork.com/en/info#legal> See more info.</a>
+       Are you a newcomer? List your service and get notified
+       when there is a freelance opportunity near you.
+      <% if user_signed_in? %>
+        <%=link_to "List your service >>", edit_user_registration_path %>
+      <% else %>
+        <%= link_to "Register/Login", new_user_registration_path %>
+      <% end %>
      </div>
     <div class="lead_new_title">
-      Create new post!
+      Book independent service professionals safely and easily
     </div>
     <%= form_for (@lead) do |l| %>
       <%= render "#{@lead.current_step}_step", :l => l %>
