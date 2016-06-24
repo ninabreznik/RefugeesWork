@@ -7,14 +7,24 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+  <div class="user_edit_form_email"><%= f.label :"I want to..." %><br />
+  <%= f.select :user_type, [
+    ["WORK"],
+    ["HIRE"]
+  ]
+   %></div>
+
   <div class="user_edit_form_email"><%= f.label :"Please, tell us your name" %><br />
   <%= f.text_field :name %></div>
 
   <div class="user_edit_form_email"><%= f.label :"What is your background / expertise?" %><br />
-  <%= f.text_field :business_type %></div>
+  <%= f.text_field :bio %></div>
+
+  <div class="user_edit_form_email"><%= f.label :"List your skills" %><br />
+  <%= f.text_field :skills %></div>
 
   <div class="user_edit_form_email"><%= f.label :"What languages do you speak?" %><br />
-  <%= f.text_field :country %></div>
+  <%= f.text_field :languages %></div>
 
   <div class="user_edit_form_email">
     <%= f.select :city, [
