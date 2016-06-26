@@ -235,7 +235,7 @@ html {
   box-sizing: inherit;
 }
 
-/* line 1646 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/node_modules/axis/axis/tables.styl */
+/* line 1 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/node_modules/axis/axis/tables.styl */
 
 /* line 33 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
 @media only screen and (max-width: 5000px) {
@@ -3679,7 +3679,7 @@ html {
 /* line 1233 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_welcome .leads_index_no_leads_available {
     position: absolute;
-    margin: 175px;
+    margin: 145px;
     background: #000; /* fallback color */
     background: rgba(14,47,64,0.7);
     top: 100px;
@@ -3703,12 +3703,18 @@ html {
   }
 
 /* line 1250 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
-  .body_welcome .buttons {
-    padding-left: 0px;
-    padding-bottom: 100px;
+  .body_welcome .welcome_title {
+    font-weight: bold;
+    font-size: 35px;
+    padding-bottom: 40px;
   }
 
-/* line 1253 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1254 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+  .body_welcome .buttons {
+    padding: 40px 0px 100px 0px;
+  }
+
+/* line 1256 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_welcome .welcome_button_first,
   .body_welcome .welcome_button_second {
     font-size: 18px;
@@ -3720,25 +3726,25 @@ html {
     border: 1px solid #fff;
   }
 
-/* line 1262 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1265 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_welcome .welcome_button_first a,
   .body_welcome .welcome_button_second a {
     color: #fff;
   }
 
-/* line 1265 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1268 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_welcome .welcome_button_first a:hover,
   .body_welcome .welcome_button_second a:hover {
     color: #808080;
   }
 
-/* line 1268 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1271 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
     margin-top: 29px;
   }
 
-/* line 1271 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1274 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_welcome {
     margin-top: 29px;
     padding: 100px 60px 100px 100px;
@@ -3748,7 +3754,7 @@ html {
     font-weight: 300;
   }
 
-/* line 1278 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1281 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_welcome .section_welcome_title {
     font-size: 18px;
     color: #fff;
@@ -3757,7 +3763,7 @@ html {
     text-align: center;
   }
 
-/* line 1284 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1287 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_welcome .section_welcome_subtitle {
     color: #222;
     font-size: 32px;
@@ -3765,20 +3771,20 @@ html {
     margin-bottom: 30px;
   }
 
-/* line 1289 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1292 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_welcome .section_welcome_text {
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1292 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1295 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_divided {
     color: #fff;
     font-size: 32px;
     letter-spacing: 1.4px;
   }
 
-/* line 1296 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1299 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_divided .section_divided_left {
     *zoom: 1;
     float: left;
@@ -3804,7 +3810,7 @@ html {
     clear: both;
   }
 
-/* line 1301 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1304 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_divided .section_divided_right {
     *zoom: 1;
     float: left;
@@ -3830,7 +3836,7 @@ html {
     clear: both;
   }
 
-/* line 1306 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1309 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_how_it_works {
     padding: 0px 0px 60px 0px;
     background-color: #eee;
@@ -3839,7 +3845,7 @@ html {
     color: #222;
   }
 
-/* line 1312 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1315 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_how_it_works .section_how_it_works_image {
     background-image: url("/images/interior4.jpg");
     background-repeat: no-repeat;
@@ -3863,7 +3869,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1315 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1318 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_how_it_works .section_how_it_works_title {
     margin: 60px 60px 60px 50px;
     font-size: 32px;
@@ -3872,14 +3878,14 @@ html {
     font-weight: bold;
   }
 
-/* line 1321 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1324 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_how_it_works .section_how_it_works_text {
     margin: 60px 60px 60px 50px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1325 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1328 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_how_it_works .section_how_it_works_text a {
     font-size: 13px;
     padding: 10px 22px;
@@ -3911,7 +3917,7 @@ html {
     background-color: #e9b405;
   }
 
-/* line 1329 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1332 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_end {
     text-align: center;
     padding: 0px 15% 60px 15%;
@@ -3921,14 +3927,14 @@ html {
     color: #0e2f40;
   }
 
-/* line 1336 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1339 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_end .fa.fa-heart {
     margin: 60px 60px 20px 30px;
     font-size: 80px;
     text-align: center;
   }
 
-/* line 1340 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1343 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_end .section_end_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
@@ -3936,25 +3942,25 @@ html {
     font-weight: bold;
   }
 
-/* line 1345 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1348 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_end .section_end_text {
     text-aline: center;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1349 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1352 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_end .section_end_text a {
     color: #0e2f40;
     font-weight: bold;
   }
 
-/* line 1352 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1355 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_end .section_end_text a:hover {
     opacity: 0.7;
   }
 
-/* line 1354 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1357 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team {
     padding: 0px 15% 60px 15%;
     background-color: #fff;
@@ -3964,7 +3970,7 @@ html {
     text-align: justify;
   }
 
-/* line 1361 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1364 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
@@ -3972,7 +3978,7 @@ html {
     font-weight: bold;
   }
 
-/* line 1366 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1369 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_links {
     text-align: center;
     text-aline: center;
@@ -3980,35 +3986,35 @@ html {
     line-height: 150%;
   }
 
-/* line 1371 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1374 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_links a {
     color: #0e2f40;
   }
 
-/* line 1373 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1376 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_links a:hover {
     opacity: 0.7;
   }
 
-/* line 1375 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1378 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_text {
     text-aline: center;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1379 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1382 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_text a {
     color: #0e2f40;
     font-weight: bold;
   }
 
-/* line 1382 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1385 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_our_team .section_our_team_text a:hover {
     opacity: 0.7;
   }
 
-/* line 1384 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1387 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_budget {
     padding: 0px 15% 60px 15%;
     background-color: #0e2f40;
@@ -4018,14 +4024,14 @@ html {
     text-align: justify;
   }
 
-/* line 1391 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1394 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_budget .fa.fa-calculator {
     margin: 60px 60px 20px 30px;
     font-size: 80px;
     color: #fac30e;
   }
 
-/* line 1395 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1398 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_budget .section_budget_title {
     margin: 20px 60px 60px 30px;
     font-size: 32px;
@@ -4033,25 +4039,25 @@ html {
     font-weight: bold;
   }
 
-/* line 1400 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1403 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_budget .section_budget_text {
     margin: 60px 60px 60px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1404 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1407 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_budget .section_budget_text a {
     color: #fff;
     font-weight: bold;
   }
 
-/* line 1407 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1410 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_budget .section_budget_text a:hover {
     opacity: 0.7;
   }
 
-/* line 1409 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1412 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_what_customers_want {
     padding: 60px 60px 60px 60px;
     background-color: #222;
@@ -4060,26 +4066,26 @@ html {
     text-align: center;
   }
 
-/* line 1415 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1418 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_what_customers_want .section_what_customers_want_title {
     margin-bottom: 50px;
     font-size: 48px;
     font-weight: bold;
   }
 
-/* line 1419 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1422 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_what_customers_want .fa.fa-check-square-o {
     font-size: 30px;
     margin-right: 10px;
   }
 
-/* line 1422 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1425 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_what_customers_want .section_what_customers_want_item {
     margin-bottom: 20px;
     font-size: 18px;
   }
 
-/* line 1425 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1428 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_join_sosed {
     background-color: #fac30e;
     color: #222;
@@ -4090,7 +4096,7 @@ html {
     line-height: 200%;
   }
 
-/* line 1433 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1436 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_join_sosed .section_why_sosed_image {
     background-image: url("/images/interior2.jpg");
     background-repeat: no-repeat;
@@ -4114,7 +4120,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1436 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1439 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_join_sosed .fa.fa-line-chart,
   .body_info_singlepage .section_join_sosed .fa.fa-paper-plane-o,
   .body_info_singlepage .section_join_sosed .fa.fa-thumbs-up {
@@ -4126,7 +4132,7 @@ html {
     color: #222;
   }
 
-/* line 1444 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1447 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_join_sosed .section_join_sosed_introduce,
   .body_info_singlepage .section_join_sosed .section_join_sosed_cooperation,
   .body_info_singlepage .section_join_sosed .section_join_sosed_success {
@@ -4136,7 +4142,7 @@ html {
     background-color: #fac30e;
   }
 
-/* line 1451 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1454 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_why_sosed {
     padding: 0px 50px 60px 50px;
     letter-spacing: 1.4px;
@@ -4144,7 +4150,7 @@ html {
     color: #222;
   }
 
-/* line 1456 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1459 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_why_sosed .section_why_sosed_title {
     margin: 60px 60px 60px 50px;
     font-size: 32px;
@@ -4153,46 +4159,46 @@ html {
     text-align: center;
   }
 
-/* line 1462 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1465 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_why_sosed .section_why_sosed_text {
     margin: 60px 60px 30px 30px;
     font-size: 18px;
     line-height: 150%;
   }
 
-/* line 1466 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1469 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_why_sosed .section_why_sosed_text a {
     color: #222;
   }
 
-/* line 1468 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1471 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_form {
     letter-spacing: 1.4px;
     font-weight: 300;
     color: #222;
   }
 
-/* line 1472 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1475 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_form #mc_embed_signup {
     background-color: #0e2f40;
     padding: 50px 0px 30px 0px;
   }
 
-/* line 1475 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1478 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_form #mc_embed_signup label {
     font-size: 32px;
     color: #fff;
     text-align: center;
   }
 
-/* line 1479 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1482 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_form #mce-EMAIL {
     position: relative;
     left: 33.989999999999995%;
     width: 400px;
   }
 
-/* line 1482 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1485 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_form #mc-embedded-subscribe {
     position: relative;
     left: 41.2%;
@@ -4200,7 +4206,7 @@ html {
     width: 200px;
   }
 
-/* line 1486 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1489 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_company_info {
     padding-top: 30px;
     text-align: center;
@@ -4209,7 +4215,7 @@ html {
     font-size: 14px;
   }
 
-/* line 1492 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1495 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_company_info .section_company_info_name {
     font-size: 18px;
     text-transform: uppercase;
@@ -4217,7 +4223,7 @@ html {
     font-weight: bold;
   }
 
-/* line 1497 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1500 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_company_info .section_company_info_name,
   .body_info_singlepage .section_company_info .section_company_info_street,
   .body_info_singlepage .section_company_info .section_company_info_city,
@@ -4228,25 +4234,25 @@ html {
     color: #fff;
   }
 
-/* line 1505 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1508 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_company_info .section_company_info_contact a,
   .body_info_singlepage .section_company_info .section_company_info_street a {
     font-weight: bold;
     color: #fff;
   }
 
-/* line 1509 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1512 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_company_info .section_company_info_contact a:hover,
   .body_info_singlepage .section_company_info .section_company_info_street a:hover {
     opacity: 0.8;
   }
 
-/* line 1511 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1514 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_info_singlepage .section_company_info:last-child {
     padding-bottom: 80px;
   }
 
-/* line 1516 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1519 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_new_lead_confirmation {
     background-image: url("/images/interior1.jpg");
     background-repeat: no-repeat;
@@ -4272,7 +4278,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1521 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1524 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_new_lead_confirmation .new_lead_confirmation {
     *zoom: 1;
     width: auto;
@@ -4302,19 +4308,19 @@ html {
     clear: both;
   }
 
-/* line 1528 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1531 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_thank_you {
     font-size: 26px;
     font-weight: bold;
   }
 
-/* line 1531 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1534 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_new_lead_confirmation .new_lead_confirmation .new_lead_confirmation_text {
     font-size: 18px;
     padding-top: 40px;
   }
 
-/* line 1536 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1539 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans {
     background-image: url("/images/cream_pixels.png");
     background-repeat: no-repeat;
@@ -4339,7 +4345,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1540 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1543 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .plans_title {
     color: #0e2f40;
     opacity: 0.85;
@@ -4349,7 +4355,7 @@ html {
     padding-bottom: 80px;
   }
 
-/* line 1547 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1550 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .lead_box {
     width: 303px;
     height: 425px;
@@ -4361,7 +4367,7 @@ html {
     text-align: center;
   }
 
-/* line 1556 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1559 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .lead_box .plans_item_text:first-child {
     font-weight: bold;
     color: #222;
@@ -4371,7 +4377,7 @@ html {
     text-align: center;
   }
 
-/* line 1563 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1566 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .lead_box .plans_item_text:nth-child(2) {
     font-weight: bold;
     color: #fff;
@@ -4382,14 +4388,14 @@ html {
     text-align: center;
   }
 
-/* line 1571 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1574 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .lead_box .plans_item_text {
     font-size: 15px;
     padding: 20px 25px 0px 30px;
     text-align: left;
   }
 
-/* line 1575 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1578 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .lead_box .plans_item_buy_button {
     margin-top: 40px;
     position: absolute;
@@ -4424,7 +4430,7 @@ html {
     background-color: #e9b405;
   }
 
-/* line 1582 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1585 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .plans_item_note {
     color: #222;
     font-size: 14px;
@@ -4434,7 +4440,7 @@ html {
     width: 60%;
   }
 
-/* line 1588 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1591 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .plans_faq_item {
     margin-top: 40px;
     position: relative;
@@ -4445,20 +4451,20 @@ html {
     line-height: 150%;
   }
 
-/* line 1595 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1598 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .plans_faq_item .plans_faq_item_question {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 7px;
   }
 
-/* line 1599 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1602 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_plans .plans_faq_item .plans_faq_item_answer {
     font-weight: italics;
     padding-bottom: 20px;
   }
 
-/* line 1604 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1607 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_promo {
     background-image: url("/images/interior6.jpg");
     background-repeat: no-repeat;
@@ -4481,7 +4487,7 @@ html {
     font-family: 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   }
 
-/* line 1606 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1609 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_promo .columns {
     position: relative;
     margin-top: 29px;
@@ -4490,14 +4496,14 @@ html {
     padding-bottom: 20px;
   }
 
-/* line 1608 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1611 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_promo .columns .wookmark {
     list-style-type: none;
     position: relative; /** Needed to ensure items are laid out relative to this container **/
     padding: 0px;
   }
 
-/* line 1610 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1613 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_promo .columns .wookmark .lead_box {
     margin-left: 42px;
     width: 303px;
@@ -4508,7 +4514,7 @@ html {
     box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   }
 
-/* line 1618 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1621 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_promo .columns .wookmark .lead_box .profile_dashboard_title {
     text-align: center;
     opacity: 0.85;
@@ -4518,7 +4524,7 @@ html {
     font-size: 14px;
   }
 
-/* line 1625 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1628 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .body_promo .columns .wookmark .lead_box .profile_dashboard_body {
     color: #222;
     padding: 30px 30px 20px 30px;
@@ -4529,12 +4535,12 @@ html {
     width: 280px;
   }
 
-/* line 1635 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1638 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .promo_image_wrapper {
     height: 1500px;
   }
 
-/* line 1637 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1640 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .promo_image_wrapper .promo_image {
     margin-top: 170px;
     position: absolute;
@@ -4553,7 +4559,7 @@ html {
     padding-bottom: 50px;
   }
 
-/* line 1641 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
+/* line 1644 : /Users/ninabreznik/Code/Ruby/refugeesWork/refugeesWork/public/app_below_1300px.styl */
   .promo_image_wrapper .promo_image_affiliation_code {
     color: #d13f19;
     margin-top: 300px;

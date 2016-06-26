@@ -11,12 +11,12 @@ en:
       step1: Search and book
       step2: Service completed
       step3: Review & repeat
-      description: Welcome to RefugeesWork - a tool for newcomers to find freelance work.
+      description: a tool for newcomers to find freelance work.
       pathway: Work is the best pathway to connect newcomers with locals. We grow through the things we make together.
       read_more: Click for more information.
       start_business: Starting a business
       volunteering: Volunteering
-      title: Most newcomers are skilled translators, designers, cooks and journalists, programmers, actors and many more . Let's not keep them waiting for a job and help them with freelance or volunteering opportunities.
+      title: Welcome to RefugeesWork
 es:
   static_pages:
     welcome:
