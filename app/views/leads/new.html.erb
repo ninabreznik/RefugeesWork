@@ -15,18 +15,10 @@
        Most newcomers are skilled translators or designers,
        cooks, journalists, programmers etc. Let's not keep them waiting
        for a job and help them with offering them freelance or volunteering opportunities.
-       <br>
-       <br>
-       Are you a newcomer? List your service and get notified
-       when there is a freelance opportunity near you.
-      <% if user_signed_in? %>
-        <%=link_to "List your service >>", edit_user_registration_path %>
-      <% else %>
-        <%= link_to "Register/Login", new_user_registration_path %>
-      <% end %>
      </div>
     <div class="lead_new_title">
       Book independent service professionals safely and easily
+      <br>
     </div>
     <%= form_for (@lead) do |l| %>
       <%= render "#{@lead.current_step}_step", :l => l %>

@@ -1,23 +1,24 @@
 <div class="body_welcome">
   <div class="leads_index_no_leads_available">
+    <%= t('.description') %>
+    <ul class=buttons>
+      <li class="welcome_button_first">
+        <%= link_to t('.work'), new_user_registration_path %>
+      </li>
+      <li class="welcome_button_second">
+        <%= link_to t('.hire'), new_lead_path %>
+      </li>
+    </ul>
     <br>
-    <%= t('.title') %>
+    <br>
+    <%= t('.pathway') %>
+    <br>
     <%= link_to t('.read_more'), info_path %>
     <br>
-    <br>
-    <%= t('.description') %>
-    <br>
-    <br>
-    <div class="leads_index_no_leads_available_button_third">
-      <%= link_to t('.book'), new_lead_path %>
-    </div>
-    <br>
-    <br>
-    <br>
+  </div>
     <i class="fa fa-users"> <%= t('.step1') %></i>
     &nbsp &nbsp <i class="fa fa-heart-o"> <%= t('.step2') %> </i>
     &nbsp &nbsp <i class="fa fa-comments-o"> <%= t('.step3') %> </i>
     <br>
-    <br>
-  </div>
+    <br> 
 </div>

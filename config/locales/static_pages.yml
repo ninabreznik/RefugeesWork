@@ -6,16 +6,17 @@ en:
   static_pages:
     welcome:
       b2b: B2B
-      book: FIND AND BOOK A PRO
+      work: I want to work
+      hire: I want to hire
       step1: Search and book
       step2: Service completed
       step3: Review & repeat
-      description: BOOK INDEPENDANT SERVICE PROFESSIONALS SAFELY AND EASILY
-      learning: Learning
-      read_more: Read more...
+      description: Welcome to RefugeesWork - a tool for newcomers to find freelance work.
+      pathway: Work is the best pathway to connect newcomers with locals. We grow through the things we make together.
+      read_more: Click for more information.
       start_business: Starting a business
-      title: Most newcomers are skilled translators, designers, cooks and journalists, programmers, actors and many more . Let's not keep them waiting for a job and help them with freelance or volunteering opportunities.
       volunteering: Volunteering
+      title: Most newcomers are skilled translators, designers, cooks and journalists, programmers, actors and many more . Let's not keep them waiting for a job and help them with freelance or volunteering opportunities.
 es:
   static_pages:
     welcome:
