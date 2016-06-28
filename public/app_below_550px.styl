@@ -717,15 +717,24 @@
             text-decoration underline
     /* :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: */
     .body_devise_signup
-      body-mixin(backgroundImage: url(/images/cream_pixels.jpg))
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: column;
+      body-mixin(backgroundImage: url(/images/interior2.jpg))
       margin-top 29px
       padding-top 20px
-      padding-bottom 1050px
+      .signup_video
+        margin 30px 0 0 10px
+        width 100%
+      .signup_video_iframe
+          width: 70%
       .signup
         padding-top 30px
         margin-left 20px
+        width 90%
         .signup_title
-          font-size 28px
+          font-size 16px
           font-weight bold
           margin-bottom 20px
         .signup_form_email,

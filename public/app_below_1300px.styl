@@ -171,7 +171,7 @@
         position: absolute
         margin-top 30px
         background: rgb(0, 0, 0); /* fallback color */
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(14, 47, 64, 0.7);
         position fixed
         blur-mixin(intensity = 0px)
         padding: 50px;
@@ -755,20 +755,29 @@
           color white
     /* :::::::::::: DEVISE/SIGNUP (registrations/new) :::::::::::: */
     .body_devise_signup
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
       body-mixin(backgroundImage: url(/images/interior2.jpg))
       margin-top 29px
       padding-top 20px
-      padding-bottom 1050px
       color white
+      .signup_video
+        margin-top 7%
+        width: 800px;
+        height: 400px;
+        .signup_video_iframe
+          width: 95%
+          height: 95%
       .signup
-        padding-top 30px
-        margin-left 5%
+        padding 30px 0 50px 0
+        margin 0 5% 0 5%
+        width 50%
+        background: rgb(0, 0, 0); /* fallback color */
+        background: rgba(14, 47, 64, 0.7);
+        padding 4%
         .signup_title
-          background: rgb(0, 0, 0); /* fallback color */
-          background: rgba(0, 0, 0, 0.7);
-          width 60%
-          padding 2%
-          padding-left 4%
           font-size 25px
           font-weight bold
           margin-bottom 20px
@@ -923,7 +932,7 @@
         .lead_new
           span(1/2.5)
           background: rgb(0, 0, 0); /* fallback color */
-          background: rgba(0, 0, 0, 0.7);
+          background: rgba(14, 47, 64, 0.7);
           shift(0.13)
           padding-bottom 14px
           margin-top 30px
@@ -1038,7 +1047,7 @@
           font-weight bold
           color white
           background: rgb(0, 0, 0); /* fallback color */
-          background: rgba(0, 0, 0, 0.7);
+          background: rgba(14, 47, 64, 0.7);
           .lead_new_explanation_first,
           .lead_new_explanation_second,
           .lead_new_explanation_third
