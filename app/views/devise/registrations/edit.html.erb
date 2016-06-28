@@ -1,77 +1,80 @@
 <div class="body_devise_users_edit">
   <div class="user_edit">
-<div class="user_edit_title">
-  Introduce yourself to the community
-</div>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="user_edit_form_email"><%= f.label :"I want to..." %><br />
-  <%= f.select :user_type, [
-    ["WORK"],
-    ["HIRE"]
-  ]
-   %></div>
-
-  <div class="user_edit_form_email"><%= f.label :"Please, tell us your name" %><br />
-  <%= f.text_field :name %></div>
-
-  <div class="user_edit_form_email"><%= f.label :"What is your background / expertise?" %><br />
-  <%= f.text_field :bio %></div>
-
-  <div class="user_edit_form_email"><%= f.label :"List your skills" %><br />
-  <%= f.text_field :skills %></div>
-
-  <div class="user_edit_form_email"><%= f.label :"What languages do you speak?" %><br />
-  <%= f.text_field :languages %></div>
-
-  <div class="user_edit_form_email">
-    <%= f.select :city, [
-      ["Germany - Baden-Württemberg"],
-      ["Germany - Bavaria"],
-      ["Germany - Berlin"],
-      ["Germany - Brandenburg"],
-      ["Germany - Bremen"],
-      ["Germany - Hamburg"],
-      ["Germany - Hesse"],
-      ["Germany - Lower Saxony"],
-      ["Germany - Mecklenburg-Vorpommern"],
-      ["Germany - North Rhine-Westphalia"],
-      ["Germany - Rhineland-Palatinate"],
-      ["Germany - Saarland"],
-      ["Germany - Saxony"],
-      ["Germany - Saxony-Anhalt"],
-      ["Germany - Schleswig-Holstein"],
-      ["Germany - Thuringia"],
-      ["Sweden"],
-      ["Norway"],
-      ["Findland"],
-      ["Austria"],
-      ["Switzerland"],
-      ["France"],
-      ["United Kingdom"],
-      ["Greece"],
-      ["Turkey"],
-      ["Egypt"],
-      ["Jordan"],
-      ["Lebanon"],
-      ["Other"]
-      ], :prompt=>"Where do you currently live?*"%>  <br>
-</div>
-
-<div class="user_edit_form_email"><%= f.label :"Subscribed to notifications" %><br />
-  <%= f.check_box :subscribed_to_notifications %></div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-
-  <div class="user_edit_form_submit"><%= f.submit "#{I18n.t'users-edit.update-button'}" %></div>
-<% end %>
-
-<div class="user_edit_cancel_acount"><%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %></div>
-
-
+    <div class="user_edit_title">
+      Introduce yourself to the community
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="user_edit_form_email">
+        <%= f.label :"I want to..." %><br>
+        <%= f.select :user_type, [["WORK"],["HIRE"]]%>
+      </div>
+      <div class="user_edit_form_email">
+        <%= f.label :"Please, tell us your name" %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="user_edit_form_email">
+        <%= f.label :"What is your background / expertise?" %><br>
+        <%= f.text_field :bio %>
+      </div>
+      <div class="user_edit_form_email">
+        <%= f.label :"List your skills" %><br>
+        <%= f.text_field :skills %>
+      </div>
+      <div class="user_edit_form_email">
+        <%= f.label :"What languages do you speak?" %><br>
+      <%= f.text_field :languages %></div>
+      <div class="user_edit_form_email">
+        <%= f.select :city, [
+          ["Germany - Baden-Württemberg"],
+          ["Germany - Bavaria"],
+          ["Germany - Berlin"],
+          ["Germany - Brandenburg"],
+          ["Germany - Bremen"],
+          ["Germany - Hamburg"],
+          ["Germany - Hesse"],
+          ["Germany - Lower Saxony"],
+          ["Germany - Mecklenburg-Vorpommern"],
+          ["Germany - North Rhine-Westphalia"],
+          ["Germany - Rhineland-Palatinate"],
+          ["Germany - Saarland"],
+          ["Germany - Saxony"],
+          ["Germany - Saxony-Anhalt"],
+          ["Germany - Schleswig-Holstein"],
+          ["Germany - Thuringia"],
+          ["Sweden"],
+          ["Norway"],
+          ["Findland"],
+          ["Austria"],
+          ["Switzerland"],
+          ["France"],
+          ["United Kingdom"],
+          ["Greece"],
+          ["Turkey"],
+          ["Egypt"],
+          ["Jordan"],
+          ["Lebanon"],
+          ["Other"]
+          ], :prompt=>"Where do you currently live?*"%> <br>
+        </div>
+        <div class="user_edit_form_email"><%= f.label :"Subscribed to notifications" %><br />
+          <%= f.check_box :subscribed_to_notifications %>
+        </div>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for:
+            <%= resource.unconfirmed_email %>
+          </div>
+        <% end %>
+        <div class="user_edit_form_submit">
+          <%= f.submit "#{I18n.t'users-edit.update-button'}" %>
+        </div>
+    <% end %>
+    <div class="user_edit_cancel_acount">
+      <%= link_to "#{I18n.t'staticpagesprofile-links.logout'}", destroy_user_session_path, method: :get %>
+    </div>
+  </div>
+  <div class="user_edit_video">
+    <iframe class="video_iframe" src="https://www.youtube.com/embed/6el1LJ7vtIA" frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
 </div>

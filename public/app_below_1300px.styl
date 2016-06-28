@@ -847,13 +847,23 @@
       body-mixin(backgroundImage: url(/images/interior2.jpg))
       margin-top 29px
       padding-top 20px
-      padding-bottom 1050px
       color #eee
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      .user_edit_video
+        margin-top 7%
+        width: 800px;
+        height: 400px;
+        .video_iframe
+          width: 95%
+          height: 95%
       .user_edit
         padding-top 30px
-        margin-left 20px
+        margin 10px
         background: rgb(0, 0, 0); /* fallback color */
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(14, 47, 64, 0.7);
         width 40%
         padding 2%
         .user_edit_title
@@ -1215,7 +1225,7 @@
       .leads_index_no_leads_available
         position absolute
         width 100%
-        margin-top 145px
+        margin-top 5vh
         background: rgb(0, 0, 0); /* fallback color */
         background: rgba(14, 47, 64, 0.7);
         text-align center
@@ -1223,7 +1233,6 @@
         -webkit-font-smoothing: antialiased
         color: white;
         letter-spacing: -1px;
-        line-height 150%
         padding-botom 50px
       .leads_index_no_leads_available a
         color #00a599
@@ -1233,6 +1242,7 @@
         font-weight bold
         font-size 75px
         padding-bottom 40px
+        line-height 1em
       .buttons
         padding 40px 0px 100px 0px
       .welcome_button_first,
