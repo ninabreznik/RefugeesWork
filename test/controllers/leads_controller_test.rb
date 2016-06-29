@@ -13,5 +13,9 @@ class LeadsControllerTest < ActionController::TestCase
     assert_equal 2, assigns(:addresses_count)['Germany - Berlin']
     assert_equal 0, assigns(:addresses_count)['Mars']
     assert_not_nil assigns(:sorted_leads)
+
+  test "should get new" do
+    get :new
+    assert_response :success
   end
 end
