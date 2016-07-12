@@ -1,8 +1,13 @@
-**RefugeesWork.com** is the initiative that tries to help refugees/newcomers to connect with the locals through working together. The offered tasks should be a win-win situation for everyone, including newcomer, the organization and the city. No part of the equation should come out of the collaboration feeling used. Our focus is social engagement through working together and promoting self-employment.
+### Refugeeswork.com 
+is a mobile friendly app for newcomers to find freelance work
 
-Work is the best pathway to connect newcomers with locals. We grow through the things we make.
+**We build a tool that empowers people with an entrepreneurial spirit to kickstart their self employment, develop their skills and get paid for it.** 
 
-[Visit www.refugeeswork.com](http://www.refugeeswork.com)
+Our program includes:
+
+* bootstrapping a new self employed existance by creating a business plan starting from just an idea
+* supporting them with free consulting (online & offline) to help with all the bureaucracy and legal oblications, like "open a bank account", "register for a taxnumber", "do accounting and annual tax returns", etc...
+* helping them to start their operations, which includes finding customers and partners to make their self employment sustainable
 
 
 
