@@ -7,6 +7,7 @@ class LeadsController < ApplicationController
     @addresses_count.default = 0
   end
 
+
   def show
     @lead = Lead.find_by_id(params[:id])
   end
@@ -40,6 +41,18 @@ class LeadsController < ApplicationController
     else
       redirect_to leads_new_url
     end
+  end
+
+
+# API
+  def api_index
+    sorted_leads = Lead.all.sort.reverse
+    render :json => sorted_leads
+  end
+
+  def api_show
+    lead = Lead.find_by_id(params[:id])
+    render :json => lead
   end
 
   private

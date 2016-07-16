@@ -5,12 +5,16 @@ Rails.application.routes.draw do
     devise_for :users, controllers: {registrations: 'registrations'}
 
     resources :users do
-      match '/users/:id/edit',            to: 'users#edit',       via: 'edit'
+      match '/users/:id/edit',            to: 'users#edit',            via: 'edit'
+      match '/users',                     to: 'users#index',           via: 'get' # API SHOW ALL USERS /users
+      match '/users/:id',                 to: 'users#show',            via: 'get' # API SHOW ONE USER  /users/:id
     end
 
     resources :leads
       get 'leads/show'
       get 'leads/new'
+      match '/api_leads',            to: 'leads#api_index',       via: 'get'   #API SHOW ALL LEADS /api_leads
+      match '/api_leads/:id',        to: 'leads#api_show',        via: 'get'   #API SHOW ONE LEAD  /api_leads/:id
       #get 'leads/edit' TODO: Enable users to edit their posts
 
     resources :orders
