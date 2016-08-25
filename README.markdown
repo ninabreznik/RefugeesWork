@@ -14,6 +14,8 @@ Our program includes:
 LICENCE
 =======
 
+[![Join the chat at https://gitter.im/ninabreznik/RefugeesWork](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ninabreznik/RefugeesWork?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![CC BY-NC-ND 4.0](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License")
 
 This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" alt="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License">`CC BY-NC-ND 4.0`</a>.
