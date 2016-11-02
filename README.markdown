@@ -1,4 +1,4 @@
-### Refugeeswork.com 
+# Refugeeswork.com 
 is a tool for newcomers to find freelance work
 
 [refugeeswork.com](http://www.refugeeswork.com)
@@ -11,7 +11,7 @@ It includes:
 * supporting them with free consulting (online & offline) to help with all the bureaucracy and legal oblications, like "open a bank account", "register for a taxnumber", "do accounting and annual tax returns", etc...
 * helping them to start their operations, which includes finding customers and partners to make their self employment sustainable
 
-To help newcomers become successful freelancer/solorpeneur, we also created a [Wizard Amigos e-school for programming](http://wizardamigos.com) and meetups, where learners can meet with other learners and more experience developers (see [Coding Amigos] (http://www.meetup.com/codingamigos)).
+To help newcomers become successful freelancer/solopreneur, we also created a [Wizard Amigos e-school for programming](http://wizardamigos.com) and meetups, where learners can meet with other learners and more experience developers (see [Coding Amigos] (http://www.meetup.com/codingamigos)).
 
 ## Usage
 
