@@ -13,6 +13,12 @@ It includes:
 
 To help newcomers become successful freelancer/solopreneur, we also created a [Wizard Amigos e-school for programming](http://wizardamigos.com) and meetups, where learners can meet with other learners and more experience developers (see [Coding Amigos] (http://www.meetup.com/codingamigos)).
 
+## Ecosystem
+* LEARN with e-learning platform - [WizardAmigos](http://www.wizardamigos.com)
+* MEET at local meetups - [CodingAmigos](http://www.codingamigos)
+* WORK with co-owned marketplace - [WorkingAmigos - comming soon] ()
+    * in the context of Refugees - [RefugeesWork marketplace](http://www.refugeeswork)
+
 ## Usage
 
 ```
