@@ -31,10 +31,9 @@ class LeadsController < ApplicationController
     end
     session[:lead_step] = @lead.current_step
     if @lead.save
-      @users = User.all.where(subscribed_to_notifications: true)
-      UserMailer.new_lead(@lead, @users).deliver
       auto_create_user!(@lead)
       session[:lead_step] = session[:lead_params] = nil
+      UserMailer.new_lead(@lead)
       redirect_to new_lead_confirmation_url
     else
       redirect_to leads_new_url
