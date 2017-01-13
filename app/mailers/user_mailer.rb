@@ -8,10 +8,10 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Welcome to RefugeesWork')
   end
 
-  def new_lead(lead)
+  def new_lead(lead, users)
     @lead = lead
-    @right_users = User.all.where(subscribed_to_notifications:true)
-    emails = @right_users.collect(&:email).join(",")
+    @users = users
+    emails = @users.collect(&:email).join(",")
     mail(:to => emails, :subject => "New job")
   end
 
