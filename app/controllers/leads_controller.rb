@@ -34,7 +34,7 @@ class LeadsController < ApplicationController
       session[:lead_step] = session[:lead_params] = nil
       right_users = User.all.where(subscribed_to_notifications:true)
       lead = @lead
-      UserMailer.new_lead(lead, right_users).deliver
+      #UserMailer.new_lead(lead, right_users).deliver
       auto_create_user!(lead)
       redirect_to new_lead_confirmation_url
     else
@@ -92,7 +92,7 @@ class LeadsController < ApplicationController
                )
         lead.user_id = user.id
         user.leads << lead
-        UserMailer.welcome_email(user, pass).deliver
+        #UserMailer.welcome_email(user, pass).deliver
       end
     end
     lead.save
