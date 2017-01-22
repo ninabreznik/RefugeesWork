@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Hello, </h1>
-
-    <p>
-      we just received a new post.
-    </p>
-
-    <p>
-      To see the details, please <%= link_to "click here", leads_url %>.
-      <br><br>Have a nice day & good luck!
-    </p>
-
-    <p>Yours,<br>
-    <%= link_to "RefugeesWork community", root_url %>
-    </p>
-
-  </body>
-  <a href="http://www.refugeeswork.com/en/users/edit">Click to unsubscribe.</a>
-
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Hello, </h1>
+  <p>We just received a new post</p>
+  <p> To see details about new work opportunity, please <%= link_to 'Click here', leads_url %> </p>
+  <p>If you have any questions, please click reply and send us an e-mail.</p>
+  <br>
+  <p>Have a nice day and good luck</p>
+  <br>
+  <br>
+  <p>Yours,</p>
+  <br>
+  <%= link_to 'RefugeesWork', root_url %>
+  <a href='http://refugeeswork.com/en/users/edit'>Click to unsubscribe</a>
+</body>
 </html>
