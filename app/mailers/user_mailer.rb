@@ -2,6 +2,7 @@ class UserMailer < ActionMailer::Base
   default from: "we@refugeeswork.com"
 
   def welcome_email(user, pass=nil)
+    @url = 'http://www.refugeeswork.com/en/users/edit'
     @user = user
     @pass = pass
     #@url  = 'http://example.com/login'
@@ -9,6 +10,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def new_lead(lead, users)
+    @url = 'http://www.refugeeswork.com/en/users/edit'
     @lead = lead
     @users = users
     @emails = @users.collect(&:email).join(",")
