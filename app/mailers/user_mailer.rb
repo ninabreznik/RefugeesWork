@@ -9,12 +9,20 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Welcome to RefugeesWork')
   end
 
-  def new_lead(lead, users)
+  def notify(lead, users)
     @url = 'http://www.refugeeswork.com/en/users/edit'
     @lead = lead
     @users = users
+    @users.each do |user|
+      UserMailer.new_lead(user).deliver
+    end
     @emails = @users.collect(&:email).join(",")
-    mail(:to => @emails, :subject => "New job post on RefugeesWork")
+  end
+
+  def new_lead(user)
+    @user = user
+    @user_id = user.id
+    mail(to: @user.email, subject: 'Welcome to RefugeesWork')
   end
 
   # def new_lead(right_user)

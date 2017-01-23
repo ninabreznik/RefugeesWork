@@ -6,7 +6,7 @@ Rails.application.configure do
     port:                 ENV['MAILGUN_SMTP_PORT'], #587,
     domain:               ENV['MAILGUN_DOMAIN'], #'morning-spire-7243.herokuapp.com',
     user_name:            ENV['MAILGUN_SMTP_LOGIN'],
-    password:             ENV['MAILGUN_SMTP_PASSWORD'], 
+    password:             ENV['MAILGUN_SMTP_PASSWORD'], #ENV['password'],
     authentication:       'plain',
     enable_starttls_auto: true  }
 
