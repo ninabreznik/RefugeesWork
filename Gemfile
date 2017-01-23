@@ -7,7 +7,7 @@ gem 'rails_12factor', group: :production
 ruby '2.2.0'
 # Use sqlite3 as the database for Active Record
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.18.4'
 end
 
 # Use Uglifier as compressor for JavaScript assets
