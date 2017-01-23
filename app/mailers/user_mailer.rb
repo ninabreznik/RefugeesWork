@@ -22,7 +22,7 @@ class UserMailer < ActionMailer::Base
   def new_lead(user)
     @user = user
     @user_id = user.id
-    mail(to: @user.email, subject: 'Welcome to RefugeesWork')
+    mail(to: @user.email, subject: 'New work opportunity')
   end
 
   # def new_lead(right_user)
