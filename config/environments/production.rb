@@ -2,11 +2,11 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mailgun.org',
-    port:                 587,
-    domain:               'refugeeswork.com',
-    user_name:            ENV['username'],
-    password:             ENV['password'],
+    address:              ENV['MAILGUN_SMTP_SERVER'], #'smtp.mailgun.org',
+    port:                 ENV['MAILGUN_SMTP_PORT'], #587,
+    domain:               ENV['MAILGUN_DOMAIN'], #'morning-spire-7243.herokuapp.com',
+    user_name:            ENV['MAILGUN_SMTP_LOGIN'],
+    password:             ENV['MAILGUN_SMTP_PASSWORD'], 
     authentication:       'plain',
     enable_starttls_auto: true  }
 

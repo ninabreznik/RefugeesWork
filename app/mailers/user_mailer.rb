@@ -11,8 +11,8 @@ class UserMailer < ActionMailer::Base
   def new_lead(lead, users)
     @lead = lead
     @users = users
-    emails = @users.collect(&:email).join(",")
-    mail(:to => emails, :subject => "New job")
+    @emails = @users.collect(&:email).join(",")
+    mail(:to => @emails, :subject => "New job post on RefugeesWork")
   end
 
   # def new_lead(right_user)
