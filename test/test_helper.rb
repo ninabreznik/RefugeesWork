@@ -8,6 +8,8 @@ Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods, Devise::TestHelpers
+end
+
 class ActionController::TestCase
   include Devise::TestHelpers
 end
