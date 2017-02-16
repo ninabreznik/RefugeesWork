@@ -1,6 +1,8 @@
 # Refugeeswork.com 
 is a tool for newcomers to find freelance work
 
+[![Join the chat at https://gitter.im/ninabreznik/RefugeesWork](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ninabreznik/RefugeesWork?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [refugeeswork.com](http://www.refugeeswork.com)
 
 Our program is **online** and for **free**. It empowers people with an entrepreneurial spirit to kickstart their self employment, develop their skills and get paid for it. 
