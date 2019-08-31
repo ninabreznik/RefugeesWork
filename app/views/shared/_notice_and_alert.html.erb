@@ -1,0 +1,21 @@
+<!-- Flash -->
+<br>
+
+<% flash.each do |key, value| %>
+    <% if key == "errors" %>
+        <div class="alert alert-danger">
+            <ul class="errors-list">
+                <% value.each do |val| %>
+                    <li><%= val %></li>
+                <% end %>
+            </ul>
+            <%= render "shared/alert_close_button" %>
+        </div>
+    <% else %>
+        <div class="<%= flash_class(key) %>">
+            <%= value %>
+            <%= render "shared/alert_close_button" %>
+        </div>
+    <% end %>
+<% end %>
+<!-- end flash -->

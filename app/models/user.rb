@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   # validates_format_of :tracking_id, with: /\A[a-zA-Z0-9\s\-_]+\z/, :on => :update, presence: false
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :orders, foreign_key: "selector_id"
   has_many :selected_leads, through: :orders, source: :selected

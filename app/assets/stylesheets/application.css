@@ -14,3 +14,46 @@
  *= require_self
  *= require font-awesome
  */
+
+.alert {
+    margin-top: -1.1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    padding-bottom: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.alert.alert-info {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+.alert.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.close-alert {
+    float: right;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
